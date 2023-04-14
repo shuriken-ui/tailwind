@@ -4,16 +4,43 @@ import typography from '@tailwindcss/typography'
 import aspectRatio from '@tailwindcss/aspect-ratio'
 import shurikenUIComponents from './plugins/components'
 
+const sansSystemFont = [
+  'ui-sans-serif',
+  'system-ui',
+  '-apple-system',
+  'BlinkMacSystemFont',
+  '"Segoe UI"',
+  'Roboto',
+  '"Helvetica Neue"',
+  'Arial',
+  '"Noto Sans"',
+  'sans-serif',
+  '"Apple Color Emoji"',
+  '"Segoe UI Emoji"',
+  '"Segoe UI Symbol"',
+  '"Noto Color Emoji"',
+]
+const monoSystemFont = [
+  'ui-monospace',
+  'SFMono-Regular',
+  'Menlo',
+  'Monaco',
+  'Consolas',
+  '"Liberation Mono"',
+  '"Courier New"',
+  'monospace',
+]
+
 export default {
   darkMode: 'class',
   content: [],
   plugins: [typography, aspectRatio, shurikenUIComponents],
   theme: {
     fontFamily: {
-      sans: ['Roboto Flex', 'sans-serif'],
-      heading: ['Inter', 'sans-serif'],
-      alt: ['Karla', 'sans-serif'],
-      mono: ['ui-monospace', 'monospace'],
+      sans: sansSystemFont,
+      heading: sansSystemFont,
+      alt: sansSystemFont,
+      mono: monoSystemFont,
     },
 
     extend: {

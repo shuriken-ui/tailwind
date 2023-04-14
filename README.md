@@ -22,7 +22,7 @@ This package contains the Tailwind CSS preset, components, and shared utils like
 ## Installation
 
 ```bash
-pnpm install @shuriken-ui/tailwind
+pnpm install -D @shuriken-ui/tailwind
 ```
 
 ## Usage
