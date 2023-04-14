@@ -19,16 +19,35 @@
     "module"
   ],
   "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./preset": "./src/preset/index.ts",
-    "./config": "./src/tailwind.config.ts",
-    "./colors": "./src/colors.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./preset": {
+      "types": "./dist/preset.d.ts",
+      "import": "./dist/preset.mjs",
+      "require": "./dist/preset.cjs"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.mjs",
+      "require": "./dist/config.cjs"
+    },
+    "./colors": {
+      "types": "./dist/colors.d.ts",
+      "import": "./dist/colors.mjs",
+      "require": "./dist/colors.cjs"
+    }
   },
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
+    "build": "unbuild",
     "lint": "run-s lint:eslint:fix lint:prettier:fix",
     "lint:prettier": "prettier --check \"./**/*.(ts|vue|css|scss|md)\"",
     "lint:prettier:fix": "prettier --write \"./**/*.(ts|vue|css|scss|md)\"",
@@ -36,6 +55,7 @@
     "lint:eslint:fix": "eslint -c .eslintrc.cjs --fix  --ext .vue,.ts .",
     "test": "run-p test:*",
     "test:lint": "run-s lint:eslint lint:prettier",
+    "prepack": "pnpm run build",
     "release": "run-s test release:*",
     "release:standard-version": "standard-version",
     "release:publish": "git push --follow-tags origin main && npm publish",
@@ -63,7 +83,8 @@
     "prettier": "^2.8.7",
     "simple-git-hooks": "^2.8.1",
     "standard-version": "^9.5.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "unbuild": "^1.2.1"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",

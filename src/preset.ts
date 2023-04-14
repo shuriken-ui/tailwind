@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 import typography from '@tailwindcss/typography'
 import aspectRatio from '@tailwindcss/aspect-ratio'
-import shurikenUIComponents from '../plugins/components'
+import shurikenUIComponents from './plugins/components'
 
 export default {
   darkMode: 'class',
