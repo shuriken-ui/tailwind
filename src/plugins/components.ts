@@ -4,13 +4,13 @@ export default plugin.withOptions(
   function (options = {}) {
     return function ({ addComponents }) {
       addComponents({
-        '.placeload': {
+        '.nui-placeload': {
           position: 'relative',
           background:
             'linear-gradient( to right, rgb(0 0 0 / 7%) 8% ,rgb(0 0 0 / 15%) 18%, rgb(0 0 0 / 7%) 33%)',
           backgroundSize: '1200px 104px',
         },
-        '.dark .placeload': {
+        '.dark .nui-placeload': {
           position: 'relative',
           background:
             'linear-gradient(to right, rgb(255 255 255 / 15%) 8%, rgb(255 255 255 / 24%) 18%, rgb(255 255 255 / 15%) 33%)',
