@@ -1,35 +1,9 @@
 import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 import typography from '@tailwindcss/typography'
 import aspectRatio from '@tailwindcss/aspect-ratio'
 import shurikenUIComponents from './plugins/components'
-
-const sansSystemFont = [
-  'ui-sans-serif',
-  'system-ui',
-  '-apple-system',
-  'BlinkMacSystemFont',
-  '"Segoe UI"',
-  'Roboto',
-  '"Helvetica Neue"',
-  'Arial',
-  '"Noto Sans"',
-  'sans-serif',
-  '"Apple Color Emoji"',
-  '"Segoe UI Emoji"',
-  '"Segoe UI Symbol"',
-  '"Noto Color Emoji"',
-]
-const monoSystemFont = [
-  'ui-monospace',
-  'SFMono-Regular',
-  'Menlo',
-  'Monaco',
-  'Consolas',
-  '"Liberation Mono"',
-  '"Courier New"',
-  'monospace',
-]
 
 export default {
   darkMode: 'class',
@@ -37,10 +11,10 @@ export default {
   plugins: [typography, aspectRatio, shurikenUIComponents],
   theme: {
     fontFamily: {
-      sans: sansSystemFont,
-      heading: sansSystemFont,
-      alt: sansSystemFont,
-      mono: monoSystemFont,
+      sans: defaultTheme.fontFamily.sans,
+      heading: defaultTheme.fontFamily.sans,
+      alt: defaultTheme.fontFamily.sans,
+      mono: defaultTheme.fontFamily.mono,
     },
 
     extend: {
