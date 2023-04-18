@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/shuriken-ui/tailwind/compare/v0.0.3...v0.0.4) (2023-04-18)
+
+
+### Features
+
+* **components:** allow to change prefix with plugin options ([87b8724](https://github.com/shuriken-ui/tailwind/commit/87b87248b5df91b098f6fd1d7d96172cb3f128ce))
+
+
+### Bug Fixes
+
+* add nui prefix to custom animation and placeload ([cc193c8](https://github.com/shuriken-ui/tailwind/commit/cc193c8880062f5c9c797a04d50d562ea3fed77c))
+* **preset:** use fonts from default tailwind config ([4df972d](https://github.com/shuriken-ui/tailwind/commit/4df972db077e0bd9f8773bc7bafe3b1f14db4da3))
+
 ### [0.0.3](https://github.com/shuriken-ui/tailwind/compare/v0.0.2...v0.0.3) (2023-04-14)
 
 
