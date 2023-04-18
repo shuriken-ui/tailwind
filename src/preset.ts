@@ -144,18 +144,19 @@ export default {
         },
       }),
       keyframes: {
-        indeterminate: {
+        'nui-indeterminate': {
           '0%': { 'margin-left': '-10%' },
           '100%': { 'margin-left': '100%' },
         },
-        placeload: {
+        'nui-placeload': {
           '0%': { 'background-position': '-468px 0' },
           '100%': { 'background-position': '468px 0' },
         },
       },
       animation: {
-        indeterminate: 'indeterminate 1s cubic-bezier(0.4, 0, 0.2, 1) infinite',
-        placeload: 'placeload 1s linear infinite forwards',
+        'nui-indeterminate':
+          'nui-indeterminate 1s cubic-bezier(0.4, 0, 0.2, 1) infinite',
+        'nui-placeload': 'nui-placeload 1s linear infinite forwards',
       },
     },
   },
