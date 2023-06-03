@@ -3,12 +3,20 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 import typography from '@tailwindcss/typography'
 import aspectRatio from '@tailwindcss/aspect-ratio'
+import shurikenUIBase from './plugins/base'
 import shurikenUIComponents from './plugins/components'
+import shurikenUIUtilities from './plugins/utilities'
 
 export default {
   darkMode: 'class',
   content: [],
-  plugins: [typography, aspectRatio, shurikenUIComponents],
+  plugins: [
+    typography,
+    aspectRatio,
+    shurikenUIBase,
+    shurikenUIComponents,
+    shurikenUIUtilities,
+  ],
   theme: {
     fontFamily: {
       sans: defaultTheme.fontFamily.sans,
@@ -122,15 +130,10 @@ export default {
           '0%': { 'margin-left': '-10%' },
           '100%': { 'margin-left': '100%' },
         },
-        'nui-placeload': {
-          '0%': { 'background-position': '-468px 0' },
-          '100%': { 'background-position': '468px 0' },
-        },
       },
       animation: {
         'nui-indeterminate':
           'nui-indeterminate 1s cubic-bezier(0.4, 0, 0.2, 1) infinite',
-        'nui-placeload': 'nui-placeload 1s linear infinite forwards',
       },
     },
   },
