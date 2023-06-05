@@ -3,6 +3,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 import typography from '@tailwindcss/typography'
 import aspectRatio from '@tailwindcss/aspect-ratio'
+import containerQueries from '@tailwindcss/container-queries'
 import shurikenUIBase from './plugins/base'
 import shurikenUIComponents from './plugins/components'
 import shurikenUIUtilities from './plugins/utilities'
@@ -13,6 +14,7 @@ export default {
   plugins: [
     typography,
     aspectRatio,
+    containerQueries,
     shurikenUIBase,
     shurikenUIComponents,
     shurikenUIUtilities,
