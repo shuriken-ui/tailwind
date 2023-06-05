@@ -51,3 +51,57 @@ export default {
   // your config
 } satisfies Config
 ```
+
+## Customization
+
+Shuriken UI is fully customizable. You can override components by using the `theme` option.
+
+```ts
+export default withShurikenUI({
+  theme: {
+    extend: {
+      shurikenUi: {
+        dropdownDivider: {
+          space: '2',
+          border: 'muted-200', // you can use arbitrary value like '[#fff]'
+          borderDark: 'muted-600',
+        },
+        focus: {
+          offset: '2',
+          width: '1',
+          style: 'dashed',
+          color: 'muted-300',
+          colorDark: 'muted-600',
+        },
+        label: {
+          font: 'alt',
+          text: 'muted-400',
+          textDark: 'muted-400/80',
+        },
+        mark: {
+          bg: 'primary-100',
+          bgDark: 'primary-800',
+          text: 'primary-800',
+          textDark: 'primary-200',
+        },
+        slimscroll: {
+          width: '[6px]',
+          bg: 'black/5',
+          bgDark: 'white/5',
+          bgHover: 'black/20',
+          bgHoverDark: 'white/20',
+        },
+        tooltip: {
+          font: 'sans',
+          bg: '[#1e293b]',
+          bgDark: '[#ec4899]',
+          text: '[#fff]',
+          textDark: '[#fff]',
+          minWidth: '3rem',
+          maxWidth: '21rem',
+        },
+      },
+    },
+  },
+})
+```
