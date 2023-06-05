@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/shuriken-ui/tailwind/compare/v0.0.4...v0.0.5) (2023-06-05)
+
+
+### Features
+
+* add components customization + nui-slimscroll + nui-tooltip ([f252c4a](https://github.com/shuriken-ui/tailwind/commit/f252c4afef05ef21722f4319ad857d26a3ad3a5c))
+
 ### [0.0.4](https://github.com/shuriken-ui/tailwind/compare/v0.0.3...v0.0.4) (2023-04-18)
 
 
