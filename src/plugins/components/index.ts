@@ -1,6 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption } from '../options'
+import buttonClose from './button-close'
+import buttonIcon from './button-icon'
 import dropdown from './dropdown'
 import focus from './focus'
 import label from './label'
@@ -11,6 +13,8 @@ import slimscroll from './slimscroll'
 import tooltip from './tooltip'
 
 const components = [
+  buttonClose,
+  buttonIcon,
   dropdown,
   focus,
   label,
