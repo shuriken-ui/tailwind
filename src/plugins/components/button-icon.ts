@@ -24,10 +24,6 @@ const defaultButtonIconConfig = {
     full: 'full',
   },
   default: {
-    bg: 'white',
-    bgDark: 'muted-700',
-    border: 'muted-300',
-    borderDark: 'muted-600',
     bgHover: 'muted-50',
     bgHoverDark: 'muted-600',
     text: 'muted-700',
@@ -111,7 +107,7 @@ export default plugin.withOptions(
           },
 
           [`&.${prefix}-button-default`]: {
-            [`@apply text-${config.default.text} bg-${config.default.bg} border border-${config.default.border} dark:text-${config.default.textDark} dark:bg-${config.default.bgDark} dark:hover:bg-${config.default.bgHoverDark} dark:border-${config.default.borderDark} hover:bg-${config.default.bgHover}`]:
+            [`@apply text-${config.default.text} dark:text-${config.default.textDark} dark:hover:bg-${config.default.bgHoverDark} hover:bg-${config.default.bgHover}`]:
               {},
           },
           [`&.${prefix}-button-muted`]: {

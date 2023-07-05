@@ -134,10 +134,6 @@ export default withShurikenUI({
             full: 'full',
           },
           default: {
-            bg: 'white',
-            bgDark: 'muted-700',
-            border: 'muted-300',
-            borderDark: 'muted-600',
             bgHover: 'muted-50',
             bgHoverDark: 'muted-600',
             text: 'muted-700',
