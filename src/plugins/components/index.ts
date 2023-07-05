@@ -1,6 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption } from '../options'
+import avatarGroup from './avatar-group'
 import dropdown from './dropdown'
 import focus from './focus'
 import label from './label'
@@ -11,6 +12,7 @@ import slimscroll from './slimscroll'
 import tooltip from './tooltip'
 
 const components = [
+  avatarGroup,
   dropdown,
   focus,
   label,
