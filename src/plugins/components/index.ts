@@ -9,8 +9,10 @@ import mask from './mask'
 import placeload from './placeload'
 import slimscroll from './slimscroll'
 import tooltip from './tooltip'
+import breadcrumb from './breadcrumb'
 
 const components = [
+  breadcrumb,
   dropdown,
   focus,
   label,
