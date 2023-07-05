@@ -4,6 +4,7 @@ import { type PluginOption } from '../options'
 import dropdown from './dropdown'
 import focus from './focus'
 import label from './label'
+import link from './link'
 import mark from './mark'
 import mask from './mask'
 import placeload from './placeload'
@@ -14,6 +15,7 @@ const components = [
   dropdown,
   focus,
   label,
+  link,
   mark,
   mask,
   placeload,

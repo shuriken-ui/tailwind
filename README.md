@@ -78,6 +78,13 @@ export default withShurikenUI({
           text: 'muted-400',
           textDark: 'muted-400/80',
         },
+        link: {
+          font: 'sans',
+          textHover: 'primary-500',
+          textHoverDark: 'primary-400',
+          textFocus: 'primary-500',
+          textFocusDark: 'primary-400',
+        },
         mark: {
           bg: 'primary-100',
           bgDark: 'primary-800',
