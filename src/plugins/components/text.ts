@@ -41,76 +41,76 @@ export default plugin.withOptions(
           [`@apply font-sans`]: {},
 
           [`&.${prefix}-content-xs`]: {
-            [`@apply ${config.textXS}`]: {},
+            [`@apply text-${config.textXS}`]: {},
           },
           [`&.${prefix}-content-sm`]: {
-            [`@apply ${config.textSM}`]: {},
+            [`@apply text-${config.textSM}`]: {},
           },
           [`&.${prefix}-content-md`]: {
-            [`@apply ${config.textMD}`]: {},
+            [`@apply text-${config.textMD}`]: {},
           },
           [`&.${prefix}-content-lg`]: {
-            [`@apply ${config.textLG}`]: {},
+            [`@apply text-${config.textLG}`]: {},
           },
           [`&.${prefix}-content-xl`]: {
-            [`@apply ${config.textXL}`]: {},
+            [`@apply text-${config.textXL}`]: {},
           },
           [`&.${prefix}-content-2xl`]: {
-            [`@apply ${config.text2XL}`]: {},
+            [`@apply text-${config.text2XL}`]: {},
           },
           [`&.${prefix}-content-3xl`]: {
-            [`@apply ${config.text3XL}`]: {},
+            [`@apply text-${config.text3XL}`]: {},
           },
           [`&.${prefix}-content-4xl`]: {
-            [`@apply ${config.text4XL}`]: {},
+            [`@apply text-${config.text4XL}`]: {},
           },
           [`&.${prefix}-content-5xl`]: {
-            [`@apply ${config.text5XL}`]: {},
+            [`@apply text-${config.text5XL}`]: {},
           },
           [`&.${prefix}-content-6xl`]: {
-            [`@apply ${config.text6XL}`]: {},
+            [`@apply text-${config.text6XL}`]: {},
           },
           [`&.${prefix}-content-7xl`]: {
-            [`@apply ${config.text7XL}`]: {},
+            [`@apply text-${config.text7XL}`]: {},
           },
           [`&.${prefix}-content-8xl`]: {
-            [`@apply ${config.text8XL}`]: {},
+            [`@apply text-${config.text8XL}`]: {},
           },
           [`&.${prefix}-content-9xl`]: {
-            [`@apply ${config.text9XL}`]: {},
+            [`@apply text-${config.text9XL}`]: {},
           },
           [`&.${prefix}-weight-light`]: {
-            [`@apply ${config.textLight}`]: {},
+            [`@apply font-${config.textLight}`]: {},
           },
           [`&.${prefix}-weight-normal`]: {
-            [`@apply ${config.textNormal}`]: {},
+            [`@apply font-${config.textNormal}`]: {},
           },
           [`&.${prefix}-weight-medium`]: {
-            [`@apply ${config.textMedium}`]: {},
+            [`@apply font-${config.textMedium}`]: {},
           },
           [`&.${prefix}-weight-semibold`]: {
-            [`@apply ${config.textSemibold}`]: {},
+            [`@apply font-${config.textSemibold}`]: {},
           },
           [`&.${prefix}-weight-bold`]: {
-            [`@apply ${config.textBold}`]: {},
+            [`@apply font-${config.textBold}`]: {},
           },
           [`&.${prefix}-weight-extrabold`]: {
-            [`@apply ${config.textExtrabold}`]: {},
+            [`@apply font-${config.textExtrabold}`]: {},
           },
           [`&.${prefix}-lead-none`]: {
-            [`@apply ${config.textLeadNone}`]: {},
+            [`@apply leading-${config.textLeadNone}`]: {},
           },
           [`&.${prefix}-lead-normal`]: {
-            [`@apply ${config.textLeadNormal}`]: {},
+            [`@apply leading-${config.textLeadNormal}`]: {},
           },
           [`&.${prefix}-lead-tight`]: {
-            [`@apply ${config.textLeadTight}`]: {},
+            [`@apply leading-${config.textLeadTight}`]: {},
           },
           [`&.${prefix}-lead-snug`]: {
-            [`@apply ${config.textLeadSnug}`]: {},
+            [`@apply leading-${config.textLeadSnug}`]: {},
           },
           [`&.${prefix}-lead-loose`]: {
-            [`@apply ${config.textLeadLoose}`]: {},
+            [`@apply leading-${config.textLeadLoose}`]: {},
           },
         },
       })
