@@ -272,28 +272,28 @@ export default plugin.withOptions(
             [`@apply dark:border-${config.avatarDot.borderDark} absolute block rounded-${config.avatarDot.rounded} border border-${config.avatarDot.border}`]:
               {},
             [`&.${prefix}-dot-primary`]: {
-              [`@apply ${config.avatarDot.primary}`]: {},
+              [`@apply bg-${config.avatarDot.primary}`]: {},
             },
             [`&.${prefix}-dot-info`]: {
-              [`@apply ${config.avatarDot.info}`]: {},
+              [`@apply bg-${config.avatarDot.info}`]: {},
             },
             [`&.${prefix}-dot-success`]: {
-              [`@apply ${config.avatarDot.success}`]: {},
+              [`@apply bg-${config.avatarDot.success}`]: {},
             },
             [`&.${prefix}-dot-warning`]: {
-              [`@apply ${config.avatarDot.warning}`]: {},
+              [`@apply bg-${config.avatarDot.warning}`]: {},
             },
             [`&.${prefix}-dot-danger`]: {
-              [`@apply ${config.avatarDot.danger}`]: {},
+              [`@apply bg-${config.avatarDot.danger}`]: {},
             },
             [`&.${prefix}-dot-yellow`]: {
-              [`@apply ${config.avatarDot.yellow}`]: {},
+              [`@apply bg-${config.avatarDot.yellow}`]: {},
             },
             [`&.${prefix}-dot-pink`]: {
-              [`@apply ${config.avatarDot.pink}`]: {},
+              [`@apply bg-${config.avatarDot.pink}`]: {},
             },
             [`&.${prefix}-dot-indigo`]: {
-              [`@apply ${config.avatarDot.indigo}`]: {},
+              [`@apply bg-${config.avatarDot.indigo}`]: {},
             },
           },
           [`&.${prefix}-avatar-ring`]: {
@@ -302,28 +302,28 @@ export default plugin.withOptions(
                 {},
             },
             [`&.${prefix}-ring-primary`]: {
-              [`@apply ${config.avatarRing.primary}`]: {},
+              [`@apply bg-${config.avatarRing.primary}`]: {},
             },
             [`&.${prefix}-ring-info`]: {
-              [`@apply ${config.avatarRing.info}`]: {},
+              [`@apply bg-${config.avatarRing.info}`]: {},
             },
             [`&.${prefix}-ring-success`]: {
-              [`@apply ${config.avatarRing.success}`]: {},
+              [`@apply bg-${config.avatarRing.success}`]: {},
             },
             [`&.${prefix}-ring-warning`]: {
-              [`@apply ${config.avatarRing.warning}`]: {},
+              [`@apply bg-${config.avatarRing.warning}`]: {},
             },
             [`&.${prefix}-ring-danger`]: {
-              [`@apply ${config.avatarRing.danger}`]: {},
+              [`@apply bg-${config.avatarRing.danger}`]: {},
             },
             [`&.${prefix}-ring-yellow`]: {
-              [`@apply ${config.avatarRing.yellow}`]: {},
+              [`@apply bg-${config.avatarRing.yellow}`]: {},
             },
             [`&.${prefix}-ring-pink`]: {
-              [`@apply ${config.avatarRing.pink}`]: {},
+              [`@apply bg-${config.avatarRing.pink}`]: {},
             },
             [`&.${prefix}-ring-indigo`]: {
-              [`@apply ${config.avatarRing.indigo}`]: {},
+              [`@apply bg-${config.avatarRing.indigo}`]: {},
             },
           },
           [`&.${prefix}-avatar-xxs`]: {
