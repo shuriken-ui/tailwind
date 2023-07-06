@@ -66,6 +66,30 @@ export default withShurikenUI({
           border: 'muted-200', // you can use arbitrary value like '[#fff]'
           borderDark: 'muted-600',
         },
+        dropdownItem: {
+          itemRounded: 'md',
+          textPosition: 'left',
+          textSize: 'sm',
+          duration: '300',
+          notActive: {
+            text: 'muted-500',
+          },
+          default: {
+            bg: 'muted-100',
+            bgDark: 'muted-700',
+            text: 'primary-500',
+          },
+          contrast: {
+            bg: 'muted-100',
+            bgDark: 'muted-900',
+            text: 'primary-500',
+          },
+          rounded: {
+            default: 'md',
+            smooth: 'lg',
+            curved: 'xl',
+          },
+        },
         focus: {
           offset: '2',
           width: '1',
