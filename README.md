@@ -91,6 +91,60 @@ export default withShurikenUI({
           bgHover: 'black/20',
           bgHoverDark: 'white/20',
         },
+        snack: {
+          rounded: 'full',
+          icon: {
+            border: 'muted-200',
+            rounded: 'full',
+            bg: 'white',
+          },
+          image: {
+            rounded: 'full',
+          },
+          imageInner: {
+            rounded: 'full',
+          },
+          text: {
+            text: 'muted-600',
+            textDark: 'muted-300',
+            font: 'sans',
+            textSize: 'sm',
+          },
+          snackSM: {
+            size: '8',
+            icon: {
+              size: '8',
+            },
+            iconsInner: {
+              size: '4',
+            },
+            imageAndImageInner: {
+              size: '8',
+            },
+          },
+          snackMD: {
+            size: '10',
+            icon: {
+              size: '10',
+            },
+            iconsInner: {
+              size: '5',
+            },
+            imageAndImageInner: {
+              size: '10',
+            },
+          },
+          default: {
+            bg: 'white',
+            bgDark: 'muted-700',
+            border: 'muted-300',
+
+          },
+          muted: {
+            bg: 'muted-200',
+            bgDark: 'muted-700',
+          },
+        },
         tooltip: {
           font: 'sans',
           bg: '[#1e293b]',
