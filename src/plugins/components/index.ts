@@ -2,6 +2,7 @@ import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption } from '../options'
 import dropdown from './dropdown'
+import dropdownDivider from './dropdown-divider'
 import focus from './focus'
 import label from './label'
 import mark from './mark'
@@ -12,6 +13,7 @@ import tooltip from './tooltip'
 
 const components = [
   dropdown,
+  dropdownDivider,
   focus,
   label,
   mark,
