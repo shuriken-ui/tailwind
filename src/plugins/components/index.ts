@@ -7,6 +7,7 @@ import label from './label'
 import mark from './mark'
 import mask from './mask'
 import placeload from './placeload'
+import snack from './snack'
 import slimscroll from './slimscroll'
 import tooltip from './tooltip'
 
@@ -18,6 +19,7 @@ const components = [
   mask,
   placeload,
   slimscroll,
+  snack,
   tooltip,
 ]
 
