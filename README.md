@@ -61,6 +61,57 @@ export default withShurikenUI({
   theme: {
     extend: {
       shurikenUi: {
+        accordion: {
+          size: 'full',
+          border: 'muted-200',
+          borderDark: 'muted-700',
+          bg: 'white',
+          bgDark: 'muted-800',
+          detail: {
+            border: 'muted-200',
+            borderDark: 'muted-700',
+          },
+          detailAndDot: {
+            bg: 'muted-200',
+            bgDark: 'muted-700',
+          },
+          detailOpenAndDot: {
+            bg: 'primary-500',
+          },
+          dot: {
+            size: '3',
+            rounded: 'full',
+            duration: '300',
+          },
+          outer: {
+            border: 'muted-200',
+            borderDark: 'muted-700',
+            bg: 'white',
+            bgDark: 'muted-700/60',
+            size: '8',
+            rounded: 'full',
+            duration: '300',
+          },
+          chevronIcon: {
+            size: '4',
+            duration: '300',
+          },
+          plusIcon: {
+            size: '4',
+            duration: '300',
+          },
+          content: {
+            space: '5',
+            font: 'sans',
+            text: 'muted-500',
+            textDark: 'muted-400',
+          },
+          rounded: {
+            default: 'md',
+            smooth: 'lg',
+            curved: 'xl',
+          }
+        },
         dropdownDivider: {
           space: '2',
           border: 'muted-200', // you can use arbitrary value like '[#fff]'
