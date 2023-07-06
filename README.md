@@ -91,6 +91,33 @@ export default withShurikenUI({
           bgHover: 'black/20',
           bgHoverDark: 'white/20',
         },
+        themeToggle: {
+          size: '9',
+          rounded: 'full',
+          duration: '300',
+          ringDark: 'muted-900',
+          inner: {
+            size: '9',
+            rounded: 'full',
+            bg: 'white',
+            bgDark: 'muted-800',
+            border: 'muted-300',
+            borderDark: 'muted-700'
+          },
+          input: {
+            size: 'full',
+          },
+          sun: {
+            size: '5',
+            duration: '300',
+            text: 'yellow-400',
+          },
+          moon: {
+            size: '5',
+            duration: '300',
+            text: 'yellow-400',
+          },
+        },
         tooltip: {
           font: 'sans',
           bg: '[#1e293b]',
