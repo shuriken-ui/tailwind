@@ -679,26 +679,26 @@ export default plugin.withOptions(
 
           [`&.${prefix}-avatar-mask:not(.${prefix}-avatar-rounded):not(.${prefix}-avatar-curved):not(.${prefix}-avatar-full)`]:
             {
-              [`@apply nui-mask`]: {},
+              [`@apply ${prefix}-mask`]: {},
 
               [`&.${prefix}-mask-hex`]: {
-                [`@apply nui-mask-hex`]: {},
+                [`@apply ${prefix}-mask-hex`]: {},
               },
 
               [`&.${prefix}-mask-hexed`]: {
-                [`@apply nui-mask-hexed`]: {},
+                [`@apply ${prefix}-mask-hexed`]: {},
               },
 
               [`&.${prefix}-mask-blob`]: {
-                [`@apply nui-mask-blob`]: {},
+                [`@apply ${prefix}-mask-blob`]: {},
               },
 
               [`&.${prefix}-mask-deca`]: {
-                [`@apply nui-mask-deca`]: {},
+                [`@apply ${prefix}-mask-deca`]: {},
               },
 
               [`&.${prefix}-mask-diamond`]: {
-                [`@apply nui-mask-diamond`]: {},
+                [`@apply ${prefix}-mask-diamond`]: {},
               },
             },
         },
