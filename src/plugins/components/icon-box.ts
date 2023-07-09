@@ -306,21 +306,21 @@ export default plugin.withOptions(
 
           [`&.${prefix}-box-mask:not(.${prefix}-box-rounded):not(.${prefix}-box-curved):not(.${prefix}-box-full):not(.${prefix}-box-outline):not(.${prefix}-box-bordered)`]:
             {
-              [`@apply nui-mask`]: {},
+              [`@apply ${prefix}-mask`]: {},
               [`&.${prefix}-mask-hex`]: {
-                [`@apply nui-mask-hex`]: {},
+                [`@apply ${prefix}-mask-hex`]: {},
               },
               [`&.${prefix}-mask-hexed`]: {
-                [`@apply nui-mask-hexed`]: {},
+                [`@apply ${prefix}-mask-hexed`]: {},
               },
               [`&.${prefix}-mask-blob`]: {
-                [`@apply nui-mask-blob`]: {},
+                [`@apply ${prefix}-mask-blob`]: {},
               },
               [`&.${prefix}-mask-deca`]: {
-                [`@apply nui-mask-deca`]: {},
+                [`@apply ${prefix}-mask-deca`]: {},
               },
               [`&.${prefix}-mask-diamond`]: {
-                [`@apply nui-mask-diamond`]: {},
+                [`@apply ${prefix}-mask-diamond`]: {},
               },
             },
         },
