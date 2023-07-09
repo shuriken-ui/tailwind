@@ -139,7 +139,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}-button-action`]: {
-          [`@apply relative font-sans font-${config.font} text-${config.text} inline-flex items-center justify-center leading-5 no-underline h-8 px-3 py-2 space-x-1 border nui-focus transition-all duration-${config.duration} disabled:opacity-60 disabled:cursor-not-allowed hover:enabled:shadow-none`]:
+          [`@apply relative font-sans font-${config.font} text-${config.text} inline-flex items-center justify-center leading-5 no-underline h-8 px-3 py-2 space-x-1 border ${prefix}-focus transition-all duration-${config.duration} disabled:opacity-60 disabled:cursor-not-allowed hover:enabled:shadow-none`]:
             {},
 
           [`&.${prefix}-button-rounded`]: {
