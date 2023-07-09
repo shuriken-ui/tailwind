@@ -444,7 +444,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}-button`]: {
-          [`@apply relative font-sans font-${config.font} leading-5 no-underline inline-flex justify-center items-center space-x-1 nui-focus transition-all duration-${config.duration} disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none`]:
+          [`@apply relative font-sans font-${config.font} leading-5 no-underline inline-flex justify-center items-center space-x-1 ${prefix}-focus transition-all duration-${config.duration} disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none`]:
             {},
 
           [`.${prefix}-button-badge`]: {
