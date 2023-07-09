@@ -75,7 +75,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}-button-close`]: {
-          [`@apply nui-focus relative inline-flex items-center justify-center space-x-1 font-sans text-${config.text} font-${config.font} leading-5 no-underline outline-none transition-all duration-${config.duration} disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none`]:
+          [`@apply ${prefix}-focus relative inline-flex items-center justify-center space-x-1 font-sans text-${config.text} font-${config.font} leading-5 no-underline outline-none transition-all duration-${config.duration} disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none`]:
             {},
 
           [`&.${prefix}-button-small`]: {
