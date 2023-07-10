@@ -307,21 +307,6 @@ export default plugin.withOptions(
           [`&.${prefix}-box-mask:not(.${prefix}-box-rounded):not(.${prefix}-box-curved):not(.${prefix}-box-full):not(.${prefix}-box-outline):not(.${prefix}-box-bordered)`]:
             {
               [`@apply ${prefix}-mask`]: {},
-              [`&.${prefix}-mask-hex`]: {
-                [`@apply ${prefix}-mask-hex`]: {},
-              },
-              [`&.${prefix}-mask-hexed`]: {
-                [`@apply ${prefix}-mask-hexed`]: {},
-              },
-              [`&.${prefix}-mask-blob`]: {
-                [`@apply ${prefix}-mask-blob`]: {},
-              },
-              [`&.${prefix}-mask-deca`]: {
-                [`@apply ${prefix}-mask-deca`]: {},
-              },
-              [`&.${prefix}-mask-diamond`]: {
-                [`@apply ${prefix}-mask-diamond`]: {},
-              },
             },
         },
       })
