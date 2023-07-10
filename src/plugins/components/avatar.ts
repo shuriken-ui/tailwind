@@ -680,26 +680,6 @@ export default plugin.withOptions(
           [`&.${prefix}-avatar-mask:not(.${prefix}-avatar-rounded):not(.${prefix}-avatar-curved):not(.${prefix}-avatar-full)`]:
             {
               [`@apply ${prefix}-mask`]: {},
-
-              [`&.${prefix}-mask-hex`]: {
-                [`@apply ${prefix}-mask-hex`]: {},
-              },
-
-              [`&.${prefix}-mask-hexed`]: {
-                [`@apply ${prefix}-mask-hexed`]: {},
-              },
-
-              [`&.${prefix}-mask-blob`]: {
-                [`@apply ${prefix}-mask-blob`]: {},
-              },
-
-              [`&.${prefix}-mask-deca`]: {
-                [`@apply ${prefix}-mask-deca`]: {},
-              },
-
-              [`&.${prefix}-mask-diamond`]: {
-                [`@apply ${prefix}-mask-diamond`]: {},
-              },
             },
         },
       })
