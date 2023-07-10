@@ -6,6 +6,7 @@ import focus from './focus'
 import label from './label'
 import mark from './mark'
 import mask from './mask'
+import message from './message'
 import placeload from './placeload'
 import slimscroll from './slimscroll'
 import tooltip from './tooltip'
@@ -16,6 +17,7 @@ const components = [
   label,
   mark,
   mask,
+  message,
   placeload,
   slimscroll,
   tooltip,
