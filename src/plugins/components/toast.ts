@@ -120,7 +120,7 @@ export default plugin.withOptions(
             [`@apply flex items-center grow gap-2 px-4 py-3`]: {},
           },
           [`.${prefix}-toast-title`]: {
-            [`@apply ${prefix}-heading heading-${config.title.heading} weight-${config.title.weight} text-${config.title.text} dark:text-${config.title.textDark}`]:
+            [`@apply ${prefix}-heading ${prefix}-heading-${config.title.heading} ${prefix}-weight-${config.title.weight} text-${config.title.text} dark:text-${config.title.textDark}`]:
               {},
           },
           [`.${prefix}-toast-subtitle`]: {
