@@ -60,7 +60,7 @@ export default plugin.withOptions(
               {},
 
             [`&:not(.${prefix}-active)`]: {
-              [`@apply text${config.item.notActiveText}`]: {},
+              [`@apply text-${config.item.notActiveText}`]: {},
             },
             [`&.${prefix}-active`]: {
               [`@apply text-${config.item.activeText}`]: {},
