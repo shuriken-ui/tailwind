@@ -8,6 +8,7 @@ import mark from './mark'
 import mask from './mask'
 import placeload from './placeload'
 import slimscroll from './slimscroll'
+import textarea from './textarea'
 import tooltip from './tooltip'
 
 const components = [
@@ -18,6 +19,7 @@ const components = [
   mask,
   placeload,
   slimscroll,
+  textarea,
   tooltip,
 ]
 
