@@ -87,7 +87,8 @@ export default plugin.withOptions(
             [`@apply dark:bg-${config.avatarOuter.bgDark} relative flex shrink-0 items-center justify-center rounded-${config.avatarOuter.rounded} bg-${config.avatarOuter.bg} transition-all duration-${config.avatarOuter.duration} ease-in`]:
               {},
             [`.${prefix}-avatar`]: {
-              [`@apply bg-primary-500/20 text-primary-500 !scale-90`]: {},
+              [`@apply bg-${config.avatarOuter.bg} text-${config.avatarOuter.avatar.text} !scale-90`]:
+                {},
             },
           },
           [`.${prefix}-avatar-count`]: {
