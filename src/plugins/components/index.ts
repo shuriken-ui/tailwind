@@ -3,6 +3,7 @@ import { defu } from 'defu'
 import { type PluginOption } from '../options'
 import dropdown from './dropdown'
 import focus from './focus'
+import inputWrapper from './input-wrapper'
 import label from './label'
 import mark from './mark'
 import mask from './mask'
@@ -13,6 +14,7 @@ import tooltip from './tooltip'
 const components = [
   dropdown,
   focus,
+  inputWrapper,
   label,
   mark,
   mask,
