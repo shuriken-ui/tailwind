@@ -84,6 +84,23 @@ export default withShurikenUI({
           text: 'primary-800',
           textDark: 'primary-200',
         },
+        placeloaderPage: {
+          minSize: '[400px]',
+          innerSize: 'full',
+          maxContentSize: 'sm',
+          maxSizeXS: 'xs',
+          maxSizeSM: 'sm',
+          maxSizeMD: 'md',
+          maxSizeLG: 'lg',
+          maxSizeXL: 'xl',
+          title: {
+            text: 'muted-800',
+            textDark: 'white',
+          },
+          subtitle: {
+            text: 'muted-400',
+          },
+        },
         slimscroll: {
           width: '[6px]',
           bg: 'black/5',
