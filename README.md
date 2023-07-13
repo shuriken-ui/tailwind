@@ -73,7 +73,7 @@ export default withShurikenUI({
           color: 'muted-300',
           colorDark: 'muted-600',
         },
-        inputWrapper: {
+        input: {
           label: {
             float: {
               text: 'primary-500',

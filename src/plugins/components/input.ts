@@ -2,7 +2,7 @@ import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../options'
 
-const defaultInputWrapperConfig = {
+const defaultInputConfig = {
   label: {
     float: {
       text: 'primary-500',
@@ -206,8 +206,8 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.inputWrapper'
-      ) satisfies typeof defaultInputWrapperConfig
+        'shurikenUi.input'
+      ) satisfies typeof defaultInputConfig
 
       addComponents({
         [`.${prefix}-input-wrapper`]: {
@@ -541,7 +541,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          inputWrapper: defaultInputWrapperConfig,
+          input: defaultInputConfig,
         },
       },
     }
