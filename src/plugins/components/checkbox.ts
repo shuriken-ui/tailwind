@@ -63,7 +63,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}-checkbox`]: {
-          [`@apply relative inline-flex items-start gap-1'`]: {},
+          [`@apply relative inline-flex items-start gap-1`]: {},
 
           [`.${prefix}-checkbox-outer`]: {
             [`@apply ${prefix}-focus relative flex h-${config.outer.size} w-${config.outer.size} shrink-0 cursor-pointer items-center justify-center overflow-hidden`]:
