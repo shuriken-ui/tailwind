@@ -18,7 +18,7 @@ const defaultInputFileRegularConfig = {
   },
   error: {
     text: 'danger-600',
-    textSize: '[0.65rem',
+    textSize: '[0.65rem]',
     font: 'sans',
     fontWeight: 'medium',
     border: 'danger-500',
