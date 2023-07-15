@@ -40,7 +40,7 @@ const defaultAutocompleteConfig = {
     },
   },
   clear: {
-    text: 'mued-400',
+    text: 'muted-400',
     textHover: 'muted-700',
     textHoverDark: 'muted-200',
     duration: '300',
