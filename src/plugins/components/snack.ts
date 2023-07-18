@@ -97,7 +97,7 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}-snack-icon-inner`]: {
-              [`@apply h-${config.snackSM.icon.size} w-${config.snackSM.icon.size}`]:
+              [`@apply h-${config.snackSM.iconsInner.size} w-${config.snackSM.iconsInner.size}`]:
                 {},
             },
             [`.${prefix}-snack-image, .${prefix}-snack-image-inner`]: {
@@ -113,7 +113,7 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}-snack-icon-inner`]: {
-              [`@apply h-${config.snackMD.icon.size} w-${config.snackMD.icon.size}`]:
+              [`@apply h-${config.snackMD.iconsInner.size} w-${config.snackMD.iconsInner.size}`]:
                 {},
             },
             [`.${prefix}-snack-image, .${prefix}-snack-image-inner`]: {
