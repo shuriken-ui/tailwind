@@ -4,27 +4,27 @@ import { type PluginOption, defaultPluginOptions } from '../options'
 
 const defaultAvatarGroupConfig = {
   avatarOuter: {
+    bg: 'white',
     bgDark: 'muted-800',
     rounded: 'full',
     duration: '100',
-    bg: 'white',
     avatar: {
       bg: 'primary-500/20',
       text: 'primary-500',
     },
   },
   avatarCount: {
+    bg: 'white',
     bgDark: 'muted-800',
     rounded: 'full',
-    bg: 'white',
     duration: '100',
     inner: {
       bg: 'muted-200',
-      borderDark: 'muted-800',
       bgDark: 'muted-700',
+      border: 'white',
+      borderDark: 'muted-800',
       size: 'full',
       rounded: 'full',
-      border: 'white',
     },
     text: {
       text: 'muted-500',
@@ -87,7 +87,7 @@ export default plugin.withOptions(
             [`@apply dark:bg-${config.avatarOuter.bgDark} relative flex shrink-0 items-center justify-center rounded-${config.avatarOuter.rounded} bg-${config.avatarOuter.bg} transition-all duration-${config.avatarOuter.duration} ease-in`]:
               {},
             [`.${prefix}-avatar`]: {
-              [`@apply bg-${config.avatarOuter.bg} text-${config.avatarOuter.avatar.text} !scale-90`]:
+              [`@apply bg-${config.avatarOuter.avatar.bg} text-${config.avatarOuter.avatar.text} !scale-90`]:
                 {},
             },
           },
@@ -99,7 +99,6 @@ export default plugin.withOptions(
               [`@apply bg-${config.avatarCount.inner.bg} dark:border-${config.avatarCount.inner.borderDark} dark:bg-${config.avatarCount.inner.bgDark} relative inline-flex h-${config.avatarCount.inner.size} w-${config.avatarCount.inner.size} scale-90 items-center justify-center rounded-${config.avatarCount.inner.rounded} border-${config.avatarCount.inner.border}`]:
                 {},
             },
-
             [`.${prefix}-avatar-count-text`]: {
               [`@apply text-${config.avatarCount.text.text} dark:text-${config.avatarCount.text.textDark} -ms-1 font-sans font-${config.avatarCount.text.font} uppercase`]:
                 {},
@@ -111,15 +110,15 @@ export default plugin.withOptions(
                 {},
 
               [`&:first-child`]: {
-                [`@apply hover:-ms-4 hover:me-4 focus:me-4`]: {},
+                [`@apply hover:-ms-2 hover:me-2 focus:-ms-2 focus:me-2`]: {},
               },
               [`&:not(:first-child)`]: {
-                [`@apply -ms-5 hover:-ms-9 hover:me-4 focus:-ms-9 focus:me-4`]:
+                [`@apply -ms-2 hover:-ms-4 hover:me-2 focus:-ms-4 focus:me-2`]:
                   {},
               },
             },
             [`.${prefix}-avatar-count`]: {
-              [`@apply -ms-5 h-${config.avatarGroupXS.count.size} w-${config.avatarGroupXS.count.size}`]:
+              [`@apply -ms-2 h-${config.avatarGroupXS.count.size} w-${config.avatarGroupXS.count.size}`]:
                 {},
 
               [`.${prefix}-avatar-count-text`]: {
@@ -133,15 +132,15 @@ export default plugin.withOptions(
                 {},
 
               [`&:first-child`]: {
-                [`@apply hover:-ms-4 hover:me-4 focus:me-4`]: {},
+                [`@apply hover:-ms-2 hover:me-2 focus:me-2`]: {},
               },
               [`&:not(:first-child)`]: {
-                [`@apply -ms-5 hover:-ms-9 hover:me-4 focus:-ms-9 focus:me-4`]:
+                [`@apply -ms-3 hover:-ms-5 hover:me-2 focus:-ms-5 focus:me-2`]:
                   {},
               },
             },
             [`.${prefix}-avatar-count`]: {
-              [`@apply -ms-5 h-${config.avatarGroupSM.count.size} w-${config.avatarGroupSM.count.size}`]:
+              [`@apply -ms-3 h-${config.avatarGroupSM.count.size} w-${config.avatarGroupSM.count.size}`]:
                 {},
 
               [`.${prefix}-avatar-count-text`]: {
@@ -155,15 +154,14 @@ export default plugin.withOptions(
                 {},
 
               [`&:first-child`]: {
-                [`@apply hover:-ms-4 hover:me-4 focus:me-4`]: {},
+                [`@apply hover:-ms-3 hover:me-3 focus:me-3`]: {},
               },
               [`&:not(:first-child)`]: {
-                [`@apply -ms-5 hover:-ms-9 hover:me-4 focus:-ms-9 focus:me-4`]:
-                  {},
+                [`@apply -ms-4 hover:-ms-7 hover:me-3 focus:me-3`]: {},
               },
             },
             [`.${prefix}-avatar-count`]: {
-              [`@apply -ms-5 h-${config.avatarGroupMD.count.size} w-${config.avatarGroupMD.count.size}`]:
+              [`@apply -ms-4 h-${config.avatarGroupMD.count.size} w-${config.avatarGroupMD.count.size}`]:
                 {},
 
               [`.${prefix}-avatar-count-text`]: {
