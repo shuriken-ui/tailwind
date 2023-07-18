@@ -85,14 +85,7 @@ export default withShurikenUI({
           textDark: 'primary-200',
         },
         message: {
-          iconOuter: {
-            size: '10',
-            icon: {
-              size: '5',
-              text: 'white',
-            },
-          },
-          messageText: {
+          messageInnerText: {
             text: 'sm',
             textColor: 'muted-800',
             font: 'sans',
@@ -102,6 +95,7 @@ export default withShurikenUI({
             rounded: 'full',
             duration: '200',
             iconSize: '4',
+            space: '1',
           },
           rounded: {
             default: 'md',
@@ -116,8 +110,8 @@ export default withShurikenUI({
             borderDark: 'muted-700',
             outer: {
               bg: 'muted-600',
-              text: 'white',
               bgDark: 'muted-900',
+              text: 'white',
             },
             close: {
               textDark: 'muted-500',

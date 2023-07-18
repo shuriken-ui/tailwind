@@ -3,14 +3,7 @@ import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../options'
 
 const defaultMessageConfig = {
-  iconOuter: {
-    size: '10',
-    icon: {
-      size: '5',
-      text: 'white',
-    },
-  },
-  messageText: {
+  messageInnerText: {
     text: 'sm',
     textColor: 'muted-800',
     font: 'sans',
@@ -20,6 +13,7 @@ const defaultMessageConfig = {
     rounded: 'full',
     duration: '200',
     iconSize: '4',
+    space: '1',
   },
   rounded: {
     default: 'md',
@@ -34,8 +28,8 @@ const defaultMessageConfig = {
     borderDark: 'muted-700',
     outer: {
       bg: 'muted-600',
-      text: 'white',
       bgDark: 'muted-900',
+      text: 'white',
     },
     close: {
       textDark: 'muted-500',
@@ -177,23 +171,13 @@ export default plugin.withOptions(
         [`.${prefix}-message`]: {
           [`@apply flex min-h-[3rem] items-center border p-1 pe-2`]: {},
 
-          [`.${prefix}-message-icon-outer`]: {
-            [`@apply flex h-${config.iconOuter.size} w-${config.iconOuter.size} shrink-0 items-center justify-center`]:
-              {},
-
-            [`.${prefix}-message-icon`]: {
-              [`@apply h-${config.iconOuter.icon.size} w-${config.iconOuter.icon.size} text-${config.iconOuter.icon.text}`]:
-                {},
-            },
-          },
-          [`.${prefix}-message-text`]: {
-            [`@apply text-${config.messageText.textColor} mx-3 block font-${config.messageText.font} text-${config.messageText.text}`]:
+          [`.${prefix}-message-inner-text`]: {
+            [`@apply text-${config.messageInnerText.textColor} px-3 block font-${config.messageInnerText.font} text-${config.messageInnerText.text}`]:
               {},
           },
           [`.${prefix}-message-close`]: {
-            [`@apply ${prefix}-focus text-${config.messageClose.text} me-2 ms-auto flex cursor-pointer items-center justify-center p-1 outline-none rounded-${config.messageClose.rounded} transition-colors duration-${config.messageClose.duration}`]:
+            [`@apply ${prefix}-focus text-${config.messageClose.text} me-2 ms-auto flex cursor-pointer items-center justify-center p-${config.messageClose.space} outline-none rounded-${config.messageClose.rounded} transition-colors duration-${config.messageClose.duration}`]:
               {},
-
             [`.${prefix}-close-icon`]: {
               [`@apply h-${config.messageClose.iconSize} w-${config.messageClose.iconSize}`]:
                 {},
@@ -227,11 +211,9 @@ export default plugin.withOptions(
               [`@apply rounded-${config.rounded.full}`]: {},
             },
           },
-
           [`&.${prefix}-message-default`]: {
             [`@apply bg-${config.messageDefault.bg} dark:bg-${config.messageDefault.bgDark} border-${config.messageDefault.border} dark:border-${config.messageDefault.borderDark}`]:
               {},
-
             [`.${prefix}-message-icon-outer`]: {
               [`@apply bg-${config.messageDefault.outer.bg} text-${config.messageDefault.outer.text} dark:bg-${config.messageDefault.outer.bgDark}`]:
                 {},
