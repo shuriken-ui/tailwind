@@ -452,7 +452,7 @@ export default plugin.withOptions(
               [`@apply pb-1 text-${config.md.text}`]: {},
             },
             [`.${prefix}-label-float`]: {
-              [`@apply top-1.5`]: {},
+              [`@apply top-2.5`]: {},
             },
             [`.${prefix}-autocomplete-icon`]: {
               [`@apply h-${config.md.icon.size} w-${config.md.icon.size}`]: {},
@@ -474,7 +474,7 @@ export default plugin.withOptions(
               [`@apply pb-1 text-${config.lg.text}`]: {},
             },
             [`.${prefix}-label-float`]: {
-              [`@apply top-1.5`]: {},
+              [`@apply top-3.5`]: {},
             },
             [`.${prefix}-autocomplete-icon`]: {
               [`@apply h-${config.lg.icon.size} w-${config.lg.icon.size}`]: {},
