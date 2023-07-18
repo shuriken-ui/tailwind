@@ -302,7 +302,7 @@ export default plugin.withOptions(
               [`@apply pb-1 text-${config.input.md.label.text}`]: {},
             },
             [`.${prefix}-label-float`]: {
-              [`@apply top-1.5`]: {},
+              [`@apply top-2.5`]: {},
             },
             [`.${prefix}-input-icon, .${prefix}-input-action`]: {
               [`@apply h-${config.input.md.iconOrAction.size} w-${config.input.md.iconOrAction.size}`]:
@@ -322,7 +322,7 @@ export default plugin.withOptions(
               [`@apply pb-1 text-${config.input.lg.label.text}`]: {},
             },
             [`.${prefix}-label-float`]: {
-              [`@apply top-1.5`]: {},
+              [`@apply top-3.5`]: {},
             },
             [`.${prefix}-input-icon, .${prefix}-input-action`]: {
               [`@apply h-${config.input.lg.iconOrAction.size} w-${config.input.lg.iconOrAction.size}`]:
