@@ -2,7 +2,7 @@ import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../options'
 
-const defaultPlaceloaderPageConfig = {
+const defaultPlaceholderPageConfig = {
   minSize: '[400px]',
   innerSize: 'full',
   maxContentSize: 'sm',
@@ -26,11 +26,11 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.placeloaderPage'
-      ) satisfies typeof defaultPlaceloaderPageConfig
+        'shurikenUi.placeholderPage'
+      ) satisfies typeof defaultPlaceholderPageConfig
 
       addComponents({
-        [`.${prefix}-placeloader-page`]: {
+        [`.${prefix}-placeholder-page`]: {
           [`@apply flex min-h-${config.minSize} items-center justify-center`]:
             {},
 
@@ -76,7 +76,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          placeloaderPage: defaultPlaceloaderPageConfig,
+          placeholderPage: defaultPlaceholderPageConfig,
         },
       },
     }

@@ -7,7 +7,7 @@ import label from './label'
 import mark from './mark'
 import mask from './mask'
 import placeload from './placeload'
-import placeloaderPage from './placeloader-page'
+import placeholderPage from './placeholder-page'
 import slimscroll from './slimscroll'
 import tooltip from './tooltip'
 
@@ -18,7 +18,7 @@ const components = [
   mark,
   mask,
   placeload,
-  placeloaderPage,
+  placeholderPage,
   slimscroll,
   tooltip,
 ]

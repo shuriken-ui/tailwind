@@ -84,7 +84,7 @@ export default withShurikenUI({
           text: 'primary-800',
           textDark: 'primary-200',
         },
-        placeloaderPage: {
+        placeholderPage: {
           minSize: '[400px]',
           innerSize: 'full',
           maxContentSize: 'sm',
