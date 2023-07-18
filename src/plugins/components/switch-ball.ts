@@ -107,6 +107,9 @@ export default plugin.withOptions(
               [`@apply outline-dashed outline-offset-2 ring-0 dark:outline-muted-600 outline-muted-300`]:
                 {},
             },
+            [`&:checked ~ .${prefix}-switch-ball-icon`]: {
+              [`@apply -translate-y-1/2 opacity-100`]: {},
+            },
           },
           [`&.${prefix}-switch-ball-primary .${prefix}-switch-ball-input:checked ~ .${prefix}-switch-ball-track`]:
             {
