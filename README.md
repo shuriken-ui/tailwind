@@ -85,6 +85,13 @@ export default withShurikenUI({
           textDark: 'primary-200',
         },
         message: {
+          messageIconOuter: {
+            size: '10',
+            icon: {
+              size: '5',
+              text: 'white',
+            },
+          },
           messageInnerText: {
             text: 'sm',
             textColor: 'muted-800',
@@ -238,7 +245,7 @@ export default withShurikenUI({
               bgActiveEnabledDark: 'danger-500/20',
             },
           },
-        }
+        },
         slimscroll: {
           width: '[6px]',
           bg: 'black/5',

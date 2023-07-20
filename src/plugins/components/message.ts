@@ -3,6 +3,13 @@ import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../options'
 
 const defaultMessageConfig = {
+  messageIconOuter: {
+    size: '10',
+    icon: {
+      size: '5',
+      text: 'white',
+    },
+  },
   messageInnerText: {
     text: 'sm',
     textColor: 'muted-800',
@@ -171,6 +178,15 @@ export default plugin.withOptions(
         [`.${prefix}-message`]: {
           [`@apply flex min-h-[3rem] items-center border p-1 pe-2`]: {},
 
+          [`.${prefix}-message-icon-outer`]: {
+            [`@apply flex h-${config.messageIconOuter.size} w-${config.messageIconOuter.size} shrink-0 items-center justify-center`]:
+              {},
+
+            [`.${prefix}-message-icon`]: {
+              [`@apply h-${config.messageIconOuter.icon.size} w-${config.messageIconOuter.icon.size} text-${config.messageIconOuter.icon.text}`]:
+                {},
+            },
+          },
           [`.${prefix}-message-inner-text`]: {
             [`@apply text-${config.messageInnerText.textColor} px-3 block font-${config.messageInnerText.font} text-${config.messageInnerText.text}`]:
               {},
