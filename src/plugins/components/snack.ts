@@ -128,7 +128,7 @@ export default plugin.withOptions(
           [`&.${prefix}-snack-muted`]: {
             [`@apply bg-${config.muted.bg} dark:bg-${config.muted.bgDark}`]: {},
           },
-          [`&:not(.has-media)`]: {
+          [`&:not(.${prefix}-has-media)`]: {
             [`@apply ps-4`]: {},
           },
         },
