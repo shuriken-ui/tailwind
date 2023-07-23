@@ -26,6 +26,7 @@ import select from './select'
 import radio from './radio'
 import progressCircle from './progress-circle'
 import slimscroll from './slimscroll'
+import switchThin from './switch-thin'
 import switchBall from './switch-ball'
 import textarea from './textarea'
 import tooltip from './tooltip'
@@ -55,6 +56,7 @@ const components = [
   radio,
   progressCircle,
   slimscroll,
+  switchThin,
   switchBall,
   snack,
   textarea,

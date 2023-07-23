@@ -1947,12 +1947,14 @@ export default withShurikenUI({
           bgHover: 'black/20',
           bgHoverDark: 'white/20',
         },
+        switchThin: {
         switchBall: {
           handle: {
             border: 'muted-300',
             borderDark: 'muted-600',
             bg: 'white',
             bgDark: 'muted-700',
+            size: '6',
             size: '5',
             rounded: 'full',
           },
