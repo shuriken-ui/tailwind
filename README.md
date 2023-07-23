@@ -1486,6 +1486,21 @@ export default withShurikenUI({
           text: 'muted-400',
           textDark: 'muted-400/80',
         },
+        list: {
+          ul: 'disc',
+          ol: 'decimal',
+          base: {
+            list: 'disc',
+            textMarker: 'muted-500',
+            textMarkerDark: 'muted-400',
+            text: 'slate-700',
+            textDark: 'slate-300',
+            font: 'sans',
+          },
+          media: {
+            textMarker: 'slate-500',
+            textMarkerDark: 'slate-400',
+          }
         link: {
           font: 'sans',
           textHover: 'primary-500',

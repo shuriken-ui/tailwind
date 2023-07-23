@@ -19,6 +19,7 @@ import heading from './heading'
 import input from './input'
 import inputFileRegular from './input-file-regular'
 import label from './label'
+import list from './list'
 import link from './link'
 import listbox from './listbox'
 import mark from './mark'
@@ -60,6 +61,7 @@ const components = [
   input,
   inputFileRegular,
   label,
+  list,
   link,
   listbox,
   mark,
