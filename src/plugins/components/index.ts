@@ -1,6 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption } from '../options'
+import checkbox from './checkbox'
 import buttonAction from './button-action'
 import buttonClose from './button-close'
 import buttonIcon from './button-icon'
@@ -22,6 +23,7 @@ import textarea from './textarea'
 import tooltip from './tooltip'
 
 const components = [
+  checkbox,
   buttonAction,
   buttonClose,
   buttonIcon,
