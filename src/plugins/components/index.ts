@@ -11,6 +11,7 @@ import label from './label'
 import listbox from './listbox'
 import mark from './mark'
 import mask from './mask'
+import message from './message'
 import placeload from './placeload'
 import progressCircle from './progress-circle'
 import slimscroll from './slimscroll'
@@ -28,6 +29,7 @@ const components = [
   listbox,
   mark,
   mask,
+  message,
   placeload,
   progressCircle,
   slimscroll,
