@@ -195,23 +195,25 @@ export default plugin.withOptions(
 
     return {
       theme: {
-        keyframes: {
-          [`${prefix}-tooltip-x`]: {
-            to: {
-              opacity: '1',
-              transform: 'translate(-50%, 0)',
+        extend: {
+          keyframes: {
+            [`${prefix}-tooltip-x`]: {
+              to: {
+                opacity: '1',
+                transform: 'translate(-50%, 0)',
+              },
+            },
+            [`${prefix}-tooltip-y`]: {
+              to: {
+                opacity: '1',
+                transform: 'translate(0, -50%)',
+              },
             },
           },
-          [`${prefix}-tooltip-y`]: {
-            to: {
-              opacity: '1',
-              transform: 'translate(0, -50%)',
-            },
+          animation: {
+            [`${prefix}-tooltip-x`]: `${prefix}-tooltip-x 300ms ease-out forwards`,
+            [`${prefix}-tooltip-y`]: `${prefix}-tooltip-y 300ms ease-out forwards`,
           },
-        },
-        animation: {
-          [`${prefix}-tooltip-x`]: `${prefix}-tooltip-x 300ms ease-out forwards`,
-          [`${prefix}-tooltip-y`]: `${prefix}-tooltip-y 300ms ease-out forwards`,
         },
         shurikenUi: {
           tooltip: defaultTooltipConfig,

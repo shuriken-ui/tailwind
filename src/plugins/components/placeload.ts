@@ -28,14 +28,16 @@ export default plugin.withOptions(
 
     return {
       theme: {
-        keyframes: {
-          [`${prefix}-placeload`]: {
-            '0%': { 'background-position': '-468px 0' },
-            '100%': { 'background-position': '468px 0' },
+        extend: {
+          keyframes: {
+            [`${prefix}-placeload`]: {
+              '0%': { 'background-position': '-468px 0' },
+              '100%': { 'background-position': '468px 0' },
+            },
           },
-        },
-        animation: {
-          [`${prefix}-placeload`]: `${prefix}-placeload 1s linear infinite forwards`,
+          animation: {
+            [`${prefix}-placeload`]: `${prefix}-placeload 1s linear infinite forwards`,
+          },
         },
       },
     }

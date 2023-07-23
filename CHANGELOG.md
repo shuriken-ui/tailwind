@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/shuriken-ui/tailwind/compare/v0.1.0...v0.1.1) (2023-06-30)
+
+
+### Bug Fixes
+
+* prevent overriding default animation ([6233615](https://github.com/shuriken-ui/tailwind/commit/62336156f7d8f25ce49dfc24ea5ac86cd5d633a5))
+
 ## [0.1.0](https://github.com/shuriken-ui/tailwind/compare/v0.0.5...v0.1.0) (2023-06-05)
 
 
