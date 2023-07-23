@@ -19,6 +19,7 @@ import mark from './mark'
 import mask from './mask'
 import message from './message'
 import placeload from './placeload'
+import snack from './snack'
 import placeholderPage from './placeholder-page'
 import select from './select'
 import radio from './radio'
@@ -51,6 +52,7 @@ const components = [
   radio,
   progressCircle,
   slimscroll,
+  snack,
   textarea,
   tooltip,
 ]
