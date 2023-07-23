@@ -15,6 +15,7 @@ import mark from './mark'
 import mask from './mask'
 import message from './message'
 import placeload from './placeload'
+import radio from './radio'
 import progressCircle from './progress-circle'
 import slimscroll from './slimscroll'
 import textarea from './textarea'
@@ -35,6 +36,7 @@ const components = [
   mask,
   message,
   placeload,
+  radio,
   progressCircle,
   slimscroll,
   textarea,
