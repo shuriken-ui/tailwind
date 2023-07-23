@@ -1,6 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption } from '../options'
+import card from './card'
 import avatarGroup from './avatar-group'
 import autocomplete from './autocomplete'
 import avatar from './avatar'
@@ -38,6 +39,7 @@ import tag from './tag'
 import breadcrumb from './breadcrumb'
 
 const components = [
+  card,
   breadcrumb,
   avatarGroup,
   autocomplete,
