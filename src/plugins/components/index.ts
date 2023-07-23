@@ -11,6 +11,7 @@ import buttonClose from './button-close'
 import buttonIcon from './button-icon'
 import buttonGroup from './button-group'
 import dropdown from './dropdown'
+import dropdownItem from './dropdown-item'
 import dropdownDivider from './dropdown-divider'
 import inputFile from './input-file'
 import focus from './focus'
@@ -51,6 +52,7 @@ const components = [
   buttonIcon,
   buttonGroup,
   dropdown,
+  dropdownItem,
   dropdownDivider,
   inputFile,
   focus,
