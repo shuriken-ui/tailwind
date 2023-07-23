@@ -17,6 +17,7 @@ import dropdownItem from './dropdown-item'
 import dropdownDivider from './dropdown-divider'
 import inputFile from './input-file'
 import focus from './focus'
+import iconBox from './icon-box'
 import heading from './heading'
 import input from './input'
 import inputFileRegular from './input-file-regular'
@@ -69,6 +70,7 @@ const components = [
   dropdownDivider,
   inputFile,
   focus,
+  iconBox,
   heading,
   input,
   inputFileRegular,
