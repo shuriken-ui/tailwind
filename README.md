@@ -1256,6 +1256,12 @@ export default withShurikenUI({
           text: 'muted-400',
           textDark: 'muted-400/80',
         },
+        link: {
+          font: 'sans',
+          textHover: 'primary-500',
+          textHoverDark: 'primary-400',
+          textFocus: 'primary-500',
+          textFocusDark: 'primary-400',
         listbox: {  
           labelFloat: {
             text: 'primary-500',

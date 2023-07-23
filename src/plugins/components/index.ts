@@ -15,6 +15,7 @@ import focus from './focus'
 import input from './input'
 import inputFileRegular from './input-file-regular'
 import label from './label'
+import link from './link'
 import listbox from './listbox'
 import mark from './mark'
 import mask from './mask'
@@ -46,6 +47,7 @@ const components = [
   input,
   inputFileRegular,
   label,
+  link,
   listbox,
   mark,
   mask,
