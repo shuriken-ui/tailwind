@@ -8,6 +8,7 @@ import dropdown from './dropdown'
 import focus from './focus'
 import inputFileRegular from './input-file-regular'
 import label from './label'
+import listbox from './listbox'
 import mark from './mark'
 import mask from './mask'
 import placeload from './placeload'
@@ -23,6 +24,7 @@ const components = [
   focus,
   inputFileRegular,
   label,
+  listbox,
   mark,
   mask,
   placeload,
