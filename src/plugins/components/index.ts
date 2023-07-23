@@ -6,6 +6,7 @@ import buttonIcon from './button-icon'
 import buttonGroup from './button-group'
 import dropdown from './dropdown'
 import focus from './focus'
+import inputFileRegular from './input-file-regular'
 import label from './label'
 import mark from './mark'
 import mask from './mask'
@@ -20,6 +21,7 @@ const components = [
   buttonGroup,
   dropdown,
   focus,
+  inputFileRegular,
   label,
   mark,
   mask,
