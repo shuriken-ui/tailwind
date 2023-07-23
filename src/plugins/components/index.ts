@@ -34,6 +34,7 @@ import switchThin from './switch-thin'
 import switchBall from './switch-ball'
 import textarea from './textarea'
 import tooltip from './tooltip'
+import tag from './tag'
 import breadcrumb from './breadcrumb'
 
 const components = [
@@ -65,6 +66,7 @@ const components = [
   radio,
   progressCircle,
   slimscroll,
+  tag,
   text,
   switchThin,
   switchBall,
