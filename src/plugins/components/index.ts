@@ -8,6 +8,7 @@ import label from './label'
 import mark from './mark'
 import mask from './mask'
 import placeload from './placeload'
+import progressCircle from './progress-circle'
 import slimscroll from './slimscroll'
 import tooltip from './tooltip'
 
@@ -19,6 +20,7 @@ const components = [
   mark,
   mask,
   placeload,
+  progressCircle,
   slimscroll,
   tooltip,
 ]
