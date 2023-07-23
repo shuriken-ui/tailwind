@@ -1,25 +1,59 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption } from '../options'
+import autocomplete from './autocomplete'
+import avatar from './avatar'
+import checkbox from './checkbox'
+import buttonAction from './button-action'
+import buttonClose from './button-close'
+import buttonIcon from './button-icon'
+import buttonGroup from './button-group'
 import dropdown from './dropdown'
+import inputFile from './input-file'
 import focus from './focus'
+import input from './input'
+import inputFileRegular from './input-file-regular'
 import label from './label'
+import listbox from './listbox'
 import mark from './mark'
 import mask from './mask'
+import message from './message'
 import placeload from './placeload'
 import snack from './snack'
+import placeholderPage from './placeholder-page'
+import select from './select'
+import radio from './radio'
+import progressCircle from './progress-circle'
 import slimscroll from './slimscroll'
+import textarea from './textarea'
 import tooltip from './tooltip'
 
 const components = [
+  autocomplete,
+  avatar,
+  checkbox,
+  buttonAction,
+  buttonClose,
+  buttonIcon,
+  buttonGroup,
   dropdown,
+  inputFile,
   focus,
+  input,
+  inputFileRegular,
   label,
+  listbox,
   mark,
   mask,
+  message,
   placeload,
+  placeholderPage,
+  select,
+  radio,
+  progressCircle,
   slimscroll,
   snack,
+  textarea,
   tooltip,
 ]
 
