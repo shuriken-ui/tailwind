@@ -16,6 +16,7 @@ import mark from './mark'
 import mask from './mask'
 import message from './message'
 import placeload from './placeload'
+import select from './select'
 import radio from './radio'
 import progressCircle from './progress-circle'
 import slimscroll from './slimscroll'
@@ -38,6 +39,7 @@ const components = [
   mask,
   message,
   placeload,
+  select,
   radio,
   progressCircle,
   slimscroll,
