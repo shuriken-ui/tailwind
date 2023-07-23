@@ -1792,6 +1792,24 @@ export default withShurikenUI({
           text: 'primary-800',
           textDark: 'primary-200',
         },
+        modal: {
+          backdrop: {
+            bg: 'muted-800/70',
+            bgDark: 'muted-900/80',
+          },
+          contentInner: {
+            space: '4',
+          },
+          contentPanel: {
+            size: 'full',
+            text: 'start',
+          },
+          modalSM: 'sm',
+          modalMD: 'md',
+          modalLG: 'xl',
+          modalXL: '2xl',
+          modal2XL: '3xl',
+          modal3XL: '5xl',
         paragraph: {
           textXS: 'xs',
           textSM: 'sm',
