@@ -31,8 +31,10 @@ import switchThin from './switch-thin'
 import switchBall from './switch-ball'
 import textarea from './textarea'
 import tooltip from './tooltip'
+import breadcrumb from './breadcrumb'
 
 const components = [
+  breadcrumb,
   avatarGroup,
   autocomplete,
   avatar,

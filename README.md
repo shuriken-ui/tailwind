@@ -61,6 +61,29 @@ export default withShurikenUI({
   theme: {
     extend: {
       shurikenUi: {
+        breadcrumb: {
+          list: {
+            font: 'sans',
+            text: '[0.85rem]',
+            itemInner: {
+              text: 'muted-500',
+              duration: '300',
+              icon: {
+                size: '4',
+                dot: {
+                  text: 'xl',
+                },
+              },
+              link: {
+                textHover: 'primary-500',
+                texFocus: 'primary-500',
+              },
+              itemText: {
+                text: 'muted-500',
+                space: '2',
+              },
+            },
+          }
         avatarGroup: {
           avatarOuter: {
             bgDark: 'muted-800',
