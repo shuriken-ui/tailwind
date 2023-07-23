@@ -61,6 +61,71 @@ export default withShurikenUI({
   theme: {
     extend: {
       shurikenUi: {
+        avatarGroup: {
+          avatarOuter: {
+            bgDark: 'muted-800',
+            rounded: 'full',
+            duration: '100',
+            bg: 'white',
+            avatar: {
+              bg: 'primary-500/20',
+              text: 'primary-500',
+            },
+          },
+          avatarCount: {
+            bgDark: 'muted-800',
+            rounded: 'full',
+            bg: 'white',
+            duration: '100',
+            inner: {
+              bg: 'muted-200',
+              borderDark: 'muted-800',
+              bgDark: 'muted-700',
+              size: 'full',
+              rounded: 'full',
+              border: 'white',
+            },
+            text: {
+              text: 'muted-500',
+              textDark: 'muted-300',
+              font: 'normal',
+            },
+          },
+          avatarGroupXS: {
+            outer: {
+              size: '8',
+            },
+            count: {
+              size: '8',
+              text: 'sm',
+            },
+          },
+          avatarGroupSM: {
+            outer: {
+              size: '10',
+            },
+            count: {
+              size: '10',
+              text: 'sm',
+            },
+          },
+          avatarGroupMD: {
+            outer: {
+              size: '12',
+            },
+            count: {
+              size: '12',
+              text: 'lg',
+            },
+          },
+          avatarGroupLG: {
+            outer: {
+              size: '16',
+            },
+            count: {
+              size: '16',
+              text: 'xl',
+            },
         autocomplete: {
           labelFloat: {
             text: 'primary-500',

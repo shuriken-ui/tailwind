@@ -1,6 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption } from '../options'
+import avatarGroup from './avatar-group'
 import autocomplete from './autocomplete'
 import avatar from './avatar'
 import checkbox from './checkbox'
@@ -30,6 +31,7 @@ import textarea from './textarea'
 import tooltip from './tooltip'
 
 const components = [
+  avatarGroup,
   autocomplete,
   avatar,
   checkbox,
