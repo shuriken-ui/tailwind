@@ -196,6 +196,19 @@ export default withShurikenUI({
           text: 'primary-800',
           textDark: 'primary-200',
         },
+        progressCircle: {
+          circleDuration: '500',
+          default: {
+            text: 'muted-200',
+            textDark: 'muted-700',
+            stroke: 'current',
+          },
+          contrast: {
+            text: 'muted-200',
+            textDark: 'muted-900',
+            stroke: 'current',    
+          }
+        },
         slimscroll: {
           width: '[6px]',
           bg: 'black/5',

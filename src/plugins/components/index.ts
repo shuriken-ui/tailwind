@@ -3,24 +3,28 @@ import { defu } from 'defu'
 import { type PluginOption } from '../options'
 import buttonClose from './button-close'
 import buttonIcon from './button-icon'
+import buttonGroup from './button-group'
 import dropdown from './dropdown'
 import focus from './focus'
 import label from './label'
 import mark from './mark'
 import mask from './mask'
 import placeload from './placeload'
+import progressCircle from './progress-circle'
 import slimscroll from './slimscroll'
 import tooltip from './tooltip'
 
 const components = [
   buttonClose,
   buttonIcon,
+  buttonGroup,
   dropdown,
   focus,
   label,
   mark,
   mask,
   placeload,
+  progressCircle,
   slimscroll,
   tooltip,
 ]
