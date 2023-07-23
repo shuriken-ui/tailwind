@@ -14,6 +14,7 @@ import mask from './mask'
 import placeload from './placeload'
 import progressCircle from './progress-circle'
 import slimscroll from './slimscroll'
+import textarea from './textarea'
 import tooltip from './tooltip'
 
 const components = [
@@ -30,6 +31,7 @@ const components = [
   placeload,
   progressCircle,
   slimscroll,
+  textarea,
   tooltip,
 ]
 
