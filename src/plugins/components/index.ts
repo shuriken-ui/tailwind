@@ -20,6 +20,7 @@ import link from './link'
 import listbox from './listbox'
 import mark from './mark'
 import mask from './mask'
+import paragraph from './paragraph'
 import message from './message'
 import placeload from './placeload'
 import snack from './snack'
@@ -55,6 +56,7 @@ const components = [
   listbox,
   mark,
   mask,
+  paragraph,
   message,
   placeload,
   placeholderPage,
