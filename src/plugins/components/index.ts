@@ -37,6 +37,7 @@ import select from './select'
 import radio from './radio'
 import progressCircle from './progress-circle'
 import slimscroll from './slimscroll'
+import tabSlider from './tab-slider'
 import toast from './toast'
 import tabs from './tabs'
 import text from './text'
@@ -84,6 +85,7 @@ const components = [
   radio,
   progressCircle,
   slimscroll,
+  tabSlider,
   toast,
   tabs,
   tag,
