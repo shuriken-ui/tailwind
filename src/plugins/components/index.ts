@@ -6,6 +6,7 @@ import buttonClose from './button-close'
 import buttonIcon from './button-icon'
 import buttonGroup from './button-group'
 import dropdown from './dropdown'
+import inputFile from './input-file'
 import focus from './focus'
 import inputFileRegular from './input-file-regular'
 import label from './label'
@@ -25,6 +26,7 @@ const components = [
   buttonIcon,
   buttonGroup,
   dropdown,
+  inputFile,
   focus,
   inputFileRegular,
   label,
