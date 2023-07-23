@@ -798,6 +798,22 @@ export default withShurikenUI({
           text: 'primary-800',
           textDark: 'primary-200',
         },
+        placeholderPage: {
+          minSize: '[400px]',
+          innerSize: 'full',
+          maxContentSize: 'sm',
+          maxSizeXS: 'xs',
+          maxSizeSM: 'sm',
+          maxSizeMD: 'md',
+          maxSizeLG: 'lg',
+          maxSizeXL: 'xl',
+          title: {
+            text: 'muted-800',
+            textDark: 'white',
+          },
+          subtitle: {
+            text: 'muted-400',
+          },
         select: {
           labelFloat: {
             text: 'primary-500',

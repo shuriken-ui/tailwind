@@ -16,6 +16,7 @@ import mark from './mark'
 import mask from './mask'
 import message from './message'
 import placeload from './placeload'
+import placeholderPage from './placeholder-page'
 import select from './select'
 import radio from './radio'
 import progressCircle from './progress-circle'
@@ -39,6 +40,7 @@ const components = [
   mask,
   message,
   placeload,
+  placeholderPage,
   select,
   radio,
   progressCircle,
