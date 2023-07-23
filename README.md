@@ -1792,6 +1792,28 @@ export default withShurikenUI({
           text: 'primary-800',
           textDark: 'primary-200',
         },
+        progress: {
+          size: 'full',
+          bar: {
+            duration: '300',
+          },
+          default: {
+            bg: 'muted-200',
+            bgDark: 'muted-700',
+          },
+          defaultContrast: {
+            bg: 'muted-200',
+            bgDark: 'muted-900',
+          },
+          progressXS: '1',
+          progressSM: '2',
+          progressMD: '3',
+          progressLG: '3',
+          progressXL: '5',
+          rounded: {
+            curved: 'lg',
+            full: 'full',
+          },
         pagination: {
           size: 'full',
           list: {

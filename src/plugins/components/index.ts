@@ -29,6 +29,7 @@ import modal from './modal'
 import paragraph from './paragraph'
 import message from './message'
 import placeload from './placeload'
+import progress from './progress'
 import snack from './snack'
 import placeholderPage from './placeholder-page'
 import select from './select'
@@ -74,6 +75,7 @@ const components = [
   paragraph,
   message,
   placeload,
+  progress,
   placeholderPage,
   select,
   radio,
