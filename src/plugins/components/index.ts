@@ -12,6 +12,7 @@ import buttonGroup from './button-group'
 import dropdown from './dropdown'
 import inputFile from './input-file'
 import focus from './focus'
+import heading from './heading'
 import input from './input'
 import inputFileRegular from './input-file-regular'
 import label from './label'
@@ -46,6 +47,7 @@ const components = [
   dropdown,
   inputFile,
   focus,
+  heading,
   input,
   inputFileRegular,
   label,
