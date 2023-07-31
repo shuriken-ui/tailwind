@@ -2572,6 +2572,7 @@ export default withShurikenUI({
               bgDark: 'muted-900',
               text: 'white',
             },
+            txtDarkInner: 'muted-500',
             close: {
               textDark: 'muted-500',
               bgHoverEnabled: 'muted-300/50',
@@ -2592,6 +2593,7 @@ export default withShurikenUI({
               text: 'white',
               bgDark: 'muted-900',
             },
+            txtDarkInner: 'muted-500',
             close: {
               textDark: 'muted-500',
               bgHoverEnabled: 'muted-300/50',
@@ -2611,6 +2613,7 @@ export default withShurikenUI({
               bg: 'primary-500',
               text: 'white',
             },
+            txtDarkInner: 'primary-500',
             close: {
               textDark: 'primary-500',
               bgHoverEnabled: 'primary-300/50',
@@ -2630,6 +2633,7 @@ export default withShurikenUI({
               bg: 'info-500',
               text: 'white',
             },
+            txtDarkInner: 'info-500',
             close: {
               textDark: 'info-500',
               bgHoverEnabled: 'info-300/50',
@@ -2649,6 +2653,7 @@ export default withShurikenUI({
               bg: 'success-500',
               text: 'white',
             },
+            txtDarkInner: 'success-500',
             close: {
               textDark: 'success-500',
               bgHoverEnabled: 'success-300/50',
@@ -2668,6 +2673,7 @@ export default withShurikenUI({
               bg: 'warning-500',
               text: 'white',
             },
+            txtDarkInner: 'warning-500',
             close: {
               textDark: 'warning-500',
               bgHoverEnabled: 'warning-300/50',
@@ -2687,6 +2693,7 @@ export default withShurikenUI({
               bg: 'danger-500',
               text: 'white',
             },
+            txtDarkInner: 'danger-500',
             close: {
               textDark: 'danger-500',
               bgHoverEnabled: 'danger-300/50',
