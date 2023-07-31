@@ -470,7 +470,6 @@ export default plugin.withOptions(
                 [`@apply bg-${config.badge.primary}`]: {},
               },
             },
-
             [`&.${prefix}-badge-info`]: {
               [`.${prefix}-button-badge-pulse`]: {
                 [`@apply bg-${config.badge.info}`]: {},
@@ -480,7 +479,6 @@ export default plugin.withOptions(
                 [`@apply bg-${config.badge.info}`]: {},
               },
             },
-
             [`&.${prefix}-badge-success`]: {
               [`.${prefix}-button-badge-pulse`]: {
                 [`@apply bg-${config.badge.success}`]: {},
@@ -490,7 +488,6 @@ export default plugin.withOptions(
                 [`@apply bg-${config.badge.success}`]: {},
               },
             },
-
             [`&.${prefix}-badge-warning`]: {
               [`.${prefix}-button-badge-pulse`]: {
                 [`@apply bg-${config.badge.warning}`]: {},
@@ -500,7 +497,6 @@ export default plugin.withOptions(
                 [`@apply bg-${config.badge.warning}`]: {},
               },
             },
-
             [`&.${prefix}-badge-danger`]: {
               [`.${prefix}-button-badge-pulse`]: {
                 [`@apply bg-${config.badge.danger}`]: {},

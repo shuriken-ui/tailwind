@@ -70,11 +70,11 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.buttonClose'
+        'shurikenUi.buttonIcon'
       ) satisfies typeof defaultButtonIconConfig
 
       addComponents({
-        [`.${prefix}-button-close`]: {
+        [`.${prefix}-button-icon`]: {
           [`@apply ${prefix}-focus relative inline-flex items-center justify-center space-x-1 font-sans text-${config.text} font-${config.font} leading-5 no-underline outline-none transition-all duration-${config.duration} disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none`]:
             {},
 
@@ -142,7 +142,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          buttonClose: defaultButtonIconConfig,
+          buttonIcon: defaultButtonIconConfig,
         },
       },
     }
