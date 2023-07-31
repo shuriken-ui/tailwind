@@ -17,6 +17,20 @@ const defaultPaginationConfig = {
     bg: 'muted-100',
     bgDark: 'muted-700',
     space: '1',
+    button: {
+      bg: 'white',
+      bgDark: 'muted-800',
+      bgHover: 'muted-100',
+      bgHoverDark: 'muted-900',
+      text: 'muted-500',
+      textSize: 'sm',
+      textHover: 'muted-700',
+      textHoverDark: 'muted-400',
+      border: 'muted-200',
+      borderDark: 'muted-700',
+      font: 'sans',
+      duration: '300',
+    },
   },
   link: {
     size: '10',
@@ -86,6 +100,10 @@ export default plugin.withOptions(
           [`.${prefix}-pagination-buttons`]: {
             [`@apply border-${config.buttons.border} bg-${config.buttons.bg} dark:border-${config.buttons.borderDark} dark:bg-${config.buttons.bgDark} flex items-center justify-end gap-1 border p-${config.buttons.space}`]:
               {},
+            [`.${prefix}-pagination-button`]: {
+              [`@border-${config.buttons.button.border} text-${config.buttons.button.text} hover:bg-${config.buttons.button.bgHover} hover:text-${config.buttons.button.textHover} dark:border-${config.buttons.button.borderDark} dark:bg-${config.buttons.button.bgDark} dark:hover:bg-${config.buttons.button.bgHoverDark} dark:hover:text-${config.buttons.button.textHoverDark} flex h-10 w-full items-center justify-center bg-${config.buttons.button.bg} font-${config.buttons.button.font} text-${config.buttons.button.textSize} transition-all duration-${config.buttons.button.duration} md:w-10`]:
+                {},
+            },
           },
           [`.${prefix}-pagination-link`]: {
             [`@apply flex h-${config.link.size} w-${config.link.size} items-center justify-center font-${config.link.font} text-${config.link.text} border-${config.link.border} bg-${config.link.bg} dark:border-${config.link.borderDark} dark:bg-${config.link.bgDark} mb-4 inline-flex flex-wrap gap-2 border p-${config.link.space} md:mb-0 md:gap-1`]:
