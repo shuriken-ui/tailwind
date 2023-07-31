@@ -28,6 +28,22 @@ const defaultThemeToggleConfig = {
     duration: '300',
     text: 'yellow-400',
   },
+  inverted: {
+    ring: 'muted-500',
+    ringDark: 'muted-400',
+    inner: {
+      bg: 'primary-700',
+    },
+  },
+  notInverted: {
+    ringDark: 'muted-900',
+    inner: {
+      bg: 'white',
+      bgDark: 'muted-800',
+      border: 'muted-300',
+      borderDark: 'muted-700',
+    },
+  },
 }
 
 export default plugin.withOptions(
@@ -76,6 +92,22 @@ export default plugin.withOptions(
             {
               [`@apply -translate-y-1/2 opacity-100`]: {},
             },
+          [`&.${prefix}-theme-toggle-inverted`]: {
+            [`@apply ring-offset-${config.inverted.ring} dark:ring-offset-${config.inverted.ringDark}`]:
+              {},
+
+            [`.${prefix}-toggle-inner`]: {
+              [`@apply bg-${config.inverted.inner.bg}`]: {},
+            },
+          },
+          [`&.not(${prefix}-theme-toggle-inverted)`]: {
+            [`@apply dark:ring-offset-${config.notInverted.ringDark}`]: {},
+
+            [`.${prefix}-toggle-inner`]: {
+              [`@apply bg-${config.notInverted.inner.bg} dark:bg-${config.notInverted.inner.bgDark} border border-${config.notInverted.inner.border} dark:border-${config.notInverted.inner.borderDark}`]:
+                {},
+            },
+          },
         },
       })
     }

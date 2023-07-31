@@ -3690,6 +3690,22 @@ export default withShurikenUI({
             duration: '300',
             text: 'yellow-400',
           },
+          inverted: {
+            ring: 'muted-500',
+            ringDark: 'muted-400',
+            inner: {
+              bg: 'primary-700',
+            },
+          },
+          notInverted: {
+            ringDark: 'muted-900',
+            inner: {
+              bg: 'white',
+              bgDark: 'muted-800',
+              border: 'muted-300',
+              borderDark: 'muted-700',
+            },
+          },
         },
         toast: {
           font: 'sans',
