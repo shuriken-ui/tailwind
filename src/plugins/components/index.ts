@@ -37,6 +37,7 @@ import placeholderPage from './placeholder-page'
 import placeload from './placeload'
 import progressCircle from './progress-circle'
 import progress from './progress'
+import prose from './prose'
 import radio from './radio'
 import select from './select'
 import slimscroll from './slimscroll'
@@ -90,6 +91,7 @@ const components = [
   placeload,
   progressCircle,
   progress,
+  prose,
   radio,
   select,
   slimscroll,

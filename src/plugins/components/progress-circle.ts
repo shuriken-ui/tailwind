@@ -30,7 +30,6 @@ export default plugin.withOptions(
           [`@apply relative inline-flex items-center justify-center`]: {},
 
           [`circle:nth-child(2)`]: {
-            // Is this a component or a class?
             [`@apply stroke-current transition-all duration-${config.circleDuration}`]:
               {},
           },

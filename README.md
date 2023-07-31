@@ -2884,6 +2884,25 @@ export default withShurikenUI({
           warning: 'warning-500',
           danger: 'danger-500',
         },
+        prose: {
+          color: 'muted',
+          dark: 'invert',
+          space: '4',
+          bgTable: 'white',
+          bgTableDark: 'muted-800',
+          borderTable: 'muted-200',
+          borderTableDark: 'muted-700',
+          rounded: {
+            size: 'md',
+            tdBorder: 'muted-200',
+            tdBorderDark: 'muted-700',
+          },
+          curved: {
+            size: 'xl',
+            tdBorder: 'muted-200',
+            tdBorderDark: 'muted-700',
+          },
+        },
         radio: {
           outer: {
             size: '5',
