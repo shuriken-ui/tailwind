@@ -78,6 +78,10 @@ export default withShurikenUI({
           detailOpenAndDot: {
             bg: 'primary-500',
           },
+          headerInner: {
+            text: 'muted-800',
+            textDark: 'white',
+          },
           dot: {
             size: '3',
             rounded: 'full',
