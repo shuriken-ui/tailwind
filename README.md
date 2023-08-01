@@ -1486,6 +1486,27 @@ export default withShurikenUI({
           warning: 'warning-500',
           danger: 'danger-500',
         },
+        checkboxAnimated: {
+          size: '8',
+          rounded: 'full',
+          label: {
+            disabledOpacity: '75',
+            inner: {
+              duration: '300',
+            },
+          },
+          default: {
+            color: 'muted-600',
+            colorDark: 'muted-200',
+          },
+          light: 'white',
+          muted: 'muted-400',
+          primary: 'primary-500',
+          info: 'info-500',
+          success: 'success-500',
+          warning: 'warning-500',
+          danger: 'danger-500',
+        },
         dropdownDivider: {
           space: '2',
           border: 'muted-200',

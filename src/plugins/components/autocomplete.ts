@@ -285,6 +285,7 @@ export default plugin.withOptions(
       addComponents({
         [`.${prefix}-autocomplete`]: {
           [`@apply w-full relative`]: {},
+
           [`.${prefix}-autocomplete-label, .${prefix}-label-float`]: {
             [`@apply ${prefix}-label`]: {},
           },

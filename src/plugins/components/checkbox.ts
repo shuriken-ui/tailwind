@@ -66,7 +66,7 @@ export default plugin.withOptions(
           [`@apply relative inline-flex items-start gap-1`]: {},
 
           [`.${prefix}-checkbox-outer`]: {
-            [`@apply ${prefix}-focus relative flex h-${config.outer.size} w-${config.outer.size} shrink-0 cursor-pointer items-center justify-center overflow-hidden`]:
+            [`@apply ${prefix}-focus relative flex h-${config.outer.size} w-${config.outer.size} shrink-0 cursor-pointer disabled:cursor-not-allowed items-center justify-center overflow-hidden`]:
               {},
           },
           [`.${prefix}-checkbox-inner`]: {
@@ -82,7 +82,7 @@ export default plugin.withOptions(
               {},
           },
           [`.${prefix}-checkbox-input`]: {
-            [`@apply absolute z-20 h-${config.input.size} w-${config.input.size} cursor-pointer opacity-0`]:
+            [`@apply absolute z-20 h-${config.input.size} w-${config.input.size} cursor-pointer disabled:cursor-not-allowed opacity-0`]:
               {},
 
             [`&:checked ~ .${prefix}-checkbox-inner, &:indeterminate ~ .${prefix}-checkbox-inner`]:
