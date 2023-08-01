@@ -126,19 +126,19 @@ export default plugin.withOptions(
             [`@apply border-${config.ellipsis.border} text-${config.ellipsis.text} dark:border-${config.ellipsis.borderDark} dark:bg-${config.ellipsis.bgDark} flex h-${config.ellipsis.size} w-${config.ellipsis.size} items-center justify-center bg-${config.ellipsis.bg} font-${config.ellipsis.font} text-${config.ellipsis.textSize}`]:
               {},
           },
-          [`&.${prefix}-pagination-rounded .${prefix}-pagination-list, &.${prefix}-pagination-rounded .${prefix}-pagination-buttons, &.${prefix}-pagination-rounded .${prefix}-pagination-link, &.${prefix}-pagination-rounded .${prefix}-pagination-ellipsis`]:
+          [`&.${prefix}-pagination-rounded .${prefix}-pagination-list, &.${prefix}-pagination-rounded .${prefix}-pagination-buttons, &.${prefix}-pagination-rounded .${prefix}-pagination-buttons .${prefix}-pagination-button,  &.${prefix}-pagination-rounded .${prefix}-pagination-link, &.${prefix}-pagination-rounded .${prefix}-pagination-ellipsis`]:
             {
               [`@apply rounded-${config.rounded.default}`]: {},
             },
-          [`&.${prefix}-pagination-smooth .${prefix}-pagination-list, &.${prefix}-pagination-smooth .${prefix}-pagination-buttons, &.${prefix}-pagination-smooth .${prefix}-pagination-link, &.${prefix}-pagination-smooth .${prefix}-pagination-ellipsis`]:
+          [`&.${prefix}-pagination-smooth .${prefix}-pagination-list, &.${prefix}-pagination-smooth .${prefix}-pagination-buttons, &.${prefix}-pagination-smooth .${prefix}-pagination-buttons .${prefix}-pagination-button,  &.${prefix}-pagination-smooth .${prefix}-pagination-link, &.${prefix}-pagination-smooth .${prefix}-pagination-ellipsis`]:
             {
               [`@apply rounded-${config.rounded.smooth}`]: {},
             },
-          [`&.${prefix}-pagination-curved .${prefix}-pagination-list, &.${prefix}-pagination-curved .${prefix}-pagination-buttons, &.${prefix}-pagination-curved .${prefix}-pagination-link, &.${prefix}-pagination-curved .${prefix}-pagination-ellipsis`]:
+          [`&.${prefix}-pagination-curved .${prefix}-pagination-list, &.${prefix}-pagination-curved .${prefix}-pagination-buttons, &.${prefix}-pagination-curved .${prefix}-pagination-buttons .${prefix}-pagination-button,  &.${prefix}-pagination-curved .${prefix}-pagination-link, &.${prefix}-pagination-curved .${prefix}-pagination-ellipsis`]:
             {
               [`@apply rounded-${config.rounded.curved}`]: {},
             },
-          [`&.${prefix}-pagination-full .${prefix}-pagination-list, &.${prefix}-pagination-full .${prefix}-pagination-buttons, &.${prefix}-pagination-full .${prefix}-pagination-link, &.${prefix}-pagination-full .${prefix}-pagination-ellipsis`]:
+          [`&.${prefix}-pagination-full .${prefix}-pagination-list, &.${prefix}-pagination-full .${prefix}-pagination-buttons, &.${prefix}-pagination-full .${prefix}-pagination-buttons .${prefix}-pagination-button,  &.${prefix}-pagination-full .${prefix}-pagination-link, &.${prefix}-pagination-full .${prefix}-pagination-ellipsis`]:
             {
               [`@apply rounded-${config.rounded.full}`]: {},
             },
