@@ -2777,6 +2777,7 @@ export default withShurikenUI({
               borderDark: 'muted-700',
               font: 'sans',
               duration: '300',
+              iconSize: '4',
             },
           },
           link: {
