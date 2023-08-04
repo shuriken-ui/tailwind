@@ -1655,6 +1655,16 @@ export default withShurikenUI({
           color: 'muted-300',
           colorDark: 'muted-600',
         },
+        fullscreenDropfile: {
+          border: 'primary-500',
+          height: '[230px]',
+          width: '[500px]',
+          icon: {
+            text: 'primary-500',
+            textSize: '6xl',
+          },
+          labelTextSize: '2xl',
+        },
         heading: {
           textXS: 'xs',
           textSM: 'sm',
