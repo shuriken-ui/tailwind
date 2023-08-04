@@ -2233,6 +2233,16 @@ export default withShurikenUI({
             text: 'sm',
             textPosition: 'start',
             font: 'sans',
+            iconBox: {
+              space: '2',
+              size: '6',
+              innerSize: '4',
+            },
+            placeholder: {
+              text: 'muted-300',
+              textDark: 'muted-500',
+              textPosition: 'left',
+            },
           },
           icon: {
             text: 'muted-400',
@@ -2255,6 +2265,18 @@ export default withShurikenUI({
           },
           option: {
             duration: '300',
+            iconBox: {
+              text: 'muted-200',
+              textDark: 'muted-400',
+              innerSize: '5',
+            },
+            inner: {
+              heading: {
+                text: 'muted-800',
+                textDark: 'white',
+              },
+              text: 'muted-400',
+            },
             icon: {
               text: 'primary-600',
             },
