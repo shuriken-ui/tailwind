@@ -1511,6 +1511,16 @@ export default withShurikenUI({
           warning: 'warning-500',
           danger: 'danger-500',
         },
+        checkboxHeadless: {
+          label: {
+            text: 'muted-400',
+            textSize: 'sm',
+            font: 'sans',
+          },
+          input: {
+            size: 'full',
+          },
+        },
         dropdownDivider: {
           space: '2',
           border: 'muted-200',
