@@ -13,6 +13,16 @@ const defaultListboxConfig = {
     text: 'sm',
     textPosition: 'start',
     font: 'sans',
+    iconBox: {
+      space: '2',
+      size: '6',
+      innerSize: '4',
+    },
+    placeholder: {
+      text: 'muted-300',
+      textDark: 'muted-500',
+      textPosition: 'left',
+    },
   },
   icon: {
     text: 'muted-400',
@@ -35,6 +45,18 @@ const defaultListboxConfig = {
   },
   option: {
     duration: '300',
+    iconBox: {
+      text: 'muted-200',
+      textDark: 'muted-400',
+      innerSize: '5',
+    },
+    inner: {
+      heading: {
+        text: 'muted-800',
+        textDark: 'white',
+      },
+      text: 'muted-400',
+    },
     icon: {
       text: 'primary-600',
     },
@@ -309,6 +331,23 @@ export default plugin.withOptions(
             [`@apply ${prefix}-focus relative w-${config.button.size} flex items-center gap-2 text-${config.button.textPosition} pe-12 ps-4 border font-${config.button.font} text-${config.button.text} leading-5 disabled:cursor-not-allowed disabled:opacity-75`]:
               {},
 
+            [`.${prefix}-listbox-button-inner`]: {
+              '@apply flex w-full items-center': {},
+
+              [`.${prefix}-icon-box`]: {
+                [`@apply -ms-${config.button.iconBox.space} me-${config.button.iconBox.space} !h-${config.button.iconBox.size} !w-${config.button.iconBox.size}`]:
+                  {},
+                [`.${prefix}-icon-box-inner`]: {
+                  [`@apply h-${config.button.iconBox.innerSize} w-${config.button.iconBox.innerSize}`]:
+                    {},
+                },
+              },
+              [`.${prefix}-nui-listbox-placehoolder`]: {
+                [`@apply text-${config.button.placeholder.text} dark:text-${config.button.placeholder.textDark} truncate text-${config.button.placeholder.textPosition}`]:
+                  {},
+              },
+            },
+
             [`&:focus-visible ~ .${prefix}-listbox-chevron .${prefix}-listbox-chevron-inner, &:focus ~ .${prefix}-listbox-chevron .${prefix}-listbox-chevron-inner`]:
               {
                 [`@apply !rotate-180`]: {},
@@ -335,14 +374,30 @@ export default plugin.withOptions(
             [`@apply relative flex gap-2 cursor-pointer select-none items-center px-3 py-2 transition-colors duration-${config.option.duration}`]:
               {},
 
+            [`.${prefix}-icon-box`]: {
+              [`@apply text-${config.option.iconBox.text} dark:text-${config.option.iconBox.textDark} -ms-2 me-1`]:
+                {},
+              [`.${prefix}-icon-box-inner`]: {
+                [`@apply h-${config.option.iconBox.innerSize} w-${config.option.iconBox.innerSize}`]:
+                  {},
+              },
+            },
             [`.${prefix}-listbox-selected-icon`]: {
               [`@apply text-${config.option.icon.text} ms-auto flex items-center`]:
                 {},
             },
-
             [`.${prefix}-listbox-selected-icon-inner`]: {
               [`@apply h-${config.option.iconInner.size} w-${config.option.iconInner.size}`]:
                 {},
+            },
+            [`.${prefix}-listbox-option-inner`]: {
+              [`.${prefix}-listbox-heading`]: {
+                [`@apply text-${config.option.inner.heading.text} block truncate dark:text-${config.option.inner.heading.textDark}`]:
+                  {},
+              },
+              [`.${prefix}-listbox-text`]: {
+                [`@apply text-${config.option.inner.text}`]: {},
+              },
             },
 
             [`&.${prefix}-active, &:hover`]: {
