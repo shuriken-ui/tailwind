@@ -25,7 +25,7 @@ export default plugin.withOptions(
       addComponents({
         [`.${prefix}-fullscreen-dropfile`]: {
           [`.${prefix}-fullscreen-dropfile-outer`]: {
-            [`@apply ${prefix}-bg-400/20 fixed inset-0 z-40 backdrop-blur-sm transition-all hover:backdrop-blur-none`]:
+            [`@apply bg-muted-200/20 dark:bg-muted-800/20 fixed inset-0 z-40 backdrop-blur-sm transition-all hover:backdrop-blur-none`]:
               {},
           },
           [`.${prefix}-fullscreen-dropfile-inner`]: {
@@ -35,14 +35,15 @@ export default plugin.withOptions(
               [`@apply flex h-full flex-1 items-center justify-center`]: {},
 
               [`.${prefix}-fullscreen-dropfile-content`]: {
-                [`@apply border-primary-500 ${prefix}-bg-200 mx-auto flex h-[230px] w-[500px] flex-col items-center justify-center gap-6 rounded border drop-shadow-sm`]:
+                [`@apply border-${config.border} bg-muted-200 dark:bg-muted-800 mx-auto flex h-${config.height} w-${config.width} flex-col items-center justify-center gap-6 rounded border drop-shadow-sm`]:
                   {},
 
                 [`.${prefix}-fullscreen-dropfile-icon`]: {
-                  [`@apply text-primary-500 text-6xl`]: {},
+                  [`@apply text-${config.icon.text} text-${config.icon.textSize}`]:
+                    {},
                 },
                 [`.${prefix}-fullscreen-dropfile-label`]: {
-                  [`@apply text-2xl`]: {},
+                  [`@apply text-${config.labelTextSize}`]: {},
                 },
               },
             },
