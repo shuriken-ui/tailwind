@@ -38,6 +38,7 @@ const defaultMessageConfig = {
       bgDark: 'muted-900',
       text: 'white',
     },
+    txtDarkInner: 'muted-500',
     close: {
       textDark: 'muted-500',
       bgHoverEnabled: 'muted-300/50',
@@ -58,6 +59,7 @@ const defaultMessageConfig = {
       text: 'white',
       bgDark: 'muted-900',
     },
+    txtDarkInner: 'muted-500',
     close: {
       textDark: 'muted-500',
       bgHoverEnabled: 'muted-300/50',
@@ -77,6 +79,7 @@ const defaultMessageConfig = {
       bg: 'primary-500',
       text: 'white',
     },
+    txtDarkInner: 'primary-500',
     close: {
       textDark: 'primary-500',
       bgHoverEnabled: 'primary-300/50',
@@ -96,6 +99,7 @@ const defaultMessageConfig = {
       bg: 'info-500',
       text: 'white',
     },
+    txtDarkInner: 'info-500',
     close: {
       textDark: 'info-500',
       bgHoverEnabled: 'info-300/50',
@@ -115,6 +119,7 @@ const defaultMessageConfig = {
       bg: 'success-500',
       text: 'white',
     },
+    txtDarkInner: 'success-500',
     close: {
       textDark: 'success-500',
       bgHoverEnabled: 'success-300/50',
@@ -134,6 +139,7 @@ const defaultMessageConfig = {
       bg: 'warning-500',
       text: 'white',
     },
+    txtDarkInner: 'warning-500',
     close: {
       textDark: 'warning-500',
       bgHoverEnabled: 'warning-300/50',
@@ -153,6 +159,7 @@ const defaultMessageConfig = {
       bg: 'danger-500',
       text: 'white',
     },
+    txtDarkInner: 'danger-500',
     close: {
       textDark: 'danger-500',
       bgHoverEnabled: 'danger-300/50',
@@ -234,6 +241,9 @@ export default plugin.withOptions(
               [`@apply bg-${config.messageDefault.outer.bg} text-${config.messageDefault.outer.text} dark:bg-${config.messageDefault.outer.bgDark}`]:
                 {},
             },
+            [`.${prefix}-message-inner-text`]: {
+              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+            },
             [`.${prefix}-message-close`]: {
               [`@apply dark:text-${config.messageDefault.close.textDark} hover:enabled:bg-${config.messageDefault.close.bgHoverEnabled} focus-visible:bg-${config.messageDefault.close.bgFocusVisible} active:enabled:bg-${config.messageDefault.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageDefault.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageDefault.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messageDefault.close.bgActiveEnabledDark}`]:
                 {},
@@ -246,6 +256,9 @@ export default plugin.withOptions(
             [`.${prefix}-message-icon-outer`]: {
               [`@apply bg-${config.messageMuted.outer.bg} text-${config.messageMuted.outer.text} dark:bg-${config.messageMuted.outer.bgDark}`]:
                 {},
+            },
+            [`.${prefix}-message-inner-text`]: {
+              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
             },
             [`.${prefix}-message-close`]: {
               [`@apply dark:text-${config.messageMuted.close.textDark} hover:enabled:bg-${config.messageMuted.close.bgHoverEnabled} focus-visible:bg-${config.messageMuted.close.bgFocusVisible} active:enabled:bg-${config.messageMuted.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageMuted.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageMuted.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messageMuted.close.bgActiveEnabledDark}`]:
@@ -260,7 +273,9 @@ export default plugin.withOptions(
               [`@apply bg-${config.messagePrimary.outer.bg} text-${config.messagePrimary.outer.text}`]:
                 {},
             },
-
+            [`.${prefix}-message-inner-text`]: {
+              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+            },
             [`.${prefix}-message-close`]: {
               [`@apply dark:text-${config.messagePrimary.close.textDark} hover:enabled:bg-${config.messagePrimary.close.bgHoverEnabled} focus-visible:bg-${config.messagePrimary.close.bgFocusVisible} active:enabled:bg-${config.messagePrimary.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messagePrimary.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messagePrimary.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messagePrimary.close.bgActiveEnabledDark}`]:
                 {},
@@ -274,7 +289,9 @@ export default plugin.withOptions(
               [`@apply bg-${config.messageInfo.outer.bg} text-${config.messageInfo.outer.text}`]:
                 {},
             },
-
+            [`.${prefix}-message-inner-text`]: {
+              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+            },
             [`.${prefix}-message-close`]: {
               [`@apply dark:text-${config.messageInfo.close.textDark} hover:enabled:bg-${config.messageInfo.close.bgHoverEnabled} focus-visible:bg-${config.messageInfo.close.bgFocusVisible} active:enabled:bg-${config.messageInfo.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageInfo.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageInfo.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messageInfo.close.bgActiveEnabledDark}`]:
                 {},
@@ -288,7 +305,9 @@ export default plugin.withOptions(
               [`@apply bg-${config.messageSuccess.outer.bg} text-${config.messageSuccess.outer.text}`]:
                 {},
             },
-
+            [`.${prefix}-message-inner-text`]: {
+              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+            },
             [`.${prefix}-message-close`]: {
               [`@apply dark:text-${config.messageSuccess.close.textDark} hover:enabled:bg-${config.messageSuccess.close.bgHoverEnabled} focus-visible:bg-${config.messageSuccess.close.bgFocusVisible} active:enabled:bg-${config.messageSuccess.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageSuccess.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageSuccess.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messageSuccess.close.bgActiveEnabledDark}`]:
                 {},
@@ -302,7 +321,9 @@ export default plugin.withOptions(
               [`@apply bg-${config.messageWarning.outer.bg} text-${config.messageWarning.outer.text}`]:
                 {},
             },
-
+            [`.${prefix}-message-inner-text`]: {
+              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+            },
             [`.${prefix}-message-close`]: {
               [`@apply dark:text-${config.messageWarning.close.textDark} hover:enabled:bg-${config.messageWarning.close.bgHoverEnabled} focus-visible:bg-${config.messageWarning.close.bgFocusVisible} active:enabled:bg-${config.messageWarning.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageWarning.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageWarning.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messagePrimary.close.bgActiveEnabledDark}`]:
                 {},
@@ -315,6 +336,9 @@ export default plugin.withOptions(
             [`.${prefix}-message-icon-outer`]: {
               [`@apply bg-${config.messageDanger.outer.bg} text-${config.messageDanger.outer.text}`]:
                 {},
+            },
+            [`.${prefix}-message-inner-text`]: {
+              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
             },
             [`.${prefix}-message-close`]: {
               [`@apply dark:text-${config.messageDanger.close.textDark} hover:enabled:bg-${config.messageDanger.close.bgHoverEnabled} focus-visible:bg-${config.messageDanger.close.bgFocusVisible} active:enabled:bg-${config.messageDanger.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageDanger.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageDanger.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messageDanger.close.bgActiveEnabledDark}`]:

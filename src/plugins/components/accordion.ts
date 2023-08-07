@@ -19,6 +19,10 @@ const defaultAccordionConfig = {
   detailOpenAndDot: {
     bg: 'primary-500',
   },
+  headerInner: {
+    text: 'muted-800',
+    textDark: 'white',
+  },
   dot: {
     size: '3',
     rounded: 'full',
@@ -84,6 +88,10 @@ export default plugin.withOptions(
           },
           [`.${prefix}-accordion-header`]: {
             [`@apply flex items-center justify-between`]: {},
+
+            [`.${prefix}-accordion-header-inner`]: {
+              [`@apply text-muted-800 dark:text-white`]: {},
+            },
           },
           [`.${prefix}-accordion-dot`]: {
             [`@apply ms-2 h-${config.dot.size} w-${config.dot.size} rounded-${config.dot.rounded} transition-colors duration-${config.dot.duration}`]:

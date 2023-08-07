@@ -48,12 +48,10 @@ export default plugin.withOptions(
             [`@apply absolute start-0 top-0 h-full transition-all duration-${config.bar.duration}`]:
               {},
           },
-
           [`&.${prefix}-progress-default`]: {
             [`@apply bg-${config.default.bg} dark:bg-${config.default.bgDark}`]:
               {},
           },
-
           [`&.${prefix}-progress-contrast`]: {
             [`@apply bg-${config.defaultContrast.bg} dark:bg-${config.defaultContrast.bgDark}`]:
               {},

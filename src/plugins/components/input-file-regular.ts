@@ -132,7 +132,7 @@ export default plugin.withOptions(
               [`@apply h-3 w-full max-w-[75%] rounded`]: {},
             },
           },
-          [`.${prefix}-input-file-error`]: {
+          [`.${prefix}-input-file-error-text`]: {
             [`@apply text-${config.error.text} mt-1 block font-${config.error.font} text-${config.error.textSize} font-${config.error.fontWeight} leading-none`]:
               {},
           },

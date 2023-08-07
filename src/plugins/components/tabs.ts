@@ -66,7 +66,6 @@ export default plugin.withOptions(
               [`@apply flex items-center gap-1`]: {},
             },
           },
-
           [`.${prefix}-pill-item`]: {
             [`@apply flex flex-col rounded-${config.pillItem.rounded} px-5 text-${config.pillItem.textPosition} cursor-pointer text-${config.pillItem.text} transition-all duration-${config.pillItem.duration}`]:
               {},

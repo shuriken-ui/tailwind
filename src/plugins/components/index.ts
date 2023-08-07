@@ -1,107 +1,117 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption } from '../options'
-import button from './button'
 import accordion from './accordion'
-import card from './card'
-import avatarGroup from './avatar-group'
 import autocomplete from './autocomplete'
 import avatar from './avatar'
-import checkbox from './checkbox'
+import avatarGroup from './avatar-group'
+import breadcrumb from './breadcrumb'
 import buttonAction from './button-action'
 import buttonClose from './button-close'
-import buttonIcon from './button-icon'
 import buttonGroup from './button-group'
-import dropdown from './dropdown'
-import dropdownItem from './dropdown-item'
+import buttonIcon from './button-icon'
+import button from './button'
+import card from './card'
+import checkbox from './checkbox'
+import checkboxAnimated from './checkbox-animated'
+import checkboxHeadless from './checkbox-headless'
 import dropdownDivider from './dropdown-divider'
-import inputFile from './input-file'
+import dropdownItem from './dropdown-item'
+import dropdown from './dropdown'
 import focus from './focus'
-import iconBox from './icon-box'
+import fullscreenDropfile from './fullscreen-dropfile'
 import heading from './heading'
-import input from './input'
+import iconBox from './icon-box'
 import inputFileRegular from './input-file-regular'
+import inputFile from './input-file'
+import input from './input'
 import label from './label'
-import list from './list'
 import link from './link'
+import list from './list'
 import listbox from './listbox'
 import mark from './mark'
 import mask from './mask'
-import pagination from './pagination'
-import modal from './modal'
-import paragraph from './paragraph'
+import messageText from './message-text'
 import message from './message'
-import placeload from './placeload'
-import progress from './progress'
-import snack from './snack'
+import modal from './modal'
+import pagination from './pagination'
+import paragraph from './paragraph'
 import placeholderPage from './placeholder-page'
-import select from './select'
-import radio from './radio'
+import placeload from './placeload'
 import progressCircle from './progress-circle'
+import progress from './progress'
+import prose from './prose'
+import radio from './radio'
+import select from './select'
 import slimscroll from './slimscroll'
+import snack from './snack'
+import switchBall from './switch-ball'
+import switchThin from './switch-thin'
+import tabSlider from './tab-slider'
+import tabs from './tabs'
+import tag from './tag'
+import text from './text'
+import textarea from './textarea'
 import themeSwitch from './theme-switch'
 import themeToggle from './theme-toggle'
-import tabSlider from './tab-slider'
 import toast from './toast'
-import tabs from './tabs'
-import text from './text'
-import switchThin from './switch-thin'
-import switchBall from './switch-ball'
-import textarea from './textarea'
 import tooltip from './tooltip'
-import tag from './tag'
-import breadcrumb from './breadcrumb'
 
 const components = [
-  button,
   accordion,
-  card,
-  breadcrumb,
-  avatarGroup,
   autocomplete,
+  avatarGroup,
   avatar,
-  checkbox,
+  breadcrumb,
   buttonAction,
   buttonClose,
-  buttonIcon,
   buttonGroup,
-  dropdown,
-  dropdownItem,
+  buttonIcon,
+  button,
+  card,
+  checkbox,
+  checkboxAnimated,
+  checkboxHeadless,
   dropdownDivider,
-  inputFile,
+  dropdownItem,
+  dropdown,
   focus,
-  iconBox,
+  fullscreenDropfile,
   heading,
-  input,
+  iconBox,
   inputFileRegular,
+  inputFile,
+  input,
   label,
-  list,
   link,
+  list,
   listbox,
   mark,
   mask,
-  pagination,
-  modal,
-  paragraph,
+  messageText,
   message,
-  placeload,
-  progress,
+  modal,
+  pagination,
+  paragraph,
   placeholderPage,
-  select,
-  radio,
+  placeload,
   progressCircle,
+  progress,
+  prose,
+  radio,
+  select,
   slimscroll,
-  themeSwitch,
-  themeToggle,
+  snack,
+  switchBall,
+  switchThin,
   tabSlider,
-  toast,
   tabs,
   tag,
   text,
-  switchThin,
-  switchBall,
-  snack,
   textarea,
+  themeSwitch,
+  themeToggle,
+  toast,
   tooltip,
 ]
 
