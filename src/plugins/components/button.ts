@@ -448,7 +448,7 @@ export default plugin.withOptions(
             {},
 
           [`.${prefix}-button-badge`]: {
-            [`@apply flex absolute h-${config.badge.space} w-${config.badge.space} top-0 -end-1 -mt-1 -me-8`]:
+            [`@apply flex absolute h-${config.badge.space} w-${config.badge.space} top-0 -end-1 -mt-1`]:
               {},
 
             [`.${prefix}-button-badge-pulse`]: {
