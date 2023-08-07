@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.1](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.0...v1.0.0-beta.1) (2023-08-07)
+
+
+### Bug Fixes
+
+* minor fix and missing plugins ([#50](https://github.com/shuriken-ui/tailwind/issues/50)) ([982de65](https://github.com/shuriken-ui/tailwind/commit/982de6593c41263358939c0dd88cb889136339a4))
+
 ## [1.0.0-beta.0](https://github.com/shuriken-ui/tailwind/compare/v0.1.1...v1.0.0-beta.0) (2023-08-02)
 
 
