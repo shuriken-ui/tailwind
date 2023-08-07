@@ -117,6 +117,9 @@ export default plugin.withOptions(
           [`.${prefix}-menu`]: {
             [`@apply relative`]: {},
           },
+          [`.${prefix}-menu-content`]: {
+            [`@apply p-2`]: {},
+          },
           [`.${prefix}-context-button`]: {
             [`@apply dark:ring-offset-${config.contextButton.ringOffsetDark} inline-flex h-${config.contextButton.size} w-${config.contextButton.size} items-center justify-center rounded-${config.contextButton.rounded} ring-1 ring-transparent transition-all duration-${config.contextButton.duration} group-hover:ring-${config.contextButton.ringGroupHover}`]:
               {},
