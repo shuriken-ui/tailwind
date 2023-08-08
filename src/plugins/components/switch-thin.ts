@@ -74,14 +74,14 @@ export default plugin.withOptions(
             [`@apply text-${config.singleLabel.text} relative ms-3 cursor-pointer select-none font-${config.singleLabel.font} text-${config.singleLabel.textSize}`]:
               {},
           },
-          [`.${prefix}-switch-dual-label`]: {
+          [`.${prefix}-switch-thin-dual-label`]: {
             [`@apply ms-3`]: {},
 
-            [`.${prefix}-switch-label`]: {
+            [`.${prefix}-switch-thin-label`]: {
               [`@apply font-${config.dualLabel.label.font} text-${config.dualLabel.label.text} block text-${config.dualLabel.label.textSize} font-${config.dualLabel.label.fontWeight} dark:text-${config.dualLabel.label.textDark}`]:
                 {},
             },
-            [`.${prefix}-switch-sublabel`]: {
+            [`.${prefix}-switch-thin-sublabel`]: {
               [`@apply text-${config.dualLabel.sublabel.text} block font-${config.dualLabel.sublabel.font} text-${config.dualLabel.sublabel.textSize}`]:
                 {},
             },
