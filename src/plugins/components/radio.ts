@@ -24,7 +24,7 @@ const defaultRadioConfig = {
     size: '5',
   },
   labelText: {
-    text: 'danger-400',
+    text: 'muted-400',
     textSize: 'sm',
     font: 'sans',
   },
