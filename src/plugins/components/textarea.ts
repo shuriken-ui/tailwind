@@ -150,6 +150,11 @@ export default plugin.withOptions(
               [`@apply !text-${config.textarea.focusVisible.labelFloat.text} dark:!text-${config.textarea.focusVisible.labelFloat.textDark}`]:
                 {},
             },
+
+            [`&.${prefix}-textarea-focus`]: {
+              [`@apply focus:!border-${config.textarea.focus.border} transition-colors duration-${config.textarea.focus.duration}`]:
+                {},
+            },
           },
           [`.${prefix}-textarea-error-text`]: {
             [`@apply text-${config.errorText.text} mt-1 block font-${config.errorText.font} text-${config.errorText.textSize} font-${config.errorText.fontWeight} leading-none`]:
@@ -249,10 +254,6 @@ export default plugin.withOptions(
               [`@apply !border-${config.textarea.error.border} dark:!border-${config.textarea.error.borderDark}`]:
                 {},
             },
-          },
-          [`&.${prefix}-textarea-focus`]: {
-            [`@apply focus-visible:!border-${config.textarea.focus.border} transition-colors duration-${config.textarea.focus.duration}`]:
-              {},
           },
           [`&.${prefix}-textarea-no-resize`]: {
             [`.${prefix}-textarea`]: {
