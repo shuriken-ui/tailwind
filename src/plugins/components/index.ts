@@ -42,6 +42,7 @@ import progressCircle from './progress-circle'
 import progress from './progress'
 import prose from './prose'
 import radio from './radio'
+import radioHeadless from './radio-headless'
 import select from './select'
 import slimscroll from './slimscroll'
 import snack from './snack'
@@ -99,6 +100,7 @@ const components = [
   progress,
   prose,
   radio,
+  radioHeadless,
   select,
   slimscroll,
   snack,
