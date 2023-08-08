@@ -342,7 +342,7 @@ export default plugin.withOptions(
                     {},
                 },
               },
-              [`.${prefix}-nui-listbox-placehoolder`]: {
+              [`.${prefix}-listbox-placeholder`]: {
                 [`@apply text-${config.button.placeholder.text} dark:text-${config.button.placeholder.textDark} truncate text-${config.button.placeholder.textPosition}`]:
                   {},
               },
