@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.2](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2023-08-08)
+
+
+### Bug Fixes
+
+* **button-icon:** apply default background ([36767f1](https://github.com/shuriken-ui/tailwind/commit/36767f17e3db8c153dd54320cf84e5e9f410faf2))
+* **button:** badge placement ([3f83fbf](https://github.com/shuriken-ui/tailwind/commit/3f83fbf67045ef39b38a8e9a9dad9dfc2764af1f))
+* **dropdown:** menu content container ([340f100](https://github.com/shuriken-ui/tailwind/commit/340f100beaf9180fe10e7a9fcd720cbc418bfdec))
+* **listbox:** placeholder class name ([083d7a4](https://github.com/shuriken-ui/tailwind/commit/083d7a466f8d312878e9e63842acddb93adf9d53))
+* **radio-headless:** register component plugin ([f8337ec](https://github.com/shuriken-ui/tailwind/commit/f8337ec6e4690bdf4e75998e22daa75074e34bee))
+* **radio:** default label color ([01bb156](https://github.com/shuriken-ui/tailwind/commit/01bb156d4f9819b34c50e8df33d6065536bae724))
+* **switch-ball:** dual label class name ([585913f](https://github.com/shuriken-ui/tailwind/commit/585913fcf5528de18fa5a60e16d489642531ad3f))
+* **switch-thin:** dual label class name ([c8e0a48](https://github.com/shuriken-ui/tailwind/commit/c8e0a483a26617e1c60b2cc612912419ccb70b59))
+* **textarea:** color focus class ([9fbbee4](https://github.com/shuriken-ui/tailwind/commit/9fbbee451ce0492b897ec882ac8c0a74b94ddbd5))
+
 ## [1.0.0-beta.1](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.0...v1.0.0-beta.1) (2023-08-07)
 
 
