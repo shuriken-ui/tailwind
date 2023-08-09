@@ -14,15 +14,19 @@ const defaultTooltipConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
         'shurikenUi.tooltip'
       ) satisfies typeof defaultTooltipConfig
 
-      const tooltip = `data-${prefix}-tooltip`
-      const position = `data-${prefix}-tooltip-position`
+      const tooltip = `data-${prefix}tooltip`
+      const position = `data-${prefix}tooltip-position`
 
       addComponents({
         [`[${tooltip}]`]: {
@@ -165,7 +169,7 @@ export default plugin.withOptions(
           `[${tooltip}][${position}^='down']:focus-visible::before`,
           `[${tooltip}][${position}^='down']:focus-visible::after`,
         ].join(',')}`]: {
-          [`@apply animate-${prefix}-tooltip-x`]: {},
+          [`@apply animate-${prefix}tooltip-x`]: {},
         },
         [`${[
           `[${tooltip}][${position}^='left']:hover::before`,
@@ -185,25 +189,29 @@ export default plugin.withOptions(
           `[${tooltip}][${position}^='end']:focus-visible::before`,
           `[${tooltip}][${position}^='end']:focus-visible::after`,
         ].join(',')}`]: {
-          [`@apply animate-${prefix}-tooltip-y`]: {},
+          [`@apply animate-${prefix}tooltip-y`]: {},
         },
       })
     }
   },
   function (options) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return {
       theme: {
         extend: {
           keyframes: {
-            [`${prefix}-tooltip-x`]: {
+            [`${prefix}tooltip-x`]: {
               to: {
                 opacity: '1',
                 transform: 'translate(-50%, 0)',
               },
             },
-            [`${prefix}-tooltip-y`]: {
+            [`${prefix}tooltip-y`]: {
               to: {
                 opacity: '1',
                 transform: 'translate(0, -50%)',
@@ -211,8 +219,8 @@ export default plugin.withOptions(
             },
           },
           animation: {
-            [`${prefix}-tooltip-x`]: `${prefix}-tooltip-x 300ms ease-out forwards`,
-            [`${prefix}-tooltip-y`]: `${prefix}-tooltip-y 300ms ease-out forwards`,
+            [`${prefix}tooltip-x`]: `${prefix}tooltip-x 300ms ease-out forwards`,
+            [`${prefix}tooltip-y`]: `${prefix}tooltip-y 300ms ease-out forwards`,
           },
         },
         shurikenUi: {

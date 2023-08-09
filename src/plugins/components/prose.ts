@@ -24,7 +24,11 @@ const defaultProseConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -32,19 +36,19 @@ export default plugin.withOptions(
       ) satisfies typeof defaultProseConfig
 
       addComponents({
-        [`.${prefix}-prose`]: {
+        [`.${prefix}prose`]: {
           [`@apply prose prose-primary prose-${config.color} dark:prose-${config.dark} prose-th:p-${config.space} prose-td:p-${config.space} prose-table:bg-${config.bgTable} dark:prose-table:bg-${config.bgTableDark} prose-table:border prose-table:border-${config.borderTable} dark:prose-table:border-${config.borderTableDark}`]:
             {},
 
-          [`&.${prefix}-prose-straight`]: {
+          [`&.${prefix}prose-straight`]: {
             [`@apply prose-img:rounded-none prose-pre:rounded-none prose-table:rounded-none`]:
               {},
           },
-          [`&.${prefix}-prose-rounded`]: {
+          [`&.${prefix}prose-rounded`]: {
             [`@apply prose-img:rounded-${config.rounded.size} prose-pre:rounded-${config.rounded.size} prose-table:rounded-${config.rounded.size} prose-table:border-separate prose-table:border-spacing-0 prose-td:border-t prose-td:border-${config.rounded.tdBorder} dark:prose-td:border-${config.rounded.tdBorderDark}`]:
               {},
           },
-          [`&.${prefix}-prose-curved`]: {
+          [`&.${prefix}prose-curved`]: {
             [`@apply prose-img:rounded-${config.curved.size} prose-pre:rounded-${config.curved.size} prose-table:rounded-${config.curved.size} prose-table:border-separate prose-table:border-spacing-0 prose-td:border-t prose-td:border-${config.curved.tdBorder} dark:prose-td:border-${config.curved.tdBorderDark}`]:
               {},
           },

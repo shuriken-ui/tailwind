@@ -6,7 +6,11 @@ const defaultButtonGroupConfig = {}
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -14,10 +18,10 @@ export default plugin.withOptions(
       ) satisfies typeof defaultButtonGroupConfig
 
       addComponents({
-        [`.${prefix}-button-group`]: {
+        [`.${prefix}button-group`]: {
           [`@apply flex`]: {},
 
-          [`.${prefix}-button, .${prefix}-button-action, .${prefix}-button-icon`]:
+          [`.${prefix}button, .${prefix}button-action, .${prefix}button-icon`]:
             {
               [`@apply !border-e-0`]: {},
               [`&:not(:first-child):not(:last-child)`]: {

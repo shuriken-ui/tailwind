@@ -12,7 +12,11 @@ const defaultSlimscrollConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -20,20 +24,20 @@ export default plugin.withOptions(
       ) satisfies typeof defaultSlimscrollConfig
 
       addComponents({
-        [`.${prefix}-slimscroll::-webkit-scrollbar, .${prefix}-slimscroll-opaque::-webkit-scrollbar`]:
+        [`.${prefix}slimscroll::-webkit-scrollbar, .${prefix}slimscroll-opaque::-webkit-scrollbar`]:
           {
             scrollBehavior: 'smooth',
             scrollbarGutter: 'stable',
             [`@apply w-${config.width}`]: {},
           },
-        [`.${prefix}-slimscroll::-webkit-scrollbar-thumb`]: {
+        [`.${prefix}slimscroll::-webkit-scrollbar-thumb`]: {
           [`@apply rounded-lg bg-${config.bg} dark:bg-${config.bgDark} duration-300 transition-all`]:
             {},
         },
-        [`.${prefix}-slimscroll-opaque::-webkit-scrollbar-thumb`]: {
+        [`.${prefix}slimscroll-opaque::-webkit-scrollbar-thumb`]: {
           [`@apply rounded-lg bg-transparent duration-300 transition-all`]: {},
         },
-        [`.${prefix}-slimscroll:hover::-webkit-scrollbar-thumb, .${prefix}-slimscroll-opaque:hover::-webkit-scrollbar-thumb`]:
+        [`.${prefix}slimscroll:hover::-webkit-scrollbar-thumb, .${prefix}slimscroll-opaque:hover::-webkit-scrollbar-thumb`]:
           {
             [`@apply bg-${config.bgHover} dark:bg-${config.bgHoverDark}`]: {},
           },

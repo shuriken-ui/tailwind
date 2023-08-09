@@ -18,7 +18,11 @@ const defaultProgressCircleConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -26,18 +30,18 @@ export default plugin.withOptions(
       ) satisfies typeof defaultProgressCircleConfig
 
       addComponents({
-        [`.${prefix}-progress-circle`]: {
+        [`.${prefix}progress-circle`]: {
           [`@apply relative inline-flex items-center justify-center`]: {},
 
           [`circle:nth-child(2)`]: {
             [`@apply stroke-current transition-all duration-${config.circleDuration}`]:
               {},
           },
-          [`&.${prefix}-progress-default circle:first-child`]: {
+          [`&.${prefix}progress-default circle:first-child`]: {
             [`@apply text-${config.default.text} dark:text-${config.default.textDark} stroke-${config.default.stroke}`]:
               {},
           },
-          [`&.${prefix}-progress-contrast circle:first-child`]: {
+          [`&.${prefix}progress-contrast circle:first-child`]: {
             [`@apply text-${config.contrast.text} dark:text-${config.contrast.textDark} stroke-${config.contrast.stroke}`]:
               {},
           },

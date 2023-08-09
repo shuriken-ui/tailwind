@@ -29,7 +29,11 @@ const defaultBreadcrumbConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -37,35 +41,35 @@ export default plugin.withOptions(
       ) satisfies typeof defaultBreadcrumbConfig
 
       addComponents({
-        [`.${prefix}-breadcrumb`]: {
-          [`.${prefix}-breadcrumb-list`]: {
+        [`.${prefix}breadcrumb`]: {
+          [`.${prefix}breadcrumb-list`]: {
             [`@apply mb-6 flex items-center font-${config.list.font} text-${config.list.text}`]:
               {},
-            [`.${prefix}-breadcrumb-item-mobile`]: {
+            [`.${prefix}breadcrumb-item-mobile`]: {
               [`@apply me-3 sm:hidden`]: {},
             },
-            [`.${prefix}-breadcrumb-item:not(:last-child)`]: {
+            [`.${prefix}breadcrumb-item:not(:last-child)`]: {
               [`@apply flex`]: {},
             },
-            [`.${prefix}-breadcrumb-item:last-child`]: {
+            [`.${prefix}breadcrumb-item:last-child`]: {
               [`@apply hidden sm:flex`]: {},
             },
-            [`.${prefix}-item-inner`]: {
+            [`.${prefix}item-inner`]: {
               [`@apply text-${config.list.itemInner.text} flex items-center gap-x-1 transition-colors duration-${config.list.itemInner.duration}`]:
                 {},
 
-              [`.${prefix}-item-icon`]: {
+              [`.${prefix}item-icon`]: {
                 [`@apply flex items-center justify-center h-${config.list.itemInner.icon.size} w-${config.list.itemInner.icon.size} shrink-0`]:
                   {},
-                [`&.${prefix}-has-dot`]: {
+                [`&.${prefix}has-dot`]: {
                   [`@apply text-${config.list.itemInner.icon.dot.text}`]: {},
                 },
               },
-              [`&.${prefix}-has-link`]: {
+              [`&.${prefix}has-link`]: {
                 [`@apply hover:text-${config.list.itemInner.link.textHover} focus:text-${config.list.itemInner.link.texFocus}`]:
                   {},
               },
-              [`.${prefix}-item-text`]: {
+              [`.${prefix}item-text`]: {
                 [`@apply text-${config.list.itemInner.itemText.text} px-${config.list.itemInner.itemText.space}`]:
                   {},
               },

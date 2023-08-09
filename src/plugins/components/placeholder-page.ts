@@ -22,7 +22,11 @@ const defaultPlaceholderPageConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -30,42 +34,42 @@ export default plugin.withOptions(
       ) satisfies typeof defaultPlaceholderPageConfig
 
       addComponents({
-        [`.${prefix}-placeholder-page`]: {
+        [`.${prefix}placeholder-page`]: {
           [`@apply flex min-h-${config.minSize} items-center justify-center`]:
             {},
 
-          [`.${prefix}-placeholder-page-inner`]: {
+          [`.${prefix}placeholder-page-inner`]: {
             [`@apply mx-auto w-${config.innerSize} text-center`]: {},
           },
-          [`.${prefix}-placeholder-page-img`]: {
+          [`.${prefix}placeholder-page-img`]: {
             [`@apply mx-auto block`]: {},
           },
-          [`.${prefix}-placeholder-page-content`]: {
+          [`.${prefix}placeholder-page-content`]: {
             [`@apply mx-auto max-w-${config.maxContentSize}`]: {},
           },
-          [`.${prefix}-placeholder-page-actions`]: {
+          [`.${prefix}placeholder-page-actions`]: {
             [`@apply mt-4 flex justify-center gap-2`]: {},
           },
-          [`.${prefix}-placeholder-page-title`]: {
+          [`.${prefix}placeholder-page-title`]: {
             [`@apply text-${config.title.text} dark:text-${config.title.textDark} mb-1 mt-4`]:
               {},
           },
-          [`.${prefix}-placeholder-page-subtitle`]: {
+          [`.${prefix}placeholder-page-subtitle`]: {
             [`@apply text-${config.subtitle.text}`]: {},
           },
-          [`&.${prefix}-placeholder-xs .${prefix}-placeholder-page-img`]: {
+          [`&.${prefix}placeholder-xs .${prefix}placeholder-page-img`]: {
             [`@apply max-w-${config.maxSizeXS}`]: {},
           },
-          [`&.${prefix}-placeholder-sm .${prefix}-placeholder-page-img`]: {
+          [`&.${prefix}placeholder-sm .${prefix}placeholder-page-img`]: {
             [`@apply max-w-${config.maxSizeSM}`]: {},
           },
-          [`&.${prefix}-placeholder-md .${prefix}-placeholder-page-img`]: {
+          [`&.${prefix}placeholder-md .${prefix}placeholder-page-img`]: {
             [`@apply max-w-${config.maxSizeMD}`]: {},
           },
-          [`&.${prefix}-placeholder-lg .${prefix}-placeholder-page-img`]: {
+          [`&.${prefix}placeholder-lg .${prefix}placeholder-page-img`]: {
             [`@apply max-w-${config.maxSizeLG}`]: {},
           },
-          [`&.${prefix}-placeholder-xl .${prefix}-placeholder-page-img`]: {
+          [`&.${prefix}placeholder-xl .${prefix}placeholder-page-img`]: {
             [`@apply max-w-${config.maxSizeXL}`]: {},
           },
         },

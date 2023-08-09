@@ -15,7 +15,11 @@ const defaultFullscreenDropfileConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -23,26 +27,26 @@ export default plugin.withOptions(
       ) satisfies typeof defaultFullscreenDropfileConfig
 
       addComponents({
-        [`.${prefix}-fullscreen-dropfile`]: {
-          [`.${prefix}-fullscreen-dropfile-outer`]: {
+        [`.${prefix}fullscreen-dropfile`]: {
+          [`.${prefix}fullscreen-dropfile-outer`]: {
             [`@apply bg-muted-200/20 dark:bg-muted-800/20 fixed inset-0 z-40 backdrop-blur-sm transition-all hover:backdrop-blur-none`]:
               {},
           },
-          [`.${prefix}-fullscreen-dropfile-inner`]: {
+          [`.${prefix}fullscreen-dropfile-inner`]: {
             [`@apply fixed inset-0 z-50`]: {},
 
-            [`.${prefix}-fullscreen-dropfile-container`]: {
+            [`.${prefix}fullscreen-dropfile-container`]: {
               [`@apply flex h-full flex-1 items-center justify-center`]: {},
 
-              [`.${prefix}-fullscreen-dropfile-content`]: {
+              [`.${prefix}fullscreen-dropfile-content`]: {
                 [`@apply border-${config.border} bg-muted-200 dark:bg-muted-800 mx-auto flex h-${config.height} w-${config.width} flex-col items-center justify-center gap-6 rounded border drop-shadow-sm`]:
                   {},
 
-                [`.${prefix}-fullscreen-dropfile-icon`]: {
+                [`.${prefix}fullscreen-dropfile-icon`]: {
                   [`@apply text-${config.icon.text} text-${config.icon.textSize}`]:
                     {},
                 },
-                [`.${prefix}-fullscreen-dropfile-label`]: {
+                [`.${prefix}fullscreen-dropfile-label`]: {
                   [`@apply text-${config.labelTextSize}`]: {},
                 },
               },

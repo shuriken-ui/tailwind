@@ -21,27 +21,31 @@ const defaultlistConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme('shurikenUi.list') satisfies typeof defaultlistConfig
 
       addComponents({
-        [`.${prefix}-list`]: {
-          [`&.${prefix}-list-ul`]: {
+        [`.${prefix}list`]: {
+          [`&.${prefix}list-ul`]: {
             [`@apply list-${config.ul}`]: {},
           },
-          [`&.${prefix}-list-ol`]: {
+          [`&.${prefix}list-ol`]: {
             [`@apply list-${config.ol}`]: {},
           },
-          [`&.${prefix}-list-base`]: {
+          [`&.${prefix}list-base`]: {
             [`@apply list-${config.base.list} space-y-1 marker:text-${config.base.textMarker} dark:marker:text-${config.base.textMarkerDark} font-${config.base.font} text-${config.base.text} dark:text-${config.base.textDark}`]:
               {},
           },
-          [`&.${prefix}-list-media`]: {
+          [`&.${prefix}list-media`]: {
             [`@apply space-y-4 marker:text-${config.media.textMarker} dark:marker:text-${config.media.textMarkerDark}`]:
               {},
-            [`.${prefix}-list-item`]: {
+            [`.${prefix}list-item`]: {
               [`@apply flex gap-2`]: {},
             },
           },

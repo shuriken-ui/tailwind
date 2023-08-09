@@ -11,13 +11,17 @@ const defaultMarkConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme('shurikenUi.mark') satisfies typeof defaultMarkConfig
 
       addComponents({
-        [`.${prefix}-mark`]: {
+        [`.${prefix}mark`]: {
           [`@apply bg-${config.bg} dark:bg-${config.bgDark}`]: {},
           [`@apply text-${config.text} dark:text-${config.textDark}`]: {},
         },

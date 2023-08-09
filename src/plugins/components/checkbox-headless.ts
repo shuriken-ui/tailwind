@@ -15,7 +15,11 @@ const defaultCheckboxHeadlessConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -23,16 +27,16 @@ export default plugin.withOptions(
       ) satisfies typeof defaultCheckboxHeadlessConfig
 
       addComponents({
-        [`.${prefix}-checkbox-headless`]: {
+        [`.${prefix}checkbox-headless`]: {
           [`@apply relative`]: {},
 
-          [`.${prefix}-checkbox-headless-label`]: {
+          [`.${prefix}checkbox-headless-label`]: {
             [`@apply text-${config.label.text} mb-1 inline-block cursor-pointer select-none font-${config.label.font} text-${config.label.textSize}`]:
               {},
           },
-          [`.${prefix}-checkbox-headless-inner`]: {
+          [`.${prefix}checkbox-headless-inner`]: {
             [`@apply relative`]: {},
-            [`.${prefix}-checkbox-headless-input`]: {
+            [`.${prefix}checkbox-headless-input`]: {
               [`@apply absolute inset-0 z-20 h-${config.input.size} w-${config.input.size} cursor-pointer disabled:cursor-not-allowed opacity-0`]:
                 {},
             },

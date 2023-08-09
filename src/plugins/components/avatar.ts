@@ -244,7 +244,11 @@ const defaultAvatarConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -252,15 +256,15 @@ export default plugin.withOptions(
       ) satisfies typeof defaultAvatarConfig
 
       addComponents({
-        [`.${prefix}-avatar`]: {
+        [`.${prefix}avatar`]: {
           [`@apply relative inline-flex shrink-0 items-center justify-center outline-none`]:
             {},
 
-          [`.${prefix}-avatar-inner`]: {
+          [`.${prefix}avatar-inner`]: {
             [`@apply flex h-${config.avatarInner.size} w-${config.avatarInner.size} items-center justify-center overflow-hidden text-center transition-all duration-${config.avatarInner.duration}`]:
               {},
           },
-          [`.${prefix}-avatar-badge`]: {
+          [`.${prefix}avatar-badge`]: {
             [`@apply dark:bg-${config.avatarBadge.bgDark} absolute z-10 block overflow-hidden rounded-${config.avatarBadge.rounded} bg-${config.avatarBadge.bg}`]:
               {},
 
@@ -269,498 +273,498 @@ export default plugin.withOptions(
                 {},
             },
           },
-          [`.${prefix}-avatar-img`]: {
+          [`.${prefix}avatar-img`]: {
             [`@apply h-${config.avatarImg.maxSize} max-h-${config.avatarImg.maxSize} w-${config.avatarImg.maxSize} max-w-${config.avatarImg.maxSize} object-cover shadow-${config.avatarImg.shadow} dark:border-${config.avatarImg.borderDark}`]:
               {},
           },
-          [`.${prefix}-avatar-text`]: {
+          [`.${prefix}avatar-text`]: {
             [`@apply font-${config.avatarText.font} text-center font-${config.avatarText.fontSize} uppercase`]:
               {},
           },
-          [`.${prefix}-avatar-dot`]: {
+          [`.${prefix}avatar-dot`]: {
             [`@apply dark:border-${config.avatarDot.borderDark} absolute block rounded-${config.avatarDot.rounded} border border-${config.avatarDot.border}`]:
               {},
-            [`&.${prefix}-dot-primary`]: {
+            [`&.${prefix}dot-primary`]: {
               [`@apply bg-${config.avatarDot.primary}`]: {},
             },
-            [`&.${prefix}-dot-info`]: {
+            [`&.${prefix}dot-info`]: {
               [`@apply bg-${config.avatarDot.info}`]: {},
             },
-            [`&.${prefix}-dot-success`]: {
+            [`&.${prefix}dot-success`]: {
               [`@apply bg-${config.avatarDot.success}`]: {},
             },
-            [`&.${prefix}-dot-warning`]: {
+            [`&.${prefix}dot-warning`]: {
               [`@apply bg-${config.avatarDot.warning}`]: {},
             },
-            [`&.${prefix}-dot-danger`]: {
+            [`&.${prefix}dot-danger`]: {
               [`@apply bg-${config.avatarDot.danger}`]: {},
             },
-            [`&.${prefix}-dot-yellow`]: {
+            [`&.${prefix}dot-yellow`]: {
               [`@apply bg-${config.avatarDot.yellow}`]: {},
             },
-            [`&.${prefix}-dot-pink`]: {
+            [`&.${prefix}dot-pink`]: {
               [`@apply bg-${config.avatarDot.pink}`]: {},
             },
-            [`&.${prefix}-dot-indigo`]: {
+            [`&.${prefix}dot-indigo`]: {
               [`@apply bg-${config.avatarDot.indigo}`]: {},
             },
           },
-          [`&.${prefix}-avatar-ring`]: {
-            [`&.${prefix}-avatar-full`]: {
+          [`&.${prefix}avatar-ring`]: {
+            [`&.${prefix}avatar-full`]: {
               [`@apply ring-${config.avatarRing.ring} ring-offset-${config.avatarRing.ringOffsetSize} ring-offset-${config.avatarRing.ringOffsetColor} dark:ring-offset-${config.avatarRing.ringOffsetColorDark}`]:
                 {},
             },
-            [`&.${prefix}-ring-primary`]: {
+            [`&.${prefix}ring-primary`]: {
               [`@apply bg-${config.avatarRing.primary}`]: {},
             },
-            [`&.${prefix}-ring-info`]: {
+            [`&.${prefix}ring-info`]: {
               [`@apply bg-${config.avatarRing.info}`]: {},
             },
-            [`&.${prefix}-ring-success`]: {
+            [`&.${prefix}ring-success`]: {
               [`@apply bg-${config.avatarRing.success}`]: {},
             },
-            [`&.${prefix}-ring-warning`]: {
+            [`&.${prefix}ring-warning`]: {
               [`@apply bg-${config.avatarRing.warning}`]: {},
             },
-            [`&.${prefix}-ring-danger`]: {
+            [`&.${prefix}ring-danger`]: {
               [`@apply bg-${config.avatarRing.danger}`]: {},
             },
-            [`&.${prefix}-ring-yellow`]: {
+            [`&.${prefix}ring-yellow`]: {
               [`@apply bg-${config.avatarRing.yellow}`]: {},
             },
-            [`&.${prefix}-ring-pink`]: {
+            [`&.${prefix}ring-pink`]: {
               [`@apply bg-${config.avatarRing.pink}`]: {},
             },
-            [`&.${prefix}-ring-indigo`]: {
+            [`&.${prefix}ring-indigo`]: {
               [`@apply bg-${config.avatarRing.indigo}`]: {},
             },
           },
-          [`&.${prefix}-avatar-xxs`]: {
+          [`&.${prefix}avatar-xxs`]: {
             [`@apply h-${config.avatarXXS.size} w-${config.avatarXXS.size}`]:
               {},
 
-            [`.${prefix}-avatar-badge`]: {
+            [`.${prefix}avatar-badge`]: {
               [`@apply h-${config.avatarXXS.badge.size} w-${config.avatarXXS.badge.size} -bottom-${config.avatarXXS.badge.position} -end-${config.avatarXXS.badge.position}`]:
                 {},
             },
-            [`.${prefix}-avatar-dot`]: {
+            [`.${prefix}avatar-dot`]: {
               [`@apply h-${config.avatarXXS.dot.size} w-${config.avatarXXS.dot.size}`]:
                 {},
             },
-            [`.${prefix}-avatar-text`]: {
+            [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarXXS.text}`]: {},
             },
-            [`&.${prefix}-avatar-straight, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
               [`@apply rounded-none`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXXS.straightPosition} top-${config.avatarXXS.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-rounded, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
               [`@apply rounded`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXXS.roundedOrInnerDotPosition} top-${config.avatarXXS.roundedOrInnerDotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-curved, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarXXS.curvedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXXS.curvedOrInner.dotPosition} top-${config.avatarXXS.curvedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-full`]: {
-              [`.${prefix}-avatar-dot`]: {
+            [`&.${prefix}avatar-full`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXXS.fullDotPosition} top-${config.avatarXXS.fullDotPosition}`]:
                   {},
               },
             },
           },
-          [`&.${prefix}-avatar-xs`]: {
+          [`&.${prefix}avatar-xs`]: {
             [`@apply h-${config.avatarXS.size} w-${config.avatarXS.size}`]: {},
 
-            [`.${prefix}-avatar-badge`]: {
+            [`.${prefix}avatar-badge`]: {
               [`@apply h-${config.avatarXS.badge.size} w-${config.avatarXS.badge.size} -bottom-${config.avatarXS.badge.position} -end-${config.avatarXS.badge.position}`]:
                 {},
             },
-            [`.${prefix}-avatar-dot`]: {
+            [`.${prefix}avatar-dot`]: {
               [`@apply h-${config.avatarXS.dot.size} w-${config.avatarXS.dot.size}`]:
                 {},
             },
-            [`.${prefix}-avatar-text`]: {
+            [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarXS.text}`]: {},
             },
-            [`&.${prefix}-avatar-straight, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
               [`@apply rounded-none`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXS.straightPosition} top-${config.avatarXS.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-rounded, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
               [`@apply rounded`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXS.roundedOrInnerDotPosition} top-${config.avatarXS.roundedOrInnerDotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-curved, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarXS.curvedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXS.curvedOrInner.dotPosition} top-${config.avatarXS.curvedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-full`]: {
-              [`.${prefix}-avatar-dot`]: {
+            [`&.${prefix}avatar-full`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXS.fullDotPosition} top-${config.avatarXS.fullDotPosition}`]:
                   {},
               },
             },
           },
-          [`&.${prefix}-avatar-sm`]: {
+          [`&.${prefix}avatar-sm`]: {
             [`@apply h-${config.avatarSM.size} w-${config.avatarSM.size}`]: {},
 
-            [`.${prefix}-avatar-badge`]: {
+            [`.${prefix}avatar-badge`]: {
               [`@apply h-${config.avatarSM.badge.size} w-${config.avatarSM.badge.size} -bottom-${config.avatarSM.badge.position} -end-${config.avatarSM.badge.position}`]:
                 {},
             },
-            [`.${prefix}-avatar-dot`]: {
+            [`.${prefix}avatar-dot`]: {
               [`@apply h-${config.avatarSM.dot.size} w-${config.avatarSM.dot.size}`]:
                 {},
             },
-            [`.${prefix}-avatar-text`]: {
+            [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarSM.text}`]: {},
             },
-            [`&.${prefix}-avatar-straight, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
               [`@apply rounded-none`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarSM.straightPosition} top-${config.avatarSM.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-rounded, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarSM.roundedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarSM.roundedOrInner.dotPosition} top-${config.avatarSM.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-curved, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarSM.curvedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarSM.curvedOrInner.dotPosition} top-${config.avatarSM.curvedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-full`]: {
-              [`.${prefix}-avatar-dot`]: {
+            [`&.${prefix}avatar-full`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarSM.fullDotPosition} top-${config.avatarSM.fullDotPosition}`]:
                   {},
               },
             },
           },
-          [`&.${prefix}-avatar-md`]: {
+          [`&.${prefix}avatar-md`]: {
             [`@apply h-${config.avatarMD.size} w-${config.avatarMD.size}`]: {},
 
-            [`.${prefix}-avatar-badge`]: {
+            [`.${prefix}avatar-badge`]: {
               [`@apply h-${config.avatarMD.badge.size} w-${config.avatarMD.badge.size} -bottom-${config.avatarMD.badge.position} -end-${config.avatarMD.badge.position}`]:
                 {},
             },
-            [`.${prefix}-avatar-dot`]: {
+            [`.${prefix}avatar-dot`]: {
               [`@apply h-${config.avatarMD.dot.size} w-${config.avatarMD.dot.size}`]:
                 {},
             },
-            [`.${prefix}-avatar-text`]: {
+            [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarMD.text}`]: {},
             },
-            [`&.${prefix}-avatar-straight, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
               [`@apply rounded-none`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarMD.straightPosition} top-${config.avatarMD.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-rounded, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarMD.roundedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarMD.roundedOrInner.dotPosition} top-${config.avatarMD.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-curved, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarMD.curvedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarMD.curvedOrInner.dotPosition} top-${config.avatarMD.curvedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-full`]: {
-              [`.${prefix}-avatar-dot`]: {
+            [`&.${prefix}avatar-full`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarMD.fullDotPosition} top-${config.avatarMD.fullDotPosition}`]:
                   {},
               },
             },
           },
-          [`&.${prefix}-avatar-lg`]: {
+          [`&.${prefix}avatar-lg`]: {
             [`@apply h-${config.avatarLG.size} w-${config.avatarLG.size}`]: {},
 
-            [`.${prefix}-avatar-badge`]: {
+            [`.${prefix}avatar-badge`]: {
               [`@apply h-${config.avatarLG.badge.size} w-${config.avatarLG.badge.size} -bottom-${config.avatarLG.badge.position} -end-${config.avatarLG.badge.position}`]:
                 {},
             },
-            [`.${prefix}-avatar-dot`]: {
+            [`.${prefix}avatar-dot`]: {
               [`@apply h-${config.avatarLG.dot.size} w-${config.avatarLG.dot.size}`]:
                 {},
             },
-            [`.${prefix}-avatar-text`]: {
+            [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarLG.text}`]: {},
             },
-            [`&.${prefix}-avatar-straight, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
               [`@apply rounded-none`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarLG.straightPosition} top-${config.avatarLG.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-rounded, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarLG.roundedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarLG.roundedOrInner.dotPosition} top-${config.avatarLG.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-curved, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarLG.curvedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarLG.curvedOrInner.dotPosition} top-${config.avatarLG.curvedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-full`]: {
-              [`.${prefix}-avatar-dot`]: {
+            [`&.${prefix}avatar-full`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarLG.fullDotPosition} top-${config.avatarLG.fullDotPosition}`]:
                   {},
               },
             },
           },
-          [`&.${prefix}-avatar-xl`]: {
+          [`&.${prefix}avatar-xl`]: {
             [`@apply h-${config.avatarXL.size} w-${config.avatarXL.size}`]: {},
 
-            [`.${prefix}-avatar-badge`]: {
+            [`.${prefix}avatar-badge`]: {
               [`@apply h-${config.avatarXL.badge.size} w-${config.avatarXL.badge.size} -bottom-${config.avatarXL.badge.position} -end-${config.avatarXL.badge.position}`]:
                 {},
             },
-            [`.${prefix}-avatar-dot`]: {
+            [`.${prefix}avatar-dot`]: {
               [`@apply h-${config.avatarXL.dot.size} w-${config.avatarXL.dot.size}`]:
                 {},
             },
-            [`.${prefix}-avatar-text`]: {
+            [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarXL.text}`]: {},
             },
-            [`&.${prefix}-avatar-straight, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
               [`@apply rounded-none`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXL.straightPosition} top-${config.avatarXL.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-rounded, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarXL.roundedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXL.roundedOrInner.dotPosition} top-${config.avatarXL.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-curved, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarXL.curvedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXL.curvedOrInner.dotPosition} top-${config.avatarXL.curvedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-full`]: {
-              [`.${prefix}-avatar-dot`]: {
+            [`&.${prefix}avatar-full`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXL.fullDotPosition} top-${config.avatarXL.fullDotPosition}`]:
                   {},
               },
             },
           },
-          [`&.${prefix}-avatar-2xl`]: {
+          [`&.${prefix}avatar-2xl`]: {
             [`@apply h-${config.avatar2XL.size} w-${config.avatar2XL.size}`]:
               {},
 
-            [`.${prefix}-avatar-badge`]: {
+            [`.${prefix}avatar-badge`]: {
               [`@apply h-${config.avatar2XL.badge.size} w-${config.avatar2XL.badge.size} -bottom-${config.avatar2XL.badge.position} -end-${config.avatar2XL.badge.position}`]:
                 {},
             },
-            [`.${prefix}-avatar-dot`]: {
+            [`.${prefix}avatar-dot`]: {
               [`@apply h-${config.avatar2XL.dot.size} w-${config.avatar2XL.dot.size}`]:
                 {},
             },
-            [`.${prefix}-avatar-text`]: {
+            [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatar2XL.text}`]: {},
             },
-            [`&.${prefix}-avatar-straight, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
               [`@apply rounded-none`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar2XL.straightPosition} top-${config.avatar2XL.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-rounded, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatar2XL.roundedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar2XL.roundedOrInner.dotPosition} top-${config.avatar2XL.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-curved, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatar2XL.curvedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar2XL.curvedOrInner.dotPosition} top-${config.avatar2XL.curvedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-full`]: {
-              [`.${prefix}-avatar-dot`]: {
+            [`&.${prefix}avatar-full`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar2XL.fullDotPosition} top-${config.avatar2XL.fullDotPosition}`]:
                   {},
               },
             },
           },
-          [`&.${prefix}-avatar-3xl`]: {
+          [`&.${prefix}avatar-3xl`]: {
             [`@apply h-${config.avatar3XL.size} w-${config.avatar3XL.size}`]:
               {},
 
-            [`.${prefix}-avatar-badge`]: {
+            [`.${prefix}avatar-badge`]: {
               [`@apply h-${config.avatar3XL.badge.size} w-${config.avatar3XL.badge.size} -bottom-${config.avatar3XL.badge.position} -end-${config.avatar3XL.badge.position}`]:
                 {},
             },
-            [`.${prefix}-avatar-dot`]: {
+            [`.${prefix}avatar-dot`]: {
               [`@apply h-${config.avatar3XL.dot.size} w-${config.avatar3XL.dot.size}`]:
                 {},
             },
-            [`.${prefix}-avatar-text`]: {
+            [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatar3XL.text}`]: {},
             },
-            [`&.${prefix}-avatar-straight, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
               [`@apply rounded-none`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar3XL.straightPosition} top-${config.avatar3XL.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-rounded, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatar3XL.roundedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar3XL.roundedOrInner.dotPosition} top-${config.avatar3XL.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-curved, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatar3XL.curvedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar3XL.curvedOrInner.dotPosition} top-${config.avatar3XL.curvedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-full`]: {
-              [`.${prefix}-avatar-dot`]: {
+            [`&.${prefix}avatar-full`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar3XL.fullDotPosition} top-${config.avatar3XL.fullDotPosition}`]:
                   {},
               },
             },
           },
-          [`&.${prefix}-avatar-4xl`]: {
+          [`&.${prefix}avatar-4xl`]: {
             [`@apply h-${config.avatar4XL.size} w-${config.avatar4XL.size}`]:
               {},
 
-            [`.${prefix}-avatar-badge`]: {
+            [`.${prefix}avatar-badge`]: {
               [`@apply h-${config.avatar4XL.badge.size} w-${config.avatar4XL.badge.size} -bottom-${config.avatar4XL.badge.position} -end-${config.avatar4XL.badge.position}`]:
                 {},
             },
-            [`.${prefix}-avatar-dot`]: {
+            [`.${prefix}avatar-dot`]: {
               [`@apply h-${config.avatar4XL.dot.size} w-${config.avatar4XL.dot.size}`]:
                 {},
             },
-            [`.${prefix}-avatar-text`]: {
+            [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatar4XL.text}`]: {},
             },
-            [`&.${prefix}-avatar-straight, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
               [`@apply rounded-none`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar4XL.straightPosition} top-${config.avatar4XL.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-rounded, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatar4XL.roundedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar4XL.roundedOrInner.dotPosition} top-${config.avatar4XL.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-curved, .${prefix}-avatar-inner`]: {
+            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatar4XL.curvedOrInner.rounded}`]: {},
 
-              [`.${prefix}-avatar-dot`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar4XL.curvedOrInner.dotPosition} top-${config.avatar4XL.curvedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}-avatar-full`]: {
-              [`.${prefix}-avatar-dot`]: {
+            [`&.${prefix}avatar-full`]: {
+              [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar4XL.fullDotPosition} top-${config.avatar4XL.fullDotPosition}`]:
                   {},
               },
             },
           },
 
-          [`&.${prefix}-avatar-full`]: {
+          [`&.${prefix}avatar-full`]: {
             [`@apply rounded-${config.avatarFull.rounded}`]: {},
 
-            [`.${prefix}-avatar-inner`]: {
+            [`.${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatarFull.avatarInnerRounded}`]: {},
             },
 
-            [`.${prefix}-avatar-badge`]: {
+            [`.${prefix}avatar-badge`]: {
               [`@apply -bottom-${config.avatarFull.avatarBadgePosition} -end-${config.avatarFull.avatarBadgePosition}`]:
                 {},
             },
           },
 
-          [`&.${prefix}-avatar-mask:not(.${prefix}-avatar-rounded):not(.${prefix}-avatar-curved):not(.${prefix}-avatar-full)`]:
+          [`&.${prefix}avatar-mask:not(.${prefix}avatar-rounded):not(.${prefix}avatar-curved):not(.${prefix}avatar-full)`]:
             {
-              [`@apply ${prefix}-mask`]: {},
+              [`@apply ${prefix}mask`]: {},
             },
         },
       })

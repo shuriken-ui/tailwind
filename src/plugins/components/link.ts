@@ -12,13 +12,17 @@ const defaultLinkConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme('shurikenUi.link') satisfies typeof defaultLinkConfig
 
       addComponents({
-        [`.${prefix}-link`]: {
+        [`.${prefix}link`]: {
           [`@apply font-${config.font} hover:text-${config.textHover} dark:hover:text-${config.textHoverDark} underline-offset-4 hover:underline focus:text-${config.textFocus} dark:focus:text-${config.textFocusDark} focus:underline`]:
             {},
         },

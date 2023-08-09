@@ -10,7 +10,11 @@ const defaultLabelConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -18,7 +22,7 @@ export default plugin.withOptions(
       ) satisfies typeof defaultLabelConfig
 
       addComponents({
-        [`.${prefix}-label`]: {
+        [`.${prefix}label`]: {
           [`@apply inline-block font-${config.font} leading-none text-${config.text} dark:text-${config.textDark}`]:
             {},
         },

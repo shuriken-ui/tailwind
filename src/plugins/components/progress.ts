@@ -33,7 +33,11 @@ const defaultProgressConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -41,73 +45,73 @@ export default plugin.withOptions(
       ) satisfies typeof defaultProgressConfig
 
       addComponents({
-        [`.${prefix}-progress`]: {
+        [`.${prefix}progress`]: {
           [`@apply relative w-${config.size} overflow-hidden`]: {},
 
-          [`.${prefix}-progress-bar`]: {
+          [`.${prefix}progress-bar`]: {
             [`@apply absolute start-0 top-0 h-full transition-all duration-${config.bar.duration}`]:
               {},
           },
-          [`&.${prefix}-progress-default`]: {
+          [`&.${prefix}progress-default`]: {
             [`@apply bg-${config.default.bg} dark:bg-${config.default.bgDark}`]:
               {},
           },
-          [`&.${prefix}-progress-contrast`]: {
+          [`&.${prefix}progress-contrast`]: {
             [`@apply bg-${config.defaultContrast.bg} dark:bg-${config.defaultContrast.bgDark}`]:
               {},
           },
-          [`&.${prefix}-progress-xs`]: {
+          [`&.${prefix}progress-xs`]: {
             [`@apply h-${config.progressXS}`]: {},
           },
-          [`&.${prefix}-progress-sm`]: {
+          [`&.${prefix}progress-sm`]: {
             [`@apply h-${config.progressSM}`]: {},
           },
-          [`&.${prefix}-progress-md`]: {
+          [`&.${prefix}progress-md`]: {
             [`@apply h-${config.progressMD}`]: {},
           },
-          [`&.${prefix}-progress-lg`]: {
+          [`&.${prefix}progress-lg`]: {
             [`@apply h-${config.progressLG}`]: {},
           },
-          [`&.${prefix}-progress-xl`]: {
+          [`&.${prefix}progress-xl`]: {
             [`@apply h-${config.progressXL}`]: {},
           },
-          [`&.${prefix}-progress-rounded, &.${prefix}-progress-rounded .${prefix}-progress-bar`]:
+          [`&.${prefix}progress-rounded, &.${prefix}progress-rounded .${prefix}progress-bar`]:
             {
               [`@apply rounded`]: {},
             },
-          [`&.${prefix}-progress-curved, &.${prefix}-progress-curved .${prefix}-progress-bar`]:
+          [`&.${prefix}progress-curved, &.${prefix}progress-curved .${prefix}progress-bar`]:
             {
               [`@apply rounded-${config.rounded.curved}`]: {},
             },
-          [`&.${prefix}-progress-full, &.${prefix}-progress-full .${prefix}-progress-bar`]:
+          [`&.${prefix}progress-full, &.${prefix}progress-full .${prefix}progress-bar`]:
             {
               [`@apply rounded-${config.rounded.full}`]: {},
             },
-          [`&.${prefix}-progress-indeterminate .${prefix}-progress-bar`]: {
+          [`&.${prefix}progress-indeterminate .${prefix}progress-bar`]: {
             [`@apply w-full`]: {},
           },
-          [`&.${prefix}-progress-primary`]: {
-            [`.${prefix}-progress-bar`]: {
+          [`&.${prefix}progress-primary`]: {
+            [`.${prefix}progress-bar`]: {
               [`@apply bg-${config.primary}`]: {},
             },
           },
-          [`&.${prefix}-progress-info`]: {
-            [`.${prefix}-progress-bar`]: {
+          [`&.${prefix}progress-info`]: {
+            [`.${prefix}progress-bar`]: {
               [`@apply bg-${config.info}`]: {},
             },
           },
-          [`&.${prefix}-progress-success`]: {
-            [`.${prefix}-progress-bar`]: {
+          [`&.${prefix}progress-success`]: {
+            [`.${prefix}progress-bar`]: {
               [`@apply bg-${config.success}`]: {},
             },
           },
-          [`&.${prefix}-progress-warning`]: {
-            [`.${prefix}-progress-bar`]: {
+          [`&.${prefix}progress-warning`]: {
+            [`.${prefix}progress-bar`]: {
               [`@apply bg-${config.warning}`]: {},
             },
           },
-          [`&.${prefix}-progress-danger`]: {
-            [`.${prefix}-progress-bar`]: {
+          [`&.${prefix}progress-danger`]: {
+            [`.${prefix}progress-bar`]: {
               [`@apply bg-${config.danger}`]: {},
             },
           },

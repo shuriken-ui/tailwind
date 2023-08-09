@@ -24,7 +24,11 @@ const defaultModalConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -32,55 +36,55 @@ export default plugin.withOptions(
       ) satisfies typeof defaultModalConfig
 
       addComponents({
-        [`.${prefix}-modal`]: {
+        [`.${prefix}modal`]: {
           [`@apply fixed inset-0 z-[9999] flex items-center justify-center`]:
             {},
 
-          [`.${prefix}-modal-inner`]: {
+          [`.${prefix}modal-inner`]: {
             [`@apply relative z-[9999]`]: {},
           },
-          [`.${prefix}-modal-backdrop`]: {
+          [`.${prefix}modal-backdrop`]: {
             [`@apply bg-${config.backdrop.bg} dark:bg-${config.backdrop.bgDark} fixed inset-0`]:
               {},
           },
-          [`.${prefix}-modal-content`]: {
+          [`.${prefix}modal-content`]: {
             [`@apply fixed inset-0`]: {},
           },
-          [`.${prefix}-modal-content-inner`]: {
+          [`.${prefix}modal-content-inner`]: {
             [`@apply flex w-full min-h-full items-center justify-center p-${config.contentInner.space} text-center`]:
               {},
           },
-          [`.${prefix}-modal-content-panel`]: {
+          [`.${prefix}modal-content-panel`]: {
             [`@apply w-${config.contentPanel.size} text-${config.contentPanel.text} align-middle transition-all`]:
               {},
           },
-          [`&.${prefix}-modal-sm`]: {
-            [`.${prefix}-modal-content-panel`]: {
+          [`&.${prefix}modal-sm`]: {
+            [`.${prefix}modal-content-panel`]: {
               [`@apply max-w-${config.modalSM}`]: {},
             },
           },
-          [`&.${prefix}-modal-md`]: {
-            [`.${prefix}-modal-content-panel`]: {
+          [`&.${prefix}modal-md`]: {
+            [`.${prefix}modal-content-panel`]: {
               [`@apply max-w-${config.modalMD}`]: {},
             },
           },
-          [`&.${prefix}-modal-lg`]: {
-            [`.${prefix}-modal-content-panel`]: {
+          [`&.${prefix}modal-lg`]: {
+            [`.${prefix}modal-content-panel`]: {
               [`@apply max-w-${config.modalLG}`]: {},
             },
           },
-          [`&.${prefix}-modal-xl`]: {
-            [`.${prefix}-modal-content-panel`]: {
+          [`&.${prefix}modal-xl`]: {
+            [`.${prefix}modal-content-panel`]: {
               [`@apply max-w-${config.modalXL}`]: {},
             },
           },
-          [`&.${prefix}-modal-2xl`]: {
-            [`.${prefix}-modal-content-panel`]: {
+          [`&.${prefix}modal-2xl`]: {
+            [`.${prefix}modal-content-panel`]: {
               [`@apply max-w-${config.modal2XL}`]: {},
             },
           },
-          [`&.${prefix}-modal-3xl`]: {
-            [`.${prefix}-modal-content-panel`]: {
+          [`&.${prefix}modal-3xl`]: {
+            [`.${prefix}modal-content-panel`]: {
               [`@apply max-w-${config.modal3XL}`]: {},
             },
           },

@@ -12,7 +12,11 @@ const defaultFocusConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -20,7 +24,7 @@ export default plugin.withOptions(
       ) satisfies typeof defaultFocusConfig
 
       addComponents({
-        [`.${prefix}-focus`]: {
+        [`.${prefix}focus`]: {
           [`@apply outline-${config.width} outline-${config.style} outline-offset-${config.offset}`]:
             {},
           '@apply outline-transparent': {},

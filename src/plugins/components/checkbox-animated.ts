@@ -26,7 +26,11 @@ const defaultCheckboxAnimatedConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    const { prefix } = defu(options, defaultPluginOptions)
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
 
     return function ({ addComponents, theme }) {
       const config = theme(
@@ -57,22 +61,22 @@ export default plugin.withOptions(
       }
 
       addComponents({
-        [`.${prefix}-checkbox-animated`]: {
-          [`@apply ${prefix}-focus relative h-${config.size} w-${config.size} rounded-${config.rounded} focus-within:outline-current`]:
+        [`.${prefix}checkbox-animated`]: {
+          [`@apply ${prefix}focus relative h-${config.size} w-${config.size} rounded-${config.rounded} focus-within:outline-current`]:
             {},
 
-          [`.${prefix}-checkbox-animated-input`]: {
+          [`.${prefix}checkbox-animated-input`]: {
             [`@apply cursor-pointer disabled:cursor-not-allowed absolute h-full w-full opacity-0 z-[1] left-0 top-0`]:
               {},
           },
-          [`.${prefix}-checkbox-animated-label`]: {
+          [`.${prefix}checkbox-animated-label`]: {
             [`@apply relative h-${config.size} w-${config.size} disabled:opacity-75`]:
               {},
 
-            [`.${prefix}-checkbox-animated-label-inner`]: {
+            [`.${prefix}checkbox-animated-label-inner`]: {
               [`@apply absolute h-${config.size} w-${config.size} border border-solid z-0 opacity-100 transition-all duration-${config.label.inner.duration} rounded-full  left-0 top-0`]:
                 {},
-              [`&.${prefix}-is-opaque`]: {
+              [`&.${prefix}is-opaque`]: {
                 [`@apply opacity-0`]: {},
               },
             },
@@ -94,8 +98,8 @@ export default plugin.withOptions(
               'stroke-dashoffset': '48',
             },
           },
-          [`&.${prefix}-checked`]: {
-            [`.${prefix}-checkbox-animated-label`]: {
+          [`&.${prefix}checked`]: {
+            [`.${prefix}checkbox-animated-label`]: {
               [`&:deep(svg circle)`]: {
                 '@apply animate-[stroke_0.6s_cubic-bezier(0.65,0,0.45,1)_both]':
                   {},
@@ -106,8 +110,8 @@ export default plugin.withOptions(
               },
             },
           },
-          [`&.${prefix}-unchecked`]: {
-            [`.${prefix}-checkbox-animated-label`]: {
+          [`&.${prefix}unchecked`]: {
+            [`.${prefix}checkbox-animated-label`]: {
               [`&:deep(svg circle)`]: {
                 '@apply animate-[reverseCircle_0.6s_cubic-bezier(0.65,0,0.45,1)_0.2s_both]':
                   {},
@@ -118,76 +122,76 @@ export default plugin.withOptions(
               },
             },
           },
-          [`&.${prefix}-checkbox-animated-default`]: {
-            [`.${prefix}-checkbox-animated-label`]: {
+          [`&.${prefix}checkbox-animated-default`]: {
+            [`.${prefix}checkbox-animated-label`]: {
               [`@apply text-${config.default.color} dark:text-${config.default.colorDark}`]:
                 {},
 
-              [`.${prefix}-checkbox-animated-label-inner`]: {
+              [`.${prefix}checkbox-animated-label-inner`]: {
                 [`@apply border-${config.default.color} dark:border-${config.default.colorDark}`]:
                   {},
               },
             },
           },
-          [`&.${prefix}-checkbox-animated-light`]: {
-            [`.${prefix}-checkbox-animated-label`]: {
+          [`&.${prefix}checkbox-animated-light`]: {
+            [`.${prefix}checkbox-animated-label`]: {
               [`@apply text-${config.light}`]: {},
 
-              [`.${prefix}-checkbox-animated-label-inner`]: {
+              [`.${prefix}checkbox-animated-label-inner`]: {
                 [`@apply border-${config.light}`]: {},
               },
             },
           },
-          [`&.${prefix}-checkbox-animated-muted`]: {
-            [`.${prefix}-checkbox-animated-label`]: {
+          [`&.${prefix}checkbox-animated-muted`]: {
+            [`.${prefix}checkbox-animated-label`]: {
               [`@apply text-${config.muted}`]: {},
 
-              [`.${prefix}-checkbox-animated-label-inner`]: {
+              [`.${prefix}checkbox-animated-label-inner`]: {
                 [`@apply border-${config.muted}`]: {},
               },
             },
           },
-          [`&.${prefix}-checkbox-animated-primary`]: {
-            [`.${prefix}-checkbox-animated-label`]: {
+          [`&.${prefix}checkbox-animated-primary`]: {
+            [`.${prefix}checkbox-animated-label`]: {
               [`@apply text-${config.primary}`]: {},
 
-              [`.${prefix}-checkbox-animated-label-inner`]: {
+              [`.${prefix}checkbox-animated-label-inner`]: {
                 [`@apply border-${config.primary}`]: {},
               },
             },
           },
-          [`&.${prefix}-checkbox-animated-info`]: {
-            [`.${prefix}-checkbox-animated-label`]: {
+          [`&.${prefix}checkbox-animated-info`]: {
+            [`.${prefix}checkbox-animated-label`]: {
               [`@apply text-${config.info}`]: {},
 
-              [`.${prefix}-checkbox-animated-label-inner`]: {
+              [`.${prefix}checkbox-animated-label-inner`]: {
                 [`@apply border-${config.info}`]: {},
               },
             },
           },
-          [`&.${prefix}-checkbox-animated-success`]: {
-            [`.${prefix}-checkbox-animated-label`]: {
+          [`&.${prefix}checkbox-animated-success`]: {
+            [`.${prefix}checkbox-animated-label`]: {
               [`@apply text-${config.success}`]: {},
 
-              [`.${prefix}-checkbox-animated-label-inner`]: {
+              [`.${prefix}checkbox-animated-label-inner`]: {
                 [`@apply border-${config.success}`]: {},
               },
             },
           },
-          [`&.${prefix}-checkbox-animated-warning`]: {
-            [`.${prefix}-checkbox-animated-label`]: {
+          [`&.${prefix}checkbox-animated-warning`]: {
+            [`.${prefix}checkbox-animated-label`]: {
               [`@apply text-${config.warning}`]: {},
 
-              [`.${prefix}-checkbox-animated-label-inner`]: {
+              [`.${prefix}checkbox-animated-label-inner`]: {
                 [`@apply border-${config.warning}`]: {},
               },
             },
           },
-          [`&.${prefix}-checkbox-animated-danger`]: {
-            [`.${prefix}-checkbox-animated-label`]: {
+          [`&.${prefix}checkbox-animated-danger`]: {
+            [`.${prefix}checkbox-animated-label`]: {
               [`@apply text-${config.danger}`]: {},
 
-              [`.${prefix}-checkbox-animated-label-inner`]: {
+              [`.${prefix}checkbox-animated-label-inner`]: {
                 [`@apply border-${config.danger}`]: {},
               },
             },
