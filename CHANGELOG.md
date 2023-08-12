@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.3](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2023-08-12)
+
+
+### Features
+
+* expose preset factory with options ([fd8bf91](https://github.com/shuriken-ui/tailwind/commit/fd8bf915d05d04ee600061c95051ca4a039e133b))
+
+
+### Bug Fixes
+
+* allow empty prefix ([22d4824](https://github.com/shuriken-ui/tailwind/commit/22d4824371da5ee4a4291b7b0162b0d49292e813))
+* **list:** remove liststyle from list-base ([4cde21c](https://github.com/shuriken-ui/tailwind/commit/4cde21c0e8b396fd727a3630fa018730af72356f))
+
 ## [1.0.0-beta.2](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2023-08-08)
 
 
