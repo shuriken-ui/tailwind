@@ -13,7 +13,6 @@ import buttonIcon from './button-icon'
 import button from './button'
 import card from './card'
 import checkbox from './checkbox'
-import checkboxHeadless from './checkbox-headless'
 import dropdownDivider from './dropdown-divider'
 import dropdownItem from './dropdown-item'
 import dropdown from './dropdown'
@@ -41,7 +40,6 @@ import progressCircle from './progress-circle'
 import progress from './progress'
 import prose from './prose'
 import radio from './radio'
-import radioHeadless from './radio-headless'
 import select from './select'
 import slimscroll from './slimscroll'
 import snack from './snack'
@@ -70,7 +68,6 @@ const components = [
   button,
   card,
   checkbox,
-  checkboxHeadless,
   dropdownDivider,
   dropdownItem,
   dropdown,
@@ -98,7 +95,6 @@ const components = [
   progress,
   prose,
   radio,
-  radioHeadless,
   select,
   slimscroll,
   snack,
