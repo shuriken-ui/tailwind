@@ -6,7 +6,6 @@ const defaultlistConfig = {
   ul: 'disc',
   ol: 'decimal',
   base: {
-    list: 'disc',
     textMarker: 'muted-500',
     textMarkerDark: 'muted-400',
     text: 'slate-700',
@@ -39,7 +38,7 @@ export default plugin.withOptions(
             [`@apply list-${config.ol}`]: {},
           },
           [`&.${prefix}list-base`]: {
-            [`@apply list-${config.base.list} space-y-1 marker:text-${config.base.textMarker} dark:marker:text-${config.base.textMarkerDark} font-${config.base.font} text-${config.base.text} dark:text-${config.base.textDark}`]:
+            [`@apply space-y-1 marker:text-${config.base.textMarker} dark:marker:text-${config.base.textMarkerDark} font-${config.base.font} text-${config.base.text} dark:text-${config.base.textDark}`]:
               {},
           },
           [`&.${prefix}list-media`]: {
