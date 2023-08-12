@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.6](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2023-08-12)
+
+
+### Bug Fixes
+
+* **select:** add pointer event none on chevron ([12a3ac0](https://github.com/shuriken-ui/tailwind/commit/12a3ac0e081e426358784df983e4348924b5fb04))
+
 ## [1.0.0-beta.5](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2023-08-12)
 
 ## [1.0.0-beta.4](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2023-08-12)
