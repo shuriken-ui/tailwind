@@ -233,7 +233,7 @@ export default plugin.withOptions(
             },
           },
           [`.${prefix}select-chevron`]: {
-            '@apply pointer-event-none': {},
+            '@apply pointer-events-none': {},
             [`@apply text-${config.select.chevron.text} absolute end-0 top-0 flex items-center justify-center transition-transform duration-${config.select.chevron.duration}`]:
               {},
           },
