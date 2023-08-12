@@ -13,7 +13,6 @@ import buttonIcon from './button-icon'
 import button from './button'
 import card from './card'
 import checkbox from './checkbox'
-import checkboxAnimated from './checkbox-animated'
 import checkboxHeadless from './checkbox-headless'
 import dropdownDivider from './dropdown-divider'
 import dropdownItem from './dropdown-item'
@@ -71,7 +70,6 @@ const components = [
   button,
   card,
   checkbox,
-  checkboxAnimated,
   checkboxHeadless,
   dropdownDivider,
   dropdownItem,
