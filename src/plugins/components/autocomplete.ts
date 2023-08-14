@@ -570,7 +570,7 @@ export default plugin.withOptions(
               },
 
             [`.${prefix}autocomplete-icon`]: {
-              [`@apply opacity-0`]: {},
+              [`@apply opacity-50`]: {},
             },
           },
           [`&.${prefix}autocomplete-label-float`]: {

@@ -261,6 +261,12 @@ export default plugin.withOptions(
             [`@apply text-${config.input.action.text} absolute end-0 top-0 flex items-center justify-center transition-colors duration-${config.input.action.duration}`]:
               {},
           },
+          [`&.${prefix}input-focus`]: {
+            [`.${prefix}input`]: {
+              [`@apply focus:border-primary-500 dark:focus:border-primary-500`]:
+                {},
+            },
+          },
           [`&.${prefix}input-rounded`]: {
             [`.${prefix}input`]: {
               [`@apply rounded-${config.input.rounded.default}`]: {},
