@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss'
-import shurikenUIPreset from './preset'
+import { preset } from './preset'
 
 export default {
   content: [],
-  presets: [shurikenUIPreset],
+  presets: [preset],
 } satisfies Config

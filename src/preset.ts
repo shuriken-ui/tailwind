@@ -10,8 +10,18 @@ import shurikenUIBase from './plugins/base'
 import shurikenUIComponents from './plugins/components'
 import shurikenUIUtilities from './plugins/utilities'
 
+const ShurikenUISymbol = '__is_shuriken_ui'
+
+export function hasPreset(config: Config) {
+  if (config.presets && Array.isArray(config.presets)) {
+    return config.presets.some((preset) => preset && ShurikenUISymbol in preset)
+  }
+
+  return false
+}
+
 export function createPreset(options: PluginOption = {}) {
-  return {
+  const config = {
     darkMode: 'class',
     content: [],
     plugins: [
@@ -143,6 +153,14 @@ export function createPreset(options: PluginOption = {}) {
       },
     },
   } satisfies Config
+
+  Object.defineProperty(config, ShurikenUISymbol, {
+    value: true,
+    enumerable: false,
+    writable: false,
+  })
+
+  return config
 }
 
-export default createPreset()
+export const preset = createPreset()
