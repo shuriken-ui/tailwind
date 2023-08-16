@@ -1,0 +1,51 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as ButtonStories from './button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+A button is ...
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Stories
+
+### Flavor
+
+Flavor is the visual style of the button.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.Solid} />
+  <Story of={ButtonStories.Pastel} />
+  <Story of={ButtonStories.Outline} />
+</div>
+
+### Size
+
+Size allows you to change the size of the button.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.Sm} />
+  <Story of={ButtonStories.Md} />
+  <Story of={ButtonStories.Lg} />
+  <Story of={ButtonStories.Xl} />
+</div>
+
+
+### Shape
+
+Shape allows you to change the roundness of the button.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.Straight} />
+  <Story of={ButtonStories.Rounded} />
+  <Story of={ButtonStories.Smooth} />
+  <Story of={ButtonStories.Curved} />
+  <Story of={ButtonStories.Full} />
+</div>
+

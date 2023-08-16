@@ -1,6 +1,6 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
 const defaultButtonConfig = {
   duration: '300',
@@ -511,9 +511,14 @@ export default plugin.withOptions(
               },
             },
           },
+
+          // #region Loading
           [`&.${prefix}button-loading`]: {
             [`@apply !text-transparent`]: {},
           },
+          // #endregion
+
+          // #region Sizes
           [`&.${prefix}button-small`]: {
             [`@apply h-8 px-3 py-1 text-${config.buttonSmall.text}`]: {},
 
@@ -546,6 +551,9 @@ export default plugin.withOptions(
                 {},
             },
           },
+          // #endregion
+
+          // #region Shapes
           [`&.${prefix}button-rounded`]: {
             [`@apply rounded-${config.buttonRounded}`]: {},
           },
@@ -563,6 +571,9 @@ export default plugin.withOptions(
                 {},
             },
           },
+          // #endregion
+
+          // #region Flavors
           [`&.${prefix}button-solid`]: {
             [`&.${prefix}button-default`]: {
               [`@apply text-${config.buttonSolid.default.text} bg-${config.buttonSolid.default.bg} border border-${config.buttonSolid.default.border} dark:text-${config.buttonSolid.default.textDark} dark:bg-${config.buttonSolid.default.bgDark} dark:border-${config.buttonSolid.default.borderDark} dark:hover:enabled:bg-${config.buttonSolid.default.bgHoverEnabledDark} dark:focus-visible:bg-${config.buttonSolid.default.bgFocusVisibleDark} dark:active:enabled:bg-${config.buttonSolid.default.bgActiveEnabledDark} hover:enabled:bg-${config.buttonSolid.default.bgHoverEnabled} focus-visible:bg-${config.buttonSolid.default.bgFocusVisible} active:enabled:bg-${config.buttonSolid.default.bgActiveEnabled}`]:
@@ -767,6 +778,7 @@ export default plugin.withOptions(
               },
             },
           },
+          // #endregion
         },
       })
     }

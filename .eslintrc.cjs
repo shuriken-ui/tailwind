@@ -1,11 +1,6 @@
 module.exports = {
   root: true,
-  extends: [
-    'plugin:unicorn/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:tailwindcss/recommended',
-    'prettier',
-  ],
+  extends: ['plugin:unicorn/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:tailwindcss/recommended', 'prettier', 'plugin:storybook/recommended'],
   plugins: ['unicorn', 'tailwindcss', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -17,13 +12,6 @@ module.exports = {
     },
   },
   overrides: [
-    {
-      files: ['*.vue'],
-      rules: {
-        'unicorn/prevent-abbreviations': 'off',
-        // 'unicorn/filename-case': 'off',
-      },
-    },
     {
       files: ['*.ts'],
       rules: {
@@ -46,6 +34,7 @@ module.exports = {
 
     'unicorn/filename-case': 'off',
     'unicorn/no-null': 'off',
+    'unicorn/prevent-abbreviations': 'off',
 
     // 'vue/require-expose': 'error',
 
