@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { ButtonProps } from './button.component'
+import { html } from 'lit'
+
+import type { ButtonAttrs } from './button.types'
 import { Button } from './button.component'
 
 // More on how to set up stories at: https://storybook.js.org/docs/web-components/writing-stories/introduction
@@ -48,10 +50,12 @@ const meta = {
     },
     onClick: { action: 'onClick' },
   },
-} satisfies Meta<ButtonProps>
+} satisfies Meta<ButtonAttrs>
 
 export default meta
-type Story = StoryObj<ButtonProps>
+type Story = StoryObj<ButtonAttrs>
+
+// first export is the Primary story
 
 // #region Flavors
 export const Solid: Story = {
@@ -59,6 +63,11 @@ export const Solid: Story = {
   args: {
     color: 'primary',
     label: 'Button',
+    // set default values used for UI preview
+    flavor: 'solid',
+    loading: false,
+    shape: 'straight',
+    size: 'md',
   },
 }
 export const Pastel: Story = {
@@ -143,6 +152,23 @@ export const Xl: Story = {
   args: {
     size: 'xl',
     label: 'Button',
+  },
+}
+// #endregion
+
+// #region Flavors
+export const Label: Story = {
+  name: 'label: Using props',
+  args: {
+    label: 'Button with props',
+  },
+}
+export const LabelSlot: Story = {
+  name: 'label: Using slot',
+  args: {
+    children: html`
+      <span>Button with slot</span>
+    `,
   },
 }
 // #endregion

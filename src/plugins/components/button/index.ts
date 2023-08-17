@@ -2,7 +2,7 @@ import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultButtonConfig = {
+export const defaultConfig = {
   duration: '300',
   font: 'normal',
   badge: {
@@ -442,9 +442,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.button'
-      ) satisfies typeof defaultButtonConfig
+      const config = theme('shurikenUi.button') satisfies typeof defaultConfig
 
       addComponents({
         [`.${prefix}button`]: {
@@ -787,7 +785,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          button: defaultButtonConfig,
+          button: defaultConfig,
         },
       },
     }

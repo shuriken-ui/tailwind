@@ -1,5 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks';
 import * as ButtonStories from './button.stories';
+import { defaultConfig } from '.'
 
 <Meta of={ButtonStories} />
 
@@ -49,3 +50,20 @@ Shape allows you to change the roundness of the button.
   <Story of={ButtonStories.Full} />
 </div>
 
+
+### Label & default slot
+
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.Label} />
+  <Story of={ButtonStories.LabelSlot} />
+</div>
+
+## Customization
+
+### Default Config
+
+<details>
+  <summary>View default config</summary>
+  <pre>{JSON.stringify(defaultConfig, null, 2)}</pre>
+</details>
