@@ -1,7 +1,15 @@
 import type { Config } from 'tailwindcss'
-import { defu } from 'defu'
-import config from './config'
+import { preset, hasPreset } from './preset'
 
-export function withShurikenUI(userConfig: Config) {
-  return defu(userConfig, config)
+export * from './preset'
+
+export function withShurikenUI(config: Config) {
+  if (hasPreset(config)) {
+    return config
+  }
+
+  config.presets ??= []
+  config.presets.push(preset)
+
+  return config
 }
