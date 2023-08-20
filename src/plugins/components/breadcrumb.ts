@@ -49,10 +49,10 @@ export default plugin.withOptions(
               [`@apply me-3 sm:hidden`]: {},
             },
             [`.${prefix}breadcrumb-item:not(:last-child)`]: {
-              [`@apply flex`]: {},
+              [`@apply hidden sm:flex`]: {},
             },
             [`.${prefix}breadcrumb-item:last-child`]: {
-              [`@apply hidden sm:flex`]: {},
+              [`@apply flex`]: {},
             },
             [`.${prefix}item-inner`]: {
               [`@apply text-${config.list.itemInner.text} flex items-center gap-x-1 transition-colors duration-${config.list.itemInner.duration}`]:
