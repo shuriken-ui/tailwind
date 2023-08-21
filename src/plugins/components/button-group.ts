@@ -34,6 +34,60 @@ export default plugin.withOptions(
                 [`@apply !border-e !rounded-s-none`]: {},
               },
             },
+
+          [`.${prefix}input-wrapper:not(:first-child):not(:last-child)`]: {
+            [`.${prefix}input`]: {
+              [`@apply !border-e-0 !rounded-none`]: {},
+            },
+          },
+
+          [`.${prefix}input-wrapper:first-child`]: {
+            [`.${prefix}input`]: {
+              [`@apply !rounded-e-none`]: {},
+            },
+          },
+
+          [`.${prefix}input-wrapper:last-child`]: {
+            [`.${prefix}input`]: {
+              [`@apply !border-e !rounded-s-none`]: {},
+            },
+          },
+
+          [`.${prefix}select-wrapper:not(:first-child):not(:last-child)`]: {
+            [`.${prefix}select`]: {
+              [`@apply !border-e-0 !rounded-none`]: {},
+            },
+          },
+
+          [`.${prefix}select-wrapper:first-child`]: {
+            [`.${prefix}select`]: {
+              [`@apply !rounded-e-none`]: {},
+            },
+          },
+
+          [`.${prefix}select-wrapper:last-child`]: {
+            [`.${prefix}select`]: {
+              [`@apply !border-e !rounded-s-none`]: {},
+            },
+          },
+
+          [`.${prefix}dropdown:not(:first-child):not(:last-child)`]: {
+            [`.${prefix}nui-button`]: {
+              [`@apply !border-e-0 !rounded-none`]: {},
+            },
+          },
+
+          [`.${prefix}dropdown:first-child`]: {
+            [`.${prefix}nui-button`]: {
+              [`@apply !rounded-e-none`]: {},
+            },
+          },
+
+          [`.${prefix}dropdown:last-child`]: {
+            [`.${prefix}nui-button`]: {
+              [`@apply !border-e !rounded-s-none`]: {},
+            },
+          },
         },
       })
     }
