@@ -314,7 +314,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.listbox'
+        'shurikenUi.listbox',
       ) satisfies typeof defaultListboxConfig
 
       addComponents({
@@ -774,5 +774,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

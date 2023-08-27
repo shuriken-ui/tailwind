@@ -56,7 +56,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.radio'
+        'shurikenUi.radio',
       ) satisfies typeof defaultRadioConfig
 
       addComponents({
@@ -135,5 +135,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

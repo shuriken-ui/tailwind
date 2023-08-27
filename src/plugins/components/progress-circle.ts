@@ -26,7 +26,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.progressCircle'
+        'shurikenUi.progressCircle',
       ) satisfies typeof defaultProgressCircleConfig
 
       addComponents({
@@ -57,5 +57,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

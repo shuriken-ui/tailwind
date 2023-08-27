@@ -32,7 +32,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.prose'
+        'shurikenUi.prose',
       ) satisfies typeof defaultProseConfig
 
       addComponents({
@@ -64,5 +64,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

@@ -78,7 +78,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.buttonIcon'
+        'shurikenUi.buttonIcon',
       ) satisfies typeof defaultButtonIconConfig
 
       addComponents({
@@ -154,5 +154,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

@@ -64,7 +64,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.buttonClose'
+        'shurikenUi.buttonClose',
       ) satisfies typeof defaultButtonCloseConfig
 
       addComponents({
@@ -128,5 +128,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

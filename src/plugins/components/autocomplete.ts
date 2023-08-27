@@ -283,7 +283,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.autocomplete'
+        'shurikenUi.autocomplete',
       ) satisfies typeof defaultAutocompleteConfig
 
       addComponents({
@@ -739,5 +739,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

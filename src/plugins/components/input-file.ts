@@ -94,7 +94,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.inputFile'
+        'shurikenUi.inputFile',
       ) satisfies typeof defaultInputFileConfig
 
       addComponents({
@@ -215,5 +215,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

@@ -60,5 +60,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

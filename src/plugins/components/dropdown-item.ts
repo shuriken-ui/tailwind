@@ -37,7 +37,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.dropdownItem'
+        'shurikenUi.dropdownItem',
       ) satisfies typeof defaultDropdownItemConfig
 
       addComponents({
@@ -84,5 +84,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

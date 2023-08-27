@@ -182,7 +182,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.select'
+        'shurikenUi.select',
       ) satisfies typeof defaultSelectConfig
 
       addComponents({
@@ -528,5 +528,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

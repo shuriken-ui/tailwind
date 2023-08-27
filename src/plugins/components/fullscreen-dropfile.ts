@@ -23,7 +23,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.fullscreenDropfile'
+        'shurikenUi.fullscreenDropfile',
       ) satisfies typeof defaultFullscreenDropfileConfig
 
       addComponents({
@@ -64,5 +64,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

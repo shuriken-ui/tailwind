@@ -56,5 +56,5 @@ export default plugin.withOptions(
   },
   function (options) {
     return {}
-  }
+  },
 )

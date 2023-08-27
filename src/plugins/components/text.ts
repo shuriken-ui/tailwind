@@ -128,5 +128,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

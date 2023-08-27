@@ -37,5 +37,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

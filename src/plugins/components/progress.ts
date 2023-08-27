@@ -41,7 +41,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.progress'
+        'shurikenUi.progress',
       ) satisfies typeof defaultProgressConfig
 
       addComponents({
@@ -145,5 +145,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

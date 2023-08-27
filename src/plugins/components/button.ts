@@ -443,7 +443,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.button'
+        'shurikenUi.button',
       ) satisfies typeof defaultButtonConfig
 
       addComponents({
@@ -779,5 +779,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

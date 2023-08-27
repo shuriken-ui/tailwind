@@ -22,7 +22,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.tooltip'
+        'shurikenUi.tooltip',
       ) satisfies typeof defaultTooltipConfig
 
       const tooltip = `data-${prefix}tooltip`
@@ -228,5 +228,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

@@ -151,5 +151,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )
