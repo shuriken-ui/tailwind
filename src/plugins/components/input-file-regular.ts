@@ -196,15 +196,19 @@ export default plugin.withOptions(
             },
           },
           [`&.${prefix}input-sm:not(.${prefix}has-icon)`]: {
-            [`@apply h-8 py-2 text-${config.hasNotIcon.sm} leading-4 gap-1`]:
-              {},
+            [`@apply text-${config.hasNotIcon.sm} leading-4`]: {},
+            [`.${prefix}input-file-inner`]: {
+              [`@apply h-8 py-2 gap-1`]: {},
+            },
             [`.${prefix}input-file-addon`]: {
               [`@apply h-8 px-2`]: {},
             },
           },
           [`&.${prefix}input-sm.${prefix}has-icon`]: {
-            [`@apply h-8 py-2 text-${config.hasIcon.sm.text} leading-4 pe-3`]:
-              {},
+            [`@apply text-${config.hasIcon.sm.text} leading-4`]: {},
+            [`.${prefix}input-file-inner`]: {
+              [`@apply h-8 py-2 pe-3`]: {},
+            },
             [`.${prefix}input-file-addon`]: {
               [`@apply h-8 px-2`]: {},
             },
@@ -214,13 +218,19 @@ export default plugin.withOptions(
             },
           },
           [`&.${prefix}input-md:not(.${prefix}has-icon)`]: {
-            [`@apply h-10 text-${config.hasNotIcon.md} leading-5 gap-2`]: {},
+            [`@apply text-${config.hasNotIcon.md} leading-5`]: {},
+            [`.${prefix}input-file-inner`]: {
+              [`@apply h-10 gap-2`]: {},
+            },
             [`.${prefix}input-file-addon`]: {
               [`@apply h-10 px-3`]: {},
             },
           },
           [`&.${prefix}input-md.${prefix}has-icon`]: {
-            [`@apply h-10 text-${config.hasIcon.md.text} leading-5 pe-4`]: {},
+            [`@apply text-${config.hasIcon.md.text} leading-5`]: {},
+            [`.${prefix}input-file-inner`]: {
+              [`@apply h-10 pe-4`]: {},
+            },
             [`.${prefix}input-file-addon`]: {
               [`@apply h-10 px-3`]: {},
             },
@@ -230,13 +240,19 @@ export default plugin.withOptions(
             },
           },
           [`&.${prefix}input-lg:not(.${prefix}has-icon)`]: {
-            [`@apply h-12 text-${config.hasNotIcon.lg} leading-5 gap-2`]: {},
+            [`@apply text-${config.hasNotIcon.lg} leading-5`]: {},
+            [`.${prefix}input-file-inner`]: {
+              [`@apply h-12 gap-2`]: {},
+            },
             [`.${prefix}input-file-addon`]: {
               [`@apply h-12 px-4`]: {},
             },
           },
           [`&.${prefix}input-lg.${prefix}has-icon`]: {
-            [`@apply h-12 text-${config.hasIcon.lg.text} leading-5 pe-4`]: {},
+            [`@apply text-${config.hasIcon.lg.text} leading-5`]: {},
+            [`.${prefix}input-file-inner`]: {
+              [`@apply h-12 pe-4`]: {},
+            },
             [`.${prefix}input-file-addon`]: {
               [`@apply h-12 px-4`]: {},
             },
