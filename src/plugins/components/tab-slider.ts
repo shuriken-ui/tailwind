@@ -12,6 +12,8 @@ const defaultTabSliderConfig = {
   item: {
     notActiveText: 'muted-400',
     activeText: 'white',
+    fontSize: 'sm',
+    fontFamily: 'sans',
   },
   naver: {
     bg: 'primary-500',
@@ -61,6 +63,8 @@ export default plugin.withOptions(
           },
           [`.${prefix}tab-slider-item`]: {
             [`@apply relative z-20 flex h-full flex-1 items-center justify-center`]:
+              {},
+            [`@apply text-${config.item.fontSize} font-${config.item.fontFamily}`]:
               {},
 
             [`&:not(.${prefix}active)`]: {
