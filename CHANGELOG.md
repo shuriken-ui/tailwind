@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/shuriken-ui/tailwind/compare/v1.0.1...v1.0.2) (2023-08-28)
+
+
+### Bug Fixes
+
+* **autocomplete:** label float multiple margin ([1b15e80](https://github.com/shuriken-ui/tailwind/commit/1b15e80f59df1dc9c61b1a55da5284d226e59dac))
+* **tab-slider:** item font size and family ([c7a3a4f](https://github.com/shuriken-ui/tailwind/commit/c7a3a4ff2e2baf6e1a71aecd2e7fc733fa769d5a))
+
 ### [1.0.1](https://github.com/shuriken-ui/tailwind/compare/v1.0.0...v1.0.1) (2023-08-28)
 
 ## [1.0.0](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.8...v1.0.0) (2023-08-27)
