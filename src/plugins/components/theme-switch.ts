@@ -40,7 +40,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.themeSwitch'
+        'shurikenUi.themeSwitch',
       ) satisfies typeof defaultThemeSwitchConfig
 
       addComponents({
@@ -96,5 +96,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

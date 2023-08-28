@@ -80,7 +80,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.avatarGroup'
+        'shurikenUi.avatarGroup',
       ) satisfies typeof defaultAvatarGroupConfig
 
       addComponents({
@@ -207,5 +207,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

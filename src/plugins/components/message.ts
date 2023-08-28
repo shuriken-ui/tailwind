@@ -182,7 +182,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.message'
+        'shurikenUi.message',
       ) satisfies typeof defaultMessageConfig
 
       addComponents({
@@ -361,5 +361,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

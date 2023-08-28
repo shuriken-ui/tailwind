@@ -22,5 +22,5 @@ export default plugin.withOptions(
     }
 
     return config
-  }
+  },
 )

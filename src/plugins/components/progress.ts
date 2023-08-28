@@ -41,7 +41,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.progress'
+        'shurikenUi.progress',
       ) satisfies typeof defaultProgressConfig
 
       addComponents({
@@ -119,13 +119,31 @@ export default plugin.withOptions(
       })
     }
   },
-  function () {
+  function (options) {
+    let { prefix } = defu(options, defaultPluginOptions)
+
+    if (prefix) {
+      prefix = `${prefix}-`
+    }
+
     return {
       theme: {
         shurikenUi: {
           progress: defaultProgressConfig,
         },
+        extend: {
+          keyframes: {
+            [`${prefix}progress-indeterminate`]: {
+              '0%': { 'margin-left': '-100%' },
+              '60%': { 'margin-left': '100%' },
+              '100%': { 'margin-left': '-100%' },
+            },
+          },
+          animation: {
+            [`${prefix}progress-indeterminate`]: `${prefix}progress-indeterminate 3s linear infinite forwards`,
+          },
+        },
       },
     }
-  }
+  },
 )

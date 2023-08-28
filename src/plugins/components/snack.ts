@@ -67,7 +67,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.snack'
+        'shurikenUi.snack',
       ) satisfies typeof defaultSnackConfig
 
       addComponents({
@@ -147,5 +147,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

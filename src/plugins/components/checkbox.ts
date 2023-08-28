@@ -62,7 +62,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.checkbox'
+        'shurikenUi.checkbox',
       ) satisfies typeof defaultCheckboxConfig
 
       addComponents({
@@ -166,5 +166,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

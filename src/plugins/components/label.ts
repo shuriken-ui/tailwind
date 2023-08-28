@@ -18,7 +18,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.label'
+        'shurikenUi.label',
       ) satisfies typeof defaultLabelConfig
 
       addComponents({
@@ -37,5 +37,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

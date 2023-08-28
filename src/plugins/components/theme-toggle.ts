@@ -56,7 +56,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.themeToggle'
+        'shurikenUi.themeToggle',
       ) satisfies typeof defaultThemeToggleConfig
 
       addComponents({
@@ -124,5 +124,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

@@ -39,7 +39,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.paragraph'
+        'shurikenUi.paragraph',
       ) satisfies typeof defaultParagraphConfig
 
       addComponents({
@@ -130,5 +130,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

@@ -283,7 +283,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.autocomplete'
+        'shurikenUi.autocomplete',
       ) satisfies typeof defaultAutocompleteConfig
 
       addComponents({
@@ -335,7 +335,7 @@ export default plugin.withOptions(
             },
           },
           [`.${prefix}autocomplete-clear`]: {
-            [`@apply text-${config.clear.text} hover:text-${config.clear.textHover} dark:hover:text-${config.clear.textHoverDark} absolute end-0 top-0 z-10 flex items-center justify-center transition-colors duration-${config.clear.duration} cursor-pointer`]:
+            [`@apply text-${config.clear.text} hover:text-${config.clear.textHover} dark:hover:text-${config.clear.textHoverDark} absolute end-0 top-0 z-auto flex items-center justify-center transition-colors duration-${config.clear.duration} cursor-pointer`]:
               {},
             [`.${prefix}autocomplete-clear-inner`]: {
               [`@apply w-${config.clear.inner.size} h-${config.clear.inner.size}`]:
@@ -739,5 +739,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

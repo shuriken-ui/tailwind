@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/shuriken-ui/tailwind/compare/v1.0.0...v1.0.1) (2023-08-28)
+
+## [1.0.0](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.8...v1.0.0) (2023-08-27)
+
+
+### Bug Fixes
+
+* **autocomplete:** clear icon z-index ([6cf2367](https://github.com/shuriken-ui/tailwind/commit/6cf23670777a9f06b73c797141ea42625373ca25))
+* **input-file-regular:** set height to inner element ([f468417](https://github.com/shuriken-ui/tailwind/commit/f46841701bb4ee50df9dfaf1292a9b026ea85e8d))
+* **progress:** add missing progress-indeterminate animation ([b45a520](https://github.com/shuriken-ui/tailwind/commit/b45a5206d66cc63ad94f4e0402fdccd102507747))
+
 ## [1.0.0-beta.8](https://github.com/shuriken-ui/tailwind/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2023-08-16)
 
 

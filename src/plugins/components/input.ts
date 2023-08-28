@@ -210,7 +210,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.input'
+        'shurikenUi.input',
       ) satisfies typeof defaultInputConfig
 
       addComponents({
@@ -228,7 +228,7 @@ export default plugin.withOptions(
             [`@apply relative`]: {},
           },
           [`.${prefix}input-icon`]: {
-            [`@apply text-${config.icon.text} absolute start-0 top-0 flex items-center justify-center transition-colors duration-${config.icon.duration}`]:
+            [`@apply text-${config.icon.text} absolute start-0 top-0 z-20 flex items-center justify-center transition-colors duration-${config.icon.duration}`]:
               {},
           },
           [`.${prefix}input-error-text`]: {
@@ -555,5 +555,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

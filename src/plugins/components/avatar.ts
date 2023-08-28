@@ -252,7 +252,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.avatar'
+        'shurikenUi.avatar',
       ) satisfies typeof defaultAvatarConfig
 
       addComponents({
@@ -778,5 +778,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

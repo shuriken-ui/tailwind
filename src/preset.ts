@@ -140,16 +140,6 @@ export function createPreset(options: PluginOption = {}) {
             },
           },
         }),
-        keyframes: {
-          'nui-indeterminate': {
-            '0%': { 'margin-left': '-10%' },
-            '100%': { 'margin-left': '100%' },
-          },
-        },
-        animation: {
-          'nui-indeterminate':
-            'nui-indeterminate 1s cubic-bezier(0.4, 0, 0.2, 1) infinite',
-        },
       },
     },
   } satisfies Config
