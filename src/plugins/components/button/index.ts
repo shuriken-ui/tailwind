@@ -787,7 +787,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          button: defaultConfig,
+          button: defaultButtonConfig,
         },
       },
     }
