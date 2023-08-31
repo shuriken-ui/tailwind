@@ -578,6 +578,10 @@ export default plugin.withOptions(
               [`@apply placeholder:text-transparent dark:placeholder:text-transparent`]:
                 {},
             },
+            [`.${prefix}autocomplete-multiple .${prefix}autocomplete-multiple-list`]:
+              {
+                [`@apply mb-6`]: {},
+              },
           },
           [`&.${prefix}autocomplete-error`]: {
             [`.${prefix}autocomplete-input`]: {

@@ -32,6 +32,15 @@ const defaultAvatarGroupConfig = {
       font: 'normal',
     },
   },
+  avatarGroupXXS: {
+    outer: {
+      size: '6',
+    },
+    count: {
+      size: '6',
+      text: 'xs',
+    },
+  },
   avatarGroupXS: {
     outer: {
       size: '8',
@@ -106,6 +115,28 @@ export default plugin.withOptions(
             [`.${prefix}avatar-count-text`]: {
               [`@apply text-${config.avatarCount.text.text} dark:text-${config.avatarCount.text.textDark} -ms-1 font-sans font-${config.avatarCount.text.font} uppercase`]:
                 {},
+            },
+          },
+          [`&.${prefix}avatar-group-xxs`]: {
+            [`.${prefix}avatar-outer`]: {
+              [`@apply h-${config.avatarGroupXXS.outer.size} w-${config.avatarGroupXXS.outer.size}`]:
+                {},
+
+              [`&:first-child`]: {
+                [`@apply hover:-ms-2 hover:me-2 focus:-ms-2 focus:me-2`]: {},
+              },
+              [`&:not(:first-child)`]: {
+                [`@apply -ms-2 hover:-ms-4 hover:me-2 focus:-ms-4 focus:me-2`]:
+                  {},
+              },
+            },
+            [`.${prefix}avatar-count`]: {
+              [`@apply -ms-2 h-${config.avatarGroupXXS.count.size} w-${config.avatarGroupXXS.count.size}`]:
+                {},
+
+              [`.${prefix}avatar-count-text`]: {
+                [`@apply text-${config.avatarGroupXXS.count.text}`]: {},
+              },
             },
           },
           [`&.${prefix}avatar-group-xs`]: {
