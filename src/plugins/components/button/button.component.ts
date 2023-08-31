@@ -35,10 +35,10 @@ export const Button = ({
     >
       ${loading
         ? html`
-            <span
-              class="nui-placeload animate-nui-placeload h-4 w-12 rounded"
-            ></span>
-          `
+          <span
+            class="nui-placeload animate-nui-placeload h-4 w-12 rounded"
+          ></span>
+        `
         : children ||
           html`
             <span>${label}</span>
