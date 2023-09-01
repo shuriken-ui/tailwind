@@ -12,5 +12,9 @@
     }
   },
   
-  "include": ["src"]
+  "include": [
+    "src",
+    "types",
+    "vitest.setup.ts",
+  ],
 }
