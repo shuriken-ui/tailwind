@@ -1,4 +1,4 @@
-export interface ButtonProps {
+export interface ButtonProps extends Record<string, unknown> {
   label?: string
   loading?: boolean
   disabled?: boolean

@@ -1,4 +1,5 @@
 import { html } from 'lit'
+import { spread } from '@open-wc/lit-helpers'
 
 import type { ButtonAttrs } from './button.types'
 import * as variants from './button.variants'
@@ -17,7 +18,9 @@ export const Button = ({
   color = 'default',
   disabled = false,
   onClick,
+  ...attrs
 }: ButtonAttrs) => {
+  console.log('attrs', attrs)
   return html`
     <button
       type="button"
@@ -33,13 +36,14 @@ export const Button = ({
         .filter(Boolean)
         .join(' ')}
       @click=${onClick}
+      ${spread(attrs)}
     >
       ${loading
         ? html`
-            <span
-              class="nui-placeload animate-nui-placeload h-4 w-12 rounded"
-            ></span>
-          `
+          <span
+            class="nui-placeload animate-nui-placeload h-4 w-12 rounded"
+          ></span>
+        `
         : children ||
           html`
             <span>${label}</span>
