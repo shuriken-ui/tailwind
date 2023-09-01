@@ -1,12 +1,12 @@
-import { Meta, Primary, Controls, Story } from '@storybook/blocks';
-import * as ButtonStories from './button.stories';
-import { defaultConfig } from '.'
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as ButtonStories from './button.stories'
+import { defaultButtonConfig } from '.'
 
 <Meta of={ButtonStories} />
 
 # Button
 
-A button is ...
+Buttons are an essential part of any application. Shuriken UI buttons can have different sizes, shapes and colors. They can be used as links or as HTML buttons.
 
 <Primary />
 
@@ -14,33 +14,13 @@ A button is ...
 
 <Controls />
 
-## Stories
+## Variants
 
-### Flavor
-
-Flavor is the visual style of the button.
-
-<div className="flex gap-2">
-  <Story of={ButtonStories.Solid} />
-  <Story of={ButtonStories.Pastel} />
-  <Story of={ButtonStories.Outline} />
-</div>
-
-### Size
-
-Size allows you to change the size of the button.
-
-<div className="flex gap-2">
-  <Story of={ButtonStories.Sm} />
-  <Story of={ButtonStories.Md} />
-  <Story of={ButtonStories.Lg} />
-  <Story of={ButtonStories.Xl} />
-</div>
-
+<br/>
 
 ### Shape
 
-Shape allows you to change the roundness of the button.
+Button shapes allow you to change the border radiuses.
 
 <div className="flex gap-2">
   <Story of={ButtonStories.Straight} />
@@ -50,20 +30,165 @@ Shape allows you to change the roundness of the button.
   <Story of={ButtonStories.Full} />
 </div>
 
+<br/>
 
-### Label & default slot
+### Size
 
+Size allows you to change the size of the button.
+
+<div className="flex items-end gap-2">
+  <Story of={ButtonStories.Sm} />
+  <Story of={ButtonStories.Md} />
+  <Story of={ButtonStories.Lg} />
+</div>
+
+<br/>
+
+### Flavor: solid
+
+Flavors represent the visual styles applied to a button. Below are examples of the solid flavor.
 
 <div className="flex gap-2">
-  <Story of={ButtonStories.Label} />
+  <Story of={ButtonStories.SolidDefault} />
+  <Story of={ButtonStories.SolidMuted} />
+  <Story of={ButtonStories.SolidPrimary} />
+  <Story of={ButtonStories.SolidInfo} />
+  <Story of={ButtonStories.SolidSuccess} />
+  <Story of={ButtonStories.SolidWarning} />
+  <Story of={ButtonStories.SolidDanger} />
+</div>
+
+<br/>
+
+### Flavor: pastel
+
+Flavors represent the visual styles applied to a button. Below are examples of the pastel flavor.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.PastelPrimary} />
+  <Story of={ButtonStories.PastelInfo} />
+  <Story of={ButtonStories.PastelSuccess} />
+  <Story of={ButtonStories.PastelWarning} />
+  <Story of={ButtonStories.PastelDanger} />
+</div>
+
+<br/>
+
+### Flavor: outline
+
+Flavors represent the visual styles applied to a button. Below are examples of the outline flavor.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.OutlinePrimary} />
+  <Story of={ButtonStories.OutlineInfo} />
+  <Story of={ButtonStories.OutlineSuccess} />
+  <Story of={ButtonStories.OutlineWarning} />
+  <Story of={ButtonStories.OutlineDanger} />
+</div>
+
+<br/>
+
+### With icons
+
+Buttons can have icons, both on the left and on the right. Use svg icons inside the button slot to render an icon button.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.IconDefault} />
+  <Story of={ButtonStories.IconMuted} />
+  <Story of={ButtonStories.IconPrimary} />
+  <Story of={ButtonStories.IconInfo} />
+  <Story of={ButtonStories.IconSuccess} />
+  <Story of={ButtonStories.IconWarning} />
+  <Story of={ButtonStories.IconDanger} />
+</div>
+
+<br/>
+
+### Shadow: flat
+
+Flavors represent the visual styles applied to a button. Below are examples of the solid flavor.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.ShadowFlatDefault} />
+  <Story of={ButtonStories.ShadowFlatMuted} />
+  <Story of={ButtonStories.ShadowFlatPrimary} />
+  <Story of={ButtonStories.ShadowFlatInfo} />
+  <Story of={ButtonStories.ShadowFlatSuccess} />
+  <Story of={ButtonStories.ShadowFlatWarning} />
+  <Story of={ButtonStories.ShadowFlatDanger} />
+</div>
+
+<br/>
+
+### Shadow: hover
+
+Flavors represent the visual styles applied to a button. Below are examples of the solid flavor.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.ShadowHoverDefault} />
+  <Story of={ButtonStories.ShadowHoverMuted} />
+  <Story of={ButtonStories.ShadowHoverPrimary} />
+  <Story of={ButtonStories.ShadowHoverInfo} />
+  <Story of={ButtonStories.ShadowHoverSuccess} />
+  <Story of={ButtonStories.ShadowHoverWarning} />
+  <Story of={ButtonStories.ShadowHoverDanger} />
+</div>
+
+<br/>
+<br/>
+
+## State
+
+
+### State: loading
+
+Buttons can be shown in a loading state. The loading indicator informs the user that something is being loaded.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.LoadingDefault} />
+  <Story of={ButtonStories.LoadingMuted} />
+  <Story of={ButtonStories.LoadingPrimary} />
+  <Story of={ButtonStories.LoadingInfo} />
+  <Story of={ButtonStories.LoadingSuccess} />
+  <Story of={ButtonStories.LoadingWarning} />
+  <Story of={ButtonStories.LoadingDanger} />
+</div>
+
+<br/>
+
+### State: disabled
+
+Buttons can be shown in a disabled state. They are a bit opaque and cannot be clicked to peform an action.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.DisabledDefault} />
+  <Story of={ButtonStories.DisabledMuted} />
+  <Story of={ButtonStories.DisabledPrimary} />
+  <Story of={ButtonStories.DisabledInfo} />
+  <Story of={ButtonStories.DisabledSuccess} />
+  <Story of={ButtonStories.DisabledWarning} />
+  <Story of={ButtonStories.DisabledDanger} />
+</div>
+
+<br/>
+<br/>
+
+## Slots
+
+### Slot: default
+
+<div className="flex gap-2">
   <Story of={ButtonStories.LabelSlot} />
 </div>
 
+<br/>
+<br/>
+
 ## Customization
 
-### Default Config
+### Default config
 
 <details>
   <summary>View default config</summary>
-  <pre>{JSON.stringify(defaultConfig, null, 2)}</pre>
+  <pre>{JSON.stringify(defaultButtonConfig, null, 2)}</pre>
 </details>

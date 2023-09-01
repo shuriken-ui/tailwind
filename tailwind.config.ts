@@ -8,4 +8,9 @@ export default withShurikenUI({
     './src/**/*.stories.ts',
     './src/**/*.docs.mdx',
   ],
+  theme: {
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+    },
+  },
 })

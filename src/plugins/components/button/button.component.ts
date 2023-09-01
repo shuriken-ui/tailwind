@@ -15,6 +15,7 @@ export const Button = ({
   flavor = 'solid',
   size = 'md',
   color = 'default',
+  disabled = false,
   onClick,
 }: ButtonAttrs) => {
   return html`

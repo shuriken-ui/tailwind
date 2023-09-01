@@ -71,7 +71,7 @@ const preview: Preview = {
         light: '',
         dark: 'dark',
       },
-      defaultTheme: 'dark',
+      defaultTheme: 'light',
     }),
   ],
 }

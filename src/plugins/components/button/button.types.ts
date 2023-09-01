@@ -1,6 +1,7 @@
 export interface ButtonProps {
   label?: string
   loading?: boolean
+  disabled?: boolean
   size?: 'sm' | 'md' | 'lg' | 'xl'
   shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
   flavor?: 'solid' | 'pastel' | 'outline'
