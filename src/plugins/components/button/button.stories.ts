@@ -16,7 +16,7 @@ const meta = {
       defaultValue: false,
     },
     disabled: {
-      name: '?disabled',
+      name: 'disabled',
       control: { type: 'boolean' },
       defaultValue: false,
     },
@@ -893,7 +893,7 @@ export const DisabledDanger: Story = {
     color: 'danger',
     label: 'Button',
     flavor: 'solid',
-    loading: false,
+    disabled: true,
     shape: 'rounded',
     size: 'md',
   },

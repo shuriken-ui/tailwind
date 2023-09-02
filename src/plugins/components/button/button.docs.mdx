@@ -16,7 +16,7 @@ Buttons are an essential part of any application. Shuriken UI buttons can have d
 
 ## Variants
 
-<br/>
+<br />
 
 ### Shape
 
@@ -30,7 +30,7 @@ Button shapes allow you to change the border radiuses.
   <Story of={ButtonStories.Full} />
 </div>
 
-<br/>
+<br />
 
 ### Size
 
@@ -42,7 +42,7 @@ Size allows you to change the size of the button.
   <Story of={ButtonStories.Lg} />
 </div>
 
-<br/>
+<br />
 
 ### Flavor: solid
 
@@ -58,7 +58,7 @@ Flavors represent the visual styles applied to a button. Below are examples of t
   <Story of={ButtonStories.SolidDanger} />
 </div>
 
-<br/>
+<br />
 
 ### Flavor: pastel
 
@@ -72,7 +72,7 @@ Flavors represent the visual styles applied to a button. Below are examples of t
   <Story of={ButtonStories.PastelDanger} />
 </div>
 
-<br/>
+<br />
 
 ### Flavor: outline
 
@@ -86,27 +86,11 @@ Flavors represent the visual styles applied to a button. Below are examples of t
   <Story of={ButtonStories.OutlineDanger} />
 </div>
 
-<br/>
-
-### With icons
-
-Buttons can have icons, both on the left and on the right. Use svg icons inside the button slot to render an icon button.
-
-<div className="flex gap-2">
-  <Story of={ButtonStories.IconDefault} />
-  <Story of={ButtonStories.IconMuted} />
-  <Story of={ButtonStories.IconPrimary} />
-  <Story of={ButtonStories.IconInfo} />
-  <Story of={ButtonStories.IconSuccess} />
-  <Story of={ButtonStories.IconWarning} />
-  <Story of={ButtonStories.IconDanger} />
-</div>
-
-<br/>
+<br />
 
 ### Shadow: flat
 
-Flavors represent the visual styles applied to a button. Below are examples of the solid flavor.
+Button can have shadows based on the selected color. Below are examples of flat static shadows.
 
 <div className="flex gap-2">
   <Story of={ButtonStories.ShadowFlatDefault} />
@@ -118,11 +102,11 @@ Flavors represent the visual styles applied to a button. Below are examples of t
   <Story of={ButtonStories.ShadowFlatDanger} />
 </div>
 
-<br/>
+<br />
 
 ### Shadow: hover
 
-Flavors represent the visual styles applied to a button. Below are examples of the solid flavor.
+Buttons can have shadows based on the selected color. Below are examples of hover shadows.
 
 <div className="flex gap-2">
   <Story of={ButtonStories.ShadowHoverDefault} />
@@ -134,11 +118,10 @@ Flavors represent the visual styles applied to a button. Below are examples of t
   <Story of={ButtonStories.ShadowHoverDanger} />
 </div>
 
-<br/>
-<br/>
+<br />
+<br />
 
 ## State
-
 
 ### State: loading
 
@@ -154,7 +137,7 @@ Buttons can be shown in a loading state. The loading indicator informs the user 
   <Story of={ButtonStories.LoadingDanger} />
 </div>
 
-<br/>
+<br />
 
 ### State: disabled
 
@@ -170,25 +153,69 @@ Buttons can be shown in a disabled state. They are a bit opaque and cannot be cl
   <Story of={ButtonStories.DisabledDanger} />
 </div>
 
-<br/>
-<br/>
+<br />
+<br />
 
 ## Slots
 
 ### Slot: default
 
+Button have a default slot that serves as wrapper for their inner content.
+
 <div className="flex gap-2">
   <Story of={ButtonStories.LabelSlot} />
 </div>
 
-<br/>
-<br/>
+<br />
+
+### Slot: with icons
+
+Buttons can have icons, both on the left and on the right. Use svg icons inside the button slot to render an icon button.
+
+<div className="flex gap-2">
+  <Story of={ButtonStories.IconDefault} />
+  <Story of={ButtonStories.IconMuted} />
+  <Story of={ButtonStories.IconPrimary} />
+  <Story of={ButtonStories.IconInfo} />
+  <Story of={ButtonStories.IconSuccess} />
+  <Story of={ButtonStories.IconWarning} />
+  <Story of={ButtonStories.IconDanger} />
+</div>
+
+<br />
+<br />
 
 ## Customization
 
 ### Default config
 
-<details>
-  <summary>View default config</summary>
-  <pre>{JSON.stringify(defaultButtonConfig, null, 2)}</pre>
-</details>
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultButtonConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>

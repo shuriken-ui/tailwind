@@ -24,6 +24,7 @@ export const Button = ({
   return html`
     <button
       type="button"
+      ?disabled=${disabled}
       class=${[
         'nui-button',
         variants.size[size],
