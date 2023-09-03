@@ -52,7 +52,9 @@
     "dist"
   ],
   "scripts": {
+    "dev": "storybook dev -p 6006",
     "build": "unbuild",
+    "build:storybook": "storybook build",
     "lint": "run-s lint:eslint:fix lint:prettier:fix",
     "lint:prettier": "prettier --check \"./**/*.(ts|vue|css|scss|md)\"",
     "lint:prettier:fix": "prettier --write \"./**/*.(ts|vue|css|scss|md)\"",
@@ -66,9 +68,7 @@
     "release": "run-s test release:*",
     "release:standard-version": "standard-version",
     "release:publish": "git push --follow-tags origin main && npm publish",
-    "prepare": "simple-git-hooks",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -89,6 +89,8 @@
     "@storybook/web-components-vite": "^7.3.1",
     "@types/node": "18.15.11",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@vitest/coverage-v8": "^0.34.3",
+    "@vitest/ui": "^0.34.3",
     "autoprefixer": "^10.4.15",
     "commitlint": "^17.7.1",
     "eslint": "8.48.0",

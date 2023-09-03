@@ -16,15 +16,11 @@ export const Button = ({
   flavor = 'solid',
   size = 'md',
   color = 'default',
-  disabled = false,
   onClick,
   ...attrs
 }: ButtonAttrs) => {
-  console.log('attrs', attrs)
   return html`
     <button
-      type="button"
-      ?disabled=${disabled}
       class=${[
         'nui-button',
         variants.size[size],
@@ -40,7 +36,7 @@ export const Button = ({
       ${spread(attrs)}
     >
       ${loading
-        ? html`
+        ? /* @todo: replace nui-placeload with component */ html`
           <span
             class="nui-placeload animate-nui-placeload h-4 w-12 rounded"
           ></span>

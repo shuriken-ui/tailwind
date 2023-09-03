@@ -1,7 +1,8 @@
+import type { PropertyVariant } from '~/types/utils'
+
 export interface ButtonProps extends Record<string, unknown> {
   label?: string
   loading?: boolean
-  disabled?: boolean
   size?: 'sm' | 'md' | 'lg' | 'xl'
   shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
   flavor?: 'solid' | 'pastel' | 'outline'
@@ -23,7 +24,8 @@ export interface ButtonEvents {
 }
 
 export interface ButtonSlots {
-  children: any
+  children?: any
 }
 
 export type ButtonAttrs = ButtonProps & ButtonEvents & ButtonSlots
+export type ButtonVariant<T> = PropertyVariant<T, ButtonProps>

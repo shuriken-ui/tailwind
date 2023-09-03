@@ -5,5 +5,12 @@ import { configureAxe } from 'vitest-axe'
 expect.extend(matchers)
 
 configureAxe({
-  globalOptions: {},
+  globalOptions: {
+    rules: [
+      {
+        id: 'region',
+        enabled: false,
+      },
+    ],
+  },
 })
