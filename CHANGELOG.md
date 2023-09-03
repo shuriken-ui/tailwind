@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/shuriken-ui/tailwind/compare/v1.0.2...v1.1.0) (2023-08-31)
+
+
+### Features
+
+* **avatar-group:** add xxs size ([1cd247f](https://github.com/shuriken-ui/tailwind/commit/1cd247f7eedfae056c7e17565c6f3c01602cb202))
+
+
+### Bug Fixes
+
+* listbox options dark bg opacity ([5ccb924](https://github.com/shuriken-ui/tailwind/commit/5ccb92434667314cdaa4e845a07da915bd062577))
+
 ### [1.0.2](https://github.com/shuriken-ui/tailwind/compare/v1.0.1...v1.0.2) (2023-08-28)
 
 

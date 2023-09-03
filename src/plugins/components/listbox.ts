@@ -127,7 +127,7 @@ const defaultListboxConfig = {
   },
   default: {
     bg: 'white',
-    bgDark: 'muted-900/75',
+    bgDark: 'muted-900',
     border: 'muted-300',
     borderDark: 'muted-700',
     borderFocus: 'muted-300',
@@ -151,7 +151,7 @@ const defaultListboxConfig = {
   },
   defaultContrast: {
     bg: 'white',
-    bgDark: 'muted-950/75',
+    bgDark: 'muted-950',
     border: 'muted-300',
     borderDark: 'muted-800',
     borderFocus: 'muted-300',
@@ -170,12 +170,12 @@ const defaultListboxConfig = {
       border: 'muted-200',
       borderDark: 'muted-800',
       bg: 'white',
-      bgDark: 'muted-950/70',
+      bgDark: 'muted-950',
     },
   },
   muted: {
     bg: 'muted-200',
-    bgDark: 'muted-900/75',
+    bgDark: 'muted-900',
     border: 'muted-300',
     borderDark: 'muted-700',
     borderFocus: 'muted-300',
@@ -199,7 +199,7 @@ const defaultListboxConfig = {
   },
   mutedContrast: {
     bg: 'muted-200',
-    bgDark: 'muted-950/75',
+    bgDark: 'muted-950',
     border: 'muted-300',
     borderDark: 'muted-800',
     borderFocus: 'muted-300',
@@ -218,7 +218,7 @@ const defaultListboxConfig = {
       border: 'muted-200',
       borderDark: 'muted-800',
       bg: 'white',
-      bgDark: 'muted-950/70',
+      bgDark: 'muted-950',
     },
   },
   notLoading: {
@@ -314,7 +314,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.listbox',
+        'shurikenUi.listbox'
       ) satisfies typeof defaultListboxConfig
 
       addComponents({
@@ -774,5 +774,5 @@ export default plugin.withOptions(
         },
       },
     }
-  },
+  }
 )
