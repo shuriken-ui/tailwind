@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultAvatarConfig = {
+export const defaultAvatarConfig = {
   avatarInner: {
     size: 'full',
     duration: '300',
@@ -268,7 +268,7 @@ export default plugin.withOptions(
             [`@apply dark:bg-${config.avatarBadge.bgDark} absolute z-10 block overflow-hidden rounded-${config.avatarBadge.rounded} bg-${config.avatarBadge.bg}`]:
               {},
 
-            [`.badge-img`]: {
+            [`.${prefix}badge-img`]: {
               [`@apply relative h-${config.avatarBadge.img.size} w-${config.avatarBadge.img.size} scale-90 rounded-${config.avatarBadge.img.rounded} object-cover`]:
                 {},
             },
@@ -354,24 +354,37 @@ export default plugin.withOptions(
             [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarXXS.text}`]: {},
             },
-            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-straight`]: {
               [`@apply rounded-none`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-none`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXXS.straightPosition} top-${config.avatarXXS.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-rounded`]: {
               [`@apply rounded`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXXS.roundedOrInnerDotPosition} top-${config.avatarXXS.roundedOrInnerDotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-curved`]: {
               [`@apply rounded-${config.avatarXXS.curvedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatarXXS.curvedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXXS.curvedOrInner.dotPosition} top-${config.avatarXXS.curvedOrInner.dotPosition}`]:
@@ -399,24 +412,36 @@ export default plugin.withOptions(
             [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarXS.text}`]: {},
             },
-            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-straight`]: {
               [`@apply rounded-none`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-none`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXS.straightPosition} top-${config.avatarXS.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-rounded`]: {
               [`@apply rounded`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXS.roundedOrInnerDotPosition} top-${config.avatarXS.roundedOrInnerDotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-curved`]: {
               [`@apply rounded-${config.avatarXS.curvedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatarXS.curvedOrInner.rounded}`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXS.curvedOrInner.dotPosition} top-${config.avatarXS.curvedOrInner.dotPosition}`]:
@@ -444,24 +469,37 @@ export default plugin.withOptions(
             [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarSM.text}`]: {},
             },
-            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-straight`]: {
               [`@apply rounded-none`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-none`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarSM.straightPosition} top-${config.avatarSM.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-rounded`]: {
               [`@apply rounded-${config.avatarSM.roundedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatarSM.roundedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarSM.roundedOrInner.dotPosition} top-${config.avatarSM.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-curved`]: {
               [`@apply rounded-${config.avatarSM.curvedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatarSM.curvedOrInner.rounded}`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarSM.curvedOrInner.dotPosition} top-${config.avatarSM.curvedOrInner.dotPosition}`]:
@@ -489,24 +527,37 @@ export default plugin.withOptions(
             [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarMD.text}`]: {},
             },
-            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-straight`]: {
               [`@apply rounded-none`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-none`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarMD.straightPosition} top-${config.avatarMD.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-rounded`]: {
               [`@apply rounded-${config.avatarMD.roundedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatarMD.roundedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarMD.roundedOrInner.dotPosition} top-${config.avatarMD.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-curved`]: {
               [`@apply rounded-${config.avatarMD.curvedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatarMD.curvedOrInner.rounded}`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarMD.curvedOrInner.dotPosition} top-${config.avatarMD.curvedOrInner.dotPosition}`]:
@@ -534,24 +585,37 @@ export default plugin.withOptions(
             [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarLG.text}`]: {},
             },
-            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-straight`]: {
               [`@apply rounded-none`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-none`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarLG.straightPosition} top-${config.avatarLG.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-rounded`]: {
               [`@apply rounded-${config.avatarLG.roundedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatarLG.roundedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarLG.roundedOrInner.dotPosition} top-${config.avatarLG.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-curved`]: {
               [`@apply rounded-${config.avatarLG.curvedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatarLG.curvedOrInner.rounded}`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarLG.curvedOrInner.dotPosition} top-${config.avatarLG.curvedOrInner.dotPosition}`]:
@@ -579,24 +643,37 @@ export default plugin.withOptions(
             [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatarXL.text}`]: {},
             },
-            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-straight`]: {
               [`@apply rounded-none`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-none`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXL.straightPosition} top-${config.avatarXL.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-rounded`]: {
               [`@apply rounded-${config.avatarXL.roundedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatarXL.roundedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXL.roundedOrInner.dotPosition} top-${config.avatarXL.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-curved`]: {
               [`@apply rounded-${config.avatarXL.curvedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatarXL.curvedOrInner.rounded}`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatarXL.curvedOrInner.dotPosition} top-${config.avatarXL.curvedOrInner.dotPosition}`]:
@@ -625,24 +702,38 @@ export default plugin.withOptions(
             [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatar2XL.text}`]: {},
             },
-            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-straight`]: {
               [`@apply rounded-none`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-none`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar2XL.straightPosition} top-${config.avatar2XL.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-rounded`]: {
               [`@apply rounded-${config.avatar2XL.roundedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatar2XL.roundedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar2XL.roundedOrInner.dotPosition} top-${config.avatar2XL.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-curved`]: {
               [`@apply rounded-${config.avatar2XL.curvedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatar2XL.curvedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar2XL.curvedOrInner.dotPosition} top-${config.avatar2XL.curvedOrInner.dotPosition}`]:
@@ -671,24 +762,38 @@ export default plugin.withOptions(
             [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatar3XL.text}`]: {},
             },
-            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-straight`]: {
               [`@apply rounded-none`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-none`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar3XL.straightPosition} top-${config.avatar3XL.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-rounded`]: {
               [`@apply rounded-${config.avatar3XL.roundedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatar3XL.roundedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar3XL.roundedOrInner.dotPosition} top-${config.avatar3XL.roundedOrInner.dotPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-curved`]: {
               [`@apply rounded-${config.avatar3XL.curvedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatar3XL.curvedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar3XL.curvedOrInner.dotPosition} top-${config.avatar3XL.curvedOrInner.dotPosition}`]:
@@ -717,16 +822,25 @@ export default plugin.withOptions(
             [`.${prefix}avatar-text`]: {
               [`@apply text-${config.avatar4XL.text}`]: {},
             },
-            [`&.${prefix}avatar-straight, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-straight`]: {
               [`@apply rounded-none`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-none`]: {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar4XL.straightPosition} top-${config.avatar4XL.straightPosition}`]:
                   {},
               },
             },
-            [`&.${prefix}avatar-rounded, .${prefix}avatar-inner`]: {
+            [`&.${prefix}avatar-rounded`]: {
               [`@apply rounded-${config.avatar4XL.roundedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatar4XL.roundedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar4XL.roundedOrInner.dotPosition} top-${config.avatar4XL.roundedOrInner.dotPosition}`]:
@@ -735,6 +849,11 @@ export default plugin.withOptions(
             },
             [`&.${prefix}avatar-curved, .${prefix}avatar-inner`]: {
               [`@apply rounded-${config.avatar4XL.curvedOrInner.rounded}`]: {},
+
+              [`.${prefix}avatar-inner`]: {
+                [`@apply rounded-${config.avatar4XL.curvedOrInner.rounded}`]:
+                  {},
+              },
 
               [`.${prefix}avatar-dot`]: {
                 [`@apply end-${config.avatar4XL.curvedOrInner.dotPosition} top-${config.avatar4XL.curvedOrInner.dotPosition}`]:
@@ -753,7 +872,7 @@ export default plugin.withOptions(
             [`@apply rounded-${config.avatarFull.rounded}`]: {},
 
             [`.${prefix}avatar-inner`]: {
-              [`@apply rounded-${config.avatarFull.avatarInnerRounded}`]: {},
+              [`@apply rounded-${config.avatarFull.rounded}`]: {},
             },
 
             [`.${prefix}avatar-badge`]: {

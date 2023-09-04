@@ -1,0 +1,271 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as AvatarStories from './avatar.stories'
+import { defaultAvatarConfig } from '.'
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+Avatars are an essential part of any application. Shuriken UI avatars can have different sizes, shapes and additional options. They can be used to display uers, companies or any type of visual information.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+<br />
+
+### Full Sizes
+
+Avatars can have different sizes and different shapes. The below examples shows all avatar sizes for the full shape.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.SizeXxsFull} />
+  <Story of={AvatarStories.SizeXsFull} />
+  <Story of={AvatarStories.SizeSmFull} />
+  <Story of={AvatarStories.SizeMdFull} />
+  <Story of={AvatarStories.SizeLgFull} />
+  <Story of={AvatarStories.SizeXlFull} />
+  <Story of={AvatarStories.Size2XlFull} />
+  <Story of={AvatarStories.Size3XlFull} />
+  <Story of={AvatarStories.Size4XlFull} />
+</div>
+
+<br />
+
+### Curved Sizes
+
+Avatars can have different sizes and different shapes. The below examples shows all avatar sizes for the curved shape.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.SizeXxsCurved} />
+  <Story of={AvatarStories.SizeXsCurved} />
+  <Story of={AvatarStories.SizeSmCurved} />
+  <Story of={AvatarStories.SizeMdCurved} />
+  <Story of={AvatarStories.SizeLgCurved} />
+  <Story of={AvatarStories.SizeXlCurved} />
+  <Story of={AvatarStories.Size2XlCurved} />
+  <Story of={AvatarStories.Size3XlCurved} />
+  <Story of={AvatarStories.Size4XlCurved} />
+</div>
+
+<br />
+
+### Dots (full shape)
+
+Avatars can have status indicators. Indicators positionning vary depending on the shape of the avatar. Below examples show dots with the avatar full shape.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.DotXxsFull} />
+  <Story of={AvatarStories.DotXsFull} />
+  <Story of={AvatarStories.DotSmFull} />
+  <Story of={AvatarStories.DotMdFull} />
+  <Story of={AvatarStories.DotLgFull} />
+  <Story of={AvatarStories.DotXlFull} />
+  <Story of={AvatarStories.Dot2XlFull} />
+  <Story of={AvatarStories.Dot3XlFull} />
+  <Story of={AvatarStories.Dot4XlFull} />
+</div>
+
+<br />
+
+### Dots (curved shape)
+
+Avatars can have status indicators. Indicators positionning vary depending on the shape of the avatar. Below examples show dots with the avatar curved shape.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.DotXxsCurved} />
+  <Story of={AvatarStories.DotXsCurved} />
+  <Story of={AvatarStories.DotSmCurved} />
+  <Story of={AvatarStories.DotMdCurved} />
+  <Story of={AvatarStories.DotLgCurved} />
+  <Story of={AvatarStories.DotXlCurved} />
+  <Story of={AvatarStories.Dot2XlCurved} />
+  <Story of={AvatarStories.Dot3XlCurved} />
+  <Story of={AvatarStories.Dot4XlCurved} />
+</div>
+
+<br />
+
+### Badges (full shape)
+
+Avatars can have image badges. Badges can be used to display a skill, a flag, an icon or any relevant information.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.BadgeXxsFull} />
+  <Story of={AvatarStories.BadgeXsFull} />
+  <Story of={AvatarStories.BadgeSmFull} />
+  <Story of={AvatarStories.BadgeMdFull} />
+  <Story of={AvatarStories.BadgeLgFull} />
+  <Story of={AvatarStories.BadgeXlFull} />
+  <Story of={AvatarStories.Badge2XlFull} />
+  <Story of={AvatarStories.Badge3XlFull} />
+  <Story of={AvatarStories.Badge4XlFull} />
+</div>
+
+<br />
+
+### Badges (curved shape)
+
+Avatars can have image badges. Badges can be used to display a skill, a flag, an icon or any relevant information.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.BadgeXxsCurved} />
+  <Story of={AvatarStories.BadgeXsCurved} />
+  <Story of={AvatarStories.BadgeSmCurved} />
+  <Story of={AvatarStories.BadgeMdCurved} />
+  <Story of={AvatarStories.BadgeLgCurved} />
+  <Story of={AvatarStories.BadgeXlCurved} />
+  <Story of={AvatarStories.Badge2XlCurved} />
+  <Story of={AvatarStories.Badge3XlCurved} />
+  <Story of={AvatarStories.Badge4XlCurved} />
+</div>
+
+<br />
+
+### Full fake
+
+Sometimes, you need to display a placeholder avatar. When an image is not provided, the component defaults to the fake mode, using color and text instead of an image.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.SizeXxsFullFake} />
+  <Story of={AvatarStories.SizeXsFullFake} />
+  <Story of={AvatarStories.SizeSmFullFake} />
+  <Story of={AvatarStories.SizeMdFullFake} />
+  <Story of={AvatarStories.SizeLgFullFake} />
+  <Story of={AvatarStories.SizeXlFullFake} />
+  <Story of={AvatarStories.Size2XlFullFake} />
+  <Story of={AvatarStories.Size3XlFullFake} />
+  <Story of={AvatarStories.Size4XlFullFake} />
+</div>
+
+<br />
+
+### Curved fake
+
+Sometimes, you need to display a placeholder avatar. When an image is not provided, the component defaults to the fake mode, using color and text instead of an image.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.SizeXxsCurvedFake} />
+  <Story of={AvatarStories.SizeXsCurvedFake} />
+  <Story of={AvatarStories.SizeSmCurvedFake} />
+  <Story of={AvatarStories.SizeMdCurvedFake} />
+  <Story of={AvatarStories.SizeLgCurvedFake} />
+  <Story of={AvatarStories.SizeXlCurvedFake} />
+  <Story of={AvatarStories.Size2XlCurvedFake} />
+  <Story of={AvatarStories.Size3XlCurvedFake} />
+  <Story of={AvatarStories.Size4XlCurvedFake} />
+</div>
+
+<br />
+
+### Full fake badges
+
+Fake avatars withstand the same props as regular avatars. You can also use badges and indicators on fake avatars using the same properties.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.SizeXxsFullFakeBadge} />
+  <Story of={AvatarStories.SizeXsFullFakeBadge} />
+  <Story of={AvatarStories.SizeSmFullFakeBadge} />
+  <Story of={AvatarStories.SizeMdFullFakeBadge} />
+  <Story of={AvatarStories.SizeLgFullFakeBadge} />
+  <Story of={AvatarStories.SizeXlFullFakeBadge} />
+  <Story of={AvatarStories.Size2XlFullFakeBadge} />
+  <Story of={AvatarStories.Size3XlFullFakeBadge} />
+  <Story of={AvatarStories.Size4XlFullFakeBadge} />
+</div>
+
+<br />
+
+### Curved fake badges
+
+Fake avatars withstand the same props as regular avatars. You can also use badges and indicators on fake avatars using the same properties.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.SizeXxsCurvedFakeBadge} />
+  <Story of={AvatarStories.SizeXsCurvedFakeBadge} />
+  <Story of={AvatarStories.SizeSmCurvedFakeBadge} />
+  <Story of={AvatarStories.SizeMdCurvedFakeBadge} />
+  <Story of={AvatarStories.SizeLgCurvedFakeBadge} />
+  <Story of={AvatarStories.SizeXlCurvedFakeBadge} />
+  <Story of={AvatarStories.Size2XlCurvedFakeBadge} />
+  <Story of={AvatarStories.Size3XlCurvedFakeBadge} />
+  <Story of={AvatarStories.Size4XlCurvedFakeBadge} />
+</div>
+
+<br />
+
+### Svg Masks
+
+Avatars can be displayed using SVG masks, bringing fancier shapes to your UI. Keep in mind that the mask prop is only available for the straight shape.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.MaskHex} />
+  <Story of={AvatarStories.MaskHexed} />
+  <Story of={AvatarStories.MaskBlob} />
+  <Story of={AvatarStories.MaskDeca} />
+  <Story of={AvatarStories.MaskDiamond} />
+</div>
+
+<br />
+
+## Slots
+
+### Slot: default
+
+Avatars have a default slot that serves as wrapper for their inner content. You can override the default image src by using this slot.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.SlotDefault} />
+</div>
+
+<br />
+
+### Slot: badge
+
+Avatars have a badge slot that serves as wrapper for the optional badge element. You can override the default badge src by using this slot.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={AvatarStories.SlotBadge} />
+</div>
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultAvatarConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>
