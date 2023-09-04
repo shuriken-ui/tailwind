@@ -93,7 +93,7 @@ export const Main: Story = {
   name: 'Main example',
   args: {
     // set default values used for UI preview
-    size: 'xl',
+    size: '4xl',
     shape: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/10.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
