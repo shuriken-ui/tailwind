@@ -2,7 +2,7 @@ import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultButtonGroupConfig = {}
+export const defaultButtonGroupConfig = {}
 
 export default plugin.withOptions(
   function (options: PluginOption) {

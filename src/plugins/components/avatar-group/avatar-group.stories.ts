@@ -34,7 +34,7 @@ const demoAvatars = [
 
 // More on how to set up stories at: https://storybook.js.org/docs/web-components/writing-stories/introduction
 const meta = {
-  title: 'Shuriken UI/Base/Avatar Group',
+  title: 'Shuriken UI/Base/Avatar group',
   // tags: ['autodocs'],
   render: (args) => AvatarGroup(args),
   argTypes: {

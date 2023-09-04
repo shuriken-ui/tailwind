@@ -7,8 +7,8 @@ import { Button } from '../button/button.component'
 
 // More on how to set up stories at: https://storybook.js.org/docs/web-components/writing-stories/introduction
 const meta = {
-  title: 'Shuriken UI/Base/Button Group',
-  tags: ['autodocs'],
+  title: 'Shuriken UI/Base/Button group',
+  // tags: ['autodocs'],
   render: (args) => ButtonGroup(args),
   argTypes: {},
 } satisfies Meta<ButtonGroupAttrs>
@@ -43,6 +43,123 @@ export const Main: Story = {
       })}
       ${Button({
         shape: 'rounded',
+        children: html`
+          <span>Button 4</span>
+        `,
+      })}
+    `,
+  },
+}
+// #endregion
+
+// #region Size:sm
+export const SizeSm: Story = {
+  name: 'Size: sm',
+  args: {
+    children: html`
+      ${Button({
+        shape: 'rounded',
+        size: 'sm',
+        children: html`
+          <span>Button 1</span>
+        `,
+      })}
+      ${Button({
+        shape: 'rounded',
+        size: 'sm',
+        color: 'primary',
+        children: html`
+          <span>Button 2</span>
+        `,
+      })}
+      ${Button({
+        shape: 'rounded',
+        size: 'sm',
+        children: html`
+          <span>Button 3</span>
+        `,
+      })}
+      ${Button({
+        shape: 'rounded',
+        size: 'sm',
+        children: html`
+          <span>Button 4</span>
+        `,
+      })}
+    `,
+  },
+}
+// #endregion
+
+// #region Size:md
+export const SizeMd: Story = {
+  name: 'Size: md',
+  args: {
+    children: html`
+      ${Button({
+        shape: 'rounded',
+        size: 'md',
+        children: html`
+          <span>Button 1</span>
+        `,
+      })}
+      ${Button({
+        shape: 'rounded',
+        size: 'md',
+        color: 'primary',
+        children: html`
+          <span>Button 2</span>
+        `,
+      })}
+      ${Button({
+        shape: 'rounded',
+        size: 'md',
+        children: html`
+          <span>Button 3</span>
+        `,
+      })}
+      ${Button({
+        shape: 'rounded',
+        size: 'md',
+        children: html`
+          <span>Button 4</span>
+        `,
+      })}
+    `,
+  },
+}
+// #endregion
+
+// #region Size:lg
+export const SizeLg: Story = {
+  name: 'Size: lg',
+  args: {
+    children: html`
+      ${Button({
+        shape: 'rounded',
+        size: 'lg',
+        children: html`
+          <span>Button 1</span>
+        `,
+      })}
+      ${Button({
+        shape: 'rounded',
+        size: 'lg',
+        color: 'primary',
+        children: html`
+          <span>Button 2</span>
+        `,
+      })}
+      ${Button({
+        shape: 'rounded',
+        size: 'lg',
+        children: html`
+          <span>Button 3</span>
+        `,
+      })}
+      ${Button({
+        shape: 'rounded',
+        size: 'lg',
         children: html`
           <span>Button 4</span>
         `,
