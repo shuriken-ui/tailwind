@@ -44,7 +44,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}heading`]: {
-          [`@apply font-heading`]: {},
+          [`@apply font-sans`]: {},
 
           [`&.${prefix}heading-xs`]: {
             [`@apply text-${config.textXS}`]: {},
