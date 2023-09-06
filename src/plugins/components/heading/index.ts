@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultTextConfig = {
+export const defaultHeadingConfig = {
   textXS: 'xs',
   textSM: 'sm',
   textMD: 'base',
@@ -38,49 +38,51 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme('shurikenUi.text') satisfies typeof defaultTextConfig
+      const config = theme(
+        'shurikenUi.heading',
+      ) satisfies typeof defaultHeadingConfig
 
       addComponents({
-        [`.${prefix}text`]: {
+        [`.${prefix}heading`]: {
           [`@apply font-sans`]: {},
 
-          [`&.${prefix}content-xs`]: {
+          [`&.${prefix}heading-xs`]: {
             [`@apply text-${config.textXS}`]: {},
           },
-          [`&.${prefix}content-sm`]: {
+          [`&.${prefix}heading-sm`]: {
             [`@apply text-${config.textSM}`]: {},
           },
-          [`&.${prefix}content-md`]: {
+          [`&.${prefix}heading-md`]: {
             [`@apply text-${config.textMD}`]: {},
           },
-          [`&.${prefix}content-lg`]: {
+          [`&.${prefix}heading-lg`]: {
             [`@apply text-${config.textLG}`]: {},
           },
-          [`&.${prefix}content-xl`]: {
+          [`&.${prefix}heading-xl`]: {
             [`@apply text-${config.textXL}`]: {},
           },
-          [`&.${prefix}content-2xl`]: {
+          [`&.${prefix}heading-2xl`]: {
             [`@apply text-${config.text2XL}`]: {},
           },
-          [`&.${prefix}content-3xl`]: {
+          [`&.${prefix}heading-3xl`]: {
             [`@apply text-${config.text3XL}`]: {},
           },
-          [`&.${prefix}content-4xl`]: {
+          [`&.${prefix}heading-4xl`]: {
             [`@apply text-${config.text4XL}`]: {},
           },
-          [`&.${prefix}content-5xl`]: {
+          [`&.${prefix}heading-5xl`]: {
             [`@apply text-${config.text5XL}`]: {},
           },
-          [`&.${prefix}content-6xl`]: {
+          [`&.${prefix}heading-6xl`]: {
             [`@apply text-${config.text6XL}`]: {},
           },
-          [`&.${prefix}content-7xl`]: {
+          [`&.${prefix}heading-7xl`]: {
             [`@apply text-${config.text7XL}`]: {},
           },
-          [`&.${prefix}content-8xl`]: {
+          [`&.${prefix}heading-8xl`]: {
             [`@apply text-${config.text8XL}`]: {},
           },
-          [`&.${prefix}content-9xl`]: {
+          [`&.${prefix}heading-9xl`]: {
             [`@apply text-${config.text9XL}`]: {},
           },
           [`&.${prefix}weight-light`]: {
@@ -124,7 +126,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          text: defaultTextConfig,
+          heading: defaultHeadingConfig,
         },
       },
     }

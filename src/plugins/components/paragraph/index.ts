@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultHeadingConfig = {
+export const defaultParagraphConfig = {
   textXS: 'xs',
   textSM: 'sm',
   textMD: 'base',
@@ -39,50 +39,50 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.heading',
-      ) satisfies typeof defaultHeadingConfig
+        'shurikenUi.paragraph',
+      ) satisfies typeof defaultParagraphConfig
 
       addComponents({
-        [`.${prefix}heading`]: {
+        [`.${prefix}paragraph`]: {
           [`@apply font-sans`]: {},
 
-          [`&.${prefix}heading-xs`]: {
+          [`&.${prefix}paragraph-xs`]: {
             [`@apply text-${config.textXS}`]: {},
           },
-          [`&.${prefix}heading-sm`]: {
+          [`&.${prefix}paragraph-sm`]: {
             [`@apply text-${config.textSM}`]: {},
           },
-          [`&.${prefix}heading-md`]: {
+          [`&.${prefix}paragraph-md`]: {
             [`@apply text-${config.textMD}`]: {},
           },
-          [`&.${prefix}heading-lg`]: {
+          [`&.${prefix}paragraph-lg`]: {
             [`@apply text-${config.textLG}`]: {},
           },
-          [`&.${prefix}heading-xl`]: {
+          [`&.${prefix}paragraph-xl`]: {
             [`@apply text-${config.textXL}`]: {},
           },
-          [`&.${prefix}heading-2xl`]: {
+          [`&.${prefix}paragraph-2xl`]: {
             [`@apply text-${config.text2XL}`]: {},
           },
-          [`&.${prefix}heading-3xl`]: {
+          [`&.${prefix}paragraph-3xl`]: {
             [`@apply text-${config.text3XL}`]: {},
           },
-          [`&.${prefix}heading-4xl`]: {
+          [`&.${prefix}paragraph-4xl`]: {
             [`@apply text-${config.text4XL}`]: {},
           },
-          [`&.${prefix}heading-5xl`]: {
+          [`&.${prefix}paragraph-5xl`]: {
             [`@apply text-${config.text5XL}`]: {},
           },
-          [`&.${prefix}heading-6xl`]: {
+          [`&.${prefix}paragraph-6xl`]: {
             [`@apply text-${config.text6XL}`]: {},
           },
-          [`&.${prefix}heading-7xl`]: {
+          [`&.${prefix}paragraph-7xl`]: {
             [`@apply text-${config.text7XL}`]: {},
           },
-          [`&.${prefix}heading-8xl`]: {
+          [`&.${prefix}paragraph-8xl`]: {
             [`@apply text-${config.text8XL}`]: {},
           },
-          [`&.${prefix}heading-9xl`]: {
+          [`&.${prefix}paragraph-9xl`]: {
             [`@apply text-${config.text9XL}`]: {},
           },
           [`&.${prefix}weight-light`]: {
@@ -126,7 +126,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          heading: defaultHeadingConfig,
+          paragraph: defaultParagraphConfig,
         },
       },
     }
