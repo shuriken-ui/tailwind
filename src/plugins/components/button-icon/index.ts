@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultButtonIconConfig = {
+export const defaultButtonIconConfig = {
   text: 'sm',
   font: 'normal',
   duration: '300',
