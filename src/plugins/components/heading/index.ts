@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultHeadingConfig = {
+export const defaultHeadingConfig = {
   textXS: 'xs',
   textSM: 'sm',
   textMD: 'base',
@@ -44,7 +44,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}heading`]: {
-          [`@apply font-heading`]: {},
+          [`@apply font-sans`]: {},
 
           [`&.${prefix}heading-xs`]: {
             [`@apply text-${config.textXS}`]: {},
