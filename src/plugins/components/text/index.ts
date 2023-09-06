@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultTextConfig = {
+export const defaultTextConfig = {
   textXS: 'xs',
   textSM: 'sm',
   textMD: 'base',
