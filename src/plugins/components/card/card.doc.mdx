@@ -1,0 +1,176 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as CardStories from './card.stories'
+import { defaultCardConfig } from '.'
+
+<Meta of={CardStories} />
+
+# Card
+
+Cards play an important role in page content structuration. Use them to wrap your content or inside grids and lists.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+<br />
+
+### Color: white
+
+Cards can have different colors. The below example shows an example of the white color.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={CardStories.ColorWhite} />
+</div>
+
+<br />
+
+### Color: white contrast
+
+Cards can have different colors. The below example shows an example of the white contrast color, which is shown darker in dark mode.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={CardStories.ColorWhiteContrast} />
+</div>
+
+<br />
+
+### Color: muted
+
+Cards can have different colors. The below example shows an example of the muted color.
+
+<div className="border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={CardStories.ColorMuted} />
+</div>
+
+<br />
+
+### Color: muted contrast
+
+Cards can have different colors. The below example shows an example of the muted contrast color, which is shown darker in dark mode.
+
+<div className="border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={CardStories.ColorMutedContrast} />
+</div>
+
+<br />
+
+### Color: primary
+
+Cards can have different colors. The below example shows an example of the primary color.
+
+<div className="border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={CardStories.ColorPrimary} />
+</div>
+
+<br />
+
+### Color: info
+
+Cards can have different colors. The below example shows an example of the info color.
+
+<div className="border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={CardStories.ColorInfo} />
+</div>
+
+<br />
+
+### Color: success
+
+Cards can have different colors. The below example shows an example of the success color.
+
+<div className="border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={CardStories.ColorSuccess} />
+</div>
+
+<br />
+
+### Color: warning
+
+Cards can have different colors. The below example shows an example of the warning color.
+
+<div className="border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={CardStories.ColorWarning} />
+</div>
+
+<br />
+
+### Color: danger
+
+Cards can have different colors. The below example shows an example of the danger color.
+
+<div className="border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={CardStories.ColorDanger} />
+</div>
+
+<br />
+
+### Shadow: flat
+
+Cards can have a box shadow. The below example shows a permanent shadow.
+
+<div className="border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={CardStories.ShadowFlat} />
+</div>
+
+### Shadow: hover
+
+Cards can have a box shadow. The below example shows a hover shadow.
+
+<div className="border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={CardStories.ShadowHover} />
+</div>
+
+<br/>
+<br />
+
+## Slots
+
+### Slot: default
+
+Cards have a default slot that serves as wrapper for their inner content.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={CardStories.Slot} />
+</div>
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultCardConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>
