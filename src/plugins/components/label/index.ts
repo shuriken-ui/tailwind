@@ -1,9 +1,9 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultLabelConfig = {
-  font: 'alt',
+export const defaultLabelConfig = {
+  font: 'sans',
   text: 'muted-400',
   textDark: 'muted-400/80',
 }
