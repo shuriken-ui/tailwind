@@ -1,31 +1,30 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
 
-import type { CheckboxAttrs } from './checkbox.types'
-import * as variants from './checkbox.variants'
+import type { RadioAttrs } from './radio.types'
+import * as variants from './radio.variants'
 import { e } from 'vitest/dist/reporters-2ff87305'
 
 /**
  * Primary UI component for user interaction
  */
-export const Checkbox = ({
+export const Radio = ({
   id,
-  shape = 'rounded',
   color = 'default',
   label,
   error,
   classes = {
     wrapper: '',
     label: '',
-    input: '',
+    inputDot: '',
+    inputBg: '',
   },
   ...attrs
-}: CheckboxAttrs) => {
+}: RadioAttrs) => {
   return html`
     <div
       class=${[
-        'nui-checkbox',
-        shape && variants.shape[shape],
+        'nui-radio',
         color && variants.color[color],
         classes?.wrapper,
         '?disabled' in attrs && 'opacity-50',
@@ -33,28 +32,39 @@ export const Checkbox = ({
         .filter(Boolean)
         .join(' ')}
     >
-      <div class="nui-checkbox-outer">
+      <div class="nui-radio-outer">
         <input
           id="${id}"
-          class=${['nui-checkbox-input', classes?.input]
+          class=${['nui-radio-input', '?disabled' && 'cursor-not-allowed']
             .filter(Boolean)
             .join(' ')}
           ${spread(attrs)}
-          type="checkbox"
+          type="radio"
         />
-        <div class="nui-checkbox-inner"></div>
-        <svg class="nui-icon-check" aria-hidden="true" viewBox="0 0 17 12">
-          <path
-            fill="currentColor"
-            d="M16.576.414a1.386 1.386 0 0 1 0 1.996l-9.404 9.176A1.461 1.461 0 0 1 6.149 12c-.37 0-.74-.139-1.023-.414L.424 6.998a1.386 1.386 0 0 1 0-1.996 1.47 1.47 0 0 1 2.046 0l3.68 3.59L14.53.414a1.47 1.47 0 0 1 2.046 0z"
-          />
-        </svg>
+        <div
+          class=${[
+            'nui-radio-inner',
+            classes?.inputBg,
+            '?disabled' in attrs && 'opacity-50 cursor-not-allowed',
+          ]
+            .filter(Boolean)
+            .join(' ')}
+        ></div>
+        <div
+          class=${[
+            'nui-radio-dot',
+            classes?.inputDot,
+            '?disabled' in attrs && 'opacity-50',
+          ]
+            .filter(Boolean)
+            .join(' ')}
+        ></div>
       </div>
-      <div class="nui-checkbox-label-wrapper">
+      <div class="nui-radio-label-wrapper">
         <label
           for="${id}"
           class=${[
-            'nui-checkbox-label-text',
+            'nui-radio-label-text',
             classes?.label,
             '?disabled' in attrs && 'cursor-not-allowed',
           ]
@@ -65,7 +75,7 @@ export const Checkbox = ({
         </label>
         ${error && typeof error === 'string'
           ? html`
-            <div class="nui-checkbox-error">${error}</div>
+            <div class="nui-radio-error">${error}</div>
           `
           : ''}
       </div>

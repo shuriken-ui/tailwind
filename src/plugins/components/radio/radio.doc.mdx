@@ -1,0 +1,162 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as RadioStories from './radio.stories'
+import { defaultRadioConfig } from '.'
+
+<Meta of={RadioStories} />
+
+# Radio
+
+Radio buttons are an essential part of any application. Shuriken UI checkboxes can have different shapes and colors.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+<br />
+
+### Color: default
+
+Radio buttons can have different colors. Below are examples of the default color.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={RadioStories.ColorDefaultOne} />
+  <Story of={RadioStories.ColorDefaultTwo} />
+  <Story of={RadioStories.ColorDefaultThree} />
+  <Story of={RadioStories.ColorDefaultFour} />
+</div>
+
+<br />
+
+### Color: muted
+
+Radio buttons can have different colors. Below are examples of the muted color.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={RadioStories.ColorMutedOne} />
+  <Story of={RadioStories.ColorMutedTwo} />
+  <Story of={RadioStories.ColorMutedThree} />
+  <Story of={RadioStories.ColorMutedFour} />
+</div>
+
+<br />
+
+### Color: primary
+
+Radio buttons can have different colors. Below are examples of the primary color.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={RadioStories.ColorPrimaryOne} />
+  <Story of={RadioStories.ColorPrimaryTwo} />
+  <Story of={RadioStories.ColorPrimaryThree} />
+  <Story of={RadioStories.ColorPrimaryFour} />
+</div>
+
+<br />
+
+### Color: info
+
+Radio buttons can have different colors. Below are examples of the info color.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={RadioStories.ColorInfoOne} />
+  <Story of={RadioStories.ColorInfoTwo} />
+  <Story of={RadioStories.ColorInfoThree} />
+  <Story of={RadioStories.ColorInfoFour} />
+</div>
+
+<br />
+
+### Color: success
+
+Radio buttons can have different colors. Below are examples of the success color.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={RadioStories.ColorSuccessOne} />
+  <Story of={RadioStories.ColorSuccessTwo} />
+  <Story of={RadioStories.ColorSuccessThree} />
+  <Story of={RadioStories.ColorSuccessFour} />
+</div>
+
+<br />
+
+### Color: warning
+
+Radio buttons can have different colors. Below are examples of the warning color.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={RadioStories.ColorWarningOne} />
+  <Story of={RadioStories.ColorWarningTwo} />
+  <Story of={RadioStories.ColorWarningThree} />
+  <Story of={RadioStories.ColorWarningFour} />
+</div>
+
+<br />
+
+### Color: danger
+
+Radio buttons can have different colors. Below are examples of the danger color.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={RadioStories.ColorDangerOne} />
+  <Story of={RadioStories.ColorDangerTwo} />
+  <Story of={RadioStories.ColorDangerThree} />
+  <Story of={RadioStories.ColorDangerFour} />
+</div>
+
+<br />
+<br />
+
+## State
+
+### State: disabled
+
+Radio buttons can be shown in a disabled state.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={RadioStories.DisabledOne} />
+  <Story of={RadioStories.DisabledTwo} />
+  <Story of={RadioStories.DisabledThree} />
+  <Story of={RadioStories.DisabledFour} />
+</div>
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultRadioConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>
