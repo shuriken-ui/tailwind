@@ -435,7 +435,6 @@ export const defaultButtonConfig = {
 
 export default plugin.withOptions(
   function (options: PluginOption) {
-    console.log('register button plugin')
     let { prefix } = defu(options, defaultPluginOptions)
 
     if (prefix) {

@@ -4,7 +4,6 @@ import { preset, hasPreset } from './preset'
 export * from './preset'
 
 export function withShurikenUI(config: Config) {
-  console.log('withShurikenUI', config)
   if (hasPreset(config)) {
     return config
   }
