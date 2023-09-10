@@ -1,0 +1,153 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as ButtonCloseStories from './button-close.stories'
+import { defaultButtonCloseConfig } from '.'
+
+<Meta of={ButtonCloseStories} />
+
+# Button close
+
+In any application, you need a button that serves as a trigger to close or dismiss elements. Shuriken UI's button close is made for that purpose.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+<br />
+
+### Color: default
+
+Close buttons can have different colors. Below is an example of the default color.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={ButtonCloseStories.DefaultStraight} />
+  <Story of={ButtonCloseStories.DefaultRounded} />
+  <Story of={ButtonCloseStories.DefaultSmooth} />
+  <Story of={ButtonCloseStories.DefaultCurved} />
+  <Story of={ButtonCloseStories.DefaultFull} />
+</div>
+
+<br />
+
+### Color: muted
+
+Close buttons can have different colors. Below is an example of the muted color.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={ButtonCloseStories.MutedStraight} />
+  <Story of={ButtonCloseStories.MutedRounded} />
+  <Story of={ButtonCloseStories.MutedSmooth} />
+  <Story of={ButtonCloseStories.MutedCurved} />
+  <Story of={ButtonCloseStories.MutedFull} />
+</div>
+
+<br />
+
+### Color: primary
+
+Close buttons can have different colors. Below is an example of the primary color.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={ButtonCloseStories.PrimaryStraight} />
+  <Story of={ButtonCloseStories.PrimaryRounded} />
+  <Story of={ButtonCloseStories.PrimarySmooth} />
+  <Story of={ButtonCloseStories.PrimaryCurved} />
+  <Story of={ButtonCloseStories.PrimaryFull} />
+</div>
+
+<br />
+
+### Color: info
+
+Close buttons can have different colors. Below is an example of the info color.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={ButtonCloseStories.InfoStraight} />
+  <Story of={ButtonCloseStories.InfoRounded} />
+  <Story of={ButtonCloseStories.InfoSmooth} />
+  <Story of={ButtonCloseStories.InfoCurved} />
+  <Story of={ButtonCloseStories.InfoFull} />
+</div>
+
+<br />
+
+### Color: success
+
+Close buttons can have different colors. Below is an example of the success color.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={ButtonCloseStories.SuccessStraight} />
+  <Story of={ButtonCloseStories.SuccessRounded} />
+  <Story of={ButtonCloseStories.SuccessSmooth} />
+  <Story of={ButtonCloseStories.SuccessCurved} />
+  <Story of={ButtonCloseStories.SuccessFull} />
+</div>
+
+<br />
+
+### Color: warning
+
+Close buttons can have different colors. Below is an example of the warning color.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={ButtonCloseStories.WarningStraight} />
+  <Story of={ButtonCloseStories.WarningRounded} />
+  <Story of={ButtonCloseStories.WarningSmooth} />
+  <Story of={ButtonCloseStories.WarningCurved} />
+  <Story of={ButtonCloseStories.WarningFull} />
+</div>
+
+<br />
+
+### Color: danger
+
+Close buttons can have different colors. Below is an example of the danger color.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 p-6 rounded-sm">
+  <Story of={ButtonCloseStories.DangerStraight} />
+  <Story of={ButtonCloseStories.DangerRounded} />
+  <Story of={ButtonCloseStories.DangerSmooth} />
+  <Story of={ButtonCloseStories.DangerCurved} />
+  <Story of={ButtonCloseStories.DangerFull} />
+</div>
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultButtonCloseConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>

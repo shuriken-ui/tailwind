@@ -35,6 +35,7 @@ coverage
 
 # VSCode
 .vscode
+!.vscode/extensions.json
 
 # Intellij idea
 *.iml

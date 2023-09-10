@@ -1,0 +1,129 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as ButtonActionStories from './button-action.stories'
+import { defaultButtonActionConfig } from '.'
+
+<Meta of={ButtonActionStories} />
+
+# Button Action
+
+Buttons are an essential part of any application. Shuriken UI action buttons can have different shapes and colors. They can be used as links or as HTML buttons.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+<br />
+
+### Shape
+
+Action button shapes allow you to change the border radiuses.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ButtonActionStories.Straight} />
+  <Story of={ButtonActionStories.Rounded} />
+  <Story of={ButtonActionStories.Smooth} />
+  <Story of={ButtonActionStories.Curved} />
+  <Story of={ButtonActionStories.Full} />
+</div>
+
+<br />
+
+### Color
+
+Action buttons can have different colors.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ButtonActionStories.ColorDefault} />
+  <Story of={ButtonActionStories.ColorMuted} />
+  <Story of={ButtonActionStories.ColorPrimary} />
+  <Story of={ButtonActionStories.ColorInfo} />
+  <Story of={ButtonActionStories.ColorSuccess} />
+  <Story of={ButtonActionStories.ColorWarning} />
+  <Story of={ButtonActionStories.ColorDanger} />
+</div>
+
+<br />
+<br />
+
+## State
+
+### State: loading
+
+Action buttons can be shown in a loading state. The loading indicator informs the user that something is being loaded.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ButtonActionStories.StraightLoading} />
+  <Story of={ButtonActionStories.RoundedLoading} />
+  <Story of={ButtonActionStories.SmoothLoading} />
+  <Story of={ButtonActionStories.CurvedLoading} />
+  <Story of={ButtonActionStories.FullLoading} />
+</div>
+
+<br />
+
+### State: disabled
+
+Action buttons can be shown in a disabled state. They are a bit opaque and cannot be clicked to peform an action.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ButtonActionStories.StraightDisabled} />
+  <Story of={ButtonActionStories.RoundedDisabled} />
+  <Story of={ButtonActionStories.SmoothDisabled} />
+  <Story of={ButtonActionStories.CurvedDisabled} />
+  <Story of={ButtonActionStories.FullDisabled} />
+</div>
+
+<br />
+<br />
+
+## Slots
+
+### Slot: default
+
+Action buttons have a default slot that serves as wrapper for their inner content.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ButtonActionStories.Slot} />
+</div>
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultButtonActionConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>

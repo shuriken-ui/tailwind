@@ -1,0 +1,29 @@
+import type { PropertyVariant } from '~/types/utils'
+
+export interface ButtonIconProps extends Record<string, unknown> {
+  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  color?:
+    | 'default'
+    | 'muted'
+    | 'primary'
+    | 'info'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | 'none'
+  size?: 'sm' | 'md' | 'lg'
+  loading?: boolean
+}
+
+export interface ButtonIconEvents {
+  onClick?: () => void
+}
+
+export interface ButtonIconSlots {
+  children: any
+}
+
+export type ButtonIconAttrs = ButtonIconProps &
+  ButtonIconEvents &
+  ButtonIconSlots
+export type ButtonIconVariant<T> = PropertyVariant<T, ButtonIconProps>

@@ -4,7 +4,17 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/types": ["types"],
+      "~/types/*": ["types/*"],
+    }
   },
-  "include": ["src"]
+  
+  "include": [
+    "src",
+    "types",
+    "vitest.setup.ts",
+  ],
 }
