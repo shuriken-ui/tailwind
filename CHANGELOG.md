@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/shuriken-ui/tailwind/compare/v1.1.0...v1.2.0) (2023-09-10)
+
+
+### Features
+
+* add heading storybook ([9eb5e8d](https://github.com/shuriken-ui/tailwind/commit/9eb5e8d14f679dc94c62a5db253f5c063495ea87))
+* add storybook list ([efc9124](https://github.com/shuriken-ui/tailwind/commit/efc91243ff682159688aed7b144263d68f5453f9))
+* add storybook paragraph ([9d91b2e](https://github.com/shuriken-ui/tailwind/commit/9d91b2e308c1a8ae729fe00bfc37831f9959d8ac))
+* add storybook text ([6b0f05c](https://github.com/shuriken-ui/tailwind/commit/6b0f05c37589eba2a6af5d7dca68a56e43528af8))
+* avatar group storybook ([2dfe0fa](https://github.com/shuriken-ui/tailwind/commit/2dfe0fa8e6514e52bf6899e0e74df72cca676e18))
+* avatar storybook, avatar plugin bugfixes ([c327189](https://github.com/shuriken-ui/tailwind/commit/c3271896260a35e003662b715674a86ad3d87047))
+* button group docs ([853eac2](https://github.com/shuriken-ui/tailwind/commit/853eac26f5496bb60ae97d2302dfc1caa8d561f6))
+* customize sb, finish button stories ([d29d128](https://github.com/shuriken-ui/tailwind/commit/d29d128546f22cd2ee4917d186e35ed0edfa6c82))
+* customize storybook, refactor button documentation and stories ([31b04db](https://github.com/shuriken-ui/tailwind/commit/31b04db9bf988f8f2e2c29e933e107914fa7eb8a))
+
+
+### Bug Fixes
+
+* doc styles ([c034061](https://github.com/shuriken-ui/tailwind/commit/c0340616179a5a0226b9e2011cc155b373b91a06))
+
 ## [1.1.0](https://github.com/shuriken-ui/tailwind/compare/v1.0.2...v1.1.0) (2023-08-31)
 
 
