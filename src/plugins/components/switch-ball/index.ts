@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultSwitchBallConfig = {
+export const defaultSwitchBallConfig = {
   handle: {
     border: 'muted-300',
     borderDark: 'muted-600',
