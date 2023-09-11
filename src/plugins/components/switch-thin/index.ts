@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultSwitchThinConfig = {
+export const defaultSwitchThinConfig = {
   handle: {
     border: 'muted-300',
     borderDark: 'muted-600',
@@ -24,7 +24,7 @@ const defaultSwitchThinConfig = {
   },
   dualLabel: {
     label: {
-      font: 'heading',
+      font: 'sans',
       fontWeight: 'medium',
       text: 'muted-800',
       textDark: 'white',

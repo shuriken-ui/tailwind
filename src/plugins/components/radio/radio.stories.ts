@@ -32,7 +32,7 @@ const meta = {
         'warning',
         'danger',
       ],
-      defaultValue: 'straight',
+      defaultValue: 'default',
     },
     '?disabled': {
       name: 'disabled',

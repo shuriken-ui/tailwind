@@ -39,7 +39,7 @@ const defaultDropdownConfig = {
     shadowColor: 'muted-500/10',
     shadowColorDark: 'muted-800/10',
     headerTitle: {
-      font: 'heading',
+      font: 'sans',
       fontSize: 'medium',
       text: 'muted-500',
       textDark: 'muted-200',

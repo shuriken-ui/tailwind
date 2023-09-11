@@ -29,7 +29,7 @@ const defaultSwitchBallConfig = {
   },
   dualLabel: {
     label: {
-      font: 'heading',
+      font: 'sans',
       fontWeight: 'medium',
       text: 'muted-800',
       textDark: 'white',
