@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultTextareaConfig = {
+export const defaultTextareaConfig = {
   labelFloat: {
     text: 'primary-500',
     size: '5',
@@ -52,7 +52,7 @@ const defaultTextareaConfig = {
       textPlaceholderDark: 'muted-600',
     },
     muted: {
-      bg: 'muted-200',
+      bg: 'muted-100',
       bgDark: 'muted-900/75',
       border: 'muted-200',
       borderDark: 'muted-700',

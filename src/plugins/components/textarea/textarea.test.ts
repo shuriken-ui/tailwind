@@ -2,22 +2,23 @@ import { axe } from 'vitest-axe'
 import { expect, test, describe } from 'vitest'
 import { render, html } from 'lit'
 
-import { Input } from './input.component'
+import { Textarea } from './textarea.component'
 
-describe('Input', () => {
+describe('Textarea', () => {
   test('Should have no axe violations', async () => {
-    const input = Input({
-      label: 'Input',
+    const textarea = Textarea({
+      label: 'Textarea',
       shape: 'rounded',
-      type: 'text',
-      id: 'input',
+      id: 'textarea',
       placeholder: 'Write something...',
     })
 
-    render(input, document.body)
+    render(textarea, document.body)
 
     expect(
-      await axe(document.body.querySelector('.nui-input-wrapper')!.outerHTML),
+      await axe(
+        document.body.querySelector('.nui-textarea-wrapper')!.outerHTML,
+      ),
     )?.toHaveNoViolations()
   })
 })
