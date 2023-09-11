@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultSelectConfig = {
+export const defaultSelectConfig = {
   labelFloat: {
     text: 'primary-500',
     size: '5',
@@ -87,7 +87,7 @@ const defaultSelectConfig = {
       textPlaceholderDark: 'muted-600',
     },
     muted: {
-      bg: 'muted-200',
+      bg: 'muted-100',
       bgDark: 'muted-900/75',
       border: 'muted-200',
       borderDark: 'muted-700',

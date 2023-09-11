@@ -1,13 +1,13 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
 
-import type { InputAttrs } from './input.types'
-import * as variants from './input.variants'
+import type { SelectAttrs } from './select.types'
+import * as variants from './select.variants'
 
 /**
  * Primary UI component for user interaction
  */
-export const Input = ({
+export const Select = ({
   id,
   shape = 'rounded',
   size = 'md',
@@ -15,32 +15,31 @@ export const Input = ({
   label,
   labelFloat,
   loading,
-  colorFocus,
+  placeholder,
   error,
   classes = {
     wrapper: '',
     label: '',
-    input: '',
-    addon: '',
+    select: '',
+    chevron: '',
     icon: '',
     error: '',
   },
   iconSlot,
-  actionSlot,
+  options,
   ...attrs
-}: InputAttrs) => {
+}: SelectAttrs) => {
   return html`
     <div
       class=${[
-        'nui-input-wrapper',
+        'nui-select-wrapper',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
         shape && variants.shape[shape],
-        error && !loading && 'nui-input-error',
-        loading && 'nui-input-loading',
-        labelFloat && 'nui-input-label-float',
+        error && !loading && 'nui-select-error',
+        loading && 'nui-select-loading',
+        labelFloat && 'nui-select-label-float',
         iconSlot && 'nui-has-icon',
-        colorFocus && 'nui-input-focus',
         classes?.wrapper,
       ]
         .filter(Boolean)
@@ -49,7 +48,7 @@ export const Input = ({
       ${label && !labelFloat
         ? html`
           <label
-            class="${['nui-input-label', classes?.label]
+            class="${['nui-select-label', classes?.label]
                 .filter(Boolean)
                 .join(' ')}"
             for="${id}"
@@ -58,12 +57,19 @@ export const Input = ({
           </label>
         `
         : ''}
-      <div class="nui-input-outer">
-        <input
+      <div class="nui-select-outer">
+        <select
           id="${id}"
-          class="${['nui-input', classes?.input].filter(Boolean).join(' ')}"
+          class="${['nui-select', classes?.select].filter(Boolean).join(' ')}"
           ${spread(attrs)}
-        />
+        >
+          ${placeholder
+            ? html`
+              <option value="" disabled hidden>${placeholder}</option>
+            `
+            : ''}
+          ${options}
+        </select>
         ${label && labelFloat
           ? html`
             <label
@@ -78,29 +84,45 @@ export const Input = ({
           : ''}
         ${loading &&
         html`
-          <div class="nui-input-placeload">
+          <div class="nui-select-placeload">
             <span class="nui-placeload animate-nui-placeload"></span>
           </div>
         `}
         ${iconSlot &&
         html`
           <div
-            class="${['nui-input-icon', classes?.icon]
+            class="${['nui-select-icon', classes?.icon]
               .filter(Boolean)
               .join(' ')}"
           >
             ${iconSlot}
           </div>
         `}
-        ${actionSlot &&
-        html`
-          ${actionSlot}
-        `}
+        <div
+          class="${['nui-select-chevron', classes?.chevron]
+            .filter(Boolean)
+            .join(' ')}"
+        >
+          <svg
+            class="nui-select-chevron-inner"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m6 9 6 6 6-6"
+            />
+          </svg>
+        </div>
         ${error &&
         typeof error === 'string' &&
         html`
           <span
-            class="${['nui-input-error-text', classes?.error]
+            class="${['nui-select-error-text', classes?.error]
               .filter(Boolean)
               .join(' ')}"
           >

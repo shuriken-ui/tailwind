@@ -1,31 +1,33 @@
 import type { PropertyVariant } from '~/types/utils'
 
-export interface InputProps extends Record<string, unknown> {
+export interface SelectProps extends Record<string, unknown> {
   id?: string
   shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
   label?: string
+  placeholder?: string
   labelFloat?: boolean
-  colorFocus?: boolean
   loading?: boolean
+  disabled?: boolean
+  readonly?: boolean
   error?: string | boolean
   size?: 'sm' | 'md' | 'lg'
   contrast?: 'default' | 'default-contrast' | 'muted' | 'muted-contrast'
   classes?: {
     wrapper?: string | string[]
     label?: string | string[]
-    input?: string | string[]
-    addon?: string | string[]
+    select?: string | string[]
+    chevron?: string | string[]
     icon?: string | string[]
     error?: string | string[]
   }
 }
 
-export interface InputEvents {}
+export interface SelectEvents {}
 
-export interface InputSlots {
+export interface SelectSlots {
   iconSlot?: any
-  actionSlot?: any
+  options?: any
 }
 
-export type InputAttrs = InputProps & InputEvents & InputSlots
-export type InputVariant<T> = PropertyVariant<T, InputProps>
+export type SelectAttrs = SelectProps & SelectEvents & SelectSlots
+export type SelectVariant<T> = PropertyVariant<T, SelectProps>
