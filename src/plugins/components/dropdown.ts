@@ -128,7 +128,7 @@ export default plugin.withOptions(
             [`@apply dark:ring-offset-${config.contextButton.ringOffsetDark} inline-flex h-${config.contextButton.size} w-${config.contextButton.size} items-center justify-center rounded-${config.contextButton.rounded} ring-1 ring-transparent transition-all duration-${config.contextButton.duration} group-hover:ring-${config.contextButton.ringGroupHover}`]:
               {},
             [`.${prefix}context-button-inner`]: {
-              [`@apply border-${config.contextButton.inner.border} dark:border-${config.contextButton.inner.borderDark} dark:bg-${config.contextButton.inner.bg} flex h-${config.contextButton.inner.size} w-${config.contextButton.inner.size} items-center justify-center rounded-${config.contextButton.inner.rounded} border bg-${config.contextButton.inner.bg}`]:
+              [`@apply border-${config.contextButton.inner.border} dark:border-${config.contextButton.inner.borderDark} dark:bg-${config.contextButton.inner.bgDark} flex h-${config.contextButton.inner.size} w-${config.contextButton.inner.size} items-center justify-center rounded-${config.contextButton.inner.rounded} border bg-${config.contextButton.inner.bg}`]:
                 {},
             },
             [`.${prefix}context-icon`]: {

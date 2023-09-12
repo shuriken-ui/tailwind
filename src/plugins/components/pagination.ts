@@ -44,7 +44,7 @@ const defaultPaginationConfig = {
     space: '1',
     notActive: {
       bg: 'white',
-      bgDark: 'primary-500',
+      bgDark: 'muted-800',
       bgHover: 'muted-100',
       bgHoverDark: 'muted-900',
       text: 'muted-500',
