@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultAutocompleteConfig = {
+export const defaultAutocompleteConfig = {
   labelFloat: {
     text: 'primary-500',
     size: '5',
@@ -165,7 +165,7 @@ const defaultAutocompleteConfig = {
     },
   },
   muted: {
-    bg: 'muted-200',
+    bg: 'muted-100',
     bgDark: 'muted-900/75',
     border: 'muted-200',
     borderDark: 'muted-700',
@@ -180,7 +180,7 @@ const defaultAutocompleteConfig = {
       bgDark: 'muted-800',
     },
     resultsInner: {
-      bg: 'muted-200',
+      bg: 'white',
       bgDark: 'muted-700',
     },
   },
@@ -200,7 +200,7 @@ const defaultAutocompleteConfig = {
       bgDark: 'muted-950/75',
     },
     resultsInner: {
-      bg: 'muted-100',
+      bg: 'white',
       bgDark: 'muted-700',
     },
   },
@@ -365,7 +365,7 @@ export default plugin.withOptions(
             [`@apply px-2 py-1`]: {},
           },
           [`.${prefix}autocomplete-results-item-inner`]: {
-            [`@apply flex gap-2 cursor-pointer items-center p-${config.itemInner.space} transition-colors duration-${config.itemInner.duration}`]:
+            [`@apply text-muted-800 dark:text-muted-100 flex gap-2 cursor-pointer items-center p-${config.itemInner.space} transition-colors duration-${config.itemInner.duration}`]:
               {},
 
             [`.${prefix}autocomplete-results-item-selected`]: {
@@ -502,7 +502,7 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}autocomplete-results`]: {
-              [`@apply border-${config.default.results.border} dark:border-${config.default.results.borderDark} dark:bg-${config.default.results.bgDark} border bg-${config.default.bg}`]:
+              [`@apply border-${config.default.results.border} dark:border-${config.default.results.borderDark} dark:bg-${config.default.results.bgDark} border bg-${config.default.results.bg}`]:
                 {},
             },
             [`.${prefix}autocomplete-results-item-inner.${prefix}active`]: {
@@ -516,7 +516,7 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}autocomplete-results`]: {
-              [`@apply border-${config.defaultContrast.results.border} dark:border-${config.defaultContrast.results.borderDark} dark:bg-${config.defaultContrast.results.bgDark} border bg-${config.defaultContrast.bg}`]:
+              [`@apply border-${config.defaultContrast.results.border} dark:border-${config.defaultContrast.results.borderDark} dark:bg-${config.defaultContrast.results.bgDark} border bg-${config.defaultContrast.results.bg}`]:
                 {},
             },
             [`.${prefix}autocomplete-results-item-inner.${prefix}active`]: {
@@ -530,7 +530,7 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}autocomplete-results`]: {
-              [`@apply border-${config.muted.results.border} dark:border-${config.muted.results.borderDark} dark:bg-${config.muted.results.bgDark} border bg-${config.muted.bg}`]:
+              [`@apply border-${config.muted.results.border} dark:border-${config.muted.results.borderDark} dark:bg-${config.muted.results.bgDark} border bg-${config.muted.results.bg}`]:
                 {},
             },
             [`.${prefix}autocomplete-results-item-inner.${prefix}active`]: {
@@ -544,7 +544,7 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}autocomplete-results`]: {
-              [`@apply border-${config.mutedContrast.results.border} dark:border-${config.mutedContrast.results.borderDark} dark:bg-${config.mutedContrast.results.bgDark} border bg-${config.mutedContrast.bg}`]:
+              [`@apply border-${config.mutedContrast.results.border} dark:border-${config.mutedContrast.results.borderDark} dark:bg-${config.mutedContrast.results.bgDark} border bg-${config.mutedContrast.results.bg}`]:
                 {},
             },
             [`.${prefix}autocomplete-results-item-inner.${prefix}active`]: {
