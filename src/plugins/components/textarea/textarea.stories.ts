@@ -80,7 +80,9 @@ export const Main: Story = {
     shape: 'rounded',
     id: 'textarea',
     placeholder: 'Write a message...',
-    style: 'max-width: 340px;',
+    classes: {
+      wrapper: 'min-w-[340px] max-w-[340px]',
+    },
   },
 }
 // #endregion
@@ -95,7 +97,9 @@ export const Straight: Story = {
     contrast: 'default',
     shape: 'straight',
     placeholder: 'Write a message...',
-    style: 'min-width: 320px;',
+    classes: {
+      wrapper: 'min-w-[320px] max-w-[320px]',
+    },
   },
 }
 
@@ -108,7 +112,9 @@ export const Rounded: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 320px;',
+    classes: {
+      wrapper: 'min-w-[320px] max-w-[320px]',
+    },
   },
 }
 
@@ -121,7 +127,9 @@ export const Smooth: Story = {
     contrast: 'default',
     shape: 'smooth',
     placeholder: 'Write a message...',
-    style: 'min-width: 320px;',
+    classes: {
+      wrapper: 'min-w-[320px] max-w-[320px]',
+    },
   },
 }
 
@@ -134,7 +142,9 @@ export const Curved: Story = {
     contrast: 'default',
     shape: 'curved',
     placeholder: 'Write a message...',
-    style: 'min-width: 320px;',
+    classes: {
+      wrapper: 'min-w-[320px] max-w-[320px]',
+    },
   },
 }
 // #endregion
@@ -149,7 +159,9 @@ export const SizeSm: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -162,7 +174,9 @@ export const SizeMd: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -175,7 +189,9 @@ export const SizeLg: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -190,7 +206,9 @@ export const ContrastMutedSm: Story = {
     contrast: 'muted',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -203,7 +221,9 @@ export const ContrastMutedMd: Story = {
     contrast: 'muted',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -216,7 +236,9 @@ export const ContrastMutedLg: Story = {
     contrast: 'muted',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -232,7 +254,9 @@ export const LabelFloatSm: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -246,7 +270,9 @@ export const LabelFloatMd: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -260,7 +286,9 @@ export const LabelFloatLg: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -276,7 +304,9 @@ export const ColorFocusSm: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -290,7 +320,9 @@ export const ColorFocusMd: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -304,7 +336,9 @@ export const ColorFocusLg: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -320,7 +354,9 @@ export const DisabledSm: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -334,7 +370,9 @@ export const DisabledMd: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -348,7 +386,9 @@ export const DisabledLg: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -365,7 +405,9 @@ export const LoadingSm: Story = {
     shape: 'rounded',
     placeholder: 'Write a message...',
     rows: '4',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -380,7 +422,9 @@ export const LoadingMd: Story = {
     shape: 'rounded',
     placeholder: 'Write a message...',
     rows: '4',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -395,7 +439,9 @@ export const LoadingLg: Story = {
     shape: 'rounded',
     placeholder: 'Write a message...',
     rows: '4',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -411,7 +457,9 @@ export const ErrorSm: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -425,7 +473,9 @@ export const ErrorMd: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -439,7 +489,9 @@ export const ErrorLg: Story = {
     contrast: 'default',
     shape: 'rounded',
     placeholder: 'Write a message...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -455,7 +507,9 @@ export const NoResizeSm: Story = {
     shape: 'rounded',
     placeholder: 'Write a message...',
     resize: false,
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -469,7 +523,9 @@ export const NoResizeMd: Story = {
     shape: 'rounded',
     placeholder: 'Write a message...',
     resize: false,
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -483,7 +539,9 @@ export const NoResizeLg: Story = {
     shape: 'rounded',
     placeholder: 'Write a message...',
     resize: false,
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -521,8 +579,10 @@ export const Addon: Story = {
         })}
       </div>
     `,
-    style: 'min-width: 380px;',
     rows: '6',
+    classes: {
+      wrapper: 'min-w-[380px] max-w-[380px]',
+    },
   },
 }
 // #endregion

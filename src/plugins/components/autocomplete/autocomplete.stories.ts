@@ -178,7 +178,7 @@ export const ShapeStraight: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[310px] min-h-[280px]',
+      wrapper: 'min-w-[310px] max-w-[310px] max-w-[310px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -204,7 +204,7 @@ export const ShapeRounded: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[310px] min-h-[280px]',
+      wrapper: 'min-w-[310px] max-w-[310px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -230,7 +230,7 @@ export const ShapeSmooth: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[310px] min-h-[280px]',
+      wrapper: 'min-w-[310px] max-w-[310px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -256,7 +256,7 @@ export const ShapeCurved: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[310px] min-h-[280px]',
+      wrapper: 'min-w-[310px] max-w-[310px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -282,7 +282,7 @@ export const ShapeFull: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[310px] min-h-[280px]',
+      wrapper: 'min-w-[310px] max-w-[310px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -310,7 +310,7 @@ export const SizeSm: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -336,7 +336,7 @@ export const SizeMd: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -362,7 +362,7 @@ export const SizeLg: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -390,7 +390,7 @@ export const ContrastMutedSm: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -416,7 +416,7 @@ export const ContrastMutedMd: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -442,7 +442,7 @@ export const ContrastMutedLg: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -471,7 +471,7 @@ export const LabelFloatSm: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -498,7 +498,7 @@ export const LabelFloatMd: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -525,7 +525,7 @@ export const LabelFloatLg: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -554,7 +554,7 @@ export const Multiple: Story = {
     placeholder: 'Search languages...',
     multiple: true,
     classes: {
-      wrapper: 'min-w-[310px] min-h-[320px]',
+      wrapper: 'min-w-[310px] max-w-[310px] min-h-[320px]',
     },
     items: html`
       ${languages.map(
@@ -627,7 +627,7 @@ export const DisabledSm: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -654,7 +654,7 @@ export const DisabledMd: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -681,7 +681,7 @@ export const DisabledLg: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -710,7 +710,7 @@ export const LoadingSm: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -737,7 +737,7 @@ export const LoadingMd: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -764,7 +764,7 @@ export const LoadingLg: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -793,7 +793,7 @@ export const ErrorSm: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -820,7 +820,7 @@ export const ErrorMd: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -847,7 +847,7 @@ export const ErrorLg: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -876,7 +876,7 @@ export const ClearableSm: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -903,7 +903,7 @@ export const ClearableMd: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -930,7 +930,7 @@ export const ClearableLg: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     items: html`
       ${languages.map(
@@ -958,7 +958,7 @@ export const SlotIconSm: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     iconSlot: html`
       <svg
@@ -1004,7 +1004,7 @@ export const SlotIconMd: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     iconSlot: html`
       <svg
@@ -1050,7 +1050,7 @@ export const SlotIconLg: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[280px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
     },
     iconSlot: html`
       <svg
@@ -1098,7 +1098,7 @@ export const MediaIconSm: Story = {
     id: 'autocomplete',
     placeholder: 'Search activities...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       <svg
@@ -1193,7 +1193,7 @@ export const MediaIconMd: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       <svg
@@ -1288,7 +1288,7 @@ export const MediaIconLg: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       <svg
@@ -1385,7 +1385,7 @@ export const MediaImgSm: Story = {
     id: 'autocomplete',
     placeholder: 'Search activities...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       <svg
@@ -1462,7 +1462,7 @@ export const MediaImgMd: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       <svg
@@ -1539,7 +1539,7 @@ export const MediaImgLg: Story = {
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       <svg

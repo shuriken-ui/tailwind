@@ -200,7 +200,7 @@ export const ShapeStraight: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[310px] min-h-[260px]',
+      wrapper: 'min-w-[310px] max-w-[310px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -247,7 +247,7 @@ export const ShapeRounded: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[310px] min-h-[260px]',
+      wrapper: 'min-w-[310px] max-w-[310px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -294,7 +294,7 @@ export const ShapeSmooth: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[310px] min-h-[260px]',
+      wrapper: 'min-w-[310px] max-w-[310px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -341,7 +341,7 @@ export const ShapeCurved: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[310px] min-h-[260px]',
+      wrapper: 'min-w-[310px] max-w-[310px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -388,7 +388,7 @@ export const ShapeFull: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[310px] min-h-[260px]',
+      wrapper: 'min-w-[310px] max-w-[310px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -437,7 +437,7 @@ export const SizeSm: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -484,7 +484,7 @@ export const SizeMd: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -531,7 +531,7 @@ export const SizeLg: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -580,7 +580,7 @@ export const ContrastMutedSm: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -627,7 +627,7 @@ export const ContrastMutedMd: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -674,7 +674,7 @@ export const ContrastMutedLg: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -724,7 +724,7 @@ export const LabelFloatSm: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -772,7 +772,7 @@ export const LabelFloatMd: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -820,7 +820,7 @@ export const LabelFloatLg: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -870,7 +870,7 @@ export const DisabledSm: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -918,7 +918,7 @@ export const DisabledMd: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -966,7 +966,7 @@ export const DisabledLg: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -1016,7 +1016,7 @@ export const LoadingSm: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -1064,7 +1064,7 @@ export const LoadingMd: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -1112,7 +1112,7 @@ export const LoadingLg: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -1162,7 +1162,7 @@ export const ErrorSm: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -1210,7 +1210,7 @@ export const ErrorMd: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -1258,7 +1258,7 @@ export const ErrorLg: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     items: html`
       ${languages.map(
@@ -1307,7 +1307,7 @@ export const SlotIconSm: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     iconSlot: html`
       <svg
@@ -1373,7 +1373,7 @@ export const SlotIconMd: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     iconSlot: html`
       <svg
@@ -1439,7 +1439,7 @@ export const SlotIconLg: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[260px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
     },
     iconSlot: html`
       <svg
@@ -1507,7 +1507,7 @@ export const MediaIconSm: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       <svg
@@ -1604,7 +1604,7 @@ export const MediaIconMd: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       <svg
@@ -1701,7 +1701,7 @@ export const MediaIconLg: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       <svg
@@ -1800,7 +1800,7 @@ export const MediaImgSm: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       ${Avatar({
@@ -1866,7 +1866,7 @@ export const MediaImgMd: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       ${Avatar({
@@ -1932,7 +1932,7 @@ export const MediaImgLg: Story = {
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
-      wrapper: 'min-w-[280px] min-h-[360px]',
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
     iconSlot: html`
       ${Avatar({
