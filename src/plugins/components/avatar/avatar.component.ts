@@ -44,8 +44,20 @@ export const Avatar = ({
       <div class="nui-avatar-inner">
         ${src
           ? html`
-            <img class="dark:hidden" src="${src}" alt="${text}" />
-            <img class="hidden dark:block" src="${srcDark}" alt="${text}" />
+            <img
+              class="${srcDark ? 'dark:hidden' : ''}"
+              src="${src}"
+              alt="${text}"
+            />
+            ${srcDark
+                ? html`
+                  <img
+                    class="hidden dark:block"
+                    src="${srcDark}"
+                    alt="${text}"
+                  />
+                `
+                : ''}
           `
           : children ||
             html`

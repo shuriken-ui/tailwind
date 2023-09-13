@@ -9,7 +9,6 @@ describe('Autocomplete', () => {
     const input = Autocomplete({
       label: 'Autocomplete',
       shape: 'rounded',
-      type: 'text',
       id: 'autocomplete',
       placeholder: 'Search...',
     })

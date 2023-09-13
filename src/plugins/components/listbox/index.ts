@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultListboxConfig = {
+export const defaultListboxConfig = {
   labelFloat: {
     text: 'primary-500',
     size: '5',
@@ -65,6 +65,7 @@ const defaultListboxConfig = {
     },
     activeOrHover: {
       text: 'primary-600',
+      textDark: 'primary-400',
       bg: 'primary-500/10',
     },
   },
@@ -174,7 +175,7 @@ const defaultListboxConfig = {
     },
   },
   muted: {
-    bg: 'muted-200',
+    bg: 'muted-100',
     bgDark: 'muted-900',
     border: 'muted-300',
     borderDark: 'muted-700',
@@ -198,7 +199,7 @@ const defaultListboxConfig = {
     },
   },
   mutedContrast: {
-    bg: 'muted-200',
+    bg: 'muted-100',
     bgDark: 'muted-950',
     border: 'muted-300',
     borderDark: 'muted-800',
@@ -314,7 +315,7 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.listbox'
+        'shurikenUi.listbox',
       ) satisfies typeof defaultListboxConfig
 
       addComponents({
@@ -404,8 +405,12 @@ export default plugin.withOptions(
               },
             },
 
+            [`&:not(.${prefix}active), &:not(:hover)`]: {
+              [`@apply text-muted-600 dark:text-muted-200`]: {},
+            },
+
             [`&.${prefix}active, &:hover`]: {
-              [`@apply bg-${config.option.activeOrHover.bg} text-${config.option.activeOrHover.text}`]:
+              [`@apply bg-${config.option.activeOrHover.bg} text-${config.option.activeOrHover.text} dark:text-${config.option.activeOrHover.textDark}`]:
                 {},
             },
           },
@@ -774,5 +779,5 @@ export default plugin.withOptions(
         },
       },
     }
-  }
+  },
 )

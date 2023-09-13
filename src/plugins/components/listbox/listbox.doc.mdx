@@ -1,0 +1,219 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as ListboxStories from './listbox.stories'
+import { defaultListboxConfig } from '.'
+
+<Meta of={ListboxStories} />
+
+# Listbox
+
+Listboxes are an essential part of any application. Shuriken UI listboxes can have different sizes, shapes and options.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+<br />
+
+### Shape: straight
+
+Listboxes shapes allow you to change the border radiuses. Below is an example of a straight listbox.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.ShapeStraight} />
+</div>
+
+<br />
+
+### Shape: rounded
+
+Listboxes shapes allow you to change the border radiuses. Below is an example of a rounded listbox.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.ShapeRounded} />
+</div>
+
+<br />
+
+### Shape: smooth
+
+Listboxes shapes allow you to change the border radiuses. Below is an example of a smooth listbox.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.ShapeSmooth} />
+</div>
+
+<br />
+
+### Shape: curved
+
+Listboxes shapes allow you to change the border radiuses. Below is an example of a curved listbox.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.ShapeCurved} />
+</div>
+
+<br />
+
+### Shape: full
+
+Listboxes shapes allow you to change the border radiuses. Below is an example of a full listbox.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.ShapeFull} />
+</div>
+
+<br />
+
+### Sizes
+
+Listboxes size allows you to change the button size.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.SizeSm} />
+  <Story of={ListboxStories.SizeMd} />
+  <Story of={ListboxStories.SizeLg} />
+</div>
+
+<br />
+
+### Contrast: muted
+
+Listboxes can have different contrasts, making their background color heavier in dark mode.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.ContrastMutedSm} />
+  <Story of={ListboxStories.ContrastMutedMd} />
+  <Story of={ListboxStories.ContrastMutedLg} />
+</div>
+
+<br />
+
+### Label float
+
+Listboxes can have a floating label instead of the regular label.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.LabelFloatSm} />
+  <Story of={ListboxStories.LabelFloatMd} />
+  <Story of={ListboxStories.LabelFloatLg} />
+</div>
+
+<br />
+<br />
+
+## State
+
+### State: disabled
+
+Listboxes can be shown in a disabled state.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.DisabledSm} />
+  <Story of={ListboxStories.DisabledMd} />
+  <Story of={ListboxStories.DisabledLg} />
+</div>
+
+<br />
+
+### State: loading
+
+Listboxes can be shown in a loading state. The loading indicator informs the user that something is being loaded.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.LoadingSm} />
+  <Story of={ListboxStories.LoadingMd} />
+  <Story of={ListboxStories.LoadingLg} />
+</div>
+
+<br />
+
+### State: error
+
+Listboxes can be shown in an error state. This indicates that the listbox value contains an error.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.ErrorSm} />
+  <Story of={ListboxStories.ErrorMd} />
+  <Story of={ListboxStories.ErrorLg} />
+</div>
+
+<br />
+<br />
+
+## Slots
+
+### Slot: icon
+
+Listboxes have an icon slot that you can use to display an icon inside the button.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.SlotIconSm} />
+  <Story of={ListboxStories.SlotIconMd} />
+  <Story of={ListboxStories.SlotIconLg} />
+</div>
+
+<br />
+
+### Slot: media icon
+
+Listboxes have icon displayed inside result items.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.MediaIconSm} />
+  <Story of={ListboxStories.MediaIconMd} />
+  <Story of={ListboxStories.MediaIconLg} />
+</div>
+
+<br />
+
+### Slot: media image
+
+Listboxes have images displayed inside result items.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ListboxStories.MediaImgSm} />
+  <Story of={ListboxStories.MediaImgMd} />
+  <Story of={ListboxStories.MediaImgLg} />
+</div>
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultListboxConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>
