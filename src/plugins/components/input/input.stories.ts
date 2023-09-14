@@ -206,7 +206,7 @@ export const SizeLg: Story = {
 }
 // #endregion
 
-// #region Contrast: default
+// #region Contrast: muted
 export const ContrastMutedSm: Story = {
   name: 'Contrast muted: sm',
   args: {
