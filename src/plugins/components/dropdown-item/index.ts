@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultDropdownItemConfig = {
+export const defaultDropdownItemConfig = {
   itemRounded: 'md',
   textPosition: 'left',
   textSize: 'sm',
@@ -21,6 +21,7 @@ const defaultDropdownItemConfig = {
     text: 'primary-500',
   },
   rounded: {
+    straight: 'none',
     default: 'md',
     smooth: 'lg',
     curved: 'xl',
@@ -42,7 +43,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}dropdown-item`]: {
-          [`@apply flex w-full items-center justify-start gap-2 rounded-${config.itemRounded} px-3 py-2 text-${config.textPosition} text-${config.textSize} cursor-pointer transition-colors duration-${config.duration}`]:
+          [`@apply flex w-full items-center justify-start gap-2 px-3 py-2 text-${config.textPosition} text-${config.textSize} cursor-pointer transition-colors duration-${config.duration}`]:
             {},
 
           [`.${prefix}item-content`]: {

@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultDropdownDividerConfig = {
+export const defaultDropdownDividerConfig = {
   space: '2',
   border: 'muted-200',
   borderDark: 'muted-600',
