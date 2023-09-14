@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultThemeToggleConfig = {
+export const defaultThemeToggleConfig = {
   size: '9',
   rounded: 'full',
   duration: '300',

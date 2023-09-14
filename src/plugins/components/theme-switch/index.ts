@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultThemeSwitchConfig = {
+export const defaultThemeSwitchConfig = {
   bg: 'muted-200',
   bgDark: 'muted-700',
   rounded: 'full',
