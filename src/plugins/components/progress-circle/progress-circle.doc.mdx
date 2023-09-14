@@ -1,0 +1,89 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as ProgressCircleStories from './progress-circle.stories'
+import { defaultProgressCircleConfig } from '.'
+
+<Meta of={ProgressCircleStories} />
+
+# Progress Circle
+
+Progress bars are an essential part of any application. Shuriken UI action progress bars can have different shapes and colors.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+<br />
+
+### Sizes
+
+Progress circles can have different sizes.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ProgressCircleStories.SizeOne} />
+  <br />
+  <Story of={ProgressCircleStories.SizeTwo} />
+  <br />
+  <Story of={ProgressCircleStories.SizeThree} />
+  <br />
+  <Story of={ProgressCircleStories.SizeFour} />
+</div>
+
+<br />
+
+### Colors
+
+Progress circles can have different colors.
+
+<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ProgressCircleStories.Primary} />
+  <br />
+  <Story of={ProgressCircleStories.Info} />
+  <br />
+  <Story of={ProgressCircleStories.Success} />
+  <br />
+  <Story of={ProgressCircleStories.Warning} />
+  <br />
+  <Story of={ProgressCircleStories.Danger} />
+</div>
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultProgressCircleConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>
