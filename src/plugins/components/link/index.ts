@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultLinkConfig = {
+export const defaultLinkConfig = {
   font: 'sans',
   textHover: 'primary-500',
   textHoverDark: 'primary-400',
