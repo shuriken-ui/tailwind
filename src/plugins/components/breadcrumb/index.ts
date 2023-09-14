@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultBreadcrumbConfig = {
+export const defaultBreadcrumbConfig = {
   list: {
     font: 'sans',
     text: '[0.85rem]',
