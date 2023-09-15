@@ -12,6 +12,7 @@ export const Heading = ({
   weight = 'semibold',
   lead = 'normal',
   as = 'p',
+  classes,
   children,
   ...attrs
 }: HeadingAttrs) => {
@@ -21,6 +22,7 @@ export const Heading = ({
       size && variants.size[size],
       weight && variants.weight[weight],
       lead && variants.lead[lead],
+      classes,
     ]
       .filter(Boolean)
       .join(' ')}
