@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultAccordionConfig = {
+export const defaultAccordionConfig = {
   size: 'full',
   border: 'muted-200',
   borderDark: 'muted-700',
@@ -106,11 +106,11 @@ export default plugin.withOptions(
               {},
           },
           [`.${prefix}chevron-icon`]: {
-            [`@apply h-${config.chevronIcon.size} w-${config.chevronIcon.size} transition-transform duration-${config.chevronIcon.duration}`]:
+            [`@apply text-muted-400 h-${config.chevronIcon.size} w-${config.chevronIcon.size} transition-transform duration-${config.chevronIcon.duration}`]:
               {},
           },
           [`.${prefix}plus-icon`]: {
-            [`@apply h-${config.plusIcon.size} w-${config.plusIcon.size} transition-transform duration-${config.plusIcon.duration}`]:
+            [`@apply text-muted-400 h-${config.plusIcon.size} w-${config.plusIcon.size} transition-transform duration-${config.plusIcon.duration}`]:
               {},
           },
           [`.${prefix}accordion-content`]: {
