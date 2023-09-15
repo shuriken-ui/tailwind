@@ -1,0 +1,147 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as SnackStories from './snack.stories'
+import { defaultSnackConfig } from '.'
+
+<Meta of={SnackStories} />
+
+# Snack
+
+Snacks are small chips that you can use to display pieces of information.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+<br />
+
+### Sizes
+
+Snacks can have two different color. Below are examples of the muted color.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={SnackStories.SizeSm} />
+  <Story of={SnackStories.SizeMd} />
+</div>
+
+<br />
+
+### Color: muted
+
+Snacks can have two different color. Below are examples of the muted color.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={SnackStories.MutedOne} />
+  <Story of={SnackStories.MutedTwo} />
+  <Story of={SnackStories.MutedThree} />
+  <Story of={SnackStories.MutedFour} />
+</div>
+
+<br />
+
+### Color: light
+
+Snacks can have two different color. Below are examples of the light color.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={SnackStories.LightOne} />
+  <Story of={SnackStories.LightTwo} />
+  <Story of={SnackStories.LightThree} />
+  <Story of={SnackStories.LightFour} />
+</div>
+
+<br />
+<br />
+
+## Slots
+
+### Slot: icon
+
+Snacks have an icon slot that can be used to display an icon.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={SnackStories.IconOne} />
+  <Story of={SnackStories.IconTwo} />
+  <Story of={SnackStories.IconThree} />
+  <Story of={SnackStories.IconFour} />
+</div>
+
+<br />
+
+### Slot: icon sm
+
+Snacks have an icon slot that can be used to display an icon. The icon is smaller if the snack is set to small.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={SnackStories.IconSmOne} />
+  <Story of={SnackStories.IconSmTwo} />
+  <Story of={SnackStories.IconSmThree} />
+  <Story of={SnackStories.IconSmFour} />
+</div>
+
+<br />
+
+### Slot: image
+
+Snacks have an image slot that can be used to display an image.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={SnackStories.ImageOne} />
+  <Story of={SnackStories.ImageTwo} />
+  <Story of={SnackStories.ImageThree} />
+  <Story of={SnackStories.ImageFour} />
+</div>
+
+<br />
+
+### Slot: image sm
+
+Snacks have an image slot that can be used to display an image. The image is smaller if the snack is set to small.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={SnackStories.ImageSmOne} />
+  <Story of={SnackStories.ImageSmTwo} />
+  <Story of={SnackStories.ImageSmThree} />
+  <Story of={SnackStories.ImageSmFour} />
+</div>
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultSnackConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>
