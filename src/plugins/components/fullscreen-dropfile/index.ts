@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultFullscreenDropfileConfig = {
+export const defaultFullscreenDropfileConfig = {
   border: 'primary-500',
   height: '[230px]',
   width: '[500px]',
@@ -10,7 +10,7 @@ const defaultFullscreenDropfileConfig = {
     text: 'primary-500',
     textSize: '6xl',
   },
-  labelTextSize: '2xl',
+  labelTextSize: 'base',
 }
 
 export default plugin.withOptions(

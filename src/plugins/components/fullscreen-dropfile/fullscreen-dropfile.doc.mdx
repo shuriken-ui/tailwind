@@ -1,0 +1,53 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as FullscreenDropfileStories from './fullscreen-dropfile.stories'
+import { defaultFullscreenDropfileConfig } from '.'
+
+<Meta of={FullscreenDropfileStories} />
+
+# Fullscreen Dropfile
+
+Fullscreen dropfile allows you to drag and drop any file into the screen.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultFullscreenDropfileConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>
