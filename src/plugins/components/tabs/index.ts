@@ -1,10 +1,10 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultTabsConfig = {
+export const defaultTabsConfig = {
   inner: {
-    font: 'alt',
+    font: 'sans',
     space: '6',
   },
   item: {

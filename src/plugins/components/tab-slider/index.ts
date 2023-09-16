@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultTabSliderConfig = {
+export const defaultTabSliderConfig = {
   track: {
     bg: 'muted-100',
     bgDark: 'muted-700',
@@ -112,10 +112,10 @@ export default plugin.withOptions(
             },
           },
           [`&.${prefix}tabs-sm`]: {
-            [`&.${prefix}tabs-two-slots .${prefix}tab-slider-inner`]: {
+            [`&.${prefix}tabs-two-slots .${prefix}tab-slider-track`]: {
               [`@apply max-w-${config.tabsSM.twoSlotsW}`]: {},
             },
-            [`&.${prefix}tabs-three-slots .${prefix}tab-slider-inner`]: {
+            [`&.${prefix}tabs-three-slots .${prefix}tab-slider-track`]: {
               [`@apply max-w-${config.tabsSM.threeSlotsW}`]: {},
             },
             [`.${prefix}tab-slider-track`]: {
@@ -123,10 +123,10 @@ export default plugin.withOptions(
             },
           },
           [`&.${prefix}tabs-md`]: {
-            [`&.${prefix}tabs-two-slots .${prefix}tab-slider-inner`]: {
+            [`&.${prefix}tabs-two-slots .${prefix}tab-slider-track`]: {
               [`@apply max-w-${config.tabsMD.twoSlotsW}`]: {},
             },
-            [`&.${prefix}tabs-three-slots .${prefix}tab-slider-inner`]: {
+            [`&.${prefix}tabs-three-slots .${prefix}tab-slider-track`]: {
               [`@apply max-w-${config.tabsMD.threeSlotsW}`]: {},
             },
             [`.${prefix}tab-slider-track`]: {
