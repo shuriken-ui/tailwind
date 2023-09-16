@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultInputFileRegularConfig = {
+export const defaultInputFileRegularConfig = {
   inner: {
     size: 'full',
     font: 'sans',
@@ -115,7 +115,7 @@ export default plugin.withOptions(
             [`@apply relative`]: {},
           },
           [`.${prefix}input-file-inner`]: {
-            [`@apply ${prefix}focus flex w-${config.inner.size} cursor-pointer items-center overflow-hidden font-${config.inner.font} transition-colors duration-${config.inner.duration} focus-within:outline-1 disabled:cursor-not-allowed disabled:opacity-75`]:
+            [`@apply relative ${prefix}focus flex w-${config.inner.size} cursor-pointer items-center overflow-hidden font-${config.inner.font} transition-colors duration-${config.inner.duration} focus-within:outline-1 disabled:cursor-not-allowed disabled:opacity-75`]:
               {},
           },
           [`.${prefix}input-file-addon`]: {
@@ -130,7 +130,7 @@ export default plugin.withOptions(
             [`@apply ms-2 inline-flex truncate text-${config.text.text}`]: {},
           },
           [`.${prefix}input-file-placeload`]: {
-            [`@apply absolute start-0 flex h-10 w-full items-center`]: {},
+            [`@apply absolute -end-8 flex w-[70%] items-center`]: {},
 
             [`.${prefix}placeload`]: {
               [`@apply h-3 w-full max-w-[75%] rounded`]: {},
@@ -162,7 +162,7 @@ export default plugin.withOptions(
           },
           [`&.${prefix}input-color-focus`]: {
             [`.${prefix}input-file-inner`]: {
-              [`@apply focus:border-${config.colorFocus}`]: {},
+              [`@apply focus-within:!border-${config.colorFocus}`]: {},
             },
           },
           [`&.${prefix}input-file-loading`]: {
@@ -203,6 +203,9 @@ export default plugin.withOptions(
             [`.${prefix}input-file-addon`]: {
               [`@apply h-8 px-2`]: {},
             },
+            [`.${prefix}input-file-placeload`]: {
+              [`@apply top-2.5`]: {},
+            },
           },
           [`&.${prefix}input-sm.${prefix}has-icon`]: {
             [`@apply text-${config.hasIcon.sm.text} leading-4`]: {},
@@ -216,6 +219,9 @@ export default plugin.withOptions(
               [`@apply w-${config.hasIcon.sm.iconSize} h-${config.hasIcon.sm.iconSize}`]:
                 {},
             },
+            [`.${prefix}input-file-placeload`]: {
+              [`@apply top-2.5`]: {},
+            },
           },
           [`&.${prefix}input-md:not(.${prefix}has-icon)`]: {
             [`@apply text-${config.hasNotIcon.md} leading-5`]: {},
@@ -224,6 +230,9 @@ export default plugin.withOptions(
             },
             [`.${prefix}input-file-addon`]: {
               [`@apply h-10 px-3`]: {},
+            },
+            [`.${prefix}input-file-placeload`]: {
+              [`@apply top-3.5`]: {},
             },
           },
           [`&.${prefix}input-md.${prefix}has-icon`]: {
@@ -238,6 +247,9 @@ export default plugin.withOptions(
               [`@apply w-${config.hasIcon.md.iconSize} h-${config.hasIcon.md.iconSize}`]:
                 {},
             },
+            [`.${prefix}input-file-placeload`]: {
+              [`@apply top-3.5`]: {},
+            },
           },
           [`&.${prefix}input-lg:not(.${prefix}has-icon)`]: {
             [`@apply text-${config.hasNotIcon.lg} leading-5`]: {},
@@ -246,6 +258,9 @@ export default plugin.withOptions(
             },
             [`.${prefix}input-file-addon`]: {
               [`@apply h-12 px-4`]: {},
+            },
+            [`.${prefix}input-file-placeload`]: {
+              [`@apply top-[1.2rem]`]: {},
             },
           },
           [`&.${prefix}input-lg.${prefix}has-icon`]: {
@@ -259,6 +274,9 @@ export default plugin.withOptions(
             [`.${prefix}input-file-icon`]: {
               [`@apply w-${config.hasIcon.lg.iconSize} h-${config.hasIcon.lg.iconSize}`]:
                 {},
+            },
+            [`.${prefix}input-file-placeload`]: {
+              [`@apply top-[1.2rem]`]: {},
             },
           },
           [`&:hover`]: {
