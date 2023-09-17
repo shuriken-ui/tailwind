@@ -1,0 +1,178 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as ToastStories from './toast.stories'
+import { defaultToastConfig } from '.'
+
+<Meta of={ToastStories} />
+
+# Toast
+
+Toasts allow you to display important information popups users should see.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+<br />
+
+### Shape: straight
+
+Toasts can have different shapes. The following example shows the straight shape.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.Straight} />
+</div>
+
+<br />
+
+### Shape: rounded
+
+Toasts can have different shapes. The following example shows the rounded shape.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.Rounded} />
+</div>
+
+<br />
+
+### Shape: smooth
+
+Toasts can have different shapes. The following example shows the smooth shape.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.Smooth} />
+</div>
+
+<br />
+
+### Shape: curved
+
+Toasts can have different shapes. The following example shows the curved shape.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.Curved} />
+</div>
+
+<br />
+
+### Color: primary
+
+Toasts can have different colors. The following example shows the primary color.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.Primary} />
+</div>
+
+<br />
+
+### Color: info
+
+Toasts can have different colors. The following example shows the info color.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.Info} />
+</div>
+
+<br />
+
+### Color: success
+
+Toasts can have different colors. The following example shows the success color.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.Success} />
+</div>
+
+<br />
+
+### Color: warning
+
+Toasts can have different colors. The following example shows the warning color.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.Warning} />
+</div>
+
+<br />
+
+### Color: danger
+
+Toasts can have different colors. The following example shows the danger color.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.Danger} />
+</div>
+
+<br />
+<br />
+
+## Slots
+
+### Slot: icon
+
+Toasts have an icon slot that you can use to display an icon.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.SlotIcon} />
+</div>
+
+<br />
+
+### Slot: icon block
+
+Toasts have an icon slot that you can use to display an icon block.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.SlotIconBlock} />
+</div>
+
+<br />
+
+### Slot: borderless
+
+Toasts can be borderless and display a light shadow.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.SlotIconBlockBorderless} />
+</div>
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultToastConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>
