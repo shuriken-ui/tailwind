@@ -18,6 +18,7 @@ export interface ParagraphProps extends Record<string, unknown> {
     | '9xl'
   weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold'
   lead?: 'none' | 'tight' | 'snug' | 'normal' | 'relaxed' | 'loose'
+  classes?: string | string[]
 }
 
 export interface ParagraphEvents {}
