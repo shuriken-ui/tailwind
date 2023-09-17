@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultInputFileConfig = {
+export const defaultInputFileConfig = {
   drop: {
     size: '64',
     border: 'muted-200',
@@ -99,7 +99,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}input-file`]: {
-          [`@apply relative`]: {},
+          [`@apply relative block`]: {},
 
           [`&.${prefix}input-file-drop`]: {
             [`@apply relative h-${config.drop.size} border-dashed border-2 border-${config.drop.border} dark:border-${config.drop.borderDark} hover:border-${config.drop.borderHover} dark:hover:border-${config.drop.borderHoverDark} bg-${config.drop.bg} dark:bg-${config.drop.bgDark} flex justify-center items-center transition-colors duration-${config.drop.duration}`]:
