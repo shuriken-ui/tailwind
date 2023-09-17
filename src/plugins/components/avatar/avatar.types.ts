@@ -38,6 +38,7 @@ export interface AvatarProps extends Record<string, unknown> {
     | 'danger'
     | 'pink'
     | 'yellow'
+  classes?: string | string[]
 }
 
 export interface AvatarEvents {}

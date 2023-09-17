@@ -1,8 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../options'
+import { type PluginOption, defaultPluginOptions } from '../../options'
 
-const defaultModalConfig = {
+export const defaultModalConfig = {
   backdrop: {
     bg: 'muted-800/70',
     bgDark: 'muted-900/80',
