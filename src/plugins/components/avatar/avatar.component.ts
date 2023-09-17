@@ -27,7 +27,7 @@ export const Avatar = ({
     <div
       class="${[
         'nui-avatar',
-        classes,
+        classes?.wrapper,
         variants.size[size],
         shape && variants.shape[shape],
         shape === 'straight' &&

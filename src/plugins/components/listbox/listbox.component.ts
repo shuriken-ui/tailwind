@@ -20,7 +20,7 @@ export const Listbox = ({
   loading,
   error,
   classes,
-  iconSlot,
+  icon,
   ...attrs
 }: ListboxAttrs) => {
   return html`
@@ -33,7 +33,7 @@ export const Listbox = ({
         error && !loading && 'nui-listbox-error',
         loading && 'nui-listbox-loading',
         labelFloat && 'nui-listbox-label-float',
-        iconSlot && 'nui-has-icon',
+        icon && 'nui-has-icon',
         classes?.wrapper,
       ]
         .filter(Boolean)
@@ -67,14 +67,14 @@ export const Listbox = ({
             </label>
           `
           : ''}
-        ${iconSlot &&
+        ${icon &&
         html`
           <div
             class="${['nui-listbox-icon', classes?.icon]
               .filter(Boolean)
               .join(' ')}"
           >
-            ${iconSlot}
+            ${icon}
           </div>
         `}
         <div class="nui-listbox-chevron">

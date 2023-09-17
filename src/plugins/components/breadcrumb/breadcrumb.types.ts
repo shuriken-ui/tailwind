@@ -7,6 +7,9 @@ export interface BreadcrumbProps extends Record<string, unknown> {
     icon?: any
     href?: string
   }[]
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface BreadcrumbEvents {}

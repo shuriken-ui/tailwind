@@ -29,6 +29,9 @@ export interface DropdownProps extends Record<string, unknown> {
   label?: string
   headerLabel?: string
   open?: boolean
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface DropdownEvents {

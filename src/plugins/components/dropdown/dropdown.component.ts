@@ -18,13 +18,18 @@ export const Dropdown = ({
   orientation = 'start',
   color = 'white',
   size = 'lg',
+  classes,
   children,
   onClick,
   ...attrs
 }: DropdownAttrs) => {
   return html`
     <div
-      class=${['nui-dropdown', orientation && variants.orientation[orientation]]
+      class=${[
+        'nui-dropdown',
+        orientation && variants.orientation[orientation],
+        classes?.wrapper,
+      ]
         .filter(Boolean)
         .join(' ')}
       ${spread(attrs)}

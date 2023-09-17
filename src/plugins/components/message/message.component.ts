@@ -13,6 +13,7 @@ export const Message = ({
   closable,
   icon,
   message,
+  classes,
   ...attrs
 }: MessageAttrs) => {
   return html`
@@ -21,6 +22,7 @@ export const Message = ({
         'nui-message',
         type && variants.type[type],
         shape && variants.shape[shape],
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

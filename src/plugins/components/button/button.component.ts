@@ -16,6 +16,7 @@ export const Button = ({
   flavor = 'solid',
   size = 'md',
   color = 'default',
+  classes,
   onClick,
   ...attrs
 }: ButtonAttrs) => {
@@ -29,6 +30,7 @@ export const Button = ({
         loading && 'nui-button-loading',
         shape && variants.shape[shape],
         shadow && variants.shadow[shadow],
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

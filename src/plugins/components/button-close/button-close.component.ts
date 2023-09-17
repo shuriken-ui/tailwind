@@ -20,7 +20,7 @@ export const ButtonClose = ({
         'nui-button-close',
         variants.color[color],
         shape && variants.shape[shape],
-        classes,
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

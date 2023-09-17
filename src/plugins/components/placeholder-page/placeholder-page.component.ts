@@ -13,12 +13,17 @@ export const PlaceholderPage = ({
   subtitle,
   imageSize = 'xs',
   image,
+  classes,
   children,
   ...attrs
 }: PlaceholderPageAttrs) => {
   return html`
     <div
-      class=${['nui-placeholder-page', imageSize && variants.size[imageSize]]
+      class=${[
+        'nui-placeholder-page',
+        imageSize && variants.size[imageSize],
+        classes?.wrapper,
+      ]
         .filter(Boolean)
         .join(' ')}
       ${spread(attrs)}
@@ -34,7 +39,9 @@ export const PlaceholderPage = ({
             as: 'h4',
             weight: 'medium',
             size: 'xl',
-            classes: 'nui-placeholder-page-title',
+            classes: {
+              wrapper: 'nui-placeholder-page-title',
+            },
             children: title,
           })}
           ${subtitle

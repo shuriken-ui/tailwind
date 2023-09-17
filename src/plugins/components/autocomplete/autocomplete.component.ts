@@ -21,7 +21,7 @@ export const Autocomplete = ({
   loading,
   error,
   classes,
-  iconSlot,
+  icon,
   chips,
   ...attrs
 }: AutocompleteAttrs) => {
@@ -35,7 +35,7 @@ export const Autocomplete = ({
         error && !loading && 'nui-autocomplete-error',
         loading && 'nui-autocomplete-loading',
         labelFloat && 'nui-autocomplete-label-float',
-        iconSlot && 'nui-has-icon',
+        icon && 'nui-has-icon',
         classes?.wrapper,
       ]
         .filter(Boolean)
@@ -88,14 +88,14 @@ export const Autocomplete = ({
             <span class="nui-placeload animate-nui-placeload"></span>
           </div>
         `}
-        ${iconSlot &&
+        ${icon &&
         html`
           <div
             class="${['nui-autocomplete-icon', classes?.icon]
               .filter(Boolean)
               .join(' ')}"
           >
-            ${iconSlot}
+            ${icon}
           </div>
         `}
         ${clearable &&

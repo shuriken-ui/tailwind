@@ -7,6 +7,9 @@ export interface ProgressProps extends Record<string, unknown> {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   value?: number
   max?: number
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface ProgressEvents {}

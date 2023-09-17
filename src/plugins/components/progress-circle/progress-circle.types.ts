@@ -6,6 +6,9 @@ export interface ProgressCircleProps extends Record<string, unknown> {
   size?: number
   thickness?: number
   color?: 'primary' | 'info' | 'success' | 'warning' | 'danger'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface ProgressCircleEvents {}

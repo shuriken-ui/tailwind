@@ -12,12 +12,17 @@ export const Tabs = ({
   type = 'tabs',
   justify = 'start',
   hideLabel,
+  classes,
   children,
   ...attrs
 }: TabsAttrs) => {
   return html`
     <div
-      class=${['nui-tabs', justify && variants.justify[justify]]
+      class=${[
+        'nui-tabs',
+        justify && variants.justify[justify],
+        classes?.wrapper,
+      ]
         .filter(Boolean)
         .join(' ')}
       ${spread(attrs)}

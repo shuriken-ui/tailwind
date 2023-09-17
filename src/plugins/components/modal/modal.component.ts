@@ -8,14 +8,17 @@ import * as variants from './modal.variants'
  * Primary UI component for user interaction
  */
 export const Modal = ({
-  open,
   size = 'md',
   children,
   classes,
   ...attrs
 }: ModalAttrs) => {
   return html`
-    <div class=${['nui-modal', size && variants.size[size], classes?.wrapper]
+    <dialog class=${[
+      'open:nui-modal',
+      size && variants.size[size],
+      classes?.wrapper,
+    ]
       .filter(Boolean)
       .join(' ')} 
         ${spread(attrs)}>
@@ -33,6 +36,6 @@ export const Modal = ({
           </div>
         </div>
       </div>
-    </div>
+    </dialog>
   `
 }

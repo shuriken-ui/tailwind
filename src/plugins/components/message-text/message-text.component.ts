@@ -16,6 +16,7 @@ export const MessageText = ({
   contrast = 'white',
   color = 'default',
   shape = 'rounded',
+  classes,
   ...attrs
 }: MessageTextAttrs) => {
   return html`
@@ -25,6 +26,7 @@ export const MessageText = ({
         color && variants.color[color],
         contrast && variants.contrast[contrast],
         shape && variants.shape[shape],
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}
@@ -37,19 +39,25 @@ export const MessageText = ({
           size: 'sm',
           weight: 'semibold',
           lead: 'none',
-          classes: 'text-muted-800 dark:text-muted-50',
+          classes: {
+            wrapper: 'text-muted-800 dark:text-muted-50',
+          },
           children: title,
         })}
       </div>
       ${Paragraph({
         size: 'sm',
-        classes: 'text-muted-400 dark:text-muted-300 nui-sm:inline',
+        classes: {
+          wrapper: 'text-muted-400 dark:text-muted-300 nui-sm:inline',
+        },
         children: text,
       })}
       ${ButtonClose({
         shape: 'full',
         color: 'default',
-        classes: 'nui-message-close',
+        classes: {
+          wrapper: 'nui-message-close',
+        },
       })}
     </div>
   `

@@ -14,6 +14,9 @@ export interface IconBoxProps extends Record<string, unknown> {
   flavor?: 'solid' | 'outline' | 'pastel'
   bordered?: boolean
   mask?: 'hex' | 'hexed' | 'deca' | 'blob' | 'diamond'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface IconBoxEvents {}

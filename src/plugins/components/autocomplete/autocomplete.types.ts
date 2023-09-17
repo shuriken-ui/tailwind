@@ -27,7 +27,7 @@ export interface AutocompleteEvents {}
 export interface AutocompleteSlots {
   items?: any
   chips?: any
-  iconSlot?: any
+  icon?: any
 }
 
 export type AutocompleteAttrs = AutocompleteProps &

@@ -7,8 +7,14 @@ import * as variants from './link.variants'
 /**
  * Primary UI component for user interaction
  */
-export const Link = ({ href, children, ...attrs }: LinkAttrs) => {
+export const Link = ({ href, classes, children, ...attrs }: LinkAttrs) => {
   return html`
-    <a href="${href}" class="nui-link" ${spread(attrs)}>${children}</a>
+    <a
+      href="${href}"
+      class=${['nui-link', classes?.wrapper].filter(Boolean).join(' ')}
+      ${spread(attrs)}
+    >
+      ${children}
+    </a>
   `
 }

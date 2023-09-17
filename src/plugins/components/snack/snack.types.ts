@@ -5,6 +5,9 @@ export interface SnackProps extends Record<string, unknown> {
   image?: string
   size?: 'sm' | 'md'
   color?: 'default' | 'muted'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface SnackEvents {}

@@ -14,6 +14,9 @@ export interface ToastProps extends Record<string, unknown> {
     | 'none'
   contrast?: 'white' | 'contrast'
   borderless?: boolean
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface ToastEvents {}

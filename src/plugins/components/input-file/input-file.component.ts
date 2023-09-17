@@ -21,7 +21,7 @@ export const InputFile = ({
               'nui-input-file',
               shape && variants.shape[shape],
               type === 'combo' && 'nui-input-file-combo',
-              classes,
+              classes?.wrapper,
             ]
               .filter(Boolean)
               .join(' ')}
@@ -38,7 +38,7 @@ export const InputFile = ({
               'nui-input-file',
               shape && variants.shape[shape],
               type === 'dropzone' && 'nui-input-file-drop',
-              classes,
+              classes?.wrapper,
             ]
               .filter(Boolean)
               .join(' ')}
@@ -78,7 +78,7 @@ export const InputFile = ({
               'nui-input-file',
               shape && variants.shape[shape],
               type === 'button' && 'nui-input-file-button',
-              classes,
+              classes?.wrapper,
             ]
               .filter(Boolean)
               .join(' ')}

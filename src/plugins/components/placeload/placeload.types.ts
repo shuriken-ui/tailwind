@@ -1,7 +1,9 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface PlaceloadProps extends Record<string, unknown> {
-  classes?: string
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface PlaceloadEvents {}

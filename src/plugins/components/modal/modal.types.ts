@@ -1,7 +1,6 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface ModalProps extends Record<string, unknown> {
-  open?: boolean
   size?: 'sm' | 'md' | 'lg' | 'xl'
   classes?: {
     wrapper?: string | string[]

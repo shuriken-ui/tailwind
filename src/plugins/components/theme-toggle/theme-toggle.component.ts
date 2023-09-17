@@ -10,11 +10,16 @@ import * as variants from './theme-toggle.variants'
 export const ThemeToggle = ({
   inverted,
   disableTransitions,
+  classes,
   ...attrs
 }: ThemeToggleAttrs) => {
   return html`
     <label
-      class=${['nui-theme-toggle', inverted && 'nui-theme-toggle-inverted']
+      class=${[
+        'nui-theme-toggle',
+        inverted && 'nui-theme-toggle-inverted',
+        classes?.wrapper,
+      ]
         .filter(Boolean)
         .join(' ')}
     >

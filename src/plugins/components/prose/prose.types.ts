@@ -2,6 +2,9 @@ import type { PropertyVariant } from '~/types/utils'
 
 export interface ProseProps extends Record<string, unknown> {
   shape?: 'straight' | 'rounded' | 'curved'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface ProseEvents {}

@@ -9,6 +9,9 @@ export interface AccordionProps extends Record<string, unknown> {
   exclusive?: boolean
   shape?: 'straight' | 'rounded' | 'smooth' | 'curved'
   action?: 'dot' | 'chevron' | 'plus'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface AccordionEvents {}

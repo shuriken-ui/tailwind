@@ -9,6 +9,9 @@ export interface TabsProps extends Record<string, unknown> {
   type?: 'tabs' | 'box'
   justify?: 'start' | 'center' | 'end'
   hideLabel?: boolean
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface TabsEvents {}

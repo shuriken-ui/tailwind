@@ -33,7 +33,9 @@ export const Solid: Story = {
   name: 'Main example',
   args: {
     // set default values used for UI preview
-    classes: 'max-w-sm',
+    classes: {
+      wrapper: 'max-w-sm',
+    },
   },
 }
 // #endregion
@@ -43,7 +45,9 @@ export const ComboStraight: Story = {
   name: 'Combo: rounded',
   args: {
     shape: 'straight',
-    classes: 'min-w-[380px]',
+    classes: {
+      wrapper: 'min-w-[380px]',
+    },
   },
 }
 
@@ -51,7 +55,9 @@ export const ComboRounded: Story = {
   name: 'Combo: rounded',
   args: {
     shape: 'rounded',
-    classes: 'min-w-[380px]',
+    classes: {
+      wrapper: 'min-w-[380px]',
+    },
   },
 }
 
@@ -59,7 +65,9 @@ export const ComboSmooth: Story = {
   name: 'Combo: smooth',
   args: {
     shape: 'smooth',
-    classes: 'min-w-[380px]',
+    classes: {
+      wrapper: 'min-w-[380px]',
+    },
   },
 }
 
@@ -67,7 +75,9 @@ export const ComboCurved: Story = {
   name: 'Combo: curved',
   args: {
     shape: 'curved',
-    classes: 'min-w-[380px]',
+    classes: {
+      wrapper: 'min-w-[380px]',
+    },
   },
 }
 
@@ -75,7 +85,9 @@ export const ComboFull: Story = {
   name: 'Combo: full',
   args: {
     shape: 'full',
-    classes: 'min-w-[380px]',
+    classes: {
+      wrapper: 'min-w-[380px]',
+    },
   },
 }
 // #endregion
@@ -85,7 +97,9 @@ export const Dropzone: Story = {
   name: 'Type: Dropzone',
   args: {
     type: 'dropzone',
-    classes: 'min-w-[580px]',
+    classes: {
+      wrapper: 'min-w-[380px]',
+    },
   },
 }
 // #endregion
@@ -95,7 +109,9 @@ export const Button: Story = {
   name: 'Type: Button',
   args: {
     type: 'button',
-    classes: 'min-w-[280px]',
+    classes: {
+      wrapper: 'min-w-[380px]',
+    },
   },
 }
 // #endregion

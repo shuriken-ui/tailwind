@@ -10,11 +10,16 @@ import * as variants from './theme-switch.variants'
 export const ThemeSwitch = ({
   inverted,
   disableTransitions,
+  classes,
   ...attrs
 }: ThemeSwitchAttrs) => {
   return html`
     <label
-      class=${['nui-theme-switch', inverted && 'nui-theme-switch-inverted']
+      class=${[
+        'nui-theme-switch',
+        inverted && 'nui-theme-switch-inverted',
+        classes?.wrapper,
+      ]
         .filter(Boolean)
         .join(' ')}
     >

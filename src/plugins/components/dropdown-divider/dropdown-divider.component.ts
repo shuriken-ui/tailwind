@@ -7,8 +7,16 @@ import * as variants from './dropdown-divider.variants'
 /**
  * Primary UI component for user interaction
  */
-export const DropdownDivider = ({ ...attrs }: DropdownDividerAttrs) => {
+export const DropdownDivider = ({
+  classes,
+  ...attrs
+}: DropdownDividerAttrs) => {
   return html`
-    <div class="nui-dropdown-divider" ${spread(attrs)}></div>
+    <div
+      class=${['nui-dropdown-divider', classes?.wrapper]
+        .filter(Boolean)
+        .join(' ')}
+      ${spread(attrs)}
+    ></div>
   `
 }

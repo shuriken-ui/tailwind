@@ -15,6 +15,7 @@ export const Accordion = ({
   shape,
   exclusive,
   action = 'dot',
+  classes,
   ...attrs
 }: AccordionAttrs) => {
   return html`
@@ -25,6 +26,7 @@ export const Accordion = ({
             'nui-accordion',
             action && variants.action[action],
             shape && variants.shape[shape],
+            classes?.wrapper,
           ]
             .filter(Boolean)
             .join(' ')}
@@ -37,7 +39,9 @@ export const Accordion = ({
                   as: 'h4',
                   weight: 'semibold',
                   size: 'sm',
-                  classes: 'nui-accordion-header-inner',
+                  classes: {
+                    wrapper: 'nui-accordion-header-inner',
+                  },
                   children: item.title,
                 })}
                 ${action === 'dot'

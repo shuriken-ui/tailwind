@@ -4,6 +4,9 @@ export interface PlaceholderPageProps extends Record<string, unknown> {
   title: string
   subtitle?: string
   imageSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface PlaceholderPageEvents {}

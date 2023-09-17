@@ -11,6 +11,7 @@ export const Text = ({
   size = 'sm',
   weight = 'normal',
   lead = 'normal',
+  classes,
   children,
   ...attrs
 }: TextAttrs) => {
@@ -21,6 +22,7 @@ export const Text = ({
         size && variants.size[size],
         weight && variants.weight[weight],
         lead && variants.lead[lead],
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

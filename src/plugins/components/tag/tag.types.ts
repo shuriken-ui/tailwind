@@ -13,6 +13,9 @@ export interface TagProps extends Record<string, unknown> {
   shape?: 'straight' | 'rounded' | 'curved' | 'full'
   size?: 'sm' | 'md'
   shadow?: 'flat' | 'hover'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface TagEvents {}

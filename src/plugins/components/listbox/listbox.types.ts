@@ -30,7 +30,7 @@ export interface ListboxEvents {}
 
 export interface ListboxSlots {
   items?: any
-  iconSlot?: any
+  icon?: any
 }
 
 export type ListboxAttrs = ListboxProps & ListboxEvents & ListboxSlots

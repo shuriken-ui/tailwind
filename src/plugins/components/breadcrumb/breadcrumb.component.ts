@@ -9,9 +9,12 @@ import { DropdownItem } from '../dropdown-item/dropdown-item.component'
 /**
  * Primary UI component for user interaction
  */
-export const Breadcrumb = ({ items, ...attrs }: BreadcrumbAttrs) => {
+export const Breadcrumb = ({ items, classes, ...attrs }: BreadcrumbAttrs) => {
   return html`
-    <nav class="nui-breadcrumb" ${spread(attrs)}>
+    <nav
+      class=${['nui-breadcrumb', classes?.wrapper].filter(Boolean).join(' ')}
+      ${spread(attrs)}
+    >
       <ul class="nui-breadcrumb-list">
         <li class="nui-breadcrumb-item-mobile">
           ${Dropdown({

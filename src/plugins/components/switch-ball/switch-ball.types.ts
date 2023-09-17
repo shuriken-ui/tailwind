@@ -5,6 +5,9 @@ export interface SwitchBallProps extends Record<string, unknown> {
   label?: string
   sublabel?: string
   color?: 'primary' | 'info' | 'success' | 'warning' | 'danger'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface SwitchBallEvents {}

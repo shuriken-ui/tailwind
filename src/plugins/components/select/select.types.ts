@@ -25,7 +25,7 @@ export interface SelectProps extends Record<string, unknown> {
 export interface SelectEvents {}
 
 export interface SelectSlots {
-  iconSlot?: any
+  icon?: any
   options?: any
 }
 

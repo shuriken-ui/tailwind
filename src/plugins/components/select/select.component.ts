@@ -25,7 +25,7 @@ export const Select = ({
     icon: '',
     error: '',
   },
-  iconSlot,
+  icon,
   options,
   ...attrs
 }: SelectAttrs) => {
@@ -39,7 +39,7 @@ export const Select = ({
         error && !loading && 'nui-select-error',
         loading && 'nui-select-loading',
         labelFloat && 'nui-select-label-float',
-        iconSlot && 'nui-has-icon',
+        icon && 'nui-has-icon',
         classes?.wrapper,
       ]
         .filter(Boolean)
@@ -88,14 +88,14 @@ export const Select = ({
             <span class="nui-placeload animate-nui-placeload"></span>
           </div>
         `}
-        ${iconSlot &&
+        ${icon &&
         html`
           <div
             class="${['nui-select-icon', classes?.icon]
               .filter(Boolean)
               .join(' ')}"
           >
-            ${iconSlot}
+            ${icon}
           </div>
         `}
         <div

@@ -10,7 +10,7 @@ import * as variants from './placeload.variants'
 export const Placeload = ({ classes, ...attrs }: PlaceloadAttrs) => {
   return html`
     <div
-      class=${['nui-placeload animate-nui-placeload', classes]
+      class=${['nui-placeload animate-nui-placeload', classes?.wrapper]
         .filter(Boolean)
         .join(' ')}
       ${spread(attrs)}

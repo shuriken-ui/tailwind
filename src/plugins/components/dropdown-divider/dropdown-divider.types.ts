@@ -1,6 +1,10 @@
 import type { PropertyVariant } from '~/types/utils'
 
-export interface DropdownDividerProps extends Record<string, unknown> {}
+export interface DropdownDividerProps extends Record<string, unknown> {
+  classes?: {
+    wrapper?: string | string[]
+  }
+}
 
 export interface DropdownDividerEvents {}
 

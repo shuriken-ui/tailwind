@@ -23,7 +23,7 @@ export interface InputProps extends Record<string, unknown> {
 export interface InputEvents {}
 
 export interface InputSlots {
-  iconSlot?: any
+  icon?: any
   actionSlot?: any
 }
 

@@ -34,7 +34,7 @@ export const Solid: Story = {
   name: 'Main example',
   args: {
     // set default values used for UI preview
-    open: true,
+    '?open': true,
     size: 'md',
     children: html`
       ${Card({
@@ -46,7 +46,9 @@ export const Solid: Story = {
               as: 'h3',
               size: 'lg',
               weight: 'medium',
-              classes: 'text-muted-900 dark:text-white',
+              classes: {
+                wrapper: 'text-muted-900 dark:text-white',
+              },
               children: 'Invitation',
             })}
             ${ButtonClose({
@@ -59,18 +61,24 @@ export const Solid: Story = {
               ${Avatar({
                 src: 'https://media.cssninja.io/shuriken/avatars/24.svg',
                 size: '2xl',
-                classes: 'mb-2',
+                classes: {
+                  wrapper: 'mb-2',
+                },
               })}
               ${Heading({
                 as: 'h3',
                 size: 'lg',
                 weight: 'medium',
-                classes: 'text-muted-900 dark:text-white',
+                classes: {
+                  wrapper: 'text-muted-900 dark:text-white',
+                },
                 children: 'New Invite',
               })}
               ${Paragraph({
                 size: 'sm',
-                classes: 'text-muted-500 dark:text-muted-400',
+                classes: {
+                  wrapper: 'text-muted-500 dark:text-muted-400',
+                },
                 children:
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.',
               })}
@@ -118,7 +126,9 @@ export const SizeSm: Story = {
               as: 'h3',
               size: 'lg',
               weight: 'medium',
-              classes: 'text-muted-900 dark:text-white',
+              classes: {
+                wrapper: 'text-muted-900 dark:text-white',
+              },
               children: 'Invitation',
             })}
             ${ButtonClose({
@@ -131,18 +141,24 @@ export const SizeSm: Story = {
               ${Avatar({
                 src: 'https://media.cssninja.io/shuriken/avatars/10.svg',
                 size: '2xl',
-                classes: 'mb-2',
+                classes: {
+                  wrapper: 'mb-2',
+                },
               })}
               ${Heading({
                 as: 'h3',
                 size: 'lg',
                 weight: 'medium',
-                classes: 'text-muted-900 dark:text-white',
+                classes: {
+                  wrapper: 'text-muted-900 dark:text-white',
+                },
                 children: 'New Invite',
               })}
               ${Paragraph({
                 size: 'sm',
-                classes: 'text-muted-500 dark:text-muted-400',
+                classes: {
+                  wrapper: 'text-muted-500 dark:text-muted-400',
+                },
                 children:
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.',
               })}

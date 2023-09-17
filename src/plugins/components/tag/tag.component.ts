@@ -14,6 +14,7 @@ export const Tag = ({
   flavor = 'solid',
   size = 'md',
   color = 'default',
+  classes,
   ...attrs
 }: TagAttrs) => {
   return html`
@@ -25,6 +26,7 @@ export const Tag = ({
         variants.color[color],
         shape && variants.shape[shape],
         shadow && flavor === 'solid' && variants.shadow[shadow],
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

@@ -3,7 +3,9 @@ import type { PropertyVariant } from '~/types/utils'
 export interface InputFileProps extends Record<string, unknown> {
   shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
   type?: 'combo' | 'dropzone' | 'button'
-  classes?: string | string[]
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface InputFileEvents {}

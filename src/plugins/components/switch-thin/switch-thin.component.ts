@@ -13,6 +13,7 @@ export const SwitchThin = ({
   label,
   sublabel,
   error,
+  classes,
   ...attrs
 }: SwitchThinAttrs) => {
   return html`
@@ -22,6 +23,7 @@ export const SwitchThin = ({
         'nui-switch-thin',
         color && variants.color[color],
         '?disabled' in attrs && 'opacity-50',
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

@@ -12,6 +12,7 @@ export const TabSlider = ({
   justify = 'start',
   shape = 'smooth',
   size = 'md',
+  classes,
   children,
   ...attrs
 }: TabSliderAttrs) => {
@@ -25,6 +26,7 @@ export const TabSlider = ({
         justify && variants.justify[justify],
         shape && variants.shape[shape],
         size && variants.size[size],
+        classes?.wrapper,
         tabsLength() === 2 ? 'nui-tabs-two-slots' : 'nui-tabs-three-slots',
       ]
         .filter(Boolean)

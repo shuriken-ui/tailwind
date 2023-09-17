@@ -13,11 +13,12 @@ export const ProgressCircle = ({
   size = 60,
   thickness = 4,
   max = 100,
+  classes,
   ...attrs
 }: ProgressCircleAttrs) => {
   return html`
     <svg
-      class=${['block', color && variants.color[color]]
+      class=${['block', color && variants.color[color], classes?.wrapper]
         .filter(Boolean)
         .join(' ')}
       ${spread(attrs)}

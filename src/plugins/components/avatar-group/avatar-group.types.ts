@@ -8,6 +8,9 @@ export interface AvatarGroupProps extends Record<string, unknown> {
     srcDark?: string
     text?: string
   }[]
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface AvatarGroupEvents {}

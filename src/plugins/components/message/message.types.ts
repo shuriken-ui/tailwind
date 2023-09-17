@@ -13,6 +13,9 @@ export interface MessageProps extends Record<string, unknown> {
   message?: string
   icon?: boolean | string
   closable?: boolean
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface MessageEvents {}

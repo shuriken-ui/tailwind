@@ -24,7 +24,7 @@ export const Card = ({
         shape && variants.shape[shape],
         elevated && 'nui-card-shadow',
         elevatedHover && 'nui-card-shadow-hover',
-        classes,
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

@@ -13,6 +13,9 @@ export interface ButtonIconProps extends Record<string, unknown> {
     | 'none'
   size?: 'sm' | 'md' | 'lg'
   loading?: boolean
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface ButtonIconEvents {

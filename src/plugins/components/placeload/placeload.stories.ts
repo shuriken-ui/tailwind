@@ -29,7 +29,9 @@ export const Main: Story = {
   name: 'Main example',
   args: {
     // set default values used for UI preview
-    classes: 'h-3 w-40 rounded-md',
+    classes: {
+      wrapper: 'h-3 w-40 rounded-md',
+    },
   },
 }
 // #endregion
@@ -38,21 +40,27 @@ export const Main: Story = {
 export const TextOne: Story = {
   name: 'Text variant 1',
   args: {
-    classes: 'h-3 w-60 rounded-md mb-3',
+    classes: {
+      wrapper: 'h-3 w-60 rounded-md mb-3',
+    },
   },
 }
 
 export const TextTwo: Story = {
   name: 'Text variant 2',
   args: {
-    classes: 'h-3 w-48 rounded-md mb-3',
+    classes: {
+      wrapper: 'h-3 w-48 rounded-md mb-3',
+    },
   },
 }
 
 export const TextThree: Story = {
   name: 'Text variant 3',
   args: {
-    classes: 'h-3 w-40 rounded-md',
+    classes: {
+      wrapper: 'h-3 w-40 rounded-md',
+    },
   },
 }
 // #endregion
@@ -61,35 +69,45 @@ export const TextThree: Story = {
 export const ShapeOne: Story = {
   name: 'Shape variant 1',
   args: {
-    classes: 'h-16 w-16 rounded-md',
+    classes: {
+      wrapper: 'h-16 w-16 rounded-md',
+    },
   },
 }
 
 export const ShapeTwo: Story = {
   name: 'Shape variant 2',
   args: {
-    classes: 'h-16 w-16 rounded-xl',
+    classes: {
+      wrapper: 'h-16 w-16 rounded-xl',
+    },
   },
 }
 
 export const ShapeThree: Story = {
   name: 'Shape variant 3',
   args: {
-    classes: 'h-16 w-16 rounded-full',
+    classes: {
+      wrapper: 'h-16 w-16 rounded-full',
+    },
   },
 }
 
 export const ShapeFour: Story = {
   name: 'Shape variant 4',
   args: {
-    classes: 'h-16 w-16 rounded-full nui-mask nui-mask-hexed',
+    classes: {
+      wrapper: 'h-16 w-16 rounded-full nui-mask nui-mask-hexed',
+    },
   },
 }
 
 export const ShapeFive: Story = {
   name: 'Shape variant 5',
   args: {
-    classes: 'h-16 w-16 rounded-full nui-mask nui-mask-deca',
+    classes: {
+      wrapper: 'h-16 w-16 rounded-full nui-mask nui-mask-deca',
+    },
   },
 }
 // #endregion

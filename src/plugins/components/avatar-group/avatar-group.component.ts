@@ -12,11 +12,16 @@ export const AvatarGroup = ({
   avatars,
   size = 'sm',
   limit = 4,
+  classes,
   ...attrs
 }: AvatarGroupAttrs) => {
   return html`
     <div
-      class=${['nui-avatar-group', size && variants.size[size]]
+      class=${[
+        'nui-avatar-group',
+        size && variants.size[size],
+        classes?.wrapper,
+      ]
         .filter(Boolean)
         .join(' ')}
       ${spread(attrs)}

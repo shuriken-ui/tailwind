@@ -7,10 +7,14 @@ import * as variants from './pagination.variants'
 /**
  * Primary UI component for user interaction
  */
-export const Pagination = ({ shape, ...attrs }: PaginationAttrs) => {
+export const Pagination = ({ shape, classes, ...attrs }: PaginationAttrs) => {
   return html`
     <div
-      class=${['nui-pagination', shape && variants.shape[shape]]
+      class=${[
+        'nui-pagination',
+        shape && variants.shape[shape],
+        classes?.wrapper,
+      ]
         .filter(Boolean)
         .join(' ')}
       ${spread(attrs)}

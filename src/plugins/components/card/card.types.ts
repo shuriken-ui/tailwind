@@ -15,7 +15,9 @@ export interface CardProps extends Record<string, unknown> {
     | 'warning'
     | 'danger'
     | 'none'
-  classes?: string | string[]
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface CardEvents {}

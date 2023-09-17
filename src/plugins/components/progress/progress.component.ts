@@ -13,6 +13,7 @@ export const Progress = ({
   shape = 'full',
   size = 'md',
   value,
+  classes,
   max = 100,
   ...attrs
 }: ProgressAttrs) => {
@@ -27,6 +28,7 @@ export const Progress = ({
         contrast && variants.contrast[contrast],
         size && variants.size[size],
         shape && variants.shape[shape],
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

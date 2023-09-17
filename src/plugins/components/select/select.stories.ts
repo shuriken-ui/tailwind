@@ -611,7 +611,7 @@ export const SlotIconSm: Story = {
       <option value="3">Spiderman</option>
       <option value="4">Ironman</option>
     `,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-select-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -656,7 +656,7 @@ export const SlotIconMd: Story = {
       <option value="3">Spiderman</option>
       <option value="4">Ironman</option>
     `,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-select-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -701,7 +701,7 @@ export const SlotIconLg: Story = {
       <option value="3">Spiderman</option>
       <option value="4">Ironman</option>
     `,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-select-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -749,7 +749,7 @@ export const SlotIconFloatSm: Story = {
       <option value="3">Spiderman</option>
       <option value="4">Ironman</option>
     `,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-select-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -795,7 +795,7 @@ export const SlotIconFloatMd: Story = {
       <option value="3">Spiderman</option>
       <option value="4">Ironman</option>
     `,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-select-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -841,7 +841,7 @@ export const SlotIconFloatLg: Story = {
       <option value="3">Spiderman</option>
       <option value="4">Ironman</option>
     `,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-select-icon-inner"
         xmlns="http://www.w3.org/2000/svg"

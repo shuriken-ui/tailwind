@@ -13,6 +13,9 @@ export interface MessageTextProps extends Record<string, unknown> {
     | 'danger'
     | 'none'
   contrast?: 'white' | 'contrast'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface MessageTextEvents {}

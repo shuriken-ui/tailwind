@@ -13,6 +13,7 @@ export const SwitchBall = ({
   label,
   sublabel,
   error,
+  classes,
   ...attrs
 }: SwitchBallAttrs) => {
   return html`
@@ -22,6 +23,7 @@ export const SwitchBall = ({
         'nui-switch-ball',
         color && variants.color[color],
         '?disabled' in attrs && 'opacity-50',
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

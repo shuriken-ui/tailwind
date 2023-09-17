@@ -530,7 +530,7 @@ export const SlotIconSm: Story = {
     size: 'sm',
     contrast: 'default',
     shape: 'rounded',
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -566,7 +566,7 @@ export const SlotIconMd: Story = {
     size: 'md',
     contrast: 'default',
     shape: 'rounded',
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -602,7 +602,7 @@ export const SlotIconLg: Story = {
     size: 'lg',
     contrast: 'default',
     shape: 'rounded',
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -641,7 +641,7 @@ export const SlotIconFloatSm: Story = {
     contrast: 'default',
     shape: 'rounded',
     labelFloat: true,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -678,7 +678,7 @@ export const SlotIconFloatMd: Story = {
     contrast: 'default',
     shape: 'rounded',
     labelFloat: true,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -715,7 +715,7 @@ export const SlotIconFloatLg: Story = {
     contrast: 'default',
     shape: 'rounded',
     labelFloat: true,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"

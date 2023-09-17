@@ -12,6 +12,7 @@ export const Snack = ({
   label,
   size = 'md',
   color = 'muted',
+  classes,
   icon,
   image,
   ...attrs
@@ -23,6 +24,7 @@ export const Snack = ({
         color && variants.color[color],
         size && variants.size[size],
         icon || image ? 'nui-has-media' : '',
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}
@@ -49,7 +51,9 @@ export const Snack = ({
       </span>
       ${ButtonClose({
         shape: 'full',
-        classes: 'nui-snack-button',
+        classes: {
+          wrapper: 'nui-snack-button',
+        },
       })}
     </div>
   `

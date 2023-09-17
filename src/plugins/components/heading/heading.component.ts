@@ -22,7 +22,7 @@ export const Heading = ({
       size && variants.size[size],
       weight && variants.weight[weight],
       lead && variants.lead[lead],
-      classes,
+      classes?.wrapper,
     ]
       .filter(Boolean)
       .join(' ')}

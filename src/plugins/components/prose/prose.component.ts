@@ -10,11 +10,12 @@ import * as variants from './prose.variants'
 export const Prose = ({
   children,
   shape = 'rounded',
+  classes,
   ...attrs
 }: ProseAttrs) => {
   return html`
     <div
-      class=${['nui-prose', shape && variants.shape[shape]]
+      class=${['nui-prose', shape && variants.shape[shape], classes?.wrapper]
         .filter(Boolean)
         .join(' ')}
       ${spread(attrs)}

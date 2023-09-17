@@ -11,10 +11,16 @@ export const FullscreenDropfile = ({
   label = 'Drop your files',
   icon,
   isDropping,
+  classes,
   ...attrs
 }: FullscreenDropfileAttrs) => {
   return html`
-    <div class="nui-fullscreen-dropfile" ${spread(attrs)}>
+    <div
+      class=${['nui-fullscreen-dropfile', classes?.wrapper]
+        .filter(Boolean)
+        .join(' ')}
+      ${spread(attrs)}
+    >
       ${isDropping
         ? html`
           <div class="nui-fullscreen-dropfile-outer"></div>

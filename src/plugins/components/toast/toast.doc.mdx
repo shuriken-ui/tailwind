@@ -107,6 +107,16 @@ Toasts can have different colors. The following example shows the danger color.
 </div>
 
 <br />
+
+### Borderless
+
+Toasts can be borderless and display a light shadow.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ToastStories.SlotIconBlockBorderless} />
+</div>
+
+<br />
 <br />
 
 ## Slots
@@ -127,16 +137,6 @@ Toasts have an icon slot that you can use to display an icon block.
 
 <div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={ToastStories.SlotIconBlock} />
-</div>
-
-<br />
-
-### Slot: borderless
-
-Toasts can be borderless and display a light shadow.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.SlotIconBlockBorderless} />
 </div>
 
 <br />

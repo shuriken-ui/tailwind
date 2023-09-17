@@ -17,6 +17,7 @@ export const Toast = ({
   borderless,
   icon,
   iconBlock,
+  classes,
   ...attrs
 }: ToastAttrs) => {
   return html`
@@ -27,6 +28,7 @@ export const Toast = ({
         contrast && variants.contrast[contrast],
         shape && variants.shape[shape],
         borderless && 'nui-toast-borderless',
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}
