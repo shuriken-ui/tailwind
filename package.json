@@ -115,7 +115,7 @@
   "lint-staged": {
     "*.ts?(x)": [
       "prettier --parser=typescript --write",
-      "eslint --fix"
+      "eslint -c .eslintrc.cjs --fix --ext .ts"
     ]
   }
 }
