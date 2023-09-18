@@ -7,8 +7,17 @@ import * as variants from './button-group.variants'
 /**
  * Primary UI component for user interaction
  */
-export const ButtonGroup = ({ children, ...attrs }: ButtonGroupAttrs) => {
+export const ButtonGroup = ({
+  classes,
+  children,
+  ...attrs
+}: ButtonGroupAttrs) => {
   return html`
-    <div class="nui-button-group" ${spread(attrs)}>${children}</div>
+    <div
+      class=${['nui-button-group', classes?.wrapper].filter(Boolean).join(' ')}
+      ${spread(attrs)}
+    >
+      ${children}
+    </div>
   `
 }

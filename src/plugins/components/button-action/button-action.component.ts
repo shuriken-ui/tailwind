@@ -13,6 +13,7 @@ export const ButtonAction = ({
   shape,
   children,
   color = 'default',
+  classes,
   onClick,
   ...attrs
 }: ButtonActionAttrs) => {
@@ -23,6 +24,7 @@ export const ButtonAction = ({
         variants.color[color],
         loading && 'nui-button-loading',
         shape && variants.shape[shape],
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

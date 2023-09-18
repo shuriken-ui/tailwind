@@ -15,6 +15,7 @@ export const IconBox = ({
   color = 'default',
   bordered,
   mask,
+  classes,
   onClick,
   ...attrs
 }: IconBoxAttrs) => {
@@ -28,6 +29,7 @@ export const IconBox = ({
         bordered && 'nui-box-bordered',
         shape && variants.shape[shape],
         shape === 'straight' && mask && `nui-box-mask ${variants.mask[mask]}`,
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

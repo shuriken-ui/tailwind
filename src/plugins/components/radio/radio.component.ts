@@ -3,7 +3,6 @@ import { spread } from '@open-wc/lit-helpers'
 
 import type { RadioAttrs } from './radio.types'
 import * as variants from './radio.variants'
-import { e } from 'vitest/dist/reporters-2ff87305'
 
 /**
  * Primary UI component for user interaction

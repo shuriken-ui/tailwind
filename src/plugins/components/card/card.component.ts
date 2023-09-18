@@ -12,6 +12,7 @@ export const Card = ({
   elevated,
   elevatedHover,
   shape = 'rounded',
+  classes,
   children,
   ...attrs
 }: CardAttrs) => {
@@ -23,6 +24,7 @@ export const Card = ({
         shape && variants.shape[shape],
         elevated && 'nui-card-shadow',
         elevatedHover && 'nui-card-shadow-hover',
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

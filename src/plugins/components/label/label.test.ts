@@ -6,13 +6,13 @@ import { Label } from './label.component'
 
 describe('Label', () => {
   test('Should have no axe violations', async () => {
-    const iconBox = Label({
+    const label = Label({
       children: html`
         Hello World
       `,
     })
 
-    render(iconBox, document.body)
+    render(label, document.body)
 
     expect(
       await axe(document.body.querySelector('.nui-label')!.outerHTML),

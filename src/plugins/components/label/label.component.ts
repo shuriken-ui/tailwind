@@ -7,8 +7,13 @@ import * as variants from './label.variants'
 /**
  * Primary UI component for user interaction
  */
-export const Label = ({ children, ...attrs }: LabelAttrs) => {
+export const Label = ({ classes, children, ...attrs }: LabelAttrs) => {
   return html`
-    <label class="nui-label" ${spread(attrs)}>${children}</label>
+    <label
+      class=${['nui-label', classes?.wrapper].filter(Boolean).join(' ')}
+      ${spread(attrs)}
+    >
+      ${children}
+    </label>
   `
 }

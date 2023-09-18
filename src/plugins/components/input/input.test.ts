@@ -17,7 +17,7 @@ describe('Input', () => {
     render(input, document.body)
 
     expect(
-      await axe(document.body.querySelector('.nui-icon-box')!.outerHTML),
+      await axe(document.body.querySelector('.nui-input-wrapper')!.outerHTML),
     )?.toHaveNoViolations()
   })
 })

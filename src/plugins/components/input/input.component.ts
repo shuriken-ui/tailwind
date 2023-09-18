@@ -14,7 +14,6 @@ export const Input = ({
   contrast = 'default',
   label,
   labelFloat,
-  icon,
   loading,
   colorFocus,
   error,
@@ -26,7 +25,7 @@ export const Input = ({
     icon: '',
     error: '',
   },
-  iconSlot,
+  icon,
   actionSlot,
   ...attrs
 }: InputAttrs) => {
@@ -40,7 +39,7 @@ export const Input = ({
         error && !loading && 'nui-input-error',
         loading && 'nui-input-loading',
         labelFloat && 'nui-input-label-float',
-        icon || (iconSlot && 'nui-has-icon'),
+        icon && 'nui-has-icon',
         colorFocus && 'nui-input-focus',
         classes?.wrapper,
       ]
@@ -83,14 +82,14 @@ export const Input = ({
             <span class="nui-placeload animate-nui-placeload"></span>
           </div>
         `}
-        ${iconSlot &&
+        ${icon &&
         html`
           <div
             class="${['nui-input-icon', classes?.icon]
               .filter(Boolean)
               .join(' ')}"
           >
-            ${iconSlot}
+            ${icon}
           </div>
         `}
         ${actionSlot &&

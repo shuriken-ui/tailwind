@@ -11,6 +11,9 @@ export interface ButtonCloseProps extends Record<string, unknown> {
     | 'warning'
     | 'danger'
     | 'none'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface ButtonCloseEvents {

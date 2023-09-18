@@ -17,6 +17,9 @@ export interface ButtonProps extends Record<string, unknown> {
     | 'danger'
     | 'none'
   shadow?: 'flat' | 'hover'
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface ButtonEvents {

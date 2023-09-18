@@ -12,6 +12,7 @@ export const Paragraph = ({
   weight = 'normal',
   lead = 'normal',
   as = 'p',
+  classes,
   children,
   ...attrs
 }: ParagraphAttrs) => {
@@ -21,6 +22,7 @@ export const Paragraph = ({
       size && variants.size[size],
       weight && variants.weight[weight],
       lead && variants.lead[lead],
+      classes?.wrapper,
     ]
       .filter(Boolean)
       .join(' ')}

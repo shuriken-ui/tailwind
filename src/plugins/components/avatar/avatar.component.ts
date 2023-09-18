@@ -18,6 +18,7 @@ export const Avatar = ({
   color,
   dot = false,
   ring = false,
+  classes,
   children,
   badge,
   ...attrs
@@ -26,6 +27,7 @@ export const Avatar = ({
     <div
       class="${[
         'nui-avatar',
+        classes?.wrapper,
         variants.size[size],
         shape && variants.shape[shape],
         shape === 'straight' &&
@@ -44,8 +46,20 @@ export const Avatar = ({
       <div class="nui-avatar-inner">
         ${src
           ? html`
-            <img class="dark:hidden" src="${src}" alt="${text}" />
-            <img class="hidden dark:block" src="${srcDark}" alt="${text}" />
+            <img
+              class="${srcDark ? 'dark:hidden' : ''}"
+              src="${src}"
+              alt="${text}"
+            />
+            ${srcDark
+                ? html`
+                  <img
+                    class="hidden dark:block"
+                    src="${srcDark}"
+                    alt="${text}"
+                  />
+                `
+                : ''}
           `
           : children ||
             html`

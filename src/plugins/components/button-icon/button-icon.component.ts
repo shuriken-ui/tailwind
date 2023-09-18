@@ -13,6 +13,7 @@ export const ButtonIcon = ({
   shape = 'rounded',
   children,
   color = 'default',
+  classes,
   onClick,
   ...attrs
 }: ButtonIconAttrs) => {
@@ -24,6 +25,7 @@ export const ButtonIcon = ({
         variants.color[color],
         loading && 'nui-button-loading',
         shape && variants.shape[shape],
+        classes?.wrapper,
       ]
         .filter(Boolean)
         .join(' ')}

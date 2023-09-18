@@ -95,7 +95,7 @@ export const Straight: Story = {
     shape: 'straight',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 320px;',
+    style: 'min-width: 320px; max-width: 320px;',
   },
 }
 
@@ -109,7 +109,7 @@ export const Rounded: Story = {
     shape: 'rounded',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 320px;',
+    style: 'min-width: 320px; max-width: 320px;',
   },
 }
 
@@ -123,7 +123,7 @@ export const Smooth: Story = {
     shape: 'smooth',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 320px;',
+    style: 'min-width: 320px; max-width: 320px;',
   },
 }
 
@@ -137,7 +137,7 @@ export const Curved: Story = {
     shape: 'curved',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 320px;',
+    style: 'min-width: 320px; max-width: 320px;',
   },
 }
 
@@ -151,7 +151,7 @@ export const Full: Story = {
     shape: 'full',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 320px;',
+    style: 'min-width: 320px; max-width: 320px;',
   },
 }
 // #endregion
@@ -167,7 +167,9 @@ export const SizeSm: Story = {
     shape: 'rounded',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -181,7 +183,9 @@ export const SizeMd: Story = {
     shape: 'rounded',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -195,12 +199,14 @@ export const SizeLg: Story = {
     shape: 'rounded',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
 
-// #region Contrast: default
+// #region Contrast: muted
 export const ContrastMutedSm: Story = {
   name: 'Contrast muted: sm',
   args: {
@@ -211,7 +217,9 @@ export const ContrastMutedSm: Story = {
     shape: 'rounded',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -225,7 +233,9 @@ export const ContrastMutedMd: Story = {
     shape: 'rounded',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -239,7 +249,9 @@ export const ContrastMutedLg: Story = {
     shape: 'rounded',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -256,7 +268,9 @@ export const LabelFloatSm: Story = {
     labelFloat: true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -271,7 +285,9 @@ export const LabelFloatMd: Story = {
     labelFloat: true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -286,7 +302,9 @@ export const LabelFloatLg: Story = {
     labelFloat: true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -303,7 +321,9 @@ export const ColorFocusSm: Story = {
     colorFocus: true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -318,7 +338,9 @@ export const ColorFocusMd: Story = {
     colorFocus: true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -333,7 +355,9 @@ export const ColorFocusLg: Story = {
     colorFocus: true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -350,7 +374,9 @@ export const DisabledSm: Story = {
     '?disabled': true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -365,7 +391,9 @@ export const DisabledMd: Story = {
     '?disabled': true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -380,7 +408,9 @@ export const DisabledLg: Story = {
     '?disabled': true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -397,7 +427,9 @@ export const LoadingSm: Story = {
     loading: true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -412,7 +444,9 @@ export const LoadingMd: Story = {
     loading: true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -427,7 +461,9 @@ export const LoadingLg: Story = {
     loading: true,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -444,7 +480,9 @@ export const ErrorSm: Story = {
     error: 'Please enter a valid value',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -459,7 +497,9 @@ export const ErrorMd: Story = {
     error: 'Please enter a valid value',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -474,7 +514,9 @@ export const ErrorLg: Story = {
     error: 'Please enter a valid value',
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -488,7 +530,7 @@ export const SlotIconSm: Story = {
     size: 'sm',
     contrast: 'default',
     shape: 'rounded',
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -510,7 +552,9 @@ export const SlotIconSm: Story = {
     `,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -522,7 +566,7 @@ export const SlotIconMd: Story = {
     size: 'md',
     contrast: 'default',
     shape: 'rounded',
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -544,7 +588,9 @@ export const SlotIconMd: Story = {
     `,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -556,7 +602,7 @@ export const SlotIconLg: Story = {
     size: 'lg',
     contrast: 'default',
     shape: 'rounded',
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -578,7 +624,9 @@ export const SlotIconLg: Story = {
     `,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -593,7 +641,7 @@ export const SlotIconFloatSm: Story = {
     contrast: 'default',
     shape: 'rounded',
     labelFloat: true,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -615,7 +663,9 @@ export const SlotIconFloatSm: Story = {
     `,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -628,7 +678,7 @@ export const SlotIconFloatMd: Story = {
     contrast: 'default',
     shape: 'rounded',
     labelFloat: true,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -650,7 +700,9 @@ export const SlotIconFloatMd: Story = {
     `,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 
@@ -663,7 +715,7 @@ export const SlotIconFloatLg: Story = {
     contrast: 'default',
     shape: 'rounded',
     labelFloat: true,
-    iconSlot: html`
+    icon: html`
       <svg
         class="nui-input-icon-inner"
         xmlns="http://www.w3.org/2000/svg"
@@ -685,7 +737,9 @@ export const SlotIconFloatLg: Story = {
     `,
     type: 'text',
     placeholder: 'Choose a username...',
-    style: 'min-width: 260px;',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
   },
 }
 // #endregion
@@ -727,10 +781,10 @@ export const SlotActionSm: Story = {
     `,
     classes: {
       input: 'pe-8',
+      wrapper: 'min-w-[260px] max-w-[260px]',
     },
     type: 'password',
     placeholder: 'Choose a password...',
-    style: 'min-width: 260px;',
   },
 }
 
@@ -770,10 +824,10 @@ export const SlotActionMd: Story = {
     `,
     classes: {
       input: 'pe-10',
+      wrapper: 'min-w-[260px] max-w-[260px]',
     },
     type: 'password',
     placeholder: 'Choose a password...',
-    style: 'min-width: 260px;',
   },
 }
 
@@ -812,11 +866,11 @@ export const SlotActionLg: Story = {
       </button>
     `,
     classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
       input: 'pe-12',
     },
     type: 'password',
     placeholder: 'Choose a password...',
-    style: 'min-width: 260px;',
   },
 }
 // #endregion

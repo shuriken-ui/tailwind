@@ -1,0 +1,112 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as ProgressStories from './progress.stories'
+import { defaultProgressConfig } from '.'
+
+<Meta of={ProgressStories} />
+
+# Progress
+
+Progress bars are an essential part of any application. Shuriken UI action progress bars can have different shapes and colors.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+<br />
+
+### Sizes
+
+Progress bars can have different sizes.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ProgressStories.SizeXs} />
+  <br />
+  <Story of={ProgressStories.SizeSm} />
+  <br />
+  <Story of={ProgressStories.SizeMd} />
+  <br />
+  <Story of={ProgressStories.SizeLg} />
+  <br />
+  <Story of={ProgressStories.SizeXl} />
+</div>
+
+<br />
+
+### Colors
+
+Progress bars can have different colors.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ProgressStories.ColorPrimary} />
+  <br />
+  <Story of={ProgressStories.ColorInfo} />
+  <br />
+  <Story of={ProgressStories.ColorSuccess} />
+  <br />
+  <Story of={ProgressStories.ColorWarning} />
+  <br />
+  <Story of={ProgressStories.ColorDanger} />
+</div>
+
+<br />
+<br />
+
+## State
+
+### State: indeterminate
+
+Progress bars can be shown in an indeterminate state.
+
+<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={ProgressStories.IndeterminatePrimary} />
+  <br />
+  <Story of={ProgressStories.IndeterminateInfo} />
+  <br />
+  <Story of={ProgressStories.IndeterminateSuccess} />
+  <br />
+  <Story of={ProgressStories.IndeterminateWarning} />
+  <br />
+  <Story of={ProgressStories.IndeterminateDanger} />
+</div>
+
+<br />
+<br />
+
+## Customization
+
+### Default config
+
+<div class="relative">
+  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary class="list-none cursor-pointer">
+      <span class="font-sans text-slate-500">View configuration options</span>
+      <svg
+        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div class="!mt-4">
+      <pre >
+        {JSON.stringify(defaultProgressConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>

@@ -1,6 +1,10 @@
 import type { PropertyVariant } from '~/types/utils'
 
-export interface LabelProps extends Record<string, unknown> {}
+export interface LabelProps extends Record<string, unknown> {
+  classes?: {
+    wrapper?: string | string[]
+  }
+}
 
 export interface LabelEvents {}
 

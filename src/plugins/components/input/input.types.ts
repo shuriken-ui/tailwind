@@ -5,7 +5,6 @@ export interface InputProps extends Record<string, unknown> {
   shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
   label?: string
   labelFloat?: boolean
-  icon?: string
   colorFocus?: boolean
   loading?: boolean
   error?: string | boolean
@@ -24,7 +23,7 @@ export interface InputProps extends Record<string, unknown> {
 export interface InputEvents {}
 
 export interface InputSlots {
-  iconSlot?: any
+  icon?: any
   actionSlot?: any
 }
 

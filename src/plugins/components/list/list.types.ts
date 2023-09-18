@@ -3,6 +3,9 @@ import type { PropertyVariant } from '~/types/utils'
 export interface ListProps extends Record<string, unknown> {
   ordered?: boolean
   hasMedia?: boolean
+  classes?: {
+    wrapper?: string | string[]
+  }
 }
 
 export interface ListEvents {}
