@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/shuriken-ui/tailwind/compare/v1.2.1...v1.2.2) (2023-09-18)
+
+
+### Bug Fixes
+
+* avatar dark light img, add listbox storybook ([7e49211](https://github.com/shuriken-ui/tailwind/commit/7e492110191fd7849e2ee4c8dcb73e8b52dc5953))
+* pagination link dark bg color, dropdown context button dark bg color ([3e11ae6](https://github.com/shuriken-ui/tailwind/commit/3e11ae6b0b49f380f20f232bfcaa524278c6dae3))
+
 ### [1.2.1](https://github.com/shuriken-ui/tailwind/compare/v1.2.0...v1.2.1) (2023-09-10)
 
 ## [1.2.0](https://github.com/shuriken-ui/tailwind/compare/v1.1.0...v1.2.0) (2023-09-10)
