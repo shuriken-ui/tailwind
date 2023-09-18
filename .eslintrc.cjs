@@ -35,6 +35,7 @@ module.exports = {
     'unicorn/filename-case': 'off',
     'unicorn/no-null': 'off',
     'unicorn/prevent-abbreviations': 'off',
+    'unicorn/template-indent': 'off',
 
     // 'vue/require-expose': 'error',
 

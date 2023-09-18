@@ -46,48 +46,48 @@ export const Accordion = ({
                 })}
                 ${action === 'dot'
                   ? html`
-                    <div class="nui-accordion-dot"></div>
-                  `
+                      <div class="nui-accordion-dot"></div>
+                    `
                   : ''}
                 ${action === 'chevron'
                   ? html`
-                    <div class="nui-icon-outer">
-                      <svg
-                        class="nui-chevron-icon"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="m6 9 6 6 6-6"
-                        />
-                      </svg>
-                    </div>
-                  `
+                      <div class="nui-icon-outer">
+                        <svg
+                          class="nui-chevron-icon"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m6 9 6 6 6-6"
+                          />
+                        </svg>
+                      </div>
+                    `
                   : ''}
                 ${action === 'plus'
                   ? html`
-                    <div class="nui-icon-outer">
-                      <svg
-                        class="nui-plus-icon"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 5v14m-7-7h14"
-                        />
-                      </svg>
-                    </div>
-                  `
+                      <div class="nui-icon-outer">
+                        <svg
+                          class="nui-plus-icon"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 5v14m-7-7h14"
+                          />
+                        </svg>
+                      </div>
+                    `
                   : ''}
               </div>
             </summary>

@@ -36,14 +36,14 @@ export const Toast = ({
     >
       ${iconBlock && !icon
         ? html`
-          <div class="nui-toast-icon-block">${iconBlock}</div>
-        `
+            <div class="nui-toast-icon-block">${iconBlock}</div>
+          `
         : ''}
       <div class="nui-toast-inner">
         ${icon && !iconBlock
           ? html`
-            ${icon}
-          `
+              ${icon}
+            `
           : ''}
         <div>
           <h4 class="nui-toast-title">${title}</h4>

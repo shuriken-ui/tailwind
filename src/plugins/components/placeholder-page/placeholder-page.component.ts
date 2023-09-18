@@ -31,8 +31,8 @@ export const PlaceholderPage = ({
       <div class="nui-placeholder-page-inner">
         ${image
           ? html`
-            <div class="nui-placeholder-page-img">${image}</div>
-          `
+              <div class="nui-placeholder-page-img">${image}</div>
+            `
           : ''}
         <div class="nui-placeholder-page-content">
           ${Heading({
@@ -46,8 +46,8 @@ export const PlaceholderPage = ({
           })}
           ${subtitle
             ? html`
-              <p class="nui-placeholder-page-subtitle">${subtitle}</p>
-            `
+                <p class="nui-placeholder-page-subtitle">${subtitle}</p>
+              `
             : ''}
           ${children}
         </div>

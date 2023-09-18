@@ -34,10 +34,10 @@ export const ButtonIcon = ({
     >
       ${loading
         ? /* @todo: replace nui-placeload with component */ html`
-          <span
-            class="nui-placeload animate-nui-placeload h-4 w-4 rounded-md"
-          ></span>
-        `
+            <span
+              class="nui-placeload animate-nui-placeload h-4 w-4 rounded-md"
+            ></span>
+          `
         : children}
     </button>
   `

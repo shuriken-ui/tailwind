@@ -40,14 +40,14 @@ export const AvatarGroup = ({
       )}
       ${avatars.length > limit
         ? html`
-          <div class="nui-avatar-count">
-            <div class="nui-avatar-count-inner">
-              <span class="nui-avatar-count-text">
-                +${avatars.length - limit + 1}
-              </span>
+            <div class="nui-avatar-count">
+              <div class="nui-avatar-count-inner">
+                <span class="nui-avatar-count-text">
+                  +${avatars.length - limit + 1}
+                </span>
+              </div>
             </div>
-          </div>
-        `
+          `
         : ''}
     </div>
   `

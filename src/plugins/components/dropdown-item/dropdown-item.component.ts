@@ -27,10 +27,10 @@ export const DropdownItem = ({
     <div>
       ${href
         ? html`
-          <a
-            href="${href}"
-            ${spread(attrs)}
-            class=${[
+            <a
+              href="${href}"
+              ${spread(attrs)}
+              class=${[
                 'nui-dropdown-item',
                 active && 'nui-active',
                 shape && variants.shape[shape],
@@ -38,33 +38,33 @@ export const DropdownItem = ({
               ]
                 .filter(Boolean)
                 .join(' ')}
-          >
-            ${start}
-            <div class="nui-item-content">
-              <h3
-                class=${[
+            >
+              ${start}
+              <div class="nui-item-content">
+                <h3
+                  class=${[
                     'nui-heading nui-heading-sm nui-weight-semibold nui-lead-tight text-muted-800 dark:text-white',
                     classes?.title,
                   ]
                     .filter(Boolean)
                     .join(' ')}
-              >
-                ${title}
-              </h3>
-              <p class="text-muted-400 font-sans text-xs">${text}</p>
-            </div>
-            ${end}
-          </a>
-        `
+                >
+                  ${title}
+                </h3>
+                <p class="text-muted-400 font-sans text-xs">${text}</p>
+              </div>
+              ${end}
+            </a>
+          `
         : ''}
       ${type
         ? html`
-          <button
-            type="${type}"
-            rel="${rel}"
-            target="${target}"
-            ${spread(attrs)}
-            class=${[
+            <button
+              type="${type}"
+              rel="${rel}"
+              target="${target}"
+              ${spread(attrs)}
+              class=${[
                 'nui-dropdown-item',
                 active && 'nui-active',
                 shape && variants.shape[shape],
@@ -72,22 +72,22 @@ export const DropdownItem = ({
               ]
                 .filter(Boolean)
                 .join(' ')}
-            @click=${onClick}
-          >
-            ${start}
-            <div class="nui-item-content">
-              <div
-                class=${['nui-item-content', classes?.title]
+              @click=${onClick}
+            >
+              ${start}
+              <div class="nui-item-content">
+                <div
+                  class=${['nui-item-content', classes?.title]
                     .filter(Boolean)
                     .join(' ')}
-              >
-                > ${title}
+                >
+                  > ${title}
+                </div>
+                <p class="text-muted-400 font-sans text-xs">${text}</p>
               </div>
-              <p class="text-muted-400 font-sans text-xs">${text}</p>
-            </div>
-            ${end}
-          </button>
-        `
+              ${end}
+            </button>
+          `
         : ''}
     </div>
   `

@@ -40,14 +40,14 @@ export const SwitchThin = ({
       </span>
       ${sublabel
         ? html`
-          <span class="nui-switch-thin-dual-label">
-            <span class="nui-switch-thin-label">${label}</span>
-            <span class="nui-switch-thin-sublabel">${sublabel}</span>
-          </span>
-        `
+            <span class="nui-switch-thin-dual-label">
+              <span class="nui-switch-thin-label">${label}</span>
+              <span class="nui-switch-thin-sublabel">${sublabel}</span>
+            </span>
+          `
         : html`
-          <span class="nui-switch-thin-single-label">${label}</span>
-        `}
+            <span class="nui-switch-thin-single-label">${label}</span>
+          `}
     </label>
   `
 }

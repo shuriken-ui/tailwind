@@ -41,15 +41,15 @@ export const Listbox = ({
     >
       ${label && !labelFloat
         ? html`
-          <label
-            class="${['nui-listbox-label', classes?.label]
+            <label
+              class="${['nui-listbox-label', classes?.label]
                 .filter(Boolean)
                 .join(' ')}"
-            for="${id}"
-          >
-            ${label}
-          </label>
-        `
+              for="${id}"
+            >
+              ${label}
+            </label>
+          `
         : ''}
       <div class="nui-listbox-outer">
         <button type="button" class="nui-listbox-button" ${spread(attrs)}>
@@ -57,15 +57,15 @@ export const Listbox = ({
         </button>
         ${label && labelFloat
           ? html`
-            <label
-              class="${['nui-label-float', classes?.label]
+              <label
+                class="${['nui-label-float', classes?.label]
                   .filter(Boolean)
                   .join(' ')}"
-              for="${id}"
-            >
-              ${label}
-            </label>
-          `
+                for="${id}"
+              >
+                ${label}
+              </label>
+            `
           : ''}
         ${icon &&
         html`

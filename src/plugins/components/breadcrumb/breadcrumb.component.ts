@@ -78,8 +78,8 @@ export const Breadcrumb = ({ items, classes, ...attrs }: BreadcrumbAttrs) => {
               <div class="nui-item-inner">
                 ${index < items.length - 1
                   ? html`
-                    <span class="nui-item-text">·</span>
-                  `
+                      <span class="nui-item-text">·</span>
+                    `
                   : ''}
               </div>
             </li>

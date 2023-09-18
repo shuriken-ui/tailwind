@@ -48,15 +48,15 @@ export const Input = ({
     >
       ${label && !labelFloat
         ? html`
-          <label
-            class="${['nui-input-label', classes?.label]
+            <label
+              class="${['nui-input-label', classes?.label]
                 .filter(Boolean)
                 .join(' ')}"
-            for="${id}"
-          >
-            ${label}
-          </label>
-        `
+              for="${id}"
+            >
+              ${label}
+            </label>
+          `
         : ''}
       <div class="nui-input-outer">
         <input
@@ -66,15 +66,15 @@ export const Input = ({
         />
         ${label && labelFloat
           ? html`
-            <label
-              class="${['nui-label-float', classes?.label]
+              <label
+                class="${['nui-label-float', classes?.label]
                   .filter(Boolean)
                   .join(' ')}"
-              for="${id}"
-            >
-              ${label}
-            </label>
-          `
+                for="${id}"
+              >
+                ${label}
+              </label>
+            `
           : ''}
         ${loading &&
         html`

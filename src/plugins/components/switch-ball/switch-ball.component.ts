@@ -50,14 +50,14 @@ export const SwitchBall = ({
       </span>
       ${sublabel
         ? html`
-          <span class="nui-switch-ball-dual-label">
-            <span class="nui-switch-ball-label">${label}</span>
-            <span class="nui-switch-ball-sublabel">${sublabel}</span>
-          </span>
-        `
+            <span class="nui-switch-ball-dual-label">
+              <span class="nui-switch-ball-label">${label}</span>
+              <span class="nui-switch-ball-sublabel">${sublabel}</span>
+            </span>
+          `
         : html`
-          <span class="nui-switch-ball-single-label">${label}</span>
-        `}
+            <span class="nui-switch-ball-single-label">${label}</span>
+          `}
     </label>
   `
 }

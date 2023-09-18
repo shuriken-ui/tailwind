@@ -41,26 +41,26 @@ export const Avatar = ({
       ]
         .filter(Boolean)
         .join(' ')}
-        ${spread(attrs)}"
+       ${spread(attrs)}"
     >
       <div class="nui-avatar-inner">
         ${src
           ? html`
-            <img
-              class="${srcDark ? 'dark:hidden' : ''}"
-              src="${src}"
-              alt="${text}"
-            />
-            ${srcDark
+              <img
+                class="${srcDark ? 'dark:hidden' : ''}"
+                src="${src}"
+                alt="${text}"
+              />
+              ${srcDark
                 ? html`
-                  <img
-                    class="hidden dark:block"
-                    src="${srcDark}"
-                    alt="${text}"
-                  />
-                `
+                    <img
+                      class="hidden dark:block"
+                      src="${srcDark}"
+                      alt="${text}"
+                    />
+                  `
                 : ''}
-          `
+            `
           : children ||
             html`
               <span class="nui-avatar-text">${text}</span>
@@ -68,22 +68,22 @@ export const Avatar = ({
       </div>
       ${badgeSrc
         ? html`
-          <div class="nui-avatar-badge">
-            <img src="${badgeSrc}" class="nui-badge-img" alt="${text}" />
-          </div>
-        `
+            <div class="nui-avatar-badge">
+              <img src="${badgeSrc}" class="nui-badge-img" alt="${text}" />
+            </div>
+          `
         : badge}
       ${dot
         ? html`
-          <span
-            class="${[
+            <span
+              class="${[
                 'nui-avatar-dot',
                 dot === true ? variants.dot['primary'] : variants.dot[dot],
               ]
                 .filter(Boolean)
                 .join(' ')}"
-          ></span>
-        `
+            ></span>
+          `
         : ''}
     </div>
   `

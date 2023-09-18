@@ -46,15 +46,15 @@ export const InputFileRegular = ({
     >
       ${label
         ? html`
-          <label
-            for="${id}"
-            class="${['nui-input-file-label', classes?.label]
+            <label
+              for="${id}"
+              class="${['nui-input-file-label', classes?.label]
                 .filter(Boolean)
                 .join(' ')}"
-          >
-            ${label}
-          </label>
-        `
+            >
+              ${label}
+            </label>
+          `
         : ''}
       <div
         class="${[

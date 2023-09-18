@@ -37,7 +37,7 @@ export const Dropdown = ({
       <div class="nui-menu">
         ${flavor === 'button'
           ? html`
-            ${Button({
+              ${Button({
                 shape: shape,
                 color: buttonColor,
                 children: html`
@@ -63,76 +63,76 @@ export const Dropdown = ({
                 `,
                 click: () => (open = !open),
               })}
-          `
+            `
           : ''}
         ${flavor === 'context'
           ? html`
-            <button
-              type="button"
-              class="nui-context-button"
-              @click="${() => (open = !open)}"
-            >
-              <span class="nui-context-button-inner">
-                <svg
-                  class=${['nui-context-icon', open && 'rotate-180']
+              <button
+                type="button"
+                class="nui-context-button"
+                @click="${() => (open = !open)}"
+              >
+                <span class="nui-context-button-inner">
+                  <svg
+                    class=${['nui-context-icon', open && 'rotate-180']
                       .filter(Boolean)
                       .join(' ')}
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    aria-hidden="true"
+                    role="img"
+                    class="nui-context-icon"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="1"></circle>
+                      <circle cx="19" cy="12" r="1"></circle>
+                      <circle cx="5" cy="12" r="1"></circle>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            `
+          : ''}
+        ${flavor === 'text'
+          ? html`
+              <button
+                type="button"
+                class="nui-text-button"
+                @click="${() => (open = !open)}"
+              >
+                <span class="nui-text-button-inner">${label}</span>
+                <svg
+                  class=${['nui-chevron', open && 'rotate-180']
+                    .filter(Boolean)
+                    .join(' ')}
                   aria-hidden="true"
-                  role="img"
-                  class="nui-context-icon"
-                  width="1em"
-                  height="1em"
                   viewBox="0 0 24 24"
                 >
-                  <g
+                  <path
                     fill="none"
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                  >
-                    <circle cx="12" cy="12" r="1"></circle>
-                    <circle cx="19" cy="12" r="1"></circle>
-                    <circle cx="5" cy="12" r="1"></circle>
-                  </g>
+                    d="m6 9 6 6 6-6"
+                  />
                 </svg>
-              </span>
-            </button>
-          `
-          : ''}
-        ${flavor === 'text'
-          ? html`
-            <button
-              type="button"
-              class="nui-text-button"
-              @click="${() => (open = !open)}"
-            >
-              <span class="nui-text-button-inner">${label}</span>
-              <svg
-                class=${['nui-chevron', open && 'rotate-180']
-                    .filter(Boolean)
-                    .join(' ')}
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m6 9 6 6 6-6"
-                />
-              </svg>
-            </button>
-          `
+              </button>
+            `
           : ''}
         ${open
           ? html`
-            <div
-              class=${[
+              <div
+                class=${[
                   'nui-dropdown-menu',
                   shape && variants.shape[shape],
                   color && variants.color[color],
@@ -140,8 +140,8 @@ export const Dropdown = ({
                 ]
                   .filter(Boolean)
                   .join(' ')}
-            >
-              ${headerLabel &&
+              >
+                ${headerLabel &&
                 html`
                   <div class="nui-menu-header">
                     <div class="nui-menu-header-inner">
@@ -149,9 +149,9 @@ export const Dropdown = ({
                     </div>
                   </div>
                 `}
-              <div class="nui-menu-content">${children}</div>
-            </div>
-          `
+                <div class="nui-menu-content">${children}</div>
+              </div>
+            `
           : ''}
       </div>
     </div>

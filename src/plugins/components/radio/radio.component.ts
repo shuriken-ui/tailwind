@@ -74,8 +74,8 @@ export const Radio = ({
         </label>
         ${error && typeof error === 'string'
           ? html`
-            <div class="nui-radio-error">${error}</div>
-          `
+              <div class="nui-radio-error">${error}</div>
+            `
           : ''}
       </div>
     </div>

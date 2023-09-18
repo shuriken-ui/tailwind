@@ -43,15 +43,15 @@ export const Textarea = ({
     >
       ${label && !labelFloat
         ? html`
-          <label
-            for="${id}"
-            class="${['nui-textarea-label', classes?.label]
+            <label
+              for="${id}"
+              class="${['nui-textarea-label', classes?.label]
                 .filter(Boolean)
                 .join(' ')}"
-          >
-            ${label}
-          </label>
-        `
+            >
+              ${label}
+            </label>
+          `
         : ''}
       <div class="nui-textarea-outer">
         <textarea
@@ -68,15 +68,15 @@ export const Textarea = ({
         ></textarea>
         ${label && labelFloat
           ? html`
-            <label
-              class="${['nui-label-float', classes?.label]
+              <label
+                class="${['nui-label-float', classes?.label]
                   .filter(Boolean)
                   .join(' ')}"
-              for="${id}"
-            >
-              ${label}
-            </label>
-          `
+                for="${id}"
+              >
+                ${label}
+              </label>
+            `
           : ''}
         ${loading &&
         html`

@@ -23,16 +23,16 @@ export const FullscreenDropfile = ({
     >
       ${isDropping
         ? html`
-          <div class="nui-fullscreen-dropfile-outer"></div>
-          <div class="nui-fullscreen-dropfile-inner">
-            <div class="nui-fullscreen-dropfile-container">
-              <div class="nui-fullscreen-dropfile-content">
-                ${icon}
-                <div class="nui-fullscreen-dropfile-label">${label}</div>
+            <div class="nui-fullscreen-dropfile-outer"></div>
+            <div class="nui-fullscreen-dropfile-inner">
+              <div class="nui-fullscreen-dropfile-container">
+                <div class="nui-fullscreen-dropfile-content">
+                  ${icon}
+                  <div class="nui-fullscreen-dropfile-label">${label}</div>
+                </div>
               </div>
             </div>
-          </div>
-        `
+          `
         : ''}
     </div>
   `

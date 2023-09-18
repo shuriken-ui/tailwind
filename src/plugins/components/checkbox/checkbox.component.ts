@@ -65,8 +65,8 @@ export const Checkbox = ({
         </label>
         ${error && typeof error === 'string'
           ? html`
-            <div class="nui-checkbox-error">${error}</div>
-          `
+              <div class="nui-checkbox-error">${error}</div>
+            `
           : ''}
       </div>
     </div>

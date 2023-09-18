@@ -229,25 +229,25 @@ export const Main: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -278,25 +278,25 @@ export const ShapeStraight: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -325,25 +325,25 @@ export const ShapeRounded: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -372,25 +372,25 @@ export const ShapeSmooth: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -419,25 +419,25 @@ export const ShapeCurved: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -466,25 +466,25 @@ export const ShapeFull: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -515,25 +515,25 @@ export const SizeSm: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -562,25 +562,25 @@ export const SizeMd: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -609,25 +609,25 @@ export const SizeLg: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -658,25 +658,25 @@ export const ContrastMutedSm: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -705,25 +705,25 @@ export const ContrastMutedMd: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -752,25 +752,25 @@ export const ContrastMutedLg: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -802,25 +802,25 @@ export const LabelFloatSm: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -850,25 +850,25 @@ export const LabelFloatMd: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -898,25 +898,25 @@ export const LabelFloatLg: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -948,25 +948,25 @@ export const DisabledSm: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -996,25 +996,25 @@ export const DisabledMd: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1044,25 +1044,25 @@ export const DisabledLg: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1094,25 +1094,25 @@ export const LoadingSm: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1142,25 +1142,25 @@ export const LoadingMd: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1190,25 +1190,25 @@ export const LoadingLg: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1240,25 +1240,25 @@ export const ErrorSm: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1288,25 +1288,25 @@ export const ErrorMd: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1336,25 +1336,25 @@ export const ErrorLg: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1404,25 +1404,25 @@ export const SlotIconSm: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1470,25 +1470,25 @@ export const SlotIconMd: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1536,25 +1536,25 @@ export const SlotIconLg: Story = {
             <span class="font-sans">${item.name}</span>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1617,25 +1617,25 @@ export const MediaIconSm: Story = {
             </div>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1696,25 +1696,25 @@ export const MediaIconMd: Story = {
             </div>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1775,25 +1775,25 @@ export const MediaIconLg: Story = {
             </div>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1843,25 +1843,25 @@ export const MediaImgSm: Story = {
             </div>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1909,25 +1909,25 @@ export const MediaImgMd: Story = {
             </div>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,
@@ -1975,25 +1975,25 @@ export const MediaImgLg: Story = {
             </div>
             ${index === 0
               ? html`
-                <div class="nui-listbox-selected-icon">
-                  <svg
-                    class="nui-listbox-selected-icon-inner"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 6L9 17l-5-5"
-                    />
-                  </svg>
-                </div>
-              `
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
               : ''}
           </div>
         `,

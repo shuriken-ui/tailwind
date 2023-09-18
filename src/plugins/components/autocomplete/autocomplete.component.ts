@@ -51,15 +51,15 @@ export const Autocomplete = ({
       `}
       ${label && !labelFloat
         ? html`
-          <label
-            class="${['nui-autocomplete-label', classes?.label]
+            <label
+              class="${['nui-autocomplete-label', classes?.label]
                 .filter(Boolean)
                 .join(' ')}"
-            for="${id}"
-          >
-            ${label}
-          </label>
-        `
+              for="${id}"
+            >
+              ${label}
+            </label>
+          `
         : ''}
       <div class="nui-autocomplete-outer">
         <input
@@ -72,15 +72,15 @@ export const Autocomplete = ({
         />
         ${label && labelFloat
           ? html`
-            <label
-              class="${['nui-label-float', classes?.label]
+              <label
+                class="${['nui-label-float', classes?.label]
                   .filter(Boolean)
                   .join(' ')}"
-              for="${id}"
-            >
-              ${label}
-            </label>
-          `
+                for="${id}"
+              >
+                ${label}
+              </label>
+            `
           : ''}
         ${loading &&
         html`

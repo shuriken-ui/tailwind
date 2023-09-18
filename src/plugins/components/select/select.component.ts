@@ -47,15 +47,15 @@ export const Select = ({
     >
       ${label && !labelFloat
         ? html`
-          <label
-            class="${['nui-select-label', classes?.label]
+            <label
+              class="${['nui-select-label', classes?.label]
                 .filter(Boolean)
                 .join(' ')}"
-            for="${id}"
-          >
-            ${label}
-          </label>
-        `
+              for="${id}"
+            >
+              ${label}
+            </label>
+          `
         : ''}
       <div class="nui-select-outer">
         <select
@@ -65,22 +65,22 @@ export const Select = ({
         >
           ${placeholder
             ? html`
-              <option value="" disabled hidden>${placeholder}</option>
-            `
+                <option value="" disabled hidden>${placeholder}</option>
+              `
             : ''}
           ${options}
         </select>
         ${label && labelFloat
           ? html`
-            <label
-              class="${['nui-label-float', classes?.label]
+              <label
+                class="${['nui-label-float', classes?.label]
                   .filter(Boolean)
                   .join(' ')}"
-              for="${id}"
-            >
-              ${label}
-            </label>
-          `
+                for="${id}"
+              >
+                ${label}
+              </label>
+            `
           : ''}
         ${loading &&
         html`

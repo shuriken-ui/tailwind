@@ -17,15 +17,15 @@ export const Heading = ({
   ...attrs
 }: HeadingAttrs) => {
   return html`
-    <${unsafeStatic(as)} class=${[
-      'nui-heading',
-      size && variants.size[size],
-      weight && variants.weight[weight],
-      lead && variants.lead[lead],
-      classes?.wrapper,
-    ]
-      .filter(Boolean)
-      .join(' ')}
-      ${spread(attrs)}>${children}</${unsafeStatic(as)}>
+   <${unsafeStatic(as)} class=${[
+     'nui-heading',
+     size && variants.size[size],
+     weight && variants.weight[weight],
+     lead && variants.lead[lead],
+     classes?.wrapper,
+   ]
+     .filter(Boolean)
+     .join(' ')}
+     ${spread(attrs)}>${children}</${unsafeStatic(as)}>
   `
 }
