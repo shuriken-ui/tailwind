@@ -119,7 +119,7 @@ export default plugin.withOptions(
           [`@apply text-${config.textPosition}`]: {},
 
           [`.${prefix}menu`]: {
-            [`@apply relative`]: {},
+            [`@apply relative inline-block`]: {},
           },
           [`.${prefix}menu-content`]: {
             [`@apply p-2`]: {},
