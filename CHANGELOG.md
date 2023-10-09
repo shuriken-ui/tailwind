@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.4](https://github.com/shuriken-ui/tailwind/compare/v1.2.3...v1.2.4) (2023-10-09)
+
+
+### Bug Fixes
+
+* remove unused aspec-ratio tailwind plugin ([116e39c](https://github.com/shuriken-ui/tailwind/commit/116e39cdcacbbd4105f8d2a973081d5d8b5643e6))
+
 ### [1.2.3](https://github.com/shuriken-ui/tailwind/compare/v1.2.2...v1.2.3) (2023-09-19)
 
 
