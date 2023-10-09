@@ -2,7 +2,6 @@ import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 import typography from '@tailwindcss/typography'
-import aspectRatio from '@tailwindcss/aspect-ratio'
 import containerQueries from '@tailwindcss/container-queries'
 
 import type { PluginOption } from './plugins/options'
@@ -26,7 +25,6 @@ export function createPreset(options: PluginOption = {}) {
     content: [],
     plugins: [
       typography,
-      aspectRatio,
       containerQueries,
       shurikenUIBase,
       shurikenUIComponents(options),
