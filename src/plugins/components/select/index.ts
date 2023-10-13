@@ -392,37 +392,37 @@ export default plugin.withOptions(
           },
           [`&:not(.${prefix}has-icon).${prefix}select-sm`]: {
             [`.${prefix}select`]: {
-              [`@apply h-8 py-1 text-${config.select.hasNotIcon.text.sm} leading-4 px-2`]:
+              [`@apply h-8 py-1 text-${config.select.hasNotIcon.text.sm} leading-4 ps-2 pe-7`]:
                 {},
             },
           },
           [`&.${prefix}has-icon.${prefix}select-sm`]: {
             [`.${prefix}select`]: {
-              [`@apply h-8 py-1 text-${config.select.hasIcon.text.sm} leading-4 pe-3 ps-8`]:
+              [`@apply h-8 py-1 text-${config.select.hasIcon.text.sm} leading-4 pe-7 ps-8`]:
                 {},
             },
           },
           [`&:not(.${prefix}has-icon).${prefix}select-md`]: {
             [`.${prefix}select`]: {
-              [`@apply h-10 py-2 text-${config.select.hasNotIcon.text.md} leading-5 px-3`]:
+              [`@apply h-10 py-2 text-${config.select.hasNotIcon.text.md} leading-5 ps-3 pe-8`]:
                 {},
             },
           },
           [`&.${prefix}has-icon.${prefix}select-md`]: {
             [`.${prefix}select`]: {
-              [`@apply h-10 py-2 text-${config.select.hasIcon.text.md} leading-5 pe-4 ps-10`]:
+              [`@apply h-10 py-2 text-${config.select.hasIcon.text.md} leading-5 pe-8 ps-10`]:
                 {},
             },
           },
           [`&:not(.${prefix}has-icon).${prefix}select-lg`]: {
             [`.${prefix}select`]: {
-              [`@apply h-12 py-2 text-${config.select.hasNotIcon.text.lg} leading-5 px-4`]:
+              [`@apply h-12 py-2 text-${config.select.hasNotIcon.text.lg} leading-5 ps-4 pe-9`]:
                 {},
             },
           },
           [`&.${prefix}has-icon.${prefix}select-lg`]: {
             [`.${prefix}select`]: {
-              [`@apply h-12 py-2 text-${config.select.hasIcon.text.lg} leading-5 pe-4 ps-11`]:
+              [`@apply h-12 py-2 text-${config.select.hasIcon.text.lg} leading-5 pe-9 ps-11`]:
                 {},
             },
           },
