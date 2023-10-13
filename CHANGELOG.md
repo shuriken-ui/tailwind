@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.5](https://github.com/shuriken-ui/tailwind/compare/v1.2.4...v1.2.5) (2023-10-13)
+
+
+### Bug Fixes
+
+* **select:** prevent chevron icon to overlaps with text ([3dc3287](https://github.com/shuriken-ui/tailwind/commit/3dc3287f1bfdaed1851ed1ed840e103d0d4f7095))
+
 ### [1.2.4](https://github.com/shuriken-ui/tailwind/compare/v1.2.3...v1.2.4) (2023-10-09)
 
 
