@@ -200,7 +200,7 @@ export default plugin.withOptions(
             [`@apply relative`]: {},
           },
           [`.${prefix}select-icon`]: {
-            [`@apply text-${config.icon.text} absolute start-0 top-0 z-20 flex items-center justify-center transition-colors duration-${config.icon.duration}`]:
+            [`@apply text-${config.icon.text} absolute start-0 top-0 z-10 flex items-center justify-center transition-colors duration-${config.icon.duration}`]:
               {},
           },
           [`.${prefix}select-error-text`]: {
@@ -234,7 +234,7 @@ export default plugin.withOptions(
           },
           [`.${prefix}select-chevron`]: {
             '@apply pointer-events-none': {},
-            [`@apply text-${config.select.chevron.text} absolute end-0 top-0 z-20 flex items-center justify-center transition-transform duration-${config.select.chevron.duration}`]:
+            [`@apply text-${config.select.chevron.text} absolute end-0 top-0 z-10 flex items-center justify-center transition-transform duration-${config.select.chevron.duration}`]:
               {},
           },
           [`&.${prefix}select-multiple`]: {

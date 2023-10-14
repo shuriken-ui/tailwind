@@ -359,7 +359,7 @@ export default plugin.withOptions(
               },
           },
           [`.${prefix}listbox-icon`]: {
-            [`@apply text-${config.icon.text} absolute start-0 top-0 flex items-center justify-center transition-colors duration-${config.icon.duration}`]:
+            [`@apply text-${config.icon.text} absolute start-0 top-0 z-10 flex items-center justify-center transition-colors duration-${config.icon.duration}`]:
               {},
           },
           [`.${prefix}listbox-chevron`]: {

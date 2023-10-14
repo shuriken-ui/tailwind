@@ -228,7 +228,7 @@ export default plugin.withOptions(
             [`@apply relative`]: {},
           },
           [`.${prefix}input-icon`]: {
-            [`@apply text-${config.icon.text} absolute start-0 top-0 z-20 flex items-center justify-center transition-colors duration-${config.icon.duration}`]:
+            [`@apply text-${config.icon.text} absolute start-0 top-0 z-10 flex items-center justify-center transition-colors duration-${config.icon.duration}`]:
               {},
           },
           [`.${prefix}input-error-text`]: {
