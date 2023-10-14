@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.6](https://github.com/shuriken-ui/tailwind/compare/v1.2.5...v1.2.6) (2023-10-14)
+
+
+### Bug Fixes
+
+* form icons z-index ([7e03449](https://github.com/shuriken-ui/tailwind/commit/7e03449f0dedb9391761ac369c4e3e42d62b7732))
+
 ### [1.2.5](https://github.com/shuriken-ui/tailwind/compare/v1.2.4...v1.2.5) (2023-10-13)
 
 
