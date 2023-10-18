@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/shuriken-ui/tailwind/compare/v1.2.6...v1.3.0) (2023-10-18)
+
+
+### Features
+
+* add input-number component ([c2b293d](https://github.com/shuriken-ui/tailwind/commit/c2b293da0fb7fab7fc0ac57037474fbac632a2ff))
+
+
+### Bug Fixes
+
+* **focus:** uniform focus outline accros components ([fa4c017](https://github.com/shuriken-ui/tailwind/commit/fa4c0170f4a80b3ef12c1a2e0c6de5e469897d28))
+
 ### [1.2.6](https://github.com/shuriken-ui/tailwind/compare/v1.2.5...v1.2.6) (2023-10-14)
 
 
