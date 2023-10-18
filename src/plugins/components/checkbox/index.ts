@@ -117,18 +117,22 @@ export default plugin.withOptions(
             [`@apply text-${config.error.text} ms-1 inline-block font-${config.error.font} text-${config.error.textSixe}`]:
               {},
           },
-          [`&.${prefix}checkbox-rounded .${prefix}checkbox-inner`]: {
-            [`@apply rounded`]: {},
-          },
-          [`&.${prefix}checkbox-smooth .${prefix}checkbox-inner`]: {
-            [`@apply rounded-${config.rounded.smooth}`]: {},
-          },
-          [`&.${prefix}checkbox-curved .${prefix}checkbox-inner`]: {
-            [`@apply rounded-${config.rounded.curved}`]: {},
-          },
-          [`&.${prefix}checkbox-full .${prefix}checkbox-inner`]: {
-            [`@apply rounded-${config.rounded.full}`]: {},
-          },
+          [`&.${prefix}checkbox-rounded .${prefix}checkbox-outer, &.${prefix}checkbox-rounded .${prefix}checkbox-inner`]:
+            {
+              [`@apply rounded`]: {},
+            },
+          [`&.${prefix}checkbox-smooth .${prefix}checkbox-outer, &.${prefix}checkbox-smooth .${prefix}checkbox-inner`]:
+            {
+              [`@apply rounded-${config.rounded.smooth}`]: {},
+            },
+          [`&.${prefix}checkbox-curved .${prefix}checkbox-outer, &.${prefix}checkbox-curved .${prefix}checkbox-inner`]:
+            {
+              [`@apply rounded-${config.rounded.curved}`]: {},
+            },
+          [`&.${prefix}checkbox-full .${prefix}checkbox-outer, &.${prefix}checkbox-full .${prefix}checkbox-inner`]:
+            {
+              [`@apply rounded-${config.rounded.full}`]: {},
+            },
           [`&.${prefix}checkbox-default`]: {
             [`@apply text-${config.default.text} dark:text-${config.default.textDark}`]:
               {},

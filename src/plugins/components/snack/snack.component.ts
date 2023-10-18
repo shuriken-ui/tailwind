@@ -52,7 +52,7 @@ export const Snack = ({
       ${ButtonClose({
         shape: 'full',
         classes: {
-          wrapper: 'nui-snack-button',
+          wrapper: 'nui-snack-button scale-75',
         },
       })}
     </div>

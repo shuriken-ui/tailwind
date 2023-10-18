@@ -72,7 +72,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}snack`]: {
-          [`@apply ${prefix}focus inline-flex items-center gap-1 rounded-${config.rounded} outline-transparent overflow-hidden`]:
+          [`@apply inline-flex items-center gap-1 rounded-${config.rounded} outline-transparent`]:
             {},
 
           [`.${prefix}snack-icon`]: {

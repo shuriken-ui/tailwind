@@ -43,7 +43,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}dropdown-item`]: {
-          [`@apply flex w-full items-center justify-start gap-2 px-3 py-2 text-${config.textPosition} text-${config.textSize} cursor-pointer transition-colors duration-${config.duration}`]:
+          [`@apply ${prefix}focus flex w-full items-center justify-start gap-2 px-3 py-2 text-${config.textPosition} text-${config.textSize} cursor-pointer transition-colors duration-${config.duration}`]:
             {},
 
           [`.${prefix}item-content`]: {

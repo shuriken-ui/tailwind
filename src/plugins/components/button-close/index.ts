@@ -69,7 +69,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}button-close`]: {
-          [`@apply flex h-${config.size} w-${config.size} items-center justify-center transition-colors duration-${config.duration} disabled:opacity-30 cursor-pointer`]:
+          [`@apply ${prefix}focus flex h-${config.size} w-${config.size} items-center justify-center transition-colors duration-${config.duration} disabled:opacity-30 cursor-pointer`]:
             {},
 
           [`.${prefix}button-icon`]: {

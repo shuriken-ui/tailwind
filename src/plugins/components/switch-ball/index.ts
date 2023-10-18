@@ -69,14 +69,15 @@ export default plugin.withOptions(
           [`@apply flex cursor-pointer items-center`]: {},
 
           [`.${prefix}switch-ball-outer`]: {
-            [`@apply relative block`]: {},
+            [`@apply ${prefix}focus relative block rounded-${config.handle.rounded}`]:
+              {},
           },
           [`.${prefix}switch-ball-handle`]: {
             [`@apply border-${config.handle.border} dark:border-${config.handle.borderDark} dark:bg-${config.handle.bgDark} absolute start-0.5 top-1/2 z-10 flex h-${config.handle.size} w-${config.handle.size} -translate-y-1/2 items-center justify-center rounded-${config.handle.rounded} border bg-${config.handle.bg} shadow transition focus:w-6`]:
               {},
           },
           [`.${prefix}switch-ball-track`]: {
-            [`@apply bg-${config.track.bg} dark:bg-${config.track.bgDark} block h-6 w-11 rounded-${config.track.rounded} shadow-inner outline-1 outline-transparent transition-all duration-${config.track.duration}`]:
+            [`@apply bg-${config.track.bg} dark:bg-${config.track.bgDark} block h-6 w-11 rounded-${config.track.rounded} shadow-inner transition-all duration-${config.track.duration}`]:
               {},
           },
           [`.${prefix}switch-ball-icon`]: {
@@ -105,10 +106,6 @@ export default plugin.withOptions(
 
             [`&:checked ~ .${prefix}switch-ball-handle`]: {
               [`@apply -translate-y-1/2 translate-x-full rtl:-translate-x-full`]:
-                {},
-            },
-            [`&:checked ~ .${prefix}switch-ball-track`]: {
-              [`@apply outline-dashed outline-offset-2 ring-0 dark:outline-muted-600 outline-muted-300`]:
                 {},
             },
             [`&:checked ~ .${prefix}switch-ball-icon`]: {

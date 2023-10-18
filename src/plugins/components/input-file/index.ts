@@ -99,7 +99,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}input-file`]: {
-          [`@apply relative block`]: {},
+          [`@apply relative block ${prefix}focus`]: {},
 
           [`&.${prefix}input-file-drop`]: {
             [`@apply relative h-${config.drop.size} border-dashed border-2 border-${config.drop.border} dark:border-${config.drop.borderDark} hover:border-${config.drop.borderHover} dark:hover:border-${config.drop.borderHoverDark} bg-${config.drop.bg} dark:bg-${config.drop.bgDark} flex justify-center items-center transition-colors duration-${config.drop.duration}`]:
@@ -155,7 +155,7 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}combo-input`]: {
-              [`@apply block w-${config.combo.input.size} text-${config.combo.input.textSize} text-${config.combo.input.text} dark:text-${config.combo.input.textDark} file:me-4 file:py-2 file:px-4 file:border-0 file:cursor-pointer file:text-${config.combo.input.textFileSize} file:transition-colors file:bg-${config.combo.input.bgFile} file:text-${config.combo.input.textFile} hover:file:bg-${config.combo.input.bgFileHover}`]:
+              [`@apply outline-none block w-${config.combo.input.size} text-${config.combo.input.textSize} text-${config.combo.input.text} dark:text-${config.combo.input.textDark} file:me-4 file:py-2 file:px-4 file:border-0 file:cursor-pointer file:text-${config.combo.input.textFileSize} file:transition-colors file:bg-${config.combo.input.bgFile} file:text-${config.combo.input.textFile} hover:file:bg-${config.combo.input.bgFileHover}`]:
                 {},
             },
           },

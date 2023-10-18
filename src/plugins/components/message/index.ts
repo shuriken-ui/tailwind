@@ -203,7 +203,7 @@ export default plugin.withOptions(
               {},
           },
           [`.${prefix}message-close`]: {
-            [`@apply ${prefix}focus text-${config.messageClose.text} me-2 ms-auto flex cursor-pointer items-center justify-center p-${config.messageClose.space} outline-none rounded-${config.messageClose.rounded} transition-colors duration-${config.messageClose.duration}`]:
+            [`@apply ${prefix}focus text-${config.messageClose.text} me-2 ms-auto flex cursor-pointer items-center justify-center p-${config.messageClose.space} rounded-${config.messageClose.rounded} transition-colors duration-${config.messageClose.duration}`]:
               {},
             [`.${prefix}close-icon`]: {
               [`@apply h-${config.messageClose.iconSize} w-${config.messageClose.iconSize}`]:

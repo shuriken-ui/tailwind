@@ -115,7 +115,7 @@ export default plugin.withOptions(
             [`@apply relative`]: {},
           },
           [`.${prefix}input-file-inner`]: {
-            [`@apply relative ${prefix}focus flex w-${config.inner.size} cursor-pointer items-center overflow-hidden font-${config.inner.font} transition-colors duration-${config.inner.duration} focus-within:outline-1 disabled:cursor-not-allowed disabled:opacity-75`]:
+            [`@apply relative ${prefix}focus flex w-${config.inner.size} cursor-pointer items-center overflow-hidden font-${config.inner.font} transition-colors duration-${config.inner.duration} disabled:cursor-not-allowed disabled:opacity-75`]:
               {},
           },
           [`.${prefix}input-file-addon`]: {

@@ -4,7 +4,7 @@ import { type PluginOption, defaultPluginOptions } from '../../options'
 
 const defaultFocusConfig = {
   offset: '2',
-  width: '1',
+  width: '2',
   style: 'dashed',
   color: 'muted-300',
   colorDark: 'muted-600',

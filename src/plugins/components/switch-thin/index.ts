@@ -64,14 +64,15 @@ export default plugin.withOptions(
           [`@apply flex cursor-pointer items-center`]: {},
 
           [`.${prefix}switch-thin-outer`]: {
-            [`@apply relative block h-4`]: {},
+            [`@apply ${prefix}focus relative block h-4 rounded-${config.handle.rounded}`]:
+              {},
           },
           [`.${prefix}switch-thin-handle`]: {
             [`@apply border-${config.handle.border} dark:border-${config.handle.borderDark} dark:bg-${config.handle.bgDark} absolute -start-1 top-1/2 flex h-${config.handle.size} w-${config.handle.size} -translate-y-1/2 items-center justify-center rounded-${config.handle.rounded} border bg-${config.handle.bg} shadow transition`]:
               {},
           },
           [`.${prefix}switch-thin-track`]: {
-            [`@apply bg-${config.track.bg} dark:bg-${config.track.bgDark} block h-4 w-10 rounded-${config.track.rounded} shadow-inner outline-1 outline-transparent transition-all duration-${config.track.duration}`]:
+            [`@apply bg-${config.track.bg} dark:bg-${config.track.bgDark} block h-4 w-10 rounded-${config.track.rounded} shadow-inner transition-all duration-${config.track.duration}`]:
               {},
           },
           [`.${prefix}switch-thin-single-label`]: {
@@ -96,10 +97,6 @@ export default plugin.withOptions(
 
             [`&:checked ~ .${prefix}switch-thin-handle`]: {
               [`@apply -translate-y-1/2 translate-x-full rtl:-translate-x-full`]:
-                {},
-            },
-            [`&:checked ~ .${prefix}switch-thin-track`]: {
-              [`@apply outline-dashed outline-offset-2 ring-0 dark:outline-muted-600 outline-muted-300`]:
                 {},
             },
           },
