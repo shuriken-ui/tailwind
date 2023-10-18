@@ -23,6 +23,7 @@ import iconBox from './icon-box'
 import inputFileRegular from './input-file-regular'
 import inputFile from './input-file'
 import input from './input'
+import inputNumber from './input-number'
 import label from './label'
 import link from './link'
 import list from './list'
@@ -78,6 +79,7 @@ const components = [
   inputFileRegular,
   inputFile,
   input,
+  inputNumber,
   label,
   link,
   list,
