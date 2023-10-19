@@ -8,6 +8,7 @@ const defaultFocusConfig = {
   style: 'dashed',
   color: 'muted-300',
   colorDark: 'muted-600',
+  mode: 'always' as 'always' | 'focus-visible',
 }
 
 export default plugin.withOptions(
@@ -23,18 +24,20 @@ export default plugin.withOptions(
         'shurikenUi.focus',
       ) satisfies typeof defaultFocusConfig
 
+      const mode =
+        config.mode === 'focus-visible'
+          ? '&:has(:focus-visible), &:focus-visible'
+          : '&:focus-within'
+
       addComponents({
         [`.${prefix}focus`]: {
           [`@apply outline-${config.width} outline-${config.style} outline-offset-${config.offset}`]:
             {},
           '@apply outline-transparent': {},
-          '&:focus-within': {
+          [mode]: {
             [`@apply outline-${config.color} dark:outline-${config.colorDark}`]:
               {},
             [`@apply outline-${config.style} ring-0`]: {},
-          },
-          '&:focus-visible': {
-            [`@apply outline-${config.width}`]: {},
           },
         },
       })
