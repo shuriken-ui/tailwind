@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/shuriken-ui/tailwind/compare/v1.3.0...v1.4.0) (2023-10-19)
+
+
+### Features
+
+* **focus:** add mode option to change outline behavior ([511a376](https://github.com/shuriken-ui/tailwind/commit/511a376085585ca1ee48a7cb935389c4553591ed))
+
 ## [1.3.0](https://github.com/shuriken-ui/tailwind/compare/v1.2.6...v1.3.0) (2023-10-18)
 
 
