@@ -7,7 +7,7 @@ import { Button } from '../button/button.component'
 
 // More on how to set up stories at: https://storybook.js.org/docs/web-components/writing-stories/introduction
 const meta = {
-  title: 'Shuriken UI/Base/Button group',
+  title: 'Shuriken UI/Base/Button Group',
   // tags: ['autodocs'],
   render: (args) => ButtonGroup(args),
   argTypes: {},

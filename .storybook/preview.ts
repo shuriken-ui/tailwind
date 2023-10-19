@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/web-components'
-import { withThemeByClassName } from '@storybook/addon-styling'
+import { withThemeByClassName } from '@storybook/addon-themes'
 import './tailwind.css'
 
 const preview: Preview = {
@@ -12,8 +12,12 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      default: 'white',
+      default: 'default',
       values: [
+        {
+          name: 'default',
+          value: 'transparent',
+        },
         {
           name: 'white',
           value: '#ffffff',
