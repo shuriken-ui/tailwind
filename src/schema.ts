@@ -121,6 +121,6 @@ type ShurikenUITheme = BaseTheme &
     shurikenUi: ShurikenUIPlugins
   }>
 
-export type ShurikenUIConfig = Omit<Config, 'theme'> & {
+export type ShurikenUIConfig = Config & {
   theme?: ShurikenUITheme & { extend?: ShurikenUITheme }
 }
