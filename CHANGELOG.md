@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/shuriken-ui/tailwind/compare/v1.4.0...v1.5.0) (2023-11-16)
+
+
+### Features
+
+* add typing for tailwind config ([20d21fa](https://github.com/shuriken-ui/tailwind/commit/20d21fa4cbb7cdb66121f0b799ba1bc0e43387b0))
+
 ## [1.4.0](https://github.com/shuriken-ui/tailwind/compare/v1.3.0...v1.4.0) (2023-10-19)
 
 
