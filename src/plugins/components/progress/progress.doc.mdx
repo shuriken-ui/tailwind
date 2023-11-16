@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ProgressStories from './progress.stories'
-import { defaultProgressConfig } from '.'
+import { defaultConfig } from './progress.config'
 
 <Meta of={ProgressStories} />
 
@@ -104,7 +104,7 @@ Progress bars can be shown in an indeterminate state.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultProgressConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

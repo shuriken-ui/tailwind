@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as CardStories from './card.stories'
-import { defaultCardConfig } from '.'
+import { defaultConfig } from './card.config'
 
 <Meta of={CardStories} />
 
@@ -170,7 +170,7 @@ Cards have a default slot that serves as wrapper for their inner content.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultCardConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

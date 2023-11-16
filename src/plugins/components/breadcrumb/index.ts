@@ -1,31 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultBreadcrumbConfig = {
-  list: {
-    font: 'sans',
-    text: '[0.85rem]',
-    itemInner: {
-      text: 'muted-500',
-      duration: '300',
-      icon: {
-        size: '4',
-        dot: {
-          text: 'xl',
-        },
-      },
-      link: {
-        textHover: 'primary-500',
-        texFocus: 'primary-500',
-      },
-      itemText: {
-        text: 'muted-500',
-        space: '2',
-      },
-    },
-  },
-}
+import { type BreadcrumbConfig, defaultConfig, key } from './breadcrumb.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -36,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.breadcrumb',
-      ) satisfies typeof defaultBreadcrumbConfig
+      const config = theme(`shurikenUi.${key}`) satisfies BreadcrumbConfig
 
       addComponents({
         [`.${prefix}breadcrumb`]: {
@@ -83,7 +57,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          breadcrumb: defaultBreadcrumbConfig,
+          [key]: defaultConfig,
         },
       },
     }

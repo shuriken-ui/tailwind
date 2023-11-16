@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as FullscreenDropfileStories from './fullscreen-dropfile.stories'
-import { defaultFullscreenDropfileConfig } from '.'
+import { defaultConfig } from './fullscreen-dropfile.config'
 
 <Meta of={FullscreenDropfileStories} />
 
@@ -45,7 +45,7 @@ Fullscreen dropfile allows you to drag and drop any file into the screen.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultFullscreenDropfileConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

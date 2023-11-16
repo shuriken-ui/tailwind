@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as MessageTextStories from './message-text.stories'
-import { defaultMessageTextConfig } from '.'
+import { defaultConfig } from './message-text.config'
 
 <Meta of={MessageTextStories} />
 
@@ -137,7 +137,7 @@ Messages can have different colors. The following example shows the danger color
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultMessageTextConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

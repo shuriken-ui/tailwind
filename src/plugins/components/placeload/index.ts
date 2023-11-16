@@ -1,6 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
+import { type PlaceloadConfig, defaultConfig, key } from './placeload.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -10,7 +11,9 @@ export default plugin.withOptions(
       prefix = `${prefix}-`
     }
 
-    return function ({ addComponents }) {
+    return function ({ addComponents, theme }) {
+      const config = theme(`shurikenUi.${key}`) satisfies PlaceloadConfig
+
       addComponents({
         [`.${prefix}placeload`]: {
           position: 'relative',
@@ -36,6 +39,9 @@ export default plugin.withOptions(
 
     return {
       theme: {
+        shurikenUi: {
+          [key]: defaultConfig,
+        },
         extend: {
           keyframes: {
             [`${prefix}placeload`]: {

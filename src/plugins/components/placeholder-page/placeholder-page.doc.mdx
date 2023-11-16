@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as PlaceholderPageStories from './placeholder-page.stories'
-import { defaultPlaceholderPageConfig } from '.'
+import { defaultConfig } from './placeholder-page.config'
 
 <Meta of={PlaceholderPageStories} />
 
@@ -45,7 +45,7 @@ Placeholders allow you to fill in areas that don't have content yet.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultPlaceholderPageConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

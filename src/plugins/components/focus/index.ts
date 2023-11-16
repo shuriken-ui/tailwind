@@ -1,15 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-const defaultFocusConfig = {
-  offset: '2',
-  width: '2',
-  style: 'dashed',
-  color: 'muted-300',
-  colorDark: 'muted-600',
-  mode: 'always' as 'always' | 'focus-visible',
-}
+import { type FocusConfig, defaultConfig, key } from './focus.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -20,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.focus',
-      ) satisfies typeof defaultFocusConfig
+      const config = theme(`shurikenUi.${key}`) satisfies FocusConfig
 
       const mode =
         config.mode === 'focus-visible'
@@ -47,7 +37,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          focus: defaultFocusConfig,
+          [key]: defaultConfig,
         },
       },
     }

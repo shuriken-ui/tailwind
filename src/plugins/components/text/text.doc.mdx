@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as TextStories from './text.stories'
-import { defaultTextConfig } from '.'
+import { defaultConfig } from './text.config'
 
 <Meta of={TextStories} />
 
@@ -67,7 +67,7 @@ Use the Text component to display some content or a subtitle. You can use variou
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultTextConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

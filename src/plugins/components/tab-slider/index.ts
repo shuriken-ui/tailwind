@@ -1,41 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultTabSliderConfig = {
-  track: {
-    bg: 'muted-100',
-    bgDark: 'muted-700',
-    size: 'full',
-    font: 'sans',
-  },
-  item: {
-    notActiveText: 'muted-400',
-    activeText: 'white',
-    fontSize: 'sm',
-    fontFamily: 'sans',
-  },
-  naver: {
-    bg: 'primary-500',
-    duration: '300',
-  },
-  rounded: {
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
-    full: 'full',
-  },
-  tabsSM: {
-    twoSlotsW: '[140px]',
-    threeSlotsW: '[210px]',
-    track: '8',
-  },
-  tabsMD: {
-    twoSlotsW: '[250px]',
-    threeSlotsW: '[320px]',
-    track: '10',
-  },
-}
+import { type TabSliderConfig, defaultConfig, key } from './tab-slider.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -46,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.tabSlider',
-      ) satisfies typeof defaultTabSliderConfig
+      const config = theme(`shurikenUi.${key}`) satisfies TabSliderConfig
 
       addComponents({
         [`.${prefix}tab-slider`]: {
@@ -171,7 +135,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          tabSlider: defaultTabSliderConfig,
+          [key]: defaultConfig,
         },
       },
     }

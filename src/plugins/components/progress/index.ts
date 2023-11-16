@@ -1,35 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultProgressConfig = {
-  size: 'full',
-  bar: {
-    duration: '300',
-  },
-  default: {
-    bg: 'muted-200',
-    bgDark: 'muted-700',
-  },
-  defaultContrast: {
-    bg: 'muted-200',
-    bgDark: 'muted-900',
-  },
-  progressXS: '1',
-  progressSM: '2',
-  progressMD: '3',
-  progressLG: '3',
-  progressXL: '5',
-  rounded: {
-    curved: 'lg',
-    full: 'full',
-  },
-  primary: 'primary-500',
-  info: 'info-500',
-  success: 'success-500',
-  warning: 'warning-500',
-  danger: 'danger-500',
-}
+import { type ProgressConfig, defaultConfig, key } from './progress.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -40,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.progress',
-      ) satisfies typeof defaultProgressConfig
+      const config = theme(`shurikenUi.${key}`) satisfies ProgressConfig
 
       addComponents({
         [`.${prefix}progress`]: {
@@ -129,7 +99,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          progress: defaultProgressConfig,
+          [key]: defaultConfig,
         },
         extend: {
           keyframes: {

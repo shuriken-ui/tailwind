@@ -1,8 +1,8 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
 
-import type { InputAttrs } from './input.types'
-import * as variants from './input.variants'
+import type { InputAttrs } from './input-number.types'
+import * as variants from './input-number.variants'
 
 /**
  * Primary UI component for user interaction

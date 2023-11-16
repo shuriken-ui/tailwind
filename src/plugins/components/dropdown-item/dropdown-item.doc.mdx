@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as DropdownItemStories from './dropdown-item.stories'
-import { defaultDropdownItemConfig } from '.'
+import { defaultConfig } from './dropdown-item.config'
 
 <Meta of={DropdownItemStories} />
 
@@ -120,7 +120,7 @@ Dropdown items have an end slot where you can put an action or whatever else you
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultDropdownItemConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

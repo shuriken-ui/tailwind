@@ -1,26 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultModalConfig = {
-  backdrop: {
-    bg: 'muted-800/70',
-    bgDark: 'muted-900/80',
-  },
-  contentInner: {
-    space: '4',
-  },
-  contentPanel: {
-    size: 'full',
-    text: 'start',
-  },
-  modalSM: 'sm',
-  modalMD: 'md',
-  modalLG: 'xl',
-  modalXL: '2xl',
-  modal2XL: '3xl',
-  modal3XL: '5xl',
-}
+import { type ModalConfig, defaultConfig, key } from './modal.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -31,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.modal',
-      ) satisfies typeof defaultModalConfig
+      const config = theme(`shurikenUi.${key}`) satisfies ModalConfig
 
       addComponents({
         [`.${prefix}modal`]: {
@@ -96,7 +75,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          modal: defaultModalConfig,
+          [key]: defaultConfig,
         },
       },
     }

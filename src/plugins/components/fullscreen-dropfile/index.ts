@@ -1,17 +1,11 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultFullscreenDropfileConfig = {
-  border: 'primary-500',
-  height: '[230px]',
-  width: '[500px]',
-  icon: {
-    text: 'primary-500',
-    textSize: '6xl',
-  },
-  labelTextSize: 'base',
-}
+import {
+  type FullscreenDropfileConfig,
+  defaultConfig,
+  key,
+} from './fullscreen-dropfile.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -23,8 +17,8 @@ export default plugin.withOptions(
 
     return function ({ addComponents, theme }) {
       const config = theme(
-        'shurikenUi.fullscreenDropfile',
-      ) satisfies typeof defaultFullscreenDropfileConfig
+        `shurikenUi.${key}`,
+      ) satisfies FullscreenDropfileConfig
 
       addComponents({
         [`.${prefix}fullscreen-dropfile`]: {
@@ -60,7 +54,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          fullscreenDropfile: defaultFullscreenDropfileConfig,
+          [key]: defaultConfig,
         },
       },
     }

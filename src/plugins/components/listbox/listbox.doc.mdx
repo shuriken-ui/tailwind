@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ListboxStories from './listbox.stories'
-import { defaultListboxConfig } from '.'
+import { defaultConfig } from './listbox.config'
 
 <Meta of={ListboxStories} />
 
@@ -211,7 +211,7 @@ Listboxes have images displayed inside result items.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultListboxConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

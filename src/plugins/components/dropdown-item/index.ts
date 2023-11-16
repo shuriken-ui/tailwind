@@ -1,32 +1,11 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultDropdownItemConfig = {
-  itemRounded: 'md',
-  textPosition: 'left',
-  textSize: 'sm',
-  duration: '300',
-  notActive: {
-    text: 'muted-500',
-  },
-  default: {
-    bg: 'muted-100',
-    bgDark: 'muted-700',
-    text: 'primary-500',
-  },
-  contrast: {
-    bg: 'muted-100',
-    bgDark: 'muted-900',
-    text: 'primary-500',
-  },
-  rounded: {
-    straight: 'none',
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
-  },
-}
+import {
+  type DropdownItemConfig,
+  defaultConfig,
+  key,
+} from './dropdown-item.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -37,9 +16,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.dropdownItem',
-      ) satisfies typeof defaultDropdownItemConfig
+      const config = theme(`shurikenUi.${key}`) satisfies DropdownItemConfig
 
       addComponents({
         [`.${prefix}dropdown-item`]: {
@@ -81,7 +58,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          dropdownItem: defaultDropdownItemConfig,
+          [key]: defaultConfig,
         },
       },
     }

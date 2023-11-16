@@ -1,20 +1,11 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultProgressCircleConfig = {
-  circleDuration: '500',
-  default: {
-    text: 'muted-200',
-    textDark: 'muted-700',
-    stroke: 'current',
-  },
-  contrast: {
-    text: 'muted-200',
-    textDark: 'muted-900',
-    stroke: 'current',
-  },
-}
+import {
+  type ProgressCircleConfig,
+  defaultConfig,
+  key,
+} from './progress-circle.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -25,9 +16,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.progressCircle',
-      ) satisfies typeof defaultProgressCircleConfig
+      const config = theme(`shurikenUi.${key}`) satisfies ProgressCircleConfig
 
       addComponents({
         [`.${prefix}progress-circle`]: {
@@ -53,7 +42,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          progressCircle: defaultProgressCircleConfig,
+          [key]: defaultConfig,
         },
       },
     }

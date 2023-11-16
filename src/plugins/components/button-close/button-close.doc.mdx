@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ButtonCloseStories from './button-close.stories'
-import { defaultButtonCloseConfig } from '.'
+import { defaultConfig } from './button-close.config'
 
 <Meta of={ButtonCloseStories} />
 
@@ -145,7 +145,7 @@ Close buttons can have different colors. Below is an example of the danger color
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultButtonCloseConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

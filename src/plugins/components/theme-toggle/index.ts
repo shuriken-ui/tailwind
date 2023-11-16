@@ -1,50 +1,11 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultThemeToggleConfig = {
-  size: '9',
-  rounded: 'full',
-  duration: '300',
-  ringDark: 'muted-900',
-  inner: {
-    size: '9',
-    rounded: 'full',
-    bg: 'white',
-    bgDark: 'muted-800',
-    border: 'muted-300',
-    borderDark: 'muted-700',
-  },
-  input: {
-    size: 'full',
-  },
-  sun: {
-    size: '5',
-    duration: '300',
-    text: 'yellow-400',
-  },
-  moon: {
-    size: '5',
-    duration: '300',
-    text: 'yellow-400',
-  },
-  inverted: {
-    ring: 'muted-500',
-    ringDark: 'muted-400',
-    inner: {
-      bg: 'primary-700',
-    },
-  },
-  notInverted: {
-    ringDark: 'muted-900',
-    inner: {
-      bg: 'white',
-      bgDark: 'muted-800',
-      border: 'muted-300',
-      borderDark: 'muted-700',
-    },
-  },
-}
+import {
+  type ThemeToggleConfig,
+  defaultConfig,
+  key,
+} from './theme-toggle.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -55,9 +16,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.themeToggle',
-      ) satisfies typeof defaultThemeToggleConfig
+      const config = theme(`shurikenUi.${key}`) satisfies ThemeToggleConfig
 
       addComponents({
         [`.${prefix}theme-toggle`]: {
@@ -120,7 +79,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          themeToggle: defaultThemeToggleConfig,
+          [key]: defaultConfig,
         },
       },
     }

@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as InputFileStories from './input-file.stories'
-import { defaultInputFileConfig } from '.'
+import { defaultConfig } from './input-file.config'
 
 <Meta of={InputFileStories} />
 
@@ -115,7 +115,7 @@ File inputs can be displayed as an upload button.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultInputFileConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

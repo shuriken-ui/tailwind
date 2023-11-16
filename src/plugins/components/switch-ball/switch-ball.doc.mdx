@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as SwitchBallStories from './switch-ball.stories'
-import { defaultSwitchBallConfig } from '.'
+import { defaulConfig } from './switch-ball.config'
 
 <Meta of={SwitchBallStories} />
 
@@ -88,7 +88,7 @@ Switches can be shown in a disabled state.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultSwitchBallConfig, null, 2)}
+        {JSON.stringify(defaulConfig, null, 2)}
       </pre>
     </div>
 

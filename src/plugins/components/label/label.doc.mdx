@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as LabelStories from './label.stories'
-import { defaultLabelConfig } from '.'
+import { defaultConfig } from './label.config'
 
 <Meta of={LabelStories} />
 
@@ -45,7 +45,7 @@ Labels allow you to identify and describe a form element, like an input, a check
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultLabelConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

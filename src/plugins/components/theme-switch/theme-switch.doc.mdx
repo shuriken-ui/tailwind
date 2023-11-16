@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ThemeSwitchStories from './theme-switch.stories'
-import { defaultThemeSwitchConfig } from '.'
+import { defaultConfig } from './theme-switch.config'
 
 <Meta of={ThemeSwitchStories} />
 
@@ -45,7 +45,7 @@ The theme switch is a control that lets you toggle between light and dark mode.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultThemeSwitchConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

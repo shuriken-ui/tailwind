@@ -2,11 +2,11 @@ import { axe } from 'vitest-axe'
 import { expect, test, describe } from 'vitest'
 import { render, html } from 'lit'
 
-import { Input } from './input.component'
+import { InputNumber } from './input-number.component'
 
 describe('Input', () => {
   test('Should have no axe violations', async () => {
-    const input = Input({
+    const input = InputNumber({
       label: 'Input',
       shape: 'rounded',
       type: 'text',

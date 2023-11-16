@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as RadioStories from './radio.stories'
-import { defaultRadioConfig } from '.'
+import { defaultConfig } from './radio.config'
 
 <Meta of={RadioStories} />
 
@@ -154,7 +154,7 @@ Radio buttons can be shown in a disabled state.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultRadioConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

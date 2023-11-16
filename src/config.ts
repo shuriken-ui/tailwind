@@ -3,5 +3,5 @@ import { preset } from './preset'
 
 export default {
   content: [],
-  presets: [preset],
+  presets: [preset as any],
 } satisfies Config

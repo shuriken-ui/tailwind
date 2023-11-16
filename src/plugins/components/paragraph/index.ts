@@ -1,33 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultParagraphConfig = {
-  textXS: 'xs',
-  textSM: 'sm',
-  textMD: 'base',
-  textLG: 'lg',
-  textXL: 'xl',
-  text2XL: '2xl',
-  text3XL: '3xl',
-  text4XL: '4xl',
-  text5XL: '5xl',
-  text6XL: '6xl',
-  text7XL: '7xl',
-  text8XL: '8xl',
-  text9XL: '9xl',
-  textLight: 'light',
-  textNormal: 'normal',
-  textMedium: 'medium',
-  textSemibold: 'semibold',
-  textBold: 'bold',
-  textExtrabold: 'extrabold',
-  textLeadNone: 'none',
-  textLeadNormal: 'normal',
-  textLeadTight: 'tight',
-  textLeadSnug: 'snug',
-  textLeadLoose: 'loose',
-}
+import { type ParagraphConfig, defaultConfig, key } from './paragraph.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -38,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.paragraph',
-      ) satisfies typeof defaultParagraphConfig
+      const config = theme(`shurikenUi.${key}`) satisfies ParagraphConfig
 
       addComponents({
         [`.${prefix}paragraph`]: {
@@ -126,7 +98,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          paragraph: defaultParagraphConfig,
+          [key]: defaultConfig,
         },
       },
     }

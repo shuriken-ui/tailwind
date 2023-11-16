@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { ShurikenUIConfig } from './schema'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 import typography from '@tailwindcss/typography'
@@ -11,7 +11,7 @@ import shurikenUIUtilities from './plugins/utilities'
 
 const ShurikenUISymbol = '__is_shuriken_ui'
 
-export function hasPreset(config: Config) {
+export function hasPreset(config: ShurikenUIConfig) {
   if (config.presets && Array.isArray(config.presets)) {
     return config.presets.some((preset) => preset && ShurikenUISymbol in preset)
   }
@@ -140,7 +140,7 @@ export function createPreset(options: PluginOption = {}) {
         }),
       },
     },
-  } satisfies Config
+  } satisfies ShurikenUIConfig
 
   Object.defineProperty(config, ShurikenUISymbol, {
     value: true,

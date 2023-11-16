@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as SnackStories from './snack.stories'
-import { defaultSnackConfig } from '.'
+import { defaultConfig } from './snack.config'
 
 <Meta of={SnackStories} />
 
@@ -139,7 +139,7 @@ Snacks have an image slot that can be used to display an image. The image is sma
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultSnackConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

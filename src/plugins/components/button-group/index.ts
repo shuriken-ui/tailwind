@@ -1,8 +1,11 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultButtonGroupConfig = {}
+import {
+  type ButtonGroupConfig,
+  defaultConfig,
+  key,
+} from './button-group.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -13,9 +16,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.buttonGroup',
-      ) satisfies typeof defaultButtonGroupConfig
+      const config = theme(`shurikenUi.${key}`) satisfies ButtonGroupConfig
 
       addComponents({
         [`.${prefix}button-group`]: {
@@ -135,7 +136,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          buttonGroup: defaultButtonGroupConfig,
+          [key]: defaultConfig,
         },
       },
     }

@@ -1,16 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-const defaultTooltipConfig = {
-  font: 'sans',
-  bg: '[#1e293b]',
-  bgDark: '[#ec4899]',
-  text: '[#fff]',
-  textDark: '[#fff]',
-  minWidth: '3rem',
-  maxWidth: '21rem',
-}
+import { type TooltipConfig, defaultConfig, key } from './tooltip.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -21,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.tooltip',
-      ) satisfies typeof defaultTooltipConfig
+      const config = theme(`shurikenUi.${key}`) satisfies TooltipConfig
 
       const tooltip = `data-${prefix}tooltip`
       const position = `data-${prefix}tooltip-position`
@@ -203,6 +192,9 @@ export default plugin.withOptions(
 
     return {
       theme: {
+        shurikenUi: {
+          [key]: defaultConfig,
+        },
         extend: {
           keyframes: {
             [`${prefix}tooltip-x`]: {
@@ -222,9 +214,6 @@ export default plugin.withOptions(
             [`${prefix}tooltip-x`]: `${prefix}tooltip-x 300ms ease-out forwards`,
             [`${prefix}tooltip-y`]: `${prefix}tooltip-y 300ms ease-out forwards`,
           },
-        },
-        shurikenUi: {
-          tooltip: defaultTooltipConfig,
         },
       },
     }

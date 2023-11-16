@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ParagraphStories from './paragraph.stories'
-import { defaultParagraphConfig } from '.'
+import { defaultConfig } from './paragraph.config'
 
 <Meta of={ParagraphStories} />
 
@@ -67,7 +67,7 @@ Use the Paragraph component to display some content or a subtitle. You can use v
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultParagraphConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

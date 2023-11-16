@@ -1,55 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultSwitchBallConfig = {
-  handle: {
-    border: 'muted-300',
-    borderDark: 'muted-600',
-    bg: 'white',
-    bgDark: 'muted-700',
-    size: '5',
-    rounded: 'full',
-  },
-  track: {
-    bg: 'muted-300',
-    bgDark: 'muted-600',
-    rounded: 'full',
-    duration: '300',
-  },
-  icon: {
-    size: '2.5',
-    text: 'white',
-    duration: '300',
-  },
-  singleLabel: {
-    text: 'muted-400',
-    font: 'sans',
-    textSize: 'sm',
-  },
-  dualLabel: {
-    label: {
-      font: 'sans',
-      fontWeight: 'medium',
-      text: 'muted-800',
-      textDark: 'white',
-      textSize: 'sm',
-    },
-    sublabel: {
-      text: 'muted-400',
-      textSize: 'xs',
-      font: 'sans',
-    },
-  },
-  input: {
-    size: 'full',
-  },
-  primary: 'primary-400',
-  info: 'info-400',
-  success: 'success-400',
-  warning: 'warning-400',
-  danger: 'danger-400',
-}
+import { type SwitchBallConfig, defaulConfig, key } from './switch-ball.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -60,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.switchBall',
-      ) satisfies typeof defaultSwitchBallConfig
+      const config = theme(`shurikenUi.${key}`) satisfies SwitchBallConfig
 
       addComponents({
         [`.${prefix}switch-ball`]: {
@@ -140,7 +90,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          switchBall: defaultSwitchBallConfig,
+          [key]: defaulConfig,
         },
       },
     }

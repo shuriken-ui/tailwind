@@ -1,34 +1,11 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultThemeSwitchConfig = {
-  bg: 'muted-200',
-  bgDark: 'muted-700',
-  rounded: 'full',
-  input: {
-    size: 'full',
-  },
-  inner: {
-    bg: 'white',
-    bgDark: 'muted-900',
-    border: 'muted-200',
-    borderDark: 'muted-800',
-    size: '10',
-    rounded: 'full',
-    duration: '300',
-  },
-  sun: {
-    size: '6',
-    text: 'yellow-400',
-    duration: '300',
-  },
-  moon: {
-    size: '6',
-    text: 'yellow-400',
-    duration: '300',
-  },
-}
+import {
+  type ThemeSwitchConfig,
+  defaultConfig,
+  key,
+} from './theme-switch.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -39,9 +16,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.themeSwitch',
-      ) satisfies typeof defaultThemeSwitchConfig
+      const config = theme(`shurikenUi.${key}`) satisfies ThemeSwitchConfig
 
       addComponents({
         [`.${prefix}theme-switch`]: {
@@ -92,7 +67,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          themeSwitch: defaultThemeSwitchConfig,
+          [key]: defaultConfig,
         },
       },
     }

@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as InputStories from './input.stories'
-import { defaultInputConfig } from '.'
+import { defaultConfig } from './input.config'
 
 <Meta of={InputStories} />
 
@@ -223,7 +223,7 @@ Inputs have an action slot that you can use to display an action inside the inpu
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultInputConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 
