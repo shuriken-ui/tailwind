@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/shuriken-ui/tailwind/compare/v1.5.0...v1.5.1) (2023-11-16)
+
+
+### Bug Fixes
+
+* inherit base config from tailwind ([61d6c5d](https://github.com/shuriken-ui/tailwind/commit/61d6c5d9eb873c8da6d39666a9ee50a1e5570c1a))
+
 ## [1.5.0](https://github.com/shuriken-ui/tailwind/compare/v1.4.0...v1.5.0) (2023-11-16)
 
 
