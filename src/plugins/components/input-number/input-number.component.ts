@@ -26,6 +26,7 @@ export const InputNumber = ({
     error: '',
   },
   icon,
+  disabled,
   actionSlot,
   ...attrs
 }: InputAttrs) => {
@@ -64,6 +65,7 @@ export const InputNumber = ({
           class="${['nui-input-number', classes?.input]
             .filter(Boolean)
             .join(' ')}"
+          ?disabled="${disabled}"
           ${spread(attrs)}
         />
         ${label && labelFloat
@@ -95,7 +97,7 @@ export const InputNumber = ({
           </div>
         `}
         <div class="nui-input-number-buttons">
-          <button aria-label="Increment">
+          <button aria-label="Increment" ?disabled="${disabled}">
             <svg
               class=${['nui-chevron', 'rotate-180'].filter(Boolean).join(' ')}
               aria-hidden="true"
@@ -111,7 +113,7 @@ export const InputNumber = ({
               />
             </svg>
           </button>
-          <button aria-label="Decrement">
+          <button aria-label="Decrement" ?disabled="${disabled}">
             <svg
               class=${['nui-chevron'].filter(Boolean).join(' ')}
               aria-hidden="true"

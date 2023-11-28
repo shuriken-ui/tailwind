@@ -203,8 +203,10 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}input-number-buttons button`]: {
-              [`@apply hover:bg-muted-100 dark:hover:bg-muted-800`]: {},
-              [`@apply focus:bg-muted-100 dark:focus:bg-muted-800`]: {},
+              [`@apply enabled:hover:bg-muted-100 dark:enabled:hover:bg-muted-800`]:
+                {},
+              [`@apply enabled:focus:bg-muted-100 dark:enabled:focus:bg-muted-800`]:
+                {},
             },
           },
           [`&.${prefix}input-number-default-contrast`]: {
@@ -213,8 +215,10 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}input-number-buttons button`]: {
-              [`@apply hover:bg-muted-100 dark:hover:bg-muted-900`]: {},
-              [`@apply focus:bg-muted-100 dark:focus:bg-muted-900`]: {},
+              [`@apply enabled:hover:bg-muted-100 dark:enabled:hover:bg-muted-900`]:
+                {},
+              [`@apply enabled:focus:bg-muted-100 dark:enabled:focus:bg-muted-900`]:
+                {},
             },
           },
           [`&.${prefix}input-number-muted`]: {
@@ -223,8 +227,10 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}input-number-buttons button`]: {
-              [`@apply hover:bg-white dark:hover:bg-muted-800`]: {},
-              [`@apply focus:bg-white dark:focus:bg-muted-800`]: {},
+              [`@apply enabled:hover:bg-white dark:enabled:hover:bg-muted-800`]:
+                {},
+              [`@apply enabled:focus:bg-white dark:enabled:focus:bg-muted-800`]:
+                {},
             },
           },
           [`&.${prefix}input-number-muted-contrast`]: {
@@ -233,8 +239,10 @@ export default plugin.withOptions(
                 {},
             },
             [`.${prefix}input-number-buttons button`]: {
-              [`@apply hover:bg-white dark:hover:bg-muted-900`]: {},
-              [`@apply focus:bg-white dark:focus:bg-muted-900`]: {},
+              [`@apply enabled:hover:bg-white dark:enabled:hover:bg-muted-900`]:
+                {},
+              [`@apply enabled:focus:bg-white dark:enabled:focus:bg-muted-900`]:
+                {},
             },
           },
           [`&:not(.${prefix}input-number-loading)`]: {
