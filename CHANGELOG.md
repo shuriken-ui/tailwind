@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.3](https://github.com/shuriken-ui/tailwind/compare/v1.5.2...v1.5.3) (2023-11-28)
+
+
+### Bug Fixes
+
+* **input-number:** button styling for hover and focus states ([dfb241a](https://github.com/shuriken-ui/tailwind/commit/dfb241ae0bafd1b1bf352d3b67190d3b14dcde46))
+
 ### [1.5.2](https://github.com/shuriken-ui/tailwind/compare/v1.5.1...v1.5.2) (2023-11-28)
 
 
