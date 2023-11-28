@@ -43,10 +43,12 @@ export default plugin.withOptions(
             [`@apply outline-none flex items-center justify-center`]: {},
             [`@apply border border-muted-200 dark:border-muted-800 last:border-s-0`]:
               {},
-            [`@apply text-muted-400 hover:text-muted-600 dark:hover:text-muted-100`]:
+            [`@apply text-muted-400 enabled:hover:text-muted-600 dark:enabled:hover:text-muted-100`]:
               {},
-            [`@apply focus:text-muted-600 dark:focus:text-muted-100`]: {},
+            [`@apply enabled:focus:text-muted-600 dark:enabled:focus:text-muted-100`]:
+              {},
             [`@apply transition-colors duration-300`]: {},
+            [`@apply disabled:cursor-not-allowed`]: {},
           },
           [`.${prefix}input-number-buttons svg`]: {
             [`@apply h-4 w-4`]: {},
