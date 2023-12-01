@@ -49,7 +49,7 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "unbuild",
-    "build:storybook": "storybook build",
+    "build-storybook": "storybook build",
     "lint": "run-s lint:eslint:fix lint:prettier:fix",
     "lint:prettier": "prettier --check \"./**/*.(ts|css|scss|md)\"",
     "lint:prettier:fix": "prettier --write \"./**/*.(ts|css|scss|md)\"",
