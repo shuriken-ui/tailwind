@@ -4,8 +4,8 @@ export interface ButtonProps extends Record<string, unknown> {
   label?: string
   loading?: boolean
   size?: 'sm' | 'md' | 'lg' | 'xl'
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
-  flavor?: 'solid' | 'pastel' | 'outline'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
+  variant?: 'solid' | 'pastel' | 'outline'
   color?:
     | 'default'
     | 'light'
