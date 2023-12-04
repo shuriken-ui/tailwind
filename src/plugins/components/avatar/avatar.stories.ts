@@ -23,9 +23,9 @@ const meta = {
       options: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
       defaultValue: 'sm',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'curved', 'full'],
+      options: ['none', 'sm', 'md', 'lg', 'full'],
       defaultValue: 'full',
     },
     color: {
@@ -94,7 +94,7 @@ export const Main: Story = {
   args: {
     // set default values used for UI preview
     size: '4xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/10.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
   },
@@ -103,182 +103,274 @@ export const Main: Story = {
 
 // #region Size:full
 export const SizeXxsFull: Story = {
-  name: 'Size:xxs, Shape:full',
+  name: 'Size:xxs, Rounded:full',
   args: {
     size: 'xxs',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/1.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/1.svg',
   },
 }
 
 export const SizeXsFull: Story = {
-  name: 'Size:xs, Shape:full',
+  name: 'Size:xs, Rounded:full',
   args: {
     size: 'xs',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/15.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/15.svg',
   },
 }
 
 export const SizeSmFull: Story = {
-  name: 'Size:sm, Shape:full',
+  name: 'Size:sm, Rounded:full',
   args: {
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/24.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/24.svg',
   },
 }
 
 export const SizeMdFull: Story = {
-  name: 'Size:md, Shape:full',
+  name: 'Size:md, Rounded:full',
   args: {
     size: 'md',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/3.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/3.svg',
   },
 }
 
 export const SizeLgFull: Story = {
-  name: 'Size:lg, Shape:full',
+  name: 'Size:lg, Rounded:full',
   args: {
     size: 'lg',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/8.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/8.svg',
   },
 }
 
 export const SizeXlFull: Story = {
-  name: 'Size:xl, Shape:full',
+  name: 'Size:xl, Rounded:full',
   args: {
     size: 'xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/16.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/16.svg',
   },
 }
 
 export const Size2XlFull: Story = {
-  name: 'Size:2xl, Shape:full',
+  name: 'Size:2xl, Rounded:full',
   args: {
     size: '2xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/12.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/12.svg',
   },
 }
 
 export const Size3XlFull: Story = {
-  name: 'Size:3xl, Shape:full',
+  name: 'Size:3xl, Rounded:full',
   args: {
     size: '3xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/2.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/2.svg',
   },
 }
 
 export const Size4XlFull: Story = {
-  name: 'Size:4xl, Shape:full',
+  name: 'Size:4xl, Rounded:full',
   args: {
     size: '4xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/10.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
   },
 }
 // #endregion
 
-// #region Size:curved
-export const SizeXxsCurved: Story = {
-  name: 'Size:xxs, Shape:curved',
+// #region Size:rounded-lg
+export const SizeXxsRoundedLg: Story = {
+  name: 'Size:xxs, Rounded:lg',
   args: {
     size: 'xxs',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/1.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/1.svg',
   },
 }
 
-export const SizeXsCurved: Story = {
-  name: 'Size:xs, Shape:curved',
+export const SizeXsRoundedLg: Story = {
+  name: 'Size:xs, Rounded:lg',
   args: {
     size: 'xs',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/15.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/15.svg',
   },
 }
 
-export const SizeSmCurved: Story = {
-  name: 'Size:sm, Shape:curved',
+export const SizeSmRoundedLg: Story = {
+  name: 'Size:sm, Rounded:lg',
   args: {
     size: 'sm',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/24.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/24.svg',
   },
 }
 
-export const SizeMdCurved: Story = {
-  name: 'Size:md, Shape:curved',
+export const SizeMdRoundedLg: Story = {
+  name: 'Size:md, Rounded:lg',
   args: {
     size: 'md',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/3.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/3.svg',
   },
 }
 
-export const SizeLgCurved: Story = {
-  name: 'Size:lg, Shape:curved',
+export const SizeLgRoundedLg: Story = {
+  name: 'Size:lg, Rounded:lg',
   args: {
     size: 'lg',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/8.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/8.svg',
   },
 }
 
-export const SizeXlCurved: Story = {
-  name: 'Size:xl, Shape:curved',
+export const SizeXlRoundedLg: Story = {
+  name: 'Size:xl, Rounded:lg',
   args: {
     size: 'xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/16.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/16.svg',
   },
 }
 
-export const Size2XlCurved: Story = {
-  name: 'Size:2xl, Shape:curved',
+export const Size2XlRoundedLg: Story = {
+  name: 'Size:2xl, Rounded:lg',
   args: {
     size: '2xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/12.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/12.svg',
   },
 }
 
-export const Size3XlCurved: Story = {
-  name: 'Size:3xl, Shape:curved',
+export const Size3XlRoundedLg: Story = {
+  name: 'Size:3xl, Rounded:lg',
   args: {
     size: '3xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/2.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/2.svg',
   },
 }
 
-export const Size4XlCurved: Story = {
-  name: 'Size:4xl, Shape:curved',
+export const Size4XlRoundedLg: Story = {
+  name: 'Size:4xl, Rounded:lg',
   args: {
     size: '4xl',
-    shape: 'curved',
+    rounded: 'lg',
+    src: 'https://apollux.cssninja.io/img/avatars/10.svg',
+    srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
+  },
+}
+// #endregion
+
+// #region Size:rounded-md
+export const SizeXxsRoundedMd: Story = {
+  name: 'Size:xxs, Rounded:md',
+  args: {
+    size: 'xxs',
+    rounded: 'md',
+    src: 'https://apollux.cssninja.io/img/avatars/1.svg',
+    srcDark: 'https://apollux.cssninja.io/img/avatars/1.svg',
+  },
+}
+
+export const SizeXsRoundedMd: Story = {
+  name: 'Size:xs, Rounded:md',
+  args: {
+    size: 'xs',
+    rounded: 'md',
+    src: 'https://apollux.cssninja.io/img/avatars/15.svg',
+    srcDark: 'https://apollux.cssninja.io/img/avatars/15.svg',
+  },
+}
+
+export const SizeSmRoundedMd: Story = {
+  name: 'Size:sm, Rounded:md',
+  args: {
+    size: 'sm',
+    rounded: 'md',
+    src: 'https://apollux.cssninja.io/img/avatars/24.svg',
+    srcDark: 'https://apollux.cssninja.io/img/avatars/24.svg',
+  },
+}
+
+export const SizeMdRoundedMd: Story = {
+  name: 'Size:md, Rounded:md',
+  args: {
+    size: 'md',
+    rounded: 'md',
+    src: 'https://apollux.cssninja.io/img/avatars/3.svg',
+    srcDark: 'https://apollux.cssninja.io/img/avatars/3.svg',
+  },
+}
+
+export const SizeLgRoundedMd: Story = {
+  name: 'Size:lg, Rounded:md',
+  args: {
+    size: 'lg',
+    rounded: 'md',
+    src: 'https://apollux.cssninja.io/img/avatars/8.svg',
+    srcDark: 'https://apollux.cssninja.io/img/avatars/8.svg',
+  },
+}
+
+export const SizeXlRoundedMd: Story = {
+  name: 'Size:xl, Rounded:md',
+  args: {
+    size: 'xl',
+    rounded: 'md',
+    src: 'https://apollux.cssninja.io/img/avatars/16.svg',
+    srcDark: 'https://apollux.cssninja.io/img/avatars/16.svg',
+  },
+}
+
+export const Size2XlRoundedMd: Story = {
+  name: 'Size:2xl, Rounded:md',
+  args: {
+    size: '2xl',
+    rounded: 'md',
+    src: 'https://apollux.cssninja.io/img/avatars/12.svg',
+    srcDark: 'https://apollux.cssninja.io/img/avatars/12.svg',
+  },
+}
+
+export const Size3XlRoundedMd: Story = {
+  name: 'Size:3xl, Rounded:md',
+  args: {
+    size: '3xl',
+    rounded: 'md',
+    src: 'https://apollux.cssninja.io/img/avatars/2.svg',
+    srcDark: 'https://apollux.cssninja.io/img/avatars/2.svg',
+  },
+}
+
+export const Size4XlRoundedMd: Story = {
+  name: 'Size:4xl, Rounded:md',
+  args: {
+    size: '4xl',
+    rounded: 'md',
     src: 'https://apollux.cssninja.io/img/avatars/10.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
   },
@@ -287,10 +379,10 @@ export const Size4XlCurved: Story = {
 
 // #region Dot:full
 export const DotXxsFull: Story = {
-  name: 'Dot:xxs, Shape:full',
+  name: 'Dot:xxs, Rounded:full',
   args: {
     size: 'xxs',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/1.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/1.svg',
     dot: 'success',
@@ -298,10 +390,10 @@ export const DotXxsFull: Story = {
 }
 
 export const DotXsFull: Story = {
-  name: 'Dot:xs, Shape:full',
+  name: 'Dot:xs, Rounded:full',
   args: {
     size: 'xs',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/15.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/15.svg',
     dot: 'info',
@@ -309,10 +401,10 @@ export const DotXsFull: Story = {
 }
 
 export const DotSmFull: Story = {
-  name: 'Dot:sm, Shape:full',
+  name: 'Dot:sm, Rounded:full',
   args: {
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/24.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/24.svg',
     dot: 'warning',
@@ -320,10 +412,10 @@ export const DotSmFull: Story = {
 }
 
 export const DotMdFull: Story = {
-  name: 'Dot:md, Shape:full',
+  name: 'Dot:md, Rounded:full',
   args: {
     size: 'md',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/3.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/3.svg',
     dot: 'pink',
@@ -331,10 +423,10 @@ export const DotMdFull: Story = {
 }
 
 export const DotLgFull: Story = {
-  name: 'Dot:lg, Shape:full',
+  name: 'Dot:lg, Rounded:full',
   args: {
     size: 'lg',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/8.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/8.svg',
     dot: 'danger',
@@ -342,10 +434,10 @@ export const DotLgFull: Story = {
 }
 
 export const DotXlFull: Story = {
-  name: 'Dot:xl, Shape:full',
+  name: 'Dot:xl, Rounded:full',
   args: {
     size: 'xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/16.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/16.svg',
     dot: 'warning',
@@ -353,10 +445,10 @@ export const DotXlFull: Story = {
 }
 
 export const Dot2XlFull: Story = {
-  name: 'Dot:2xl, Shape:full',
+  name: 'Dot:2xl, Rounded:full',
   args: {
     size: '2xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/12.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/12.svg',
     dot: 'info',
@@ -364,10 +456,10 @@ export const Dot2XlFull: Story = {
 }
 
 export const Dot3XlFull: Story = {
-  name: 'Dot:3xl, Shape:full',
+  name: 'Dot:3xl, Rounded:full',
   args: {
     size: '3xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/2.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/2.svg',
     dot: 'success',
@@ -375,10 +467,10 @@ export const Dot3XlFull: Story = {
 }
 
 export const Dot4XlFull: Story = {
-  name: 'Dot:4xl, Shape:full',
+  name: 'Dot:4xl, Rounded:full',
   args: {
     size: '4xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/10.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
     dot: 'primary',
@@ -387,99 +479,99 @@ export const Dot4XlFull: Story = {
 // #endregion
 
 // #region Dot:curved
-export const DotXxsCurved: Story = {
-  name: 'Dot:xxs, Shape:curved',
+export const DotXxsRoundedLg: Story = {
+  name: 'Dot:xxs, Rounded:lg',
   args: {
     size: 'xxs',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/1.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/1.svg',
     dot: 'success',
   },
 }
 
-export const DotXsCurved: Story = {
-  name: 'Dot:xs, Shape:curved',
+export const DotXsRoundedLg: Story = {
+  name: 'Dot:xs, Rounded:lg',
   args: {
     size: 'xs',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/15.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/15.svg',
     dot: 'info',
   },
 }
 
-export const DotSmCurved: Story = {
-  name: 'Dot:sm, Shape:curved',
+export const DotSmRoundedLg: Story = {
+  name: 'Dot:sm, Rounded:lg',
   args: {
     size: 'sm',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/24.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/24.svg',
     dot: 'warning',
   },
 }
 
-export const DotMdCurved: Story = {
-  name: 'Dot:md, Shape:curved',
+export const DotMdRoundedLg: Story = {
+  name: 'Dot:md, Rounded:lg',
   args: {
     size: 'md',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/3.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/3.svg',
     dot: 'pink',
   },
 }
 
-export const DotLgCurved: Story = {
-  name: 'Dot:lg, Shape:curved',
+export const DotLgRoundedLg: Story = {
+  name: 'Dot:lg, Rounded:lg',
   args: {
     size: 'lg',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/8.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/8.svg',
     dot: 'danger',
   },
 }
 
-export const DotXlCurved: Story = {
-  name: 'Dot:xl, Shape:curved',
+export const DotXlRoundedLg: Story = {
+  name: 'Dot:xl, Rounded:lg',
   args: {
     size: 'xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/16.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/16.svg',
     dot: 'warning',
   },
 }
 
-export const Dot2XlCurved: Story = {
-  name: 'Dot:2xl, Shape:curved',
+export const Dot2XlRoundedLg: Story = {
+  name: 'Dot:2xl, Rounded:lg',
   args: {
     size: '2xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/12.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/12.svg',
     dot: 'info',
   },
 }
 
-export const Dot3XlCurved: Story = {
-  name: 'Dot:3xl, Shape:curved',
+export const Dot3XlRoundedLg: Story = {
+  name: 'Dot:3xl, Rounded:lg',
   args: {
     size: '3xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/2.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/2.svg',
     dot: 'success',
   },
 }
 
-export const Dot4XlCurved: Story = {
-  name: 'Dot:4xl, Shape:curved',
+export const Dot4XlRoundedLg: Story = {
+  name: 'Dot:4xl, Rounded:lg',
   args: {
     size: '4xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/10.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
     dot: 'primary',
@@ -489,10 +581,10 @@ export const Dot4XlCurved: Story = {
 
 // #region Badge:full
 export const BadgeXxsFull: Story = {
-  name: 'Badge:xxs, Shape:full',
+  name: 'Badge:xxs, Rounded:full',
   args: {
     size: 'xxs',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/1.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/1.svg',
     badgeSrc:
@@ -501,10 +593,10 @@ export const BadgeXxsFull: Story = {
 }
 
 export const BadgeXsFull: Story = {
-  name: 'Badge:xs, Shape:full',
+  name: 'Badge:xs, Rounded:full',
   args: {
     size: 'xs',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/15.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/15.svg',
     badgeSrc:
@@ -513,10 +605,10 @@ export const BadgeXsFull: Story = {
 }
 
 export const BadgeSmFull: Story = {
-  name: 'Badge:sm, Shape:full',
+  name: 'Badge:sm, Rounded:full',
   args: {
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/24.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/24.svg',
     badgeSrc:
@@ -525,10 +617,10 @@ export const BadgeSmFull: Story = {
 }
 
 export const BadgeMdFull: Story = {
-  name: 'Badge:md, Shape:full',
+  name: 'Badge:md, Rounded:full',
   args: {
     size: 'md',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/3.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/3.svg',
     badgeSrc:
@@ -537,10 +629,10 @@ export const BadgeMdFull: Story = {
 }
 
 export const BadgeLgFull: Story = {
-  name: 'Badge:lg, Shape:full',
+  name: 'Badge:lg, Rounded:full',
   args: {
     size: 'lg',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/8.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/8.svg',
     badgeSrc:
@@ -549,10 +641,10 @@ export const BadgeLgFull: Story = {
 }
 
 export const BadgeXlFull: Story = {
-  name: 'Badge:xl, Shape:full',
+  name: 'Badge:xl, Rounded:full',
   args: {
     size: 'xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/16.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/16.svg',
     badgeSrc:
@@ -561,10 +653,10 @@ export const BadgeXlFull: Story = {
 }
 
 export const Badge2XlFull: Story = {
-  name: 'Badge:2xl, Shape:full',
+  name: 'Badge:2xl, Rounded:full',
   args: {
     size: '2xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/12.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/12.svg',
     badgeSrc:
@@ -573,10 +665,10 @@ export const Badge2XlFull: Story = {
 }
 
 export const Badge3XlFull: Story = {
-  name: 'Badge:3xl, Shape:full',
+  name: 'Badge:3xl, Rounded:full',
   args: {
     size: '3xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/2.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/2.svg',
     badgeSrc:
@@ -585,10 +677,10 @@ export const Badge3XlFull: Story = {
 }
 
 export const Badge4XlFull: Story = {
-  name: 'Badge:4xl, Shape:full',
+  name: 'Badge:4xl, Rounded:full',
   args: {
     size: '4xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/10.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
     badgeSrc:
@@ -598,11 +690,11 @@ export const Badge4XlFull: Story = {
 // #endregion
 
 // #region Badge:curved
-export const BadgeXxsCurved: Story = {
-  name: 'Badge:xxs, Shape:curved',
+export const BadgeXxsRoundedLg: Story = {
+  name: 'Badge:xxs, Rounded:lg',
   args: {
     size: 'xxs',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/1.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/1.svg',
     badgeSrc:
@@ -610,11 +702,11 @@ export const BadgeXxsCurved: Story = {
   },
 }
 
-export const BadgeXsCurved: Story = {
-  name: 'Badge:xs, Shape:curved',
+export const BadgeXsRoundedLg: Story = {
+  name: 'Badge:xs, Rounded:lg',
   args: {
     size: 'xs',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/15.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/15.svg',
     badgeSrc:
@@ -622,11 +714,11 @@ export const BadgeXsCurved: Story = {
   },
 }
 
-export const BadgeSmCurved: Story = {
-  name: 'Badge:sm, Shape:curved',
+export const BadgeSmRoundedLg: Story = {
+  name: 'Badge:sm, Rounded:lg',
   args: {
     size: 'sm',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/24.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/24.svg',
     badgeSrc:
@@ -634,11 +726,11 @@ export const BadgeSmCurved: Story = {
   },
 }
 
-export const BadgeMdCurved: Story = {
-  name: 'Badge:md, Shape:curved',
+export const BadgeMdRoundedLg: Story = {
+  name: 'Badge:md, Rounded:lg',
   args: {
     size: 'md',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/3.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/3.svg',
     badgeSrc:
@@ -646,11 +738,11 @@ export const BadgeMdCurved: Story = {
   },
 }
 
-export const BadgeLgCurved: Story = {
-  name: 'Badge:lg, Shape:curved',
+export const BadgeLgRoundedLg: Story = {
+  name: 'Badge:lg, Rounded:lg',
   args: {
     size: 'lg',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/8.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/8.svg',
     badgeSrc:
@@ -658,11 +750,11 @@ export const BadgeLgCurved: Story = {
   },
 }
 
-export const BadgeXlCurved: Story = {
-  name: 'Badge:xl, Shape:curved',
+export const BadgeXlRoundedLg: Story = {
+  name: 'Badge:xl, Rounded:lg',
   args: {
     size: 'xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/16.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/16.svg',
     badgeSrc:
@@ -670,11 +762,11 @@ export const BadgeXlCurved: Story = {
   },
 }
 
-export const Badge2XlCurved: Story = {
-  name: 'Badge:2xl, Shape:curved',
+export const Badge2XlRoundedLg: Story = {
+  name: 'Badge:2xl, Rounded:lg',
   args: {
     size: '2xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/12.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/12.svg',
     badgeSrc:
@@ -682,11 +774,11 @@ export const Badge2XlCurved: Story = {
   },
 }
 
-export const Badge3XlCurved: Story = {
-  name: 'Badge:3xl, Shape:curved',
+export const Badge3XlRoundedLg: Story = {
+  name: 'Badge:3xl, Rounded:lg',
   args: {
     size: '3xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/2.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/2.svg',
     badgeSrc:
@@ -694,11 +786,11 @@ export const Badge3XlCurved: Story = {
   },
 }
 
-export const Badge4XlCurved: Story = {
-  name: 'Badge:4xl, Shape:curved',
+export const Badge4XlRoundedLg: Story = {
+  name: 'Badge:4xl, Rounded:lg',
   args: {
     size: '4xl',
-    shape: 'curved',
+    rounded: 'lg',
     src: 'https://apollux.cssninja.io/img/avatars/10.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
     badgeSrc:
@@ -709,182 +801,182 @@ export const Badge4XlCurved: Story = {
 
 // #region Size:full:fake
 export const SizeXxsFullFake: Story = {
-  name: 'Fake, Size:xxs, Shape:full',
+  name: 'Fake, Size:xxs, Rounded:full',
   args: {
     size: 'xxs',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'primary',
   },
 }
 
 export const SizeXsFullFake: Story = {
-  name: 'Fake, Size:xs, Shape:full',
+  name: 'Fake, Size:xs, Rounded:full',
   args: {
     size: 'xs',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'info',
   },
 }
 
 export const SizeSmFullFake: Story = {
-  name: 'Fake, Size:sm, Shape:full',
+  name: 'Fake, Size:sm, Rounded:full',
   args: {
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'success',
   },
 }
 
 export const SizeMdFullFake: Story = {
-  name: 'Fake, Size:md, Shape:full',
+  name: 'Fake, Size:md, Rounded:full',
   args: {
     size: 'md',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'warning',
   },
 }
 
 export const SizeLgFullFake: Story = {
-  name: 'Fake, Size:lg, Shape:full',
+  name: 'Fake, Size:lg, Rounded:full',
   args: {
     size: 'lg',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'danger',
   },
 }
 
 export const SizeXlFullFake: Story = {
-  name: 'Fake, Size:xl, Shape:full',
+  name: 'Fake, Size:xl, Rounded:full',
   args: {
     size: 'xl',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'indigo',
   },
 }
 
 export const Size2XlFullFake: Story = {
-  name: 'Fake, Size:2xl, Shape:full',
+  name: 'Fake, Size:2xl, Rounded:full',
   args: {
     size: '2xl',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'yellow',
   },
 }
 
 export const Size3XlFullFake: Story = {
-  name: 'Fake, Size:3xl, Shape:full',
+  name: 'Fake, Size:3xl, Rounded:full',
   args: {
     size: '3xl',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'pink',
   },
 }
 
 export const Size4XlFullFake: Story = {
-  name: 'Fake, Size:4xl, Shape:full',
+  name: 'Fake, Size:4xl, Rounded:full',
   args: {
     size: '4xl',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'primary',
   },
 }
 // #endregion
 
-// #region Size:curved:fake
-export const SizeXxsCurvedFake: Story = {
-  name: 'Fake, Size:xxs, Shape:curved',
+// #region Size:rounded-lg:fake
+export const SizeXxsRoundedLgFake: Story = {
+  name: 'Fake, Size:xxs, Rounded:lg',
   args: {
     size: 'xxs',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'primary',
   },
 }
 
-export const SizeXsCurvedFake: Story = {
-  name: 'Fake, Size:xs, Shape:curved',
+export const SizeXsRoundedLgFake: Story = {
+  name: 'Fake, Size:xs, Rounded:lg',
   args: {
     size: 'xs',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'info',
   },
 }
 
-export const SizeSmCurvedFake: Story = {
-  name: 'Fake, Size:sm, Shape:curved',
+export const SizeSmRoundedLgFake: Story = {
+  name: 'Fake, Size:sm, Rounded:lg',
   args: {
     size: 'sm',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'success',
   },
 }
 
-export const SizeMdCurvedFake: Story = {
-  name: 'Fake, Size:md, Shape:curved',
+export const SizeMdRoundedLgFake: Story = {
+  name: 'Fake, Size:md, Rounded:lg',
   args: {
     size: 'md',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'warning',
   },
 }
 
-export const SizeLgCurvedFake: Story = {
-  name: 'Fake, Size:lg, Shape:curved',
+export const SizeLgRoundedLgFake: Story = {
+  name: 'Fake, Size:lg, Rounded:lg',
   args: {
     size: 'lg',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'danger',
   },
 }
 
-export const SizeXlCurvedFake: Story = {
-  name: 'Fake, Size:xl, Shape:curved',
+export const SizeXlRoundedLgFake: Story = {
+  name: 'Fake, Size:xl, Rounded:lg',
   args: {
     size: 'xl',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'indigo',
   },
 }
 
-export const Size2XlCurvedFake: Story = {
-  name: 'Fake, Size:2xl, Shape:curved',
+export const Size2XlRoundedLgFake: Story = {
+  name: 'Fake, Size:2xl, Rounded:lg',
   args: {
     size: '2xl',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'yellow',
   },
 }
 
-export const Size3XlCurvedFake: Story = {
-  name: 'Fake, Size:3xl, Shape:curved',
+export const Size3XlRoundedLgFake: Story = {
+  name: 'Fake, Size:3xl, Rounded:lg',
   args: {
     size: '3xl',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'pink',
   },
 }
 
-export const Size4XlCurvedFake: Story = {
-  name: 'Fake, Size:4xl, Shape:curved',
+export const Size4XlRoundedLgFake: Story = {
+  name: 'Fake, Size:4xl, Rounded:lg',
   args: {
     size: '4xl',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'primary',
   },
@@ -893,10 +985,10 @@ export const Size4XlCurvedFake: Story = {
 
 // #region Size:full:fake:badge
 export const SizeXxsFullFakeBadge: Story = {
-  name: 'Fake, Badge, Size:xxs, Shape:full',
+  name: 'Fake, Badge, Size:xxs, Rounded:full',
   args: {
     size: 'xxs',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'primary',
     badgeSrc:
@@ -905,10 +997,10 @@ export const SizeXxsFullFakeBadge: Story = {
 }
 
 export const SizeXsFullFakeBadge: Story = {
-  name: 'Fake, Badge, Size:xs, Shape:full',
+  name: 'Fake, Badge, Size:xs, Rounded:full',
   args: {
     size: 'xs',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'info',
     badgeSrc:
@@ -917,10 +1009,10 @@ export const SizeXsFullFakeBadge: Story = {
 }
 
 export const SizeSmFullFakeBadge: Story = {
-  name: 'Fake, Badge, Size:sm, Shape:full',
+  name: 'Fake, Badge, Size:sm, Rounded:full',
   args: {
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'success',
     badgeSrc:
@@ -929,10 +1021,10 @@ export const SizeSmFullFakeBadge: Story = {
 }
 
 export const SizeMdFullFakeBadge: Story = {
-  name: 'Fake, Badge, Size:md, Shape:full',
+  name: 'Fake, Badge, Size:md, Rounded:full',
   args: {
     size: 'md',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'warning',
     badgeSrc:
@@ -941,10 +1033,10 @@ export const SizeMdFullFakeBadge: Story = {
 }
 
 export const SizeLgFullFakeBadge: Story = {
-  name: 'Fake, Badge, Size:lg, Shape:full',
+  name: 'Fake, Badge, Size:lg, Rounded:full',
   args: {
     size: 'lg',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'danger',
     badgeSrc:
@@ -953,10 +1045,10 @@ export const SizeLgFullFakeBadge: Story = {
 }
 
 export const SizeXlFullFakeBadge: Story = {
-  name: 'Fake, Badge, Size:xl, Shape:full',
+  name: 'Fake, Badge, Size:xl, Rounded:full',
   args: {
     size: 'xl',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'indigo',
     badgeSrc:
@@ -965,10 +1057,10 @@ export const SizeXlFullFakeBadge: Story = {
 }
 
 export const Size2XlFullFakeBadge: Story = {
-  name: 'Fake, Badge, Size:2xl, Shape:full',
+  name: 'Fake, Badge, Size:2xl, Rounded:full',
   args: {
     size: '2xl',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'yellow',
     badgeSrc:
@@ -977,10 +1069,10 @@ export const Size2XlFullFakeBadge: Story = {
 }
 
 export const Size3XlFullFakeBadge: Story = {
-  name: 'Fake, Badge, Size:3xl, Shape:full',
+  name: 'Fake, Badge, Size:3xl, Rounded:full',
   args: {
     size: '3xl',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'pink',
     badgeSrc:
@@ -989,10 +1081,10 @@ export const Size3XlFullFakeBadge: Story = {
 }
 
 export const Size4XlFullFakeBadge: Story = {
-  name: 'Fake, Badge, Size:4xl, Shape:full',
+  name: 'Fake, Badge, Size:4xl, Rounded:full',
   args: {
     size: '4xl',
-    shape: 'full',
+    rounded: 'full',
     text: 'T',
     color: 'primary',
     badgeSrc:
@@ -1001,12 +1093,12 @@ export const Size4XlFullFakeBadge: Story = {
 }
 // #endregion
 
-// #region Size:curved:fake:badge
-export const SizeXxsCurvedFakeBadge: Story = {
-  name: 'Fake, Badge, Size:xxs, Shape:curved',
+// #region Size:rounded-lg:fake:badge
+export const SizeXxsRoundedLgFakeBadge: Story = {
+  name: 'Fake, Badge, Size:xxs, Rounded:lg',
   args: {
     size: 'xxs',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'primary',
     badgeSrc:
@@ -1014,11 +1106,11 @@ export const SizeXxsCurvedFakeBadge: Story = {
   },
 }
 
-export const SizeXsCurvedFakeBadge: Story = {
-  name: 'Fake, Badge, Size:xs, Shape:curved',
+export const SizeXsRoundedLgFakeBadge: Story = {
+  name: 'Fake, Badge, Size:xs, Rounded:lg',
   args: {
     size: 'xs',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'info',
     badgeSrc:
@@ -1026,11 +1118,11 @@ export const SizeXsCurvedFakeBadge: Story = {
   },
 }
 
-export const SizeSmCurvedFakeBadge: Story = {
-  name: 'Fake, Badge, Size:sm, Shape:curved',
+export const SizeSmRoundedLgFakeBadge: Story = {
+  name: 'Fake, Badge, Size:sm, Rounded:lg',
   args: {
     size: 'sm',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'success',
     badgeSrc:
@@ -1038,11 +1130,11 @@ export const SizeSmCurvedFakeBadge: Story = {
   },
 }
 
-export const SizeMdCurvedFakeBadge: Story = {
-  name: 'Fake, Badge, Size:md, Shape:curved',
+export const SizeMdRoundedLgFakeBadge: Story = {
+  name: 'Fake, Badge, Size:md, Rounded:lg',
   args: {
     size: 'md',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'warning',
     badgeSrc:
@@ -1050,11 +1142,11 @@ export const SizeMdCurvedFakeBadge: Story = {
   },
 }
 
-export const SizeLgCurvedFakeBadge: Story = {
-  name: 'Fake, Badge, Size:lg, Shape:curved',
+export const SizeLgRoundedLgFakeBadge: Story = {
+  name: 'Fake, Badge, Size:lg, Rounded:lg',
   args: {
     size: 'lg',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'danger',
     badgeSrc:
@@ -1062,11 +1154,11 @@ export const SizeLgCurvedFakeBadge: Story = {
   },
 }
 
-export const SizeXlCurvedFakeBadge: Story = {
-  name: 'Fake, Badge, Size:xl, Shape:curved',
+export const SizeXlRoundedLgFakeBadge: Story = {
+  name: 'Fake, Badge, Size:xl, Rounded:lg',
   args: {
     size: 'xl',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'indigo',
     badgeSrc:
@@ -1074,11 +1166,11 @@ export const SizeXlCurvedFakeBadge: Story = {
   },
 }
 
-export const Size2XlCurvedFakeBadge: Story = {
-  name: 'Fake, Badge, Size:2xl, Shape:curved',
+export const Size2XlRoundedLgFakeBadge: Story = {
+  name: 'Fake, Badge, Size:2xl, Rounded:lg',
   args: {
     size: '2xl',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'yellow',
     badgeSrc:
@@ -1086,11 +1178,11 @@ export const Size2XlCurvedFakeBadge: Story = {
   },
 }
 
-export const Size3XlCurvedFakeBadge: Story = {
-  name: 'Fake, Badge, Size:3xl, Shape:curved',
+export const Size3XlRoundedLgFakeBadge: Story = {
+  name: 'Fake, Badge, Size:3xl, Rounded:lg',
   args: {
     size: '3xl',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'pink',
     badgeSrc:
@@ -1098,11 +1190,11 @@ export const Size3XlCurvedFakeBadge: Story = {
   },
 }
 
-export const Size4XlCurvedFakeBadge: Story = {
-  name: 'Fake, Badge, Size:4xl, Shape:curved',
+export const Size4XlRoundedLgFakeBadge: Story = {
+  name: 'Fake, Badge, Size:4xl, Rounded:lg',
   args: {
     size: '4xl',
-    shape: 'curved',
+    rounded: 'lg',
     text: 'T',
     color: 'primary',
     badgeSrc:
@@ -1116,7 +1208,7 @@ export const MaskHex: Story = {
   name: 'Mask: Hex',
   args: {
     size: 'xl',
-    shape: 'straight',
+    rounded: 'none',
     mask: 'hex',
     src: 'https://apollux.cssninja.io/img/avatars/8.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/8.svg',
@@ -1127,7 +1219,7 @@ export const MaskHexed: Story = {
   name: 'Mask: Hexed',
   args: {
     size: 'xl',
-    shape: 'straight',
+    rounded: 'none',
     mask: 'hexed',
     src: 'https://apollux.cssninja.io/img/avatars/16.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/16.svg',
@@ -1138,7 +1230,7 @@ export const MaskBlob: Story = {
   name: 'Mask: Blob',
   args: {
     size: 'xl',
-    shape: 'straight',
+    rounded: 'none',
     mask: 'blob',
     src: 'https://apollux.cssninja.io/img/avatars/12.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/12.svg',
@@ -1149,7 +1241,7 @@ export const MaskDeca: Story = {
   name: 'Mask: Decagon',
   args: {
     size: 'xl',
-    shape: 'straight',
+    rounded: 'none',
     mask: 'deca',
     src: 'https://apollux.cssninja.io/img/avatars/2.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/2.svg',
@@ -1160,7 +1252,7 @@ export const MaskDiamond: Story = {
   name: 'Mask: Diamond',
   args: {
     size: 'xl',
-    shape: 'straight',
+    rounded: 'none',
     mask: 'diamond',
     src: 'https://apollux.cssninja.io/img/avatars/10.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
@@ -1173,7 +1265,7 @@ export const SlotDefault: Story = {
   name: 'Default slot',
   args: {
     size: '2xl',
-    shape: 'straight',
+    rounded: 'none',
     children: html`
       <img
         src="https://apollux.cssninja.io/img/avatars/15.svg"
@@ -1189,7 +1281,7 @@ export const SlotBadge: Story = {
   name: 'Badge slot',
   args: {
     size: '2xl',
-    shape: 'full',
+    rounded: 'full',
     src: 'https://apollux.cssninja.io/img/avatars/20.svg',
     srcDark: 'https://apollux.cssninja.io/img/avatars/20.svg',
     badge: html`

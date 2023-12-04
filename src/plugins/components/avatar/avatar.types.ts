@@ -6,7 +6,7 @@ export interface AvatarProps extends Record<string, unknown> {
   badgeSrc?: string
   text?: string
   size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl'
-  shape?: 'straight' | 'rounded' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   mask?: 'hex' | 'hexed' | 'deca' | 'blob' | 'diamond'
   color?:
     | 'white'

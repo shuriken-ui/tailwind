@@ -172,7 +172,7 @@ export default plugin.withOptions(
               [`@apply active:enabled:bg-${config.variant.solid.default.background.light.active} dark:active:enabled:bg-${config.variant.solid.default.background.dark.active}`]:
                 {},
               //Bg focus
-              [`@apply dark:focus-visible:bg-${config.variant.solid.default.background.light.focus} focus-visible:bg-${config.variant.solid.default.background.dark.focus}`]:
+              [`@apply focus-visible:bg-${config.variant.solid.default.background.light.focus} dark:focus-visible:bg-${config.variant.solid.default.background.dark.focus}`]:
                 {},
               //Border main
               [`@apply border border-${config.variant.solid.default.border.light.base} dark:border-${config.variant.solid.default.border.dark.base}`]:

@@ -32,12 +32,13 @@ export const size = {
   '4xl': 'nui-avatar-4xl',
 } as const satisfies AvatarVariant<'size'>
 
-export const shape = {
-  straight: 'nui-avatar-straight',
-  rounded: 'nui-avatar-rounded',
-  curved: 'nui-avatar-curved',
+export const rounded = {
+  none: 'nui-avatar-straight',
+  sm: 'nui-avatar-rounded',
+  md: 'nui-avatar-smooth',
+  lg: 'nui-avatar-curved',
   full: 'nui-avatar-full',
-} as const satisfies AvatarVariant<'shape'>
+} as const satisfies AvatarVariant<'rounded'>
 
 export const mask = {
   hex: 'nui-mask-hex',
