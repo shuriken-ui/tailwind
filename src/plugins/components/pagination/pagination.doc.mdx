@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as PaginationStories from './pagination.stories'
-import { defaultPaginationConfig } from '.'
+import { defaultConfig } from './pagination.config'
 
 <Meta of={PaginationStories} />
 
@@ -97,7 +97,7 @@ Pagination shapes allow you to change the border radiuses. Below is an example o
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultPaginationConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

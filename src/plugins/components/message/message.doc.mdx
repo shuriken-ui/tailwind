@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as MessageStories from './message.stories'
-import { defaultMessageConfig } from '.'
+import { defaultConfig } from './message.config'
 
 <Meta of={MessageStories} />
 
@@ -197,7 +197,7 @@ Messages have an icon slot you can use to display an icon.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultMessageConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

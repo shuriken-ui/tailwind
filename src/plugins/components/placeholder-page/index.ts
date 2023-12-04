@@ -1,24 +1,11 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultPlaceholderPageConfig = {
-  minSize: '[400px]',
-  innerSize: 'full',
-  maxContentSize: 'sm',
-  maxSizeXS: 'xs',
-  maxSizeSM: 'sm',
-  maxSizeMD: 'md',
-  maxSizeLG: 'lg',
-  maxSizeXL: 'xl',
-  title: {
-    text: 'muted-800',
-    textDark: 'white',
-  },
-  subtitle: {
-    text: 'muted-400',
-  },
-}
+import {
+  type PlaceholderPageConfig,
+  defaultConfig,
+  key,
+} from './placeholder-page.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -29,9 +16,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.placeholderPage',
-      ) satisfies typeof defaultPlaceholderPageConfig
+      const config = theme(`shurikenUi.${key}`) satisfies PlaceholderPageConfig
 
       addComponents({
         [`.${prefix}placeholder-page`]: {
@@ -80,7 +65,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          placeholderPage: defaultPlaceholderPageConfig,
+          [key]: defaultConfig,
         },
       },
     }

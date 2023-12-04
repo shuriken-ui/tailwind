@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as SwitchThinStories from './switch-thin.stories'
-import { defaultSwitchThinConfig } from '.'
+import { defaultConfig } from './switch-thin.config'
 
 <Meta of={SwitchThinStories} />
 
@@ -88,7 +88,7 @@ Switches can be shown in a disabled state.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultSwitchThinConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

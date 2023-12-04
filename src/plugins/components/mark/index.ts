@@ -1,13 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-const defaultMarkConfig = {
-  bg: 'primary-100',
-  bgDark: 'primary-800',
-  text: 'primary-800',
-  textDark: 'primary-200',
-}
+import { type MarkConfig, defaultConfig, key } from './mark.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -18,7 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme('shurikenUi.mark') satisfies typeof defaultMarkConfig
+      const config = theme(`shurikenUi.${key}`) satisfies MarkConfig
 
       addComponents({
         [`.${prefix}mark`]: {
@@ -32,7 +26,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          mark: defaultMarkConfig,
+          [key]: defaultConfig,
         },
       },
     }

@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ThemeToggleStories from './theme-toggle.stories'
-import { defaultThemeToggleConfig } from '.'
+import { defaultConfig } from './theme-toggle.config'
 
 <Meta of={ThemeToggleStories} />
 
@@ -45,7 +45,7 @@ The theme toggle is a control that lets you switch between light and dark mode.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultThemeToggleConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

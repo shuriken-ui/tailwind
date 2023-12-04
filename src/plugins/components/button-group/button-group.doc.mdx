@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ButtonGroupStories from './button-group.stories'
-import { defaultButtonGroupConfig } from '.'
+import { defaultConfig } from './button-group.config'
 
 <Meta of={ButtonGroupStories} />
 
@@ -90,7 +90,7 @@ Button groups have a default slot that serves as wrapper for their inner content
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultButtonGroupConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

@@ -1,12 +1,11 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultDropdownDividerConfig = {
-  space: '2',
-  border: 'muted-200',
-  borderDark: 'muted-600',
-}
+import {
+  type DropdownDividerConfig,
+  defaultConfig,
+  key,
+} from './dropdown-divider.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -17,9 +16,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.dropdownDivider',
-      ) satisfies typeof defaultDropdownDividerConfig
+      const config = theme(`shurikenUi.${key}`) satisfies DropdownDividerConfig
 
       addComponents({
         [`.${prefix}dropdown-divider`]: {
@@ -33,7 +30,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          dropdownDivider: defaultDropdownDividerConfig,
+          [key]: defaultConfig,
         },
       },
     }

@@ -1,14 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultLinkConfig = {
-  font: 'sans',
-  textHover: 'primary-500',
-  textHoverDark: 'primary-400',
-  textFocus: 'primary-500',
-  textFocusDark: 'primary-400',
-}
+import { type LinkPluginConfig, defaultConfig, key } from './link.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -19,7 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme('shurikenUi.link') satisfies typeof defaultLinkConfig
+      const config = theme(`shurikenUi.${key}`) satisfies LinkPluginConfig
 
       addComponents({
         [`.${prefix}link`]: {
@@ -33,7 +26,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          link: defaultLinkConfig,
+          [key]: defaultConfig,
         },
       },
     }

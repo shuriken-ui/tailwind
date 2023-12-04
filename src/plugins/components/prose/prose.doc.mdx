@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ProseStories from './prose.stories'
-import { defaultProseConfig } from '.'
+import { defaultConfig } from './prose.config'
 
 <Meta of={ProseStories} />
 
@@ -45,7 +45,7 @@ Proses allow you to render prestyled vanilla HTML and markdown content.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultProseConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

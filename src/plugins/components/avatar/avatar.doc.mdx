@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as AvatarStories from './avatar.stories'
-import { defaultAvatarConfig } from '.'
+import { defaultConfig } from './avatar.config'
 
 <Meta of={AvatarStories} />
 
@@ -263,7 +263,7 @@ Avatars have a badge slot that serves as wrapper for the optional badge element.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultAvatarConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

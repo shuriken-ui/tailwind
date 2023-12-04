@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ModalStories from './modal.stories'
-import { defaultModalConfig } from '.'
+import { defaultConfig } from './modal.config'
 
 <Meta of={ModalStories} />
 
@@ -45,7 +45,7 @@ Modals allow you to build popup dialogs that are useful for displaying informati
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultModalConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

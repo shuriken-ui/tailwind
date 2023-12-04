@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as TagStories from './tag.stories'
-import { defaultTagConfig } from '.'
+import { defaultConfig } from './tag.config'
 
 <Meta of={TagStories} />
 
@@ -164,7 +164,7 @@ Tags have a default slot where you can put content.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultTagConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

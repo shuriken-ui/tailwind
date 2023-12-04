@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as AvatarGroupStories from './avatar-group.stories'
-import { defaultAvatarGroupConfig } from '.'
+import { defaultConfig } from './avatar-group.config'
 
 <Meta of={AvatarGroupStories} />
 
@@ -96,7 +96,7 @@ Avatars can have different sizes and different shapes. The below examples shows 
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultAvatarGroupConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

@@ -1,6 +1,6 @@
-import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import { Meta, Primary, Controls } from '@storybook/blocks'
 import * as BreadcrumbStories from './breadcrumb.stories'
-import { defaultBreadcrumbConfig } from '.'
+import { defaultConfig } from './breadcrumb.config'
 
 <Meta of={BreadcrumbStories} />
 
@@ -45,7 +45,7 @@ Breadcrumbs allow you to quickly identify the path to the current web page.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultBreadcrumbConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

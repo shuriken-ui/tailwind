@@ -1,6 +1,6 @@
-import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import { Meta, Primary, Controls } from '@storybook/blocks'
 import * as DropdownDividerStories from './dropdown-divider.stories'
-import { defaultDropdownDividerConfig } from '.'
+import { defaultConfig } from './dropdown-divider.config'
 
 <Meta of={DropdownDividerStories} />
 
@@ -45,7 +45,7 @@ Dropdown dividers allow to efficiently separate dropdown items.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultDropdownDividerConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

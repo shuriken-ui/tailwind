@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as HeadingStories from './heading.stories'
-import { defaultHeadingConfig } from '.'
+import { defaultConfig } from './heading.config'
 
 <Meta of={HeadingStories} />
 
@@ -67,7 +67,7 @@ Use the Heading component to display a title or an important heading. You can us
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultHeadingConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

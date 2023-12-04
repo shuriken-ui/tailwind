@@ -1,12 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultLabelConfig = {
-  font: 'sans',
-  text: 'muted-400',
-  textDark: 'muted-400/80',
-}
+import { type LabelPluginConfig, defaultConfig, key } from './label.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -17,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.label',
-      ) satisfies typeof defaultLabelConfig
+      const config = theme(`shurikenUi.${key}`) satisfies LabelPluginConfig
 
       addComponents({
         [`.${prefix}label`]: {
@@ -33,7 +26,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          label: defaultLabelConfig,
+          [key]: defaultConfig,
         },
       },
     }

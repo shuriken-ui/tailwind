@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ButtonActionStories from './button-action.stories'
-import { defaultButtonActionConfig } from '.'
+import { defaultConfig } from './button-action.config'
 
 <Meta of={ButtonActionStories} />
 
@@ -121,7 +121,7 @@ Action buttons have a default slot that serves as wrapper for their inner conten
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultButtonActionConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

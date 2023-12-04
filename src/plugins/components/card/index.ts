@@ -1,70 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultCardConfig = {
-  size: 'full',
-  duration: '300',
-  cardWhite: {
-    bg: 'white',
-    bgDark: 'muted-800',
-    border: 'muted-200',
-    borderDark: 'muted-700',
-  },
-  cardWhiteContrast: {
-    bg: 'white',
-    bgDark: 'muted-950',
-    border: 'muted-200',
-    borderDark: 'muted-800',
-  },
-  cardMuted: {
-    bg: 'muted-100',
-    bgDark: 'muted-800',
-    border: 'muted-200',
-    borderDark: 'muted-700',
-  },
-  cardMutedContrast: {
-    bg: 'muted-100',
-    bgDark: 'muted-950',
-    border: 'muted-200',
-    borderDark: 'muted-800',
-  },
-  cardPrimary: {
-    bg: 'primary-500/10',
-    border: 'primary-500',
-  },
-  cardInfo: {
-    bg: 'info-500/10',
-    border: 'info-500',
-  },
-  cardSuccess: {
-    bg: 'success-500/10',
-    border: 'success-500',
-  },
-  cardWarning: {
-    bg: 'warning-500/10',
-    border: 'warning-500',
-  },
-  cardDanger: {
-    bg: 'danger-500/10',
-    border: 'danger-500',
-  },
-  rounded: {
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
-  },
-  cardSadow: {
-    color: 'muted-300/30',
-    colorDark: 'muted-800/30',
-    size: 'xl',
-  },
-  cardSadowHover: {
-    color: 'muted-300/30',
-    colorDark: 'muted-800/30',
-    size: 'xl',
-  },
-}
+import { type CardConfig, defaultConfig, key } from './card.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -75,7 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme('shurikenUi.card') satisfies typeof defaultCardConfig
+      const config = theme(`shurikenUi.${key}`) satisfies CardConfig
 
       addComponents({
         [`.${prefix}card`]: {
@@ -147,7 +84,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          card: defaultCardConfig,
+          [key]: defaultConfig,
         },
       },
     }

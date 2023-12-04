@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as TextareaStories from './textarea.stories'
-import { defaultTextareaConfig } from '.'
+import { defaultConfig } from './textarea.config'
 
 <Meta of={TextareaStories} />
 
@@ -199,7 +199,7 @@ Textareas have an addon slot that you can use to display some additional control
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultTextareaConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

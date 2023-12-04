@@ -1,6 +1,6 @@
-import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import { Meta, Primary, Controls } from '@storybook/blocks'
 import * as LinkStories from './link.stories'
-import { defaultLinkConfig } from '.'
+import { defaultConfig } from './link.config'
 
 <Meta of={LinkStories} />
 
@@ -45,7 +45,7 @@ Links allow you to navigate to another URL and are an essential part of every we
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultLinkConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

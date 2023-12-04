@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as SelectStories from './select.stories'
-import { defaultSelectConfig } from '.'
+import { defaultConfig } from './select.config'
 
 <Meta of={SelectStories} />
 
@@ -199,7 +199,7 @@ Selects icon slot also works with floating labels.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultSelectConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

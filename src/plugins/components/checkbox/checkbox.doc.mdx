@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as CheckboxStories from './checkbox.stories'
-import { defaultCheckboxConfig } from '.'
+import { defaultConfig } from './checkbox.config'
 
 <Meta of={CheckboxStories} />
 
@@ -144,7 +144,7 @@ Checkboxes can be shown in a disabled state.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultCheckboxConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

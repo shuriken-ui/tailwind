@@ -1,50 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultSwitchThinConfig = {
-  handle: {
-    border: 'muted-300',
-    borderDark: 'muted-600',
-    bg: 'white',
-    bgDark: 'muted-700',
-    size: '6',
-    rounded: 'full',
-  },
-  track: {
-    bg: 'muted-300',
-    bgDark: 'muted-600',
-    rounded: 'full',
-    duration: '300',
-  },
-  singleLabel: {
-    text: 'muted-400',
-    font: 'sans',
-    textSize: 'sm',
-  },
-  dualLabel: {
-    label: {
-      font: 'sans',
-      fontWeight: 'medium',
-      text: 'muted-800',
-      textDark: 'white',
-      textSize: 'sm',
-    },
-    sublabel: {
-      text: 'muted-400',
-      textSize: 'xs',
-      font: 'sans',
-    },
-  },
-  input: {
-    size: 'full',
-  },
-  primary: 'primary-400',
-  info: 'info-400',
-  success: 'success-400',
-  warning: 'warning-400',
-  danger: 'danger-400',
-}
+import { type SwitchThinConfig, defaultConfig, key } from './switch-thin.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -55,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.switchThin',
-      ) satisfies typeof defaultSwitchThinConfig
+      const config = theme(`shurikenUi.switchThin`) satisfies SwitchThinConfig
 
       addComponents({
         [`.${prefix}switch-thin`]: {
@@ -128,7 +83,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          switchThin: defaultSwitchThinConfig,
+          [key]: defaultConfig,
         },
       },
     }

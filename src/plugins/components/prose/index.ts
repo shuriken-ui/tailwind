@@ -1,26 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultProseConfig = {
-  color: 'muted',
-  dark: 'invert',
-  space: '4',
-  bgTable: 'white',
-  bgTableDark: 'muted-800',
-  borderTable: 'muted-200',
-  borderTableDark: 'muted-700',
-  rounded: {
-    size: 'md',
-    tdBorder: 'muted-200',
-    tdBorderDark: 'muted-700',
-  },
-  curved: {
-    size: 'xl',
-    tdBorder: 'muted-200',
-    tdBorderDark: 'muted-700',
-  },
-}
+import { type ProseConfig, defaultConfig, key } from './prose.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -31,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.prose',
-      ) satisfies typeof defaultProseConfig
+      const config = theme(`shurikenUi.${key}`) satisfies ProseConfig
 
       addComponents({
         [`.${prefix}prose`]: {
@@ -60,7 +39,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          prose: defaultProseConfig,
+          [key]: defaultConfig,
         },
       },
     }

@@ -1,9 +1,9 @@
-import type { Config } from 'tailwindcss'
+import type { ShurikenUIConfig } from './schema'
 import { preset, hasPreset } from './preset'
 
 export * from './preset'
 
-export function withShurikenUI(config: Config) {
+export function withShurikenUI(config: ShurikenUIConfig) {
   if (hasPreset(config)) {
     return config
   }

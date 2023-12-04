@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.3](https://github.com/shuriken-ui/tailwind/compare/v1.5.2...v1.5.3) (2023-11-28)
+
+
+### Bug Fixes
+
+* **input-number:** button styling for hover and focus states ([dfb241a](https://github.com/shuriken-ui/tailwind/commit/dfb241ae0bafd1b1bf352d3b67190d3b14dcde46))
+
+### [1.5.2](https://github.com/shuriken-ui/tailwind/compare/v1.5.1...v1.5.2) (2023-11-28)
+
+
+### Bug Fixes
+
+* **input-number:** disabled button styles ([bb85ab2](https://github.com/shuriken-ui/tailwind/commit/bb85ab295cb9f655ad15ebb06621781f930773ed))
+
+### [1.5.1](https://github.com/shuriken-ui/tailwind/compare/v1.5.0...v1.5.1) (2023-11-16)
+
+
+### Bug Fixes
+
+* inherit base config from tailwind ([61d6c5d](https://github.com/shuriken-ui/tailwind/commit/61d6c5d9eb873c8da6d39666a9ee50a1e5570c1a))
+
+## [1.5.0](https://github.com/shuriken-ui/tailwind/compare/v1.4.0...v1.5.0) (2023-11-16)
+
+
+### Features
+
+* add typing for tailwind config ([20d21fa](https://github.com/shuriken-ui/tailwind/commit/20d21fa4cbb7cdb66121f0b799ba1bc0e43387b0))
+
 ## [1.4.0](https://github.com/shuriken-ui/tailwind/compare/v1.3.0...v1.4.0) (2023-10-19)
 
 

@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as AccordionStories from './accordion.stories'
-import { defaultAccordionConfig } from '.'
+import { defaultConfig } from './accordion.config'
 
 <Meta of={AccordionStories} />
 
@@ -117,7 +117,7 @@ Accordions can have a plus indicator.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultAccordionConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

@@ -1,4 +1,4 @@
-import type { InputVariant } from './input.types'
+import type { InputVariant } from './input-number.types'
 
 export const shape = {
   straight: '',

@@ -1,22 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultListConfig = {
-  ul: 'disc',
-  ol: 'decimal',
-  base: {
-    textMarker: 'muted-500',
-    textMarkerDark: 'muted-400',
-    text: 'slate-700',
-    textDark: 'slate-300',
-    font: 'sans',
-  },
-  media: {
-    textMarker: 'slate-500',
-    textMarkerDark: 'slate-400',
-  },
-}
+import { type ListPluginConfig, defaultConfig, key } from './list.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -27,7 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme('shurikenUi.list') satisfies typeof defaultListConfig
+      const config = theme(`shurikenUi.${key}`) satisfies ListPluginConfig
 
       addComponents({
         [`.${prefix}list`]: {
@@ -56,7 +41,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          list: defaultListConfig,
+          [key]: defaultConfig,
         },
       },
     }

@@ -1,40 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultTabsConfig = {
-  inner: {
-    font: 'sans',
-    space: '6',
-  },
-  item: {
-    text: 'sm',
-    duration: '300',
-    notActive: {
-      text: 'muted-400',
-    },
-    active: {
-      border: 'primary-500',
-      text: 'muted-800',
-      textDark: 'muted-100',
-    },
-  },
-  pillItem: {
-    rounded: 'xl',
-    textPosition: 'center',
-    text: 'xs',
-    duration: '300',
-    notActive: {
-      text: 'muted-400',
-    },
-    active: {
-      bg: 'primary-500',
-      text: 'white',
-      shadow: 'primary-500/50',
-      shadowSize: 'lg',
-    },
-  },
-}
+import { type TabsConfig, defaultConfig, key } from './tabs.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -45,7 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme('shurikenUi.tabs') satisfies typeof defaultTabsConfig
+      const config = theme(`shurikenUi.${key}`) satisfies TabsConfig
 
       addComponents({
         [`.${prefix}tabs`]: {
@@ -108,7 +75,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          tabs: defaultTabsConfig,
+          [key]: defaultConfig,
         },
       },
     }

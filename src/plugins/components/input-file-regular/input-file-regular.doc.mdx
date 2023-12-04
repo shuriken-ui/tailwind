@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as InputFileRegularStories from './input-file-regular.stories'
-import { defaultInputFileRegularConfig } from '.'
+import { defaultConfig } from './input-file-regular.config'
 
 <Meta of={InputFileRegularStories} />
 
@@ -154,7 +154,7 @@ File inputs can be shown in an error state. This indicates that the input value 
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultInputFileRegularConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

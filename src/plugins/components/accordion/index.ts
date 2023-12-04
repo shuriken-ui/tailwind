@@ -1,62 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultAccordionConfig = {
-  size: 'full',
-  border: 'muted-200',
-  borderDark: 'muted-700',
-  bg: 'white',
-  bgDark: 'muted-800',
-  detail: {
-    border: 'muted-200',
-    borderDark: 'muted-700',
-  },
-  detailAndDot: {
-    bg: 'muted-200',
-    bgDark: 'muted-700',
-  },
-  detailOpenAndDot: {
-    bg: 'primary-500',
-  },
-  headerInner: {
-    text: 'muted-800',
-    textDark: 'white',
-  },
-  dot: {
-    size: '3',
-    rounded: 'full',
-    duration: '300',
-  },
-  outer: {
-    border: 'muted-200',
-    borderDark: 'muted-700',
-    bg: 'white',
-    bgDark: 'muted-700/60',
-    size: '8',
-    rounded: 'full',
-    duration: '300',
-  },
-  chevronIcon: {
-    size: '4',
-    duration: '300',
-  },
-  plusIcon: {
-    size: '4',
-    duration: '300',
-  },
-  content: {
-    space: '5',
-    font: 'sans',
-    text: 'muted-500',
-    textDark: 'muted-400',
-  },
-  rounded: {
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
-  },
-}
+import { type AccordionConfig, defaultConfig, key } from './accordion.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -67,10 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.accordion',
-      ) satisfies typeof defaultAccordionConfig
-
+      const config = theme(`shurikenUi.${key}`) satisfies AccordionConfig
       addComponents({
         [`.${prefix}accordion`]: {
           [`@apply w-${config.size} border-${config.border} dark:border-${config.borderDark} dark:bg-${config.bgDark} block overflow-hidden border bg-${config.bg}`]:
@@ -169,7 +111,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          accordion: defaultAccordionConfig,
+          [key]: defaultConfig,
         },
       },
     }

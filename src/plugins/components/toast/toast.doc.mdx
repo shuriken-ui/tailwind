@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ToastStories from './toast.stories'
-import { defaultToastConfig } from '.'
+import { defaultConfig } from './toast.config'
 
 <Meta of={ToastStories} />
 
@@ -170,7 +170,7 @@ Toasts have an icon slot that you can use to display an icon block.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultToastConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

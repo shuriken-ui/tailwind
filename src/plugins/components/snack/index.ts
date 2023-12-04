@@ -1,61 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-export const defaultSnackConfig = {
-  rounded: 'full',
-  icon: {
-    border: 'muted-200',
-    rounded: 'full',
-    bg: 'white',
-  },
-  image: {
-    rounded: 'full',
-  },
-  imageInner: {
-    rounded: 'full',
-  },
-  text: {
-    text: 'muted-600',
-    textDark: 'muted-300',
-    font: 'sans',
-    textSize: 'sm',
-  },
-  snackSM: {
-    size: '8',
-    icon: {
-      size: '8',
-    },
-    iconsInner: {
-      size: '4',
-    },
-    imageAndImageInner: {
-      size: '8',
-    },
-  },
-  snackMD: {
-    size: '10',
-    icon: {
-      size: '10',
-    },
-    iconsInner: {
-      size: '5',
-    },
-    imageAndImageInner: {
-      size: '10',
-    },
-  },
-  default: {
-    bg: 'white',
-    bgDark: 'muted-700',
-    border: 'muted-300',
-    borderDark: 'muted-600',
-  },
-  muted: {
-    bg: 'muted-200',
-    bgDark: 'muted-700',
-  },
-}
+import { type SnackConfig, defaultConfig, key } from './snack.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -66,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.snack',
-      ) satisfies typeof defaultSnackConfig
+      const config = theme(`shurikenUi.${key}`) satisfies SnackConfig
 
       addComponents({
         [`.${prefix}snack`]: {
@@ -143,7 +87,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          snack: defaultSnackConfig,
+          [key]: defaultConfig,
         },
       },
     }

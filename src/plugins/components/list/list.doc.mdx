@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ListStories from './list.stories'
-import { defaultListConfig } from '.'
+import { defaultConfig } from './list.config'
 
 <Meta of={ListStories} />
 
@@ -97,7 +97,7 @@ Lists can be used to display more complex list items. Below is an example of a m
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultListConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

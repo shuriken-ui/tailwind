@@ -1,6 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
+import { type MaskConfig, defaultConfig, key } from './mask.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -10,7 +11,9 @@ export default plugin.withOptions(
       prefix = `${prefix}-`
     }
 
-    return function ({ addComponents }) {
+    return function ({ addComponents, theme }) {
+      const config = theme(`shurikenUi.${key}`) satisfies MaskConfig
+
       addComponents({
         [`.${prefix}mask`]: {
           'mask-size': 'contain',
@@ -41,6 +44,12 @@ export default plugin.withOptions(
     }
   },
   function () {
-    return {}
+    return {
+      theme: {
+        shurikenUi: {
+          [key]: defaultConfig,
+        },
+      },
+    }
   },
 )

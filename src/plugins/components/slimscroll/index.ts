@@ -1,14 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-
-const defaultSlimscrollConfig = {
-  width: '[6px]',
-  bg: 'black/5',
-  bgDark: 'white/5',
-  bgHover: 'black/20',
-  bgHoverDark: 'white/20',
-}
+import { type SlimscrollConfig, defaultConfig, key } from './slimscroll.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -19,9 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(
-        'shurikenUi.slimscroll',
-      ) satisfies typeof defaultSlimscrollConfig
+      const config = theme(`shurikenUi.${key}`) satisfies SlimscrollConfig
 
       addComponents({
         [`.${prefix}slimscroll::-webkit-scrollbar, .${prefix}slimscroll-opaque::-webkit-scrollbar`]:
@@ -48,7 +39,7 @@ export default plugin.withOptions(
     return {
       theme: {
         shurikenUi: {
-          slimscroll: defaultSlimscrollConfig,
+          [key]: defaultConfig,
         },
       },
     }

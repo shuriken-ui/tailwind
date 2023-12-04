@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as TabsStories from './tabs.stories'
-import { defaultTabsConfig } from '.'
+import { defaultConfig } from './tabs.config'
 
 <Meta of={TabsStories} />
 
@@ -87,7 +87,7 @@ Tabs can have and additional "boxed" or "pill" variant.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultTabsConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 

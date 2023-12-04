@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ProgressCircleStories from './progress-circle.stories'
-import { defaultProgressCircleConfig } from '.'
+import { defaultConfig } from './progress-circle.config'
 
 <Meta of={ProgressCircleStories} />
 
@@ -81,7 +81,7 @@ Progress circles can have different colors.
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultProgressCircleConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 
