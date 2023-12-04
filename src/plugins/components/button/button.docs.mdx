@@ -1,6 +1,6 @@
 import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as ButtonStories from './button.stories'
-import { defaultButtonConfig } from '.'
+import { defaultConfig } from './button.config'
 
 <Meta of={ButtonStories} />
 
@@ -213,7 +213,7 @@ Buttons can have icons, both on the left and on the right. Use svg icons inside 
 
     <div class="!mt-4">
       <pre >
-        {JSON.stringify(defaultButtonConfig, null, 2)}
+        {JSON.stringify(defaultConfig, null, 2)}
       </pre>
     </div>
 
