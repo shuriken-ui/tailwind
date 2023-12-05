@@ -1,5 +1,91 @@
 export const key = 'accordion' as const
 
+export const config = {
+  wrapper: {
+    width: 'full',
+    rounded: {
+      none: 'rounded-none',
+      sm: 'rounded-md',
+      md: 'rounded-lg',
+      lg: 'rounded-xl',
+    },
+    background: {
+      light: 'white',
+      dark: 'muted-800',
+    },
+    border: {
+      light: 'muted-200',
+      dark: 'muted-700',
+    },
+  },
+  inner: {
+    border: {
+      light: 'muted-200',
+      dark: 'muted-700',
+    },
+  },
+  header: {
+    font: {
+      color: {
+        light: 'muted-800',
+        dark: 'muted-100',
+      },
+    },
+  },
+  content: {
+    font: {
+      family: 'sans',
+      color: {
+        light: 'muted-500',
+        dark: 'muted-400',
+      },
+    },
+    padding: {
+      x: '5',
+      y: '5',
+    },
+  },
+  icon: {
+    wrapper: {
+      size: '8',
+      rounded: 'full',
+      background: {
+        light: 'white',
+        dark: 'muted-700/60',
+      },
+      border: {
+        light: 'muted-200',
+        dark: 'muted-700',
+      },
+      transition: {
+        property: 'transform',
+        duration: '300',
+      },
+    },
+    dot: {
+      background: {
+        light: 'muted-200',
+        dark: 'muted-700',
+        active: 'primary-500',
+      },
+    },
+    chevron: {
+      size: '4',
+      transition: {
+        property: 'transform',
+        duration: '300',
+      },
+    },
+    plus: {
+      size: '4',
+      transition: {
+        property: 'transform',
+        duration: '300',
+      },
+    },
+  },
+}
+
 export const defaultConfig = {
   size: 'full',
   border: 'muted-200',
