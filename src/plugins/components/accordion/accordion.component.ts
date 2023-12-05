@@ -93,7 +93,7 @@ export const Accordion = ({
             </summary>
             <div class="nui-accordion-content">
               ${Paragraph({
-                size: 'md',
+                size: 'sm',
                 lead: 'tight',
                 children: item.content,
               })}

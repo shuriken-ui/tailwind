@@ -14,24 +14,35 @@ export default plugin.withOptions(
     return function ({ addComponents, theme }) {
       const config = theme(`shurikenUi.${key}`) satisfies AccordionConfig
       addComponents({
+        //Accordion:wrapper
         [`.${prefix}accordion`]: {
-          [`@apply w-${config.size} border-${config.border} dark:border-${config.borderDark} dark:bg-${config.bgDark} block overflow-hidden border bg-${config.bg}`]:
+          //Base
+          [`@apply w-${config.wrapper.width} block overflow-hidden`]: {},
+          //Background
+          [`@apply bg-${config.wrapper.background.light} dark:bg-${config.wrapper.background.dark}`]:
             {},
-
+          //Border
+          [`@apply border border-${config.wrapper.border.light} dark:border-${config.wrapper.border.dark}`]:
+            {},
+          //Accordion:inner
           [`.${prefix}accordion-detail[open]:not(:first-child)`]: {
-            [`@apply border-${config.detail.border} dark:border-${config.detail.borderDark} border-t`]:
+            [`@apply border-t border-${config.inner.border.light} dark:border-${config.inner.border.dark}`]:
               {},
           },
+          //Inner:dot
           [`.${prefix}accordion-detail .${prefix}accordion-dot`]: {
-            [`@apply bg-${config.detailAndDot.bg} dark:bg-${config.detailAndDot.bgDark}`]:
+            [`@apply bg-${config.icon.dot.background.light} dark:bg-${config.icon.dot.background.dark}`]:
               {},
           },
+          //Inner:dot active
           [`.${prefix}accordion-detail[open] .${prefix}accordion-dot`]: {
-            [`@apply bg-${config.detailOpenAndDot.bg}`]: {},
+            [`@apply bg-${config.icon.dot.background.active}`]: {},
           },
+          //Inner:summary
           [`.${prefix}accordion-summary`]: {
             [`@apply cursor-pointer list-none outline-none`]: {},
           },
+          //Inner:header
           [`.${prefix}accordion-header`]: {
             [`@apply flex items-center justify-between`]: {},
 
@@ -39,24 +50,54 @@ export default plugin.withOptions(
               [`@apply text-muted-800 dark:text-white`]: {},
             },
           },
+          //Inner:dot
           [`.${prefix}accordion-dot`]: {
-            [`@apply ms-2 h-${config.dot.size} w-${config.dot.size} rounded-${config.dot.rounded} transition-colors duration-${config.dot.duration}`]:
+            [`@apply ms-2 h-${config.icon.dot.size} w-${config.icon.dot.size} rounded-${config.icon.dot.rounded}`]:
+              {},
+            //Dot transition
+            [`@apply transition-${config.icon.dot.transition.property} duration-${config.icon.dot.transition.duration}`]:
               {},
           },
+          //Icon:outer
           [`.${prefix}icon-outer`]: {
-            [`@apply border-${config.outer.border} dark:border-${config.outer.borderDark} dark:bg-${config.outer.bgDark} ms-2 flex h-${config.outer.size} w-${config.outer.size} items-center justify-center rounded-${config.outer.rounded} border bg-${config.outer.bg} transition-all duration-${config.outer.duration}`]:
+            //Base
+            [`@apply ms-2 flex items-center justify-center`]: {},
+            //Width & Radius
+            [`@apply h-${config.icon.wrapper.size} w-${config.icon.wrapper.size} rounded-${config.icon.wrapper.rounded}`]:
+              {},
+            //Border
+            [`@apply border border-${config.icon.wrapper.border.light} dark:border-${config.icon.wrapper.border.dark}`]:
+              {},
+            //Background
+            [`@apply bg-${config.icon.wrapper.background.light} dark:bg-${config.icon.wrapper.background.dark}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.icon.wrapper.transition.property} duration-${config.icon.wrapper.transition.duration}`]:
               {},
           },
           [`.${prefix}chevron-icon`]: {
-            [`@apply text-muted-400 h-${config.chevronIcon.size} w-${config.chevronIcon.size} transition-transform duration-${config.chevronIcon.duration}`]:
+            //Base
+            [`@apply text-muted-400 h-${config.icon.chevron.size} w-${config.icon.chevron.size}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.icon.chevron.transition.property} duration-${config.icon.chevron.transition.duration}`]:
               {},
           },
           [`.${prefix}plus-icon`]: {
-            [`@apply text-muted-400 h-${config.plusIcon.size} w-${config.plusIcon.size} transition-transform duration-${config.plusIcon.duration}`]:
+            //Base
+            [`@apply text-muted-400 h-${config.icon.plus.size} w-${config.icon.plus.size}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.icon.plus.transition.property} duration-${config.icon.plus.transition.duration}`]:
               {},
           },
+          //Accordion:content
           [`.${prefix}accordion-content`]: {
-            [`@apply px-${config.content.space} pb-${config.content.space} font-${config.content.font} text-${config.content.text} dark:text-${config.content.textDark}`]:
+            //Base
+            [`@apply px-${config.content.padding.x} pb-${config.content.padding.y}`]:
+              {},
+            //Font
+            [`@apply font-${config.content.font.family} text-${config.content.font.size} text-${config.content.font.color.light} dark:text-${config.content.font.color.dark}`]:
               {},
           },
           [`&.${prefix}accordion-dot`]: {
@@ -79,28 +120,37 @@ export default plugin.withOptions(
               [`@apply rotate-45`]: {},
             },
           },
-          [`&.${prefix}accordion-rounded`]: {
+          //Accordion:rounded
+          [`&.${prefix}accordion-straight`]: {
             [`&.${prefix}accordion:first-child`]: {
-              [`@apply rounded-t-${config.rounded.default}`]: {},
+              [`@apply rounded-t-${config.wrapper.rounded.none}`]: {},
             },
             [`&.${prefix}accordion:last-child`]: {
-              [`@apply rounded-b-${config.rounded.default}`]: {},
+              [`@apply rounded-b-${config.wrapper.rounded.none}`]: {},
+            },
+          },
+          [`&.${prefix}accordion-rounded`]: {
+            [`&.${prefix}accordion:first-child`]: {
+              [`@apply rounded-t-${config.wrapper.rounded.sm}`]: {},
+            },
+            [`&.${prefix}accordion:last-child`]: {
+              [`@apply rounded-b-${config.wrapper.rounded.sm}`]: {},
             },
           },
           [`&.${prefix}accordion-smooth`]: {
             [`&.${prefix}accordion:first-child`]: {
-              [`@apply rounded-t-${config.rounded.smooth}`]: {},
+              [`@apply rounded-t-${config.wrapper.rounded.md}`]: {},
             },
             [`&.${prefix}accordion:last-child`]: {
-              [`@apply rounded-b-${config.rounded.smooth}`]: {},
+              [`@apply rounded-b-${config.wrapper.rounded.md}`]: {},
             },
           },
           [`&.${prefix}accordion-curved`]: {
             [`&.${prefix}accordion:first-child`]: {
-              [`@apply rounded-t-${config.rounded.curved}`]: {},
+              [`@apply rounded-t-${config.wrapper.rounded.lg}`]: {},
             },
             [`&.${prefix}accordion:last-child`]: {
-              [`@apply rounded-b-${config.rounded.curved}`]: {},
+              [`@apply rounded-b-${config.wrapper.rounded.lg}`]: {},
             },
           },
         },
