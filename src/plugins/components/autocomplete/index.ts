@@ -339,10 +339,11 @@ export default plugin.withOptions(
                 {},
             },
             //Results:inner
-            [`.${prefix}autocomplete-results-item-inner.${prefix}active`]: {
-              [`@apply bg-${config.color.default.results.inner.background.light} dark:bg-${config.color.default.results.inner.background.dark}`]:
-                {},
-            },
+            [`.${prefix}autocomplete-results-item-inner.${prefix}active, .${prefix}autocomplete-results-item-inner:hover`]:
+              {
+                [`@apply bg-${config.color.default.results.inner.background.light} dark:bg-${config.color.default.results.inner.background.dark}`]:
+                  {},
+              },
           },
           //Color:default contrast
           [`&.${prefix}autocomplete-default-contrast`]: {
@@ -370,10 +371,11 @@ export default plugin.withOptions(
                 {},
             },
             //Results:inner
-            [`.${prefix}autocomplete-results-item-inner.${prefix}active`]: {
-              [`@apply bg-${config.color.defaultContrast.results.inner.background.light} dark:bg-${config.color.defaultContrast.results.inner.background.dark}`]:
-                {},
-            },
+            [`.${prefix}autocomplete-results-item-inner.${prefix}active, .${prefix}autocomplete-results-item-inner:hover`]:
+              {
+                [`@apply bg-${config.color.defaultContrast.results.inner.background.light} dark:bg-${config.color.defaultContrast.results.inner.background.dark}`]:
+                  {},
+              },
           },
           //Color:muted
           [`&.${prefix}autocomplete-muted`]: {
@@ -401,10 +403,11 @@ export default plugin.withOptions(
                 {},
             },
             //Results:inner
-            [`.${prefix}autocomplete-results-item-inner.${prefix}active`]: {
-              [`@apply bg-${config.color.muted.results.inner.background.light} dark:bg-${config.color.muted.results.inner.background.dark}`]:
-                {},
-            },
+            [`.${prefix}autocomplete-results-item-inner.${prefix}active, .${prefix}autocomplete-results-item-inner:hover`]:
+              {
+                [`@apply bg-${config.color.muted.results.inner.background.light} dark:bg-${config.color.muted.results.inner.background.dark}`]:
+                  {},
+              },
           },
           //Color:muted contrast
           [`&.${prefix}autocomplete-muted-contrast`]: {
@@ -432,10 +435,11 @@ export default plugin.withOptions(
                 {},
             },
             //Results:inner
-            [`.${prefix}autocomplete-results-item-inner.${prefix}active`]: {
-              [`@apply bg-${config.color.mutedContrast.results.inner.background.light} dark:bg-${config.color.mutedContrast.results.inner.background.dark}`]:
-                {},
-            },
+            [`.${prefix}autocomplete-results-item-inner.${prefix}active, .${prefix}autocomplete-results-item-inner:hover`]:
+              {
+                [`@apply bg-${config.color.mutedContrast.results.inner.background.light} dark:bg-${config.color.mutedContrast.results.inner.background.dark}`]:
+                  {},
+              },
           },
           //Autocomplete:not loading
           [`&:not(.${prefix}autocomplete-loading)`]: {

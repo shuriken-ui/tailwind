@@ -10,7 +10,7 @@ import * as variants from './autocomplete.variants'
 export const Autocomplete = ({
   id,
   items,
-  shape = 'rounded',
+  rounded = 'sm',
   size = 'md',
   contrast = 'default',
   label,
@@ -31,7 +31,7 @@ export const Autocomplete = ({
         'nui-autocomplete',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         error && !loading && 'nui-autocomplete-error',
         loading && 'nui-autocomplete-loading',
         labelFloat && 'nui-autocomplete-label-float',

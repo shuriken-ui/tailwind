@@ -27,9 +27,9 @@ const meta = {
       options: ['sm', 'md', 'lg'],
       defaultValue: 'md',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
+      options: ['none', 'sm', 'md', 'lg', 'full'],
       defaultValue: 'straight',
     },
     contrast: {
@@ -215,7 +215,7 @@ export const Main: Story = {
     label: 'Search',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -236,14 +236,14 @@ export const Main: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const ShapeStraight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     label: 'Search',
     size: 'md',
     contrast: 'default',
-    shape: 'straight',
+    rounded: 'none',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -264,12 +264,12 @@ export const ShapeStraight: Story = {
 }
 
 export const ShapeRounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     label: 'Search',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -290,12 +290,12 @@ export const ShapeRounded: Story = {
 }
 
 export const ShapeSmooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     label: 'Search',
     size: 'md',
     contrast: 'default',
-    shape: 'smooth',
+    rounded: 'md',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -316,12 +316,12 @@ export const ShapeSmooth: Story = {
 }
 
 export const ShapeCurved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     label: 'Search',
     size: 'md',
     contrast: 'default',
-    shape: 'curved',
+    rounded: 'lg',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -342,12 +342,12 @@ export const ShapeCurved: Story = {
 }
 
 export const ShapeFull: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
     label: 'Search',
     size: 'md',
     contrast: 'default',
-    shape: 'full',
+    rounded: 'full',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -375,7 +375,7 @@ export const SizeSm: Story = {
     label: 'Search',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -401,7 +401,7 @@ export const SizeMd: Story = {
     label: 'Search',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -427,7 +427,7 @@ export const SizeLg: Story = {
     label: 'Search',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -455,7 +455,7 @@ export const ContrastMutedSm: Story = {
     label: 'Search',
     size: 'sm',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -481,7 +481,7 @@ export const ContrastMutedMd: Story = {
     label: 'Search',
     size: 'md',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -507,7 +507,7 @@ export const ContrastMutedLg: Story = {
     label: 'Search',
     size: 'lg',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -536,7 +536,7 @@ export const LabelFloatSm: Story = {
     labelFloat: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -563,7 +563,7 @@ export const LabelFloatMd: Story = {
     labelFloat: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -590,7 +590,7 @@ export const LabelFloatLg: Story = {
     labelFloat: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -618,7 +618,7 @@ export const Multiple: Story = {
     label: 'Search',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     multiple: true,
@@ -692,7 +692,7 @@ export const DisabledSm: Story = {
     '?disabled': true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -719,7 +719,7 @@ export const DisabledMd: Story = {
     '?disabled': true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -746,7 +746,7 @@ export const DisabledLg: Story = {
     '?disabled': true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -775,7 +775,7 @@ export const LoadingSm: Story = {
     loading: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -802,7 +802,7 @@ export const LoadingMd: Story = {
     loading: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -829,7 +829,7 @@ export const LoadingLg: Story = {
     loading: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -858,7 +858,7 @@ export const ErrorSm: Story = {
     error: 'Please select a valid value',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -885,7 +885,7 @@ export const ErrorMd: Story = {
     error: 'Please select a valid value',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -912,7 +912,7 @@ export const ErrorLg: Story = {
     error: 'Please select a valid value',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -941,7 +941,7 @@ export const ClearableSm: Story = {
     clearable: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -968,7 +968,7 @@ export const ClearableMd: Story = {
     clearable: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -995,7 +995,7 @@ export const ClearableLg: Story = {
     clearable: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -1023,7 +1023,7 @@ export const SlotIconSm: Story = {
     label: 'Search',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -1069,7 +1069,7 @@ export const SlotIconMd: Story = {
     label: 'Search',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -1115,7 +1115,7 @@ export const SlotIconLg: Story = {
     label: 'Search',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -1164,7 +1164,7 @@ export const MediaIconSm: Story = {
     labelFloat: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search activities...',
     classes: {
@@ -1242,7 +1242,7 @@ export const MediaIconMd: Story = {
     labelFloat: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -1320,7 +1320,7 @@ export const MediaIconLg: Story = {
     labelFloat: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -1399,7 +1399,7 @@ export const MediaImgSm: Story = {
     label: 'Search',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search activities...',
     classes: {
@@ -1476,7 +1476,7 @@ export const MediaImgMd: Story = {
     label: 'Search',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {
@@ -1553,7 +1553,7 @@ export const MediaImgLg: Story = {
     label: 'Search',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'autocomplete',
     placeholder: 'Search languages...',
     classes: {

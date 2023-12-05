@@ -1,12 +1,12 @@
 import type { AutocompleteVariant } from './autocomplete.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-autocomplete-rounded',
-  smooth: 'nui-autocomplete-smooth',
-  curved: 'nui-autocomplete-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-autocomplete-rounded',
+  md: 'nui-autocomplete-smooth',
+  lg: 'nui-autocomplete-curved',
   full: 'nui-autocomplete-full',
-} as const satisfies AutocompleteVariant<'shape'>
+} as const satisfies AutocompleteVariant<'rounded'>
 
 export const size = {
   sm: 'nui-autocomplete-sm',
