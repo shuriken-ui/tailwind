@@ -1161,6 +1161,7 @@ export const MediaIconSm: Story = {
   name: 'Media icon: sm',
   args: {
     label: 'Search',
+    labelFloat: true,
     size: 'sm',
     contrast: 'default',
     shape: 'rounded',
@@ -1238,6 +1239,7 @@ export const MediaIconMd: Story = {
   name: 'Media icon: md',
   args: {
     label: 'Search',
+    labelFloat: true,
     size: 'md',
     contrast: 'default',
     shape: 'rounded',
@@ -1315,6 +1317,7 @@ export const MediaIconLg: Story = {
   name: 'Media icon: lg',
   args: {
     label: 'Search',
+    labelFloat: true,
     size: 'lg',
     contrast: 'default',
     shape: 'rounded',
