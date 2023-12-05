@@ -17,7 +17,7 @@ export default plugin.withOptions(
       addComponents({
         [`.${prefix}breadcrumb`]: {
           [`.${prefix}breadcrumb-list`]: {
-            [`@apply mb-6 flex items-center font-${config.list.font} text-${config.list.text}`]:
+            [`@apply mb-6 flex items-center font-${config.item.text.font.family} text-${config.item.text.font.size}`]:
               {},
             [`.${prefix}breadcrumb-item-mobile`]: {
               [`@apply me-3 sm:hidden`]: {},
@@ -26,25 +26,34 @@ export default plugin.withOptions(
               [`@apply hidden sm:flex`]: {},
             },
             [`.${prefix}breadcrumb-item:last-child`]: {
-              [`@apply flex`]: {},
+              [`@apply flex text-${config.item.text.font.color.light} dark:text-${config.item.text.font.color.dark}`]:
+                {},
             },
             [`.${prefix}item-inner`]: {
-              [`@apply text-${config.list.itemInner.text} flex items-center gap-x-1 transition-colors duration-${config.list.itemInner.duration}`]:
+              //Base
+              [`@apply text-${config.item.text.font.size} flex items-center gap-x-1`]:
                 {},
-
+              //Transition
+              [`@apply transition-${config.item.transition.property} duration-${config.item.transition.duration}`]:
+                {},
+              //Item:icon
               [`.${prefix}item-icon`]: {
-                [`@apply flex items-center justify-center h-${config.list.itemInner.icon.size} w-${config.list.itemInner.icon.size} shrink-0`]:
+                //icon
+                [`@apply flex items-center justify-center h-${config.item.icon.size} w-${config.item.icon.size} shrink-0`]:
                   {},
+                //dot
                 [`&.${prefix}has-dot`]: {
-                  [`@apply text-${config.list.itemInner.icon.dot.text}`]: {},
+                  [`@apply text-${config.item.dot.font.size}`]: {},
                 },
               },
+              //Item:link
               [`&.${prefix}has-link`]: {
-                [`@apply hover:text-${config.list.itemInner.link.textHover} focus:text-${config.list.itemInner.link.texFocus}`]:
+                [`@apply hover:text-${config.item.link.font.color.hover} focus:text-${config.item.link.font.color.focus}`]:
                   {},
               },
+              //Item:text
               [`.${prefix}item-text`]: {
-                [`@apply text-${config.list.itemInner.itemText.text} px-${config.list.itemInner.itemText.space}`]:
+                [`@apply text-${config.item.text.font.color.light} dark:text-${config.item.text.font.color.dark} px-${config.item.text.padding.x}`]:
                   {},
               },
             },
