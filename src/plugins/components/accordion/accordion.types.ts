@@ -7,7 +7,7 @@ export interface AccordionProps extends Record<string, unknown> {
   }[]
   openItems?: number[]
   exclusive?: boolean
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved'
+  rounded?: 'none' | 'sm' | 'md' | 'lg'
   action?: 'dot' | 'chevron' | 'plus'
   classes?: {
     wrapper?: string | string[]
