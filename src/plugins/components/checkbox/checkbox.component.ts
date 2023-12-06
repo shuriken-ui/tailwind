@@ -3,14 +3,13 @@ import { spread } from '@open-wc/lit-helpers'
 
 import type { CheckboxAttrs } from './checkbox.types'
 import * as variants from './checkbox.variants'
-import { e } from 'vitest/dist/reporters-2ff87305'
 
 /**
  * Primary UI component for user interaction
  */
 export const Checkbox = ({
   id,
-  shape = 'rounded',
+  rounded = 'sm',
   color = 'default',
   label,
   error,
@@ -25,7 +24,7 @@ export const Checkbox = ({
     <div
       class=${[
         'nui-checkbox',
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         color && variants.color[color],
         classes?.wrapper,
         '?disabled' in attrs && 'opacity-50',

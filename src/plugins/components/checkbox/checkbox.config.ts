@@ -1,53 +1,97 @@
 export const key = 'checkbox' as const
 
 export const defaultConfig = {
+  rounded: {
+    sm: 'rounded',
+    md: 'rounded-md',
+    lg: 'rounded-lg',
+    full: 'rounded-full',
+  },
   outer: {
     size: '5',
   },
   inner: {
-    border: 'muted-400',
-    borderDark: 'muted-700',
-    bg: 'white',
-    bgDark: 'muted-700',
     size: 'full',
+    background: {
+      light: 'white',
+      dark: 'muted-700',
+    },
+    border: {
+      light: 'muted-400',
+      dark: 'muted-700',
+    },
   },
-  check: {
+  icon: {
     size: '2.5',
-    duration: '300',
-  },
-  indeterminate: {
-    size: '2.5',
-    duration: '300',
+    indeterminate: {
+      size: '2.5',
+      transition: {
+        property: 'all',
+        duration: '300',
+      },
+    },
+    transition: {
+      property: 'all',
+      duration: '300',
+    },
   },
   input: {
     size: '5',
   },
-  labelText: {
-    text: 'muted-400',
-    font: 'sans',
-    textSize: 'sm',
+  label: {
+    font: {
+      family: 'sans',
+      size: 'sm',
+      color: {
+        light: 'muted-400',
+        dark: 'muted-400',
+      },
+    },
   },
   error: {
-    text: 'danger-600',
-    font: 'sans',
-    textSixe: 'xs',
+    font: {
+      family: 'sans',
+      size: 'xs',
+      color: {
+        light: 'danger-600',
+        dark: 'danger-600',
+      },
+    },
   },
-  rounded: {
-    smooth: 'md',
-    curved: 'lg',
-    full: 'full',
+  color: {
+    default: {
+      light: 'muted-600',
+      dark: 'muted-200',
+    },
+    light: {
+      light: 'white',
+      dark: 'white',
+    },
+    muted: {
+      light: 'muted-400',
+      dark: 'muted-400',
+    },
+    primary: {
+      light: 'primary-500',
+      dark: 'primary-500',
+    },
+    info: {
+      light: 'info-500',
+      dark: 'info-500',
+    },
+    success: {
+      light: 'success-500',
+      dark: 'success-500',
+    },
+    warning: {
+      light: 'warning-500',
+      dark: 'warning-500',
+    },
+    danger: {
+      light: 'danger-500',
+      dark: 'danger-500',
+    },
   },
-  default: {
-    text: 'muted-600',
-    textDark: 'muted-200',
-  },
-  light: 'white',
-  muted: 'muted-400',
-  primary: 'primary-500',
-  info: 'info-500',
-  success: 'success-500',
-  warning: 'warning-500',
-  danger: 'danger-500',
 }
 
 export type CheckboxConfig = typeof defaultConfig

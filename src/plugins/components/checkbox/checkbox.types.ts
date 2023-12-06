@@ -5,7 +5,7 @@ export interface CheckboxProps extends Record<string, unknown> {
   id?: string
   error?: string | boolean
   indeterminate?: boolean
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   color?:
     | 'default'
     | 'light'
