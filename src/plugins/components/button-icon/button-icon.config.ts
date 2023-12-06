@@ -1,9 +1,16 @@
 export const key = 'buttonIcon' as const
 
-export const config = {
+export const defaultConfig = {
   font: {
+    family: 'sans',
     size: 'sm',
     weight: 'normal',
+  },
+  rounded: {
+    sm: 'rounded',
+    md: 'rounded-md',
+    lg: 'rounded-lg',
+    full: 'rounded-full',
   },
   size: {
     sm: {
@@ -62,77 +69,92 @@ export const config = {
     },
     primary: {
       background: {
-        hover: {
+        base: {
           light: 'primary-500/20',
+          dark: 'primary-500/20',
+        },
+        hover: {
+          light: 'primary-500/10',
+          dark: 'primary-500/10',
         },
       },
       text: {
         color: {
           light: 'primary-500',
+          dark: 'primary-500',
         },
-      },
-      border: {
-        light: 'primary-500',
       },
     },
     info: {
       background: {
-        hover: {
+        base: {
           light: 'info-500/20',
+          dark: 'info-500/20',
+        },
+        hover: {
+          light: 'info-500/10',
+          dark: 'info-500/10',
         },
       },
       text: {
         color: {
           light: 'info-500',
+          dark: 'info-500',
         },
-      },
-      border: {
-        light: 'info-500',
       },
     },
     success: {
       background: {
-        hover: {
+        base: {
           light: 'success-500/20',
+          dark: 'success-500/20',
+        },
+        hover: {
+          light: 'success-500/10',
+          dark: 'success-500/10',
         },
       },
       text: {
         color: {
           light: 'success-500',
+          dark: 'success-500',
         },
-      },
-      border: {
-        light: 'success-500',
       },
     },
     warning: {
       background: {
-        hover: {
+        base: {
           light: 'warning-500/20',
+          dark: 'warning-500/20',
+        },
+        hover: {
+          light: 'warning-500/10',
+          dark: 'warning-500/10',
         },
       },
       text: {
         color: {
           light: 'warning-500',
+          dark: 'warning-500',
         },
-      },
-      border: {
-        light: 'warning-500',
       },
     },
     danger: {
       background: {
-        hover: {
+        base: {
           light: 'danger-500/20',
+          dark: 'danger-500/20',
+        },
+        hover: {
+          light: 'danger-500/10',
+          dark: 'danger-500/10',
         },
       },
       text: {
         color: {
           light: 'danger-500',
+          dark: 'danger-500',
         },
-      },
-      border: {
-        light: 'danger-500',
       },
     },
   },
@@ -142,71 +164,71 @@ export const config = {
   },
 }
 
-export const defaultConfig = {
-  text: 'sm',
-  font: 'normal',
-  duration: '300',
-  buttonSmall: {
-    size: '8',
-    space: '1',
-  },
-  buttonMedium: {
-    size: '10',
-    space: '2',
-  },
-  buttonLarge: {
-    size: '12',
-    space: '3',
-  },
-  rounded: {
-    smooth: 'md',
-    curved: 'lg',
-    full: 'full',
-  },
-  default: {
-    bg: 'white',
-    bgDark: 'muted-700',
-    bgHover: 'muted-50',
-    bgHoverDark: 'muted-600',
-    text: 'muted-700',
-    textDark: 'white',
-    border: 'muted-300',
-    borderDark: 'muted-600',
-  },
-  muted: {
-    bg: 'muted-200',
-    bgDark: 'muted-700',
-    bgHover: 'muted-100',
-    bgHoverDark: 'muted-600',
-    text: 'muted-500',
-    textDark: 'white',
-  },
-  primary: {
-    border: 'primary-500',
-    bgHover: 'primary-500/20',
-    text: 'primary-500',
-  },
-  info: {
-    border: 'info-500',
-    bgHover: 'info-500/20',
-    text: 'info-500',
-  },
-  success: {
-    border: 'success-500',
-    bgHover: 'success-500/20',
-    text: 'success-500',
-  },
-  warning: {
-    border: 'warning-500',
-    bgHover: 'warning-500/20',
-    text: 'warning-500',
-  },
-  danger: {
-    border: 'danger-500',
-    bgHover: 'danger-500/20',
-    text: 'danger-500',
-  },
-}
+// export const defaultConfig = {
+//   text: 'sm',
+//   font: 'normal',
+//   duration: '300',
+//   buttonSmall: {
+//     size: '8',
+//     space: '1',
+//   },
+//   buttonMedium: {
+//     size: '10',
+//     space: '2',
+//   },
+//   buttonLarge: {
+//     size: '12',
+//     space: '3',
+//   },
+//   rounded: {
+//     smooth: 'md',
+//     curved: 'lg',
+//     full: 'full',
+//   },
+//   default: {
+//     bg: 'white',
+//     bgDark: 'muted-700',
+//     bgHover: 'muted-50',
+//     bgHoverDark: 'muted-600',
+//     text: 'muted-700',
+//     textDark: 'white',
+//     border: 'muted-300',
+//     borderDark: 'muted-600',
+//   },
+//   muted: {
+//     bg: 'muted-200',
+//     bgDark: 'muted-700',
+//     bgHover: 'muted-100',
+//     bgHoverDark: 'muted-600',
+//     text: 'muted-500',
+//     textDark: 'white',
+//   },
+//   primary: {
+//     border: 'primary-500',
+//     bgHover: 'primary-500/20',
+//     text: 'primary-500',
+//   },
+//   info: {
+//     border: 'info-500',
+//     bgHover: 'info-500/20',
+//     text: 'info-500',
+//   },
+//   success: {
+//     border: 'success-500',
+//     bgHover: 'success-500/20',
+//     text: 'success-500',
+//   },
+//   warning: {
+//     border: 'warning-500',
+//     bgHover: 'warning-500/20',
+//     text: 'warning-500',
+//   },
+//   danger: {
+//     border: 'danger-500',
+//     bgHover: 'danger-500/20',
+//     text: 'danger-500',
+//   },
+// }
 
 export type ButtonIconConfig = typeof defaultConfig
 export interface ButtonIconPluginConfig {
