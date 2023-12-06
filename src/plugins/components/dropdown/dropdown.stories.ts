@@ -63,12 +63,12 @@ const meta = {
       options: ['md', 'lg'],
       defaultValue: 'lg',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
+      options: ['none', 'sm', 'md', 'lg', 'full'],
       defaultValue: 'straight',
     },
-    flavor: {
+    variant: {
       control: { type: 'select' },
       options: ['button', 'context', 'text'],
       defaultValue: 'button',
@@ -93,9 +93,9 @@ export const Main: Story = {
     // set default values used for UI preview
     color: 'white',
     label: 'Dropdown',
-    flavor: 'button',
+    variant: 'button',
     orientation: 'start',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -104,28 +104,28 @@ export const Main: Story = {
         color: 'default',
         title: 'Account',
         text: 'View account info',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Products',
         text: 'Manage your inventory',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Orders',
         text: 'View and manage orders',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Settings',
         text: 'Manage store preferences',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
     `,
     style: 'min-height: 310px;',
@@ -139,9 +139,9 @@ export const ButtonEnd: Story = {
   args: {
     color: 'white',
     label: 'Dropdown',
-    flavor: 'button',
+    variant: 'button',
     orientation: 'end',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -150,28 +150,28 @@ export const ButtonEnd: Story = {
         color: 'default',
         title: 'Account',
         text: 'View account info',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Products',
         text: 'Manage your inventory',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Orders',
         text: 'View and manage orders',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Settings',
         text: 'Manage store preferences',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
     `,
     style: 'min-height: 310px;',
@@ -185,9 +185,9 @@ export const ContextStart: Story = {
   args: {
     color: 'white',
     label: 'Dropdown',
-    flavor: 'context',
+    variant: 'context',
     orientation: 'start',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -196,28 +196,28 @@ export const ContextStart: Story = {
         color: 'default',
         title: 'Account',
         text: 'View account info',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Products',
         text: 'Manage your inventory',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Orders',
         text: 'View and manage orders',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Settings',
         text: 'Manage store preferences',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
     `,
     style: 'min-height: 310px;',
@@ -229,9 +229,9 @@ export const ContextEnd: Story = {
   args: {
     color: 'white',
     label: 'Dropdown',
-    flavor: 'context',
+    variant: 'context',
     orientation: 'end',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -240,28 +240,28 @@ export const ContextEnd: Story = {
         color: 'default',
         title: 'Account',
         text: 'View account info',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Products',
         text: 'Manage your inventory',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Orders',
         text: 'View and manage orders',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Settings',
         text: 'Manage store preferences',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
     `,
     style: 'min-height: 310px;',
@@ -275,9 +275,9 @@ export const TextStart: Story = {
   args: {
     color: 'white',
     label: 'Dropdown',
-    flavor: 'text',
+    variant: 'text',
     orientation: 'start',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -286,28 +286,28 @@ export const TextStart: Story = {
         color: 'default',
         title: 'Account',
         text: 'View account info',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Products',
         text: 'Manage your inventory',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Orders',
         text: 'View and manage orders',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Settings',
         text: 'Manage store preferences',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
     `,
     style: 'min-height: 310px;',
@@ -319,9 +319,9 @@ export const TextEnd: Story = {
   args: {
     color: 'white',
     label: 'Dropdown',
-    flavor: 'text',
+    variant: 'text',
     orientation: 'end',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -330,28 +330,28 @@ export const TextEnd: Story = {
         color: 'default',
         title: 'Account',
         text: 'View account info',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Products',
         text: 'Manage your inventory',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Orders',
         text: 'View and manage orders',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Settings',
         text: 'Manage store preferences',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
     `,
     style: 'min-height: 310px;',
@@ -365,10 +365,10 @@ export const ButtonColor: Story = {
   args: {
     color: 'white',
     label: 'Dropdown',
-    flavor: 'button',
+    variant: 'button',
     buttonColor: 'primary',
     orientation: 'start',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -377,28 +377,28 @@ export const ButtonColor: Story = {
         color: 'default',
         title: 'Account',
         text: 'View account info',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Products',
         text: 'Manage your inventory',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Orders',
         text: 'View and manage orders',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Settings',
         text: 'Manage store preferences',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
     `,
     style: 'min-height: 310px;',
@@ -412,9 +412,9 @@ export const Divider: Story = {
   args: {
     color: 'white',
     label: 'Dropdown',
-    flavor: 'button',
+    variant: 'button',
     orientation: 'start',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -423,7 +423,7 @@ export const Divider: Story = {
         color: 'default',
         title: 'Account',
         text: 'View account info',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownDivider({})}
       ${DropdownItem({
@@ -431,14 +431,14 @@ export const Divider: Story = {
         color: 'default',
         title: 'Products',
         text: 'Manage your inventory',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownItem({
         href: '#',
         color: 'default',
         title: 'Orders',
         text: 'View and manage orders',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
       ${DropdownDivider({})}
       ${DropdownItem({
@@ -446,7 +446,7 @@ export const Divider: Story = {
         color: 'default',
         title: 'Settings',
         text: 'Manage store preferences',
-        shape: 'rounded',
+        rounded: 'sm',
       })}
     `,
     style: 'min-height: 310px;',
@@ -460,9 +460,9 @@ export const SlotIcon: Story = {
   args: {
     color: 'white',
     label: 'Dropdown',
-    flavor: 'context',
+    variant: 'context',
     orientation: 'start',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -471,7 +471,7 @@ export const SlotIcon: Story = {
         color: 'default',
         title: 'Account',
         text: 'View account info',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           <svg
             class="h-5 w-5"
@@ -497,7 +497,7 @@ export const SlotIcon: Story = {
         color: 'default',
         title: 'Products',
         text: 'Manage your inventory',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           <svg
             class="h-5 w-5"
@@ -520,7 +520,7 @@ export const SlotIcon: Story = {
         color: 'default',
         title: 'Orders',
         text: 'View and manage orders',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           <svg
             class="h-5 w-5"
@@ -546,7 +546,7 @@ export const SlotIcon: Story = {
         color: 'default',
         title: 'Settings',
         text: 'Manage store preferences',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           <svg
             class="h-5 w-5"
@@ -579,9 +579,9 @@ export const SlotAvatar: Story = {
   args: {
     color: 'white',
     label: 'Dropdown',
-    flavor: 'button',
+    variant: 'button',
     orientation: 'start',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -590,7 +590,7 @@ export const SlotAvatar: Story = {
         color: 'default',
         title: 'Anna Lopez',
         text: 'Software Engineer',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           ${Avatar({
             size: 'xs',
@@ -603,7 +603,7 @@ export const SlotAvatar: Story = {
         color: 'default',
         title: 'Melany Wright',
         text: 'Sales Manager',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           ${Avatar({
             size: 'xs',
@@ -616,7 +616,7 @@ export const SlotAvatar: Story = {
         color: 'default',
         title: 'Kendra Wilson',
         text: 'Project Manager',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           ${Avatar({
             size: 'xs',
@@ -629,7 +629,7 @@ export const SlotAvatar: Story = {
         color: 'default',
         title: 'Maya Piretti',
         text: 'Product manager',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           ${Avatar({
             size: 'xs',
@@ -649,9 +649,9 @@ export const SlotAction: Story = {
   args: {
     color: 'white',
     label: 'Dropdown',
-    flavor: 'button',
+    variant: 'button',
     orientation: 'start',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'lg',
     open: true,
     children: html`
@@ -660,7 +660,7 @@ export const SlotAction: Story = {
         color: 'default',
         title: 'Anna Lopez',
         text: 'Software Engineer',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           ${Avatar({
             size: 'xs',
@@ -671,7 +671,7 @@ export const SlotAction: Story = {
           ${Button({
             color: 'default',
             size: 'sm',
-            shape: 'rounded',
+            rounded: 'sm',
             children: html`
               <span>Action</span>
             `,
@@ -683,7 +683,7 @@ export const SlotAction: Story = {
         color: 'default',
         title: 'Melany Wright',
         text: 'Sales Manager',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           ${Avatar({
             size: 'xs',
@@ -694,7 +694,7 @@ export const SlotAction: Story = {
           ${Button({
             color: 'default',
             size: 'sm',
-            shape: 'rounded',
+            rounded: 'sm',
             children: html`
               <span>Action</span>
             `,
@@ -706,7 +706,7 @@ export const SlotAction: Story = {
         color: 'default',
         title: 'Kendra Wilson',
         text: 'Project Manager',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           ${Avatar({
             size: 'xs',
@@ -717,7 +717,7 @@ export const SlotAction: Story = {
           ${Button({
             color: 'default',
             size: 'sm',
-            shape: 'rounded',
+            rounded: 'sm',
             children: html`
               <span>Action</span>
             `,
@@ -729,7 +729,7 @@ export const SlotAction: Story = {
         color: 'default',
         title: 'Maya Piretti',
         text: 'Product manager',
-        shape: 'rounded',
+        rounded: 'sm',
         start: html`
           ${Avatar({
             size: 'xs',
@@ -740,7 +740,7 @@ export const SlotAction: Story = {
           ${Button({
             color: 'default',
             size: 'sm',
-            shape: 'rounded',
+            rounded: 'sm',
             children: html`
               <span>Action</span>
             `,

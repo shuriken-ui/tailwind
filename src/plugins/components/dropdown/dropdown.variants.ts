@@ -10,13 +10,13 @@ export const size = {
   lg: 'nui-menu-lg',
 } as const satisfies DropdownVariant<'size'>
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-menu-rounded',
-  smooth: 'nui-menu-smooth',
-  curved: 'nui-menu-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-menu-rounded',
+  md: 'nui-menu-smooth',
+  lg: 'nui-menu-curved',
   full: 'nui-menu-curved',
-} as const satisfies DropdownVariant<'shape'>
+} as const satisfies DropdownVariant<'rounded'>
 
 export const color = {
   white: 'nui-menu-white',
