@@ -24,10 +24,10 @@ const meta = {
       ],
       defaultValue: 'default',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'none',
     },
     onClick: { action: 'onClick' },
   },
@@ -44,41 +44,41 @@ export const Main: Story = {
   args: {
     // set default values used for UI preview
     color: 'muted',
-    shape: 'full',
+    rounded: 'full',
   },
 }
 // #endregion
 
 // #region Color: default
 export const DefaultStraight: Story = {
-  name: 'Default: straight',
+  name: 'Default: none',
   args: {
     color: 'default',
-    shape: 'straight',
+    rounded: 'none',
   },
 }
 
 export const DefaultRounded: Story = {
-  name: 'Default: rounded',
+  name: 'Default: sm',
   args: {
     color: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
 export const DefaultSmooth: Story = {
-  name: 'Default: smooth',
+  name: 'Default: md',
   args: {
     color: 'default',
-    shape: 'smooth',
+    rounded: 'md',
   },
 }
 
 export const DefaultCurved: Story = {
-  name: 'Default: curved',
+  name: 'Default: lg',
   args: {
     color: 'default',
-    shape: 'curved',
+    rounded: 'lg',
   },
 }
 
@@ -86,41 +86,41 @@ export const DefaultFull: Story = {
   name: 'Default: full',
   args: {
     color: 'default',
-    shape: 'full',
+    rounded: 'full',
   },
 }
 // #endregion
 
 // #region Color: muted
 export const MutedStraight: Story = {
-  name: 'Muted: straight',
+  name: 'Muted: none',
   args: {
     color: 'muted',
-    shape: 'straight',
+    rounded: 'none',
   },
 }
 
 export const MutedRounded: Story = {
-  name: 'Muted: rounded',
+  name: 'Muted: sm',
   args: {
     color: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
 export const MutedSmooth: Story = {
-  name: 'Muted: smooth',
+  name: 'Muted: md',
   args: {
     color: 'muted',
-    shape: 'smooth',
+    rounded: 'md',
   },
 }
 
 export const MutedCurved: Story = {
-  name: 'Muted: curved',
+  name: 'Muted: lg',
   args: {
     color: 'muted',
-    shape: 'curved',
+    rounded: 'lg',
   },
 }
 
@@ -128,41 +128,41 @@ export const MutedFull: Story = {
   name: 'Muted: full',
   args: {
     color: 'muted',
-    shape: 'full',
+    rounded: 'full',
   },
 }
 // #endregion
 
 // #region Color: primary
 export const PrimaryStraight: Story = {
-  name: 'Primary: straight',
+  name: 'Primary: none',
   args: {
     color: 'primary',
-    shape: 'straight',
+    rounded: 'none',
   },
 }
 
 export const PrimaryRounded: Story = {
-  name: 'Primary: rounded',
+  name: 'Primary: sm',
   args: {
     color: 'primary',
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
 export const PrimarySmooth: Story = {
-  name: 'Primary: smooth',
+  name: 'Primary: md',
   args: {
     color: 'primary',
-    shape: 'smooth',
+    rounded: 'md',
   },
 }
 
 export const PrimaryCurved: Story = {
-  name: 'Primary: curved',
+  name: 'Primary: lg',
   args: {
     color: 'primary',
-    shape: 'curved',
+    rounded: 'lg',
   },
 }
 
@@ -170,41 +170,41 @@ export const PrimaryFull: Story = {
   name: 'Primary: full',
   args: {
     color: 'primary',
-    shape: 'full',
+    rounded: 'full',
   },
 }
 // #endregion
 
 // #region Color: info
 export const InfoStraight: Story = {
-  name: 'Info: straight',
+  name: 'Info: none',
   args: {
     color: 'info',
-    shape: 'straight',
+    rounded: 'none',
   },
 }
 
 export const InfoRounded: Story = {
-  name: 'Info: rounded',
+  name: 'Info: sm',
   args: {
     color: 'info',
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
 export const InfoSmooth: Story = {
-  name: 'Info: smooth',
+  name: 'Info: md',
   args: {
     color: 'info',
-    shape: 'smooth',
+    rounded: 'md',
   },
 }
 
 export const InfoCurved: Story = {
-  name: 'Info: curved',
+  name: 'Info: lg',
   args: {
     color: 'info',
-    shape: 'curved',
+    rounded: 'lg',
   },
 }
 
@@ -212,41 +212,41 @@ export const InfoFull: Story = {
   name: 'Info: full',
   args: {
     color: 'info',
-    shape: 'full',
+    rounded: 'full',
   },
 }
 // #endregion
 
 // #region Color: success
 export const SuccessStraight: Story = {
-  name: 'Success: straight',
+  name: 'Success: none',
   args: {
     color: 'success',
-    shape: 'straight',
+    rounded: 'none',
   },
 }
 
 export const SuccessRounded: Story = {
-  name: 'Success: rounded',
+  name: 'Success: sm',
   args: {
     color: 'success',
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
 export const SuccessSmooth: Story = {
-  name: 'Success: smooth',
+  name: 'Success: md',
   args: {
     color: 'success',
-    shape: 'smooth',
+    rounded: 'md',
   },
 }
 
 export const SuccessCurved: Story = {
-  name: 'Success: curved',
+  name: 'Success: lg',
   args: {
     color: 'success',
-    shape: 'curved',
+    rounded: 'lg',
   },
 }
 
@@ -254,41 +254,41 @@ export const SuccessFull: Story = {
   name: 'Success: full',
   args: {
     color: 'success',
-    shape: 'full',
+    rounded: 'full',
   },
 }
 // #endregion
 
 // #region Color: warning
 export const WarningStraight: Story = {
-  name: 'Warning: straight',
+  name: 'Warning: none',
   args: {
     color: 'warning',
-    shape: 'straight',
+    rounded: 'none',
   },
 }
 
 export const WarningRounded: Story = {
-  name: 'Warning: rounded',
+  name: 'Warning: sm',
   args: {
     color: 'warning',
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
 export const WarningSmooth: Story = {
-  name: 'Warning: smooth',
+  name: 'Warning: md',
   args: {
     color: 'warning',
-    shape: 'smooth',
+    rounded: 'md',
   },
 }
 
 export const WarningCurved: Story = {
-  name: 'Warning: curved',
+  name: 'Warning: lg',
   args: {
     color: 'warning',
-    shape: 'curved',
+    rounded: 'lg',
   },
 }
 
@@ -296,41 +296,41 @@ export const WarningFull: Story = {
   name: 'Warning: full',
   args: {
     color: 'warning',
-    shape: 'full',
+    rounded: 'full',
   },
 }
 // #endregion
 
 // #region Color: danger
 export const DangerStraight: Story = {
-  name: 'Danger: straight',
+  name: 'Danger: none',
   args: {
     color: 'danger',
-    shape: 'straight',
+    rounded: 'none',
   },
 }
 
 export const DangerRounded: Story = {
-  name: 'Danger: rounded',
+  name: 'Danger: sm',
   args: {
     color: 'danger',
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
 export const DangerSmooth: Story = {
-  name: 'Danger: smooth',
+  name: 'Danger: md',
   args: {
     color: 'danger',
-    shape: 'smooth',
+    rounded: 'md',
   },
 }
 
 export const DangerCurved: Story = {
-  name: 'Danger: curved',
+  name: 'Danger: lg',
   args: {
     color: 'danger',
-    shape: 'curved',
+    rounded: 'lg',
   },
 }
 
@@ -338,7 +338,7 @@ export const DangerFull: Story = {
   name: 'Danger: full',
   args: {
     color: 'danger',
-    shape: 'full',
+    rounded: 'full',
   },
 }
 // #endregion

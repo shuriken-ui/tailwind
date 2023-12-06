@@ -8,7 +8,7 @@ import * as variants from './button-close.variants'
  * Primary UI component for user interaction
  */
 export const ButtonClose = ({
-  shape,
+  rounded,
   color = 'default',
   classes,
   onClick,
@@ -19,7 +19,7 @@ export const ButtonClose = ({
       class=${[
         'nui-button-close',
         variants.color[color],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         classes?.wrapper,
       ]
         .filter(Boolean)
