@@ -5,7 +5,7 @@ export interface DropdownItemProps extends Record<string, unknown> {
   href?: string
   active?: boolean
   disabled?: boolean
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved'
+  rounded?: 'none' | 'sm' | 'md' | 'lg'
   color?: 'default' | 'contrast'
   rel?: string
   target?: string

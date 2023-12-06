@@ -30,10 +30,10 @@ const meta = {
       options: ['default', 'contrast'],
       defaultValue: 'default',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg'],
+      defaultValue: 'none',
     },
     onClick: { action: 'onClick' },
   },
@@ -53,57 +53,57 @@ export const Main: Story = {
     color: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
-    shape: 'rounded',
+    rounded: 'sm',
     style: 'max-width: 200px',
   },
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const ShapeStraight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     href: '#',
     color: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
-    shape: 'straight',
+    rounded: 'none',
     style: 'min-width: 200px',
   },
 }
 
 export const ShapeRounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     href: '#',
     color: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
-    shape: 'rounded',
+    rounded: 'sm',
     style: 'min-width: 200px',
   },
 }
 
 export const ShapeSmooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     href: '#',
     color: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
-    shape: 'smooth',
+    rounded: 'md',
     style: 'min-width: 200px',
   },
 }
 
 export const ShapeCurved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     href: '#',
     color: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
-    shape: 'curved',
+    rounded: 'lg',
     style: 'min-width: 200px',
   },
 }
@@ -117,7 +117,7 @@ export const SlotStartIcon: Story = {
     color: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
-    shape: 'rounded',
+    rounded: 'sm',
     start: html`
       <svg
         class="h-5 w-5"
@@ -150,7 +150,7 @@ export const SlotStartAvatar: Story = {
     color: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
-    shape: 'rounded',
+    rounded: 'sm',
     start: html`
       ${Avatar({
         size: 'xs',
@@ -170,7 +170,7 @@ export const SlotEndAction: Story = {
     color: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
-    shape: 'rounded',
+    rounded: 'sm',
     start: html`
       ${Avatar({
         size: 'xs',
@@ -181,7 +181,7 @@ export const SlotEndAction: Story = {
       ${Button({
         color: 'default',
         size: 'sm',
-        shape: 'rounded',
+        rounded: 'sm',
         children: html`
           <span>Action</span>
         `,

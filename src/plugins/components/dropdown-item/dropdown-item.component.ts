@@ -12,7 +12,7 @@ export const DropdownItem = ({
   target,
   rel,
   type,
-  shape = 'rounded',
+  rounded = 'sm',
   color = 'default',
   title,
   text,
@@ -33,7 +33,7 @@ export const DropdownItem = ({
               class=${[
                 'nui-dropdown-item',
                 active && 'nui-active',
-                shape && variants.shape[shape],
+                rounded && variants.rounded[rounded],
                 color && variants.color[color],
               ]
                 .filter(Boolean)
@@ -67,7 +67,7 @@ export const DropdownItem = ({
               class=${[
                 'nui-dropdown-item',
                 active && 'nui-active',
-                shape && variants.shape[shape],
+                rounded && variants.rounded[rounded],
                 color && variants.color[color],
               ]
                 .filter(Boolean)
