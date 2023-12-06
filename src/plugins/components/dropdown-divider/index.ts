@@ -20,7 +20,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}dropdown-divider`]: {
-          [`@apply my-${config.space} block h-px w-full border-t border-${config.border} dark:border-${config.borderDark}`]:
+          [`@apply my-${config.margin.y} block h-px w-full border-t border-${config.border.light} dark:border-${config.border.dark}`]:
             {},
         },
       })
