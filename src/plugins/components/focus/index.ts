@@ -25,7 +25,7 @@ export default plugin.withOptions(
             {},
           '@apply outline-transparent': {},
           [mode]: {
-            [`@apply outline-${config.color} dark:outline-${config.colorDark}`]:
+            [`@apply outline-${config.color.light} dark:outline-${config.color.dark}`]:
               {},
             [`@apply outline-${config.style} ring-0`]: {},
           },
