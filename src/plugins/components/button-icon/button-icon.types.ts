@@ -1,7 +1,7 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface ButtonIconProps extends Record<string, unknown> {
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   color?:
     | 'default'
     | 'muted'
