@@ -11,7 +11,7 @@ export const Card = ({
   color = 'white',
   elevated,
   elevatedHover,
-  shape = 'rounded',
+  rounded = 'sm',
   classes,
   children,
   ...attrs
@@ -21,7 +21,7 @@ export const Card = ({
       class=${[
         'nui-card',
         color && variants.color[color],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         elevated && 'nui-card-shadow',
         elevatedHover && 'nui-card-shadow-hover',
         classes?.wrapper,
