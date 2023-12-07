@@ -541,9 +541,9 @@ export const SlotIconSm: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -577,9 +577,9 @@ export const SlotIconMd: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -613,9 +613,9 @@ export const SlotIconLg: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -652,9 +652,9 @@ export const SlotIconFloatSm: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -689,9 +689,9 @@ export const SlotIconFloatMd: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -726,9 +726,9 @@ export const SlotIconFloatLg: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -769,9 +769,9 @@ export const SlotActionSm: Story = {
           <g
             fill="none"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
           >
             <path d="M2 12s3-7 10-7s10 7 10 7s-3 7-10 7s-10-7-10-7Z" />
             <circle cx="12" cy="12" r="3" />
@@ -812,9 +812,9 @@ export const SlotActionMd: Story = {
           <g
             fill="none"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
           >
             <path d="M2 12s3-7 10-7s10 7 10 7s-3 7-10 7s-10-7-10-7Z" />
             <circle cx="12" cy="12" r="3" />
@@ -855,9 +855,9 @@ export const SlotActionLg: Story = {
           <g
             fill="none"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
           >
             <path d="M2 12s3-7 10-7s10 7 10 7s-3 7-10 7s-10-7-10-7Z" />
             <circle cx="12" cy="12" r="3" />

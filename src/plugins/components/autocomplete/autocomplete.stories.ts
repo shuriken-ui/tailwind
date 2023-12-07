@@ -649,9 +649,9 @@ export const Multiple: Story = {
               <path
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M18 6 6 18M6 6l12 12"
               ></path>
             </svg>
@@ -670,9 +670,9 @@ export const Multiple: Story = {
               <path
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M18 6 6 18M6 6l12 12"
               ></path>
             </svg>
@@ -1040,9 +1040,9 @@ export const SlotIconSm: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -1086,9 +1086,9 @@ export const SlotIconMd: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -1132,9 +1132,9 @@ export const SlotIconLg: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -1181,9 +1181,9 @@ export const MediaIconSm: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -1220,9 +1220,9 @@ export const MediaIconSm: Story = {
                   <path
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M20 6L9 17l-5-5"
                   />
                 </svg>
@@ -1259,9 +1259,9 @@ export const MediaIconMd: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -1298,9 +1298,9 @@ export const MediaIconMd: Story = {
                   <path
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M20 6L9 17l-5-5"
                   />
                 </svg>
@@ -1337,9 +1337,9 @@ export const MediaIconLg: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -1376,9 +1376,9 @@ export const MediaIconLg: Story = {
                   <path
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M20 6L9 17l-5-5"
                   />
                 </svg>
@@ -1416,9 +1416,9 @@ export const MediaImgSm: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -1455,9 +1455,9 @@ export const MediaImgSm: Story = {
                   <path
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M20 6L9 17l-5-5"
                   />
                 </svg>
@@ -1493,9 +1493,9 @@ export const MediaImgMd: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -1532,9 +1532,9 @@ export const MediaImgMd: Story = {
                   <path
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M20 6L9 17l-5-5"
                   />
                 </svg>
@@ -1570,9 +1570,9 @@ export const MediaImgLg: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21l-4.35-4.35" />
@@ -1609,9 +1609,9 @@ export const MediaImgLg: Story = {
                   <path
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M20 6L9 17l-5-5"
                   />
                 </svg>
