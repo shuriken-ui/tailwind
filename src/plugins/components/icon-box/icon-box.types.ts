@@ -1,7 +1,7 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface IconBoxProps extends Record<string, unknown> {
-  shape?: 'straight' | 'rounded' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
   color?:
     | 'default'
@@ -11,7 +11,7 @@ export interface IconBoxProps extends Record<string, unknown> {
     | 'success'
     | 'warning'
     | 'danger'
-  flavor?: 'solid' | 'outline' | 'pastel'
+  variant?: 'solid' | 'outline' | 'pastel'
   bordered?: boolean
   mask?: 'hex' | 'hexed' | 'deca' | 'blob' | 'diamond'
   classes?: {

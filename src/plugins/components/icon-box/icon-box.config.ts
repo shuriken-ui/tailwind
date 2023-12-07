@@ -1,140 +1,329 @@
 export const key = 'iconBox' as const
 
 export const defaultConfig = {
-  boxXS: {
-    size: '8',
-    rounded: {
-      default: 'lg',
-      curved: 'xl',
+  bordered: {
+    border: {
+      size: '2',
+      color: 'current',
     },
   },
-  boxSM: {
-    size: '10',
-    rounded: {
-      default: 'lg',
-      curved: 'xl',
+  size: {
+    xs: {
+      size: '8',
+      rounded: {
+        sm: 'rounded',
+        md: 'rounded-md',
+        lg: 'rounded-lg',
+        full: 'rounded-full',
+      },
+    },
+    sm: {
+      size: '10',
+      rounded: {
+        sm: 'rounded',
+        md: 'rounded-md',
+        lg: 'rounded-xl',
+        full: 'rounded-full',
+      },
+    },
+    md: {
+      size: '12',
+      rounded: {
+        sm: 'rounded-md',
+        md: 'rounded-lg',
+        lg: 'rounded-xl',
+        full: 'rounded-full',
+      },
+    },
+    lg: {
+      size: '16',
+      rounded: {
+        sm: 'rounded-md',
+        md: 'rounded-lg',
+        lg: 'rounded-2xl',
+        full: 'rounded-full',
+      },
+    },
+    xl: {
+      size: '20',
+      rounded: {
+        sm: 'rounded-lg',
+        md: 'rounded-xl',
+        lg: 'rounded-2xl',
+        full: 'rounded-full',
+      },
+    },
+    xxl: {
+      size: '24',
+      rounded: {
+        sm: 'rounded-lg',
+        md: 'rounded-xl',
+        lg: 'rounded-3xl',
+        full: 'rounded-full',
+      },
     },
   },
-  boxMD: {
-    size: '12',
-    rounded: {
-      default: 'xl',
-      curved: '2xl',
+  color: {
+    variant: {
+      solid: {
+        default: {
+          background: {
+            light: 'muted-100',
+            dark: 'muted-700',
+          },
+          font: {
+            color: {
+              light: 'muted-600',
+              dark: 'muted-200',
+            },
+          },
+        },
+        invert: {
+          background: {
+            light: 'white',
+            dark: 'muted-950',
+          },
+          font: {
+            color: {
+              light: 'muted-800',
+              dark: 'muted-100',
+            },
+          },
+        },
+        primary: {
+          background: {
+            light: 'primary-500',
+            dark: 'primary-500',
+          },
+          font: {
+            color: {
+              light: 'primary-invert',
+              dark: 'primary-invert',
+            },
+          },
+        },
+        info: {
+          background: {
+            light: 'info-500',
+            dark: 'info-500',
+          },
+          font: {
+            color: {
+              light: 'white',
+              dark: 'white',
+            },
+          },
+        },
+        success: {
+          background: {
+            light: 'success-500',
+            dark: 'success-500',
+          },
+          font: {
+            color: {
+              light: 'white',
+              dark: 'white',
+            },
+          },
+        },
+        warning: {
+          background: {
+            light: 'warning-500',
+            dark: 'warning-500',
+          },
+          font: {
+            color: {
+              light: 'white',
+              dark: 'white',
+            },
+          },
+        },
+        danger: {
+          background: {
+            light: 'danger-500',
+            dark: 'danger-500',
+          },
+          font: {
+            color: {
+              light: 'white',
+              dark: 'white',
+            },
+          },
+        },
+      },
+      pastel: {
+        invert: {
+          background: {
+            light: 'white/10',
+            dark: 'white/10',
+          },
+          font: {
+            color: {
+              light: 'muted-800',
+              dark: 'muted-800',
+            },
+          },
+        },
+        primary: {
+          background: {
+            light: 'primary-500/10',
+            dark: 'primary-500/10',
+          },
+          font: {
+            color: {
+              light: 'primary-500',
+              dark: 'primary-500',
+            },
+          },
+        },
+        info: {
+          background: {
+            light: 'info-500/10',
+            dark: 'info-500/10',
+          },
+          font: {
+            color: {
+              light: 'info-500',
+              dark: 'info-500',
+            },
+          },
+        },
+        success: {
+          background: {
+            light: 'success-500/10',
+            dark: 'success-500/10',
+          },
+          font: {
+            color: {
+              light: 'success-500',
+              dark: 'success-500',
+            },
+          },
+        },
+        warning: {
+          background: {
+            light: 'warning-500/10',
+            dark: 'warning-500/10',
+          },
+          font: {
+            color: {
+              light: 'warning-500',
+              dark: 'warning-500',
+            },
+          },
+        },
+        danger: {
+          background: {
+            light: 'danger-500/10',
+            dark: 'danger-500/10',
+          },
+          font: {
+            color: {
+              light: 'danger-500',
+              dark: 'danger-500',
+            },
+          },
+        },
+      },
+      outline: {
+        invert: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'muted-800',
+              dark: 'muted-800',
+            },
+          },
+        },
+        primary: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'primary-500',
+              dark: 'primary-500',
+            },
+          },
+        },
+        info: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'info-500',
+              dark: 'info-500',
+            },
+          },
+        },
+        success: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'success-500',
+              dark: 'success-500',
+            },
+          },
+        },
+        warning: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'warning-500',
+              dark: 'warning-500',
+            },
+          },
+        },
+        danger: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'danger-500',
+              dark: 'danger-500',
+            },
+          },
+        },
+      },
     },
-  },
-  boxLG: {
-    size: '16',
-    rounded: {
-      default: 'xl',
-      curved: '2xl',
-    },
-  },
-  boxXL: {
-    size: '20',
-    rounded: {
-      default: '2xl',
-      curved: '3xl',
-    },
-  },
-  box2XL: {
-    size: '24',
-    rounded: {
-      default: '2xl',
-      curved: '3xl',
-    },
-  },
-  boxFull: {
-    rounded: 'full',
-  },
-  boxDefault: {
-    bg: 'muted-100',
-    bgDark: 'muted-700',
-    text: 'muted-600',
-    textDark: 'muted-200',
-  },
-  boxSolid: {
-    invert: {
-      text: 'muted-800',
-      textDark: 'muted-100',
-      bg: 'white',
-      bgDark: 'muted-950',
-    },
-    primary: {
-      bg: 'primary-500',
-      text: 'white',
-    },
-    info: {
-      bg: 'info-500',
-      text: 'white',
-    },
-    success: {
-      bg: 'success-500',
-      text: 'white',
-    },
-    warning: {
-      bg: 'warning-500',
-      text: 'white',
-    },
-    danger: {
-      bg: 'danger-500',
-      text: 'white',
-    },
-  },
-  boxPastel: {
-    invert: {
-      text: 'muted-800',
-      bg: 'white/10',
-    },
-    primary: {
-      bg: 'primary-500/10',
-      text: 'primary-500',
-    },
-    info: {
-      bg: 'info-500/10',
-      text: 'info-500',
-    },
-    success: {
-      bg: 'success-500/10',
-      text: 'success-500',
-    },
-    warning: {
-      bg: 'warning-500/10',
-      text: 'warning-500',
-    },
-    danger: {
-      bg: 'danger-500/10',
-      text: 'danger-500',
-    },
-  },
-  boxOutline: {
-    invert: {
-      text: 'muted-800',
-      border: 'current',
-    },
-    primary: {
-      border: 'current',
-      text: 'primary-500',
-    },
-    info: {
-      border: 'current',
-      text: 'info-500',
-    },
-    success: {
-      border: 'current',
-      text: 'success-500',
-    },
-    warning: {
-      border: 'current',
-      text: 'warning-500',
-    },
-    danger: {
-      border: 'current',
-      text: 'danger-500',
-    },
-  },
-  boxBordered: {
-    borderSize: '2',
-    borderColor: 'current',
   },
 }
 
