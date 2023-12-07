@@ -1,92 +1,200 @@
 export const key = 'inputFileRegular' as const
 
 export const defaultConfig = {
+  font: {
+    color: {
+      light: 'muted-400',
+      dark: 'muted-400',
+    },
+  },
+  rounded: {
+    sm: 'rounded-md',
+    md: 'rounded-lg',
+    lg: 'rounded-xl',
+    full: 'rounded-full',
+  },
   inner: {
-    size: 'full',
-    font: 'sans',
-    duration: '300',
+    width: 'full',
+    font: {
+      family: 'sans',
+    },
+    transition: {
+      property: 'colors',
+      duration: '300',
+    },
   },
   placeholder: {
-    font: 'sans',
-    text: 'muted-400',
-    textSize: 'xs',
+    font: {
+      family: 'sans',
+      size: 'xs',
+      color: {
+        light: 'muted-400',
+        dark: 'muted-400',
+      },
+    },
   },
-  text: {
-    text: 'muted-400',
+  hover: {
+    border: {
+      light: 'primary-500',
+      dark: 'primary-500',
+    },
+    font: {
+      color: {
+        light: 'primary-500',
+        dark: 'primary-500',
+      },
+    },
+  },
+  focus: {
+    border: {
+      light: 'primary-500',
+      dark: 'primary-500',
+    },
+    font: {
+      color: {
+        light: 'primary-500',
+        dark: 'primary-500',
+      },
+    },
   },
   error: {
-    text: 'danger-600',
-    textSize: '[0.65rem]',
-    font: 'sans',
-    fontWeight: 'medium',
-    border: 'danger-500',
-  },
-  white: {
-    inner: {
-      bg: 'white',
-      bgDark: 'muted-800',
-      border: 'muted-300',
-      borderDark: 'muted-700',
-      text: 'muted-600',
-      textDark: 'muted-200',
-      textPlaceholder: 'muted-300',
-      textPlaceholderDark: 'muted-500',
+    font: {
+      family: 'sans',
+      size: '[0.65rem]',
+      weight: 'medium',
+      color: {
+        light: 'danger-600',
+        dark: 'danger-600',
+      },
     },
-    addon: {
-      bg: 'muted-50',
-      bgDark: 'muted-800',
-      border: 'muted-300',
-      borderDark: 'muted-700',
-      text: 'muted-400',
+    border: {
+      light: 'danger-500',
+      dark: 'danger-500',
     },
   },
-  whiteContrast: {
-    inner: {
-      bg: 'white',
-      bgDark: 'muted-900/75',
-      border: 'muted-300',
-      borderDark: 'muted-800',
-      text: 'muted-600',
-      textDark: 'muted-200',
-      textPlaceholder: 'muted-300',
-      textPlaceholderDark: 'muted-600',
+  color: {
+    white: {
+      inner: {
+        background: {
+          light: 'white',
+          dark: 'muted-800',
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'muted-700',
+        },
+        font: {
+          color: {
+            light: 'muted-600',
+            dark: 'muted-200',
+          },
+        },
+        placeholder: {
+          light: 'muted-300',
+          dark: 'muted-500',
+        },
+      },
+      addon: {
+        background: {
+          light: 'muted-50',
+          dark: 'muted-800',
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'muted-700',
+        },
+        font: {
+          color: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+        },
+      },
     },
-    addon: {
-      bg: 'muted-50',
-      bgDark: 'muted-950',
-      border: 'muted-300',
-      borderDark: 'muted-800',
-      text: 'muted-400',
+    whiteContrast: {
+      inner: {
+        background: {
+          light: 'white',
+          dark: 'muted-950',
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'muted-800',
+        },
+        font: {
+          color: {
+            light: 'muted-600',
+            dark: 'muted-200',
+          },
+        },
+        placeholder: {
+          light: 'muted-300',
+          dark: 'muted-600',
+        },
+      },
+      addon: {
+        background: {
+          light: 'muted-50',
+          dark: 'muted-950',
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'muted-800',
+        },
+        font: {
+          color: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+        },
+      },
     },
   },
-  colorFocus: 'primary-500',
-  rounded: {
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
-    full: 'full',
-  },
-  hasNotIcon: {
-    sm: 'xs',
-    md: '[0.825rem]',
-    lg: 'sm',
-  },
-  hasIcon: {
-    sm: {
-      text: 'xs',
-      iconSize: '3',
+  icon: {
+    disabled: {
+      sm: {
+        font: {
+          size: 'xs',
+        },
+      },
+      md: {
+        font: {
+          size: '[0.825rem]',
+        },
+      },
+      lg: {
+        font: {
+          size: 'sm',
+        },
+      },
     },
-    md: {
-      text: '[0.825rem]',
-      iconSize: '4',
-    },
-    lg: {
-      text: 'sm',
-      iconSize: '5',
+    enabled: {
+      sm: {
+        font: {
+          size: 'xs',
+        },
+        icon: {
+          size: '3',
+        },
+      },
+      md: {
+        font: {
+          size: '[0.825rem]',
+        },
+        icon: {
+          size: '4',
+        },
+      },
+      lg: {
+        font: {
+          size: 'sm',
+        },
+        icon: {
+          size: '5',
+        },
+      },
     },
   },
-  hover: 'primary-500',
-  focusWhitin: 'primary-500',
 }
 
 export type InputFileRegularConfig = typeof defaultConfig

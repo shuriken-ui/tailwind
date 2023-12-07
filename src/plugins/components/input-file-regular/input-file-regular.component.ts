@@ -10,7 +10,7 @@ import * as variants from './input-file-regular.variants'
 export const InputFileRegular = ({
   id,
   textValue,
-  shape = 'rounded',
+  rounded = 'sm',
   size = 'md',
   label,
   loading,
@@ -33,7 +33,7 @@ export const InputFileRegular = ({
       class=${[
         'nui-input-file-regular',
         size && variants.size[size],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         contrast && variants.contrast[contrast],
         error && !loading && 'nui-input-file-error',
         loading && 'nui-input-file-loading',
