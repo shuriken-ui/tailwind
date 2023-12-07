@@ -8,7 +8,7 @@ import * as variants from './input-file.variants'
  * Primary UI component for user interaction
  */
 export const InputFile = ({
-  shape = 'rounded',
+  rounded = 'sm',
   type = 'combo',
   classes,
   ...attrs
@@ -19,7 +19,7 @@ export const InputFile = ({
           <label
             class=${[
               'nui-input-file',
-              shape && variants.shape[shape],
+              rounded && variants.rounded[rounded],
               type === 'combo' && 'nui-input-file-combo',
               classes?.wrapper,
             ]
@@ -36,7 +36,7 @@ export const InputFile = ({
           <div
             class=${[
               'nui-input-file',
-              shape && variants.shape[shape],
+              rounded && variants.rounded[rounded],
               type === 'dropzone' && 'nui-input-file-drop',
               classes?.wrapper,
             ]
@@ -76,7 +76,7 @@ export const InputFile = ({
           <label
             class=${[
               'nui-input-file',
-              shape && variants.shape[shape],
+              rounded && variants.rounded[rounded],
               type === 'button' && 'nui-input-file-button',
               classes?.wrapper,
             ]

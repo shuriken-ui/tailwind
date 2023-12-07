@@ -10,10 +10,10 @@ const meta = {
   // tags: ['autodocs'],
   render: (args) => InputFile(args),
   argTypes: {
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'none',
     },
     type: {
       control: { type: 'select' },
@@ -40,11 +40,11 @@ export const Solid: Story = {
 }
 // #endregion
 
-// #region Combo shapes
+// #region Combo rounded
 export const ComboStraight: Story = {
   name: 'Combo: rounded',
   args: {
-    shape: 'straight',
+    rounded: 'none',
     classes: {
       wrapper: 'min-w-[380px]',
     },
@@ -54,7 +54,7 @@ export const ComboStraight: Story = {
 export const ComboRounded: Story = {
   name: 'Combo: rounded',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     classes: {
       wrapper: 'min-w-[380px]',
     },
@@ -64,7 +64,7 @@ export const ComboRounded: Story = {
 export const ComboSmooth: Story = {
   name: 'Combo: smooth',
   args: {
-    shape: 'smooth',
+    rounded: 'md',
     classes: {
       wrapper: 'min-w-[380px]',
     },
@@ -74,7 +74,7 @@ export const ComboSmooth: Story = {
 export const ComboCurved: Story = {
   name: 'Combo: curved',
   args: {
-    shape: 'curved',
+    rounded: 'lg',
     classes: {
       wrapper: 'min-w-[380px]',
     },
@@ -84,7 +84,7 @@ export const ComboCurved: Story = {
 export const ComboFull: Story = {
   name: 'Combo: full',
   args: {
-    shape: 'full',
+    rounded: 'full',
     classes: {
       wrapper: 'min-w-[380px]',
     },
