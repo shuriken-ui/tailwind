@@ -16,7 +16,14 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}link`]: {
-          [`@apply font-${config.font} hover:text-${config.textHover} dark:hover:text-${config.textHoverDark} underline-offset-4 hover:underline focus:text-${config.textFocus} dark:focus:text-${config.textFocusDark} focus:underline`]:
+          //Base
+          [`@apply font-${config.font.family} underline-offset-4 hover:underline focus:underline`]:
+            {},
+          //Hover
+          [`@apply hover:text-${config.font.color.hover.light} dark:hover:text-${config.font.color.hover.dark}`]:
+            {},
+          //Focus
+          [`@apply focus:text-${config.font.color.focus.light} dark:focus:text-${config.font.color.focus.dark}`]:
             {},
         },
       })
