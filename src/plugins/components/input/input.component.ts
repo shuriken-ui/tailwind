@@ -9,7 +9,7 @@ import * as variants from './input.variants'
  */
 export const Input = ({
   id,
-  shape = 'rounded',
+  rounded = 'sm',
   size = 'md',
   contrast = 'default',
   label,
@@ -35,7 +35,7 @@ export const Input = ({
         'nui-input-wrapper',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         error && !loading && 'nui-input-error',
         loading && 'nui-input-loading',
         labelFloat && 'nui-input-label-float',

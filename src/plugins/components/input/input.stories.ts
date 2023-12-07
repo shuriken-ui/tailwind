@@ -25,10 +25,10 @@ const meta = {
       options: ['sm', 'md', 'lg'],
       defaultValue: 'md',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'none',
     },
     contrast: {
       control: { type: 'select' },
@@ -75,7 +75,7 @@ export const Main: Story = {
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     type: 'text',
     id: 'input',
     placeholder: 'Choose a username...',
@@ -84,15 +84,15 @@ export const Main: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     id: 'input',
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'straight',
+    rounded: 'none',
     type: 'text',
     placeholder: 'Choose a username...',
     style: 'min-width: 320px; max-width: 320px;',
@@ -100,13 +100,13 @@ export const Straight: Story = {
 }
 
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     id: 'input',
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     type: 'text',
     placeholder: 'Choose a username...',
     style: 'min-width: 320px; max-width: 320px;',
@@ -114,13 +114,13 @@ export const Rounded: Story = {
 }
 
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     id: 'input',
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'smooth',
+    rounded: 'md',
     type: 'text',
     placeholder: 'Choose a username...',
     style: 'min-width: 320px; max-width: 320px;',
@@ -128,13 +128,13 @@ export const Smooth: Story = {
 }
 
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     id: 'input',
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'curved',
+    rounded: 'lg',
     type: 'text',
     placeholder: 'Choose a username...',
     style: 'min-width: 320px; max-width: 320px;',
@@ -142,13 +142,13 @@ export const Curved: Story = {
 }
 
 export const Full: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
     id: 'input',
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'full',
+    rounded: 'full',
     type: 'text',
     placeholder: 'Choose a username...',
     style: 'min-width: 320px; max-width: 320px;',
@@ -164,7 +164,7 @@ export const SizeSm: Story = {
     label: 'Username',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     type: 'text',
     placeholder: 'Choose a username...',
     classes: {
@@ -180,7 +180,7 @@ export const SizeMd: Story = {
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     type: 'text',
     placeholder: 'Choose a username...',
     classes: {
@@ -196,7 +196,7 @@ export const SizeLg: Story = {
     label: 'Username',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     type: 'text',
     placeholder: 'Choose a username...',
     classes: {
@@ -214,7 +214,7 @@ export const ContrastMutedSm: Story = {
     label: 'Username',
     size: 'sm',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     type: 'text',
     placeholder: 'Choose a username...',
     classes: {
@@ -230,7 +230,7 @@ export const ContrastMutedMd: Story = {
     label: 'Username',
     size: 'md',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     type: 'text',
     placeholder: 'Choose a username...',
     classes: {
@@ -246,7 +246,7 @@ export const ContrastMutedLg: Story = {
     label: 'Username',
     size: 'lg',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     type: 'text',
     placeholder: 'Choose a username...',
     classes: {
@@ -264,7 +264,7 @@ export const LabelFloatSm: Story = {
     label: 'Username',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     labelFloat: true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -281,7 +281,7 @@ export const LabelFloatMd: Story = {
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     labelFloat: true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -298,7 +298,7 @@ export const LabelFloatLg: Story = {
     label: 'Username',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     labelFloat: true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -317,7 +317,7 @@ export const ColorFocusSm: Story = {
     label: 'Username',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     colorFocus: true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -334,7 +334,7 @@ export const ColorFocusMd: Story = {
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     colorFocus: true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -351,7 +351,7 @@ export const ColorFocusLg: Story = {
     label: 'Username',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     colorFocus: true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -370,7 +370,7 @@ export const DisabledSm: Story = {
     label: 'Username',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     '?disabled': true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -387,7 +387,7 @@ export const DisabledMd: Story = {
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     '?disabled': true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -404,7 +404,7 @@ export const DisabledLg: Story = {
     label: 'Username',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     '?disabled': true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -423,7 +423,7 @@ export const LoadingSm: Story = {
     label: 'Username',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     loading: true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -440,7 +440,7 @@ export const LoadingMd: Story = {
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     loading: true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -457,7 +457,7 @@ export const LoadingLg: Story = {
     label: 'Username',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     loading: true,
     type: 'text',
     placeholder: 'Choose a username...',
@@ -476,7 +476,7 @@ export const ErrorSm: Story = {
     label: 'Username',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     error: 'Please enter a valid value',
     type: 'text',
     placeholder: 'Choose a username...',
@@ -493,7 +493,7 @@ export const ErrorMd: Story = {
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     error: 'Please enter a valid value',
     type: 'text',
     placeholder: 'Choose a username...',
@@ -510,7 +510,7 @@ export const ErrorLg: Story = {
     label: 'Username',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     error: 'Please enter a valid value',
     type: 'text',
     placeholder: 'Choose a username...',
@@ -529,7 +529,7 @@ export const SlotIconSm: Story = {
     label: 'Username',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     icon: html`
       <svg
         class="nui-input-icon-inner"
@@ -565,7 +565,7 @@ export const SlotIconMd: Story = {
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     icon: html`
       <svg
         class="nui-input-icon-inner"
@@ -601,7 +601,7 @@ export const SlotIconLg: Story = {
     label: 'Username',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     icon: html`
       <svg
         class="nui-input-icon-inner"
@@ -639,7 +639,7 @@ export const SlotIconFloatSm: Story = {
     label: 'Username',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     labelFloat: true,
     icon: html`
       <svg
@@ -676,7 +676,7 @@ export const SlotIconFloatMd: Story = {
     label: 'Username',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     labelFloat: true,
     icon: html`
       <svg
@@ -713,7 +713,7 @@ export const SlotIconFloatLg: Story = {
     label: 'Username',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     labelFloat: true,
     icon: html`
       <svg
@@ -752,7 +752,7 @@ export const SlotActionSm: Story = {
     label: 'Password',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     actionSlot: html`
       <button
         type="button"
@@ -795,7 +795,7 @@ export const SlotActionMd: Story = {
     label: 'Password',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     actionSlot: html`
       <button
         type="button"
@@ -838,7 +838,7 @@ export const SlotActionLg: Story = {
     label: 'Password',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     actionSlot: html`
       <button
         type="button"

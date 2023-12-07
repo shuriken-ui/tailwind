@@ -1,12 +1,12 @@
 import type { InputVariant } from './input.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-input-rounded',
-  smooth: 'nui-input-smooth',
-  curved: 'nui-input-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-input-rounded',
+  md: 'nui-input-smooth',
+  lg: 'nui-input-curved',
   full: 'nui-input-full',
-} as const satisfies InputVariant<'shape'>
+} as const satisfies InputVariant<'rounded'>
 
 export const size = {
   sm: 'nui-input-sm',
