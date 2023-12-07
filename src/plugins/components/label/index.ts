@@ -16,7 +16,7 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}label`]: {
-          [`@apply inline-block font-${config.font} leading-none text-${config.text} dark:text-${config.textDark}`]:
+          [`@apply inline-block font-${config.font.family} leading-none text-${config.font.color.light} dark:text-${config.font.color.dark}`]:
             {},
         },
       })
