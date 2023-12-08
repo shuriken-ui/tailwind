@@ -3,7 +3,7 @@ import type { PropertyVariant } from '~/types/utils'
 export interface ToastProps extends Record<string, unknown> {
   title?: string
   text?: string
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved'
+  rounded?: 'none' | 'sm' | 'md' | 'lg'
   color?:
     | 'default'
     | 'primary'

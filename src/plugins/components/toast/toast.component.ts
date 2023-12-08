@@ -13,7 +13,7 @@ export const Toast = ({
   text,
   contrast = 'white',
   color = 'default',
-  shape = 'rounded',
+  rounded = 'md',
   borderless,
   icon,
   iconBlock,
@@ -26,7 +26,7 @@ export const Toast = ({
         'nui-toast',
         color && variants.color[color],
         contrast && variants.contrast[contrast],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         borderless && 'nui-toast-borderless',
         classes?.wrapper,
       ]
@@ -50,7 +50,7 @@ export const Toast = ({
           <p class="nui-toast-subtitle">${text}</p>
         </div>
         ${ButtonClose({
-          shape: 'full',
+          rounded: 'full',
           color: 'default',
         })}
       </div>

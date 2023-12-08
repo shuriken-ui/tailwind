@@ -32,10 +32,10 @@ const meta = {
       ],
       defaultValue: 'default',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg'],
+      defaultValue: 'md',
     },
     contrast: {
       control: { type: 'select' },
@@ -62,11 +62,11 @@ export const Solid: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
-    shape: 'straight',
+    rounded: 'none',
     title: 'Toast title',
     text: 'You need to take some action.',
     style: 'max-width: 340px;',
@@ -74,9 +74,9 @@ export const Straight: Story = {
 }
 
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     title: 'Toast title',
     text: 'You need to take some action.',
     style: 'max-width: 340px;',
@@ -84,9 +84,9 @@ export const Rounded: Story = {
 }
 
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
-    shape: 'smooth',
+    rounded: 'md',
     title: 'Toast title',
     text: 'You need to take some action.',
     style: 'max-width: 340px;',
@@ -94,9 +94,9 @@ export const Smooth: Story = {
 }
 
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
-    shape: 'curved',
+    rounded: 'lg',
     title: 'Toast title',
     text: 'You need to take some action.',
     style: 'max-width: 340px;',
