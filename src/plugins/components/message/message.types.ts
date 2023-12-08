@@ -15,6 +15,8 @@ export interface MessageProps extends Record<string, unknown> {
   closable?: boolean
   classes?: {
     wrapper?: string | string[]
+    icon?: string | string[]
+    text?: string | string[]
   }
 }
 

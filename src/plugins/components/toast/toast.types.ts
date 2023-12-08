@@ -16,6 +16,12 @@ export interface ToastProps extends Record<string, unknown> {
   borderless?: boolean
   classes?: {
     wrapper?: string | string[]
+    box?: string | string[]
+    icon?: string | string[]
+    inner?: string | string[]
+    title?: string | string[]
+    subtitle?: string | string[]
+    button?: string | string[]
   }
 }
 

@@ -7,6 +7,10 @@ export interface SnackProps extends Record<string, unknown> {
   color?: 'default' | 'muted'
   classes?: {
     wrapper?: string | string[]
+    icon?: string | string[]
+    img?: string | string[]
+    text?: string | string[]
+    button?: string | string[]
   }
 }
 

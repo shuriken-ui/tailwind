@@ -8,6 +8,8 @@ export interface ProgressCircleProps extends Record<string, unknown> {
   color?: 'primary' | 'info' | 'success' | 'warning' | 'danger'
   classes?: {
     wrapper?: string | string[]
+    track?: string | string[]
+    progress?: string | string[]
   }
 }
 

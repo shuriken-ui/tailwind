@@ -40,6 +40,10 @@ export interface AvatarProps extends Record<string, unknown> {
     | 'yellow'
   classes?: {
     wrapper?: string | string[]
+    inner?: string | string[]
+    img?: string | string[]
+    badge?: string | string[]
+    dot?: string | string[]
   }
 }
 

@@ -17,7 +17,7 @@ export interface ListboxProps extends Record<string, unknown> {
   classes?: {
     wrapper?: string | string[]
     label?: string | string[]
-    input?: string | string[]
+    button?: string | string[]
     icon?: string | string[]
     error?: string | string[]
     value?: string

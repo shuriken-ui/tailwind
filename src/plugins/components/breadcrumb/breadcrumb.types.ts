@@ -9,6 +9,9 @@ export interface BreadcrumbProps extends Record<string, unknown> {
   }[]
   classes?: {
     wrapper?: string | string[]
+    list?: string | string[]
+    dropdown?: string | string[]
+    item?: string | string[]
   }
 }
 

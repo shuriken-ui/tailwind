@@ -6,6 +6,11 @@ export interface PlaceholderPageProps extends Record<string, unknown> {
   imageSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   classes?: {
     wrapper?: string | string[]
+    inner?: string | string[]
+    img?: string | string[]
+    content?: string | string[]
+    title?: string | string[]
+    subtitle?: string | string[]
   }
 }
 

@@ -5,6 +5,10 @@ export interface ThemeToggleProps extends Record<string, unknown> {
   disableTransitions?: boolean
   classes?: {
     wrapper?: string | string[]
+    input?: string | string[]
+    inner?: string | string[]
+    handle?: string | string[]
+    icon?: string | string[]
   }
 }
 

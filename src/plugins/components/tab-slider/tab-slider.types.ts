@@ -10,6 +10,11 @@ export interface TabSliderProps extends Record<string, unknown> {
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   classes?: {
     wrapper?: string | string[]
+    inner?: string | string[]
+    track?: string | string[]
+    item?: string | string[]
+    naver?: string | string[]
+    content?: string | string[]
   }
 }
 

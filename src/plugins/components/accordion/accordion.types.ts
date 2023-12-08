@@ -11,6 +11,10 @@ export interface AccordionProps extends Record<string, unknown> {
   action?: 'dot' | 'chevron' | 'plus'
   classes?: {
     wrapper?: string | string[]
+    details?: string | string[]
+    summary?: string | string[]
+    header?: string | string[]
+    content?: string | string[]
   }
 }
 

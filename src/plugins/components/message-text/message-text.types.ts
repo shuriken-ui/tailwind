@@ -15,6 +15,8 @@ export interface MessageTextProps extends Record<string, unknown> {
   contrast?: 'white' | 'contrast'
   classes?: {
     wrapper?: string | string[]
+    title?: string | string[]
+    content?: string | string[]
   }
 }
 

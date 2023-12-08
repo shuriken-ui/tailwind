@@ -31,6 +31,9 @@ export interface DropdownProps extends Record<string, unknown> {
   open?: boolean
   classes?: {
     wrapper?: string | string[]
+    menu?: string | string[]
+    header?: string | string[]
+    content?: string | string[]
   }
 }
 

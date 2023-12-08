@@ -9,6 +9,7 @@ export interface ProgressProps extends Record<string, unknown> {
   max?: number
   classes?: {
     wrapper?: string | string[]
+    progress?: string | string[]
   }
 }
 

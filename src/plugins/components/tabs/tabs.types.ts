@@ -11,6 +11,9 @@ export interface TabsProps extends Record<string, unknown> {
   hideLabel?: boolean
   classes?: {
     wrapper?: string | string[]
+    inner?: string | string[]
+    item?: string | string[]
+    content?: string | string[]
   }
 }
 
