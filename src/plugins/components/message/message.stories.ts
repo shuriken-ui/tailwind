@@ -27,10 +27,10 @@ const meta = {
       ],
       defaultValue: 'default',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'full',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'sm',
     },
     closable: {
       control: { type: 'boolean' },
@@ -50,59 +50,59 @@ export const Main: Story = {
   args: {
     // set default values used for UI preview
     type: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
     style: 'max-width: 280px;',
   },
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     type: 'default',
-    shape: 'straight',
+    rounded: 'none',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     type: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     type: 'default',
-    shape: 'smooth',
+    rounded: 'md',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     type: 'default',
-    shape: 'curved',
+    rounded: 'lg',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
 export const Full: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
     type: 'default',
-    shape: 'full',
+    rounded: 'full',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
@@ -114,7 +114,7 @@ export const TypeDefault: Story = {
   name: 'Type: default',
   args: {
     type: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
@@ -124,7 +124,7 @@ export const TypeMuted: Story = {
   name: 'Type: muted',
   args: {
     type: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
@@ -134,7 +134,7 @@ export const TypePrimary: Story = {
   name: 'Type: primary',
   args: {
     type: 'primary',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
@@ -144,7 +144,7 @@ export const TypeInfo: Story = {
   name: 'Type: info',
   args: {
     type: 'info',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
@@ -154,7 +154,7 @@ export const TypeSuccess: Story = {
   name: 'Type: success',
   args: {
     type: 'success',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
@@ -164,7 +164,7 @@ export const TypeWarning: Story = {
   name: 'Type: warning',
   args: {
     type: 'warning',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
@@ -174,7 +174,7 @@ export const TypeDanger: Story = {
   name: 'Type: danger',
   args: {
     type: 'danger',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
   },
@@ -186,7 +186,7 @@ export const ClosableDefault: Story = {
   name: 'Closable: default',
   args: {
     type: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
@@ -197,7 +197,7 @@ export const ClosablePrimary: Story = {
   name: 'Closable: primary',
   args: {
     type: 'primary',
-    shape: 'rounded',
+    rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
@@ -208,7 +208,7 @@ export const ClosableInfo: Story = {
   name: 'Closable: info',
   args: {
     type: 'info',
-    shape: 'rounded',
+    rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',
@@ -221,7 +221,7 @@ export const SlotIconInfo: Story = {
   name: 'Slot icon: info',
   args: {
     type: 'info',
-    shape: 'rounded',
+    rounded: 'sm',
     closable: true,
     icon: html`
       <svg
@@ -248,7 +248,7 @@ export const SlotIconSuccess: Story = {
   name: 'Slot icon: success',
   args: {
     type: 'success',
-    shape: 'curved',
+    rounded: 'lg',
     closable: true,
     icon: html`
       <svg
@@ -291,7 +291,7 @@ export const SlotIconWarning: Story = {
         />
       </svg>
     `,
-    shape: 'full',
+    rounded: 'full',
     closable: true,
     message: 'Some nice message text',
     style: 'min-width: 280px; max-width: 280px;',

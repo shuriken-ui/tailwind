@@ -9,7 +9,7 @@ import * as variants from './message.variants'
  */
 export const Message = ({
   type = 'success',
-  shape = 'rounded',
+  rounded = 'sm',
   closable,
   icon,
   message,
@@ -21,7 +21,7 @@ export const Message = ({
       class=${[
         'nui-message',
         type && variants.type[type],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         classes?.wrapper,
       ]
         .filter(Boolean)
@@ -40,7 +40,10 @@ export const Message = ({
               type="button"
               tabindex="0"
               class="nui-message-close"
-              class=${['nui-message-close', shape && variants.shape[shape]]
+              class=${[
+                'nui-message-close',
+                rounded && variants.rounded[rounded],
+              ]
                 .filter(Boolean)
                 .join(' ')}
             >

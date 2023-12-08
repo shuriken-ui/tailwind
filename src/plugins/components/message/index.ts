@@ -15,166 +15,345 @@ export default plugin.withOptions(
       const config = theme(`shurikenUi.${key}`) satisfies MessageConfig
 
       addComponents({
+        //Wrapper
         [`.${prefix}message`]: {
           [`@apply flex min-h-[3rem] items-center border p-1 pe-2`]: {},
-
+          //Icon:outer
           [`.${prefix}message-icon-outer`]: {
-            [`@apply flex h-${config.messageIconOuter.size} w-${config.messageIconOuter.size} shrink-0 items-center justify-center`]:
+            [`@apply flex h-${config.icon.outer.size} w-${config.icon.outer.size} shrink-0 items-center justify-center`]:
               {},
-
+            //Icon:inner
             [`.${prefix}message-icon`]: {
-              [`@apply h-${config.messageIconOuter.icon.size} w-${config.messageIconOuter.icon.size} text-${config.messageIconOuter.icon.text}`]:
+              //Base
+              [`@apply h-${config.icon.inner.size} w-${config.icon.inner.size}`]:
+                {},
+              //color
+              [`@apply text-${config.icon.inner.color.light} dark:text-${config.icon.inner.color.dark}`]:
                 {},
             },
           },
+          //Inner:text
           [`.${prefix}message-inner-text`]: {
-            [`@apply text-${config.messageInnerText.textColor} px-3 block font-${config.messageInnerText.font} text-${config.messageInnerText.text}`]:
+            //Base
+            [`@apply px-3 block`]: {},
+            //Font
+            [`@apply font-${config.inner.font.family} text-${config.inner.font.size}`]:
+              {},
+            //Color
+            [`@apply text-${config.inner.font.color.light} dark:text-${config.inner.font.color.dark}`]:
               {},
           },
+          //Meesage:close
           [`.${prefix}message-close`]: {
-            [`@apply ${prefix}focus text-${config.messageClose.text} me-2 ms-auto flex cursor-pointer items-center justify-center p-${config.messageClose.space} rounded-${config.messageClose.rounded} transition-colors duration-${config.messageClose.duration}`]:
+            [`@apply ${prefix}focus me-2 ms-auto flex cursor-pointer items-center justify-center p-${config.close.padding} ${config.close.rounded}`]:
               {},
+            //Color
+            [`@apply text-${config.close.color.light} dark:text-${config.close.color.dark}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.close.transition.property} duration-${config.close.transition.duration}`]:
+              {},
+            //Close:icon
             [`.${prefix}close-icon`]: {
-              [`@apply h-${config.messageClose.iconSize} w-${config.messageClose.iconSize}`]:
+              [`@apply h-${config.close.icon.size} w-${config.close.icon.size}`]:
                 {},
             },
           },
+          //Rounded:sm
           [`&.${prefix}message-rounded`]: {
-            [`@apply rounded-${config.rounded.default}`]: {},
+            [`@apply ${config.rounded.sm}`]: {},
 
             [`.${prefix}message-icon-outer`]: {
-              [`@apply rounded-${config.rounded.default}`]: {},
+              [`@apply ${config.rounded.sm}`]: {},
             },
           },
+          //Rounded:md
           [`&.${prefix}message-smooth`]: {
-            [`@apply rounded-${config.rounded.smooth}`]: {},
+            [`@apply ${config.rounded.md}`]: {},
 
             [`.${prefix}message-icon-outer`]: {
-              [`@apply rounded-${config.rounded.smooth}`]: {},
+              [`@apply ${config.rounded.md}`]: {},
             },
           },
+          //Rounded:lg
           [`&.${prefix}message-curved`]: {
-            [`@apply rounded-${config.rounded.curved}`]: {},
+            [`@apply ${config.rounded.lg}`]: {},
 
             [`.${prefix}message-icon-outer`]: {
-              [`@apply rounded-${config.rounded.curved}`]: {},
+              [`@apply ${config.rounded.lg}`]: {},
             },
           },
+          //Rounded:full
           [`&.${prefix}message-full`]: {
-            [`@apply rounded-${config.rounded.full}`]: {},
+            [`@apply ${config.rounded.full}`]: {},
 
             [`.${prefix}message-icon-outer`]: {
-              [`@apply rounded-${config.rounded.full}`]: {},
+              [`@apply ${config.rounded.full}`]: {},
             },
           },
+          //Color:default
           [`&.${prefix}message-default`]: {
-            [`@apply bg-${config.messageDefault.bg} dark:bg-${config.messageDefault.bgDark} border-${config.messageDefault.border} dark:border-${config.messageDefault.borderDark}`]:
+            //Border
+            [`@apply border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
               {},
+            //Background
+            [`@apply bg-${config.color.default.background.light} dark:bg-${config.color.default.background.dark}`]:
+              {},
+            //Icon:outer
             [`.${prefix}message-icon-outer`]: {
-              [`@apply bg-${config.messageDefault.outer.bg} text-${config.messageDefault.outer.text} dark:bg-${config.messageDefault.outer.bgDark}`]:
+              //Color
+              [`@apply text-${config.color.default.outer.color.light} dark:text-${config.color.default.outer.color.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.color.default.outer.background.light} dark:bg-${config.color.default.outer.background.dark}`]:
                 {},
             },
+            //Inner:text
             [`.${prefix}message-inner-text`]: {
-              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+              [`@apply text-${config.color.default.inner.color.light} dark:text-${config.color.default.inner.color.dark}`]:
+                {},
             },
+            //Message:close
             [`.${prefix}message-close`]: {
-              [`@apply dark:text-${config.messageDefault.close.textDark} hover:enabled:bg-${config.messageDefault.close.bgHoverEnabled} focus-visible:bg-${config.messageDefault.close.bgFocusVisible} active:enabled:bg-${config.messageDefault.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageDefault.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageDefault.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messageDefault.close.bgActiveEnabledDark}`]:
+              //Color
+              [`@apply text-${config.color.default.close.color.light} dark:text-${config.color.default.close.color.dark}`]:
+                {},
+              //Background:hover
+              [`@apply hover:enabled:bg-${config.color.default.close.background.hover.light} dark:hover:enabled:bg-${config.color.default.close.background.hover.dark}`]:
+                {},
+              //Background:focus
+              [`@apply focus-visible:bg-${config.color.default.close.background.focus.light} dark:focus-visible:bg-${config.color.default.close.background.focus.dark}`]:
+                {},
+              //Background:active
+              [`@apply active:enabled:bg-${config.color.default.close.background.active.light} dark:active:enabled:bg-${config.color.default.close.background.active.dark}`]:
                 {},
             },
           },
+          //Color:muted
           [`&.${prefix}message-muted`]: {
-            [`@apply bg-${config.messageMuted.bg} dark:bg-${config.messageMuted.bgDark} border-${config.messageMuted.border} dark:border-${config.messageMuted.borderDark}`]:
+            //Border
+            [`@apply border-${config.color.muted.border.light} dark:border-${config.color.muted.border.dark}`]:
               {},
-
+            //Background
+            [`@apply bg-${config.color.muted.background.light} dark:bg-${config.color.muted.background.dark}`]:
+              {},
+            //Icon:outer
             [`.${prefix}message-icon-outer`]: {
-              [`@apply bg-${config.messageMuted.outer.bg} text-${config.messageMuted.outer.text} dark:bg-${config.messageMuted.outer.bgDark}`]:
+              //Color
+              [`@apply text-${config.color.muted.outer.color.light} dark:text-${config.color.muted.outer.color.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.color.muted.outer.background.light} dark:bg-${config.color.muted.outer.background.dark}`]:
                 {},
             },
+            //Inner:text
             [`.${prefix}message-inner-text`]: {
-              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+              [`@apply text-${config.color.muted.inner.color.light} dark:text-${config.color.muted.inner.color.dark}`]:
+                {},
             },
+            //Message:close
             [`.${prefix}message-close`]: {
-              [`@apply dark:text-${config.messageMuted.close.textDark} hover:enabled:bg-${config.messageMuted.close.bgHoverEnabled} focus-visible:bg-${config.messageMuted.close.bgFocusVisible} active:enabled:bg-${config.messageMuted.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageMuted.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageMuted.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messageMuted.close.bgActiveEnabledDark}`]:
+              //Color
+              [`@apply text-${config.color.muted.close.color.light} dark:text-${config.color.muted.close.color.dark}`]:
+                {},
+              //Background:hover
+              [`@apply hover:enabled:bg-${config.color.muted.close.background.hover.light} dark:hover:enabled:bg-${config.color.muted.close.background.hover.dark}`]:
+                {},
+              //Background:focus
+              [`@apply focus-visible:bg-${config.color.muted.close.background.focus.light} dark:focus-visible:bg-${config.color.muted.close.background.focus.dark}`]:
+                {},
+              //Background:active
+              [`@apply active:enabled:bg-${config.color.muted.close.background.active.light} dark:active:enabled:bg-${config.color.muted.close.background.active.dark}`]:
                 {},
             },
           },
+          //Color:primary
           [`&.${prefix}message-primary`]: {
-            [`@apply bg-${config.messagePrimary.bg} dark:bg-${config.messagePrimary.bgDark} border-${config.messagePrimary.border} dark:border-${config.messagePrimary.borderDark}`]:
+            //Border
+            [`@apply border-${config.color.primary.border.light} dark:border-${config.color.primary.border.dark}`]:
               {},
-
+            //Background
+            [`@apply bg-${config.color.primary.background.light} dark:bg-${config.color.primary.background.dark}`]:
+              {},
+            //Icon:outer
             [`.${prefix}message-icon-outer`]: {
-              [`@apply bg-${config.messagePrimary.outer.bg} text-${config.messagePrimary.outer.text}`]:
+              //Color
+              [`@apply text-${config.color.primary.outer.color.light} dark:text-${config.color.primary.outer.color.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.color.primary.outer.background.light} dark:bg-${config.color.primary.outer.background.dark}`]:
                 {},
             },
+            //Inner:text
             [`.${prefix}message-inner-text`]: {
-              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+              [`@apply text-${config.color.primary.inner.color.light} dark:text-${config.color.primary.inner.color.dark}`]:
+                {},
             },
+            //Message:close
             [`.${prefix}message-close`]: {
-              [`@apply dark:text-${config.messagePrimary.close.textDark} hover:enabled:bg-${config.messagePrimary.close.bgHoverEnabled} focus-visible:bg-${config.messagePrimary.close.bgFocusVisible} active:enabled:bg-${config.messagePrimary.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messagePrimary.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messagePrimary.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messagePrimary.close.bgActiveEnabledDark}`]:
+              //Color
+              [`@apply text-${config.color.primary.close.color.light} dark:text-${config.color.primary.close.color.dark}`]:
+                {},
+              //Background:hover
+              [`@apply hover:enabled:bg-${config.color.primary.close.background.hover.light} dark:hover:enabled:bg-${config.color.primary.close.background.hover.dark}`]:
+                {},
+              //Background:focus
+              [`@apply focus-visible:bg-${config.color.primary.close.background.focus.light} dark:focus-visible:bg-${config.color.primary.close.background.focus.dark}`]:
+                {},
+              //Background:active
+              [`@apply active:enabled:bg-${config.color.primary.close.background.active.light} dark:active:enabled:bg-${config.color.primary.close.background.active.dark}`]:
                 {},
             },
           },
+          //Color:info
           [`&.${prefix}message-info`]: {
-            [`@apply bg-${config.messageInfo.bg} dark:bg-${config.messageInfo.bgDark} border-${config.messageInfo.border} dark:border-${config.messageInfo.borderDark}`]:
+            //Border
+            [`@apply border-${config.color.info.border.light} dark:border-${config.color.info.border.dark}`]:
               {},
-
+            //Background
+            [`@apply bg-${config.color.info.background.light} dark:bg-${config.color.info.background.dark}`]:
+              {},
+            //Icon:outer
             [`.${prefix}message-icon-outer`]: {
-              [`@apply bg-${config.messageInfo.outer.bg} text-${config.messageInfo.outer.text}`]:
+              //Color
+              [`@apply text-${config.color.info.outer.color.light} dark:text-${config.color.info.outer.color.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.color.info.outer.background.light} dark:bg-${config.color.info.outer.background.dark}`]:
                 {},
             },
+            //Inner:text
             [`.${prefix}message-inner-text`]: {
-              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+              [`@apply text-${config.color.info.inner.color.light} dark:text-${config.color.info.inner.color.dark}`]:
+                {},
             },
+            //Message:close
             [`.${prefix}message-close`]: {
-              [`@apply dark:text-${config.messageInfo.close.textDark} hover:enabled:bg-${config.messageInfo.close.bgHoverEnabled} focus-visible:bg-${config.messageInfo.close.bgFocusVisible} active:enabled:bg-${config.messageInfo.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageInfo.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageInfo.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messageInfo.close.bgActiveEnabledDark}`]:
+              //Color
+              [`@apply text-${config.color.info.close.color.light} dark:text-${config.color.info.close.color.dark}`]:
+                {},
+              //Background:hover
+              [`@apply hover:enabled:bg-${config.color.info.close.background.hover.light} dark:hover:enabled:bg-${config.color.info.close.background.hover.dark}`]:
+                {},
+              //Background:focus
+              [`@apply focus-visible:bg-${config.color.info.close.background.focus.light} dark:focus-visible:bg-${config.color.info.close.background.focus.dark}`]:
+                {},
+              //Background:active
+              [`@apply active:enabled:bg-${config.color.info.close.background.active.light} dark:active:enabled:bg-${config.color.info.close.background.active.dark}`]:
                 {},
             },
           },
+          //Color:success
           [`&.${prefix}message-success`]: {
-            [`@apply bg-${config.messageSuccess.bg} dark:bg-${config.messageSuccess.bgDark} border-${config.messageSuccess.border} dark:border-${config.messageSuccess.borderDark}`]:
+            //Border
+            [`@apply border-${config.color.success.border.light} dark:border-${config.color.success.border.dark}`]:
               {},
-
+            //Background
+            [`@apply bg-${config.color.success.background.light} dark:bg-${config.color.success.background.dark}`]:
+              {},
+            //Icon:outer
             [`.${prefix}message-icon-outer`]: {
-              [`@apply bg-${config.messageSuccess.outer.bg} text-${config.messageSuccess.outer.text}`]:
+              //Color
+              [`@apply text-${config.color.success.outer.color.light} dark:text-${config.color.success.outer.color.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.color.success.outer.background.light} dark:bg-${config.color.success.outer.background.dark}`]:
                 {},
             },
+            //Inner:text
             [`.${prefix}message-inner-text`]: {
-              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+              [`@apply text-${config.color.success.inner.color.light} dark:text-${config.color.success.inner.color.dark}`]:
+                {},
             },
+            //Message:close
             [`.${prefix}message-close`]: {
-              [`@apply dark:text-${config.messageSuccess.close.textDark} hover:enabled:bg-${config.messageSuccess.close.bgHoverEnabled} focus-visible:bg-${config.messageSuccess.close.bgFocusVisible} active:enabled:bg-${config.messageSuccess.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageSuccess.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageSuccess.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messageSuccess.close.bgActiveEnabledDark}`]:
+              //Color
+              [`@apply text-${config.color.success.close.color.light} dark:text-${config.color.success.close.color.dark}`]:
+                {},
+              //Background:hover
+              [`@apply hover:enabled:bg-${config.color.success.close.background.hover.light} dark:hover:enabled:bg-${config.color.success.close.background.hover.dark}`]:
+                {},
+              //Background:focus
+              [`@apply focus-visible:bg-${config.color.success.close.background.focus.light} dark:focus-visible:bg-${config.color.success.close.background.focus.dark}`]:
+                {},
+              //Background:active
+              [`@apply active:enabled:bg-${config.color.success.close.background.active.light} dark:active:enabled:bg-${config.color.success.close.background.active.dark}`]:
                 {},
             },
           },
+          //Color:warning
           [`&.${prefix}message-warning`]: {
-            [`@apply bg-${config.messageWarning.bg} dark:bg-${config.messageWarning.bgDark} border-${config.messageWarning.border} dark:border-${config.messageWarning.borderDark}`]:
+            //Border
+            [`@apply border-${config.color.warning.border.light} dark:border-${config.color.warning.border.dark}`]:
               {},
-
+            //Background
+            [`@apply bg-${config.color.warning.background.light} dark:bg-${config.color.warning.background.dark}`]:
+              {},
+            //Icon:outer
             [`.${prefix}message-icon-outer`]: {
-              [`@apply bg-${config.messageWarning.outer.bg} text-${config.messageWarning.outer.text}`]:
+              //Color
+              [`@apply text-${config.color.warning.outer.color.light} dark:text-${config.color.warning.outer.color.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.color.warning.outer.background.light} dark:bg-${config.color.warning.outer.background.dark}`]:
                 {},
             },
+            //Inner:text
             [`.${prefix}message-inner-text`]: {
-              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+              [`@apply text-${config.color.warning.inner.color.light} dark:text-${config.color.warning.inner.color.dark}`]:
+                {},
             },
+            //Message:close
             [`.${prefix}message-close`]: {
-              [`@apply dark:text-${config.messageWarning.close.textDark} hover:enabled:bg-${config.messageWarning.close.bgHoverEnabled} focus-visible:bg-${config.messageWarning.close.bgFocusVisible} active:enabled:bg-${config.messageWarning.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageWarning.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageWarning.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messagePrimary.close.bgActiveEnabledDark}`]:
+              //Color
+              [`@apply text-${config.color.warning.close.color.light} dark:text-${config.color.warning.close.color.dark}`]:
+                {},
+              //Background:hover
+              [`@apply hover:enabled:bg-${config.color.warning.close.background.hover.light} dark:hover:enabled:bg-${config.color.warning.close.background.hover.dark}`]:
+                {},
+              //Background:focus
+              [`@apply focus-visible:bg-${config.color.warning.close.background.focus.light} dark:focus-visible:bg-${config.color.warning.close.background.focus.dark}`]:
+                {},
+              //Background:active
+              [`@apply active:enabled:bg-${config.color.warning.close.background.active.light} dark:active:enabled:bg-${config.color.warning.close.background.active.dark}`]:
                 {},
             },
           },
+          //Color:danger
           [`&.${prefix}message-danger`]: {
-            [`@apply bg-${config.messageDanger.bg} dark:bg-${config.messageDanger.bgDark} border-${config.messageDanger.border} dark:border-${config.messageDanger.borderDark}`]:
+            //Border
+            [`@apply border-${config.color.danger.border.light} dark:border-${config.color.danger.border.dark}`]:
               {},
-
+            //Background
+            [`@apply bg-${config.color.danger.background.light} dark:bg-${config.color.danger.background.dark}`]:
+              {},
+            //Icon:outer
             [`.${prefix}message-icon-outer`]: {
-              [`@apply bg-${config.messageDanger.outer.bg} text-${config.messageDanger.outer.text}`]:
+              //Color
+              [`@apply text-${config.color.danger.outer.color.light} dark:text-${config.color.danger.outer.color.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.color.danger.outer.background.light} dark:bg-${config.color.danger.outer.background.dark}`]:
                 {},
             },
+            //Inner:text
             [`.${prefix}message-inner-text`]: {
-              [`@apply dark:text-${config.messageDefault.txtDarkInner}`]: {},
+              [`@apply text-${config.color.danger.inner.color.light} dark:text-${config.color.danger.inner.color.dark}`]:
+                {},
             },
+            //Message:close
             [`.${prefix}message-close`]: {
-              [`@apply dark:text-${config.messageDanger.close.textDark} hover:enabled:bg-${config.messageDanger.close.bgHoverEnabled} focus-visible:bg-${config.messageDanger.close.bgFocusVisible} active:enabled:bg-${config.messageDanger.close.bgActiveEnabled} dark:hover:enabled:bg-${config.messageDanger.close.bgHoverEnabledDark} dark:focus-visible:bg-${config.messageDanger.close.bgFocusVisibleDark} dark:active:enabled:bg-${config.messageDanger.close.bgActiveEnabledDark}`]:
+              //Color
+              [`@apply text-${config.color.danger.close.color.light} dark:text-${config.color.danger.close.color.dark}`]:
+                {},
+              //Background:hover
+              [`@apply hover:enabled:bg-${config.color.danger.close.background.hover.light} dark:hover:enabled:bg-${config.color.danger.close.background.hover.dark}`]:
+                {},
+              //Background:focus
+              [`@apply focus-visible:bg-${config.color.danger.close.background.focus.light} dark:focus-visible:bg-${config.color.danger.close.background.focus.dark}`]:
+                {},
+              //Background:active
+              [`@apply active:enabled:bg-${config.color.danger.close.background.active.light} dark:active:enabled:bg-${config.color.danger.close.background.active.dark}`]:
                 {},
             },
           },
