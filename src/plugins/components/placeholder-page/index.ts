@@ -20,42 +20,43 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}placeholder-page`]: {
-          [`@apply flex min-h-${config.minSize} items-center justify-center`]:
+          [`@apply flex min-h-${config.height.min} items-center justify-center`]:
             {},
 
           [`.${prefix}placeholder-page-inner`]: {
-            [`@apply mx-auto w-${config.innerSize} text-center`]: {},
+            [`@apply mx-auto w-${config.inner.width} text-center`]: {},
           },
           [`.${prefix}placeholder-page-img`]: {
             [`@apply mx-auto block`]: {},
           },
           [`.${prefix}placeholder-page-content`]: {
-            [`@apply mx-auto max-w-${config.maxContentSize}`]: {},
+            [`@apply mx-auto max-w-${config.content.width.max}`]: {},
           },
           [`.${prefix}placeholder-page-actions`]: {
             [`@apply mt-4 flex justify-center gap-2`]: {},
           },
           [`.${prefix}placeholder-page-title`]: {
-            [`@apply text-${config.title.text} dark:text-${config.title.textDark} mb-1 mt-4`]:
+            [`@apply text-${config.title.font.color.light} dark:text-${config.title.font.color.dark} mb-1 mt-4`]:
               {},
           },
           [`.${prefix}placeholder-page-subtitle`]: {
-            [`@apply text-${config.subtitle.text}`]: {},
+            [`@apply text-${config.subtitle.font.color.light} dark:text-${config.subtitle.font.color.dark}`]:
+              {},
           },
           [`&.${prefix}placeholder-xs .${prefix}placeholder-page-img`]: {
-            [`@apply max-w-${config.maxSizeXS}`]: {},
+            [`@apply max-w-${config.size.image.xs}`]: {},
           },
           [`&.${prefix}placeholder-sm .${prefix}placeholder-page-img`]: {
-            [`@apply max-w-${config.maxSizeSM}`]: {},
+            [`@apply max-w-${config.size.image.sm}`]: {},
           },
           [`&.${prefix}placeholder-md .${prefix}placeholder-page-img`]: {
-            [`@apply max-w-${config.maxSizeMD}`]: {},
+            [`@apply max-w-${config.size.image.md}`]: {},
           },
           [`&.${prefix}placeholder-lg .${prefix}placeholder-page-img`]: {
-            [`@apply max-w-${config.maxSizeLG}`]: {},
+            [`@apply max-w-${config.size.image.lg}`]: {},
           },
           [`&.${prefix}placeholder-xl .${prefix}placeholder-page-img`]: {
-            [`@apply max-w-${config.maxSizeXL}`]: {},
+            [`@apply max-w-${config.size.image.xl}`]: {},
           },
         },
       })

@@ -55,7 +55,7 @@ export const Solid: Story = {
         ${Button({
           color: 'primary',
           children: 'Get started',
-          shape: 'smooth',
+          rounded: 'md',
         })}
       </div>
     `,
