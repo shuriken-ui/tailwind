@@ -20,10 +20,10 @@ const meta = {
       options: ['default', 'contrast'],
       defaultValue: 'default',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'none',
     },
     value: {
       control: { type: 'number' },
@@ -44,7 +44,7 @@ export const Solid: Story = {
     // set default values used for UI preview
     color: 'primary',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px;',
   },
@@ -57,7 +57,7 @@ export const SizeXs: Story = {
   args: {
     color: 'primary',
     size: 'xs',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px; min-width: 320px;',
   },
@@ -68,7 +68,7 @@ export const SizeSm: Story = {
   args: {
     color: 'primary',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px; min-width: 320px;',
   },
@@ -79,7 +79,7 @@ export const SizeMd: Story = {
   args: {
     color: 'primary',
     size: 'md',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px; min-width: 320px;',
   },
@@ -90,7 +90,7 @@ export const SizeLg: Story = {
   args: {
     color: 'primary',
     size: 'lg',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px; min-width: 320px;',
   },
@@ -101,7 +101,7 @@ export const SizeXl: Story = {
   args: {
     color: 'primary',
     size: 'xl',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px; min-width: 320px;',
   },
@@ -114,7 +114,7 @@ export const ColorPrimary: Story = {
   args: {
     color: 'primary',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px; min-width: 320px;',
   },
@@ -125,7 +125,7 @@ export const ColorInfo: Story = {
   args: {
     color: 'info',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px; min-width: 320px;',
   },
@@ -136,7 +136,7 @@ export const ColorSuccess: Story = {
   args: {
     color: 'success',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px; min-width: 320px;',
   },
@@ -147,7 +147,7 @@ export const ColorWarning: Story = {
   args: {
     color: 'warning',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px; min-width: 320px;',
   },
@@ -158,7 +158,7 @@ export const ColorDanger: Story = {
   args: {
     color: 'danger',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     value: 72,
     style: 'max-width: 320px; min-width: 320px;',
   },
@@ -171,7 +171,7 @@ export const IndeterminatePrimary: Story = {
   args: {
     color: 'primary',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     style: 'max-width: 320px; min-width: 320px;',
   },
 }
@@ -181,7 +181,7 @@ export const IndeterminateInfo: Story = {
   args: {
     color: 'info',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     style: 'max-width: 320px; min-width: 320px;',
   },
 }
@@ -191,7 +191,7 @@ export const IndeterminateSuccess: Story = {
   args: {
     color: 'success',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     style: 'max-width: 320px; min-width: 320px;',
   },
 }
@@ -201,7 +201,7 @@ export const IndeterminateWarning: Story = {
   args: {
     color: 'warning',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     style: 'max-width: 320px; min-width: 320px;',
   },
 }
@@ -211,7 +211,7 @@ export const IndeterminateDanger: Story = {
   args: {
     color: 'danger',
     size: 'sm',
-    shape: 'full',
+    rounded: 'full',
     style: 'max-width: 320px; min-width: 320px;',
   },
 }

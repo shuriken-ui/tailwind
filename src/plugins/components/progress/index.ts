@@ -16,73 +16,81 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}progress`]: {
-          [`@apply relative w-${config.size} overflow-hidden`]: {},
-
+          [`@apply relative w-${config.width} overflow-hidden`]: {},
+          //Bar
           [`.${prefix}progress-bar`]: {
-            [`@apply absolute start-0 top-0 h-full transition-all duration-${config.bar.duration}`]:
+            [`@apply absolute start-0 top-0 h-full transition-${config.bar.transition.property} duration-${config.bar.transition.duration}`]:
               {},
           },
+          //Color
           [`&.${prefix}progress-default`]: {
-            [`@apply bg-${config.default.bg} dark:bg-${config.default.bgDark}`]:
+            [`@apply bg-${config.color.default.background.light} dark:bg-${config.color.default.background.dark}`]:
               {},
           },
           [`&.${prefix}progress-contrast`]: {
-            [`@apply bg-${config.defaultContrast.bg} dark:bg-${config.defaultContrast.bgDark}`]:
+            [`@apply bg-${config.color.defaultContrast.background.light} dark:bg-${config.color.defaultContrast.background.dark}`]:
               {},
           },
+          //Size
           [`&.${prefix}progress-xs`]: {
-            [`@apply h-${config.progressXS}`]: {},
+            [`@apply h-${config.size.xs}`]: {},
           },
           [`&.${prefix}progress-sm`]: {
-            [`@apply h-${config.progressSM}`]: {},
+            [`@apply h-${config.size.sm}`]: {},
           },
           [`&.${prefix}progress-md`]: {
-            [`@apply h-${config.progressMD}`]: {},
+            [`@apply h-${config.size.md}`]: {},
           },
           [`&.${prefix}progress-lg`]: {
-            [`@apply h-${config.progressLG}`]: {},
+            [`@apply h-${config.size.lg}`]: {},
           },
           [`&.${prefix}progress-xl`]: {
-            [`@apply h-${config.progressXL}`]: {},
+            [`@apply h-${config.size.xl}`]: {},
           },
+          //Rounded
           [`&.${prefix}progress-rounded, &.${prefix}progress-rounded .${prefix}progress-bar`]:
             {
-              [`@apply rounded`]: {},
+              [`@apply ${config.rounded.sm}`]: {},
+            },
+          [`&.${prefix}progress-smooth, &.${prefix}progress-smooth .${prefix}progress-bar`]:
+            {
+              [`@apply ${config.rounded.md}`]: {},
             },
           [`&.${prefix}progress-curved, &.${prefix}progress-curved .${prefix}progress-bar`]:
             {
-              [`@apply rounded-${config.rounded.curved}`]: {},
+              [`@apply ${config.rounded.lg}`]: {},
             },
           [`&.${prefix}progress-full, &.${prefix}progress-full .${prefix}progress-bar`]:
             {
-              [`@apply rounded-${config.rounded.full}`]: {},
+              [`@apply ${config.rounded.full}`]: {},
             },
           [`&.${prefix}progress-indeterminate .${prefix}progress-bar`]: {
             [`@apply w-full`]: {},
           },
+          //Bar color
           [`&.${prefix}progress-primary`]: {
             [`.${prefix}progress-bar`]: {
-              [`@apply bg-${config.primary}`]: {},
+              [`@apply bg-${config.bar.color.primary}`]: {},
             },
           },
           [`&.${prefix}progress-info`]: {
             [`.${prefix}progress-bar`]: {
-              [`@apply bg-${config.info}`]: {},
+              [`@apply bg-${config.bar.color.info}`]: {},
             },
           },
           [`&.${prefix}progress-success`]: {
             [`.${prefix}progress-bar`]: {
-              [`@apply bg-${config.success}`]: {},
+              [`@apply bg-${config.bar.color.success}`]: {},
             },
           },
           [`&.${prefix}progress-warning`]: {
             [`.${prefix}progress-bar`]: {
-              [`@apply bg-${config.warning}`]: {},
+              [`@apply bg-${config.bar.color.warning}`]: {},
             },
           },
           [`&.${prefix}progress-danger`]: {
             [`.${prefix}progress-bar`]: {
-              [`@apply bg-${config.danger}`]: {},
+              [`@apply bg-${config.bar.color.danger}`]: {},
             },
           },
         },
