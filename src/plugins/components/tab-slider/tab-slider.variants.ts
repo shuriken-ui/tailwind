@@ -11,10 +11,10 @@ export const size = {
   md: 'nui-tabs-md',
 } as const satisfies TabSliderVariant<'size'>
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-tabs-rounded',
-  smooth: 'nui-tabs-smooth',
-  curved: 'nui-tabs-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-tabs-rounded',
+  md: 'nui-tabs-smooth',
+  lg: 'nui-tabs-curved',
   full: 'nui-tabs-full',
-} as const satisfies TabSliderVariant<'shape'>
+} as const satisfies TabSliderVariant<'rounded'>

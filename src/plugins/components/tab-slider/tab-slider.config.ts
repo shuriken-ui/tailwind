@@ -1,37 +1,67 @@
 export const key = 'tabSlider' as const
 
 export const defaultConfig = {
+  rounded: {
+    sm: 'rounded-md',
+    md: 'rounded-lg',
+    lg: 'rounded-xl',
+    full: 'rounded-full',
+  },
   track: {
-    bg: 'muted-100',
-    bgDark: 'muted-700',
-    size: 'full',
-    font: 'sans',
+    width: 'full',
+    font: {
+      family: 'sans',
+    },
+    background: {
+      light: 'muted-100',
+      dark: 'muted-700',
+    },
   },
   item: {
-    notActiveText: 'muted-400',
-    activeText: 'white',
-    fontSize: 'sm',
-    fontFamily: 'sans',
+    font: {
+      family: 'sans',
+      size: 'sm',
+      color: {
+        active: {
+          light: 'white',
+          dark: 'white',
+        },
+        inactive: {
+          light: 'muted-400',
+          dark: 'muted-400',
+        },
+      },
+    },
   },
   naver: {
-    bg: 'primary-500',
-    duration: '300',
+    background: {
+      light: 'primary-500',
+      dark: 'primary-500',
+    },
+    transition: {
+      property: 'all',
+      duration: '300',
+    },
   },
-  rounded: {
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
-    full: 'full',
-  },
-  tabsSM: {
-    twoSlotsW: '[140px]',
-    threeSlotsW: '[210px]',
-    track: '8',
-  },
-  tabsMD: {
-    twoSlotsW: '[250px]',
-    threeSlotsW: '[320px]',
-    track: '10',
+  size: {
+    sm: {
+      slots: {
+        two: '[140px]',
+        three: '[210px]',
+      },
+      track: {
+        size: '8',
+      },
+    },
+    md: {
+      slots: {
+        two: '[250px]',
+        three: '[320px]',
+      },
+      track: {
+        size: '10',
+      },
+    },
   },
 }
 

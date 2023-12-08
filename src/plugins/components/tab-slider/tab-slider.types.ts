@@ -7,7 +7,7 @@ export interface TabSliderProps extends Record<string, unknown> {
   }[]
   justify?: 'start' | 'center' | 'end'
   size?: 'sm' | 'md'
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   classes?: {
     wrapper?: string | string[]
   }
