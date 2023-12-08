@@ -2,7 +2,7 @@ import type { PropertyVariant } from '~/types/utils'
 
 export interface SelectProps extends Record<string, unknown> {
   id?: string
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   label?: string
   placeholder?: string
   labelFloat?: boolean
