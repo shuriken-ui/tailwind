@@ -15,53 +15,92 @@ export default plugin.withOptions(
       const config = theme(`shurikenUi.${key}`) satisfies TabsConfig
 
       addComponents({
+        //Wrapper
         [`.${prefix}tabs`]: {
           [`@apply relative`]: {},
-
+          //Tabs:inner
           [`.${prefix}tabs-inner`]: {
-            [`@apply font-${config.inner.font} mb-${config.inner.space} flex`]:
+            [`@apply font-${config.inner.font.family} mb-${config.inner.margin.bottom} flex`]:
               {},
           },
+          //Tabs:item
           [`.${prefix}tab-item`]: {
-            [`@apply cursor-pointer text-${config.item.text} border-b-2 px-4 py-3 transition-all duration-${config.item.duration}`]:
+            //Base
+            [`@apply cursor-pointer border-b-2 px-4 py-3`]: {},
+            //Color
+            [`@apply text-${config.item.font.size}`]: {},
+            //Transition
+            [`@apply transition-${config.item.transition.property} duration-${config.item.transition.duration}`]:
               {},
+            //Item:inactive
             [`&:not(.${prefix}active)`]: {
-              [`@apply text-${config.item.notActive.text} border-transparent`]:
+              //Base
+              [`@apply border-transparent`]: {},
+              //Color
+              [`@apply text-${config.item.font.color.inactive.light} dark:text-${config.item.font.color.inactive.dark}`]:
                 {},
             },
+            //Item:active
             [`&.${prefix}active`]: {
-              [`@apply border-${config.item.active.border} text-${config.item.active.text} dark:text-${config.item.active.textDark}`]:
+              //Border
+              [`@apply border-${config.item.border.active.light} dark:border-${config.item.border.active.dark}`]:
+                {},
+              //Color
+              [`@apply text-${config.item.font.color.active.light} dark:text-${config.item.font.color.active.dark}`]:
                 {},
             },
+            //Item:icon
             [`&.${prefix}has-icon`]: {
               [`@apply flex items-center gap-1`]: {},
             },
           },
+          //Item:pill
           [`.${prefix}pill-item`]: {
-            [`@apply flex flex-col rounded-${config.pillItem.rounded} px-5 text-${config.pillItem.textPosition} cursor-pointer text-${config.pillItem.text} transition-all duration-${config.pillItem.duration}`]:
+            [`@apply flex flex-col ${config.pill.rounded} px-5 cursor-pointer`]:
               {},
+            //font
+            [`@apply text-${config.pill.font.align}`]: {},
+            //Transition
+            [`@apply transition-${config.pill.transition.property} duration-${config.pill.transition.duration}`]:
+              {},
+            //Item:inactive
             [`&:not(.${prefix}active)`]: {
-              [`@apply text-${config.pillItem.notActive.text}`]: {},
-            },
-            [`&.${prefix}active`]: {
-              [`@apply bg-${config.pillItem.active.bg} shadow-${config.pillItem.active.shadow} !text-${config.pillItem.active.text} shadow-${config.pillItem.active.shadowSize}`]:
+              //color
+              [`@apply text-${config.pill.font.color.inactive.light} dark:text-${config.pill.font.color.inactive.dark}`]:
                 {},
             },
+            //Item:active
+            [`&.${prefix}active`]: {
+              //Color
+              [`@apply !text-${config.pill.font.color.active.light} dark:!text-${config.pill.font.color.active.dark}`]:
+                {},
+              //Background
+              [`@apply !bg-${config.pill.background.active.light} dark:!bg-${config.pill.background.active.dark}`]:
+                {},
+              //Shadow
+              [`@apply shadow-${config.pill.shadow.active.size} bg-${config.pill.shadow.active.light} dark:bg-${config.pill.shadow.active.dark}`]:
+                {},
+            },
+            //Item:no-icon
             [`&:not(.${prefix}has-icon)`]: {
               [`@apply flex items-center gap-1 py-2`]: {},
             },
+            //Item:icon
             [`&.${prefix}has-icon`]: {
               [`@apply flex items-center gap-1 py-3`]: {},
             },
           },
+          //Tabs:content
           [`.${prefix}tab-content`]: {
             [`@apply relative block`]: {},
           },
+          //Align:center
           [`&.${prefix}tabs-centered`]: {
             [`.${prefix}tabs-inner`]: {
               [`@apply justify-center`]: {},
             },
           },
+          //Align:end
           [`&.${prefix}tabs-end`]: {
             [`.${prefix}tabs-inner`]: {
               [`@apply justify-end`]: {},
