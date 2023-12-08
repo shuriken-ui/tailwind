@@ -9,7 +9,7 @@ import * as variants from './textarea.variants'
  */
 export const Textarea = ({
   id,
-  shape = 'rounded',
+  rounded = 'sm',
   size = 'md',
   contrast = 'default',
   error,
@@ -28,7 +28,7 @@ export const Textarea = ({
         'nui-textarea-wrapper',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         error && !loading && 'nui-textarea-error',
         addon && 'nui-has-addon',
         !resize && 'nui-textarea-no-resize',
