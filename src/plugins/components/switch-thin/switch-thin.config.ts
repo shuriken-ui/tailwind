@@ -1,47 +1,93 @@
 export const key = 'switchThin' as const
 
 export const defaultConfig = {
-  handle: {
-    border: 'muted-300',
-    borderDark: 'muted-600',
-    bg: 'white',
-    bgDark: 'muted-700',
-    size: '6',
-    rounded: 'full',
-  },
-  track: {
-    bg: 'muted-300',
-    bgDark: 'muted-600',
-    rounded: 'full',
-    duration: '300',
-  },
-  singleLabel: {
-    text: 'muted-400',
-    font: 'sans',
-    textSize: 'sm',
-  },
-  dualLabel: {
-    label: {
-      font: 'sans',
-      fontWeight: 'medium',
-      text: 'muted-800',
-      textDark: 'white',
-      textSize: 'sm',
-    },
-    sublabel: {
-      text: 'muted-400',
-      textSize: 'xs',
-      font: 'sans',
-    },
-  },
   input: {
     size: 'full',
   },
-  primary: 'primary-400',
-  info: 'info-400',
-  success: 'success-400',
-  warning: 'warning-400',
-  danger: 'danger-400',
+  handle: {
+    size: '6',
+    rounded: 'rounded-full',
+    border: {
+      light: 'muted-300',
+      dark: 'muted-600',
+    },
+    background: {
+      light: 'white',
+      dark: 'muted-700',
+    },
+    transition: {
+      property: 'all',
+      duration: '300',
+    },
+  },
+  track: {
+    rounded: 'rounded-full',
+    background: {
+      light: 'muted-300',
+      dark: 'muted-600',
+    },
+    transition: {
+      property: 'all',
+      duration: '300',
+    },
+  },
+  label: {
+    single: {
+      font: {
+        family: 'sans',
+        size: 'sm',
+        color: {
+          light: 'muted-400',
+          dark: 'muted-400',
+        },
+      },
+    },
+    dual: {
+      label: {
+        font: {
+          family: 'sans',
+          weight: 'medium',
+          size: 'sm',
+          color: {
+            light: 'muted-800',
+            dark: 'white',
+          },
+        },
+      },
+      sublabel: {
+        font: {
+          family: 'sans',
+          size: 'xs',
+          color: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+        },
+      },
+    },
+  },
+  color: {
+    primary: {
+      light: 'primary-400',
+      dark: 'primary-400',
+    },
+    info: {
+      light: 'info-400',
+      dark: 'info-400',
+    },
+    success: {
+      light: 'success-400',
+      dark: 'success-400',
+    },
+    warning: {
+      light: 'warning-400',
+      dark: 'warning-400',
+    },
+    danger: {
+      light: 'danger-400',
+      dark: 'danger-400',
+    },
+  },
 }
 
 export type SwitchThinConfig = typeof defaultConfig

@@ -33,7 +33,7 @@ export default plugin.withOptions(
             [`@apply bg-${config.handle.background.light} dark:bg-${config.handle.background.dark}`]:
               {},
             //Border
-            [`@apply border-${config.handle.border.light} dark:border-${config.handle.border.dark}`]:
+            [`@apply border border-${config.handle.border.light} dark:border-${config.handle.border.dark}`]:
               {},
             //Transition
             [`@apply transition-${config.track.transition.property} duration-${config.track.transition.duration}`]:
