@@ -27,10 +27,10 @@ const meta = {
       options: ['sm', 'md', 'lg'],
       defaultValue: 'md',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'none',
     },
     contrast: {
       control: { type: 'select' },
@@ -216,7 +216,7 @@ export const Main: Story = {
     label: 'Languages',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -257,15 +257,15 @@ export const Main: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const ShapeStraight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     value: languages[0].name,
     label: 'Languages',
     size: 'md',
     contrast: 'default',
-    shape: 'straight',
+    rounded: 'none',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -306,13 +306,13 @@ export const ShapeStraight: Story = {
 }
 
 export const ShapeRounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     value: languages[0].name,
     label: 'Languages',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -353,13 +353,13 @@ export const ShapeRounded: Story = {
 }
 
 export const ShapeSmooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     value: languages[0].name,
     label: 'Languages',
     size: 'md',
     contrast: 'default',
-    shape: 'smooth',
+    rounded: 'md',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -400,13 +400,13 @@ export const ShapeSmooth: Story = {
 }
 
 export const ShapeCurved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     value: languages[0].name,
     label: 'Languages',
     size: 'md',
     contrast: 'default',
-    shape: 'curved',
+    rounded: 'lg',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -447,13 +447,13 @@ export const ShapeCurved: Story = {
 }
 
 export const ShapeFull: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
     value: languages[0].name,
     label: 'Languages',
     size: 'md',
     contrast: 'default',
-    shape: 'full',
+    rounded: 'full',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -502,7 +502,7 @@ export const SizeSm: Story = {
     label: 'Languages',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -549,7 +549,7 @@ export const SizeMd: Story = {
     label: 'Languages',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -596,7 +596,7 @@ export const SizeLg: Story = {
     label: 'Languages',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -645,7 +645,7 @@ export const ContrastMutedSm: Story = {
     label: 'Languages',
     size: 'sm',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -692,7 +692,7 @@ export const ContrastMutedMd: Story = {
     label: 'Languages',
     size: 'md',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -739,7 +739,7 @@ export const ContrastMutedLg: Story = {
     label: 'Languages',
     size: 'lg',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -789,7 +789,7 @@ export const LabelFloatSm: Story = {
     labelFloat: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -837,7 +837,7 @@ export const LabelFloatMd: Story = {
     labelFloat: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -885,7 +885,7 @@ export const LabelFloatLg: Story = {
     labelFloat: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -935,7 +935,7 @@ export const DisabledSm: Story = {
     '?disabled': true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -983,7 +983,7 @@ export const DisabledMd: Story = {
     '?disabled': true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1031,7 +1031,7 @@ export const DisabledLg: Story = {
     '?disabled': true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1081,7 +1081,7 @@ export const LoadingSm: Story = {
     loading: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1129,7 +1129,7 @@ export const LoadingMd: Story = {
     loading: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1177,7 +1177,7 @@ export const LoadingLg: Story = {
     loading: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1227,7 +1227,7 @@ export const ErrorSm: Story = {
     error: 'Please select a valid value',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1275,7 +1275,7 @@ export const ErrorMd: Story = {
     error: 'Please select a valid value',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1323,7 +1323,7 @@ export const ErrorLg: Story = {
     error: 'Please select a valid value',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1372,7 +1372,7 @@ export const SlotIconSm: Story = {
     label: 'Languages',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1438,7 +1438,7 @@ export const SlotIconMd: Story = {
     label: 'Languages',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1504,7 +1504,7 @@ export const SlotIconLg: Story = {
     label: 'Languages',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1572,7 +1572,7 @@ export const MediaIconSm: Story = {
     label: 'Languages',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1651,7 +1651,7 @@ export const MediaIconMd: Story = {
     label: 'Languages',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1730,7 +1730,7 @@ export const MediaIconLg: Story = {
     label: 'Languages',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1811,7 +1811,7 @@ export const MediaImgSm: Story = {
     label: 'Languages',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1877,7 +1877,7 @@ export const MediaImgMd: Story = {
     label: 'Languages',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {
@@ -1943,7 +1943,7 @@ export const MediaImgLg: Story = {
     label: 'Languages',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'listbox',
     placeholder: 'Select a language...',
     classes: {

@@ -25,7 +25,7 @@ export default plugin.withOptions(
           [`.${prefix}autocomplete-label, .${prefix}label-float`]: {
             [`@apply ${prefix}label`]: {},
           },
-          //Autocomplete:label float
+          //Label:float
           [`.${prefix}label-float`]: {
             //Base
             [`@apply pointer-events-none absolute inline-flex select-none items-center leading-none`]:

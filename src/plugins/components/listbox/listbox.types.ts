@@ -4,7 +4,7 @@ export interface ListboxProps extends Record<string, unknown> {
   id?: string
   value?: any
   items?: any[]
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   label?: string
   labelFloat?: boolean
   error?: string | boolean
