@@ -1,10 +1,14 @@
 export const key = 'mark' as const
 
 export const defaultConfig = {
-  bg: 'primary-100',
-  bgDark: 'primary-800',
-  text: 'primary-800',
-  textDark: 'primary-200',
+  background: {
+    light: 'primary-100',
+    dark: 'primary-800',
+  },
+  color: {
+    light: 'primary-800',
+    dark: 'primary-200',
+  },
 }
 
 export type MarkConfig = typeof defaultConfig
