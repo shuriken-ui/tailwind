@@ -45,7 +45,7 @@ export const Toast = ({
               ${icon}
             `
           : ''}
-        <div>
+        <div class=${[icon && !iconBlock && 'ms-2'].filter(Boolean).join(' ')}>
           <h4 class="nui-toast-title">${title}</h4>
           <p class="nui-toast-subtitle">${text}</p>
         </div>

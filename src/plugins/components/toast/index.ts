@@ -165,12 +165,12 @@ export default plugin.withOptions(
               {},
             //Icon:inner
             [`.${prefix}toast-icon`]: {
-              [`@apply text-${config.color.white.icon.inner.color.light} dark:text-${config.color.white.icon.inner.color.dark}`]:
+              [`@apply text-${config.color.danger.icon.inner.color.light} dark:text-${config.color.danger.icon.inner.color.dark}`]:
                 {},
             },
             //Icon:outer
             [`.${prefix}toast-icon-block`]: {
-              [`@apply bg-${config.color.white.icon.outer.background.light} dark:bg-${config.color.white.icon.outer.background.dark}`]:
+              [`@apply bg-${config.color.danger.icon.outer.background.light} dark:bg-${config.color.danger.icon.outer.background.dark}`]:
                 {},
             },
           },
