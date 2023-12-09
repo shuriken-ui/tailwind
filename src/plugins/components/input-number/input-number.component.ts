@@ -106,9 +106,9 @@ export const InputNumber = ({
               <path
                 fill="none"
                 stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="4"
                 d="m6 9 6 6 6-6"
               />
             </svg>
@@ -122,9 +122,9 @@ export const InputNumber = ({
               <path
                 fill="none"
                 stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="4"
                 d="m6 9 6 6 6-6"
               />
             </svg>

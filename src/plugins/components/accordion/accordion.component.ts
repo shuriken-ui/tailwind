@@ -60,9 +60,9 @@ export const Accordion = ({
                           <path
                             fill="none"
                             stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
                             d="m6 9 6 6 6-6"
                           />
                         </svg>
@@ -80,9 +80,9 @@ export const Accordion = ({
                           <path
                             fill="none"
                             stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
                             d="M12 5v14m-7-7h14"
                           />
                         </svg>

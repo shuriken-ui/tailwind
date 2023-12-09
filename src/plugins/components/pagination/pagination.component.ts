@@ -71,9 +71,9 @@ export const Pagination = ({ rounded, classes, ...attrs }: PaginationAttrs) => {
             <path
               fill="none"
               stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               d="m15 18l-6-6l6-6"
             ></path>
           </svg>
@@ -92,9 +92,9 @@ export const Pagination = ({ rounded, classes, ...attrs }: PaginationAttrs) => {
             <path
               fill="none"
               stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               d="m9 18l6-6l-6-6"
             ></path>
           </svg>

@@ -10,6 +10,7 @@ import * as variants from './button.variants'
 export const Button = ({
   label,
   loading,
+  badge,
   shadow,
   rounded,
   children,
@@ -47,6 +48,14 @@ export const Button = ({
           html`
             <span>${label}</span>
           `}
+      ${badge
+        ? html`
+            <span class="nui-button-badge">
+              <span class="nui-button-badge-pulse"></span>
+              <span class="nui-button-badge-inner"></span>
+            </span>
+          `
+        : ''}
     </button>
   `
 }

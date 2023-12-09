@@ -15,6 +15,11 @@ const meta = {
       control: { type: 'boolean' },
       defaultValue: false,
     },
+    badge: {
+      name: 'badge',
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
     '?disabled': {
       name: 'disabled',
       control: { type: 'boolean' },
@@ -77,29 +82,29 @@ export const Solid: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Rounded: straight',
+  name: 'Rounded: none',
   args: {
     label: 'Button',
   },
 }
 export const Rounded: Story = {
-  name: 'Rounded: rounded',
+  name: 'Rounded: sm',
   args: {
     rounded: 'sm',
     label: 'Button',
   },
 }
 export const Smooth: Story = {
-  name: 'Rounded: smooth',
+  name: 'Rounded: md',
   args: {
     rounded: 'md',
     label: 'Button',
   },
 }
 export const Curved: Story = {
-  name: 'Rounded: curved',
+  name: 'Rounded: lg',
   args: {
     rounded: 'lg',
     label: 'Button',
@@ -110,6 +115,48 @@ export const Full: Story = {
   args: {
     rounded: 'full',
     label: 'Button',
+  },
+}
+// #endregion
+
+// #region Badge
+export const BadgeStraight: Story = {
+  name: 'Badge: rounded none',
+  args: {
+    label: 'Button',
+    badge: true,
+  },
+}
+export const BadgeRounded: Story = {
+  name: 'Badge: rounded sm',
+  args: {
+    rounded: 'sm',
+    label: 'Button',
+    badge: true,
+  },
+}
+export const BadgeSmooth: Story = {
+  name: 'Badge: rounded md',
+  args: {
+    rounded: 'md',
+    label: 'Button',
+    badge: true,
+  },
+}
+export const BadgeCurved: Story = {
+  name: 'Badge: rounded lg',
+  args: {
+    rounded: 'lg',
+    label: 'Button',
+    badge: true,
+  },
+}
+export const BadgeFull: Story = {
+  name: 'Badge: rounded full',
+  args: {
+    rounded: 'full',
+    label: 'Button',
+    badge: true,
   },
 }
 // #endregion
@@ -371,9 +418,9 @@ export const IconDefault: Story = {
         <path
           fill="none"
           stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
           d="M12 3a6 6 0 0 0 9 9a9 9 0 1 1-9-9Z"
         />
       </svg>
@@ -402,9 +449,9 @@ export const IconMuted: Story = {
         <path
           fill="none"
           stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
           d="M5 12h14m-7-7l7 7l-7 7"
         />
       </svg>
@@ -431,9 +478,9 @@ export const IconPrimary: Story = {
         <g
           fill="none"
           stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
         >
           <path
             d="M19.4 14.9C20.2 16.4 21 17 21 17H3s3-2 3-9c0-3.3 2.7-6 6-6c.7 0 1.3.1 1.9.3M10.3 21a1.94 1.94 0 0 0 3.4 0"

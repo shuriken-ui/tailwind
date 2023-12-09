@@ -31,7 +31,7 @@ export const ProgressCircle = ({
     >
       <circle
         class="text-muted-200 dark:text-muted-700 stroke-current"
-        strokeWidth="${thickness}"
+        stroke-width="${thickness}"
         fill="none"
         cx="50%"
         cy="50%"
@@ -39,9 +39,9 @@ export const ProgressCircle = ({
       />
       <circle
         class="stroke-current transition-all duration-500"
-        strokeWidth="${thickness}"
+        stroke-width="${thickness}"
         stroke-dasharray="${`${value},100`}"
-        strokeLinecap="round"
+        stroke-linecap="round"
         fill="none"
         cx="50%"
         cy="50%"

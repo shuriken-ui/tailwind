@@ -54,9 +54,9 @@ export const Dropdown = ({
                     <path
                       fill="none"
                       stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                       d="m6 9l6 6l6-6"
                     />
                   </svg>
@@ -89,9 +89,9 @@ export const Dropdown = ({
                     <g
                       fill="none"
                       stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
                       <circle cx="12" cy="12" r="1"></circle>
                       <circle cx="19" cy="12" r="1"></circle>
@@ -120,9 +120,9 @@ export const Dropdown = ({
                   <path
                     fill="none"
                     stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     d="m6 9 6 6 6-6"
                   />
                 </svg>

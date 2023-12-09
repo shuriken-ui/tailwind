@@ -29,16 +29,16 @@ export default plugin.withOptions(
 
           // #region Badge
           [`.${prefix}button-badge`]: {
-            [`@apply flex absolute h-${config.badge.size} w-${config.badge.size} top-0 -end-1 -mt-1`]:
+            [`@apply flex absolute h-${config.badge.size} w-${config.badge.size} top-0 -end-0.5 -mt-0.5`]:
               {},
 
             [`.${prefix}button-badge-pulse`]: {
-              [`@apply absolute inline-flex h-full w-full rounded-full opacity-75`]:
+              [`@apply absolute inline-flex h-full w-full rounded-full opacity-75 bg-primary-500 animate-ping`]:
                 {},
             },
 
             [`.${prefix}button-badge-inner`]: {
-              [`@apply relative inline-flex rounded-full h-${config.badge.size} w-${config.badge.size}`]:
+              [`@apply relative inline-flex rounded-full h-${config.badge.size} w-${config.badge.size} bg-primary-500`]:
                 {},
             },
 

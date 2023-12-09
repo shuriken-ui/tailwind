@@ -781,7 +781,7 @@ export const defaultConfig = {
     },
   },
   badge: {
-    size: '3',
+    size: '2.5',
     colors: {
       primary: 'primary-400',
       primaryDark: 'primary-400',
