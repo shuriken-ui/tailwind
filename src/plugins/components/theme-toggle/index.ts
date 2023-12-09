@@ -103,12 +103,12 @@ export default plugin.withOptions(
               {},
 
             [`.${prefix}toggle-inner`]: {
-              [`@apply bg-${config.inverted.enabled.inner.background.light} dark:bg-${config.inverted.enabled.inner.background.dark}`]:
+              [`@apply !bg-${config.inverted.enabled.inner.background.light} dark:!bg-${config.inverted.enabled.inner.background.dark}`]:
                 {},
             },
           },
           //Toggle:not-inverted
-          [`&.not(${prefix}theme-toggle-inverted)`]: {
+          [`&:not(${prefix}theme-toggle-inverted)`]: {
             //Ring
             [`@apply ring-offset-${config.inverted.disabled.ring.light} dark:ring-offset-${config.inverted.disabled.ring.dark}`]:
               {},

@@ -112,7 +112,7 @@ export default plugin.withOptions(
             },
           },
           //Toggle:not-inverted
-          [`&.not(${prefix}theme-switch-inverted)`]: {
+          [`&:not(${prefix}theme-switch-inverted)`]: {
             //Ring
             [`@apply ring-offset-${config.inverted.disabled.ring.light} dark:ring-offset-${config.inverted.disabled.ring.dark}`]:
               {},
