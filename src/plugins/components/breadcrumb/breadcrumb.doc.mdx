@@ -1,4 +1,4 @@
-import { Meta, Primary, Controls } from '@storybook/blocks'
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
 import * as BreadcrumbStories from './breadcrumb.stories'
 import { defaultConfig } from './breadcrumb.config'
 
@@ -13,6 +13,48 @@ Breadcrumbs allow you to quickly identify the path to the current web page.
 ## Props
 
 <Controls />
+
+## Variants
+
+<br />
+
+### Separator: dot
+
+Breadcrumbs can have different separators. Below is an example of the dot separator.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={BreadcrumbStories.SeparatorDot} />
+</div>
+
+<br />
+
+### Separator: slash
+
+Breadcrumbs can have different separators. Below is an example of the slash separator.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={BreadcrumbStories.SeparatorSlash} />
+</div>
+
+<br />
+
+### Separator: chevron
+
+Breadcrumbs can have different separators. Below is an example of the chevron separator.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={BreadcrumbStories.SeparatorChevron} />
+</div>
+
+<br />
+
+### Separator: arrow
+
+Breadcrumbs can have different separators. Below is an example of the arrow separator.
+
+<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={BreadcrumbStories.SeparatorArrow} />
+</div>
 
 <br />
 <br />

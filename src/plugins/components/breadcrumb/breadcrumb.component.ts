@@ -9,7 +9,12 @@ import { DropdownItem } from '../dropdown-item/dropdown-item.component'
 /**
  * Primary UI component for user interaction
  */
-export const Breadcrumb = ({ items, classes, ...attrs }: BreadcrumbAttrs) => {
+export const Breadcrumb = ({
+  items,
+  classes,
+  separator = 'dot',
+  ...attrs
+}: BreadcrumbAttrs) => {
   return html`
     <nav
       class=${['nui-breadcrumb', classes?.wrapper].filter(Boolean).join(' ')}
@@ -76,9 +81,54 @@ export const Breadcrumb = ({ items, classes, ...attrs }: BreadcrumbAttrs) => {
             </li>
             <li class="nui-breadcrumb-item">
               <div class="nui-item-inner">
-                ${index < items.length - 1
+                ${index < items.length - 1 && separator === 'dot'
                   ? html`
                       <span class="nui-item-text">·</span>
+                    `
+                  : ''}
+                ${index < items.length - 1 && separator === 'slash'
+                  ? html`
+                      <span class="nui-item-text">/</span>
+                    `
+                  : ''}
+                ${index < items.length - 1 && separator === 'chevron'
+                  ? html`
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        class="nui-item-text"
+                      >
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m9 18l6-6l-6-6"
+                        />
+                      </svg>
+                    `
+                  : ''}
+                ${index < items.length - 1 && separator === 'arrow'
+                  ? html`
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        class="nui-item-text"
+                      >
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 12h14m-7-7l7 7l-7 7"
+                        />
+                      </svg>
                     `
                   : ''}
               </div>

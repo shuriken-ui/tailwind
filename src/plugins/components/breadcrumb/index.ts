@@ -33,6 +33,9 @@ export default plugin.withOptions(
               //Base
               [`@apply text-${config.item.text.font.size} flex items-center gap-x-1`]:
                 {},
+              //Color
+              [`@apply text-${config.item.text.font.color.light} dark:text-${config.item.text.font.color.dark}`]:
+                {},
               //Transition
               [`@apply transition-${config.item.transition.property} duration-${config.item.transition.duration}`]:
                 {},
