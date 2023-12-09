@@ -23,6 +23,14 @@ export default plugin.withOptions(
             [`@apply font-${config.inner.font.family} mb-${config.inner.margin.bottom} flex`]:
               {},
           },
+
+          //Tabs:bordered
+          [`&.${prefix}tabs-bordered`]: {
+            //Tabs:inner
+            [`.${prefix}tabs-inner`]: {
+              [`@apply border-b border-muted-200 dark:border-muted-800`]: {},
+            },
+          },
           //Tabs:item
           [`.${prefix}tab-item`]: {
             //Base

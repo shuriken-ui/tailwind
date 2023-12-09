@@ -20,6 +20,11 @@ const meta = {
       options: ['start', 'center', 'end'],
       defaultValue: 'start',
     },
+    bordered: {
+      name: 'Bordered',
+      control: { type: 'boolean' },
+      defaultValue: true,
+    },
   },
 } satisfies Meta<TabsAttrs>
 

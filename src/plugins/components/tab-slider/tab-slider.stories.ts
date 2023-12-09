@@ -230,6 +230,26 @@ export const SizeSm: Story = {
     style: 'max-width: 480px;',
   },
 }
+
+export const SizeSmFull: Story = {
+  name: 'Size: sm',
+  args: {
+    tabs: data,
+    size: 'sm',
+    rounded: 'full',
+    justify: 'start',
+    children: html`
+      <div>
+        <p class="font-sans text-muted-500 dark:text-muted-400">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid iudicant
+          sensus? Primum quid tu dicis breve? Etiam beatissimum? Ne discipulum
+          abducam, times.
+        </p>
+      </div>
+    `,
+    style: 'max-width: 480px;',
+  },
+}
 // #endregion
 
 // #region Slots
