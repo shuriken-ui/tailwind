@@ -43,7 +43,7 @@ export default plugin.withOptions(
           //Snack:text
           [`.${prefix}snack-text`]: {
             //Font
-            [`@apply font-${config.font.family} text-${config.font.size}`]: {},
+            [`@apply font-${config.font.family}`]: {},
             //Color
             [`@apply text-${config.font.color.light} dark:text-${config.font.color.dark}`]:
               {},
@@ -52,8 +52,46 @@ export default plugin.withOptions(
           [`.${prefix}snack-button`]: {
             [`@apply hover:!bg-transparent`]: {},
           },
+          //Size:xs
+          [`&.${prefix}snack-xs`]: {
+            //Snack:media:xs
+            [`&:not(.${prefix}has-media)`]: {
+              [`@apply !ps-2`]: {},
+            },
+            //Snack:text
+            [`.${prefix}snack-text`]: {
+              //Font
+              [`@apply text-${config.size.xs.font.size}`]: {},
+            },
+            //Size
+            [`@apply h-${config.size.xs.size}`]: {},
+            //Snack:icon
+            [`.${prefix}snack-icon`]: {
+              [`@apply w-${config.size.xs.icon.outer.size} h-${config.size.xs.icon.outer.size}`]:
+                {},
+            },
+            //Icon:inner
+            [`.${prefix}snack-icon-inner`]: {
+              [`@apply h-${config.size.xs.icon.inner.size} w-${config.size.xs.icon.inner.size}`]:
+                {},
+            },
+            //Snack:image
+            [`.${prefix}snack-image, .${prefix}snack-image-inner`]: {
+              [`@apply w-${config.size.xs.image.outer.size} h-${config.size.xs.image.outer.size}`]:
+                {},
+            },
+          },
           //Size:sm
           [`&.${prefix}snack-sm`]: {
+            //Snack:media:sm
+            [`&:not(.${prefix}has-media)`]: {
+              [`@apply !ps-3`]: {},
+            },
+            //Snack:text
+            [`.${prefix}snack-text`]: {
+              //Font
+              [`@apply text-${config.size.sm.font.size}`]: {},
+            },
             //Size
             [`@apply h-${config.size.sm.size}`]: {},
             //Snack:icon
@@ -74,6 +112,15 @@ export default plugin.withOptions(
           },
           //Size:md
           [`&.${prefix}snack-md`]: {
+            //Snack:media:md
+            [`&:not(.${prefix}has-media)`]: {
+              [`@apply !ps-4`]: {},
+            },
+            //Snack:text
+            [`.${prefix}snack-text`]: {
+              //Font
+              [`@apply text-${config.size.md.font.size}`]: {},
+            },
             //Size
             [`@apply h-${config.size.md.size}`]: {},
             //Snack:icon
@@ -105,10 +152,6 @@ export default plugin.withOptions(
             //Background
             [`@apply bg-${config.color.muted.background.light} dark:bg-${config.color.muted.background.dark}`]:
               {},
-          },
-          //Snack:media
-          [`&:not(.${prefix}has-media)`]: {
-            [`@apply ps-4`]: {},
           },
         },
       })

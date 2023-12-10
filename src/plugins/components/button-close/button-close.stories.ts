@@ -10,6 +10,11 @@ const meta = {
   // tags: ['autodocs'],
   render: (args) => ButtonClose(args),
   argTypes: {
+    size: {
+      control: { type: 'select' },
+      options: ['xs', 'sm', 'md', 'lg'],
+      defaultValue: 'md',
+    },
     color: {
       control: { type: 'select' },
       options: [
@@ -45,6 +50,44 @@ export const Main: Story = {
     // set default values used for UI preview
     color: 'muted',
     rounded: 'full',
+  },
+}
+// #endregion
+
+// #region Sizes
+export const SizeXs: Story = {
+  name: 'Size: xs',
+  args: {
+    color: 'muted',
+    size: 'xs',
+    rounded: 'md',
+  },
+}
+
+export const SizeSm: Story = {
+  name: 'Size: sm',
+  args: {
+    color: 'muted',
+    size: 'sm',
+    rounded: 'md',
+  },
+}
+
+export const SizeMd: Story = {
+  name: 'Size: md',
+  args: {
+    color: 'muted',
+    size: 'md',
+    rounded: 'md',
+  },
+}
+
+export const SizeLg: Story = {
+  name: 'Size: lg',
+  args: {
+    color: 'muted',
+    size: 'lg',
+    rounded: 'md',
   },
 }
 // #endregion

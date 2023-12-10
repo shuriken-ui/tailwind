@@ -10,6 +10,7 @@ import * as variants from './button-close.variants'
 export const ButtonClose = ({
   rounded,
   color = 'default',
+  size = 'sm',
   classes,
   onClick,
   ...attrs
@@ -19,6 +20,7 @@ export const ButtonClose = ({
       class=${[
         'nui-button-close',
         variants.color[color],
+        variants.size[size],
         rounded && variants.rounded[rounded],
         classes?.wrapper,
       ]

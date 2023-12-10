@@ -24,15 +24,39 @@ export const defaultConfig = {
   },
   font: {
     family: 'sans',
-    size: 'sm',
     color: {
       light: 'muted-600',
       dark: 'muted-300',
     },
   },
   size: {
+    xs: {
+      size: '6',
+      font: {
+        size: 'xs',
+      },
+      icon: {
+        outer: {
+          size: '6',
+        },
+        inner: {
+          size: '3',
+        },
+      },
+      image: {
+        outer: {
+          size: '6',
+        },
+        inner: {
+          size: '6',
+        },
+      },
+    },
     sm: {
       size: '8',
+      font: {
+        size: 'sm',
+      },
       icon: {
         outer: {
           size: '8',
@@ -52,6 +76,9 @@ export const defaultConfig = {
     },
     md: {
       size: '10',
+      font: {
+        size: 'sm',
+      },
       icon: {
         outer: {
           size: '10',

@@ -22,15 +22,44 @@ export default plugin.withOptions(
         [`.${prefix}button-close`]: {
           [`@apply ${prefix}focus flex items-center justify-center disabled:opacity-30 cursor-pointer`]:
             {},
-          //Size
-          [`@apply h-${config.size} w-${config.size}`]: {},
           //Transition
           [`@apply transition-${config.transition.property} duration-${config.transition.duration}`]:
             {},
-          //Icon
-          [`.${prefix}button-icon`]: {
-            [`@apply h-${config.icon.size} w-${config.icon.size} fill-current`]:
-              {},
+          //Size:xs
+          [`&.${prefix}button-xs`]: {
+            [`@apply h-${config.size.xs.outer} w-${config.size.xs.outer}`]: {},
+            //Icon
+            [`.${prefix}button-icon`]: {
+              [`@apply h-${config.size.xs.inner} w-${config.size.xs.inner} fill-current`]:
+                {},
+            },
+          },
+          //Size:sm
+          [`&.${prefix}button-sm`]: {
+            [`@apply h-${config.size.sm.outer} w-${config.size.sm.outer}`]: {},
+            //Icon
+            [`.${prefix}button-icon`]: {
+              [`@apply h-${config.size.sm.inner} w-${config.size.sm.inner} fill-current`]:
+                {},
+            },
+          },
+          //Size:md
+          [`&.${prefix}button-md`]: {
+            [`@apply h-${config.size.md.outer} w-${config.size.md.outer}`]: {},
+            //Icon
+            [`.${prefix}button-icon`]: {
+              [`@apply h-${config.size.md.inner} w-${config.size.md.inner} fill-current`]:
+                {},
+            },
+          },
+          //Size:lg
+          [`&.${prefix}button-lg`]: {
+            [`@apply h-${config.size.lg.outer} w-${config.size.lg.outer}`]: {},
+            //Icon
+            [`.${prefix}button-icon`]: {
+              [`@apply h-${config.size.lg.inner} w-${config.size.lg.inner} fill-current`]:
+                {},
+            },
           },
           //Rounded:sm
           [`&.${prefix}button-rounded`]: {

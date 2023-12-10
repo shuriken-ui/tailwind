@@ -1,7 +1,24 @@
 export const key = 'buttonClose' as const
 
 export const defaultConfig = {
-  size: '9',
+  size: {
+    xs: {
+      outer: '6',
+      inner: '3',
+    },
+    sm: {
+      outer: '8',
+      inner: '4',
+    },
+    md: {
+      outer: '10',
+      inner: '4',
+    },
+    lg: {
+      outer: '12',
+      inner: '5',
+    },
+  },
   rounded: {
     none: 'rounded-none',
     sm: 'rounded',
@@ -136,9 +153,6 @@ export const defaultConfig = {
         },
       },
     },
-  },
-  icon: {
-    size: '4',
   },
   transition: {
     property: 'colors',
