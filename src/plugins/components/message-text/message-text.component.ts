@@ -36,8 +36,8 @@ export const MessageText = ({
         <span class="nui-message-dot"></span>
         ${Heading({
           as: 'h5',
-          size: 'sm',
-          weight: 'semibold',
+          size: 'md',
+          weight: 'medium',
           lead: 'none',
           classes: {
             wrapper: 'text-muted-800 dark:text-muted-50',

@@ -24,7 +24,7 @@ export default plugin.withOptions(
           [`@apply relative p-${config.padding}`]: {},
           //Message:header
           [`.${prefix}message-head`]: {
-            [`@apply flex items-center gap-${config.header.gap} mb-2`]: {},
+            [`@apply flex items-center gap-${config.header.gap} mb-3`]: {},
           },
           //Message:dot
           [`.${prefix}message-dot`]: {

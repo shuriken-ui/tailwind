@@ -69,7 +69,6 @@ export const Straight: Story = {
     rounded: 'none',
     title: 'Message title',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec dicuntur inconstantissime. Quamquam te quidem video minime esse deterritum.',
-    style: 'max-width: 440px;',
   },
 }
 

@@ -18,92 +18,34 @@ Text messages allow you to display important information users should see.
 
 <br />
 
-### Rounded: none
+### Rounded
 
-Messages can have different shapes. The following example shows the straight shape.
+Messages can have different shapes. The following example shows the available shapes.
 
 <div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageTextStories.Straight} />
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+    <Story of={MessageTextStories.Straight} />
+    <Story of={MessageTextStories.Rounded} />
+    <Story of={MessageTextStories.Smooth} />
+    <Story of={MessageTextStories.Curved} />
+  </div>
 </div>
 
 <br />
 
-### Rounded: sm
+### Colors
 
-Messages can have different shapes. The following example shows the rounded shape.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageTextStories.Rounded} />
-</div>
-
-<br />
-
-### Rounded: md
-
-Messages can have different shapes. The following example shows the smooth shape.
+Messages can have different colors. The following example shows the available colors.
 
 <div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageTextStories.Smooth} />
-</div>
-
-<br />
-
-### Rounded: lg
-
-Messages can have different shapes. The following example shows the curved shape.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageTextStories.Curved} />
-</div>
-
-<br />
-
-### Color: primary
-
-Messages can have different colors. The following example shows the primary color.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageTextStories.Curved} />
-</div>
-
-<br />
-
-### Color: info
-
-Messages can have different colors. The following example shows the info color.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageTextStories.Info} />
-</div>
-
-<br />
-
-### Color: success
-
-Messages can have different colors. The following example shows the success color.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageTextStories.Success} />
-</div>
-
-<br />
-
-### Color: warning
-
-Messages can have different colors. The following example shows the warning color.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageTextStories.Warning} />
-</div>
-
-<br />
-
-### Color: danger
-
-Messages can have different colors. The following example shows the danger color.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageTextStories.Danger} />
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+    <Story of={MessageTextStories.Smooth} />
+    <Story of={MessageTextStories.Primary} />
+    <Story of={MessageTextStories.Info} />
+    <Story of={MessageTextStories.Success} />
+    <Story of={MessageTextStories.Warning} />
+    <Story of={MessageTextStories.Danger} />
+  </div>
 </div>
 
 <br />
