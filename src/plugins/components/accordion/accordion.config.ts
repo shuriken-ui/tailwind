@@ -13,14 +13,22 @@ export const defaultConfig = {
       light: 'white',
       dark: 'muted-800',
     },
+    hover: {
+      light: 'muted-50/60',
+      dark: 'muted-800/60',
+    },
     border: {
-      light: 'muted-200',
+      light: 'muted-300',
       dark: 'muted-700',
+    },
+    transition: {
+      property: 'colors',
+      duration: '300',
     },
   },
   inner: {
     border: {
-      light: 'muted-200',
+      light: 'muted-300',
       dark: 'muted-700',
     },
   },
@@ -42,8 +50,8 @@ export const defaultConfig = {
       },
     },
     padding: {
-      x: '5',
-      y: '5',
+      x: '4',
+      y: '4',
     },
   },
   icon: {

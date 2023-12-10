@@ -16,13 +16,23 @@ export default plugin.withOptions(
       addComponents({
         //Accordion:wrapper
         [`.${prefix}accordion`]: {
+          //Remove bottom borders
+          [`&:not(:last-child)`]: {
+            [`@apply border-b-0`]: {},
+          },
           //Base
           [`@apply w-${config.wrapper.width} block overflow-hidden`]: {},
           //Background
           [`@apply bg-${config.wrapper.background.light} dark:bg-${config.wrapper.background.dark}`]:
             {},
+          //Hover
+          [`@apply hover:bg-${config.wrapper.hover.light} dark:hover:bg-${config.wrapper.hover.dark}`]:
+            {},
           //Border
           [`@apply border border-${config.wrapper.border.light} dark:border-${config.wrapper.border.dark}`]:
+            {},
+          //Transition
+          [`@apply transition-${config.wrapper.transition.property} duration-${config.wrapper.transition.duration}`]:
             {},
           //Accordion:inner
           [`.${prefix}accordion-detail[open]:not(:first-child)`]: {
@@ -102,12 +112,12 @@ export default plugin.withOptions(
           },
           [`&.${prefix}accordion-dot`]: {
             [`.${prefix}accordion-header`]: {
-              [`@apply p-5`]: {},
+              [`@apply p-${config.content.padding.x}`]: {},
             },
           },
           [`&.${prefix}accordion-chevron, &.${prefix}accordion-plus`]: {
             [`.${prefix}accordion-header`]: {
-              [`@apply px-5 py-3`]: {},
+              [`@apply px-${config.content.padding.x} py-3`]: {},
             },
           },
           [`&.${prefix}accordion-chevron`]: {

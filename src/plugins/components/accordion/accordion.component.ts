@@ -37,7 +37,7 @@ export const Accordion = ({
               <div class="nui-accordion-header">
                 ${Heading({
                   as: 'h4',
-                  weight: 'semibold',
+                  weight: 'medium',
                   size: 'sm',
                   classes: {
                     wrapper: 'nui-accordion-header-inner',
