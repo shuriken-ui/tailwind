@@ -49,39 +49,13 @@ export const Snack = ({
       <span class="nui-snack-text">
         <slot>${label}</slot>
       </span>
-      ${size === 'xs'
-        ? html`
-            ${ButtonClose({
-              rounded: 'full',
-              size: 'xs',
-              classes: {
-                wrapper: 'nui-snack-button scale-75',
-              },
-            })}
-          `
-        : ''}
-      ${size === 'sm'
-        ? html`
-            ${ButtonClose({
-              rounded: 'full',
-              size: 'sm',
-              classes: {
-                wrapper: 'nui-snack-button scale-75',
-              },
-            })}
-          `
-        : ''}
-      ${size === 'md'
-        ? html`
-            ${ButtonClose({
-              rounded: 'full',
-              size: 'md',
-              classes: {
-                wrapper: 'nui-snack-button scale-75',
-              },
-            })}
-          `
-        : ''}
+      ${ButtonClose({
+        rounded: 'full',
+        size,
+        classes: {
+          wrapper: 'nui-snack-button scale-75',
+        },
+      })}
     </div>
   `
 }
