@@ -1,7 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defu } from 'defu'
 import { type PluginOption, defaultPluginOptions } from '../../options'
-import { type KbdPluginConfig, defaultConfig, key } from './kbd.config'
+import { type KbdConfig, defaultConfig, key } from './kbd.config'
 
 export default plugin.withOptions(
   function (options: PluginOption) {
@@ -12,7 +12,7 @@ export default plugin.withOptions(
     }
 
     return function ({ addComponents, theme }) {
-      const config = theme(`shurikenUi.${key}`) satisfies KbdPluginConfig
+      const config = theme(`shurikenUi.${key}`) satisfies KbdConfig
 
       addComponents({
         [`.${prefix}kbd`]: {

@@ -22,6 +22,7 @@ import type { InputPluginConfig } from './plugins/components/input/input.config'
 import type { InputFilePluginConfig } from './plugins/components/input-file/input-file.config'
 import type { InputFileRegularPluginConfig } from './plugins/components/input-file-regular/input-file-regular.config'
 import type { InputNumberPluginConfig } from './plugins/components/input-number/input-number.config'
+import type { KbdPluginConfig } from './plugins/components/kbd/kbd.config'
 import type { LabelPluginConfig } from './plugins/components/label/label.config'
 import type { LinkPluginConfig } from './plugins/components/link/link.config'
 import type { ListPluginConfig } from './plugins/components/list/list.config'
@@ -83,6 +84,7 @@ type ShurikenUIPlugins = AccordionPluginConfig &
   InputFilePluginConfig &
   InputFileRegularPluginConfig &
   InputNumberPluginConfig &
+  KbdPluginConfig &
   LabelPluginConfig &
   LinkPluginConfig &
   ListPluginConfig &
