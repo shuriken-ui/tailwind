@@ -8,8 +8,10 @@ export default withShurikenUI({
     './src/**/*.doc.mdx',
   ],
   theme: {
-    fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
     },
   },
 })
