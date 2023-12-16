@@ -1,22 +1,25 @@
 export const key = 'prose' as const
 
 export const defaultConfig = {
-  color: 'muted',
-  dark: 'invert',
-  space: '4',
-  bgTable: 'white',
-  bgTableDark: 'muted-800',
-  borderTable: 'muted-200',
-  borderTableDark: 'muted-700',
-  rounded: {
-    size: 'md',
-    tdBorder: 'muted-200',
-    tdBorderDark: 'muted-700',
+  color: {
+    light: 'muted',
+    dark: 'invert',
   },
-  curved: {
-    size: 'xl',
-    tdBorder: 'muted-200',
-    tdBorderDark: 'muted-700',
+  padding: '4',
+  table: {
+    background: {
+      light: 'white',
+      dark: 'muted-800',
+    },
+    border: {
+      light: 'muted-200',
+      dark: 'muted-700',
+    },
+  },
+  rounded: {
+    sm: 'rounded',
+    md: 'rounded-md',
+    lg: 'rounded-lg',
   },
 }
 

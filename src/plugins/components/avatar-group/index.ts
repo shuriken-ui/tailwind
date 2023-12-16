@@ -17,31 +17,64 @@ export default plugin.withOptions(
       addComponents({
         [`.${prefix}avatar-group`]: {
           [`@apply flex`]: {},
-
+          //AvatarGroup:outer
           [`.${prefix}avatar-outer`]: {
-            [`@apply dark:bg-${config.avatarOuter.bgDark} relative flex shrink-0 items-center justify-center rounded-${config.avatarOuter.rounded} bg-${config.avatarOuter.bg} transition-all duration-${config.avatarOuter.duration} ease-in`]:
+            //Base
+            [`@apply relative flex shrink-0 items-center justify-center rounded-${config.avatar.rounded}`]:
               {},
+            //Background
+            [`@apply bg-${config.avatar.outer.background.light} dark:bg-${config.avatar.outer.background.dark}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.avatar.transition.property} duration-${config.avatar.transition.duration} ease-in`]:
+              {},
+            //AvatarGroup:inner
             [`.${prefix}avatar`]: {
-              [`@apply bg-${config.avatarOuter.avatar.bg} text-${config.avatarOuter.avatar.text} !scale-90`]:
+              [`@apply bg-${config.avatar.inner.background.light} text-${config.avatar.inner.background.dark} !scale-90`]:
                 {},
             },
           },
+          //AvatarGroup:count
           [`.${prefix}avatar-count`]: {
-            [`@apply relative dark:bg-${config.avatarCount.bgDark} shrink-0 rounded-${config.avatarCount.rounded} bg-${config.avatarCount.bg} transition-all duration-${config.avatarCount.duration} ease-in`]:
+            //Base
+            [`@apply relative shrink-0 rounded-${config.count.outer.rounded}`]:
               {},
-
+            //Background
+            [`@apply bg-${config.count.outer.background.light} dark:bg-${config.count.outer.background.dark}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.count.transition.property} duration-${config.count.transition.duration} ease-in`]:
+              {},
+            //Count:inner
             [`.${prefix}avatar-count-inner`]: {
-              [`@apply bg-${config.avatarCount.inner.bg} dark:border-${config.avatarCount.inner.borderDark} dark:bg-${config.avatarCount.inner.bgDark} relative inline-flex h-${config.avatarCount.inner.size} w-${config.avatarCount.inner.size} scale-90 items-center justify-center rounded-${config.avatarCount.inner.rounded} border-${config.avatarCount.inner.border}`]:
+              [`@apply relative scale-90 inline-flex items-center justify-center rounded-${config.count.inner.rounded}`]:
+                {},
+              //Size
+              [`@apply h-${config.count.inner.size} w-${config.count.inner.size}`]:
+                {},
+              //Background
+              [`@apply bg-${config.count.inner.background.light} dark:bg-${config.count.inner.background.dark}`]:
+                {},
+              //Border
+              [`@apply border border-${config.count.inner.border.light} dark:border-${config.count.inner.border.dark}`]:
                 {},
             },
+            //Count:text
             [`.${prefix}avatar-count-text`]: {
-              [`@apply text-${config.avatarCount.text.text} dark:text-${config.avatarCount.text.textDark} -ms-1 font-sans font-${config.avatarCount.text.font} uppercase`]:
+              [`@apply -ms-1 uppercase`]: {},
+              //Font
+              [`@apply font-${config.count.text.font.family} font-${config.count.text.font.weight}`]:
+                {},
+              //Font Color
+              [`@apply text-${config.count.text.font.color.light} dark:text-${config.count.text.font.color.dark}`]:
                 {},
             },
           },
+          //Size:xxs
           [`&.${prefix}avatar-group-xxs`]: {
+            //outer
             [`.${prefix}avatar-outer`]: {
-              [`@apply h-${config.avatarGroupXXS.outer.size} w-${config.avatarGroupXXS.outer.size}`]:
+              [`@apply h-${config.size.xxs.outer.size} w-${config.size.xxs.outer.size}`]:
                 {},
 
               [`&:first-child`]: {
@@ -52,18 +85,21 @@ export default plugin.withOptions(
                   {},
               },
             },
+            //count
             [`.${prefix}avatar-count`]: {
-              [`@apply -ms-2 h-${config.avatarGroupXXS.count.size} w-${config.avatarGroupXXS.count.size}`]:
+              [`@apply -ms-2 h-${config.size.xxs.count.size} w-${config.size.xxs.count.size}`]:
                 {},
 
               [`.${prefix}avatar-count-text`]: {
-                [`@apply text-${config.avatarGroupXXS.count.text}`]: {},
+                [`@apply text-${config.size.xxs.count.font.size}`]: {},
               },
             },
           },
+          //Size:xs
           [`&.${prefix}avatar-group-xs`]: {
+            //outer
             [`.${prefix}avatar-outer`]: {
-              [`@apply h-${config.avatarGroupXS.outer.size} w-${config.avatarGroupXS.outer.size}`]:
+              [`@apply h-${config.size.xs.outer.size} w-${config.size.xs.outer.size}`]:
                 {},
 
               [`&:first-child`]: {
@@ -74,18 +110,21 @@ export default plugin.withOptions(
                   {},
               },
             },
+            //count
             [`.${prefix}avatar-count`]: {
-              [`@apply -ms-2 h-${config.avatarGroupXS.count.size} w-${config.avatarGroupXS.count.size}`]:
+              [`@apply -ms-2 h-${config.size.xs.count.size} w-${config.size.xs.count.size}`]:
                 {},
 
               [`.${prefix}avatar-count-text`]: {
-                [`@apply text-${config.avatarGroupXS.count.text}`]: {},
+                [`@apply text-${config.size.xs.count.font.size}`]: {},
               },
             },
           },
+          //Size:sm
           [`&.${prefix}avatar-group-sm`]: {
+            //outer
             [`.${prefix}avatar-outer`]: {
-              [`@apply h-${config.avatarGroupSM.outer.size} w-${config.avatarGroupSM.outer.size}`]:
+              [`@apply h-${config.size.sm.outer.size} w-${config.size.sm.outer.size}`]:
                 {},
 
               [`&:first-child`]: {
@@ -96,18 +135,21 @@ export default plugin.withOptions(
                   {},
               },
             },
+            //count
             [`.${prefix}avatar-count`]: {
-              [`@apply -ms-3 h-${config.avatarGroupSM.count.size} w-${config.avatarGroupSM.count.size}`]:
+              [`@apply -ms-3 h-${config.size.sm.count.size} w-${config.size.sm.count.size}`]:
                 {},
 
               [`.${prefix}avatar-count-text`]: {
-                [`@apply text-${config.avatarGroupSM.count.text}`]: {},
+                [`@apply text-${config.size.sm.count.font.size}`]: {},
               },
             },
           },
+          //Size:md
           [`&.${prefix}avatar-group-md`]: {
+            //outer
             [`.${prefix}avatar-outer`]: {
-              [`@apply h-${config.avatarGroupMD.outer.size} w-${config.avatarGroupMD.outer.size}`]:
+              [`@apply h-${config.size.md.outer.size} w-${config.size.md.outer.size}`]:
                 {},
 
               [`&:first-child`]: {
@@ -117,18 +159,20 @@ export default plugin.withOptions(
                 [`@apply -ms-4 hover:-ms-7 hover:me-3 focus:me-3`]: {},
               },
             },
+            //count
             [`.${prefix}avatar-count`]: {
-              [`@apply -ms-4 h-${config.avatarGroupMD.count.size} w-${config.avatarGroupMD.count.size}`]:
+              [`@apply -ms-4 h-${config.size.md.count.size} w-${config.size.md.count.size}`]:
                 {},
 
               [`.${prefix}avatar-count-text`]: {
-                [`@apply text-${config.avatarGroupMD.count.text}`]: {},
+                [`@apply text-${config.size.md.count.font.size}`]: {},
               },
             },
           },
+          //Size:lg
           [`&.${prefix}avatar-group-lg`]: {
             [`.${prefix}avatar-outer`]: {
-              [`@apply h-${config.avatarGroupLG.outer.size} w-${config.avatarGroupLG.outer.size}`]:
+              [`@apply h-${config.size.lg.outer.size} w-${config.size.lg.outer.size}`]:
                 {},
 
               [`&:first-child`]: {
@@ -140,11 +184,11 @@ export default plugin.withOptions(
               },
             },
             [`.${prefix}avatar-count`]: {
-              [`@apply -ms-5 h-${config.avatarGroupLG.count.size} w-${config.avatarGroupLG.count.size}`]:
+              [`@apply -ms-5 h-${config.size.lg.count.size} w-${config.size.lg.count.size}`]:
                 {},
 
               [`.${prefix}avatar-count-text`]: {
-                [`@apply text-${config.avatarGroupLG.count.text}`]: {},
+                [`@apply text-${config.size.lg.count.font.size}`]: {},
               },
             },
           },

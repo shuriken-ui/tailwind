@@ -10,7 +10,7 @@ import * as variants from './button-icon.variants'
 export const ButtonIcon = ({
   size = 'md',
   loading,
-  shape = 'rounded',
+  rounded = 'sm',
   children,
   color = 'default',
   classes,
@@ -24,7 +24,7 @@ export const ButtonIcon = ({
         variants.size[size],
         variants.color[color],
         loading && 'nui-button-loading',
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         classes?.wrapper,
       ]
         .filter(Boolean)

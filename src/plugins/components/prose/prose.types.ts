@@ -1,7 +1,7 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface ProseProps extends Record<string, unknown> {
-  shape?: 'straight' | 'rounded' | 'curved'
+  rounded?: 'none' | 'sm' | 'md' | 'lg'
   classes?: {
     wrapper?: string | string[]
   }

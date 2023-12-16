@@ -19,30 +19,47 @@ export default plugin.withOptions(
       const config = theme(`shurikenUi.${key}`) satisfies InputFileRegularConfig
 
       addComponents({
+        //Wrapper
         [`.${prefix}input-file-regular`]: {
           [`@apply relative w-full`]: {},
-
+          //Input:label
           [`.${prefix}input-file-label`]: {
             [`@apply ${prefix}label w-full`]: {},
           },
+          //Input:outer
           [`.${prefix}input-file-outer`]: {
             [`@apply relative`]: {},
           },
+          //Input:inner
           [`.${prefix}input-file-inner`]: {
-            [`@apply relative ${prefix}focus flex w-${config.inner.size} cursor-pointer items-center overflow-hidden font-${config.inner.font} transition-colors duration-${config.inner.duration} disabled:cursor-not-allowed disabled:opacity-75`]:
+            [`@apply relative ${prefix}focus w-${config.inner.width} flex cursor-pointer items-center overflow-hidden disabled:cursor-not-allowed disabled:opacity-75`]:
+              {},
+            //Font
+            [`@apply font-${config.inner.font.family}`]: {},
+            //Transition
+            [`@apply transition-${config.inner.transition.property} duration-${config.inner.transition.duration}`]:
               {},
           },
+          //Input:addon
           [`.${prefix}input-file-addon`]: {
             [`@apply pointer-events-none flex shrink-0 items-center justify-center gap-1 transition-colors duration-100`]:
               {},
           },
+          //Input:placeholder
           [`.${prefix}input-file-placeholder`]: {
-            [`@apply font-${config.placeholder.font} text-${config.placeholder.textSize} text-${config.placeholder.text}`]:
+            //Base
+            [`@apply font-${config.placeholder.font.family} text-${config.placeholder.font.size}`]:
+              {},
+            //Color
+            [`@apply text-${config.placeholder.font.color.light} dark:text-${config.placeholder.font.color.dark}`]:
               {},
           },
+          //Input:text
           [`.${prefix}input-file-text`]: {
-            [`@apply ms-2 inline-flex truncate text-${config.text.text}`]: {},
+            [`@apply ms-2 inline-flex truncate text-${config.font.color.light} dark:text-${config.font.color.dark}`]:
+              {},
           },
+          //Input:placeload
           [`.${prefix}input-file-placeload`]: {
             [`@apply absolute -end-8 flex w-[70%] items-center`]: {},
 
@@ -50,67 +67,121 @@ export default plugin.withOptions(
               [`@apply h-3 w-full max-w-[75%] rounded`]: {},
             },
           },
+          //Input:error
           [`.${prefix}input-file-error-text`]: {
-            [`@apply text-${config.error.text} mt-1 block font-${config.error.font} text-${config.error.textSize} font-${config.error.fontWeight} leading-none`]:
+            //Base
+            [`@apply mt-1 block font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight} leading-none`]:
+              {},
+            //Color
+            [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
               {},
           },
+          //Color:white
           [`&.${prefix}input-white`]: {
+            //Input:inner
             [`.${prefix}input-file-inner`]: {
-              [`@apply border bg-${config.white.inner.bg} border-${config.white.inner.border} text-${config.white.inner.text} placeholder:text-${config.white.inner.textPlaceholder} dark:border-${config.white.inner.borderDark} dark:bg-${config.white.inner.bgDark} dark:text-${config.white.inner.textDark} dark:placeholder:text-${config.white.inner.textPlaceholderDark}`]:
+              //Base
+              [`@apply text-${config.color.white.inner.font.color.light} dark:text-${config.color.white.inner.font.color.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.color.white.inner.background.light} dark:bg-${config.color.white.inner.background.dark}`]:
+                {},
+              //Border
+              [`@apply border border-${config.color.white.inner.border.light} dark:border-${config.color.white.inner.border.dark}`]:
+                {},
+              //Placeholder
+              [`@apply placeholder:text-${config.color.white.inner.placeholder.light} dark:placeholder:text-${config.color.white.inner.placeholder.dark}`]:
                 {},
             },
+            //Input:addon
             [`.${prefix}input-file-addon`]: {
-              [`@apply bg-${config.white.addon.bg} border-${config.white.addon.border} dark:border-${config.white.addon.borderDark} dark:bg-${config.white.addon.bgDark} text-${config.white.addon.text} border-e`]:
+              //Background
+              [`@apply bg-${config.color.white.addon.background.light} dark:bg-${config.color.white.addon.background.dark}`]:
+                {},
+              //Color
+              [`@apply text-${config.color.white.addon.font.color.light} dark:text-${config.color.white.addon.font.color.dark}`]:
+                {},
+              //Border
+              [`@apply border-e border border-${config.color.white.addon.border.light} dark:border-${config.color.white.addon.border.dark}`]:
                 {},
             },
           },
           [`&.${prefix}input-white-contrast`]: {
+            //Input:inner
             [`.${prefix}input-file-inner`]: {
-              [`@apply border bg-${config.whiteContrast.inner.bg} border-${config.whiteContrast.inner.border} text-${config.whiteContrast.inner.text} placeholder:text-${config.whiteContrast.inner.textPlaceholder} dark:border-${config.whiteContrast.inner.borderDark} dark:bg-${config.whiteContrast.inner.bgDark} dark:text-${config.whiteContrast.inner.textDark} dark:placeholder:text-${config.whiteContrast.inner.textPlaceholderDark}`]:
+              //Base
+              [`@apply text-${config.color.whiteContrast.inner.font.color.light} dark:text-${config.color.whiteContrast.inner.font.color.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.color.whiteContrast.inner.background.light} dark:bg-${config.color.whiteContrast.inner.background.dark}`]:
+                {},
+              //Border
+              [`@apply border border-${config.color.whiteContrast.inner.border.light} dark:border-${config.color.whiteContrast.inner.border.dark}`]:
+                {},
+              //Placeholder
+              [`@apply placeholder:text-${config.color.whiteContrast.inner.placeholder.light} dark:placeholder:text-${config.color.whiteContrast.inner.placeholder.dark}`]:
                 {},
             },
+            //Input:addon
             [`.${prefix}input-file-addon`]: {
-              [`@apply bg-${config.whiteContrast.addon.bg} border-${config.whiteContrast.addon.border} dark:border-${config.whiteContrast.addon.borderDark} dark:bg-${config.whiteContrast.addon.bgDark} text-${config.whiteContrast.addon.text} border-e`]:
+              //Background
+              [`@apply bg-${config.color.whiteContrast.addon.background.light} dark:bg-${config.color.whiteContrast.addon.background.dark}`]:
+                {},
+              //Color
+              [`@apply text-${config.color.whiteContrast.addon.font.color.light} dark:text-${config.color.whiteContrast.addon.font.color.dark}`]:
+                {},
+              //Border
+              [`@apply border-e border border-${config.color.whiteContrast.addon.border.light} dark:border-${config.color.whiteContrast.addon.border.dark}`]:
                 {},
             },
           },
+          //Input:focus
           [`&.${prefix}input-color-focus`]: {
             [`.${prefix}input-file-inner`]: {
-              [`@apply focus-within:!border-${config.colorFocus}`]: {},
+              [`@apply focus-within:!border-${config.focus.border.light} dark:focus-within:!border-${config.focus.border.dark}`]:
+                {},
             },
           },
+          //Input:loading
           [`&.${prefix}input-file-loading`]: {
             [`.${prefix}input-file-inner`]: {
               [`@apply text-transparent placeholder:text-transparent`]: {},
             },
           },
+          //Error:input
           [`&.${prefix}input-file-error`]: {
             [`.${prefix}input-file-inner`]: {
-              [`@apply border-${config.error.border}`]: {},
+              [`@apply border-${config.error.border.light} dark:border-${config.error.border.dark}`]:
+                {},
             },
           },
+          //Rounded:sm
           [`&.${prefix}input-rounded`]: {
             [`.${prefix}input-file-inner`]: {
-              [`@apply rounded-${config.rounded.default}`]: {},
+              [`@apply ${config.rounded.sm}`]: {},
             },
           },
+          //Rounded:md
           [`&.${prefix}input-smooth`]: {
             [`.${prefix}input-file-inner`]: {
-              [`@apply rounded-${config.rounded.smooth}`]: {},
+              [`@apply ${config.rounded.md}`]: {},
             },
           },
+          //Rounded:lg
           [`&.${prefix}input-curved`]: {
             [`.${prefix}input-file-inner`]: {
-              [`@apply rounded-${config.rounded.curved}`]: {},
+              [`@apply ${config.rounded.lg}`]: {},
             },
           },
+          //Rounded:full
           [`&.${prefix}input-full`]: {
             [`.${prefix}input-file-inner`]: {
-              [`@apply rounded-${config.rounded.full}`]: {},
+              [`@apply ${config.rounded.full}`]: {},
             },
           },
+          //Without icon && Size:sm
           [`&.${prefix}input-sm:not(.${prefix}has-icon)`]: {
-            [`@apply text-${config.hasNotIcon.sm} leading-4`]: {},
+            [`@apply text-${config.icon.disabled.sm.font.size} leading-4`]: {},
             [`.${prefix}input-file-inner`]: {
               [`@apply h-8 py-2 gap-1`]: {},
             },
@@ -121,8 +192,9 @@ export default plugin.withOptions(
               [`@apply top-2.5`]: {},
             },
           },
+          //With icon && Size:sm
           [`&.${prefix}input-sm.${prefix}has-icon`]: {
-            [`@apply text-${config.hasIcon.sm.text} leading-4`]: {},
+            [`@apply text-${config.icon.enabled.sm.font.size} leading-4`]: {},
             [`.${prefix}input-file-inner`]: {
               [`@apply h-8 py-2 pe-3`]: {},
             },
@@ -130,15 +202,16 @@ export default plugin.withOptions(
               [`@apply h-8 px-2`]: {},
             },
             [`.${prefix}input-file-icon`]: {
-              [`@apply w-${config.hasIcon.sm.iconSize} h-${config.hasIcon.sm.iconSize}`]:
+              [`@apply w-${config.icon.enabled.sm.icon.size} h-${config.icon.enabled.sm.icon.size}`]:
                 {},
             },
             [`.${prefix}input-file-placeload`]: {
               [`@apply top-2.5`]: {},
             },
           },
+          //Without icon && Size:md
           [`&.${prefix}input-md:not(.${prefix}has-icon)`]: {
-            [`@apply text-${config.hasNotIcon.md} leading-5`]: {},
+            [`@apply text-${config.icon.disabled.md.font.size} leading-5`]: {},
             [`.${prefix}input-file-inner`]: {
               [`@apply h-10 gap-2`]: {},
             },
@@ -149,8 +222,9 @@ export default plugin.withOptions(
               [`@apply top-3.5`]: {},
             },
           },
+          //With icon && Size:md
           [`&.${prefix}input-md.${prefix}has-icon`]: {
-            [`@apply text-${config.hasIcon.md.text} leading-5`]: {},
+            [`@apply text-${config.icon.enabled.md.font.size} leading-5`]: {},
             [`.${prefix}input-file-inner`]: {
               [`@apply h-10 pe-4`]: {},
             },
@@ -158,15 +232,16 @@ export default plugin.withOptions(
               [`@apply h-10 px-3`]: {},
             },
             [`.${prefix}input-file-icon`]: {
-              [`@apply w-${config.hasIcon.md.iconSize} h-${config.hasIcon.md.iconSize}`]:
+              [`@apply w-${config.icon.enabled.md.icon.size} h-${config.icon.enabled.md.icon.size}`]:
                 {},
             },
             [`.${prefix}input-file-placeload`]: {
               [`@apply top-3.5`]: {},
             },
           },
+          //Without icon && Size:lg
           [`&.${prefix}input-lg:not(.${prefix}has-icon)`]: {
-            [`@apply text-${config.hasNotIcon.lg} leading-5`]: {},
+            [`@apply text-${config.icon.disabled.lg.font.size} leading-5`]: {},
             [`.${prefix}input-file-inner`]: {
               [`@apply h-12 gap-2`]: {},
             },
@@ -177,8 +252,9 @@ export default plugin.withOptions(
               [`@apply top-[1.2rem]`]: {},
             },
           },
+          //With icon && Size:lg
           [`&.${prefix}input-lg.${prefix}has-icon`]: {
-            [`@apply text-${config.hasIcon.lg.text} leading-5`]: {},
+            [`@apply text-${config.icon.enabled.lg.font.size} leading-5`]: {},
             [`.${prefix}input-file-inner`]: {
               [`@apply h-12 pe-4`]: {},
             },
@@ -186,26 +262,31 @@ export default plugin.withOptions(
               [`@apply h-12 px-4`]: {},
             },
             [`.${prefix}input-file-icon`]: {
-              [`@apply w-${config.hasIcon.lg.iconSize} h-${config.hasIcon.lg.iconSize}`]:
+              [`@apply w-${config.icon.enabled.lg.icon.size} h-${config.icon.enabled.lg.icon.size}`]:
                 {},
             },
             [`.${prefix}input-file-placeload`]: {
               [`@apply top-[1.2rem]`]: {},
             },
           },
+          //Input:hover
           [`&:hover`]: {
             [`.${prefix}input-file-addon`]: {
-              [`@apply text-${config.hover}`]: {},
+              [`@apply text-${config.hover.font.color.light} dark:text-${config.hover.font.color.dark}`]:
+                {},
             },
           },
+          //Input:disabled
           [`&:disabled`]: {
             [`.${prefix}input-file-addon`]: {
               [`@apply cursor-not-allowed opacity-75`]: {},
             },
           },
+          //Input:focus
           [`&:focus-within`]: {
             [`.${prefix}input-file-addon`]: {
-              [`@apply text-${config.focusWhitin}`]: {},
+              [`@apply text-${config.focus.font.color.light} dark:text-${config.focus.font.color.dark}`]:
+                {},
             },
           },
         },

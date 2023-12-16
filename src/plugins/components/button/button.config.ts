@@ -1,432 +1,794 @@
 export const key = 'button' as const
 
 export const defaultConfig = {
-  duration: '300',
-  font: 'normal',
+  font: {
+    family: 'sans',
+    weight: 'normal',
+  },
+  transition: {
+    property: 'all',
+    duration: '300',
+  },
+  size: {
+    small: {
+      button: {
+        text: 'sm',
+        height: '8',
+        padding: {
+          x: '3',
+          y: '1',
+        },
+      },
+      icon: {
+        size: '3',
+      },
+    },
+    medium: {
+      button: {
+        text: 'sm',
+        height: '10',
+        padding: {
+          x: '5',
+          y: '2',
+        },
+      },
+      icon: {
+        size: '4',
+      },
+    },
+    large: {
+      button: {
+        text: 'base',
+        height: '12',
+        padding: {
+          x: '6',
+          y: '2',
+        },
+      },
+      icon: {
+        size: '5',
+      },
+    },
+    xlarge: {
+      button: {
+        text: 'base',
+        height: '14',
+        padding: {
+          x: '10',
+          y: '4',
+        },
+      },
+      icon: {
+        size: '5',
+      },
+    },
+  },
+  rounded: {
+    none: 'none',
+    small: 'md',
+    medium: 'lg',
+    large: 'xl',
+    full: 'full',
+  },
+  variant: {
+    solid: {
+      default: {
+        text: {
+          light: 'muted-700',
+          dark: 'muted-100',
+        },
+        background: {
+          light: {
+            base: 'white',
+            hover: 'muted-50',
+            active: 'white',
+            focus: 'muted-50',
+          },
+          dark: {
+            base: 'muted-700',
+            hover: 'muted-600',
+            active: 'muted-700',
+            focus: 'muted-600',
+          },
+        },
+        border: {
+          light: {
+            base: 'muted-200',
+            hover: 'muted-300',
+          },
+          dark: {
+            base: 'muted-600',
+            hover: 'muted-500',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/30',
+          dark: 'muted-800/20',
+        },
+      },
+      muted: {
+        text: {
+          light: 'muted-500',
+          dark: 'muted-100',
+        },
+        background: {
+          light: {
+            base: 'muted-200',
+            hover: 'muted-100',
+            active: 'muted-200',
+            focus: 'muted-100',
+          },
+          dark: {
+            base: 'muted-700',
+            hover: 'muted-600',
+            active: 'muted-700',
+            focus: 'muted-600',
+          },
+        },
+        border: {
+          light: {
+            base: 'muted-200',
+            hover: 'muted-100',
+          },
+          dark: {
+            base: 'muted-700',
+            hover: 'muted-600',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/30',
+          dark: 'muted-800/20',
+        },
+      },
+      light: {
+        text: {
+          light: 'muted-500',
+          dark: 'muted-100',
+        },
+        background: {
+          light: {
+            base: 'muted-200',
+            hover: 'muted-100',
+            active: 'muted-200',
+            focus: 'muted-100',
+          },
+          dark: {
+            base: 'muted-700',
+            hover: 'muted-600',
+            active: 'muted-700',
+            focus: 'muted-600',
+          },
+        },
+        border: {
+          light: {
+            base: 'muted-200',
+            hover: 'muted-100',
+          },
+          dark: {
+            base: 'muted-700',
+            hover: 'muted-600',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/30',
+          dark: 'muted-800/20',
+        },
+      },
+      primary: {
+        text: {
+          light: 'primary-invert',
+          dark: 'primary-invert',
+        },
+        background: {
+          light: {
+            base: 'primary-500',
+            hover: 'primary-400',
+            active: 'primary-500',
+            focus: 'primary-400',
+          },
+          dark: {
+            base: 'primary-500',
+            hover: 'primary-400',
+            active: 'primary-500',
+            focus: 'primary-400',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'primary-500/50',
+          dark: 'primary-800/50',
+        },
+      },
+      info: {
+        text: {
+          light: 'white',
+          dark: 'white',
+        },
+        background: {
+          light: {
+            base: 'info-500',
+            hover: 'info-400',
+            active: 'info-500',
+            focus: 'info-400',
+          },
+          dark: {
+            base: 'info-500',
+            hover: 'info-400',
+            active: 'info-500',
+            focus: 'info-400',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'info-500/50',
+          dark: 'info-800/50',
+        },
+      },
+      success: {
+        text: {
+          light: 'white',
+          dark: 'white',
+        },
+        background: {
+          light: {
+            base: 'success-500',
+            hover: 'success-400',
+            active: 'success-500',
+            focus: 'success-400',
+          },
+          dark: {
+            base: 'success-500',
+            hover: 'success-400',
+            active: 'success-500',
+            focus: 'success-400',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'success-500/50',
+          dark: 'success-800/50',
+        },
+      },
+      warning: {
+        text: {
+          light: 'white',
+          dark: 'white',
+        },
+        background: {
+          light: {
+            base: 'warning-500',
+            hover: 'warning-400',
+            active: 'warning-500',
+            focus: 'warning-400',
+          },
+          dark: {
+            base: 'warning-500',
+            hover: 'warning-400',
+            active: 'warning-500',
+            focus: 'warning-400',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'warning-500/50',
+          dark: 'warning-800/50',
+        },
+      },
+      danger: {
+        text: {
+          light: 'white',
+          dark: 'white',
+        },
+        background: {
+          light: {
+            base: 'danger-500',
+            hover: 'danger-400',
+            active: 'danger-500',
+            focus: 'danger-400',
+          },
+          dark: {
+            base: 'danger-500',
+            hover: 'danger-400',
+            active: 'danger-500',
+            focus: 'danger-400',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'danger-500/50',
+          dark: 'danger-800/50',
+        },
+      },
+    },
+    pastel: {
+      default: {
+        text: {
+          light: 'muted-800',
+          dark: 'muted-100',
+        },
+        background: {
+          light: {
+            base: 'muted-500/10',
+            hover: 'muted-500/20',
+            active: 'muted-500/10',
+            focus: 'muted-500/20',
+          },
+          dark: {
+            base: 'muted-500/10',
+            hover: 'muted-500/20',
+            active: 'muted-500/10',
+            focus: 'muted-500/20',
+          },
+        },
+      },
+      muted: {
+        text: {
+          light: 'muted-800',
+          dark: 'muted-100',
+        },
+        background: {
+          light: {
+            base: 'muted-500/10',
+            hover: 'muted-500/20',
+            active: 'muted-500/10',
+            focus: 'muted-500/20',
+          },
+          dark: {
+            base: 'muted-500/10',
+            hover: 'muted-500/20',
+            active: 'muted-500/10',
+            focus: 'muted-500/20',
+          },
+        },
+      },
+      light: {
+        text: {
+          light: 'muted-800',
+          dark: 'muted-100',
+        },
+        background: {
+          light: {
+            base: 'white/30',
+            hover: 'white/20',
+            active: 'white/30',
+            focus: 'white/20',
+          },
+          dark: {
+            base: 'white/20',
+            hover: 'white/10',
+            active: 'white/20',
+            focus: 'white/10',
+          },
+        },
+      },
+      primary: {
+        text: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+        background: {
+          light: {
+            base: 'primary-500/10',
+            hover: 'primary-500/20',
+            active: 'primary-500/10',
+            focus: 'primary-500/20',
+          },
+          dark: {
+            base: 'primary-500/10',
+            hover: 'primary-500/20',
+            active: 'primary-500/10',
+            focus: 'primary-500/20',
+          },
+        },
+      },
+      info: {
+        text: {
+          light: 'info-500',
+          dark: 'info-500',
+        },
+        background: {
+          light: {
+            base: 'info-500/10',
+            hover: 'info-500/20',
+            active: 'info-500/10',
+            focus: 'info-500/20',
+          },
+          dark: {
+            base: 'info-500/10',
+            hover: 'info-500/20',
+            active: 'info-500/10',
+            focus: 'info-500/20',
+          },
+        },
+      },
+      success: {
+        text: {
+          light: 'success-500',
+          dark: 'success-500',
+        },
+        background: {
+          light: {
+            base: 'success-500/10',
+            hover: 'success-500/20',
+            active: 'success-500/10',
+            focus: 'success-500/20',
+          },
+          dark: {
+            base: 'success-500/10',
+            hover: 'success-500/20',
+            active: 'success-500/10',
+            focus: 'success-500/20',
+          },
+        },
+      },
+      warning: {
+        text: {
+          light: 'warning-500',
+          dark: 'warning-500',
+        },
+        background: {
+          light: {
+            base: 'warning-500/10',
+            hover: 'warning-500/20',
+            active: 'warning-500/10',
+            focus: 'warning-500/20',
+          },
+          dark: {
+            base: 'warning-500/10',
+            hover: 'warning-500/20',
+            active: 'warning-500/10',
+            focus: 'warning-500/20',
+          },
+        },
+      },
+      danger: {
+        text: {
+          light: 'danger-500',
+          dark: 'danger-500',
+        },
+        background: {
+          light: {
+            base: 'danger-500/10',
+            hover: 'danger-500/20',
+            active: 'danger-500/10',
+            focus: 'danger-500/20',
+          },
+          dark: {
+            base: 'danger-500/10',
+            hover: 'danger-500/20',
+            active: 'danger-500/10',
+            focus: 'danger-500/20',
+          },
+        },
+      },
+    },
+    outline: {
+      default: {
+        text: {
+          light: {
+            base: 'muted-500',
+            hover: 'white',
+            active: 'muted-800',
+            focus: 'white',
+          },
+          dark: {
+            base: 'white',
+            hover: 'muted-800',
+            active: 'muted-800',
+            focus: 'muted-800',
+          },
+        },
+        background: {
+          light: {
+            base: 'transparent',
+            hover: 'muted-500',
+            active: 'muted-400',
+            focus: 'muted-500',
+          },
+          dark: {
+            base: 'transparent',
+            hover: 'muted-800',
+            active: 'muted-700',
+            focus: 'muted-800',
+          },
+        },
+        border: {
+          light: 'muted-500',
+          dark: 'white',
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/50',
+          dark: 'muted-800/20',
+        },
+      },
+      light: {
+        text: {
+          light: {
+            base: 'white',
+            hover: 'muted-800',
+            active: 'muted-800',
+            focus: 'muted-800',
+          },
+          dark: {
+            base: 'white',
+            hover: 'muted-800',
+            active: 'muted-800',
+            focus: 'muted-800',
+          },
+        },
+        background: {
+          light: {
+            base: 'transparent',
+            hover: 'white',
+            active: 'muted-800',
+            focus: 'white',
+          },
+          dark: {
+            base: 'transparent',
+            hover: 'white',
+            active: 'muted-800',
+            focus: 'white',
+          },
+        },
+        border: {
+          light: 'white',
+          dark: 'white',
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/50',
+          dark: 'muted-800/20',
+        },
+      },
+      muted: {
+        text: {
+          light: {
+            base: 'muted-400',
+            hover: 'white',
+            active: 'muted-800',
+            focus: 'white',
+          },
+          dark: {
+            base: 'white',
+            hover: 'muted-800',
+            active: 'muted-800',
+            focus: 'muted-800',
+          },
+        },
+        background: {
+          light: {
+            base: 'transparent',
+            hover: 'white',
+            active: 'muted-400',
+            focus: 'muted-300',
+          },
+          dark: {
+            base: 'transparent',
+            hover: 'white',
+            active: 'white/80',
+            focus: 'white',
+          },
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'white',
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/50',
+          dark: 'muted-800/20',
+        },
+      },
+      primary: {
+        text: {
+          light: {
+            base: 'primary-500',
+            hover: 'white',
+            active: 'white',
+            focus: 'white',
+          },
+          dark: {
+            base: 'primary-500',
+            hover: 'white',
+            active: 'white',
+            focus: 'white',
+          },
+        },
+        background: {
+          light: {
+            base: 'transparent',
+            hover: 'primary-500',
+            active: 'primary-400',
+            focus: 'primary-500',
+          },
+          dark: {
+            base: 'transparent',
+            hover: 'primary-500',
+            active: 'primary-400',
+            focus: 'primary-500',
+          },
+        },
+        border: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+        shadow: {
+          size: 'xl',
+          light: 'primary-500/30',
+          dark: 'primary-800/30',
+        },
+      },
+      info: {
+        text: {
+          light: {
+            base: 'info-500',
+            hover: 'white',
+            active: 'white',
+            focus: 'white',
+          },
+          dark: {
+            base: 'info-500',
+            hover: 'white',
+            active: 'white',
+            focus: 'white',
+          },
+        },
+        background: {
+          light: {
+            base: 'transparent',
+            hover: 'info-500',
+            active: 'info-400',
+            focus: 'info-500',
+          },
+          dark: {
+            base: 'transparent',
+            hover: 'info-500',
+            active: 'info-400',
+            focus: 'info-500',
+          },
+        },
+        border: {
+          light: 'info-500',
+          dark: 'info-500',
+        },
+        shadow: {
+          size: 'xl',
+          light: 'info-500/30',
+          dark: 'info-800/30',
+        },
+      },
+      success: {
+        text: {
+          light: {
+            base: 'success-500',
+            hover: 'white',
+            active: 'white',
+            focus: 'white',
+          },
+          dark: {
+            base: 'success-500',
+            hover: 'white',
+            active: 'white',
+            focus: 'white',
+          },
+        },
+        background: {
+          light: {
+            base: 'transparent',
+            hover: 'success-500',
+            active: 'success-400',
+            focus: 'success-500',
+          },
+          dark: {
+            base: 'transparent',
+            hover: 'success-500',
+            active: 'success-400',
+            focus: 'success-500',
+          },
+        },
+        border: {
+          light: 'success-500',
+          dark: 'success-500',
+        },
+        shadow: {
+          size: 'xl',
+          light: 'success-500/30',
+          dark: 'success-800/30',
+        },
+      },
+      warning: {
+        text: {
+          light: {
+            base: 'warning-500',
+            hover: 'white',
+            active: 'white',
+            focus: 'white',
+          },
+          dark: {
+            base: 'warning-500',
+            hover: 'white',
+            active: 'white',
+            focus: 'white',
+          },
+        },
+        background: {
+          light: {
+            base: 'transparent',
+            hover: 'warning-500',
+            active: 'warning-400',
+            focus: 'warning-500',
+          },
+          dark: {
+            base: 'transparent',
+            hover: 'warning-500',
+            active: 'warning-400',
+            focus: 'warning-500',
+          },
+        },
+        border: {
+          light: 'warning-500',
+          dark: 'warning-500',
+        },
+        shadow: {
+          size: 'xl',
+          light: 'warning-500/30',
+          dark: 'warning-800/30',
+        },
+      },
+      danger: {
+        text: {
+          light: {
+            base: 'danger-500',
+            hover: 'white',
+            active: 'white',
+            focus: 'white',
+          },
+          dark: {
+            base: 'danger-500',
+            hover: 'white',
+            active: 'white',
+            focus: 'white',
+          },
+        },
+        background: {
+          light: {
+            base: 'transparent',
+            hover: 'danger-500',
+            active: 'danger-400',
+            focus: 'danger-500',
+          },
+          dark: {
+            base: 'transparent',
+            hover: 'danger-500',
+            active: 'danger-400',
+            focus: 'danger-500',
+          },
+        },
+        border: {
+          light: 'danger-500',
+          dark: 'danger-500',
+        },
+        shadow: {
+          size: 'xl',
+          light: 'danger-500/30',
+          dark: 'danger-800/30',
+        },
+      },
+    },
+  },
   badge: {
-    space: '3',
-    primary: 'primary-400',
-    info: 'info-400',
-    success: 'success-400',
-    warning: 'warning-400',
-    danger: 'danger-400',
-  },
-  buttonSmall: {
-    text: 'sm',
-    iconSize: '3',
-  },
-  buttonMedium: {
-    text: 'sm',
-    iconSize: '4',
-  },
-  buttonLarge: {
-    text: 'base',
-    iconSize: '4',
-  },
-  buttonBig: {
-    text: 'base',
-    iconSize: '5',
-  },
-  buttonRounded: 'md',
-  buttonSmooth: 'lg',
-  buttonCurved: 'xl',
-  buttonFull: {
-    rounded: 'full',
-    badgeSize: '3',
-  },
-  buttonSolid: {
-    default: {
-      text: 'muted-700',
-      textDark: 'white',
-      bg: 'white',
-      bgDark: 'muted-700',
-      bgHoverEnabled: 'muted-50',
-      bgHoverEnabledDark: 'muted-600',
-      bgActiveEnabled: 'white',
-      bgActiveEnabledDark: 'muted-700',
-      bgFocusVisible: 'muted-50',
-      bgFocusVisibleDark: 'muted-600',
-      border: 'muted-300',
-      borderDark: 'muted-600',
-      shadow: {
-        size: 'xl',
-        enable: 'muted-500/30',
-        enableDark: 'muted-800/20',
-      },
-      shadowHover: {
-        size: 'xl',
-        enable: 'muted-300/30',
-        enableDark: 'muted-800/20',
-      },
-    },
-    lightOrMuted: {
-      text: 'muted-500',
-      textDark: 'white',
-      bg: 'muted-200',
-      bgDark: 'muted-700',
-      bgHoverEnabled: 'muted-100',
-      bgHoverEnabledDark: 'muted-700',
-      bgActiveEnabled: 'muted-200',
-      bgActiveEnabledDark: 'muted-700',
-      bgFocusVisible: 'muted-100',
-      bgFocusVisibleDark: 'muted-600',
-      border: 'muted-200',
-      borderDark: 'muted-700',
-      shadow: {
-        size: 'xl',
-        enable: 'muted-500/30',
-        enableDark: 'muted-800/20',
-      },
-      shadowHover: {
-        size: 'xl',
-        enable: 'muted-300/30',
-        enableDark: 'muted-800/20',
-      },
-    },
-    primary: {
-      text: 'white',
-      bg: 'primary-500',
-      bgDark: 'primary-500',
-      bgHoverEnabled: 'primary-400',
-      bgHoverEnabledDark: 'primary-400',
-      bgActiveEnabled: 'primary-500',
-      bgActiveEnabledDark: 'primary-500',
-      bgFocusVisible: 'primary-500',
-      bgFocusVisibleDark: 'primary-500',
-      focusVisibleOutline: 'primary-400/70',
-      focusVisibleOutlineDark: 'primary-400/70',
-      focusWithinOutline: 'primary-400/70',
-      focusWithinOutlineDark: 'primary-400/70',
-      shadow: {
-        size: 'xl',
-        enable: 'primary-500/50',
-        enableDark: 'primary-800/20',
-      },
-      shadowHover: {
-        size: 'xl',
-        enable: 'primary-500/50',
-        enableDark: 'primary-800/20',
-      },
-    },
-    info: {
-      text: 'white',
-      bg: 'info-500',
-      bgDark: 'info-500',
-      bgHoverEnabled: 'info-400',
-      bgHoverEnabledDark: 'info-400',
-      bgActiveEnabled: 'info-500',
-      bgActiveEnabledDark: 'info-500',
-      bgFocusVisible: 'info-500',
-      bgFocusVisibleDark: 'info-500',
-      focusVisibleOutline: 'info-400/70',
-      focusVisibleOutlineDark: 'info-400/70',
-      focusWithinOutline: 'info-400/70',
-      focusWithinOutlineDark: 'info-400/70',
-      shadow: {
-        size: 'xl',
-        enable: 'info-500/50',
-        enableDark: 'info-800/20',
-      },
-      shadowHover: {
-        size: 'xl',
-        enable: 'info-500/50',
-        enableDark: 'info-800/20',
-      },
-    },
-    success: {
-      text: 'white',
-      bg: 'success-500',
-      bgDark: 'success-500',
-      bgHoverEnabled: 'success-400',
-      bgHoverEnabledDark: 'success-400',
-      bgActiveEnabled: 'success-500',
-      bgActiveEnabledDark: 'success-500',
-      bgFocusVisible: 'success-500',
-      bgFocusVisibleDark: 'success-500',
-      focusVisibleOutline: 'success-400/70',
-      focusVisibleOutlineDark: 'success-400/70',
-      focusWithinOutline: 'success-400/70',
-      focusWithinOutlineDark: 'success-400/70',
-      shadow: {
-        size: 'xl',
-        enable: 'success-500/50',
-        enableDark: 'success-800/20',
-      },
-      shadowHover: {
-        size: 'xl',
-        enable: 'success-500/50',
-        enableDark: 'success-800/20',
-      },
-    },
-    warning: {
-      text: 'white',
-      bg: 'warning-500',
-      bgDark: 'warning-500',
-      bgHoverEnabled: 'warning-400',
-      bgHoverEnabledDark: 'warning-400',
-      bgActiveEnabled: 'warning-500',
-      bgActiveEnabledDark: 'warning-500',
-      bgFocusVisible: 'warning-500',
-      bgFocusVisibleDark: 'warning-500',
-      focusVisibleOutline: 'warning-400/70',
-      focusVisibleOutlineDark: 'warning-400/70',
-      focusWithinOutline: 'warning-400/70',
-      focusWithinOutlineDark: 'warning-400/70',
-      shadow: {
-        size: 'xl',
-        enable: 'warning-500/50',
-        enableDark: 'warning-800/20',
-      },
-      shadowHover: {
-        size: 'xl',
-        enable: 'warning-500/50',
-        enableDark: 'warning-800/20',
-      },
-    },
-    danger: {
-      text: 'white',
-      bg: 'danger-500',
-      bgDark: 'danger-500',
-      bgHoverEnabled: 'danger-400',
-      bgHoverEnabledDark: 'danger-400',
-      bgActiveEnabled: 'danger-500',
-      bgActiveEnabledDark: 'danger-500',
-      bgFocusVisible: 'danger-500',
-      bgFocusVisibleDark: 'danger-500',
-      focusVisibleOutline: 'danger-400/70',
-      focusVisibleOutlineDark: 'danger-400/70',
-      focusWithinOutline: 'danger-400/70',
-      focusWithinOutlineDark: 'danger-400/70',
-      shadow: {
-        size: 'xl',
-        enable: 'danger-500/50',
-        enableDark: 'danger-800/20',
-      },
-      shadowHover: {
-        size: 'xl',
-        enable: 'danger-500/50',
-        enableDark: 'danger-800/20',
-      },
-    },
-  },
-  buttonPastel: {
-    defaultOrMuted: {
-      text: 'muted-800',
-      textDark: 'muted-100',
-      bg: 'muted-500/10',
-      bgHoverEnabled: 'muted-500/20',
-      bgActiveEnabled: 'muted-500/10',
-      bgFocusVisible: 'muted-500/20',
-    },
-    light: {
-      text: 'muted-800',
-      textDark: 'muted-100',
-      bg: 'white/30',
-      bgDark: 'white/20',
-      bgHoverEnabled: 'white/20',
-      bgHoverEnabledDark: 'white/10',
-      bgActiveEnabled: 'white/20',
-      bgActiveEnabledDark: 'white/10',
-      bgFocusVisible: 'white/20',
-      bgFocusVisibleDark: 'white/10',
-    },
-    primary: {
-      text: 'primary-500',
-      bg: 'primary-500/10',
-      bgHoverEnabled: 'primary-500/20',
-      bgActiveEnabled: 'primary-500/10',
-      bgFocusVisible: 'primary-500/20',
-    },
-    info: {
-      text: 'info-500',
-      bg: 'info-500/10',
-      bgHoverEnabled: 'info-500/20',
-      bgActiveEnabled: 'info-500/10',
-      bgFocusVisible: 'info-500/20',
-    },
-    success: {
-      text: 'success-500',
-      bg: 'success-500/10',
-      bgHoverEnabled: 'success-500/20',
-      bgActiveEnabled: 'success-500/10',
-      bgFocusVisible: 'success-500/20',
-    },
-    warning: {
-      text: 'warning-500',
-      bg: 'warning-500/10',
-      bgHoverEnabled: 'warning-500/20',
-      bgActiveEnabled: 'warning-500/10',
-      bgFocusVisible: 'warning-500/20',
-    },
-    danger: {
-      text: 'danger-500',
-      bg: 'danger-500/10',
-      bgHoverEnabled: 'danger-500/20',
-      bgActiveEnabled: 'danger-500/10',
-      bgFocusVisible: 'danger-500/20',
-    },
-  },
-  buttonOutline: {
-    default: {
-      text: 'muted-500',
-      textDark: 'white',
-      hoverEnabled: 'white',
-      hoverEnabledDark: 'muted-800',
-      bgHoverEnabled: 'muted-500',
-      bgHoverEnabledDark: 'white',
-      focusWithin: 'muted-500',
-      focusWithinDark: 'white',
-      focusVisible: 'muted-500',
-      focusVisibleDark: 'white',
-      bgFocusVisible: 'muted-500',
-      bgFocusVisibleDark: 'white',
-      textFocusVisible: 'white',
-      textFocusVisibleDark: 'muted-800',
-      textActiveEnabled: 'muted-800',
-      textActiveEnabledDark: 'muted-800',
-      bgActiveEnabled: 'muted-400',
-      bgActiveEnabledDark: 'white/80',
-      border: 'muted-500',
-      borderDark: 'white',
-      shadowHover: {
-        size: 'xl',
-        enable: 'muted-500/50',
-        enableDark: 'muted-800/20',
-      },
-    },
-    light: {
-      text: 'white',
-      hoverEnabled: 'muted-800',
-      bgHoverEnabled: 'white',
-      focusWithin: 'white',
-      focusVisible: 'white',
-      bgFocusVisible: 'white',
-      textFocusVisible: 'muted-800',
-      textActiveEnabled: 'muted-800',
-      bgActiveEnabled: 'muted-800',
-      border: 'white',
-      shadowHover: {
-        size: 'xl',
-        enable: 'muted-500/50',
-        enableDark: 'muted-800/20',
-      },
-    },
-    muted: {
-      text: 'muted-400',
-      textDark: 'white',
-      hoverEnabled: 'white',
-      hoverEnabledDark: 'muted-800',
-      bgHoverEnabled: 'muted-300',
-      bgHoverEnabledDark: 'white',
-      focusWithin: 'muted-300',
-      focusWithinDark: 'white',
-      focusVisible: 'muted-300',
-      focusVisibleDark: 'white',
-      bgFocusVisible: 'muted-300',
-      bgFocusVisibleDark: 'white',
-      textFocusVisible: 'white',
-      textFocusVisibleDark: 'muted-800',
-      textActiveEnabled: 'muted-800',
-      textActiveEnabledDark: 'muted-800',
-      bgActiveEnabled: 'muted-400',
-      bgActiveEnabledDark: 'white/80',
-      border: 'muted-300',
-      borderDark: 'white',
-      shadowHover: {
-        size: 'xl',
-        enable: 'muted-500/50',
-        enableDark: 'muted-800/20',
-      },
-    },
-    primary: {
-      text: 'primary-500',
-      textDark: 'white',
-      hoverEnabled: 'white',
-      bgHoverEnabled: 'primary-500',
-      focusWithin: 'primary-400/70',
-      focusVisible: 'primary-400/70',
-      bgFocusVisible: 'primary-500',
-      textFocusVisible: 'white',
-      textActiveEnabled: 'white',
-      bgActiveEnabled: 'primary-400',
-      border: 'primary-500',
-      shadowHover: {
-        size: 'xl',
-        enable: 'primary-500/30',
-        enableDark: 'primary-800/20',
-      },
-    },
-    info: {
-      text: 'info-500',
-      textDark: 'white',
-      hoverEnabled: 'white',
-      bgHoverEnabled: 'info-500',
-      focusWithin: 'info-400/70',
-      focusVisible: 'info-400/70',
-      bgFocusVisible: 'info-500',
-      textFocusVisible: 'white',
-      textActiveEnabled: 'white',
-      bgActiveEnabled: 'info-400',
-      border: 'info-500',
-      shadowHover: {
-        size: 'xl',
-        enable: 'info-500/30',
-        enableDark: 'info-800/20',
-      },
-    },
-    success: {
-      text: 'success-500',
-      textDark: 'white',
-      hoverEnabled: 'white',
-      bgHoverEnabled: 'success-500',
-      focusWithin: 'success-400/70',
-      focusVisible: 'success-400/70',
-      bgFocusVisible: 'success-500',
-      textFocusVisible: 'white',
-      textActiveEnabled: 'white',
-      bgActiveEnabled: 'success-400',
-      border: 'success-500',
-      shadowHover: {
-        size: 'xl',
-        enable: 'success-500/30',
-        enableDark: 'success-800/20',
-      },
-    },
-    warning: {
-      text: 'warning-500',
-      textDark: 'white',
-      hoverEnabled: 'white',
-      bgHoverEnabled: 'warning-500',
-      focusWithin: 'warning-400/70',
-      focusVisible: 'warning-400/70',
-      bgFocusVisible: 'warning-500',
-      textFocusVisible: 'white',
-      textActiveEnabled: 'white',
-      bgActiveEnabled: 'warning-400',
-      border: 'warning-500',
-      shadowHover: {
-        size: 'xl',
-        enable: 'warning-500/30',
-        enableDark: 'warning-800/20',
-      },
-    },
-    danger: {
-      text: 'danger-500',
-      textDark: 'white',
-      hoverEnabled: 'white',
-      bgHoverEnabled: 'danger-500',
-      focusWithin: 'danger-400/70',
-      focusVisible: 'danger-400/70',
-      bgFocusVisible: 'danger-500',
-      textFocusVisible: 'white',
-      textActiveEnabled: 'white',
-      bgActiveEnabled: 'danger-400',
-      border: 'danger-500',
-      shadowHover: {
-        size: 'xl',
-        enable: 'danger-500/30',
-        enableDark: 'danger-800/20',
-      },
+    size: '2.5',
+    colors: {
+      primary: 'primary-400',
+      primaryDark: 'primary-400',
+      info: 'info-400',
+      success: 'success-400',
+      warning: 'warning-400',
+      danger: 'danger-400',
     },
   },
 }

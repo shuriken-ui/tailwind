@@ -4,8 +4,10 @@ export const defaultConfig = {
   offset: '2',
   width: '2',
   style: 'dashed',
-  color: 'muted-300',
-  colorDark: 'muted-600',
+  color: {
+    light: 'muted-300',
+    dark: 'muted-600',
+  },
   mode: 'always' as 'always' | 'focus-visible',
 }
 

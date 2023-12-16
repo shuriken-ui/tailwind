@@ -16,19 +16,39 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}prose`]: {
-          [`@apply prose prose-primary prose-${config.color} dark:prose-${config.dark} prose-th:p-${config.space} prose-td:p-${config.space} prose-table:bg-${config.bgTable} dark:prose-table:bg-${config.bgTableDark} prose-table:border prose-table:border-${config.borderTable} dark:prose-table:border-${config.borderTableDark}`]:
+          //Base
+          [`@apply prose prose-primary prose-${config.color.light} dark:prose-${config.color.dark}`]:
             {},
-
+          //Table:background
+          [`@apply prose-table:bg-${config.table.background.light} dark:prose-table:bg-${config.table.background.dark}`]:
+            {},
+          //Table:border
+          [`@apply prose-table:border-separate prose-table:border-spacing-0 prose-table:border prose-table:border-${config.table.border.light} dark:prose-table:border-${config.table.border.dark}`]:
+            {},
+          //Table:th
+          [`@apply prose-th:p-${config.padding} prose-td:p-${config.padding}`]:
+            {},
+          //Table:td
+          [`@apply prose-td:border-t prose-td:border-${config.table.border.light} dark:prose-td:border-${config.table.border.dark}`]:
+            {},
+          //Rounded:none
           [`&.${prefix}prose-straight`]: {
             [`@apply prose-img:rounded-none prose-pre:rounded-none prose-table:rounded-none`]:
               {},
           },
+          //Rounded:sm
           [`&.${prefix}prose-rounded`]: {
-            [`@apply prose-img:rounded-${config.rounded.size} prose-pre:rounded-${config.rounded.size} prose-table:rounded-${config.rounded.size} prose-table:border-separate prose-table:border-spacing-0 prose-td:border-t prose-td:border-${config.rounded.tdBorder} dark:prose-td:border-${config.rounded.tdBorderDark}`]:
+            [`@apply prose-img:${config.rounded.sm} prose-pre:${config.rounded.sm} prose-table:${config.rounded.sm}`]:
               {},
           },
+          //Rounded:md
+          [`&.${prefix}prose-smooth`]: {
+            [`@apply prose-img:${config.rounded.md} prose-pre:${config.rounded.md} prose-table:${config.rounded.md}`]:
+              {},
+          },
+          //Rounded:lg
           [`&.${prefix}prose-curved`]: {
-            [`@apply prose-img:rounded-${config.curved.size} prose-pre:rounded-${config.curved.size} prose-table:rounded-${config.curved.size} prose-table:border-separate prose-table:border-spacing-0 prose-td:border-t prose-td:border-${config.curved.tdBorder} dark:prose-td:border-${config.curved.tdBorderDark}`]:
+            [`@apply prose-img:${config.rounded.lg} prose-pre:${config.rounded.lg} prose-table:${config.rounded.lg}`]:
               {},
           },
         },

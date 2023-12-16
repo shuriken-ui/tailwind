@@ -16,63 +16,111 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}card`]: {
-          [`@apply relative w-${config.size} transition-all duration-${config.duration}`]:
+          //Base
+          [`@apply relative w-${config.width} transition-${config.transition.property} duration-${config.transition.duration}`]:
             {},
-
+          //Color:white
           [`&.${prefix}card-white`]: {
-            [`@apply border bg-${config.cardWhite.bg} border-${config.cardWhite.border} dark:border-${config.cardWhite.borderDark} dark:bg-${config.cardWhite.bgDark}`]:
+            //Border
+            [`@apply border border-${config.color.white.border.light} dark:border-${config.color.white.border.light}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.white.background.light} dark:bg-${config.color.white.background.dark}`]:
               {},
           },
+          //Color:whiteContrast
           [`&.${prefix}card-white-contrast`]: {
-            [`@apply border bg-${config.cardWhiteContrast.bg} border-${config.cardWhiteContrast.border} dark:border-${config.cardWhiteContrast.borderDark} dark:bg-${config.cardWhiteContrast.bgDark}`]:
+            //Border
+            [`@apply border border-${config.color.whiteContrast.border.light} dark:border-${config.color.whiteContrast.border.light}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.whiteContrast.background.light} dark:bg-${config.color.whiteContrast.background.dark}`]:
               {},
           },
+          //Color:muted
           [`&.${prefix}card-muted`]: {
-            [`@apply border bg-${config.cardMuted.bg} border-${config.cardMuted.border} dark:border-${config.cardMuted.borderDark} dark:bg-${config.cardMuted.bgDark}`]:
+            //Border
+            [`@apply border border-${config.color.muted.border.light} dark:border-${config.color.muted.border.light}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.muted.background.light} dark:bg-${config.color.muted.background.dark}`]:
               {},
           },
+          //Color:mutedContrast
           [`&.${prefix}card-muted-contrast`]: {
-            [`@apply border bg-${config.cardMutedContrast.bg} border-${config.cardMutedContrast.border} dark:border-${config.cardMutedContrast.borderDark} dark:bg-${config.cardMutedContrast.bgDark}`]:
+            //Border
+            [`@apply border border-${config.color.mutedContrast.border.light} dark:border-${config.color.mutedContrast.border.light}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.mutedContrast.background.light} dark:bg-${config.color.mutedContrast.background.dark}`]:
               {},
           },
+          //Color:primary
           [`&.${prefix}card-primary`]: {
-            [`@apply border bg-${config.cardPrimary.bg} border-${config.cardPrimary.border}`]:
+            //Border
+            [`@apply border border-${config.color.primary.border.light} dark:border-${config.color.primary.border.light}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.primary.background.light} dark:bg-${config.color.primary.background.dark}`]:
               {},
           },
+          //Color:info
           [`&.${prefix}card-info`]: {
-            [`@apply border bg-${config.cardInfo.bg} border-${config.cardInfo.border}`]:
+            //Border
+            [`@apply border border-${config.color.info.border.light} dark:border-${config.color.info.border.light}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.info.background.light} dark:bg-${config.color.info.background.dark}`]:
               {},
           },
+          //Color:success
           [`&.${prefix}card-success`]: {
-            [`@apply border bg-${config.cardSuccess.bg} border-${config.cardSuccess.border}`]:
+            //Border
+            [`@apply border border-${config.color.success.border.light} dark:border-${config.color.success.border.light}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.success.background.light} dark:bg-${config.color.success.background.dark}`]:
               {},
           },
+          //Color:warning
           [`&.${prefix}card-warning`]: {
-            [`@apply border bg-${config.cardWarning.bg} border-${config.cardWarning.border}`]:
+            //Border
+            [`@apply border border-${config.color.warning.border.light} dark:border-${config.color.warning.border.light}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.warning.background.light} dark:bg-${config.color.warning.background.dark}`]:
               {},
           },
+          //Color:danger
           [`&.${prefix}card-danger`]: {
-            [`@apply border bg-${config.cardDanger.bg} border-${config.cardDanger.border}`]:
+            //Border
+            [`@apply border border-${config.color.danger.border.light} dark:border-${config.color.danger.border.light}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.danger.background.light} dark:bg-${config.color.danger.background.dark}`]:
               {},
           },
+          //Rounded:sm
           [`&.${prefix}card-rounded`]: {
-            [`@apply rounded-${config.rounded.default}`]: {},
+            [`@apply rounded-${config.rounded.sm}`]: {},
           },
+          //Rounded:md
           [`&.${prefix}card-smooth`]: {
-            [`@apply rounded-${config.rounded.smooth}`]: {},
+            [`@apply rounded-${config.rounded.md}`]: {},
           },
+          //Rounded:lg
           [`&.${prefix}card-curved`]: {
-            [`@apply rounded-${config.rounded.curved}`]: {},
+            [`@apply rounded-${config.rounded.lg}`]: {},
           },
-
+          //Shadow
           [`&:not(.${prefix}card-primary):not(.${prefix}card-info):not(.${prefix}card-success):not(.${prefix}card-warning):not(.${prefix}card-danger)`]:
             {
               [`&.${prefix}card-shadow`]: {
-                [`@apply shadow-${config.cardSadow.color} dark:shadow-${config.cardSadow.colorDark} shadow-${config.cardSadow.size}`]:
+                [`@apply shadow-${config.shadow.light} dark:shadow-${config.shadow.dark} shadow-${config.shadow.size}`]:
                   {},
               },
               [`&.${prefix}card-shadow-hover`]: {
-                [`@apply hover:shadow-${config.cardSadowHover.color} dark:hover:shadow-${config.cardSadowHover.colorDark} hover:shadow-${config.cardSadowHover.size}`]:
+                [`@apply hover:shadow-${config.shadow.light} dark:hover:shadow-${config.shadow.dark} hover:shadow-${config.shadow.size}`]:
                   {},
               },
             },

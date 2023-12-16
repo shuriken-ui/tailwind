@@ -18,7 +18,7 @@ Checkboxes are an essential part of any application. Shuriken UI checkboxes can 
 
 <br />
 
-### Shape: straight
+### Rounded: none
 
 Checkboxes can have different shapes and colors. Below are examples of the straight shape.
 
@@ -34,7 +34,7 @@ Checkboxes can have different shapes and colors. Below are examples of the strai
 
 <br />
 
-### Shape: rounded
+### Rounded: sm
 
 Checkboxes can have different shapes and colors. Below are examples of the rounded shape.
 
@@ -50,7 +50,7 @@ Checkboxes can have different shapes and colors. Below are examples of the round
 
 <br />
 
-### Shape: smooth
+### Rounded: md
 
 Checkboxes can have different shapes and colors. Below are examples of the smooth shape.
 
@@ -66,7 +66,7 @@ Checkboxes can have different shapes and colors. Below are examples of the smoot
 
 <br />
 
-### Shape: curved
+### Rounded: lg
 
 Checkboxes can have different shapes and colors. Below are examples of the curved shape.
 
@@ -82,7 +82,7 @@ Checkboxes can have different shapes and colors. Below are examples of the curve
 
 <br />
 
-### Shape: full
+### Rounded: full
 
 Checkboxes can have different shapes and colors. Below are examples of the full shape.
 
@@ -120,12 +120,12 @@ Checkboxes can be shown in a disabled state.
 
 ### Default config
 
-<div class="relative">
-  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
-    <summary class="list-none cursor-pointer">
-      <span class="font-sans text-slate-500">View configuration options</span>
+<div className="relative">
+  <details className="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary className="list-none cursor-pointer">
+      <span className="font-sans text-slate-500">View configuration options</span>
       <svg
-        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        className="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -134,15 +134,15 @@ Checkboxes can be shown in a disabled state.
         <path
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m6 9l6 6l6-6"
         />
       </svg>
     </summary>
 
-    <div class="!mt-4">
+    <div className="!mt-4">
       <pre >
         {JSON.stringify(defaultConfig, null, 2)}
       </pre>

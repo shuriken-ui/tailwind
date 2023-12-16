@@ -3,7 +3,7 @@ import type { PropertyVariant } from '~/types/utils'
 export interface MessageTextProps extends Record<string, unknown> {
   title?: string
   text?: string
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved'
+  rounded?: 'none' | 'sm' | 'md' | 'lg'
   color?:
     | 'default'
     | 'primary'
@@ -15,6 +15,8 @@ export interface MessageTextProps extends Record<string, unknown> {
   contrast?: 'white' | 'contrast'
   classes?: {
     wrapper?: string | string[]
+    title?: string | string[]
+    content?: string | string[]
   }
 }
 

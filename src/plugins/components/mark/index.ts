@@ -16,8 +16,10 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}mark`]: {
-          [`@apply bg-${config.bg} dark:bg-${config.bgDark}`]: {},
-          [`@apply text-${config.text} dark:text-${config.textDark}`]: {},
+          [`@apply bg-${config.background.light} dark:bg-${config.background.dark}`]:
+            {},
+          [`@apply text-${config.color.light} dark:text-${config.color.dark}`]:
+            {},
         },
       })
     }

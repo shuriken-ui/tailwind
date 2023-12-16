@@ -4,15 +4,27 @@ export const defaultConfig = {
   ul: 'disc',
   ol: 'decimal',
   base: {
-    textMarker: 'muted-500',
-    textMarkerDark: 'muted-400',
-    text: 'slate-700',
-    textDark: 'slate-300',
-    font: 'sans',
+    font: {
+      family: 'sans',
+      color: {
+        marker: {
+          light: 'muted-500',
+          dark: 'muted-400',
+        },
+        text: {
+          light: 'muted-700',
+          dark: 'muted-300',
+        },
+      },
+    },
   },
   media: {
-    textMarker: 'slate-500',
-    textMarkerDark: 'slate-400',
+    marker: {
+      color: {
+        light: 'muted-500',
+        dark: 'muted-400',
+      },
+    },
   },
 }
 

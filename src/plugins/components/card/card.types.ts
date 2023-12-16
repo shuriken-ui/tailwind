@@ -1,7 +1,7 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface CardProps extends Record<string, unknown> {
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved'
+  rounded?: 'none' | 'sm' | 'md' | 'lg'
   elevated?: boolean
   elevatedHover?: boolean
   color?:

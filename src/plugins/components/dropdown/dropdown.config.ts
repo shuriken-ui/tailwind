@@ -1,101 +1,135 @@
 export const key = 'dropdown' as const
 
 export const defaultConfig = {
-  textPosition: 'start',
-  contextButton: {
-    ringOffsetDark: 'muted-900',
-    size: '9',
-    rounded: 'full',
-    duration: '300',
-    ringGroupHover: 'offset-4',
-    inner: {
-      border: 'muted-200',
-      borderDark: 'muted-700',
-      bg: 'white',
-      bgDark: 'muted-800',
+  align: 'start',
+  button: {
+    context: {
       size: '9',
       rounded: 'full',
+      inner: {
+        size: '9',
+        rounded: 'full',
+        background: {
+          light: 'white',
+          dark: 'muted-800',
+        },
+        border: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
+      },
+      icon: {
+        size: '5',
+        font: {
+          color: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+        },
+      },
+      ring: {
+        offset: {
+          size: '4',
+          color: {
+            light: 'white',
+            dark: 'muted-900',
+          },
+        },
+        color: {
+          hover: {
+            light: 'primary-500',
+            dark: 'primary-500',
+          },
+        },
+      },
+      transition: {
+        property: 'all',
+        duration: '300',
+      },
     },
-    icon: {
-      text: 'muted-400',
-      size: '5',
-      duration: '300',
+    text: {
+      font: {
+        family: 'sans',
+        color: {
+          light: 'muted-400',
+          dark: 'muted-400',
+        },
+      },
+    },
+    chevron: {
+      size: '4',
+      transition: {
+        property: 'transform',
+        duration: '300',
+      },
     },
   },
-  textButton: {
-    text: 'muted-400',
-    inner: {
-      font: 'sans',
-    },
-  },
-  chevron: {
-    size: '4',
-    duration: '300',
-  },
-  dropdownMenu: {
-    shadow: 'lg',
-    shadowColor: 'muted-500/10',
-    shadowColorDark: 'muted-800/10',
-    headerTitle: {
-      font: 'sans',
-      fontSize: 'medium',
-      text: 'muted-500',
-      textDark: 'muted-200',
-      textSize: 'xs',
+  menu: {
+    header: {
+      title: {
+        font: {
+          family: 'sans',
+          weight: 'medium',
+          size: 'xs',
+          color: {
+            light: 'muted-500',
+            dark: 'muted-200',
+          },
+        },
+      },
     },
     rounded: {
-      default: 'md',
-      smooth: 'lg',
-      curved: 'xl',
+      sm: 'rounded-md',
+      md: 'rounded-lg',
+      lg: 'rounded-xl',
     },
-    white: {
-      bg: 'white',
-      bgDark: 'muted-800',
-      border: 'muted-200',
-      borderDark: 'muted-700',
+    color: {
+      white: {
+        background: {
+          light: 'white',
+          dark: 'muted-800',
+        },
+        border: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
+      },
+      whiteContrast: {
+        background: {
+          light: 'white',
+          dark: 'muted-950',
+        },
+        border: {
+          light: 'muted-200',
+          dark: 'muted-800',
+        },
+      },
+      muted: {
+        background: {
+          light: 'white',
+          dark: 'muted-800',
+        },
+        border: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
+      },
+      mutedContrast: {
+        background: {
+          light: 'white',
+          dark: 'muted-950',
+        },
+        border: {
+          light: 'muted-200',
+          dark: 'muted-800',
+        },
+      },
     },
-    whiteContrast: {
-      bg: 'white',
-      bgDark: 'muted-950',
-      border: 'muted-200',
-      borderDark: 'muted-800',
+    shadow: {
+      size: 'lg',
+      light: 'muted-300/30',
+      dark: 'muted-800/20',
     },
-    muted: {
-      bg: 'muted-100',
-      bgDark: 'muted-800',
-      border: 'muted-200',
-      borderDark: 'muted-700',
-    },
-    mutedContrast: {
-      bg: 'muted-100',
-      bgDark: 'muted-950',
-      border: 'muted-200',
-      borderDark: 'muted-800',
-    },
-    primary: {
-      bg: 'primary-500/10',
-      border: 'primary-500',
-    },
-    info: {
-      bg: 'info-500/10',
-      border: 'info-500',
-    },
-    success: {
-      bg: 'success-500/10',
-      border: 'success-500',
-    },
-    warning: {
-      bg: 'warning-500/10',
-      border: 'warning-500',
-    },
-    danger: {
-      bg: 'danger-500/10',
-      border: 'danger-500',
-    },
-  },
-  hover: {
-    ring: 'muted-200',
-    ringDark: 'muted-700/70',
   },
 }
 

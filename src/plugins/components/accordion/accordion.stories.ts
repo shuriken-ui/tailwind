@@ -20,7 +20,7 @@ const meta = {
       options: ['dot', 'chevron', 'plus'],
       defaultValue: 'dot',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
       options: ['straight', 'rounded', 'smooth', 'curved'],
       defaultValue: 'rounded',
@@ -57,52 +57,52 @@ export const Solid: Story = {
     // set default values used for UI preview
     items: data,
     action: 'dot',
-    shape: 'rounded',
+    rounded: 'sm',
     style: 'max-width: 540px;',
   },
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     items: data,
     action: 'dot',
-    shape: 'straight',
+    rounded: 'none',
     exclusive: true,
     style: 'min-width: 540px; max-width: 540px;',
   },
 }
 
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     items: data,
     action: 'dot',
-    shape: 'rounded',
+    rounded: 'sm',
     exclusive: true,
     style: 'min-width: 540px; max-width: 540px;',
   },
 }
 
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     items: data,
     action: 'dot',
-    shape: 'smooth',
+    rounded: 'md',
     exclusive: true,
     style: 'min-width: 540px; max-width: 540px;',
   },
 }
 
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     items: data,
     action: 'dot',
-    shape: 'curved',
+    rounded: 'lg',
     exclusive: true,
     style: 'min-width: 540px; max-width: 540px;',
   },
@@ -115,7 +115,7 @@ export const Dot: Story = {
   args: {
     items: data,
     action: 'dot',
-    shape: 'rounded',
+    rounded: 'sm',
     exclusive: true,
     style: 'min-width: 540px; max-width: 540px;',
   },
@@ -128,7 +128,7 @@ export const Chevron: Story = {
   args: {
     items: data,
     action: 'chevron',
-    shape: 'rounded',
+    rounded: 'sm',
     exclusive: true,
     style: 'min-width: 540px; max-width: 540px;',
   },
@@ -141,7 +141,7 @@ export const Plus: Story = {
   args: {
     items: data,
     action: 'plus',
-    shape: 'rounded',
+    rounded: 'sm',
     exclusive: true,
     style: 'min-width: 540px; max-width: 540px;',
   },

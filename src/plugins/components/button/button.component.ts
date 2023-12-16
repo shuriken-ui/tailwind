@@ -10,10 +10,11 @@ import * as variants from './button.variants'
 export const Button = ({
   label,
   loading,
+  badge,
   shadow,
-  shape,
+  rounded,
   children,
-  flavor = 'solid',
+  variant = 'solid',
   size = 'md',
   color = 'default',
   classes,
@@ -25,10 +26,10 @@ export const Button = ({
       class=${[
         'nui-button',
         variants.size[size],
-        variants.flavor[flavor],
+        variants.variant[variant],
         variants.color[color],
         loading && 'nui-button-loading',
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         shadow && variants.shadow[shadow],
         classes?.wrapper,
       ]
@@ -47,6 +48,14 @@ export const Button = ({
           html`
             <span>${label}</span>
           `}
+      ${badge
+        ? html`
+            <span class="nui-button-badge">
+              <span class="nui-button-badge-pulse"></span>
+              <span class="nui-button-badge-inner"></span>
+            </span>
+          `
+        : ''}
     </button>
   `
 }

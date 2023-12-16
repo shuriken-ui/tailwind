@@ -1,11 +1,11 @@
 import type { AccordionVariant } from './accordion.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-accordion-rounded',
-  smooth: 'nui-accordion-smooth',
-  curved: 'nui-accordion-curved',
-} as const satisfies AccordionVariant<'shape'>
+export const rounded = {
+  none: '',
+  sm: 'nui-accordion-rounded',
+  md: 'nui-accordion-smooth',
+  lg: 'nui-accordion-curved',
+} as const satisfies AccordionVariant<'rounded'>
 
 export const action = {
   dot: 'nui-accordion-dot',

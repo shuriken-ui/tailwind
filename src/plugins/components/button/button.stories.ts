@@ -15,6 +15,11 @@ const meta = {
       control: { type: 'boolean' },
       defaultValue: false,
     },
+    badge: {
+      name: 'badge',
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
     '?disabled': {
       name: 'disabled',
       control: { type: 'boolean' },
@@ -39,12 +44,12 @@ const meta = {
       options: ['sm', 'md', 'lg', 'xl'],
       defaultValue: 'md',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
       options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
       defaultValue: 'straight',
     },
-    flavor: {
+    variant: {
       control: { type: 'select' },
       options: ['solid', 'pastel', 'outline'],
       defaultValue: 'solid',
@@ -69,47 +74,89 @@ export const Solid: Story = {
     color: 'default',
     label: 'Button',
     // set default values used for UI preview
-    flavor: 'solid',
+    variant: 'solid',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     label: 'Button',
   },
 }
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     label: 'Button',
   },
 }
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
-    shape: 'smooth',
+    rounded: 'md',
     label: 'Button',
   },
 }
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
-    shape: 'curved',
+    rounded: 'lg',
     label: 'Button',
   },
 }
 export const Full: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
-    shape: 'full',
+    rounded: 'full',
     label: 'Button',
+  },
+}
+// #endregion
+
+// #region Badge
+export const BadgeStraight: Story = {
+  name: 'Badge: rounded none',
+  args: {
+    label: 'Button',
+    badge: true,
+  },
+}
+export const BadgeRounded: Story = {
+  name: 'Badge: rounded sm',
+  args: {
+    rounded: 'sm',
+    label: 'Button',
+    badge: true,
+  },
+}
+export const BadgeSmooth: Story = {
+  name: 'Badge: rounded md',
+  args: {
+    rounded: 'md',
+    label: 'Button',
+    badge: true,
+  },
+}
+export const BadgeCurved: Story = {
+  name: 'Badge: rounded lg',
+  args: {
+    rounded: 'lg',
+    label: 'Button',
+    badge: true,
+  },
+}
+export const BadgeFull: Story = {
+  name: 'Badge: rounded full',
+  args: {
+    rounded: 'full',
+    label: 'Button',
+    badge: true,
   },
 }
 // #endregion
@@ -120,7 +167,7 @@ export const Sm: Story = {
   args: {
     size: 'sm',
     label: 'Button',
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 export const Md: Story = {
@@ -128,7 +175,7 @@ export const Md: Story = {
   args: {
     size: 'md',
     label: 'Button',
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 export const Lg: Story = {
@@ -136,7 +183,7 @@ export const Lg: Story = {
   args: {
     size: 'lg',
     label: 'Button',
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 // #endregion
@@ -147,9 +194,9 @@ export const SolidDefault: Story = {
   args: {
     color: 'default',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -159,9 +206,9 @@ export const SolidMuted: Story = {
   args: {
     color: 'muted',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -171,9 +218,9 @@ export const SolidPrimary: Story = {
   args: {
     color: 'primary',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -183,9 +230,9 @@ export const SolidInfo: Story = {
   args: {
     color: 'info',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -195,9 +242,9 @@ export const SolidSuccess: Story = {
   args: {
     color: 'success',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -207,9 +254,9 @@ export const SolidWarning: Story = {
   args: {
     color: 'warning',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -219,9 +266,9 @@ export const SolidDanger: Story = {
   args: {
     color: 'danger',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -233,9 +280,9 @@ export const PastelPrimary: Story = {
   args: {
     color: 'primary',
     label: 'Button',
-    flavor: 'pastel',
+    variant: 'pastel',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -245,9 +292,9 @@ export const PastelInfo: Story = {
   args: {
     color: 'info',
     label: 'Button',
-    flavor: 'pastel',
+    variant: 'pastel',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -257,9 +304,9 @@ export const PastelSuccess: Story = {
   args: {
     color: 'success',
     label: 'Button',
-    flavor: 'pastel',
+    variant: 'pastel',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -269,9 +316,9 @@ export const PastelWarning: Story = {
   args: {
     color: 'warning',
     label: 'Button',
-    flavor: 'pastel',
+    variant: 'pastel',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -281,9 +328,9 @@ export const PastelDanger: Story = {
   args: {
     color: 'danger',
     label: 'Button',
-    flavor: 'pastel',
+    variant: 'pastel',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -295,9 +342,9 @@ export const OutlinePrimary: Story = {
   args: {
     color: 'primary',
     label: 'Button',
-    flavor: 'outline',
+    variant: 'outline',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -307,9 +354,9 @@ export const OutlineInfo: Story = {
   args: {
     color: 'info',
     label: 'Button',
-    flavor: 'outline',
+    variant: 'outline',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -319,9 +366,9 @@ export const OutlineSuccess: Story = {
   args: {
     color: 'success',
     label: 'Button',
-    flavor: 'outline',
+    variant: 'outline',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -331,9 +378,9 @@ export const OutlineWarning: Story = {
   args: {
     color: 'warning',
     label: 'Button',
-    flavor: 'outline',
+    variant: 'outline',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -343,9 +390,9 @@ export const OutlineDanger: Story = {
   args: {
     color: 'danger',
     label: 'Button',
-    flavor: 'outline',
+    variant: 'outline',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -357,8 +404,8 @@ export const IconDefault: Story = {
   args: {
     color: 'default',
     label: 'Button',
-    flavor: 'solid',
-    shape: 'rounded',
+    variant: 'solid',
+    rounded: 'sm',
     size: 'md',
     children: html`
       <svg
@@ -387,8 +434,8 @@ export const IconMuted: Story = {
   args: {
     color: 'muted',
     label: 'Button',
-    flavor: 'solid',
-    shape: 'rounded',
+    variant: 'solid',
+    rounded: 'sm',
     size: 'md',
     children: html`
       <span>Button</span>
@@ -417,8 +464,8 @@ export const IconPrimary: Story = {
   args: {
     color: 'primary',
     label: 'Button',
-    flavor: 'solid',
-    shape: 'rounded',
+    variant: 'solid',
+    rounded: 'sm',
     size: 'md',
     children: html`
       <svg
@@ -451,8 +498,8 @@ export const IconInfo: Story = {
   args: {
     color: 'info',
     label: 'Button',
-    flavor: 'solid',
-    shape: 'rounded',
+    variant: 'solid',
+    rounded: 'sm',
     size: 'md',
     children: html`
       <svg
@@ -477,8 +524,8 @@ export const IconSuccess: Story = {
   args: {
     color: 'success',
     label: 'Button',
-    flavor: 'solid',
-    shape: 'rounded',
+    variant: 'solid',
+    rounded: 'sm',
     size: 'md',
     children: html`
       <svg
@@ -503,8 +550,8 @@ export const IconWarning: Story = {
   args: {
     color: 'warning',
     label: 'Button',
-    flavor: 'solid',
-    shape: 'rounded',
+    variant: 'solid',
+    rounded: 'sm',
     size: 'md',
     children: html`
       <svg
@@ -533,9 +580,9 @@ export const IconDanger: Story = {
   args: {
     color: 'danger',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
     children: html`
       <svg
@@ -562,9 +609,9 @@ export const ShadowFlatDefault: Story = {
   args: {
     color: 'default',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'flat',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -574,9 +621,9 @@ export const ShadowFlatMuted: Story = {
   args: {
     color: 'muted',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'flat',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -586,9 +633,9 @@ export const ShadowFlatPrimary: Story = {
   args: {
     color: 'primary',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'flat',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -598,9 +645,9 @@ export const ShadowFlatInfo: Story = {
   args: {
     color: 'info',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'flat',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -610,9 +657,9 @@ export const ShadowFlatSuccess: Story = {
   args: {
     color: 'success',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'flat',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -622,9 +669,9 @@ export const ShadowFlatWarning: Story = {
   args: {
     color: 'warning',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'flat',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -634,9 +681,9 @@ export const ShadowFlatDanger: Story = {
   args: {
     color: 'danger',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'flat',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -648,9 +695,9 @@ export const ShadowHoverDefault: Story = {
   args: {
     color: 'default',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'hover',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -660,9 +707,9 @@ export const ShadowHoverMuted: Story = {
   args: {
     color: 'muted',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'hover',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -672,9 +719,9 @@ export const ShadowHoverPrimary: Story = {
   args: {
     color: 'primary',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'hover',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -684,9 +731,9 @@ export const ShadowHoverInfo: Story = {
   args: {
     color: 'info',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'hover',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -696,9 +743,9 @@ export const ShadowHoverSuccess: Story = {
   args: {
     color: 'success',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'hover',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -708,9 +755,9 @@ export const ShadowHoverWarning: Story = {
   args: {
     color: 'warning',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'hover',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -720,9 +767,9 @@ export const ShadowHoverDanger: Story = {
   args: {
     color: 'danger',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     shadow: 'hover',
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -734,9 +781,9 @@ export const LoadingDefault: Story = {
   args: {
     color: 'default',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -746,9 +793,9 @@ export const LoadingMuted: Story = {
   args: {
     color: 'muted',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -758,9 +805,9 @@ export const LoadingPrimary: Story = {
   args: {
     color: 'primary',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -770,9 +817,9 @@ export const LoadingInfo: Story = {
   args: {
     color: 'info',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -782,9 +829,9 @@ export const LoadingSuccess: Story = {
   args: {
     color: 'success',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -794,9 +841,9 @@ export const LoadingWarning: Story = {
   args: {
     color: 'warning',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -806,9 +853,9 @@ export const LoadingDanger: Story = {
   args: {
     color: 'danger',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     loading: true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -820,9 +867,9 @@ export const DisabledDefault: Story = {
   args: {
     color: 'default',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     '?disabled': true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -832,9 +879,9 @@ export const DisabledMuted: Story = {
   args: {
     color: 'muted',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     '?disabled': true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -844,9 +891,9 @@ export const DisabledPrimary: Story = {
   args: {
     color: 'primary',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     '?disabled': true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -856,9 +903,9 @@ export const DisabledInfo: Story = {
   args: {
     color: 'info',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     '?disabled': true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -868,9 +915,9 @@ export const DisabledSuccess: Story = {
   args: {
     color: 'success',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     '?disabled': true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -880,9 +927,9 @@ export const DisabledWarning: Story = {
   args: {
     color: 'warning',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     '?disabled': true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -892,9 +939,9 @@ export const DisabledDanger: Story = {
   args: {
     color: 'danger',
     label: 'Button',
-    flavor: 'solid',
+    variant: 'solid',
     '?disabled': true,
-    shape: 'rounded',
+    rounded: 'sm',
     size: 'md',
   },
 }
@@ -904,7 +951,7 @@ export const DisabledDanger: Story = {
 export const LabelSlot: Story = {
   name: 'Slots: default slot',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <span>Using the slot</span>
     `,

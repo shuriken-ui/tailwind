@@ -1,28 +1,52 @@
 export const key = 'dropdownItem' as const
 
 export const defaultConfig = {
-  itemRounded: 'md',
-  textPosition: 'left',
-  textSize: 'sm',
-  duration: '300',
-  notActive: {
-    text: 'muted-500',
-  },
-  default: {
-    bg: 'muted-100',
-    bgDark: 'muted-700',
-    text: 'primary-500',
-  },
-  contrast: {
-    bg: 'muted-100',
-    bgDark: 'muted-900',
-    text: 'primary-500',
+  align: 'start',
+  font: {
+    family: 'sans',
+    size: 'sm',
+    color: {
+      inactive: {
+        light: 'muted-500',
+        dark: 'muted-500',
+      },
+    },
   },
   rounded: {
-    straight: 'none',
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
+    none: 'none',
+    sm: 'md',
+    md: 'lg',
+    lg: 'xl',
+  },
+  color: {
+    default: {
+      background: {
+        light: 'muted-100',
+        dark: 'muted-700',
+      },
+      font: {
+        color: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+      },
+    },
+    contrast: {
+      background: {
+        light: 'muted-100',
+        dark: 'muted-900',
+      },
+      font: {
+        color: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+      },
+    },
+  },
+  transition: {
+    property: 'colors',
+    duration: '300',
   },
 }
 

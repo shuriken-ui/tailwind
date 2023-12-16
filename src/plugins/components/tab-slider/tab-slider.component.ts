@@ -10,7 +10,7 @@ import * as variants from './tab-slider.variants'
 export const TabSlider = ({
   tabs,
   justify = 'start',
-  shape = 'smooth',
+  rounded = 'md',
   size = 'md',
   classes,
   children,
@@ -24,7 +24,7 @@ export const TabSlider = ({
       class=${[
         'nui-tab-slider',
         justify && variants.justify[justify],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         size && variants.size[size],
         classes?.wrapper,
         tabsLength() === 2 ? 'nui-tabs-two-slots' : 'nui-tabs-three-slots',

@@ -1,12 +1,12 @@
 import type { CheckboxVariant } from './checkbox.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-checkbox-rounded',
-  smooth: 'nui-checkbox-smooth',
-  curved: 'nui-checkbox-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-checkbox-rounded',
+  md: 'nui-checkbox-smooth',
+  lg: 'nui-checkbox-curved',
   full: 'nui-checkbox-full',
-} as const satisfies CheckboxVariant<'shape'>
+} as const satisfies CheckboxVariant<'rounded'>
 
 export const color = {
   default: 'nui-checkbox-default',

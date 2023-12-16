@@ -1,7 +1,7 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface InputFileProps extends Record<string, unknown> {
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   type?: 'combo' | 'dropzone' | 'button'
   classes?: {
     wrapper?: string | string[]

@@ -15,7 +15,7 @@ export const MessageText = ({
   text,
   contrast = 'white',
   color = 'default',
-  shape = 'rounded',
+  rounded = 'sm',
   classes,
   ...attrs
 }: MessageTextAttrs) => {
@@ -25,7 +25,7 @@ export const MessageText = ({
         'nui-message-text',
         color && variants.color[color],
         contrast && variants.contrast[contrast],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         classes?.wrapper,
       ]
         .filter(Boolean)
@@ -36,8 +36,8 @@ export const MessageText = ({
         <span class="nui-message-dot"></span>
         ${Heading({
           as: 'h5',
-          size: 'sm',
-          weight: 'semibold',
+          size: 'md',
+          weight: 'medium',
           lead: 'none',
           classes: {
             wrapper: 'text-muted-800 dark:text-muted-50',
@@ -53,7 +53,7 @@ export const MessageText = ({
         children: text,
       })}
       ${ButtonClose({
-        shape: 'full',
+        rounded: 'full',
         color: 'default',
         classes: {
           wrapper: 'nui-message-close',

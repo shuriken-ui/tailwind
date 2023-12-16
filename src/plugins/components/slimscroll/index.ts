@@ -22,7 +22,7 @@ export default plugin.withOptions(
             [`@apply w-${config.width}`]: {},
           },
         [`.${prefix}slimscroll::-webkit-scrollbar-thumb`]: {
-          [`@apply rounded-lg bg-${config.bg} dark:bg-${config.bgDark} duration-300 transition-all`]:
+          [`@apply rounded-lg bg-${config.background.base.light} dark:bg-${config.background.base.dark} duration-300 transition-all`]:
             {},
         },
         [`.${prefix}slimscroll-opaque::-webkit-scrollbar-thumb`]: {
@@ -30,7 +30,8 @@ export default plugin.withOptions(
         },
         [`.${prefix}slimscroll:hover::-webkit-scrollbar-thumb, .${prefix}slimscroll-opaque:hover::-webkit-scrollbar-thumb`]:
           {
-            [`@apply bg-${config.bgHover} dark:bg-${config.bgHoverDark}`]: {},
+            [`@apply bg-${config.background.hover.light} dark:bg-${config.background.hover.dark}`]:
+              {},
           },
       })
     }

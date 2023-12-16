@@ -1,12 +1,12 @@
 import type { MessageVariant } from './message.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-message-rounded',
-  smooth: 'nui-message-smooth',
-  curved: 'nui-message-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-message-rounded',
+  md: 'nui-message-smooth',
+  lg: 'nui-message-curved',
   full: 'nui-message-full',
-} as const satisfies MessageVariant<'shape'>
+} as const satisfies MessageVariant<'rounded'>
 
 export const type = {
   default: 'nui-message-default',

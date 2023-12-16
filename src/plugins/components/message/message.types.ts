@@ -9,12 +9,14 @@ export interface MessageProps extends Record<string, unknown> {
     | 'success'
     | 'warning'
     | 'danger'
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   message?: string
   icon?: boolean | string
   closable?: boolean
   classes?: {
     wrapper?: string | string[]
+    icon?: string | string[]
+    text?: string | string[]
   }
 }
 

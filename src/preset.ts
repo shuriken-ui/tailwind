@@ -40,8 +40,9 @@ export function createPreset(options: PluginOption = {}) {
 
       extend: {
         colors: {
-          muted: colors.slate,
           primary: colors.violet,
+          'primary-invert': colors.white,
+          muted: colors.slate,
           info: colors.sky,
           success: colors.teal,
           warning: colors.amber,

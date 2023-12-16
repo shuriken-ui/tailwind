@@ -1,12 +1,12 @@
 import type { InputFileRegularVariant } from './input-file-regular.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-input-rounded',
-  smooth: 'nui-input-smooth',
-  curved: 'nui-input-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-input-rounded',
+  md: 'nui-input-smooth',
+  lg: 'nui-input-curved',
   full: 'nui-input-full',
-} as const satisfies InputFileRegularVariant<'shape'>
+} as const satisfies InputFileRegularVariant<'rounded'>
 
 export const size = {
   sm: 'nui-input-sm',

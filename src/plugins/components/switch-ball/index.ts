@@ -15,72 +15,135 @@ export default plugin.withOptions(
       const config = theme(`shurikenUi.${key}`) satisfies SwitchBallConfig
 
       addComponents({
+        //Wrapper
         [`.${prefix}switch-ball`]: {
           [`@apply flex cursor-pointer items-center`]: {},
-
+          //Switch:outer
           [`.${prefix}switch-ball-outer`]: {
-            [`@apply ${prefix}focus relative block rounded-${config.handle.rounded}`]:
+            [`@apply ${prefix}focus relative block ${config.track.rounded}`]:
               {},
           },
+          //Switch:handle
           [`.${prefix}switch-ball-handle`]: {
-            [`@apply border-${config.handle.border} dark:border-${config.handle.borderDark} dark:bg-${config.handle.bgDark} absolute start-0.5 top-1/2 z-10 flex h-${config.handle.size} w-${config.handle.size} -translate-y-1/2 items-center justify-center rounded-${config.handle.rounded} border bg-${config.handle.bg} shadow transition focus:w-6`]:
+            [`@apply absolute start-0.5 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center ${config.handle.rounded} shadow focus:w-6`]:
+              {},
+            //Size
+            [`@apply h-${config.handle.size} w-${config.handle.size}`]: {},
+            //Background
+            [`@apply bg-${config.handle.background.light} dark:bg-${config.handle.background.dark}`]:
+              {},
+            //Border
+            [`@apply border border-${config.handle.border.light} dark:border-${config.handle.border.dark}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.track.transition.property} duration-${config.track.transition.duration}`]:
               {},
           },
+          //Switch:track
           [`.${prefix}switch-ball-track`]: {
-            [`@apply bg-${config.track.bg} dark:bg-${config.track.bgDark} block h-6 w-11 rounded-${config.track.rounded} shadow-inner transition-all duration-${config.track.duration}`]:
+            //Base
+            [`@apply block h-6 w-11 ${config.track.rounded}`]: {},
+            //Background
+            [`@apply bg-${config.track.background.light} dark:bg-${config.track.background.dark}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.track.transition.property} duration-${config.track.transition.duration}`]:
               {},
           },
+          //Switch:icon
           [`.${prefix}switch-ball-icon`]: {
-            [`@apply pointer-events-none absolute start-2 top-1/2 z-10 h-${config.icon.size} w-${config.icon.size} translate-y-0 fill-current text-${config.icon.text} opacity-0 transition duration-${config.icon.duration}`]:
+            //Base
+            [`@apply pointer-events-none absolute start-2 top-1/2 z-10 translate-y-0 fill-current opacity-0`]:
+              {},
+            //Color
+            [`@apply text-${config.icon.color.light} dark:text-${config.icon.color.dark}`]:
+              {},
+            //Size
+            [`@apply h-${config.icon.size} w-${config.icon.size}`]: {},
+            //Transition
+            [`@apply transition-${config.track.transition.property} duration-${config.track.transition.duration}`]:
               {},
           },
+          //Label:single
           [`.${prefix}switch-ball-single-label`]: {
-            [`@apply text-${config.singleLabel.text} relative ms-3 cursor-pointer select-none font-${config.singleLabel.font} text-${config.singleLabel.textSize}`]:
+            //Base
+            [`@apply relative ms-3 cursor-pointer select-none`]: {},
+            //Font
+            [`@apply font-${config.label.single.font.family} text-${config.label.single.font.size}`]:
+              {},
+            //Color
+            [`@apply text-${config.label.single.font.color.light} dark:text-${config.label.single.font.color.dark}`]:
               {},
           },
+          //Label:dual
           [`.${prefix}switch-ball-dual-label`]: {
             [`@apply ms-3`]: {},
 
             [`.${prefix}switch-ball-label`]: {
-              [`@apply font-${config.dualLabel.label.font} text-${config.dualLabel.label.text} block text-${config.dualLabel.label.textSize} font-${config.dualLabel.label.fontWeight} dark:text-${config.dualLabel.label.textDark}`]:
+              //Base
+              [`@apply block`]: {},
+              //Font
+              [`@apply font-${config.label.dual.label.font.family} text-${config.label.dual.label.font.size}`]:
+                {},
+              //Color
+              [`@apply text-${config.label.dual.label.font.color.light} dark:text-${config.label.dual.label.font.color.dark}`]:
                 {},
             },
+            //Label:sublabel
             [`.${prefix}switch-ball-sublabel`]: {
-              [`@apply text-${config.dualLabel.sublabel.text} block font-${config.dualLabel.sublabel.font} text-${config.dualLabel.sublabel.textSize}`]:
+              //Base
+              [`@apply block`]: {},
+              //Font
+              [`@apply font-${config.label.dual.sublabel.font.family} text-${config.label.dual.sublabel.font.size}`]:
+                {},
+              //Color
+              [`@apply text-${config.label.dual.sublabel.font.color.light} dark:text-${config.label.dual.sublabel.font.color.dark}`]:
                 {},
             },
           },
+          //Switch:input
           [`.${prefix}switch-ball-input`]: {
             [`@apply absolute z-0 h-${config.input.size} w-${config.input.size} cursor-pointer opacity-0`]:
               {},
-
+            //Input:checked:handle
             [`&:checked ~ .${prefix}switch-ball-handle`]: {
               [`@apply -translate-y-1/2 translate-x-full rtl:-translate-x-full`]:
                 {},
             },
+            //Input:checked:icon
             [`&:checked ~ .${prefix}switch-ball-icon`]: {
               [`@apply -translate-y-1/2 opacity-100`]: {},
             },
           },
+          //color:primary
           [`&.${prefix}switch-ball-primary .${prefix}switch-ball-input:checked ~ .${prefix}switch-ball-track`]:
             {
-              [`@apply bg-${config.primary}`]: {},
+              [`@apply bg-${config.color.primary.light} dark:bg-${config.color.primary.dark}`]:
+                {},
             },
+          //color:info
           [`&.${prefix}switch-ball-info .${prefix}switch-ball-input:checked ~ .${prefix}switch-ball-track`]:
             {
-              [`@apply bg-${config.info}`]: {},
+              [`@apply bg-${config.color.info.light} dark:bg-${config.color.info.dark}`]:
+                {},
             },
+          //color:success
           [`&.${prefix}switch-ball-success .${prefix}switch-ball-input:checked ~ .${prefix}switch-ball-track`]:
             {
-              [`@apply bg-${config.success}`]: {},
+              [`@apply bg-${config.color.success.light} dark:bg-${config.color.success.dark}`]:
+                {},
             },
+          //color:warning
           [`&.${prefix}switch-ball-warning .${prefix}switch-ball-input:checked ~ .${prefix}switch-ball-track`]:
             {
-              [`@apply bg-${config.warning}`]: {},
+              [`@apply bg-${config.color.warning.light} dark:bg-${config.color.warning.dark}`]:
+                {},
             },
+          //color:danger
           [`&.${prefix}switch-ball-danger .${prefix}switch-ball-input:checked ~ .${prefix}switch-ball-track`]:
             {
-              [`@apply bg-${config.danger}`]: {},
+              [`@apply bg-${config.color.danger.light} dark:bg-${config.color.danger.dark}`]:
+                {},
             },
         },
       })

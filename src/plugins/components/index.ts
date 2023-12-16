@@ -24,6 +24,7 @@ import inputFileRegular from './input-file-regular'
 import inputFile from './input-file'
 import input from './input'
 import inputNumber from './input-number'
+import kbd from './kbd'
 import label from './label'
 import link from './link'
 import list from './list'
@@ -80,6 +81,7 @@ const components = [
   inputFile,
   input,
   inputNumber,
+  kbd,
   label,
   link,
   list,

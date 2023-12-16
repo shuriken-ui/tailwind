@@ -18,7 +18,7 @@ const meta = {
   argTypes: {
     size: {
       control: { type: 'select' },
-      options: ['sm', 'md', 'lg', 'xl'],
+      options: ['sm', 'md', 'lg', 'xl', '2xl', '3xl'],
       defaultValue: 'md',
     },
   },
@@ -52,7 +52,7 @@ export const Solid: Story = {
               children: 'Invitation',
             })}
             ${ButtonClose({
-              shape: 'full',
+              rounded: 'full',
             })}
           </div>
           <!-- Body -->
@@ -90,13 +90,13 @@ export const Solid: Story = {
               ${Button({
                 size: 'md',
                 flavor: 'solid',
-                shape: 'smooth',
+                rounded: 'md',
                 children: 'Cancel',
               })}
               ${Button({
                 size: 'md',
                 flavor: 'solid',
-                shape: 'smooth',
+                rounded: 'md',
                 color: 'primary',
                 children: 'Confirm',
               })}

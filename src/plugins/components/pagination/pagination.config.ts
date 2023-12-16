@@ -1,80 +1,155 @@
 export const key = 'pagination' as const
 
 export const defaultConfig = {
-  size: 'full',
+  width: 'full',
+  padding: '1',
+  rounded: {
+    sm: 'rounded-md',
+    md: 'rounded-lg',
+    lg: 'rounded-xl',
+    full: 'rounded-full',
+  },
   list: {
-    border: 'muted-200',
-    borderDark: 'muted-600',
-    bg: 'muted-100',
-    bgDark: 'muted-700',
-    space: '1',
+    border: {
+      light: 'muted-200',
+      dark: 'muted-600',
+    },
+    background: {
+      light: 'muted-100',
+      dark: 'muted-700',
+    },
   },
   buttons: {
-    border: 'muted-200',
-    borderDark: 'muted-600',
-    bg: 'muted-100',
-    bgDark: 'muted-700',
-    space: '1',
+    padding: '1',
+    border: {
+      light: 'muted-200',
+      dark: 'muted-600',
+    },
+    background: {
+      light: 'muted-100',
+      dark: 'muted-700',
+    },
     button: {
-      bg: 'white',
-      bgDark: 'muted-800',
-      bgHover: 'muted-100',
-      bgHoverDark: 'muted-900',
-      text: 'muted-500',
-      textSize: 'sm',
-      textHover: 'muted-700',
-      textHoverDark: 'muted-400',
-      border: 'muted-200',
-      borderDark: 'muted-700',
-      font: 'sans',
-      duration: '300',
-      iconSize: '4',
+      background: {
+        base: {
+          light: 'white',
+          dark: 'muted-800',
+        },
+        hover: {
+          light: 'muted-100',
+          dark: 'muted-900',
+        },
+      },
+      font: {
+        family: 'sans',
+        size: 'sm',
+        color: {
+          base: {
+            light: 'muted-500',
+            dark: 'muted-400',
+          },
+          hover: {
+            light: 'muted-700',
+            dark: 'muted-400',
+          },
+        },
+      },
+      border: {
+        light: 'muted-200',
+        dark: 'muted-700',
+      },
+      icon: {
+        size: '4',
+      },
+      transition: {
+        property: 'all',
+        duration: '300',
+      },
     },
   },
   link: {
+    padding: '1',
     size: '10',
-    font: 'sans',
-    text: 'sm',
-    border: 'muted-200',
-    borderDark: 'muted-600',
-    bg: 'muted-100',
-    bgDark: 'muted-700',
-    space: '1',
-    notActive: {
-      bg: 'white',
-      bgDark: 'muted-800',
-      bgHover: 'muted-100',
-      bgHoverDark: 'muted-900',
-      text: 'muted-500',
-      textHover: 'muted-700',
-      textHoverDark: 'muted-400',
-      border: 'muted-200',
-      borderDark: 'muted-700',
+    font: {
+      family: 'sans',
+      size: 'sm',
+      color: {
+        active: {
+          light: 'white',
+          dark: 'white',
+        },
+        inactive: {
+          base: {
+            light: 'muted-500',
+            dark: 'muted-400',
+          },
+          hover: {
+            light: 'muted-700',
+            dark: 'muted-400',
+          },
+        },
+      },
     },
-    active: {
-      bg: 'primary-500',
-      text: 'white',
-      border: 'primary-500',
-      shadow: 'primary-500/50',
-      shadowDark: 'primary-500/20',
-      shadowSize: 'sm',
+    border: {
+      base: {
+        light: 'muted-200',
+        dark: 'muted-600',
+      },
+      inactive: {
+        light: 'muted-200',
+        dark: 'muted-700',
+      },
+      active: {
+        light: 'primary-500',
+        dark: 'primary-500',
+      },
+    },
+    background: {
+      base: {
+        light: 'muted-100',
+        dark: 'muted-700',
+      },
+      inactive: {
+        base: {
+          light: 'white',
+          dark: 'muted-800',
+        },
+        hover: {
+          light: 'muted-100',
+          dark: 'muted-900',
+        },
+      },
+      active: {
+        light: 'primary-500',
+        dark: 'primary-500',
+      },
+    },
+    shadow: {
+      active: {
+        light: 'primary-500/50',
+        dark: 'primary-500/20',
+        size: 'sm',
+      },
     },
   },
   ellipsis: {
-    border: 'muted-200',
-    borderDark: 'muted-700',
-    text: 'muted-500',
-    textSize: 'sm',
-    bg: 'white',
-    bgDark: 'muted-800',
     size: '10',
-    font: 'sans',
-  },
-  rounded: {
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
-    full: 'full',
+    border: {
+      light: 'muted-200',
+      dark: 'muted-700',
+    },
+    font: {
+      family: 'sans',
+      size: 'sm',
+      color: {
+        light: 'muted-500',
+        dark: 'muted-400',
+      },
+    },
+    background: {
+      light: 'white',
+      dark: 'muted-800',
+    },
   },
 }
 

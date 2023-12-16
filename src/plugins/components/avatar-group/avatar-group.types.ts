@@ -10,6 +10,8 @@ export interface AvatarGroupProps extends Record<string, unknown> {
   }[]
   classes?: {
     wrapper?: string | string[]
+    outer?: string | string[]
+    count?: string | string[]
   }
 }
 

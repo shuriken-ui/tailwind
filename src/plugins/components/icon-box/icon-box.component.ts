@@ -8,9 +8,9 @@ import * as variants from './icon-box.variants'
  * Primary UI component for user interaction
  */
 export const IconBox = ({
-  shape = 'full',
+  rounded = 'full',
   children,
-  flavor = 'solid',
+  variant = 'solid',
   size = 'md',
   color = 'default',
   bordered,
@@ -24,11 +24,11 @@ export const IconBox = ({
       class=${[
         'nui-icon-box',
         variants.size[size],
-        variants.flavor[flavor],
+        variants.variant[variant],
         variants.color[color],
         bordered && 'nui-box-bordered',
-        shape && variants.shape[shape],
-        shape === 'straight' && mask && `nui-box-mask ${variants.mask[mask]}`,
+        rounded && variants.rounded[rounded],
+        rounded === 'none' && mask && `nui-box-mask ${variants.mask[mask]}`,
         classes?.wrapper,
       ]
         .filter(Boolean)

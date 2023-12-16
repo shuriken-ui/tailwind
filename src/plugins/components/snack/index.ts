@@ -15,69 +15,143 @@ export default plugin.withOptions(
       const config = theme(`shurikenUi.${key}`) satisfies SnackConfig
 
       addComponents({
+        //Wrapper
         [`.${prefix}snack`]: {
-          [`@apply inline-flex items-center gap-1 rounded-${config.rounded} outline-transparent`]:
+          [`@apply inline-flex items-center gap-1 ${config.rounded} outline-transparent`]:
             {},
 
           [`.${prefix}snack-icon`]: {
-            [`@apply border-${config.icon.border} -ms-0.5 flex items-center justify-center rounded-${config.icon.rounded} border bg-${config.icon.bg}`]:
+            //Base
+            [`@apply -ms-0.5 flex items-center justify-center ${config.icon.rounded}`]:
+              {},
+            //Background
+            [`@apply bg-${config.icon.background.light} dark:bg-${config.icon.background.dark}`]:
+              {},
+            //Border
+            [`@apply border border-${config.icon.border.light} dark:border-${config.icon.border.dark}`]:
               {},
           },
+          //Snack:image
           [`.${prefix}snack-image`]: {
-            [`@apply -ms-0.5 flex items-center justify-center rounded-${config.image.rounded} shrink-0`]:
+            [`@apply -ms-0.5 flex items-center justify-center ${config.image.rounded} shrink-0`]:
               {},
           },
+          //Image:inner
           [`.${prefix}snack-image-inner`]: {
-            [`@apply rounded-${config.imageInner.rounded}`]: {},
+            [`@apply ${config.image.rounded}`]: {},
           },
+          //Snack:text
           [`.${prefix}snack-text`]: {
-            [`@apply text-${config.text.text} dark:text-${config.text.textDark} font-${config.text.font} text-${config.text.textSize}`]:
+            //Font
+            [`@apply font-${config.font.family}`]: {},
+            //Color
+            [`@apply text-${config.font.color.light} dark:text-${config.font.color.dark}`]:
               {},
           },
+          //Snack:button
           [`.${prefix}snack-button`]: {
             [`@apply hover:!bg-transparent`]: {},
           },
+          //Size:xs
+          [`&.${prefix}snack-xs`]: {
+            //Snack:media:xs
+            [`&:not(.${prefix}has-media)`]: {
+              [`@apply !ps-2`]: {},
+            },
+            //Snack:text
+            [`.${prefix}snack-text`]: {
+              //Font
+              [`@apply text-${config.size.xs.font.size}`]: {},
+            },
+            //Size
+            [`@apply h-${config.size.xs.size}`]: {},
+            //Snack:icon
+            [`.${prefix}snack-icon`]: {
+              [`@apply w-${config.size.xs.icon.outer.size} h-${config.size.xs.icon.outer.size}`]:
+                {},
+            },
+            //Icon:inner
+            [`.${prefix}snack-icon-inner`]: {
+              [`@apply h-${config.size.xs.icon.inner.size} w-${config.size.xs.icon.inner.size}`]:
+                {},
+            },
+            //Snack:image
+            [`.${prefix}snack-image, .${prefix}snack-image-inner`]: {
+              [`@apply w-${config.size.xs.image.outer.size} h-${config.size.xs.image.outer.size}`]:
+                {},
+            },
+          },
+          //Size:sm
           [`&.${prefix}snack-sm`]: {
-            [`@apply h-${config.snackSM.size}`]: {},
-
+            //Snack:media:sm
+            [`&:not(.${prefix}has-media)`]: {
+              [`@apply !ps-3`]: {},
+            },
+            //Snack:text
+            [`.${prefix}snack-text`]: {
+              //Font
+              [`@apply text-${config.size.sm.font.size}`]: {},
+            },
+            //Size
+            [`@apply h-${config.size.sm.size}`]: {},
+            //Snack:icon
             [`.${prefix}snack-icon`]: {
-              [`@apply w-${config.snackSM.icon.size} h-${config.snackSM.icon.size}`]:
+              [`@apply w-${config.size.sm.icon.outer.size} h-${config.size.sm.icon.outer.size}`]:
                 {},
             },
+            //Icon:inner
             [`.${prefix}snack-icon-inner`]: {
-              [`@apply h-${config.snackSM.iconsInner.size} w-${config.snackSM.iconsInner.size}`]:
+              [`@apply h-${config.size.sm.icon.inner.size} w-${config.size.sm.icon.inner.size}`]:
                 {},
             },
+            //Snack:image
             [`.${prefix}snack-image, .${prefix}snack-image-inner`]: {
-              [`@apply w-${config.snackSM.imageAndImageInner.size} h-${config.snackSM.imageAndImageInner.size}`]:
+              [`@apply w-${config.size.sm.image.outer.size} h-${config.size.sm.image.outer.size}`]:
                 {},
             },
           },
+          //Size:md
           [`&.${prefix}snack-md`]: {
-            [`@apply h-${config.snackMD.size}`]: {},
-
+            //Snack:media:md
+            [`&:not(.${prefix}has-media)`]: {
+              [`@apply !ps-4`]: {},
+            },
+            //Snack:text
+            [`.${prefix}snack-text`]: {
+              //Font
+              [`@apply text-${config.size.md.font.size}`]: {},
+            },
+            //Size
+            [`@apply h-${config.size.md.size}`]: {},
+            //Snack:icon
             [`.${prefix}snack-icon`]: {
-              [`@apply w-${config.snackMD.icon.size} h-${config.snackMD.icon.size}`]:
+              [`@apply w-${config.size.md.icon.outer.size} h-${config.size.md.icon.outer.size}`]:
                 {},
             },
+            //Icon:inner
             [`.${prefix}snack-icon-inner`]: {
-              [`@apply h-${config.snackMD.iconsInner.size} w-${config.snackMD.iconsInner.size}`]:
+              [`@apply h-${config.size.md.icon.inner.size} w-${config.size.md.icon.inner.size}`]:
                 {},
             },
+            //Snack:image
             [`.${prefix}snack-image, .${prefix}snack-image-inner`]: {
-              [`@apply w-${config.snackMD.imageAndImageInner.size} h-${config.snackMD.imageAndImageInner.size}`]:
+              [`@apply w-${config.size.md.image.outer.size} h-${config.size.md.image.outer.size}`]:
                 {},
             },
           },
+          //Color:default
           [`&.${prefix}snack-default`]: {
-            [`@apply dark:bg-${config.default.bgDark} border-${config.default.border} dark:border-${config.default.borderDark} border bg-${config.default.bg}`]:
+            //Background
+            [`@apply bg-${config.color.default.background.light} dark:bg-${config.color.default.background.dark}`]:
+              {},
+            //Border
+            [`@apply border border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
               {},
           },
           [`&.${prefix}snack-muted`]: {
-            [`@apply bg-${config.muted.bg} dark:bg-${config.muted.bgDark}`]: {},
-          },
-          [`&:not(.${prefix}has-media)`]: {
-            [`@apply ps-4`]: {},
+            //Background
+            [`@apply bg-${config.color.muted.background.light} dark:bg-${config.color.muted.background.dark}`]:
+              {},
           },
         },
       })

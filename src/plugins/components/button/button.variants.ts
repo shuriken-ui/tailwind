@@ -7,19 +7,19 @@ export const size = {
   xl: 'nui-button-big',
 } as const satisfies ButtonVariant<'size'>
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-button-rounded',
-  curved: 'nui-button-curved',
-  smooth: 'nui-button-smooth',
+export const rounded = {
+  none: '',
+  sm: 'nui-button-rounded',
+  md: 'nui-button-curved',
+  lg: 'nui-button-smooth',
   full: 'nui-button-full',
-} as const satisfies ButtonVariant<'shape'>
+} as const satisfies ButtonVariant<'rounded'>
 
-export const flavor = {
+export const variant = {
   solid: 'nui-button-solid',
   pastel: 'nui-button-pastel',
   outline: 'nui-button-outline',
-} as const satisfies ButtonVariant<'flavor'>
+} as const satisfies ButtonVariant<'variant'>
 
 export const color = {
   none: '',

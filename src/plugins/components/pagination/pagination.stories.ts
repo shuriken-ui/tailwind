@@ -10,10 +10,10 @@ const meta = {
   // tags: ['autodocs'],
   render: (args) => Pagination(args),
   argTypes: {
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'none',
     },
   },
 } satisfies Meta<PaginationAttrs>
@@ -27,14 +27,14 @@ type Story = StoryObj<PaginationAttrs>
 export const Main: Story = {
   name: 'Main example',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const ShapeStraight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     shape: 'straight',
     style: 'min-width: 480px;',
@@ -42,33 +42,33 @@ export const ShapeStraight: Story = {
 }
 
 export const ShapeRounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     style: 'min-width: 480px;',
   },
 }
 
 export const ShapeSmooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
-    shape: 'smooth',
+    rounded: 'md',
     style: 'min-width: 480px;',
   },
 }
 
 export const ShapeCurved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
-    shape: 'curved',
+    rounded: 'lg',
     style: 'min-width: 480px;',
   },
 }
 
 export const ShapeFull: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
-    shape: 'full',
+    rounded: 'full',
     style: 'min-width: 480px;',
   },
 }

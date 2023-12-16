@@ -34,9 +34,9 @@ const meta = {
       ],
       defaultValue: 'default',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
+      options: ['none', 'sm', 'md', 'lg', 'full'],
       defaultValue: 'straight',
     },
     onClick: { action: 'onClick' },
@@ -56,42 +56,42 @@ export const Solid: Story = {
     label: 'Action',
     // set default values used for UI preview
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     label: 'Button',
-    shape: 'straight',
+    rounded: 'none',
   },
 }
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     label: 'Button',
   },
 }
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
-    shape: 'smooth',
+    rounded: 'md',
     label: 'Button',
   },
 }
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
-    shape: 'curved',
+    rounded: 'lg',
     label: 'Button',
   },
 }
 export const Full: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
     shape: 'full',
     label: 'Button',
@@ -106,7 +106,7 @@ export const ColorDefault: Story = {
     color: 'default',
     label: 'Button',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
@@ -116,7 +116,7 @@ export const ColorMuted: Story = {
     color: 'muted',
     label: 'Button',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
@@ -126,7 +126,7 @@ export const ColorPrimary: Story = {
     color: 'primary',
     label: 'Button',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
@@ -136,7 +136,7 @@ export const ColorInfo: Story = {
     color: 'info',
     label: 'Button',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
@@ -146,7 +146,7 @@ export const ColorSuccess: Story = {
     color: 'success',
     label: 'Button',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
@@ -156,7 +156,7 @@ export const ColorWarning: Story = {
     color: 'warning',
     label: 'Button',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 
@@ -166,48 +166,48 @@ export const ColorDanger: Story = {
     color: 'danger',
     label: 'Button',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
   },
 }
 // #endregion
 
 // #region State: loading
 export const StraightLoading: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     label: 'Button',
-    shape: 'straight',
+    rounded: 'none',
     loading: true,
   },
 }
 export const RoundedLoading: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     label: 'Button',
     loading: true,
   },
 }
 export const SmoothLoading: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
-    shape: 'smooth',
+    rounded: 'md',
     label: 'Button',
     loading: true,
   },
 }
 export const CurvedLoading: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
-    shape: 'curved',
+    rounded: 'lg',
     label: 'Button',
     loading: true,
   },
 }
 export const FullLoading: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
-    shape: 'full',
+    rounded: 'full',
     label: 'Button',
     loading: true,
   },
@@ -216,39 +216,39 @@ export const FullLoading: Story = {
 
 // #region State: disabled
 export const StraightDisabled: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     label: 'Button',
-    shape: 'straight',
+    rounded: 'none',
     '?disabled': true,
   },
 }
 export const RoundedDisabled: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     label: 'Button',
     '?disabled': true,
   },
 }
 export const SmoothDisabled: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
-    shape: 'smooth',
+    rounded: 'md',
     label: 'Button',
     '?disabled': true,
   },
 }
 export const CurvedDisabled: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
-    shape: 'curved',
+    rounded: 'lg',
     label: 'Button',
     '?disabled': true,
   },
 }
 export const FullDisabled: Story = {
-  name: 'Shape: full',
+  name: 'Rounded:',
   args: {
     shape: 'full',
     label: 'Button',
@@ -261,7 +261,7 @@ export const FullDisabled: Story = {
 export const Slot: Story = {
   name: 'Slots: default slot',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <span>Using the slot</span>
     `,

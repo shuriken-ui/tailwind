@@ -1,11 +1,12 @@
 import type { IconBoxVariant } from './icon-box.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-box-rounded',
-  curved: 'nui-box-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-box-rounded',
+  md: 'nui-box-smooth',
+  lg: 'nui-box-curved',
   full: 'nui-box-full',
-} as const satisfies IconBoxVariant<'shape'>
+} as const satisfies IconBoxVariant<'rounded'>
 
 export const size = {
   xs: 'nui-box-xs',
@@ -16,11 +17,11 @@ export const size = {
   '2xl': 'nui-box-2xl',
 } as const satisfies IconBoxVariant<'size'>
 
-export const flavor = {
+export const variant = {
   solid: 'nui-box-solid',
   pastel: 'nui-box-pastel',
   outline: 'nui-box-outline',
-} as const satisfies IconBoxVariant<'flavor'>
+} as const satisfies IconBoxVariant<'variant'>
 
 export const color = {
   default: 'nui-box-default',

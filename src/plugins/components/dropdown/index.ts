@@ -15,119 +15,180 @@ export default plugin.withOptions(
       const config = theme(`shurikenUi.${key}`) satisfies DropdownConfig
 
       addComponents({
+        //Wrapper
         [`.${prefix}dropdown`]: {
-          [`@apply text-${config.textPosition}`]: {},
-
+          [`@apply text-${config.align}`]: {},
+          //Menu
           [`.${prefix}menu`]: {
             [`@apply relative inline-block`]: {},
           },
+          //Menu Content
           [`.${prefix}menu-content`]: {
             [`@apply p-2`]: {},
           },
+          //Button:context
           [`.${prefix}context-button`]: {
-            [`@apply dark:ring-offset-${config.contextButton.ringOffsetDark} inline-flex h-${config.contextButton.size} w-${config.contextButton.size} items-center justify-center rounded-${config.contextButton.rounded} ring-1 ring-transparent transition-all duration-${config.contextButton.duration} group-hover:ring-${config.contextButton.ringGroupHover}`]:
+            //Base
+            [`@apply inline-flex items-center justify-center rounded-${config.button.context.rounded}`]:
               {},
+            //Size
+            [`@apply h-${config.button.context.size} w-${config.button.context.size}`]:
+              {},
+            //Ring
+            [`@apply ring-1 ring-transparent ring-offset-${config.button.context.ring.offset.color.light} dark:ring-offset-${config.button.context.ring.offset.color.dark}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.button.context.transition.property} duration-${config.button.context.transition.duration}`]:
+              {},
+            //Context:inner
             [`.${prefix}context-button-inner`]: {
-              [`@apply border-${config.contextButton.inner.border} dark:border-${config.contextButton.inner.borderDark} dark:bg-${config.contextButton.inner.bgDark} flex h-${config.contextButton.inner.size} w-${config.contextButton.inner.size} items-center justify-center rounded-${config.contextButton.inner.rounded} border bg-${config.contextButton.inner.bg}`]:
+              //Base
+              [`@apply flex items-center justify-center rounded-${config.button.context.inner.rounded}`]:
+                {},
+              //Size
+              [`@apply h-${config.button.context.inner.size} w-${config.button.context.inner.size}`]:
+                {},
+              //Background
+              [`@apply bg-${config.button.context.inner.background.light} dark:bg-${config.button.context.inner.background.dark}`]:
+                {},
+              //Border
+              [`@apply border border-${config.button.context.inner.border.light} dark:border-${config.button.context.inner.border.dark}`]:
                 {},
             },
+            //Context:icon
             [`.${prefix}context-icon`]: {
-              [`@apply text-${config.contextButton.icon.text} h-${config.contextButton.icon.size} w-${config.contextButton.icon.size} transition-transform duration-${config.contextButton.icon.duration}`]:
+              //Size
+              [`@apply h-${config.button.context.icon.size} w-${config.button.context.icon.size}`]:
+                {},
+              //Color
+              [`@apply text-${config.button.context.icon.font.color.light} dark:text-${config.button.context.icon.font.color.dark}`]:
+                {},
+              //Transition
+              [`@apply transition-${config.button.context.transition.property} duration-${config.button.context.transition.duration}`]:
                 {},
             },
           },
+          //Button:text
           [`.${prefix}text-button`]: {
-            [`@apply flex items-center space-x-1 text-${config.textButton.text}`]:
+            //Base
+            [`@apply flex items-center space-x-1`]: {},
+            //Font
+            [`@apply font-${config.button.text.font.family} text-${config.button.text.font.color.light} dark:text-${config.button.text.font.color.dark}`]:
               {},
+            //Text:inner
             [`.${prefix}text-button-inner`]: {
-              [`@apply font-${config.textButton.inner.font}`]: {},
+              [`@apply font-${config.button.text.font.family}`]: {},
             },
           },
+          //Button:chevron
           [`.${prefix}chevron`]: {
-            [`@apply h-${config.chevron.size} w-${config.chevron.size} transition-transform duration-${config.chevron.duration}`]:
+            [`@apply h-${config.button.chevron.size} w-${config.button.chevron.size}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.button.chevron.transition.property} duration-${config.button.chevron.transition.duration}`]:
               {},
           },
+          //Dropdown:menu
           [`.${prefix}dropdown-menu`]: {
-            [`@apply absolute z-50 mt-2 shadow-${config.dropdownMenu.shadow} shadow-${config.dropdownMenu.shadowColor} dark:shadow-${config.dropdownMenu.shadowColorDark} focus:outline-none`]:
+            //Base
+            [`@apply absolute z-50 mt-2 focus:outline-none`]: {},
+            //Shadow
+            [`@apply shadow-${config.menu.shadow.size} shadow-${config.menu.shadow.light} dark:shadow-${config.menu.shadow.dark}`]:
               {},
+            //Menu:header
             [`.${prefix}menu-header`]: {
               [`@apply px-4 pt-5`]: {},
             },
+            //Header:inner
             [`.${prefix}menu-header-inner`]: {
               [`@apply relative flex items-center justify-between`]: {},
             },
+            //Header:title
             [`.${prefix}menu-header-title`]: {
-              [`@apply font-${config.dropdownMenu.headerTitle.font} font-${config.dropdownMenu.headerTitle.fontSize} text-${config.dropdownMenu.headerTitle.text} dark:text-${config.dropdownMenu.headerTitle.textDark} text-${config.dropdownMenu.headerTitle.textSize} uppercase`]:
+              //Base
+              [`@apply font-${config.menu.header.title.font.family} font-${config.menu.header.title.font.weight} text-${config.menu.header.title.font.size} uppercase`]:
+                {},
+              //Color
+              [`@apply text-${config.menu.header.title.font.color.light} dark:text-${config.menu.header.title.font.color.dark}`]:
                 {},
             },
+            //Menu:content
             [`.${prefix}menu-content`]: {
               [`@apply p-2 space-y-1`]: {},
             },
+            //Size:md
             [`&.${prefix}menu-md`]: {
               [`@apply w-56`]: {},
             },
+            //Size:lg
             [`&.${prefix}menu-lg`]: {
               [`@apply w-72`]: {},
             },
+            //Rounded:sm
             [`&.${prefix}menu-rounded`]: {
-              [`@apply rounded-${config.dropdownMenu.rounded.default}`]: {},
+              [`@apply ${config.menu.rounded.sm}`]: {},
             },
+            //Rounded:md
             [`&.${prefix}menu-smooth`]: {
-              [`@apply rounded-${config.dropdownMenu.rounded.smooth}`]: {},
+              [`@apply ${config.menu.rounded.md}`]: {},
             },
+            //Rounded:lg
             [`&.${prefix}menu-curved`]: {
-              [`@apply rounded-${config.dropdownMenu.rounded.curved}`]: {},
+              [`@apply ${config.menu.rounded.lg}`]: {},
             },
+            //Color:white
             [`&.${prefix}menu-white`]: {
-              [`@apply border bg-${config.dropdownMenu.white.bg} border-${config.dropdownMenu.white.border} dark:border-${config.dropdownMenu.white.borderDark} dark:bg-${config.dropdownMenu.white.bgDark}`]:
+              //Border
+              [`@apply border border-${config.menu.color.white.border.light} dark:border-${config.menu.color.white.border.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.menu.color.white.background.light} dark:bg-${config.menu.color.white.background.dark}`]:
                 {},
             },
+            //Color:white-contrast
             [`&.${prefix}menu-white-contrast`]: {
-              [`@apply border bg-${config.dropdownMenu.whiteContrast.bg} border-${config.dropdownMenu.whiteContrast.border} dark:border-${config.dropdownMenu.whiteContrast.borderDark} dark:bg-${config.dropdownMenu.whiteContrast.bgDark}`]:
+              //Border
+              [`@apply border border-${config.menu.color.whiteContrast.border.light} dark:border-${config.menu.color.whiteContrast.border.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.menu.color.whiteContrast.background.light} dark:bg-${config.menu.color.whiteContrast.background.dark}`]:
                 {},
             },
+            //Color:muted
             [`&.${prefix}menu-muted`]: {
-              [`@apply border bg-${config.dropdownMenu.muted.bg} border-${config.dropdownMenu.muted.border} dark:border-${config.dropdownMenu.muted.borderDark} dark:bg-${config.dropdownMenu.muted.bgDark}`]:
+              //Border
+              [`@apply border border-${config.menu.color.muted.border.light} dark:border-${config.menu.color.muted.border.dark}`]:
+                {},
+              //Background
+              [`@apply bg-${config.menu.color.muted.background.light} dark:bg-${config.menu.color.muted.background.dark}`]:
                 {},
             },
+            //Color:muted-contrast
             [`&.${prefix}menu-muted-contrast`]: {
-              [`@apply border bg-${config.dropdownMenu.mutedContrast.bg} border-${config.dropdownMenu.mutedContrast.border} dark:border-${config.dropdownMenu.mutedContrast.borderDark} dark:bg-${config.dropdownMenu.mutedContrast.bgDark}`]:
+              //Border
+              [`@apply border border-${config.menu.color.mutedContrast.border.light} dark:border-${config.menu.color.mutedContrast.border.dark}`]:
                 {},
-            },
-            [`&.${prefix}menu-primary`]: {
-              [`@apply border bg-${config.dropdownMenu.primary.bg} border-${config.dropdownMenu.primary.border}`]:
-                {},
-            },
-            [`&.${prefix}menu-info`]: {
-              [`@apply border bg-${config.dropdownMenu.info.bg} border-${config.dropdownMenu.info.border}`]:
-                {},
-            },
-            [`&.${prefix}menu-success`]: {
-              [`@apply border bg-${config.dropdownMenu.success.bg} border-${config.dropdownMenu.success.border}`]:
-                {},
-            },
-            [`&.${prefix}menu-warning`]: {
-              [`@apply border bg-${config.dropdownMenu.warning.bg} border-${config.dropdownMenu.warning.border}`]:
-                {},
-            },
-            [`&.${prefix}menu-danger`]: {
-              [`@apply border bg-${config.dropdownMenu.danger.bg} border-${config.dropdownMenu.danger.border}`]:
+              //Background
+              [`@apply bg-${config.menu.color.mutedContrast.background.light} dark:bg-${config.menu.color.mutedContrast.background.dark}`]:
                 {},
             },
           },
+          //Orientation:start
           [`&.${prefix}dropdown-start`]: {
             [`.${prefix}dropdown-menu`]: {
               [`@apply start-0 origin-top-left`]: {},
             },
           },
+          //Orientation:end
           [`&.${prefix}dropdown-end`]: {
             [`.${prefix}dropdown-menu`]: {
               [`@apply end-0 origin-top-right`]: {},
             },
           },
+          //Context:hover
           [`&:hover`]: {
             [`.${prefix}context-button`]: {
-              [`@apply ring-${config.hover.ring} dark:ring-${config.hover.ringDark}`]:
+              [`@apply ring-offset-${config.button.context.ring.offset.size} ring-${config.button.context.ring.color.hover.light} dark:ring-${config.button.context.ring.color.hover.dark}`]:
                 {},
             },
           },

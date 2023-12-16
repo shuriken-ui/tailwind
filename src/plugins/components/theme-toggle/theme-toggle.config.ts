@@ -1,46 +1,78 @@
 export const key = 'themeToggle' as const
 
 export const defaultConfig = {
-  size: '9',
-  rounded: 'full',
-  duration: '300',
-  ringDark: 'muted-900',
+  outer: {
+    size: '9',
+    rounded: 'full',
+  },
+  ring: {
+    light: 'muted-200',
+    dark: 'muted-900',
+  },
   inner: {
     size: '9',
     rounded: 'full',
-    bg: 'white',
-    bgDark: 'muted-800',
-    border: 'muted-300',
-    borderDark: 'muted-700',
+    background: {
+      light: 'white',
+      dark: 'muted-800',
+    },
+    border: {
+      light: 'muted-300',
+      dark: 'muted-700',
+    },
   },
   input: {
     size: 'full',
   },
-  sun: {
-    size: '5',
-    duration: '300',
-    text: 'yellow-400',
-  },
-  moon: {
-    size: '5',
-    duration: '300',
-    text: 'yellow-400',
+  icon: {
+    sun: {
+      size: '5',
+      color: 'yellow-400',
+      duration: '300',
+    },
+    moon: {
+      size: '5',
+      color: 'yellow-400',
+      duration: '300',
+    },
+    transition: {
+      property: 'all',
+      duration: '300',
+    },
   },
   inverted: {
-    ring: 'muted-500',
-    ringDark: 'muted-400',
-    inner: {
-      bg: 'primary-700',
+    enabled: {
+      ring: {
+        light: 'muted-500',
+        dark: 'muted-400',
+      },
+      inner: {
+        background: {
+          light: 'primary-700',
+          dark: 'primary-700',
+        },
+      },
+    },
+    disabled: {
+      ring: {
+        light: 'muted-500',
+        dark: 'muted-900',
+      },
+      inner: {
+        background: {
+          light: 'white',
+          dark: 'muted-800',
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'muted-700',
+        },
+      },
     },
   },
-  notInverted: {
-    ringDark: 'muted-900',
-    inner: {
-      bg: 'white',
-      bgDark: 'muted-800',
-      border: 'muted-300',
-      borderDark: 'muted-700',
-    },
+  transition: {
+    property: 'all',
+    duration: '300',
   },
 }
 

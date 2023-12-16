@@ -1,6 +1,7 @@
 import type { SnackVariant } from './snack.types'
 
 export const size = {
+  xs: 'nui-snack-xs',
   sm: 'nui-snack-sm',
   md: 'nui-snack-md',
 } as const satisfies SnackVariant<'size'>

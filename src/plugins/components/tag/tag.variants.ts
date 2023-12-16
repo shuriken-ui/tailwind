@@ -1,17 +1,18 @@
 import type { TagVariant } from './tag.types'
 
-export const flavor = {
+export const variant = {
   solid: 'nui-tag-solid',
   pastel: 'nui-tag-pastel',
   outline: 'nui-tag-outline',
-} as const satisfies TagVariant<'flavor'>
+} as const satisfies TagVariant<'variant'>
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-tag-rounded',
-  curved: 'nui-tag-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-tag-rounded',
+  md: 'nui-tag-smooth',
+  lg: 'nui-tag-curved',
   full: 'nui-tag-full',
-} as const satisfies TagVariant<'shape'>
+} as const satisfies TagVariant<'rounded'>
 
 export const color = {
   default: 'nui-tag-default',

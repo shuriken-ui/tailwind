@@ -2,34 +2,74 @@ export const key = 'tabs' as const
 
 export const defaultConfig = {
   inner: {
-    font: 'sans',
-    space: '6',
+    font: {
+      family: 'sans',
+    },
+    margin: {
+      bottom: '6',
+    },
   },
   item: {
-    text: 'sm',
-    duration: '300',
-    notActive: {
-      text: 'muted-400',
+    font: {
+      size: 'sm',
+      color: {
+        active: {
+          light: 'muted-800',
+          dark: 'muted-100',
+        },
+        inactive: {
+          light: 'muted-400',
+          dark: 'muted-400',
+        },
+      },
     },
-    active: {
-      border: 'primary-500',
-      text: 'muted-800',
-      textDark: 'muted-100',
+    border: {
+      active: {
+        light: 'primary-500',
+        dark: 'primary-500',
+      },
+      inactive: {
+        light: 'transparent',
+        dark: 'transparent',
+      },
+    },
+    transition: {
+      property: 'all',
+      duration: '300',
     },
   },
-  pillItem: {
-    rounded: 'xl',
-    textPosition: 'center',
-    text: 'xs',
-    duration: '300',
-    notActive: {
-      text: 'muted-400',
+  pill: {
+    rounded: 'rounded-xl',
+    font: {
+      align: 'center',
+      size: 'xs',
+      color: {
+        active: {
+          light: 'primary-invert',
+          dark: 'primary-invert',
+        },
+        inactive: {
+          light: 'muted-400',
+          dark: 'muted-400',
+        },
+      },
     },
-    active: {
-      bg: 'primary-500',
-      text: 'white',
-      shadow: 'primary-500/50',
-      shadowSize: 'lg',
+    background: {
+      active: {
+        light: 'primary-600',
+        dark: 'primary-600',
+      },
+    },
+    shadow: {
+      active: {
+        size: 'lg',
+        light: 'primary-500/50',
+        dark: 'primary-500/50',
+      },
+    },
+    transition: {
+      property: 'all',
+      duration: '300',
     },
   },
 }

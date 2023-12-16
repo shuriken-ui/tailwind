@@ -2,7 +2,7 @@ import type { PropertyVariant } from '~/types/utils'
 
 export interface TextareaProps extends Record<string, unknown> {
   id?: string
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   label?: string
   labelFloat?: boolean
   colorFocus?: boolean

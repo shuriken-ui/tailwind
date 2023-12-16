@@ -9,7 +9,13 @@ const meta = {
   title: 'Shuriken UI/Base/Breadcrumb',
   // tags: ['autodocs'],
   render: (args) => Breadcrumb(args),
-  argTypes: {},
+  argTypes: {
+    separator: {
+      control: { type: 'select' },
+      options: ['dot', 'slash', 'arrow', 'chevron'],
+      defaultValue: 'dot',
+    },
+  },
 } satisfies Meta<BreadcrumbAttrs>
 
 export default meta
@@ -40,6 +46,46 @@ export const Main: Story = {
   args: {
     // set default values used for UI preview
     items: data,
+  },
+}
+// #endregion
+
+// #region Dot
+export const SeparatorDot: Story = {
+  name: 'Separator: Dot',
+  args: {
+    items: data,
+    separator: 'dot',
+  },
+}
+// #endregion
+
+// #region Slash
+export const SeparatorSlash: Story = {
+  name: 'Separator: Slash',
+  args: {
+    items: data,
+    separator: 'slash',
+  },
+}
+// #endregion
+
+// #region Chevron
+export const SeparatorChevron: Story = {
+  name: 'Separator: Chevron',
+  args: {
+    items: data,
+    separator: 'chevron',
+  },
+}
+// #endregion
+
+// #region Arrow
+export const SeparatorArrow: Story = {
+  name: 'Separator: Arrow',
+  args: {
+    items: data,
+    separator: 'arrow',
   },
 }
 // #endregion

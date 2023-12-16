@@ -16,63 +16,129 @@ export default plugin.withOptions(
 
       addComponents({
         [`.${prefix}button-icon`]: {
-          [`@apply ${prefix}focus relative inline-flex items-center justify-center space-x-1 font-sans text-${config.text} font-${config.font} leading-5 no-underline transition-all duration-${config.duration} disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none`]:
+          //Base
+          [`@apply ${prefix}focus relative inline-flex items-center justify-center space-x-1 leading-5 no-underline disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none`]:
             {},
-
+          //Font
+          [`@apply font-${config.font.family} text-${config.font.size} font-${config.font.weight}`]:
+            {},
+          //Transition
+          [`@apply transition-${config.transition.property} duration-${config.transition.duration}`]:
+            {},
+          //Size:sm
           [`&.${prefix}button-small`]: {
-            [`@apply h-${config.buttonSmall.size} w-${config.buttonSmall.size} p-${config.buttonSmall.space}`]:
+            [`@apply h-${config.size.sm.size} w-${config.size.sm.size} p-${config.size.sm.padding}`]:
               {},
           },
+          //Size:md
           [`&.${prefix}button-medium`]: {
-            [`@apply h-${config.buttonMedium.size} w-${config.buttonMedium.size} p-${config.buttonMedium.space}`]:
+            [`@apply h-${config.size.md.size} w-${config.size.md.size} p-${config.size.md.padding}`]:
               {},
           },
+          //Size:lg
           [`&.${prefix}button-large`]: {
-            [`@apply h-${config.buttonLarge.size} w-${config.buttonLarge.size} p-${config.buttonLarge.space}`]:
+            [`@apply h-${config.size.lg.size} w-${config.size.lg.size} p-${config.size.lg.padding}`]:
               {},
           },
+          //Rounded:sm
           [`&.${prefix}button-rounded`]: {
-            [`@apply rounded`]: {},
+            [`@apply ${config.rounded.sm}`]: {},
           },
+          //Rounded:md
           [`&.${prefix}button-smooth`]: {
-            [`@apply rounded-${config.rounded.smooth}`]: {},
+            [`@apply ${config.rounded.md}`]: {},
           },
+          //Rounded:lg
           [`&.${prefix}button-curved`]: {
-            [`@apply rounded-${config.rounded.curved}`]: {},
+            [`@apply ${config.rounded.lg}`]: {},
           },
+          //Rounded:full
           [`&.${prefix}button-full`]: {
-            [`@apply rounded-${config.rounded.full}`]: {},
+            [`@apply ${config.rounded.full}`]: {},
           },
+          //Loading
           [`&.${prefix}button-loading`]: {
             [`@apply !text-transparent`]: {},
           },
-
+          //Color:default
           [`&.${prefix}button-default`]: {
-            [`@apply text-${config.default.text} bg-${config.default.bg} dark:bg-${config.default.bgDark} dark:text-${config.default.textDark} dark:hover:bg-${config.default.bgHoverDark} hover:bg-${config.default.bgHover} border border-${config.default.border} dark:border-${config.default.borderDark}`]:
+            //Font
+            [`@apply text-${config.color.default.text.color.light} dark:text-${config.color.default.text.color.dark}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.default.background.base.light} dark:bg-${config.color.default.background.base.dark}`]:
+              {},
+            //Background:hover
+            [`@apply hover:bg-${config.color.default.background.hover.light} dark:hover:bg-${config.color.default.background.hover.dark}`]:
+              {},
+            //Border
+            [`@apply border border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
               {},
           },
           [`&.${prefix}button-muted`]: {
-            [`@apply text-${config.muted.text} bg-${config.muted.bg} dark:text-${config.muted.textDark} dark:bg-${config.muted.bgDark} dark:hover:bg-${config.muted.bgHoverDark} hover:bg-${config.muted.bgHover}`]:
+            //Font
+            [`@apply text-${config.color.muted.text.color.light} dark:text-${config.color.muted.text.color.dark}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.muted.background.base.light} dark:bg-${config.color.muted.background.base.dark}`]:
+              {},
+            //Background:hover
+            [`@apply hover:bg-${config.color.muted.background.hover.light} dark:hover:bg-${config.color.muted.background.hover.dark}`]:
               {},
           },
           [`&.${prefix}button-primary`]: {
-            [`@apply text-${config.primary.text} border-2 border-${config.primary.border} hover:bg-${config.primary.bgHover}`]:
+            //Font
+            [`@apply text-${config.color.primary.text.color.light} dark:text-${config.color.primary.text.color.dark}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.primary.background.base.light} dark:bg-${config.color.primary.background.base.dark}`]:
+              {},
+            //Background:hover
+            [`@apply hover:bg-${config.color.primary.background.hover.light} dark:hover:bg-${config.color.primary.background.hover.dark}`]:
               {},
           },
           [`&.${prefix}button-info`]: {
-            [`@apply text-${config.info.text} border-2 border-${config.info.border} hover:bg-${config.info.bgHover}`]:
+            //Font
+            [`@apply text-${config.color.info.text.color.light} dark:text-${config.color.info.text.color.dark}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.info.background.base.light} dark:bg-${config.color.info.background.base.dark}`]:
+              {},
+            //Background:hover
+            [`@apply hover:bg-${config.color.info.background.hover.light} dark:hover:bg-${config.color.info.background.hover.dark}`]:
               {},
           },
           [`&.${prefix}button-success`]: {
-            [`@apply text-${config.success.text} border-2 border-${config.success.border} hover:bg-${config.success.bgHover}`]:
+            //Font
+            [`@apply text-${config.color.success.text.color.light} dark:text-${config.color.success.text.color.dark}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.success.background.base.light} dark:bg-${config.color.success.background.base.dark}`]:
+              {},
+            //Background:hover
+            [`@apply hover:bg-${config.color.success.background.hover.light} dark:hover:bg-${config.color.success.background.hover.dark}`]:
               {},
           },
           [`&.${prefix}button-warning`]: {
-            [`@apply text-${config.warning.text} border-2 border-${config.warning.border} hover:bg-${config.warning.bgHover}`]:
+            //Font
+            [`@apply text-${config.color.warning.text.color.light} dark:text-${config.color.warning.text.color.dark}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.warning.background.base.light} dark:bg-${config.color.warning.background.base.dark}`]:
+              {},
+            //Background:hover
+            [`@apply hover:bg-${config.color.warning.background.hover.light} dark:hover:bg-${config.color.warning.background.hover.dark}`]:
               {},
           },
           [`&.${prefix}button-danger`]: {
-            [`@apply text-${config.danger.text} border-2 border-${config.danger.border} hover:bg-${config.danger.bgHover}`]:
+            //Font
+            [`@apply text-${config.color.danger.text.color.light} dark:text-${config.color.danger.text.color.dark}`]:
+              {},
+            //Background
+            [`@apply bg-${config.color.danger.background.base.light} dark:bg-${config.color.danger.background.base.dark}`]:
+              {},
+            //Background:hover
+            [`@apply hover:bg-${config.color.danger.background.hover.light} dark:hover:bg-${config.color.danger.background.hover.dark}`]:
               {},
           },
         },

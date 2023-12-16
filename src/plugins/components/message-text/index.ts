@@ -19,87 +19,117 @@ export default plugin.withOptions(
       const config = theme(`shurikenUi.${key}`) satisfies MessageTextConfig
 
       addComponents({
+        //Wrapper
         [`.${prefix}message-text`]: {
-          [`@apply relative p-${config.space}`]: {},
-
+          [`@apply relative p-${config.padding}`]: {},
+          //Message:header
           [`.${prefix}message-head`]: {
-            [`@apply flex items-center gap-${config.head.space} mb-2`]: {},
+            [`@apply flex items-center gap-${config.header.gap} mb-3`]: {},
           },
+          //Message:dot
           [`.${prefix}message-dot`]: {
-            [`@apply inline-block h-${config.dot.size} w-${config.dot.size} rounded-${config.dot.rounded} bg-${config.dot.bg} dark:bg-${config.dot.bgDark}`]:
+            //Base
+            [`@apply inline-block h-${config.dot.size} w-${config.dot.size} rounded-${config.dot.rounded}`]:
+              {},
+            //Background
+            [`@apply bg-${config.dot.background.light} dark:bg-${config.dot.background.dark}`]:
               {},
           },
+          //Message:close
           [`.${prefix}message-close`]: {
             [`@apply absolute top-${config.close.position} end-${config.close.position}`]:
               {},
           },
-          [`&.${prefix}message-white`]: {
-            [`@apply bg-${config.white.bg} dark:bg-${config.white.bgDark}`]: {},
-          },
-          [`&.${prefix}message-white-contrast`]: {
-            [`@apply bg-${config.whiteContrast.bg} dark:bg-${config.whiteContrast.bgDark}`]:
-              {},
-          },
+          //Rounded:sm
           [`&.${prefix}message-rounded`]: {
-            [`@apply rounded-${config.rounded.default}`]: {},
+            [`@apply ${config.rounded.default}`]: {},
           },
+          //Rounded:md
           [`&.${prefix}message-smooth`]: {
-            [`@apply rounded-${config.rounded.smooth}`]: {},
+            [`@apply ${config.rounded.smooth}`]: {},
           },
+          //Rounded:lg
           [`&.${prefix}message-curved`]: {
-            [`@apply rounded-${config.rounded.curved}`]: {},
+            [`@apply ${config.rounded.curved}`]: {},
           },
+          //Color:white
+          [`&.${prefix}message-white`]: {
+            [`@apply bg-${config.color.white.background.light} dark:bg-${config.color.white.background.dark}`]:
+              {},
+          },
+          //Color:whiteContrast
+          [`&.${prefix}message-white-contrast`]: {
+            [`@apply bg-${config.color.whiteContrast.background.light} dark:bg-${config.color.whiteContrast.background.dark}`]:
+              {},
+          },
+          //Color:default
           [`&.${prefix}message-default`]: {
-            [`@apply border border-${config.default.border} dark:border-${config.default.borderDark}`]:
+            [`@apply border border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
               {},
-
+            //Message:dot
             [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.default.dot.bg} dark:bg-${config.default.dot.bgDark}`]:
+              [`@apply bg-${config.color.default.dot.background.light} dark:bg-${config.color.default.dot.background.dark}`]:
                 {},
             },
           },
+          //Color:contrast
           [`&.${prefix}message-contrast`]: {
-            [`@apply border border-${config.contrast.border} dark:border-${config.contrast.borderDark}`]:
+            [`@apply border border-${config.color.contrast.border.light} dark:border-${config.color.contrast.border.dark}`]:
               {},
-
+            //Message:dot
             [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.contrast.dot.bg} dark:bg-${config.contrast.dot.bgDark}`]:
+              [`@apply bg-${config.color.contrast.dot.background.light} dark:bg-${config.color.contrast.dot.background.dark}`]:
                 {},
             },
           },
+          //Color:primary
           [`&.${prefix}message-primary`]: {
-            [`@apply border border-${config.primary.border}`]: {},
-
+            [`@apply border border-${config.color.primary.border.light} dark:border-${config.color.primary.border.dark}`]:
+              {},
+            //Message:dot
             [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.primary.dot.bg}`]: {},
+              [`@apply bg-${config.color.primary.dot.background.light} dark:bg-${config.color.primary.dot.background.dark}`]:
+                {},
             },
           },
+          //Color:info
           [`&.${prefix}message-info`]: {
-            [`@apply border border-${config.info.border}`]: {},
-
+            [`@apply border border-${config.color.info.border.light} dark:border-${config.color.info.border.dark}`]:
+              {},
+            //Message:dot
             [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.info.dot.bg}`]: {},
+              [`@apply bg-${config.color.info.dot.background.light} dark:bg-${config.color.info.dot.background.dark}`]:
+                {},
             },
           },
+          //Color:success
           [`&.${prefix}message-success`]: {
-            [`@apply border border-${config.success.border}`]: {},
-
+            [`@apply border border-${config.color.success.border.light} dark:border-${config.color.success.border.dark}`]:
+              {},
+            //Message:dot
             [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.success.dot.bg}`]: {},
+              [`@apply bg-${config.color.success.dot.background.light} dark:bg-${config.color.success.dot.background.dark}`]:
+                {},
             },
           },
+          //Color:warning
           [`&.${prefix}message-warning`]: {
-            [`@apply border border-${config.warning.border}`]: {},
-
+            [`@apply border border-${config.color.warning.border.light} dark:border-${config.color.warning.border.dark}`]:
+              {},
+            //Message:dot
             [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.warning.dot.bg}`]: {},
+              [`@apply bg-${config.color.warning.dot.background.light} dark:bg-${config.color.warning.dot.background.dark}`]:
+                {},
             },
           },
+          //Color:danger
           [`&.${prefix}message-danger`]: {
-            [`@apply border border-${config.danger.border}`]: {},
-
+            [`@apply border border-${config.color.danger.border.light} dark:border-${config.color.danger.border.dark}`]:
+              {},
+            //Message:dot
             [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.danger.dot.bg}`]: {},
+              [`@apply bg-${config.color.danger.dot.background.light} dark:bg-${config.color.danger.dot.background.dark}`]:
+                {},
             },
           },
         },

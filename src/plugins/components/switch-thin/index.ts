@@ -15,65 +15,117 @@ export default plugin.withOptions(
       const config = theme(`shurikenUi.switchThin`) satisfies SwitchThinConfig
 
       addComponents({
+        //Wrapper
         [`.${prefix}switch-thin`]: {
           [`@apply flex cursor-pointer items-center`]: {},
-
+          //Switch:outer
           [`.${prefix}switch-thin-outer`]: {
-            [`@apply ${prefix}focus relative block h-4 rounded-${config.handle.rounded}`]:
+            [`@apply ${prefix}focus relative block h-4 ${config.track.rounded}`]:
               {},
           },
+          //Switch:handle
           [`.${prefix}switch-thin-handle`]: {
-            [`@apply border-${config.handle.border} dark:border-${config.handle.borderDark} dark:bg-${config.handle.bgDark} absolute -start-1 top-1/2 flex h-${config.handle.size} w-${config.handle.size} -translate-y-1/2 items-center justify-center rounded-${config.handle.rounded} border bg-${config.handle.bg} shadow transition`]:
+            [`@apply absolute -start-1 top-1/2 -translate-y-1/2 flex items-center justify-center ${config.handle.rounded}`]:
+              {},
+            //Size
+            [`@apply h-${config.handle.size} w-${config.handle.size}`]: {},
+            //Background
+            [`@apply bg-${config.handle.background.light} dark:bg-${config.handle.background.dark}`]:
+              {},
+            //Border
+            [`@apply border border-${config.handle.border.light} dark:border-${config.handle.border.dark}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.track.transition.property} duration-${config.track.transition.duration}`]:
               {},
           },
+          //Switch:track
           [`.${prefix}switch-thin-track`]: {
-            [`@apply bg-${config.track.bg} dark:bg-${config.track.bgDark} block h-4 w-10 rounded-${config.track.rounded} shadow-inner transition-all duration-${config.track.duration}`]:
+            //Base
+            [`@apply block h-4 w-10 ${config.track.rounded}`]: {},
+            //Background
+            [`@apply bg-${config.track.background.light} dark:bg-${config.track.background.dark}`]:
+              {},
+            //Transition
+            [`@apply transition-${config.track.transition.property} duration-${config.track.transition.duration}`]:
               {},
           },
+          //Label:single
           [`.${prefix}switch-thin-single-label`]: {
-            [`@apply text-${config.singleLabel.text} relative ms-3 cursor-pointer select-none font-${config.singleLabel.font} text-${config.singleLabel.textSize}`]:
+            //Base
+            [`@apply relative ms-3 cursor-pointer select-none`]: {},
+            //Font
+            [`@apply font-${config.label.single.font.family} text-${config.label.single.font.size}`]:
+              {},
+            //Color
+            [`@apply text-${config.label.single.font.color.light} dark:text-${config.label.single.font.color.dark}`]:
               {},
           },
+          //Label:dual
           [`.${prefix}switch-thin-dual-label`]: {
             [`@apply ms-3`]: {},
 
             [`.${prefix}switch-thin-label`]: {
-              [`@apply font-${config.dualLabel.label.font} text-${config.dualLabel.label.text} block text-${config.dualLabel.label.textSize} font-${config.dualLabel.label.fontWeight} dark:text-${config.dualLabel.label.textDark}`]:
+              //Base
+              [`@apply block`]: {},
+              //Font
+              [`@apply font-${config.label.dual.label.font.family} text-${config.label.dual.label.font.size}`]:
+                {},
+              //Color
+              [`@apply text-${config.label.dual.label.font.color.light} dark:text-${config.label.dual.label.font.color.dark}`]:
                 {},
             },
+            //Label:sublabel
             [`.${prefix}switch-thin-sublabel`]: {
-              [`@apply text-${config.dualLabel.sublabel.text} block font-${config.dualLabel.sublabel.font} text-${config.dualLabel.sublabel.textSize}`]:
+              //Base
+              [`@apply block`]: {},
+              //Font
+              [`@apply font-${config.label.dual.sublabel.font.family} text-${config.label.dual.sublabel.font.size}`]:
+                {},
+              //Color
+              [`@apply text-${config.label.dual.sublabel.font.color.light} dark:text-${config.label.dual.sublabel.font.color.dark}`]:
                 {},
             },
           },
+          //Switch:input
           [`.${prefix}switch-thin-input`]: {
             [`@apply absolute z-20 h-${config.input.size} w-${config.input.size} cursor-pointer opacity-0`]:
               {},
-
+            //Input:checked
             [`&:checked ~ .${prefix}switch-thin-handle`]: {
               [`@apply -translate-y-1/2 translate-x-full rtl:-translate-x-full`]:
                 {},
             },
           },
+          //color:primary
           [`&.${prefix}switch-thin-primary .${prefix}switch-thin-input:checked ~ .${prefix}switch-thin-track`]:
             {
-              [`@apply bg-${config.primary}`]: {},
+              [`@apply bg-${config.color.primary.light} dark:bg-${config.color.primary.dark}`]:
+                {},
             },
+          //color:info
           [`&.${prefix}switch-thin-info .${prefix}switch-thin-input:checked ~ .${prefix}switch-thin-track`]:
             {
-              [`@apply bg-${config.info}`]: {},
+              [`@apply bg-${config.color.info.light} dark:bg-${config.color.info.dark}`]:
+                {},
             },
+          //color:success
           [`&.${prefix}switch-thin-success .${prefix}switch-thin-input:checked ~ .${prefix}switch-thin-track`]:
             {
-              [`@apply bg-${config.success}`]: {},
+              [`@apply bg-${config.color.success.light} dark:bg-${config.color.success.dark}`]:
+                {},
             },
+          //color:warning
           [`&.${prefix}switch-thin-warning .${prefix}switch-thin-input:checked ~ .${prefix}switch-thin-track`]:
             {
-              [`@apply bg-${config.warning}`]: {},
+              [`@apply bg-${config.color.warning.light} dark:bg-${config.color.warning.dark}`]:
+                {},
             },
+          //color:danger
           [`&.${prefix}switch-thin-danger .${prefix}switch-thin-input:checked ~ .${prefix}switch-thin-track`]:
             {
-              [`@apply bg-${config.danger}`]: {},
+              [`@apply bg-${config.color.danger.light} dark:bg-${config.color.danger.dark}`]:
+                {},
             },
         },
       })

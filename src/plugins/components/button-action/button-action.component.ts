@@ -10,7 +10,7 @@ import * as variants from './button-action.variants'
 export const ButtonAction = ({
   label,
   loading,
-  shape,
+  rounded,
   children,
   color = 'default',
   classes,
@@ -23,7 +23,7 @@ export const ButtonAction = ({
         'nui-button-action',
         variants.color[color],
         loading && 'nui-button-loading',
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         classes?.wrapper,
       ]
         .filter(Boolean)

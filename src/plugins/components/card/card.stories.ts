@@ -335,7 +335,7 @@ export const Slot: Story = {
         ${Avatar({
           src: 'https://apollux.cssninja.io/img/avatars/2.svg',
           srcDark: 'https://apollux.cssninja.io/img/avatars/2.svg',
-          size: 'md',
+          size: 'sm',
         })}
         <div>
           <h6
@@ -351,7 +351,69 @@ export const Slot: Story = {
         </div>
       </div>
     `,
-    style: 'padding: 1.5rem; width: 100%; min-width: 340px; max-width: 340px;',
+    style: 'padding: 1.25rem; width: 100%;',
+  },
+}
+
+export const Slot2: Story = {
+  name: 'Slot: default',
+  args: {
+    // set default values used for UI preview
+    color: 'white',
+    elevatedHover: true,
+    children: html`
+      <div class="flex items-center gap-2">
+        ${Avatar({
+          src: 'https://apollux.cssninja.io/img/avatars/15.svg',
+          srcDark: 'https://apollux.cssninja.io/img/avatars/15.svg',
+          size: 'sm',
+        })}
+        <div>
+          <h6
+            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+          >
+            Josh Meyers
+          </h6>
+          <p
+            class="nui-paragraph nui-paragraph-xs text-muted-500 dark:text-muted-400"
+          >
+            Software Engineer
+          </p>
+        </div>
+      </div>
+    `,
+    style: 'padding: 1.25rem; width: 100%;',
+  },
+}
+
+export const Slot3: Story = {
+  name: 'Slot: default',
+  args: {
+    // set default values used for UI preview
+    color: 'white',
+    elevatedHover: true,
+    children: html`
+      <div class="flex items-center gap-2">
+        ${Avatar({
+          src: 'https://apollux.cssninja.io/img/avatars/10.svg',
+          srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
+          size: 'sm',
+        })}
+        <div>
+          <h6
+            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+          >
+            Kendra Wilson
+          </h6>
+          <p
+            class="nui-paragraph nui-paragraph-xs text-muted-500 dark:text-muted-400"
+          >
+            Product Manager
+          </p>
+        </div>
+      </div>
+    `,
+    style: 'padding: 1.25rem; width: 100%;',
   },
 }
 // #endregion

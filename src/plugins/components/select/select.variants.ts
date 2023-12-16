@@ -1,12 +1,12 @@
 import type { SelectVariant } from './select.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-select-rounded',
-  smooth: 'nui-select-smooth',
-  curved: 'nui-select-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-select-rounded',
+  md: 'nui-select-smooth',
+  lg: 'nui-select-curved',
   full: 'nui-select-full',
-} as const satisfies SelectVariant<'shape'>
+} as const satisfies SelectVariant<'rounded'>
 
 export const size = {
   sm: 'nui-select-sm',

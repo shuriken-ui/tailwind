@@ -1,12 +1,12 @@
 import type { ButtonIconVariant } from './button-icon.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-button-rounded',
-  smooth: 'nui-button-smooth',
-  curved: 'nui-button-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-button-rounded',
+  md: 'nui-button-smooth',
+  lg: 'nui-button-curved',
   full: 'nui-button-full',
-} as const satisfies ButtonIconVariant<'shape'>
+} as const satisfies ButtonIconVariant<'rounded'>
 
 export const size = {
   sm: 'nui-button-small',

@@ -1,9 +1,14 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface PaginationProps extends Record<string, unknown> {
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   classes?: {
     wrapper?: string | string[]
+    list?: string | string[]
+    link?: string | string[]
+    ellipsis?: string | string[]
+    buttons?: string | string[]
+    button?: string | string[]
   }
 }
 

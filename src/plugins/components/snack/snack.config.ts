@@ -1,57 +1,119 @@
 export const key = 'snack' as const
 
 export const defaultConfig = {
-  rounded: 'full',
+  rounded: 'rounded-full',
   icon: {
-    border: 'muted-200',
-    rounded: 'full',
-    bg: 'white',
+    rounded: 'rounded-full',
+    border: {
+      light: 'muted-200',
+      dark: 'muted-700',
+    },
+    background: {
+      light: 'white',
+      dark: 'white',
+    },
   },
   image: {
-    rounded: 'full',
+    rounded: 'rounded-full',
+    outer: {
+      rounded: 'rounded-full',
+    },
+    inner: {
+      rounded: 'rounded-full',
+    },
   },
-  imageInner: {
-    rounded: 'full',
+  font: {
+    family: 'sans',
+    color: {
+      light: 'muted-600',
+      dark: 'muted-300',
+    },
   },
-  text: {
-    text: 'muted-600',
-    textDark: 'muted-300',
-    font: 'sans',
-    textSize: 'sm',
-  },
-  snackSM: {
-    size: '8',
-    icon: {
+  size: {
+    xs: {
+      size: '6',
+      font: {
+        size: 'xs',
+      },
+      icon: {
+        outer: {
+          size: '6',
+        },
+        inner: {
+          size: '3',
+        },
+      },
+      image: {
+        outer: {
+          size: '6',
+        },
+        inner: {
+          size: '6',
+        },
+      },
+    },
+    sm: {
       size: '8',
+      font: {
+        size: 'sm',
+      },
+      icon: {
+        outer: {
+          size: '8',
+        },
+        inner: {
+          size: '4',
+        },
+      },
+      image: {
+        outer: {
+          size: '8',
+        },
+        inner: {
+          size: '8',
+        },
+      },
     },
-    iconsInner: {
-      size: '4',
-    },
-    imageAndImageInner: {
-      size: '8',
-    },
-  },
-  snackMD: {
-    size: '10',
-    icon: {
+    md: {
       size: '10',
-    },
-    iconsInner: {
-      size: '5',
-    },
-    imageAndImageInner: {
-      size: '10',
+      font: {
+        size: 'sm',
+      },
+      icon: {
+        outer: {
+          size: '10',
+        },
+        inner: {
+          size: '5',
+        },
+      },
+      image: {
+        outer: {
+          size: '10',
+        },
+        inner: {
+          size: '10',
+        },
+      },
     },
   },
-  default: {
-    bg: 'white',
-    bgDark: 'muted-700',
-    border: 'muted-300',
-    borderDark: 'muted-600',
-  },
-  muted: {
-    bg: 'muted-200',
-    bgDark: 'muted-700',
+  color: {
+    default: {
+      background: {
+        light: 'white',
+        dark: 'muted-700',
+      },
+      border: {
+        light: 'muted-300',
+        dark: 'muted-600',
+      },
+    },
+    muted: {
+      background: {
+        light: 'muted-200',
+        dark: 'muted-700',
+      },
+    },
   },
 }
 

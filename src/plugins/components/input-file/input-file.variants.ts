@@ -1,9 +1,9 @@
 import type { InputFileVariant } from './input-file.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-input-file-rounded',
-  smooth: 'nui-input-file-smooth',
-  curved: 'nui-input-file-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-input-file-rounded',
+  md: 'nui-input-file-smooth',
+  lg: 'nui-input-file-curved',
   full: 'nui-input-file-full',
-} as const satisfies InputFileVariant<'shape'>
+} as const satisfies InputFileVariant<'rounded'>

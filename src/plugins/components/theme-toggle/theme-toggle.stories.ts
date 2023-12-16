@@ -29,3 +29,19 @@ export const Main: Story = {
   args: {},
 }
 // #endregion
+
+// #region Inverted:false
+export const InvertedFalse: Story = {
+  name: 'Inverted: false',
+  args: {},
+}
+// #endregion
+
+// #region Inverted:true
+export const InvertedTrue: Story = {
+  name: 'Inverted: true',
+  args: {
+    inverted: true,
+  },
+}
+// #endregion

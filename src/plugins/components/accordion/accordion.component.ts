@@ -12,7 +12,7 @@ import { Paragraph } from '../paragraph/paragraph.component'
 export const Accordion = ({
   items,
   openItems,
-  shape,
+  rounded,
   exclusive,
   action = 'dot',
   classes,
@@ -25,7 +25,7 @@ export const Accordion = ({
           class=${[
             'nui-accordion',
             action && variants.action[action],
-            shape && variants.shape[shape],
+            rounded && variants.rounded[rounded],
             classes?.wrapper,
           ]
             .filter(Boolean)
@@ -37,7 +37,7 @@ export const Accordion = ({
               <div class="nui-accordion-header">
                 ${Heading({
                   as: 'h4',
-                  weight: 'semibold',
+                  weight: 'medium',
                   size: 'sm',
                   classes: {
                     wrapper: 'nui-accordion-header-inner',
@@ -93,7 +93,7 @@ export const Accordion = ({
             </summary>
             <div class="nui-accordion-content">
               ${Paragraph({
-                size: 'md',
+                size: 'sm',
                 lead: 'tight',
                 children: item.content,
               })}

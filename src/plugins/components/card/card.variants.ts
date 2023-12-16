@@ -1,11 +1,11 @@
 import type { CardVariant } from './card.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-card-rounded',
-  smooth: 'nui-card-smooth',
-  curved: 'nui-card-curved',
-} as const satisfies CardVariant<'shape'>
+export const rounded = {
+  none: '',
+  sm: 'nui-card-rounded',
+  md: 'nui-card-smooth',
+  lg: 'nui-card-curved',
+} as const satisfies CardVariant<'rounded'>
 
 export const color = {
   white: 'nui-card-white',

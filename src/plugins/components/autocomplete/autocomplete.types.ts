@@ -3,7 +3,7 @@ import type { PropertyVariant } from '~/types/utils'
 export interface AutocompleteProps extends Record<string, unknown> {
   id?: string
   items?: any[]
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   label?: string
   labelFloat?: boolean
   error?: string | boolean
