@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.1](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.0...v2.0.0-next.1) (2023-12-17)
+
+
+### Bug Fixes
+
+* **BaseAvatar:** remove border styles from avatar.config.ts ([7c70bb5](https://github.com/shuriken-ui/tailwind/commit/7c70bb5d3e64513b0b1f41b55156389ed7132b62))
+
 ## [2.0.0-next.0](https://github.com/shuriken-ui/tailwind/compare/v1.5.3...v2.0.0-next.0) (2023-12-16)
 
 
