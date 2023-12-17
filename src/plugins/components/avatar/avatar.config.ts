@@ -11,10 +11,6 @@ export const defaultConfig = {
   img: {
     size: 'full',
     shadow: 'sm',
-    border: {
-      light: 'transparent',
-      dark: 'transparent',
-    },
   },
   text: {
     font: {

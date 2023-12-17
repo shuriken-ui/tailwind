@@ -54,9 +54,6 @@ export default plugin.withOptions(
             //Size & Radius
             [`@apply h-${config.img.size} max-h-${config.img.size} w-${config.img.size} max-w-${config.img.size}`]:
               {},
-            //Border
-            [`@apply border border-${config.img.border.light} dark:border-${config.img.border.dark}`]:
-              {},
             //Shadow
             [`@apply shadow-${config.img.shadow}`]: {},
           },
