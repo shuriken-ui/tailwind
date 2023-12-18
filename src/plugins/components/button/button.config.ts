@@ -562,7 +562,7 @@ export const defaultConfig = {
         background: {
           light: {
             base: 'transparent',
-            hover: 'white',
+            hover: 'muted-300',
             active: 'muted-400',
             focus: 'muted-300',
           },
