@@ -40,7 +40,13 @@ export default plugin.withOptions(
           },
           //Color:default
           [`&.${prefix}item-default`]: {
-            [`&.${prefix}active, &:hover`]: {
+            //Background:hover
+            [`@apply hover:bg-${config.color.default.background.light} dark:hover:bg-${config.color.default.background.dark}`]:
+              {},
+            //Font:hover
+            [`@apply hover:text-${config.color.default.font.color.light} dark:hover:text-${config.color.default.font.color.dark}`]:
+              {},
+            [`&.${prefix}active`]: {
               //Background:hover
               [`@apply bg-${config.color.default.background.light} dark:bg-${config.color.default.background.dark}`]:
                 {},
@@ -51,7 +57,13 @@ export default plugin.withOptions(
           },
           //Color:contrast
           [`&.${prefix}item-contrast`]: {
-            [`&.${prefix}active, &:hover`]: {
+            //Background:hover
+            [`@apply hover:bg-${config.color.contrast.background.light} dark:hover:bg-${config.color.contrast.background.dark}`]:
+              {},
+            //Font:hover
+            [`@apply hover:text-${config.color.contrast.font.color.light} dark:hover:text-${config.color.contrast.font.color.dark}`]:
+              {},
+            [`&.${prefix}active`]: {
               //Background:hover
               [`@apply bg-${config.color.contrast.background.light} dark:bg-${config.color.contrast.background.dark}`]:
                 {},
