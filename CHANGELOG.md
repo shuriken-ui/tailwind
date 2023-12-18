@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.3](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.2...v2.0.0-next.3) (2023-12-18)
+
+
+### Bug Fixes
+
+* **BaseDropdownItem:** refactor dropdown-item hover styles ([a6433a0](https://github.com/shuriken-ui/tailwind/commit/a6433a04ce9cb170233fddda58ce7a12ce3490cb))
+
 ## [2.0.0-next.2](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.1...v2.0.0-next.2) (2023-12-18)
 
 
