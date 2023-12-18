@@ -125,7 +125,7 @@ export default plugin.withOptions(
               },
               //Shadow:hover
               [`&.${prefix}tag-shadow-hover`]: {
-                [`@apply hover:shadow-${config.variant.solid.primary.shadow.size} hover:shadow-${config.variant.solid.primary.shadow.light} hover:shadow-${config.variant.solid.primary.shadow.dark}`]:
+                [`@apply hover:shadow-${config.variant.solid.info.shadow.size} hover:shadow-${config.variant.solid.info.shadow.light} hover:shadow-${config.variant.solid.info.shadow.dark}`]:
                   {},
               },
             },
@@ -144,7 +144,7 @@ export default plugin.withOptions(
               },
               //Shadow:hover
               [`&.${prefix}tag-shadow-hover`]: {
-                [`@apply hover:shadow-${config.variant.solid.primary.shadow.size} hover:shadow-${config.variant.solid.primary.shadow.light} hover:shadow-${config.variant.solid.primary.shadow.dark}`]:
+                [`@apply hover:shadow-${config.variant.solid.success.shadow.size} hover:shadow-${config.variant.solid.success.shadow.light} hover:shadow-${config.variant.solid.success.shadow.dark}`]:
                   {},
               },
             },
@@ -163,7 +163,7 @@ export default plugin.withOptions(
               },
               //Shadow:hover
               [`&.${prefix}tag-shadow-hover`]: {
-                [`@apply hover:shadow-${config.variant.solid.primary.shadow.size} hover:shadow-${config.variant.solid.primary.shadow.light} hover:shadow-${config.variant.solid.primary.shadow.dark}`]:
+                [`@apply hover:shadow-${config.variant.solid.warning.shadow.size} hover:shadow-${config.variant.solid.warning.shadow.light} hover:shadow-${config.variant.solid.warning.shadow.dark}`]:
                   {},
               },
             },
