@@ -548,17 +548,16 @@ export default plugin.withOptions(
           [`&.${prefix}listbox-label-float:not(.${prefix}has-icon).${prefix}listbox-sm`]:
             {
               [`.${prefix}label-float`]: {
-                [`@apply start-3 -ms-3 -mt-7 text-${config.icon.disabled.label.float.sm.font.size} text-transparent`]:
-                  {},
+                [`@apply start-3`]: {},
               },
               [`.${prefix}listbox-button:focus-within ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
                 {
-                  [`@apply !-ms-3 !-mt-7 !text-${config.label.float.font.color}`]:
+                  [`@apply !-ms-3 !-mt-7 !text-${config.label.float.font.color} !text-${config.icon.disabled.label.float.sm.font.size}`]:
                     {},
                 },
               [`.${prefix}listbox-button:not(:focus-within) ~ .${prefix}label-float, .${prefix}listbox-button:not(:focus) ~ .${prefix}label-float`]:
                 {
-                  [`@apply ms-0 mt-0`]: {},
+                  [`@apply ms-0 mt-0 !text-transparent`]: {},
                 },
             },
           //With:icon && Size:sm && Label:float
