@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.8](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.7...v2.0.0-next.8) (2023-12-19)
+
+
+### Bug Fixes
+
+* **BaseListbox:** update listbox styles for loading and label float ([917b0bd](https://github.com/shuriken-ui/tailwind/commit/917b0bd778d3dabfaa29404e83216a0e2f716c02))
+* **BaseTextarea:** update textarea styles to include cursor styles for enabled state ([62a44f1](https://github.com/shuriken-ui/tailwind/commit/62a44f1f196a79f17c65079e38c8a9bc026da5ce))
+* **BasThemeSwitch:** fix border styles in theme switch component ([7ef5ed6](https://github.com/shuriken-ui/tailwind/commit/7ef5ed6eeec9c30ec2df1a38cb65c4cc38da90db))
+
 ## [2.0.0-next.7](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.6...v2.0.0-next.7) (2023-12-19)
 
 
