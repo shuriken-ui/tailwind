@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.7](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.6...v2.0.0-next.7) (2023-12-19)
+
+
+### Bug Fixes
+
+* refactor listbox label styles ([d53bd75](https://github.com/shuriken-ui/tailwind/commit/d53bd75bcbb0b2eba656dce906d617d560a16ae4))
+
 ## [2.0.0-next.6](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.5...v2.0.0-next.6) (2023-12-19)
 
 
