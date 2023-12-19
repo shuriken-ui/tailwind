@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.5](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.4...v2.0.0-next.5) (2023-12-19)
+
+
+### Bug Fixes
+
+* refactor listbox button focus styles ([8715443](https://github.com/shuriken-ui/tailwind/commit/871544322ccb0ed5dbbc5466f5587cc0146d7d69))
+
 ## [2.0.0-next.4](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.3...v2.0.0-next.4) (2023-12-18)
 
 
