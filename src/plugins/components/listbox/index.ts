@@ -186,7 +186,7 @@ export default plugin.withOptions(
               {},
           },
           //Listbox:placeload
-          [`.${prefix}listbox-placeload`]: {
+          [`.${prefix}listbox-placeload.${prefix}loading-placeload`]: {
             [`@apply absolute start-0 top-0 flex w-full items-center px-4`]: {},
 
             [`.${prefix}placeload`]: {
@@ -473,7 +473,7 @@ export default plugin.withOptions(
           //Listbox:loading
           [`&.${prefix}listbox-loading`]: {
             [`.${prefix}listbox-button`]: {
-              [`@apply !text-transparent placeholder:!text-transparent dark:placeholder:!text-transparent`]:
+              [`@apply !text-transparent placeholder:!text-transparent dark:placeholder:!text-transparent pointer-events-none`]:
                 {},
             },
             [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
@@ -548,17 +548,17 @@ export default plugin.withOptions(
           [`&.${prefix}listbox-label-float:not(.${prefix}has-icon).${prefix}listbox-sm`]:
             {
               [`.${prefix}label-float`]: {
-                [`@apply start-3 ms-0 mt-0`]: {},
+                [`@apply start-3 -ms-3 -mt-7 text-${config.icon.disabled.label.float.sm.font.size} text-transparent`]:
+                  {},
               },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
+              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float, .${prefix}label-float-active`]:
                 {
-                  [`@apply !-ms-3 !-mt-7 !text-${config.label.float.font.color} !text-${config.icon.disabled.label.float.sm.font.size}`]:
+                  [`@apply !-ms-3 !-mt-7 !text-${config.label.float.font.color}`]:
                     {},
                 },
-              [`.${prefix}listbox-button:not(:focus-visible) ~ .${prefix}label-float, .${prefix}listbox-button:not(:focus) ~ .${prefix}label-float`]:
-                {
-                  [`@apply ms-0 mt-0 !text-transparent`]: {},
-                },
+              [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
+                [`@apply ms-0 mt-0`]: {},
+              },
             },
           //With:icon && Size:sm && Label:float
           [`&.${prefix}listbox-label-float.${prefix}has-icon.${prefix}listbox-sm`]:
@@ -567,7 +567,7 @@ export default plugin.withOptions(
                 [`@apply start-8 -ms-8 -mt-7 text-${config.icon.disabled.label.float.sm.font.size} text-transparent`]:
                   {},
               },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
+              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float, .${prefix}label-float-active`]:
                 {
                   [`@apply !-ms-8 !-mt-7 !text-${config.label.float.font.color}`]:
                     {},
@@ -580,12 +580,12 @@ export default plugin.withOptions(
           [`&.${prefix}listbox-label-float:not(.${prefix}has-icon).${prefix}listbox-md`]:
             {
               [`.${prefix}label-float`]: {
-                [`@apply start-3 -ms-3 -mt-8 text-${config.icon.disabled.label.float.md.font.size.base} text-transparent`]:
+                [`@apply start-3 -ms-3 -mt-7 text-${config.icon.disabled.label.float.md.font.size.base} text-transparent`]:
                   {},
               },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
+              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float, .${prefix}label-float-active`]:
                 {
-                  [`@apply !-ms-3 !-mt-8 !text-${config.icon.disabled.label.float.md.font.size.focus} !text-${config.label.float.font.color}`]:
+                  [`@apply !-ms-3 !-mt-7 !text-${config.icon.disabled.label.float.md.font.size.focus} !text-${config.label.float.font.color}`]:
                     {},
                 },
               [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
@@ -597,12 +597,12 @@ export default plugin.withOptions(
           [`&.${prefix}listbox-label-float.${prefix}has-icon.${prefix}listbox-md`]:
             {
               [`.${prefix}label-float`]: {
-                [`@apply start-10 -ms-10 -mt-8 text-${config.icon.enabled.label.float.md.font.size.base} text-transparent`]:
+                [`@apply start-10 -ms-10 -mt-7 text-${config.icon.enabled.label.float.md.font.size.base} text-transparent`]:
                   {},
               },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
+              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float, .${prefix}label-float-active`]:
                 {
-                  [`@apply !-ms-10 !-mt-8 !text-${config.icon.enabled.label.float.md.font.size.focus} !text-${config.label.float.font.color}`]:
+                  [`@apply !-ms-10 !-mt-7 !text-${config.icon.enabled.label.float.md.font.size.focus} !text-${config.label.float.font.color}`]:
                     {},
                 },
               [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
@@ -614,12 +614,12 @@ export default plugin.withOptions(
           [`&.${prefix}listbox-label-float:not(.${prefix}has-icon).${prefix}listbox-lg`]:
             {
               [`.${prefix}label-float`]: {
-                [`@apply start-3 -ms-3 -mt-8 text-${config.icon.disabled.label.float.lg.font.size.base} text-transparent`]:
+                [`@apply start-3 -ms-3 -mt-7 text-${config.icon.disabled.label.float.lg.font.size.base} text-transparent`]:
                   {},
               },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
+              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float, .${prefix}label-float-active`]:
                 {
-                  [`@apply !-ms-3 !-mt-9 !text-${config.icon.disabled.label.float.lg.font.size.focus} !text-${config.label.float.font.color}`]:
+                  [`@apply !-ms-3 !-mt-7 !text-${config.icon.disabled.label.float.lg.font.size.focus} !text-${config.label.float.font.color}`]:
                     {},
                 },
               [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
@@ -631,12 +631,12 @@ export default plugin.withOptions(
           [`&.${prefix}listbox-label-float.${prefix}has-icon.${prefix}listbox-lg`]:
             {
               [`.${prefix}label-float`]: {
-                [`@apply start-11 -ms-10 -mt-8 text-${config.icon.enabled.label.float.lg.font.size.base} text-transparent`]:
+                [`@apply start-11 -ms-10 -mt-7 text-${config.icon.enabled.label.float.lg.font.size.base} text-transparent`]:
                   {},
               },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
+              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float, .${prefix}label-float-active`]:
                 {
-                  [`@apply !-ms-10 !-mt-9 !text-${config.icon.enabled.label.float.lg.font.size.focus} !text-${config.label.float.font.color}`]:
+                  [`@apply !-ms-10 !-mt-7 !text-${config.icon.enabled.label.float.lg.font.size.focus} !text-${config.label.float.font.color}`]:
                     {},
                 },
               [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
