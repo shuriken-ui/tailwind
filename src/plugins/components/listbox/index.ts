@@ -551,14 +551,15 @@ export default plugin.withOptions(
                 [`@apply start-3 -ms-3 -mt-7 text-${config.icon.disabled.label.float.sm.font.size} text-transparent`]:
                   {},
               },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
+              [`.${prefix}listbox-button:focus-within ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
                 {
                   [`@apply !-ms-3 !-mt-7 !text-${config.label.float.font.color}`]:
                     {},
                 },
-              [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
-                [`@apply ms-0 mt-0`]: {},
-              },
+              [`.${prefix}listbox-button:not(:focus-within) ~ .${prefix}label-float, .${prefix}listbox-button:not(:focus) ~ .${prefix}label-float`]:
+                {
+                  [`@apply ms-0 mt-0`]: {},
+                },
             },
           //With:icon && Size:sm && Label:float
           [`&.${prefix}listbox-label-float.${prefix}has-icon.${prefix}listbox-sm`]:
