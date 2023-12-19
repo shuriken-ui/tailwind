@@ -119,7 +119,7 @@ export default plugin.withOptions(
 
             [`.${prefix}theme-switch-inner`]: {
               //Border
-              [`@apply border border-${config.inverted.disabled.inner.background.light} dark:border-${config.inverted.disabled.inner.background.dark}`]:
+              [`@apply border border-${config.inverted.disabled.inner.border.light} dark:border-${config.inverted.disabled.inner.border.dark}`]:
                 {},
               //Background
               [`@apply bg-${config.inverted.disabled.inner.background.light} dark:bg-${config.inverted.disabled.inner.background.dark}`]:
