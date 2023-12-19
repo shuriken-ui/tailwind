@@ -548,14 +548,14 @@ export default plugin.withOptions(
           [`&.${prefix}listbox-label-float:not(.${prefix}has-icon).${prefix}listbox-sm`]:
             {
               [`.${prefix}label-float`]: {
-                [`@apply start-3`]: {},
+                [`@apply start-3 ms-0 mt-0`]: {},
               },
-              [`.${prefix}listbox-button:focus-within ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
+              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
                 {
                   [`@apply !-ms-3 !-mt-7 !text-${config.label.float.font.color} !text-${config.icon.disabled.label.float.sm.font.size}`]:
                     {},
                 },
-              [`.${prefix}listbox-button:not(:focus-within) ~ .${prefix}label-float, .${prefix}listbox-button:not(:focus) ~ .${prefix}label-float`]:
+              [`.${prefix}listbox-button:not(:focus-visible) ~ .${prefix}label-float, .${prefix}listbox-button:not(:focus) ~ .${prefix}label-float`]:
                 {
                   [`@apply ms-0 mt-0 !text-transparent`]: {},
                 },
