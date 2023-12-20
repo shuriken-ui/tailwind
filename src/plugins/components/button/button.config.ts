@@ -490,7 +490,7 @@ export const defaultConfig = {
           },
           dark: {
             base: 'transparent',
-            hover: 'muted-800',
+            hover: 'white',
             active: 'muted-700',
             focus: 'muted-800',
           },
