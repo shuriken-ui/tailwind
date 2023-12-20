@@ -388,7 +388,7 @@ export default plugin.withOptions(
             //Listbox:options
             [`.${prefix}listbox-options`]: {
               //Background
-              [`@apply dark:bg-${config.color.defaultContrast.option.background.light} bg-${config.color.defaultContrast.option.background.dark}`]:
+              [`@apply bg-${config.color.defaultContrast.option.background.light} dark:bg-${config.color.defaultContrast.option.background.dark}`]:
                 {},
               //Border
               [`@apply border border-${config.color.defaultContrast.option.border.light} dark:border-${config.color.defaultContrast.option.border.dark}`]:
@@ -456,7 +456,7 @@ export default plugin.withOptions(
             //Listbox:options
             [`.${prefix}listbox-options`]: {
               //Background
-              [`@apply dark:bg-${config.color.mutedContrast.option.background.light} bg-${config.color.mutedContrast.option.background.dark}`]:
+              [`@apply bg-${config.color.mutedContrast.option.background.light} dark:bg-${config.color.mutedContrast.option.background.dark}`]:
                 {},
               //Border
               [`@apply border border-${config.color.mutedContrast.option.border.light} dark:border-${config.color.mutedContrast.option.border.dark}`]:
