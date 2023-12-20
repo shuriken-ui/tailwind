@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.11](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.10...v2.0.0-next.11) (2023-12-20)
+
+
+### Bug Fixes
+
+* fix background and border colors in listbox options ([19aefa7](https://github.com/shuriken-ui/tailwind/commit/19aefa717a9dc241e51c1b4e8f1dd3a487d3724f))
+* update border color in card.config.ts ([3a6e680](https://github.com/shuriken-ui/tailwind/commit/3a6e6806d6f2fb2039adb37d0ed18ef0d42df5e2))
+* update cursor style in textarea component ([470e418](https://github.com/shuriken-ui/tailwind/commit/470e4187aa24bf47ebf5a48e9ea04d3ec1ea48bd))
+
 ## [2.0.0-next.10](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.9...v2.0.0-next.10) (2023-12-20)
 
 
