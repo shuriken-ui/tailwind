@@ -39,7 +39,7 @@ export default plugin.withOptions(
           },
           //Textarea
           [`.${prefix}textarea`]: {
-            [`@apply ${prefix}focus w-${config.textarea.width} enabled:cursor-default cursor-not-allowed`]:
+            [`@apply ${prefix}focus w-${config.textarea.width} enabled:cursor-text cursor-not-allowed`]:
               {},
             //Focus:label:float
             [`&:focus-visible ~ .${prefix}label-float`]: {
