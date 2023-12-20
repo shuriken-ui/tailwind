@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.10](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.9...v2.0.0-next.10) (2023-12-20)
+
+
+### Bug Fixes
+
+* update button hover color in button.config.ts ([cf57020](https://github.com/shuriken-ui/tailwind/commit/cf570202020f622e803b269c7c5f83c6df7a5ee5))
+* update checkbox inner background dark color ([ba65672](https://github.com/shuriken-ui/tailwind/commit/ba65672fe6c568ca07d7b52500dc305be8e4c1c8))
+* update snack.config.ts to use 'muted-950' as the icon dark background color ([48098c2](https://github.com/shuriken-ui/tailwind/commit/48098c2096887bb3b18b2ae717a64567ce54efe5))
+
 ## [2.0.0-next.9](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.8...v2.0.0-next.9) (2023-12-20)
 
 
