@@ -28,7 +28,7 @@ export default plugin.withOptions(
             [`@apply absolute start-0 top-0 z-0 h-${config.inner.size} w-${config.inner.size}`]:
               {},
             //Background
-            [`@apply bg-${config.inner.background.light} dark:bg-${config.inner.background.light}`]:
+            [`@apply bg-${config.inner.background.light} dark:bg-${config.inner.background.dark}`]:
               {},
             //Border
             [`@apply border-2 border-${config.inner.border.light} dark:border-${config.inner.border.dark}`]:
