@@ -30,7 +30,7 @@ export const defaultConfig = {
         dark: 'muted-950',
       },
       border: {
-        light: 'muted-200',
+        light: 'muted-300',
         dark: 'muted-800',
       },
     },
