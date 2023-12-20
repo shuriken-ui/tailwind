@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.9](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.8...v2.0.0-next.9) (2023-12-20)
+
+
+### Bug Fixes
+
+* **BaseCard:** update border colors in card component ([570c9fa](https://github.com/shuriken-ui/tailwind/commit/570c9fa0ef4c19c250bb1006123240b83279af6f))
+
 ## [2.0.0-next.8](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.7...v2.0.0-next.8) (2023-12-19)
 
 
