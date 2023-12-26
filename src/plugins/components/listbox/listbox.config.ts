@@ -377,7 +377,7 @@ export const defaultConfig = {
           dark: 'muted-950',
         },
         border: {
-          light: 'muted-100',
+          light: 'muted-200',
           dark: 'muted-800',
         },
         font: {
