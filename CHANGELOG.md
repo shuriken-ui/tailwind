@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.12](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.11...v2.0.0-next.12) (2023-12-26)
+
+
+### Bug Fixes
+
+* update border color in listbox.config.ts ([7cb78ea](https://github.com/shuriken-ui/tailwind/commit/7cb78ea2eae6ebc13fb208580e8eba3adc63c388))
+
 ## [2.0.0-next.11](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.10...v2.0.0-next.11) (2023-12-20)
 
 
