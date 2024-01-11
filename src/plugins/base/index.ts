@@ -1,7 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 
-export default plugin(function ({ addBase }) {
+export const base = plugin(({ addBase }) =>
   addBase({
     '.dark': { colorScheme: 'dark' },
-  })
-})
+  }),
+)

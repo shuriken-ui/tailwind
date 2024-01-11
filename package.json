@@ -41,6 +41,16 @@
       "types": "./dist/colors.d.ts",
       "import": "./dist/colors.mjs",
       "require": "./dist/colors.cjs"
+    },
+    "./themes": {
+      "types": "./dist/themes.d.ts",
+      "import": "./dist/themes.mjs",
+      "require": "./dist/themes.cjs"
+    },
+    "./plugins": {
+      "types": "./dist/plugins.d.ts",
+      "import": "./dist/plugins.mjs",
+      "require": "./dist/plugins.cjs"
     }
   },
   "files": [

@@ -1,144 +1,126 @@
 import plugin from 'tailwindcss/plugin'
-import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../../options'
-import {
-  type ButtonGroupConfig,
-  defaultConfig,
-  key,
-} from './button-group.config'
+import { defaultConfig, key } from './button-group.config'
 
-export default plugin.withOptions(
-  function (options: PluginOption) {
-    let { prefix } = defu(options, defaultPluginOptions)
+const config = () => ({
+  theme: {
+    nui: {
+      [key]: defaultConfig,
+    },
+  },
+})
 
-    if (prefix) {
-      prefix = `${prefix}-`
-    }
+export default plugin(
+  ({ addComponents }) =>
+    addComponents({
+      '.nui-button-group': {
+        '@apply flex': {},
 
-    return function ({ addComponents, theme }) {
-      const config = theme(`shurikenUi.${key}`) satisfies ButtonGroupConfig
-
-      addComponents({
-        [`.${prefix}button-group`]: {
-          [`@apply flex`]: {},
-
-          [`.${prefix}button, .${prefix}button-action, .${prefix}button-icon`]:
-            {
-              [`@apply !border-e-0`]: {},
-              [`&:focus`]: {
-                [`@apply !z-10 relative`]: {},
-              },
-              [`&:not(:first-child):not(:last-child)`]: {
-                [`@apply !rounded-none`]: {},
-              },
-              [`&:first-child`]: {
-                [`@apply !rounded-e-none`]: {},
-              },
-              [`&:last-child`]: {
-                [`@apply !border-e !rounded-s-none`]: {},
-              },
-            },
-
-          [`.${prefix}input-wrapper:not(:first-child):not(:last-child)`]: {
-            [`.${prefix}input`]: {
-              [`@apply !border-e-0 !rounded-none`]: {},
-
-              [`&:focus`]: {
-                [`@apply !z-10 relative`]: {},
-              },
-            },
+        '.nui-button, .nui-button-action, .nui-button-icon': {
+          '@apply !border-e-0': {},
+          '&:focus': {
+            '@apply !z-10 relative': {},
           },
-
-          [`.${prefix}input-wrapper:first-child`]: {
-            [`.${prefix}input`]: {
-              [`@apply !rounded-e-none`]: {},
-
-              [`&:focus`]: {
-                [`@apply !z-10 relative`]: {},
-              },
-            },
+          '&:not(:first-child):not(:last-child)': {
+            '@apply !rounded-none': {},
           },
-
-          [`.${prefix}input-wrapper:last-child`]: {
-            [`.${prefix}input`]: {
-              [`@apply !border-e !rounded-s-none`]: {},
-
-              [`&:focus`]: {
-                [`@apply !z-10 relative`]: {},
-              },
-            },
+          '&:first-child': {
+            '@apply !rounded-e-none': {},
           },
-
-          [`.${prefix}select-wrapper:not(:first-child):not(:last-child)`]: {
-            [`.${prefix}select`]: {
-              [`@apply !border-e-0 !rounded-none`]: {},
-
-              [`&:focus`]: {
-                [`@apply !z-10 relative`]: {},
-              },
-            },
+          '&:last-child': {
+            '@apply !border-e !rounded-s-none': {},
           },
+        },
 
-          [`.${prefix}select-wrapper:first-child`]: {
-            [`.${prefix}select`]: {
-              [`@apply !rounded-e-none`]: {},
+        '.nui-input-wrapper:not(:first-child):not(:last-child)': {
+          '.nui-input': {
+            '@apply !border-e-0 !rounded-none': {},
 
-              [`&:focus`]: {
-                [`@apply !z-10 relative`]: {},
-              },
-            },
-          },
-
-          [`.${prefix}select-wrapper:last-child`]: {
-            [`.${prefix}select`]: {
-              [`@apply !border-e !rounded-s-none`]: {},
-
-              [`&:focus`]: {
-                [`@apply !z-10 relative`]: {},
-              },
-            },
-          },
-
-          [`.${prefix}dropdown:not(:first-child):not(:last-child)`]: {
-            [`.${prefix}nui-button`]: {
-              [`@apply !border-e-0 !rounded-none`]: {},
-
-              [`&:focus`]: {
-                [`@apply !z-10 relative`]: {},
-              },
-            },
-          },
-
-          [`.${prefix}dropdown:first-child`]: {
-            [`.${prefix}nui-button`]: {
-              [`@apply !rounded-e-none`]: {},
-
-              [`&:focus`]: {
-                [`@apply !z-10 relative`]: {},
-              },
-            },
-          },
-
-          [`.${prefix}dropdown:last-child`]: {
-            [`.${prefix}nui-button`]: {
-              [`@apply !border-e !rounded-s-none`]: {},
-
-              [`&:focus`]: {
-                [`@apply !z-10 relative`]: {},
-              },
+            '&:focus': {
+              '@apply !z-10 relative': {},
             },
           },
         },
-      })
-    }
-  },
-  function () {
-    return {
-      theme: {
-        shurikenUi: {
-          [key]: defaultConfig,
+
+        '.nui-input-wrapper:first-child': {
+          '.nui-input': {
+            '@apply !rounded-e-none': {},
+
+            '&:focus': {
+              '@apply !z-10 relative': {},
+            },
+          },
+        },
+
+        '.nui-input-wrapper:last-child': {
+          '.nui-input': {
+            '@apply !border-e !rounded-s-none': {},
+
+            '&:focus': {
+              '@apply !z-10 relative': {},
+            },
+          },
+        },
+
+        '.nui-select-wrapper:not(:first-child):not(:last-child)': {
+          '.nui-select': {
+            '@apply !border-e-0 !rounded-none': {},
+
+            '&:focus': {
+              '@apply !z-10 relative': {},
+            },
+          },
+        },
+
+        '.nui-select-wrapper:first-child': {
+          '.nui-select': {
+            '@apply !rounded-e-none': {},
+
+            '&:focus': {
+              '@apply !z-10 relative': {},
+            },
+          },
+        },
+
+        '.nui-select-wrapper:last-child': {
+          '.nui-select': {
+            '@apply !border-e !rounded-s-none': {},
+
+            '&:focus': {
+              '@apply !z-10 relative': {},
+            },
+          },
+        },
+
+        '.nui-dropdown:not(:first-child):not(:last-child)': {
+          '.nui-nui-button': {
+            '@apply !border-e-0 !rounded-none': {},
+
+            '&:focus': {
+              '@apply !z-10 relative': {},
+            },
+          },
+        },
+
+        '.nui-dropdown:first-child': {
+          '.nui-nui-button': {
+            '@apply !rounded-e-none': {},
+
+            '&:focus': {
+              '@apply !z-10 relative': {},
+            },
+          },
+        },
+
+        '.nui-dropdown:last-child': {
+          '.nui-nui-button': {
+            '@apply !border-e !rounded-s-none': {},
+
+            '&:focus': {
+              '@apply !z-10 relative': {},
+            },
+          },
         },
       },
-    }
-  },
+    }),
+  config,
 )
