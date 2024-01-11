@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.12...v2.0.0) (2024-01-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* replace config prefix from `shurikenUi` to `nui` + export plugins and default theme
+
+### Features
+
+* add nui-focus utility stories ([aa4b44a](https://github.com/shuriken-ui/tailwind/commit/aa4b44ae28a34dbad5555b2b5755747c58398044))
+* add nui-mark utility stories ([b4335b2](https://github.com/shuriken-ui/tailwind/commit/b4335b282adbc9cf9f844f243bb6156831a0b945))
+* add nui-mask utility stories ([6347952](https://github.com/shuriken-ui/tailwind/commit/634795259bd19c3bbbf3469307180fd28ded8094))
+* add nui-slimscroll utility stories ([ca15aa7](https://github.com/shuriken-ui/tailwind/commit/ca15aa749ec4181fa13d65653efc7ff03f827b03))
+* replace config prefix from `shurikenUi` to `nui` + export plugins and default theme ([b8976f8](https://github.com/shuriken-ui/tailwind/commit/b8976f8c471da04c061cc92909d52722a044cbba))
+* update to tailwind 3.4 ([d431a1e](https://github.com/shuriken-ui/tailwind/commit/d431a1ee6feeb6f539e3f9f4aa5d5509268a7a1c))
+
+
+### Bug Fixes
+
+* **InputNumber:** fix muted contrast styles ([4adeebc](https://github.com/shuriken-ui/tailwind/commit/4adeebcee8a94004e752867461ff46823d117fe8))
+
 ## [2.0.0-next.12](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.11...v2.0.0-next.12) (2023-12-26)
 
 
