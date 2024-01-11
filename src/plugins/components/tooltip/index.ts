@@ -1,7 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { type TooltipConfig, defaultConfig, key } from './tooltip.config'
 
-const config = () => ({
+const config = {
   theme: {
     nui: {
       [key]: defaultConfig,
@@ -27,7 +27,7 @@ const config = () => ({
       },
     },
   },
-})
+}
 
 export default plugin(({ addComponents, theme }) => {
   const config = theme(`nui.${key}`) satisfies TooltipConfig

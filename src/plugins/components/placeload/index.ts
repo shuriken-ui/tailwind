@@ -1,7 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { defaultConfig, key } from './placeload.config'
 
-const config = () => ({
+const config = {
   theme: {
     nui: {
       [key]: defaultConfig,
@@ -18,7 +18,7 @@ const config = () => ({
       },
     },
   },
-})
+}
 
 export default plugin(
   ({ addComponents }) =>

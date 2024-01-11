@@ -1,13 +1,13 @@
 import plugin from 'tailwindcss/plugin'
 import { defaultConfig, key } from './button-group.config'
 
-const config = () => ({
+const config = {
   theme: {
     nui: {
       [key]: defaultConfig,
     },
   },
-})
+}
 
 export default plugin(
   ({ addComponents }) =>

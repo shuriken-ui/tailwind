@@ -5,13 +5,13 @@ import {
   key,
 } from './button-close.config'
 
-const config = () => ({
+const config = {
   theme: {
     nui: {
       [key]: defaultConfig,
     },
   },
-})
+}
 
 export default plugin(({ addComponents, theme }) => {
   const config = theme(`nui.${key}`) satisfies ButtonCloseConfig

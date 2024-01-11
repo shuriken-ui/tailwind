@@ -5,13 +5,13 @@ import {
   key,
 } from './dropdown-divider.config'
 
-const config = () => ({
+const config = {
   theme: {
     nui: {
       [key]: defaultConfig,
     },
   },
-})
+}
 
 export default plugin(({ addComponents, theme }) => {
   const config = theme(`nui.${key}`) satisfies DropdownDividerConfig

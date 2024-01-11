@@ -1,13 +1,13 @@
 import plugin from 'tailwindcss/plugin'
 import { type ButtonConfig, defaultConfig, key } from './button.config'
 
-const config = () => ({
+const config = {
   theme: {
     nui: {
       button: defaultConfig,
     },
   },
-})
+}
 
 export default plugin(({ addComponents, theme }) => {
   const config = theme(`nui.${key}`) satisfies ButtonConfig

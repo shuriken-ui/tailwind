@@ -4,20 +4,11 @@ import { defu } from 'defu'
 type Plugin = ReturnType<typeof plugin>
 
 export function mergePlugins(plugins: Plugin[]) {
-  return plugin(
-    (api) => {
-      for (const utility of plugins) {
-        utility.handler(api)
-      }
-    },
-    () => {
-      let config = {}
+  let config = {}
 
-      for (const utility of plugins) {
-        config = defu(config, utility.config)
-      }
+  for (const plugin of plugins) {
+    config = defu(config, plugin.config ?? {})
+  }
 
-      return config
-    },
-  )
+  return plugin((api) => plugins.map((plugin) => plugin.handler(api)), config)
 }

@@ -1,7 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import { type ProgressConfig, defaultConfig, key } from './progress.config'
 
-const config = () => ({
+const config = {
   theme: {
     nui: {
       [key]: defaultConfig,
@@ -19,7 +19,7 @@ const config = () => ({
       },
     },
   },
-})
+}
 
 export default plugin(({ addComponents, theme }) => {
   const config = theme(`nui.${key}`) satisfies ProgressConfig

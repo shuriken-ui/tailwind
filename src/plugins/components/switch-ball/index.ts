@@ -1,13 +1,13 @@
 import plugin from 'tailwindcss/plugin'
 import { type SwitchBallConfig, defaulConfig, key } from './switch-ball.config'
 
-const config = () => ({
+const config = {
   theme: {
     nui: {
       [key]: defaulConfig,
     },
   },
-})
+}
 
 export default plugin(({ addComponents, theme }) => {
   const config = theme(`nui.${key}`) satisfies SwitchBallConfig

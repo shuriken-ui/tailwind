@@ -1,13 +1,13 @@
 import plugin from 'tailwindcss/plugin'
 import { defaultConfig, key } from './mask.config'
 
-const config = () => ({
+const config = {
   theme: {
     nui: {
       [key]: defaultConfig,
     },
   },
-})
+}
 
 export default plugin(({ addComponents }) => {
   addComponents({

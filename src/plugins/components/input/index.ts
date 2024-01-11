@@ -1,13 +1,13 @@
 import plugin from 'tailwindcss/plugin'
 import { type InputConfig, defaultConfig, key } from './input.config'
 
-const config = () => ({
+const config = {
   theme: {
     nui: {
       [key]: defaultConfig,
     },
   },
-})
+}
 
 export default plugin(({ addComponents, theme }) => {
   const config = theme(`nui.${key}`) satisfies InputConfig
