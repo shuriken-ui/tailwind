@@ -1,26 +1,9 @@
-import plugin from 'tailwindcss/plugin'
-import { defu } from 'defu'
-import { type PluginOption } from '../options'
-import bg from './bg'
-import text from './text'
+import { mergePlugins } from '../register'
 
-const utilities = [bg, text]
+import bgShades from './bg-shades'
+import textShades from './text-shades'
 
-export default plugin.withOptions(
-  function (options: PluginOption) {
-    return function (api) {
-      for (const utility of utilities) {
-        utility(options).handler(api)
-      }
-    }
-  },
-  function (options) {
-    let config = {}
+export { default as bgShades } from './bg-shades'
+export { default as textShades } from './text-shades'
 
-    for (const utility of utilities) {
-      config = defu(config, utility(options).config)
-    }
-
-    return config
-  },
-)
+export const utilities = mergePlugins([bgShades, textShades])

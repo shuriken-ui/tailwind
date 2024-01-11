@@ -11,7 +11,7 @@ export const Listbox = ({
   id,
   value,
   items,
-  shape = 'rounded',
+  rounded = 'sm',
   size = 'md',
   contrast = 'default',
   label,
@@ -29,7 +29,7 @@ export const Listbox = ({
         'nui-listbox',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         error && !loading && 'nui-listbox-error',
         loading && 'nui-listbox-loading',
         labelFloat && 'nui-listbox-label-float',
@@ -70,14 +70,14 @@ export const Listbox = ({
         ${icon &&
         html`
           <div
-            class="${['nui-listbox-icon', classes?.icon]
+            class="${['nui-listbox-icon nui-icon', classes?.icon]
               .filter(Boolean)
               .join(' ')}"
           >
             ${icon}
           </div>
         `}
-        <div class="nui-listbox-chevron">
+        <div class="nui-listbox-chevron nui-chevron">
           <svg
             class="nui-listbox-chevron-inner"
             xmlns="http://www.w3.org/2000/svg"

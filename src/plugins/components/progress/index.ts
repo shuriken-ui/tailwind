@@ -1,119 +1,104 @@
 import plugin from 'tailwindcss/plugin'
-import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../../options'
 import { type ProgressConfig, defaultConfig, key } from './progress.config'
 
-export default plugin.withOptions(
-  function (options: PluginOption) {
-    let { prefix } = defu(options, defaultPluginOptions)
-
-    if (prefix) {
-      prefix = `${prefix}-`
-    }
-
-    return function ({ addComponents, theme }) {
-      const config = theme(`shurikenUi.${key}`) satisfies ProgressConfig
-
-      addComponents({
-        [`.${prefix}progress`]: {
-          [`@apply relative w-${config.size} overflow-hidden`]: {},
-
-          [`.${prefix}progress-bar`]: {
-            [`@apply absolute start-0 top-0 h-full transition-all duration-${config.bar.duration}`]:
-              {},
-          },
-          [`&.${prefix}progress-default`]: {
-            [`@apply bg-${config.default.bg} dark:bg-${config.default.bgDark}`]:
-              {},
-          },
-          [`&.${prefix}progress-contrast`]: {
-            [`@apply bg-${config.defaultContrast.bg} dark:bg-${config.defaultContrast.bgDark}`]:
-              {},
-          },
-          [`&.${prefix}progress-xs`]: {
-            [`@apply h-${config.progressXS}`]: {},
-          },
-          [`&.${prefix}progress-sm`]: {
-            [`@apply h-${config.progressSM}`]: {},
-          },
-          [`&.${prefix}progress-md`]: {
-            [`@apply h-${config.progressMD}`]: {},
-          },
-          [`&.${prefix}progress-lg`]: {
-            [`@apply h-${config.progressLG}`]: {},
-          },
-          [`&.${prefix}progress-xl`]: {
-            [`@apply h-${config.progressXL}`]: {},
-          },
-          [`&.${prefix}progress-rounded, &.${prefix}progress-rounded .${prefix}progress-bar`]:
-            {
-              [`@apply rounded`]: {},
-            },
-          [`&.${prefix}progress-curved, &.${prefix}progress-curved .${prefix}progress-bar`]:
-            {
-              [`@apply rounded-${config.rounded.curved}`]: {},
-            },
-          [`&.${prefix}progress-full, &.${prefix}progress-full .${prefix}progress-bar`]:
-            {
-              [`@apply rounded-${config.rounded.full}`]: {},
-            },
-          [`&.${prefix}progress-indeterminate .${prefix}progress-bar`]: {
-            [`@apply w-full`]: {},
-          },
-          [`&.${prefix}progress-primary`]: {
-            [`.${prefix}progress-bar`]: {
-              [`@apply bg-${config.primary}`]: {},
-            },
-          },
-          [`&.${prefix}progress-info`]: {
-            [`.${prefix}progress-bar`]: {
-              [`@apply bg-${config.info}`]: {},
-            },
-          },
-          [`&.${prefix}progress-success`]: {
-            [`.${prefix}progress-bar`]: {
-              [`@apply bg-${config.success}`]: {},
-            },
-          },
-          [`&.${prefix}progress-warning`]: {
-            [`.${prefix}progress-bar`]: {
-              [`@apply bg-${config.warning}`]: {},
-            },
-          },
-          [`&.${prefix}progress-danger`]: {
-            [`.${prefix}progress-bar`]: {
-              [`@apply bg-${config.danger}`]: {},
-            },
-          },
-        },
-      })
-    }
-  },
-  function (options) {
-    let { prefix } = defu(options, defaultPluginOptions)
-
-    if (prefix) {
-      prefix = `${prefix}-`
-    }
-
-    return {
-      theme: {
-        shurikenUi: {
-          [key]: defaultConfig,
-        },
-        extend: {
-          keyframes: {
-            [`${prefix}progress-indeterminate`]: {
-              '0%': { 'margin-left': '-100%' },
-              '60%': { 'margin-left': '100%' },
-              '100%': { 'margin-left': '-100%' },
-            },
-          },
-          animation: {
-            [`${prefix}progress-indeterminate`]: `${prefix}progress-indeterminate 3s linear infinite forwards`,
-          },
+const config = {
+  theme: {
+    nui: {
+      [key]: defaultConfig,
+    },
+    extend: {
+      keyframes: {
+        'nui-progress-indeterminate': {
+          '0%': { 'margin-left': '-100%' },
+          '60%': { 'margin-left': '100%' },
+          '100%': { 'margin-left': '-100%' },
         },
       },
-    }
+      animation: {
+        'nui-progress-indeterminate': `nui-progress-indeterminate 3s linear infinite forwards`,
+      },
+    },
   },
-)
+}
+
+export default plugin(({ addComponents, theme }) => {
+  const config = theme(`nui.${key}`) satisfies ProgressConfig
+
+  addComponents({
+    '.nui-progress': {
+      [`@apply relative w-${config.width} overflow-hidden`]: {},
+      //Bar
+      '.nui-progress-bar': {
+        [`@apply absolute start-0 top-0 h-full transition-${config.bar.transition.property} duration-${config.bar.transition.duration}`]:
+          {},
+      },
+      //Color
+      '&.nui-progress-default': {
+        [`@apply bg-${config.color.default.background.light} dark:bg-${config.color.default.background.dark}`]:
+          {},
+      },
+      '&.nui-progress-contrast': {
+        [`@apply bg-${config.color.defaultContrast.background.light} dark:bg-${config.color.defaultContrast.background.dark}`]:
+          {},
+      },
+      //Size
+      '&.nui-progress-xs': {
+        [`@apply h-${config.size.xs}`]: {},
+      },
+      '&.nui-progress-sm': {
+        [`@apply h-${config.size.sm}`]: {},
+      },
+      '&.nui-progress-md': {
+        [`@apply h-${config.size.md}`]: {},
+      },
+      '&.nui-progress-lg': {
+        [`@apply h-${config.size.lg}`]: {},
+      },
+      '&.nui-progress-xl': {
+        [`@apply h-${config.size.xl}`]: {},
+      },
+      //Rounded
+      '&.nui-progress-rounded, &.nui-progress-rounded .nui-progress-bar': {
+        [`@apply ${config.rounded.sm}`]: {},
+      },
+      '&.nui-progress-smooth, &.nui-progress-smooth .nui-progress-bar': {
+        [`@apply ${config.rounded.md}`]: {},
+      },
+      '&.nui-progress-curved, &.nui-progress-curved .nui-progress-bar': {
+        [`@apply ${config.rounded.lg}`]: {},
+      },
+      '&.nui-progress-full, &.nui-progress-full .nui-progress-bar': {
+        [`@apply ${config.rounded.full}`]: {},
+      },
+      '&.nui-progress-indeterminate .nui-progress-bar': {
+        '@apply w-full': {},
+      },
+      //Bar color
+      '&.nui-progress-primary': {
+        '.nui-progress-bar': {
+          [`@apply bg-${config.bar.color.primary}`]: {},
+        },
+      },
+      '&.nui-progress-info': {
+        '.nui-progress-bar': {
+          [`@apply bg-${config.bar.color.info}`]: {},
+        },
+      },
+      '&.nui-progress-success': {
+        '.nui-progress-bar': {
+          [`@apply bg-${config.bar.color.success}`]: {},
+        },
+      },
+      '&.nui-progress-warning': {
+        '.nui-progress-bar': {
+          [`@apply bg-${config.bar.color.warning}`]: {},
+        },
+      },
+      '&.nui-progress-danger': {
+        '.nui-progress-bar': {
+          [`@apply bg-${config.bar.color.danger}`]: {},
+        },
+      },
+    },
+  })
+}, config)

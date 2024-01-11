@@ -1,83 +1,157 @@
 import plugin from 'tailwindcss/plugin'
-import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../../options'
 import {
   type ButtonCloseConfig,
   defaultConfig,
   key,
 } from './button-close.config'
 
-export default plugin.withOptions(
-  function (options: PluginOption) {
-    let { prefix } = defu(options, defaultPluginOptions)
-
-    if (prefix) {
-      prefix = `${prefix}-`
-    }
-
-    return function ({ addComponents, theme }) {
-      const config = theme(`shurikenUi.${key}`) satisfies ButtonCloseConfig
-
-      addComponents({
-        [`.${prefix}button-close`]: {
-          [`@apply ${prefix}focus flex h-${config.size} w-${config.size} items-center justify-center transition-colors duration-${config.duration} disabled:opacity-30 cursor-pointer`]:
-            {},
-
-          [`.${prefix}button-icon`]: {
-            [`@apply h-${config.buttonIcon.size} w-${config.buttonIcon.size} fill-current`]:
-              {},
-          },
-          [`&.${prefix}button-rounded`]: {
-            [`@apply rounded`]: {},
-          },
-          [`&.${prefix}button-smooth`]: {
-            [`@apply rounded-${config.rounded.smooth}`]: {},
-          },
-          [`&.${prefix}button-curved`]: {
-            [`@apply rounded-${config.rounded.curved}`]: {},
-          },
-          [`&.${prefix}button-full`]: {
-            [`@apply rounded-${config.rounded.full}`]: {},
-          },
-          [`&.${prefix}button-default`]: {
-            [`@apply hover:bg-${config.default.bgHover} dark:hover:bg-${config.default.bgHoverDark} text-${config.default.text} dark:text-${config.default.textDark}`]:
-              {},
-          },
-          [`&.${prefix}button-muted`]: {
-            [`@apply bg-${config.muted.bg} hover:bg-${config.muted.bgHover} dark:bg-${config.muted.bgDark} dark:hover:bg-${config.muted.bgHoverDark} text-${config.muted.text} dark:text-${config.muted.textDark}`]:
-              {},
-          },
-          [`&.${prefix}button-primary`]: {
-            [`@apply bg-${config.primary.bg} hover:bg-${config.primary.bgHover} text-${config.primary.text}`]:
-              {},
-          },
-          [`&.${prefix}button-info`]: {
-            [`@apply bg-${config.info.bg} hover:bg-${config.info.bgHover} text-${config.info.text}`]:
-              {},
-          },
-          [`&.${prefix}button-success`]: {
-            [`@apply bg-${config.success.bg} hover:bg-${config.success.bgHover} text-${config.success.text}`]:
-              {},
-          },
-          [`&.${prefix}button-warning`]: {
-            [`@apply bg-${config.warning.bg} hover:bg-${config.warning.bgHover} text-${config.warning.text}`]:
-              {},
-          },
-          [`&.${prefix}button-danger`]: {
-            [`@apply bg-${config.danger.bg} hover:bg-${config.danger.bgHover} text-${config.danger.text}`]:
-              {},
-          },
-        },
-      })
-    }
+const config = {
+  theme: {
+    nui: {
+      [key]: defaultConfig,
+    },
   },
-  function () {
-    return {
-      theme: {
-        shurikenUi: {
-          [key]: defaultConfig,
+}
+
+export default plugin(({ addComponents, theme }) => {
+  const config = theme(`nui.${key}`) satisfies ButtonCloseConfig
+
+  addComponents({
+    '.nui-button-close': {
+      '@apply nui-focus flex items-center justify-center disabled:opacity-30 cursor-pointer':
+        {},
+      //Transition
+      [`@apply transition-${config.transition.property} duration-${config.transition.duration}`]:
+        {},
+      //Size:xs
+      '&.nui-button-xs': {
+        [`@apply h-${config.size.xs.outer} w-${config.size.xs.outer}`]: {},
+        //Icon
+        '.nui-button-icon': {
+          [`@apply h-${config.size.xs.inner} w-${config.size.xs.inner} fill-current`]:
+            {},
         },
       },
-    }
-  },
-)
+      //Size:sm
+      '&.nui-button-sm': {
+        [`@apply h-${config.size.sm.outer} w-${config.size.sm.outer}`]: {},
+        //Icon
+        '.nui-button-icon': {
+          [`@apply h-${config.size.sm.inner} w-${config.size.sm.inner} fill-current`]:
+            {},
+        },
+      },
+      //Size:md
+      '&.nui-button-md': {
+        [`@apply h-${config.size.md.outer} w-${config.size.md.outer}`]: {},
+        //Icon
+        '.nui-button-icon': {
+          [`@apply h-${config.size.md.inner} w-${config.size.md.inner} fill-current`]:
+            {},
+        },
+      },
+      //Size:lg
+      '&.nui-button-lg': {
+        [`@apply h-${config.size.lg.outer} w-${config.size.lg.outer}`]: {},
+        //Icon
+        '.nui-button-icon': {
+          [`@apply h-${config.size.lg.inner} w-${config.size.lg.inner} fill-current`]:
+            {},
+        },
+      },
+      //Rounded:sm
+      '&.nui-button-rounded': {
+        [`@apply ${config.rounded.sm}`]: {},
+      },
+      //Rounded:md
+      '&.nui-button-smooth': {
+        [`@apply ${config.rounded.md}`]: {},
+      },
+      //Rounded:lg
+      '&.nui-button-curved': {
+        [`@apply ${config.rounded.lg}`]: {},
+      },
+      //Rounded:full
+      '&.nui-button-full': {
+        [`@apply ${config.rounded.full}`]: {},
+      },
+      //Color:default
+      '&.nui-button-default': {
+        [`@apply text-${config.color.default.font.color.light} dark:text-${config.color.default.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.default.background.base.light} dark:bg-${config.color.default.background.base.dark}`]:
+          {},
+        //Background hover
+        [`@apply hover:bg-${config.color.default.background.hover.light} dark:hover:bg-${config.color.default.background.hover.dark}`]:
+          {},
+      },
+      //Color:muted
+      '&.nui-button-muted': {
+        [`@apply text-${config.color.muted.font.color.light} dark:text-${config.color.muted.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.muted.background.base.light} dark:bg-${config.color.muted.background.base.dark}`]:
+          {},
+        //Background hover
+        [`@apply hover:bg-${config.color.muted.background.hover.light} dark:hover:bg-${config.color.muted.background.hover.dark}`]:
+          {},
+      },
+      //Color:primary
+      '&.nui-button-primary': {
+        [`@apply text-${config.color.primary.font.color.light} dark:text-${config.color.primary.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.primary.background.base.light} dark:bg-${config.color.primary.background.base.dark}`]:
+          {},
+        //Background hover
+        [`@apply hover:bg-${config.color.primary.background.hover.light} dark:hover:bg-${config.color.primary.background.hover.dark}`]:
+          {},
+      },
+      //Color:info
+      '&.nui-button-info': {
+        [`@apply text-${config.color.info.font.color.light} dark:text-${config.color.info.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.info.background.base.light} dark:bg-${config.color.info.background.base.dark}`]:
+          {},
+        //Background hover
+        [`@apply hover:bg-${config.color.info.background.hover.light} dark:hover:bg-${config.color.info.background.hover.dark}`]:
+          {},
+      },
+      //Color:success
+      '&.nui-button-success': {
+        [`@apply text-${config.color.success.font.color.light} dark:text-${config.color.success.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.success.background.base.light} dark:bg-${config.color.success.background.base.dark}`]:
+          {},
+        //Background hover
+        [`@apply hover:bg-${config.color.success.background.hover.light} dark:hover:bg-${config.color.success.background.hover.dark}`]:
+          {},
+      },
+      //Color:warning
+      '&.nui-button-warning': {
+        [`@apply text-${config.color.warning.font.color.light} dark:text-${config.color.warning.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.warning.background.base.light} dark:bg-${config.color.warning.background.base.dark}`]:
+          {},
+        //Background hover
+        [`@apply hover:bg-${config.color.warning.background.hover.light} dark:hover:bg-${config.color.warning.background.hover.dark}`]:
+          {},
+      },
+      //Color:danger
+      '&.nui-button-danger': {
+        [`@apply text-${config.color.danger.font.color.light} dark:text-${config.color.danger.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.danger.background.base.light} dark:bg-${config.color.danger.background.base.dark}`]:
+          {},
+        //Background hover
+        [`@apply hover:bg-${config.color.danger.background.hover.light} dark:hover:bg-${config.color.danger.background.hover.dark}`]:
+          {},
+      },
+    },
+  })
+}, config)

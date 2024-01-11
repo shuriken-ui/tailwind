@@ -1,147 +1,195 @@
 import plugin from 'tailwindcss/plugin'
-import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../../options'
 import { type DropdownConfig, defaultConfig, key } from './dropdown.config'
 
-export default plugin.withOptions(
-  function (options: PluginOption) {
-    let { prefix } = defu(options, defaultPluginOptions)
-
-    if (prefix) {
-      prefix = `${prefix}-`
-    }
-
-    return function ({ addComponents, theme }) {
-      const config = theme(`shurikenUi.${key}`) satisfies DropdownConfig
-
-      addComponents({
-        [`.${prefix}dropdown`]: {
-          [`@apply text-${config.textPosition}`]: {},
-
-          [`.${prefix}menu`]: {
-            [`@apply relative inline-block`]: {},
-          },
-          [`.${prefix}menu-content`]: {
-            [`@apply p-2`]: {},
-          },
-          [`.${prefix}context-button`]: {
-            [`@apply dark:ring-offset-${config.contextButton.ringOffsetDark} inline-flex h-${config.contextButton.size} w-${config.contextButton.size} items-center justify-center rounded-${config.contextButton.rounded} ring-1 ring-transparent transition-all duration-${config.contextButton.duration} group-hover:ring-${config.contextButton.ringGroupHover}`]:
-              {},
-            [`.${prefix}context-button-inner`]: {
-              [`@apply border-${config.contextButton.inner.border} dark:border-${config.contextButton.inner.borderDark} dark:bg-${config.contextButton.inner.bgDark} flex h-${config.contextButton.inner.size} w-${config.contextButton.inner.size} items-center justify-center rounded-${config.contextButton.inner.rounded} border bg-${config.contextButton.inner.bg}`]:
-                {},
-            },
-            [`.${prefix}context-icon`]: {
-              [`@apply text-${config.contextButton.icon.text} h-${config.contextButton.icon.size} w-${config.contextButton.icon.size} transition-transform duration-${config.contextButton.icon.duration}`]:
-                {},
-            },
-          },
-          [`.${prefix}text-button`]: {
-            [`@apply flex items-center space-x-1 text-${config.textButton.text}`]:
-              {},
-            [`.${prefix}text-button-inner`]: {
-              [`@apply font-${config.textButton.inner.font}`]: {},
-            },
-          },
-          [`.${prefix}chevron`]: {
-            [`@apply h-${config.chevron.size} w-${config.chevron.size} transition-transform duration-${config.chevron.duration}`]:
-              {},
-          },
-          [`.${prefix}dropdown-menu`]: {
-            [`@apply absolute z-50 mt-2 shadow-${config.dropdownMenu.shadow} shadow-${config.dropdownMenu.shadowColor} dark:shadow-${config.dropdownMenu.shadowColorDark} focus:outline-none`]:
-              {},
-            [`.${prefix}menu-header`]: {
-              [`@apply px-4 pt-5`]: {},
-            },
-            [`.${prefix}menu-header-inner`]: {
-              [`@apply relative flex items-center justify-between`]: {},
-            },
-            [`.${prefix}menu-header-title`]: {
-              [`@apply font-${config.dropdownMenu.headerTitle.font} font-${config.dropdownMenu.headerTitle.fontSize} text-${config.dropdownMenu.headerTitle.text} dark:text-${config.dropdownMenu.headerTitle.textDark} text-${config.dropdownMenu.headerTitle.textSize} uppercase`]:
-                {},
-            },
-            [`.${prefix}menu-content`]: {
-              [`@apply p-2 space-y-1`]: {},
-            },
-            [`&.${prefix}menu-md`]: {
-              [`@apply w-56`]: {},
-            },
-            [`&.${prefix}menu-lg`]: {
-              [`@apply w-72`]: {},
-            },
-            [`&.${prefix}menu-rounded`]: {
-              [`@apply rounded-${config.dropdownMenu.rounded.default}`]: {},
-            },
-            [`&.${prefix}menu-smooth`]: {
-              [`@apply rounded-${config.dropdownMenu.rounded.smooth}`]: {},
-            },
-            [`&.${prefix}menu-curved`]: {
-              [`@apply rounded-${config.dropdownMenu.rounded.curved}`]: {},
-            },
-            [`&.${prefix}menu-white`]: {
-              [`@apply border bg-${config.dropdownMenu.white.bg} border-${config.dropdownMenu.white.border} dark:border-${config.dropdownMenu.white.borderDark} dark:bg-${config.dropdownMenu.white.bgDark}`]:
-                {},
-            },
-            [`&.${prefix}menu-white-contrast`]: {
-              [`@apply border bg-${config.dropdownMenu.whiteContrast.bg} border-${config.dropdownMenu.whiteContrast.border} dark:border-${config.dropdownMenu.whiteContrast.borderDark} dark:bg-${config.dropdownMenu.whiteContrast.bgDark}`]:
-                {},
-            },
-            [`&.${prefix}menu-muted`]: {
-              [`@apply border bg-${config.dropdownMenu.muted.bg} border-${config.dropdownMenu.muted.border} dark:border-${config.dropdownMenu.muted.borderDark} dark:bg-${config.dropdownMenu.muted.bgDark}`]:
-                {},
-            },
-            [`&.${prefix}menu-muted-contrast`]: {
-              [`@apply border bg-${config.dropdownMenu.mutedContrast.bg} border-${config.dropdownMenu.mutedContrast.border} dark:border-${config.dropdownMenu.mutedContrast.borderDark} dark:bg-${config.dropdownMenu.mutedContrast.bgDark}`]:
-                {},
-            },
-            [`&.${prefix}menu-primary`]: {
-              [`@apply border bg-${config.dropdownMenu.primary.bg} border-${config.dropdownMenu.primary.border}`]:
-                {},
-            },
-            [`&.${prefix}menu-info`]: {
-              [`@apply border bg-${config.dropdownMenu.info.bg} border-${config.dropdownMenu.info.border}`]:
-                {},
-            },
-            [`&.${prefix}menu-success`]: {
-              [`@apply border bg-${config.dropdownMenu.success.bg} border-${config.dropdownMenu.success.border}`]:
-                {},
-            },
-            [`&.${prefix}menu-warning`]: {
-              [`@apply border bg-${config.dropdownMenu.warning.bg} border-${config.dropdownMenu.warning.border}`]:
-                {},
-            },
-            [`&.${prefix}menu-danger`]: {
-              [`@apply border bg-${config.dropdownMenu.danger.bg} border-${config.dropdownMenu.danger.border}`]:
-                {},
-            },
-          },
-          [`&.${prefix}dropdown-start`]: {
-            [`.${prefix}dropdown-menu`]: {
-              [`@apply start-0 origin-top-left`]: {},
-            },
-          },
-          [`&.${prefix}dropdown-end`]: {
-            [`.${prefix}dropdown-menu`]: {
-              [`@apply end-0 origin-top-right`]: {},
-            },
-          },
-          [`&:hover`]: {
-            [`.${prefix}context-button`]: {
-              [`@apply ring-${config.hover.ring} dark:ring-${config.hover.ringDark}`]:
-                {},
-            },
-          },
-        },
-      })
-    }
+const config = {
+  theme: {
+    nui: {
+      [key]: defaultConfig,
+    },
   },
-  function () {
-    return {
-      theme: {
-        shurikenUi: {
-          [key]: defaultConfig,
+}
+
+export default plugin(({ addComponents, theme }) => {
+  const config = theme(`nui.${key}`) satisfies DropdownConfig
+
+  addComponents({
+    //Wrapper
+    '.nui-dropdown': {
+      [`@apply text-${config.align}`]: {},
+      //Menu
+      '.nui-menu': {
+        '@apply relative inline-block': {},
+      },
+      //Menu Content
+      '.nui-menu-content': {
+        '@apply p-2': {},
+      },
+      //Button:context
+      '.nui-context-button': {
+        //Base
+        [`@apply inline-flex items-center justify-center rounded-${config.button.context.rounded}`]:
+          {},
+        //Size
+        [`@apply h-${config.button.context.size} w-${config.button.context.size}`]:
+          {},
+        //Ring
+        [`@apply ring-1 ring-transparent ring-offset-${config.button.context.ring.offset.color.light} dark:ring-offset-${config.button.context.ring.offset.color.dark}`]:
+          {},
+        //Transition
+        [`@apply transition-${config.button.context.transition.property} duration-${config.button.context.transition.duration}`]:
+          {},
+        //Context:inner
+        '.nui-context-button-inner': {
+          //Base
+          [`@apply flex items-center justify-center rounded-${config.button.context.inner.rounded}`]:
+            {},
+          //Size
+          [`@apply h-${config.button.context.inner.size} w-${config.button.context.inner.size}`]:
+            {},
+          //Background
+          [`@apply bg-${config.button.context.inner.background.light} dark:bg-${config.button.context.inner.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.button.context.inner.border.light} dark:border-${config.button.context.inner.border.dark}`]:
+            {},
+        },
+        //Context:icon
+        '.nui-context-icon': {
+          //Size
+          [`@apply h-${config.button.context.icon.size} w-${config.button.context.icon.size}`]:
+            {},
+          //Color
+          [`@apply text-${config.button.context.icon.font.color.light} dark:text-${config.button.context.icon.font.color.dark}`]:
+            {},
+          //Transition
+          [`@apply transition-${config.button.context.transition.property} duration-${config.button.context.transition.duration}`]:
+            {},
         },
       },
-    }
-  },
-)
+      //Button:text
+      '.nui-text-button': {
+        //Base
+        '@apply flex items-center space-x-1': {},
+        //Font
+        [`@apply font-${config.button.text.font.family} text-${config.button.text.font.color.light} dark:text-${config.button.text.font.color.dark}`]:
+          {},
+        //Text:inner
+        '.nui-text-button-inner': {
+          [`@apply font-${config.button.text.font.family}`]: {},
+        },
+      },
+      //Button:chevron
+      '.nui-chevron': {
+        [`@apply h-${config.button.chevron.size} w-${config.button.chevron.size}`]:
+          {},
+        //Transition
+        [`@apply transition-${config.button.chevron.transition.property} duration-${config.button.chevron.transition.duration}`]:
+          {},
+      },
+      //Dropdown:menu
+      '.nui-dropdown-menu': {
+        //Base
+        '@apply absolute z-50 mt-2 focus:outline-none': {},
+        //Shadow
+        [`@apply shadow-${config.menu.shadow.size} shadow-${config.menu.shadow.light} dark:shadow-${config.menu.shadow.dark}`]:
+          {},
+        //Menu:header
+        '.nui-menu-header': {
+          '@apply px-4 pt-5': {},
+        },
+        //Header:inner
+        '.nui-menu-header-inner': {
+          '@apply relative flex items-center justify-between': {},
+        },
+        //Header:title
+        '.nui-menu-header-title': {
+          //Base
+          [`@apply font-${config.menu.header.title.font.family} font-${config.menu.header.title.font.weight} text-${config.menu.header.title.font.size} uppercase`]:
+            {},
+          //Color
+          [`@apply text-${config.menu.header.title.font.color.light} dark:text-${config.menu.header.title.font.color.dark}`]:
+            {},
+        },
+        //Menu:content
+        '.nui-menu-content': {
+          '@apply p-2 space-y-1': {},
+        },
+        //Size:md
+        '&.nui-menu-md': {
+          '@apply w-56': {},
+        },
+        //Size:lg
+        '&.nui-menu-lg': {
+          '@apply w-72': {},
+        },
+        //Rounded:sm
+        '&.nui-menu-rounded': {
+          [`@apply ${config.menu.rounded.sm}`]: {},
+        },
+        //Rounded:md
+        '&.nui-menu-smooth': {
+          [`@apply ${config.menu.rounded.md}`]: {},
+        },
+        //Rounded:lg
+        '&.nui-menu-curved': {
+          [`@apply ${config.menu.rounded.lg}`]: {},
+        },
+        //Color:white
+        '&.nui-menu-white': {
+          //Border
+          [`@apply border border-${config.menu.color.white.border.light} dark:border-${config.menu.color.white.border.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.menu.color.white.background.light} dark:bg-${config.menu.color.white.background.dark}`]:
+            {},
+        },
+        //Color:white-contrast
+        '&.nui-menu-white-contrast': {
+          //Border
+          [`@apply border border-${config.menu.color.whiteContrast.border.light} dark:border-${config.menu.color.whiteContrast.border.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.menu.color.whiteContrast.background.light} dark:bg-${config.menu.color.whiteContrast.background.dark}`]:
+            {},
+        },
+        //Color:muted
+        '&.nui-menu-muted': {
+          //Border
+          [`@apply border border-${config.menu.color.muted.border.light} dark:border-${config.menu.color.muted.border.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.menu.color.muted.background.light} dark:bg-${config.menu.color.muted.background.dark}`]:
+            {},
+        },
+        //Color:muted-contrast
+        '&.nui-menu-muted-contrast': {
+          //Border
+          [`@apply border border-${config.menu.color.mutedContrast.border.light} dark:border-${config.menu.color.mutedContrast.border.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.menu.color.mutedContrast.background.light} dark:bg-${config.menu.color.mutedContrast.background.dark}`]:
+            {},
+        },
+      },
+      //Orientation:start
+      '&.nui-dropdown-start': {
+        '.nui-dropdown-menu': {
+          '@apply start-0 origin-top-left': {},
+        },
+      },
+      //Orientation:end
+      '&.nui-dropdown-end': {
+        '.nui-dropdown-menu': {
+          '@apply end-0 origin-top-right': {},
+        },
+      },
+      //Context:hover
+      '&:hover': {
+        '.nui-context-button': {
+          [`@apply ring-offset-${config.button.context.ring.offset.size} ring-${config.button.context.ring.color.hover.light} dark:ring-${config.button.context.ring.color.hover.dark}`]:
+            {},
+        },
+      },
+    },
+  })
+}, config)

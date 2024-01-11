@@ -1,6 +1,7 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface BreadcrumbProps extends Record<string, unknown> {
+  separator?: 'slash' | 'chevron' | 'dot' | 'arrow'
   items?: {
     label?: string
     hideLabel?: boolean
@@ -9,6 +10,9 @@ export interface BreadcrumbProps extends Record<string, unknown> {
   }[]
   classes?: {
     wrapper?: string | string[]
+    list?: string | string[]
+    dropdown?: string | string[]
+    item?: string | string[]
   }
 }
 

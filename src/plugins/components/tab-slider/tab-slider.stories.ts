@@ -10,10 +10,10 @@ const meta = {
   // tags: ['autodocs'],
   render: (args) => TabSlider(args),
   argTypes: {
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'smooth',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'md',
     },
     size: {
       control: { type: 'select' },
@@ -63,12 +63,12 @@ export const Main: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const ShapeStraight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     tabs: data,
-    shape: 'straight',
+    rounded: 'none',
     children: html`
       <div>
         <p class="font-sans text-muted-500 dark:text-muted-400">
@@ -83,10 +83,10 @@ export const ShapeStraight: Story = {
 }
 
 export const ShapeRounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     tabs: data,
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <div>
         <p class="font-sans text-muted-500 dark:text-muted-400">
@@ -101,10 +101,10 @@ export const ShapeRounded: Story = {
 }
 
 export const ShapeSmooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     tabs: data,
-    shape: 'smooth',
+    rounded: 'md',
     children: html`
       <div>
         <p class="font-sans text-muted-500 dark:text-muted-400">
@@ -119,10 +119,10 @@ export const ShapeSmooth: Story = {
 }
 
 export const ShapeCurved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     tabs: data,
-    shape: 'curved',
+    rounded: 'lg',
     children: html`
       <div>
         <p class="font-sans text-muted-500 dark:text-muted-400">
@@ -137,10 +137,10 @@ export const ShapeCurved: Story = {
 }
 
 export const ShapeFull: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
     tabs: data,
-    shape: 'full',
+    rounded: 'full',
     children: html`
       <div>
         <p class="font-sans text-muted-500 dark:text-muted-400">
@@ -230,6 +230,26 @@ export const SizeSm: Story = {
     style: 'max-width: 480px;',
   },
 }
+
+export const SizeSmFull: Story = {
+  name: 'Size: sm',
+  args: {
+    tabs: data,
+    size: 'sm',
+    rounded: 'full',
+    justify: 'start',
+    children: html`
+      <div>
+        <p class="font-sans text-muted-500 dark:text-muted-400">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid iudicant
+          sensus? Primum quid tu dicis breve? Etiam beatissimum? Ne discipulum
+          abducam, times.
+        </p>
+      </div>
+    `,
+    style: 'max-width: 480px;',
+  },
+}
 // #endregion
 
 // #region Slots
@@ -238,7 +258,7 @@ export const SlotDual: Story = {
   args: {
     tabs: data,
     justify: 'start',
-    shape: 'full',
+    rounded: 'full',
     children: html`
       <div>
         <p class="font-sans text-muted-500 dark:text-muted-400">
@@ -257,7 +277,7 @@ export const SlotTriple: Story = {
   args: {
     tabs: dataThree,
     justify: 'start',
-    shape: 'full',
+    rounded: 'full',
     children: html`
       <div>
         <p class="font-sans text-muted-500 dark:text-muted-400">

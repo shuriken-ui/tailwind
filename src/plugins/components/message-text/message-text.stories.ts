@@ -32,10 +32,10 @@ const meta = {
       ],
       defaultValue: 'default',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg'],
+      defaultValue: 'none',
     },
     contrast: {
       control: { type: 'select' },
@@ -62,21 +62,20 @@ export const Solid: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
-    shape: 'straight',
+    rounded: 'none',
     title: 'Message title',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec dicuntur inconstantissime. Quamquam te quidem video minime esse deterritum.',
-    style: 'max-width: 440px;',
   },
 }
 
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     title: 'Message title',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec dicuntur inconstantissime. Quamquam te quidem video minime esse deterritum.',
     style: 'max-width: 440px;',
@@ -84,9 +83,9 @@ export const Rounded: Story = {
 }
 
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
-    shape: 'smooth',
+    rounded: 'md',
     title: 'Message title',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec dicuntur inconstantissime. Quamquam te quidem video minime esse deterritum.',
     style: 'max-width: 440px;',
@@ -94,9 +93,9 @@ export const Smooth: Story = {
 }
 
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
-    shape: 'curved',
+    rounded: 'lg',
     title: 'Message title',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec dicuntur inconstantissime. Quamquam te quidem video minime esse deterritum.',
     style: 'max-width: 440px;',

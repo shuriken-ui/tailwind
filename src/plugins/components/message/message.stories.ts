@@ -27,10 +27,10 @@ const meta = {
       ],
       defaultValue: 'default',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'full',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'sm',
     },
     closable: {
       control: { type: 'boolean' },
@@ -50,61 +50,56 @@ export const Main: Story = {
   args: {
     // set default values used for UI preview
     type: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
     style: 'max-width: 280px;',
   },
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     type: 'default',
-    shape: 'straight',
+    rounded: 'none',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     type: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     type: 'default',
-    shape: 'smooth',
+    rounded: 'md',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     type: 'default',
-    shape: 'curved',
+    rounded: 'lg',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
 export const Full: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
     type: 'default',
-    shape: 'full',
+    rounded: 'full',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 // #endregion
@@ -114,9 +109,8 @@ export const TypeDefault: Story = {
   name: 'Type: default',
   args: {
     type: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
@@ -124,9 +118,8 @@ export const TypeMuted: Story = {
   name: 'Type: muted',
   args: {
     type: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
@@ -134,9 +127,8 @@ export const TypePrimary: Story = {
   name: 'Type: primary',
   args: {
     type: 'primary',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
@@ -144,9 +136,8 @@ export const TypeInfo: Story = {
   name: 'Type: info',
   args: {
     type: 'info',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
@@ -154,9 +145,8 @@ export const TypeSuccess: Story = {
   name: 'Type: success',
   args: {
     type: 'success',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
@@ -164,9 +154,8 @@ export const TypeWarning: Story = {
   name: 'Type: warning',
   args: {
     type: 'warning',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
@@ -174,9 +163,8 @@ export const TypeDanger: Story = {
   name: 'Type: danger',
   args: {
     type: 'danger',
-    shape: 'rounded',
+    rounded: 'sm',
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 // #endregion
@@ -186,10 +174,19 @@ export const ClosableDefault: Story = {
   name: 'Closable: default',
   args: {
     type: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
+  },
+}
+
+export const ClosableMuted: Story = {
+  name: 'Closable: muted',
+  args: {
+    type: 'muted',
+    rounded: 'sm',
+    closable: true,
+    message: 'Some nice message text',
   },
 }
 
@@ -197,10 +194,9 @@ export const ClosablePrimary: Story = {
   name: 'Closable: primary',
   args: {
     type: 'primary',
-    shape: 'rounded',
+    rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
@@ -208,20 +204,49 @@ export const ClosableInfo: Story = {
   name: 'Closable: info',
   args: {
     type: 'info',
-    shape: 'rounded',
+    rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
+  },
+}
+
+export const ClosableSuccess: Story = {
+  name: 'Closable: success',
+  args: {
+    type: 'success',
+    rounded: 'sm',
+    closable: true,
+    message: 'Some nice message text',
+  },
+}
+
+export const ClosableWarning: Story = {
+  name: 'Closable: warning',
+  args: {
+    type: 'warning',
+    rounded: 'sm',
+    closable: true,
+    message: 'Some nice message text',
+  },
+}
+
+export const ClosableDanger: Story = {
+  name: 'Closable: danger',
+  args: {
+    type: 'danger',
+    rounded: 'sm',
+    closable: true,
+    message: 'Some nice message text',
   },
 }
 // #endregion
 
 // #region Slot: icon
-export const SlotIconInfo: Story = {
-  name: 'Slot icon: info',
+export const SlotIconDefault: Story = {
+  name: 'Slot icon: default',
   args: {
-    type: 'info',
-    shape: 'rounded',
+    type: 'default',
+    rounded: 'sm',
     closable: true,
     icon: html`
       <svg
@@ -240,7 +265,84 @@ export const SlotIconInfo: Story = {
       </svg>
     `,
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
+  },
+}
+
+export const SlotIconMuted: Story = {
+  name: 'Slot icon: muted',
+  args: {
+    type: 'muted',
+    rounded: 'sm',
+    closable: true,
+    icon: html`
+      <svg
+        class="nui-message-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1Zm-.5 5a1 1 0 1 0 0 2h.5a1 1 0 1 0 0-2h-.5ZM10 10a1 1 0 1 0 0 2h1v3h-1a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-1v-4a1 1 0 0 0-1-1h-2Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    `,
+    message: 'Some nice message text',
+  },
+}
+
+export const SlotIconPrimary: Story = {
+  name: 'Slot icon: primary',
+  args: {
+    type: 'primary',
+    rounded: 'sm',
+    closable: true,
+    icon: html`
+      <svg
+        class="nui-message-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1Zm-.5 5a1 1 0 1 0 0 2h.5a1 1 0 1 0 0-2h-.5ZM10 10a1 1 0 1 0 0 2h1v3h-1a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-1v-4a1 1 0 0 0-1-1h-2Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    `,
+    message: 'Some nice message text',
+  },
+}
+
+export const SlotIconInfo: Story = {
+  name: 'Slot icon: info',
+  args: {
+    type: 'info',
+    rounded: 'sm',
+    closable: true,
+    icon: html`
+      <svg
+        class="nui-message-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1Zm-.5 5a1 1 0 1 0 0 2h.5a1 1 0 1 0 0-2h-.5ZM10 10a1 1 0 1 0 0 2h1v3h-1a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-1v-4a1 1 0 0 0-1-1h-2Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    `,
+    message: 'Some nice message text',
   },
 }
 
@@ -248,7 +350,7 @@ export const SlotIconSuccess: Story = {
   name: 'Slot icon: success',
   args: {
     type: 'success',
-    shape: 'curved',
+    rounded: 'lg',
     closable: true,
     icon: html`
       <svg
@@ -269,7 +371,6 @@ export const SlotIconSuccess: Story = {
       </svg>
     `,
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
   },
 }
 
@@ -291,10 +392,33 @@ export const SlotIconWarning: Story = {
         />
       </svg>
     `,
-    shape: 'full',
+    rounded: 'full',
     closable: true,
     message: 'Some nice message text',
-    style: 'min-width: 280px; max-width: 280px;',
+  },
+}
+
+export const SlotIconDanger: Story = {
+  name: 'Slot icon: danger',
+  args: {
+    type: 'danger',
+    icon: html`
+      <svg
+        class="nui-message-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 256 256"
+      >
+        <path
+          fill="currentColor"
+          d="m227.31 80.23l-51.54-51.54A16.13 16.13 0 0 0 164.45 24h-72.9a16.13 16.13 0 0 0-11.32 4.69L28.69 80.23A16.13 16.13 0 0 0 24 91.55v72.9a16.13 16.13 0 0 0 4.69 11.32l51.54 51.54A16.13 16.13 0 0 0 91.55 232h72.9a16.13 16.13 0 0 0 11.32-4.69l51.54-51.54a16.13 16.13 0 0 0 4.69-11.32v-72.9a16.13 16.13 0 0 0-4.69-11.32ZM120 80a8 8 0 0 1 16 0v56a8 8 0 0 1-16 0Zm8 104a12 12 0 1 1 12-12a12 12 0 0 1-12 12Z"
+        />
+      </svg>
+    `,
+    rounded: 'full',
+    closable: true,
+    message: 'Some nice message text',
   },
 }
 // #endregion

@@ -1,7 +1,7 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface DropdownProps extends Record<string, unknown> {
-  flavor?: 'button' | 'context' | 'text'
+  variant?: 'button' | 'context' | 'text'
   buttonColor?:
     | 'default'
     | 'primary'
@@ -23,7 +23,7 @@ export interface DropdownProps extends Record<string, unknown> {
     | 'warning'
     | 'danger'
     | 'none'
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   orientation?: 'start' | 'end'
   size?: 'md' | 'lg'
   label?: string
@@ -31,6 +31,9 @@ export interface DropdownProps extends Record<string, unknown> {
   open?: boolean
   classes?: {
     wrapper?: string | string[]
+    menu?: string | string[]
+    header?: string | string[]
+    content?: string | string[]
   }
 }
 

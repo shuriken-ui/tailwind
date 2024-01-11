@@ -1,77 +1,123 @@
 export const key = 'messageText' as const
 
 export const defaultConfig = {
-  space: '6',
-  head: {
-    space: '2',
+  padding: '6',
+  rounded: {
+    default: 'rounded-md',
+    smooth: 'rounded-lg',
+    curved: 'rounded-xl',
+  },
+  header: {
+    gap: '2',
   },
   dot: {
     size: '3',
     rounded: 'full',
-    bg: 'muted-200',
-    bgDark: 'muted-700',
+    background: {
+      light: 'muted-200',
+      dark: 'muted-700',
+    },
   },
   close: {
     position: '2',
   },
-  white: {
-    bg: 'white',
-    bgDark: 'muted-800',
-  },
-  whiteContrast: {
-    bg: 'white',
-    bgDark: 'muted-950',
-  },
-  default: {
-    border: 'muted-300',
-    borderDark: 'muted-700',
-    dot: {
-      bg: 'muted-200',
-      bgDark: 'muted-700',
+  color: {
+    default: {
+      border: {
+        light: 'muted-300',
+        dark: 'muted-700',
+      },
+      dot: {
+        background: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
+      },
     },
-  },
-  contrast: {
-    border: 'muted-300',
-    borderDark: 'muted-800',
-    dot: {
-      bg: 'muted-200',
-      bgDark: 'muted-800',
+    white: {
+      background: {
+        light: 'white',
+        dark: 'muted-800',
+      },
     },
-  },
-  primary: {
-    border: 'primary-500',
-    dot: {
-      bg: 'primary-500',
+    whiteContrast: {
+      background: {
+        light: 'white',
+        dark: 'muted-950',
+      },
     },
-  },
-  info: {
-    border: 'info-500',
-    dot: {
-      bg: 'info-500',
+    contrast: {
+      border: {
+        light: 'muted-300',
+        dark: 'muted-800',
+      },
+      dot: {
+        background: {
+          light: 'muted-200',
+          dark: 'muted-800',
+        },
+      },
     },
-  },
-  success: {
-    border: 'success-500',
-    dot: {
-      bg: 'success-500',
+    primary: {
+      border: {
+        light: 'primary-500',
+        dark: 'primary-500',
+      },
+      dot: {
+        background: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+      },
     },
-  },
-  warning: {
-    border: 'warning-500',
-    dot: {
-      bg: 'warning-500',
+    info: {
+      border: {
+        light: 'info-500',
+        dark: 'info-500',
+      },
+      dot: {
+        background: {
+          light: 'info-500',
+          dark: 'info-500',
+        },
+      },
     },
-  },
-  danger: {
-    border: 'danger-500',
-    dot: {
-      bg: 'danger-500',
+    success: {
+      border: {
+        light: 'success-500',
+        dark: 'success-500',
+      },
+      dot: {
+        background: {
+          light: 'success-500',
+          dark: 'success-500',
+        },
+      },
     },
-  },
-  rounded: {
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
+    warning: {
+      border: {
+        light: 'warning-500',
+        dark: 'warning-500',
+      },
+      dot: {
+        background: {
+          light: 'warning-500',
+          dark: 'warning-500',
+        },
+      },
+    },
+    danger: {
+      border: {
+        light: 'danger-500',
+        dark: 'danger-500',
+      },
+      dot: {
+        background: {
+          light: 'danger-500',
+          dark: 'danger-500',
+        },
+      },
+    },
   },
 }
 

@@ -13,8 +13,8 @@ export const Dropdown = ({
   label,
   headerLabel,
   buttonColor,
-  flavor = 'button',
-  shape = 'rounded',
+  variant = 'button',
+  rounded = 'sm',
   orientation = 'start',
   color = 'white',
   size = 'lg',
@@ -35,10 +35,10 @@ export const Dropdown = ({
       ${spread(attrs)}
     >
       <div class="nui-menu">
-        ${flavor === 'button'
+        ${variant === 'button'
           ? html`
               ${Button({
-                shape: shape,
+                rounded: rounded,
                 color: buttonColor,
                 children: html`
                   <span>${label}</span>
@@ -65,7 +65,7 @@ export const Dropdown = ({
               })}
             `
           : ''}
-        ${flavor === 'context'
+        ${variant === 'context'
           ? html`
               <button
                 type="button"
@@ -102,7 +102,7 @@ export const Dropdown = ({
               </button>
             `
           : ''}
-        ${flavor === 'text'
+        ${variant === 'text'
           ? html`
               <button
                 type="button"
@@ -134,7 +134,7 @@ export const Dropdown = ({
               <div
                 class=${[
                   'nui-dropdown-menu',
-                  shape && variants.shape[shape],
+                  rounded && variants.rounded[rounded],
                   color && variants.color[color],
                   size && variants.size[size],
                 ]

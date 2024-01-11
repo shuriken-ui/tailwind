@@ -35,9 +35,9 @@ const meta = {
       ],
       defaultValue: 'default',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
+      options: ['none', 'sm', 'md', 'lg', 'full'],
       defaultValue: 'straight',
     },
     onClick: { action: 'onClick' },
@@ -56,7 +56,7 @@ export const Main: Story = {
     // set default values used for UI preview
     color: 'default',
     loading: false,
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -82,7 +82,7 @@ export const SizeSm: Story = {
   name: 'Size: sm',
   args: {
     size: 'sm',
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -105,7 +105,7 @@ export const SizeMd: Story = {
   name: 'Size: md',
   args: {
     size: 'md',
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -128,7 +128,7 @@ export const SizeLg: Story = {
   name: 'Size: lg',
   args: {
     size: 'lg',
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -149,11 +149,11 @@ export const SizeLg: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
-    shape: 'straight',
+    rounded: 'none',
     children: html`
       <svg
         class="h-4 w-4"
@@ -173,9 +173,9 @@ export const Straight: Story = {
   },
 }
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -195,9 +195,9 @@ export const Rounded: Story = {
   },
 }
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
-    shape: 'smooth',
+    rounded: 'md',
     children: html`
       <svg
         class="h-4 w-4"
@@ -217,9 +217,9 @@ export const Smooth: Story = {
   },
 }
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
-    shape: 'curved',
+    rounded: 'lg',
     children: html`
       <svg
         class="h-4 w-4"
@@ -239,9 +239,9 @@ export const Curved: Story = {
   },
 }
 export const Full: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
-    shape: 'full',
+    rounded: 'full',
     children: html`
       <svg
         class="h-4 w-4"
@@ -267,7 +267,7 @@ export const ColorDefault: Story = {
   name: 'Color: default',
   args: {
     color: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -291,7 +291,7 @@ export const ColorMuted: Story = {
   name: 'Color: muted',
   args: {
     color: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -315,7 +315,7 @@ export const ColorPrimary: Story = {
   name: 'Color: primary',
   args: {
     color: 'primary',
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -339,7 +339,7 @@ export const ColorInfo: Story = {
   name: 'Color: info',
   args: {
     color: 'info',
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -363,7 +363,7 @@ export const ColorSuccess: Story = {
   name: 'Color: success',
   args: {
     color: 'success',
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -387,7 +387,7 @@ export const ColorWarning: Story = {
   name: 'Color: warning',
   args: {
     color: 'warning',
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -411,7 +411,7 @@ export const ColorDanger: Story = {
   name: 'Color: danger',
   args: {
     color: 'danger',
-    shape: 'rounded',
+    rounded: 'sm',
     children: html`
       <svg
         class="h-4 w-4"
@@ -437,7 +437,7 @@ export const SizeSmLoading: Story = {
   name: 'Size: sm',
   args: {
     size: 'sm',
-    shape: 'rounded',
+    rounded: 'sm',
     loading: true,
     children: html`
       <svg
@@ -461,7 +461,7 @@ export const SizeMdLoading: Story = {
   name: 'Size: md',
   args: {
     size: 'md',
-    shape: 'rounded',
+    rounded: 'sm',
     loading: true,
     children: html`
       <svg
@@ -485,7 +485,7 @@ export const SizeLgLoading: Story = {
   name: 'Size: lg',
   args: {
     size: 'lg',
-    shape: 'rounded',
+    rounded: 'sm',
     loading: true,
     children: html`
       <svg
@@ -511,7 +511,7 @@ export const SizeLgLoading: Story = {
 export const StraightDisabled: Story = {
   name: 'Disabled: straight',
   args: {
-    shape: 'straight',
+    rounded: 'none',
     '?disabled': true,
     children: html`
       <svg
@@ -534,7 +534,7 @@ export const StraightDisabled: Story = {
 export const RoundedDisabled: Story = {
   name: 'Disabled: rounded',
   args: {
-    shape: 'rounded',
+    rounded: 'sm',
     '?disabled': true,
     children: html`
       <svg
@@ -557,7 +557,7 @@ export const RoundedDisabled: Story = {
 export const SmoothDisabled: Story = {
   name: 'Disabled: smooth',
   args: {
-    shape: 'smooth',
+    rounded: 'md',
     '?disabled': true,
     children: html`
       <svg
@@ -580,7 +580,7 @@ export const SmoothDisabled: Story = {
 export const CurvedDisabled: Story = {
   name: 'Disabled: curved',
   args: {
-    shape: 'curved',
+    rounded: 'lg',
     '?disabled': true,
     children: html`
       <svg
@@ -603,7 +603,7 @@ export const CurvedDisabled: Story = {
 export const FullDisabled: Story = {
   name: 'Disabled: full',
   args: {
-    shape: 'full',
+    rounded: 'full',
     '?disabled': true,
     children: html`
       <svg
@@ -629,7 +629,7 @@ export const FullDisabled: Story = {
 export const Slot: Story = {
   name: 'Slots: default slot',
   args: {
-    shape: 'full',
+    rounded: 'full',
     size: 'lg',
     children: html`
       ${Avatar({

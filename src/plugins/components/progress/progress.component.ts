@@ -10,7 +10,7 @@ import * as variants from './progress.variants'
 export const Progress = ({
   color = 'primary',
   contrast = 'default',
-  shape = 'full',
+  rounded = 'full',
   size = 'md',
   value,
   classes,
@@ -27,7 +27,7 @@ export const Progress = ({
         color && variants.color[color],
         contrast && variants.contrast[contrast],
         size && variants.size[size],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         classes?.wrapper,
       ]
         .filter(Boolean)

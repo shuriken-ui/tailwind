@@ -9,7 +9,7 @@ import * as variants from './input-number.variants'
  */
 export const InputNumber = ({
   id,
-  shape = 'rounded',
+  rounded = 'sm',
   size = 'md',
   contrast = 'default',
   label,
@@ -36,7 +36,7 @@ export const InputNumber = ({
         'nui-input-number-wrapper',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         error && !loading && 'nui-input-number-error',
         loading && 'nui-input-number-loading',
         labelFloat && 'nui-input-number-label-float',
@@ -108,7 +108,7 @@ export const InputNumber = ({
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2"
+                stroke-width="4"
                 d="m6 9 6 6 6-6"
               />
             </svg>
@@ -124,7 +124,7 @@ export const InputNumber = ({
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2"
+                stroke-width="4"
                 d="m6 9 6 6 6-6"
               />
             </svg>

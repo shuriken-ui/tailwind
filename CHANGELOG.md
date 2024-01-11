@@ -2,6 +2,216 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.12...v2.0.0) (2024-01-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* replace config prefix from `shurikenUi` to `nui` + export plugins and default theme
+
+### Features
+
+* add nui-focus utility stories ([aa4b44a](https://github.com/shuriken-ui/tailwind/commit/aa4b44ae28a34dbad5555b2b5755747c58398044))
+* add nui-mark utility stories ([b4335b2](https://github.com/shuriken-ui/tailwind/commit/b4335b282adbc9cf9f844f243bb6156831a0b945))
+* add nui-mask utility stories ([6347952](https://github.com/shuriken-ui/tailwind/commit/634795259bd19c3bbbf3469307180fd28ded8094))
+* add nui-slimscroll utility stories ([ca15aa7](https://github.com/shuriken-ui/tailwind/commit/ca15aa749ec4181fa13d65653efc7ff03f827b03))
+* replace config prefix from `shurikenUi` to `nui` + export plugins and default theme ([b8976f8](https://github.com/shuriken-ui/tailwind/commit/b8976f8c471da04c061cc92909d52722a044cbba))
+* update to tailwind 3.4 ([d431a1e](https://github.com/shuriken-ui/tailwind/commit/d431a1ee6feeb6f539e3f9f4aa5d5509268a7a1c))
+
+
+### Bug Fixes
+
+* **InputNumber:** fix muted contrast styles ([4adeebc](https://github.com/shuriken-ui/tailwind/commit/4adeebcee8a94004e752867461ff46823d117fe8))
+
+## [2.0.0-next.12](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.11...v2.0.0-next.12) (2023-12-26)
+
+
+### Bug Fixes
+
+* update border color in listbox.config.ts ([7cb78ea](https://github.com/shuriken-ui/tailwind/commit/7cb78ea2eae6ebc13fb208580e8eba3adc63c388))
+
+## [2.0.0-next.11](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.10...v2.0.0-next.11) (2023-12-20)
+
+
+### Bug Fixes
+
+* fix background and border colors in listbox options ([19aefa7](https://github.com/shuriken-ui/tailwind/commit/19aefa717a9dc241e51c1b4e8f1dd3a487d3724f))
+* update border color in card.config.ts ([3a6e680](https://github.com/shuriken-ui/tailwind/commit/3a6e6806d6f2fb2039adb37d0ed18ef0d42df5e2))
+* update cursor style in textarea component ([470e418](https://github.com/shuriken-ui/tailwind/commit/470e4187aa24bf47ebf5a48e9ea04d3ec1ea48bd))
+
+## [2.0.0-next.10](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.9...v2.0.0-next.10) (2023-12-20)
+
+
+### Bug Fixes
+
+* update button hover color in button.config.ts ([cf57020](https://github.com/shuriken-ui/tailwind/commit/cf570202020f622e803b269c7c5f83c6df7a5ee5))
+* update checkbox inner background dark color ([ba65672](https://github.com/shuriken-ui/tailwind/commit/ba65672fe6c568ca07d7b52500dc305be8e4c1c8))
+* update snack.config.ts to use 'muted-950' as the icon dark background color ([48098c2](https://github.com/shuriken-ui/tailwind/commit/48098c2096887bb3b18b2ae717a64567ce54efe5))
+
+## [2.0.0-next.9](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.8...v2.0.0-next.9) (2023-12-20)
+
+
+### Bug Fixes
+
+* **BaseCard:** update border colors in card component ([570c9fa](https://github.com/shuriken-ui/tailwind/commit/570c9fa0ef4c19c250bb1006123240b83279af6f))
+
+## [2.0.0-next.8](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.7...v2.0.0-next.8) (2023-12-19)
+
+
+### Bug Fixes
+
+* **BaseListbox:** update listbox styles for loading and label float ([917b0bd](https://github.com/shuriken-ui/tailwind/commit/917b0bd778d3dabfaa29404e83216a0e2f716c02))
+* **BaseTextarea:** update textarea styles to include cursor styles for enabled state ([62a44f1](https://github.com/shuriken-ui/tailwind/commit/62a44f1f196a79f17c65079e38c8a9bc026da5ce))
+* **BasThemeSwitch:** fix border styles in theme switch component ([7ef5ed6](https://github.com/shuriken-ui/tailwind/commit/7ef5ed6eeec9c30ec2df1a38cb65c4cc38da90db))
+
+## [2.0.0-next.7](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.6...v2.0.0-next.7) (2023-12-19)
+
+
+### Bug Fixes
+
+* refactor listbox label styles ([d53bd75](https://github.com/shuriken-ui/tailwind/commit/d53bd75bcbb0b2eba656dce906d617d560a16ae4))
+
+## [2.0.0-next.6](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.5...v2.0.0-next.6) (2023-12-19)
+
+
+### Bug Fixes
+
+* refactor listbox label styles for small size and floating label ([ed0e5a5](https://github.com/shuriken-ui/tailwind/commit/ed0e5a556e15ac0957a0e66955d4d576d9e061a8))
+
+## [2.0.0-next.5](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.4...v2.0.0-next.5) (2023-12-19)
+
+
+### Bug Fixes
+
+* refactor listbox button focus styles ([8715443](https://github.com/shuriken-ui/tailwind/commit/871544322ccb0ed5dbbc5466f5587cc0146d7d69))
+
+## [2.0.0-next.4](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.3...v2.0.0-next.4) (2023-12-18)
+
+
+### Bug Fixes
+
+* **BaseTag:** update tag component shadows ([521b928](https://github.com/shuriken-ui/tailwind/commit/521b928664497ce9b03787f185cc308e8f358985))
+
+## [2.0.0-next.3](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.2...v2.0.0-next.3) (2023-12-18)
+
+
+### Bug Fixes
+
+* **BaseDropdownItem:** refactor dropdown-item hover styles ([a6433a0](https://github.com/shuriken-ui/tailwind/commit/a6433a04ce9cb170233fddda58ce7a12ce3490cb))
+
+## [2.0.0-next.2](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.1...v2.0.0-next.2) (2023-12-18)
+
+
+### Bug Fixes
+
+* **BaseButton:** update variant outline muted hover background color ([ba8cb0c](https://github.com/shuriken-ui/tailwind/commit/ba8cb0c23ea4a3f0e70926c5f724fb72ee7b1295))
+
+## [2.0.0-next.1](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.0...v2.0.0-next.1) (2023-12-17)
+
+
+### Bug Fixes
+
+* **BaseAvatar:** remove border styles from avatar.config.ts ([7c70bb5](https://github.com/shuriken-ui/tailwind/commit/7c70bb5d3e64513b0b1f41b55156389ed7132b62))
+
+## [2.0.0-next.0](https://github.com/shuriken-ui/tailwind/compare/v1.5.3...v2.0.0-next.0) (2023-12-16)
+
+
+### Features
+
+* **Accordion:** implement new config ([062aef0](https://github.com/shuriken-ui/tailwind/commit/062aef02c6f210fd74257f2b5b82d61982776f4a))
+* **Accordion:** improve overall design ([2291f6b](https://github.com/shuriken-ui/tailwind/commit/2291f6b41b5eb762dc6a59b1e95a45cc15ad7351))
+* **Accordion:** redesign config ([bda2ac9](https://github.com/shuriken-ui/tailwind/commit/bda2ac9d67976b6884b31a995b39d812f991a610))
+* **Accordion:** rename shape prop to rounded, update stories ([0e49c08](https://github.com/shuriken-ui/tailwind/commit/0e49c088c0a7ba57c93c34c6364e9ac0b3d5c0df))
+* add bordered props to tabs, update tab slider stories ([7911dc8](https://github.com/shuriken-ui/tailwind/commit/7911dc8b72c88548d54a2f6542c7703dc493652b))
+* **Autocomplete:** implement new config design ([8e44ca2](https://github.com/shuriken-ui/tailwind/commit/8e44ca25ecc2ce34afc4bdb7b10b5e15fb476e26))
+* **Autocomplete:** redesign autocomplete config ([06d87ad](https://github.com/shuriken-ui/tailwind/commit/06d87ad7f20aa163ac872b0d6e3b65ddabb2f7ff))
+* **Autocomplete:** rename shape prop to rounded, update stories ([aa58ed6](https://github.com/shuriken-ui/tailwind/commit/aa58ed6cdfd18a2fb3b7750b04c281c4afd5064b))
+* **Autocomplete:** update docs ([c64df8b](https://github.com/shuriken-ui/tailwind/commit/c64df8b64e6b642dcf8398b5b62a81ca19ffcc55))
+* **AvatarGroup:** implement new config design ([4c65bd2](https://github.com/shuriken-ui/tailwind/commit/4c65bd2e6a6e720ebd8c220ce6141ddac083143e))
+* **AvatarGroup:** redesign config ([d255d13](https://github.com/shuriken-ui/tailwind/commit/d255d134bda9b13b498484c0e8fa4482aa1adaf8))
+* **Avatar:** implement new config ([3907353](https://github.com/shuriken-ui/tailwind/commit/3907353b6929d207f4eefe0e2073111468f94b13))
+* **Avatar:** redesign configuration ([3d8cae5](https://github.com/shuriken-ui/tailwind/commit/3d8cae55aa7686cf2c1e3856bba19f9821e61829))
+* **Avatar:** rename shape prop to rounded, update stories ([302a780](https://github.com/shuriken-ui/tailwind/commit/302a7805039731d265131c28e2fc7a40cda2ccde))
+* **Breadcrumb:** implement new config ([14eface](https://github.com/shuriken-ui/tailwind/commit/14eface3805af9bead4995d51def2e519ca875d2))
+* **Breadcrumb:** redesign config ([9ce2a73](https://github.com/shuriken-ui/tailwind/commit/9ce2a7388b6aa00fb27346285456fccbc8377306))
+* **Breadcrumb:** update stories ([660a1bc](https://github.com/shuriken-ui/tailwind/commit/660a1bc3f1e18e4b2e77dba9e8a2c9fc29b96033))
+* **ButtonAction:** implement new config ([cd9bf16](https://github.com/shuriken-ui/tailwind/commit/cd9bf1615caa593ebc3ca510e36fab330375fe59))
+* **ButtonAction:** redesign config ([8ca4e38](https://github.com/shuriken-ui/tailwind/commit/8ca4e38ee7f3f24b925f2ab88ba41a18b0c0661f))
+* **ButtonAction:** rename shape prop to rounded, update stories ([06f085f](https://github.com/shuriken-ui/tailwind/commit/06f085f4facfd39fc5743bdfaccfd01b7c95091d))
+* **ButtonClose:** implement new config ([c18252f](https://github.com/shuriken-ui/tailwind/commit/c18252f8fb3614ed27306705d4e536134e9e3ecc))
+* **ButtonClose:** redesign config ([5910409](https://github.com/shuriken-ui/tailwind/commit/5910409b85704e69514fb2e5092f8cfd33a34816))
+* **ButtonClose:** rename shape prop to rounded, update stories ([3ba7992](https://github.com/shuriken-ui/tailwind/commit/3ba7992aa2c9be369ea40cbca6d879ff4a38053b))
+* **ButtonIcon:** implement new config ([e431cab](https://github.com/shuriken-ui/tailwind/commit/e431cab83ea937049cd7499c71d8e3d4671c37f7))
+* **ButtonIcon:** redesign config ([082a0f2](https://github.com/shuriken-ui/tailwind/commit/082a0f2d09d9e91424fc5a316f535668f9474310))
+* **ButtonIcon:** rename shape prop to rounded, update stories ([d2867f1](https://github.com/shuriken-ui/tailwind/commit/d2867f1a3c7dec69eeea9ae0c46bbfb5376eb8be))
+* **Button:** implement button config ([601e875](https://github.com/shuriken-ui/tailwind/commit/601e8754b276dd098d7abe2cdf46a7633b318b0a))
+* **Button:** rename shape to rounded and flavor to variant ([e104b7a](https://github.com/shuriken-ui/tailwind/commit/e104b7a54e8c35d398cf68c1a9003a26c828107a))
+* **Button:** rework config structure ([a02f20b](https://github.com/shuriken-ui/tailwind/commit/a02f20b8021bd1eaa6ffbbe7aa11d2bec6c5c99f))
+* **Card:** redesign config ([eed398a](https://github.com/shuriken-ui/tailwind/commit/eed398af5bd15a834ee5c52755794e133e104c37))
+* **Card:** redesign configuration and implementation, rename shape prop to rounded ([6ecbbf5](https://github.com/shuriken-ui/tailwind/commit/6ecbbf5e2178f28657dac1f076b556638236de39))
+* **Checkbox:** config redesign and implementation ([3ead369](https://github.com/shuriken-ui/tailwind/commit/3ead369c8211fe3d85e4593b999c06c0973790b0))
+* **Dropdown:** config redesign and implementation ([1492a80](https://github.com/shuriken-ui/tailwind/commit/1492a800ba0167a2e45b595ad6e111723d1d61be))
+* **DropdownDivider:** config redesign and implementation ([be03bc7](https://github.com/shuriken-ui/tailwind/commit/be03bc77417e0f00e6a0e27e4f5f3119a059e5ae))
+* **DropdownItem:** config redesign and implementation ([689fa75](https://github.com/shuriken-ui/tailwind/commit/689fa7597064ae956c4468ebb51b6aa07f8a2923))
+* **Dropfile:** config redesign and implementation ([2e78245](https://github.com/shuriken-ui/tailwind/commit/2e78245daec1d06bc3f992298bf1efe08e36b361))
+* **Focus:** config redesign and implementation ([a793e75](https://github.com/shuriken-ui/tailwind/commit/a793e75fb0d41cd67fd80f4ae13eaa5cf7e4bc16))
+* **Heading:** config redesign and implementation ([1203446](https://github.com/shuriken-ui/tailwind/commit/120344614308a866251a6c0b3c66acaec3a1f4d2))
+* **IconBox:** config redesign and implementation ([07b4293](https://github.com/shuriken-ui/tailwind/commit/07b42936d9f4fd0d342f47fa642a06b2cc6b36d6))
+* improve breadcrumb demos ([3761835](https://github.com/shuriken-ui/tailwind/commit/376183567b784fc922e9aa500416a42c1b4d05be))
+* improve card demos ([0a2f6fe](https://github.com/shuriken-ui/tailwind/commit/0a2f6feb08f782c91fe3742ebc959808d078fb4d))
+* improve list demos ([b5cbf15](https://github.com/shuriken-ui/tailwind/commit/b5cbf15d76d867c748c73fa0da45b920bbb52e68))
+* improve message demos ([4a71b66](https://github.com/shuriken-ui/tailwind/commit/4a71b665ce45806dceb78637661da4f371f5e351))
+* improve message-text demos, improve component design ([ac449df](https://github.com/shuriken-ui/tailwind/commit/ac449df30692b5386dd6b6543f8c489a8a8eeffa))
+* improve progress demos ([419112c](https://github.com/shuriken-ui/tailwind/commit/419112ce3eb342b0d7dfe1a64636bb277b30eeff))
+* improve tab-slider demos ([a764d68](https://github.com/shuriken-ui/tailwind/commit/a764d68f8c0aaa7b07b8625d95c21bf828472012))
+* improve tabs demos ([83ff154](https://github.com/shuriken-ui/tailwind/commit/83ff15488cf552b75f069bccf018df9b6985ddfe))
+* improve theme-toggles demos ([9632c49](https://github.com/shuriken-ui/tailwind/commit/9632c49da39a7a6477005f220360d497dc267dca))
+* **Input:** config redesign and implementation ([80b45fb](https://github.com/shuriken-ui/tailwind/commit/80b45fb887eeb2041215c166b3f50aa3f66b59b6))
+* **InputFile:** config redesign and implementation ([82e4ea0](https://github.com/shuriken-ui/tailwind/commit/82e4ea0687d44e48aaaa01bb26db4cc10c8a370c))
+* **InputFileRegular:** config redesign and implementation ([69656d9](https://github.com/shuriken-ui/tailwind/commit/69656d96a91c7682b100cc121d12792788bae7f8))
+* **InputNumber:** config redesign and implementation, fix Lit svg properties naming warning ([fd7a3e2](https://github.com/shuriken-ui/tailwind/commit/fd7a3e20b4a71f7daae6c75ef7b5cbb11fe00714))
+* **Kbd:** add new kbd component ([686ac70](https://github.com/shuriken-ui/tailwind/commit/686ac7006c944c898bbd3df46f9b4bdef53991a1))
+* **Kbd:** fix config imports ([b0e70f0](https://github.com/shuriken-ui/tailwind/commit/b0e70f0dbf7c828d5cb40b37fc344f7dd99055fb))
+* **Label:** config redesign and implementation ([d6483ce](https://github.com/shuriken-ui/tailwind/commit/d6483ce58a6a634c2d15cb728ab4b59893547d09))
+* **Link:** config redesign and implementation ([49e8de1](https://github.com/shuriken-ui/tailwind/commit/49e8de17d146ba4734a887fdcf37de5d66f2603b))
+* **Listbox:** config redesign and implementation, fix mdx classname statements ([0fa7012](https://github.com/shuriken-ui/tailwind/commit/0fa701228bd413e66de57f77f7ebc7dad0b51337))
+* **List:** config redesign and implementation ([9b9ebda](https://github.com/shuriken-ui/tailwind/commit/9b9ebdaa4efd8b08c0c0df8f81020bdb78a7d191))
+* **Mark:** config redesign and implementation ([e4552b4](https://github.com/shuriken-ui/tailwind/commit/e4552b45397f4c00a37a599a378508201b782e45))
+* **Message:** config redesign and implementation ([2fefcea](https://github.com/shuriken-ui/tailwind/commit/2fefcea1145f6457e91f588420a62d0fbc8d19bc))
+* **MessageText:** config redesign and implementation ([80896dc](https://github.com/shuriken-ui/tailwind/commit/80896dc59f4c0ccdfd9d5ffc0fb48f7b64c2749a))
+* **Modal:** config redesign and implementation ([dd967f0](https://github.com/shuriken-ui/tailwind/commit/dd967f0729d9f845e6d3893ab1d40363c9757ac8))
+* modify preset to include primary and invert colors for light and dark mode ([55721ea](https://github.com/shuriken-ui/tailwind/commit/55721ea09605111bcd7ec69b4538cad532704175))
+* **Pagination:** config redesign and implementation ([cfc211a](https://github.com/shuriken-ui/tailwind/commit/cfc211aee93e5e733f87e96a6c61c45f844130b1))
+* **Paragraph:** config redesign and implementation ([439f236](https://github.com/shuriken-ui/tailwind/commit/439f236acee567e35c4c8de860ddaf5ad131f7c1))
+* **Placeholder:** config redesign and implementation ([7442c08](https://github.com/shuriken-ui/tailwind/commit/7442c08bdc738a995c2c9a36c6a35dde3b8b6ae3))
+* **ProgressCircle:** config redesign and implementation ([10cd073](https://github.com/shuriken-ui/tailwind/commit/10cd07396bfc3c7a9de176e63cb0d32d264a848d))
+* **Progress:** config redesign and implementation ([371794a](https://github.com/shuriken-ui/tailwind/commit/371794a8bb47b930f0f51890857113c04fc6c92c))
+* **Prose:** config redesign and implementation ([6d27976](https://github.com/shuriken-ui/tailwind/commit/6d27976ea05bc196f08ce27709bba0d84151e0bc))
+* **Radio:** config redesign and implementation ([df4e2f7](https://github.com/shuriken-ui/tailwind/commit/df4e2f74da65c7cf01bd1cd9bb588bd39b8e2c4f))
+* **Select:** config redesign and implementation ([a05f94f](https://github.com/shuriken-ui/tailwind/commit/a05f94f456f5248cf80607d6a6b4b4f2b280b43e))
+* **Slimscroll:** config redesign and implementation ([1106e12](https://github.com/shuriken-ui/tailwind/commit/1106e12b0bf5709b852a1701aad11192f16ac179))
+* **Snack/ButtonClose:** add xs size to snack, add size prop to button close ([11172f4](https://github.com/shuriken-ui/tailwind/commit/11172f4ce5eb624f7dfd1df3e74fcd30da7dfa10))
+* **Snack:** config redesign and implementation ([0e23f6e](https://github.com/shuriken-ui/tailwind/commit/0e23f6e183b236dc6071f9c509dcdc6d30748e0f))
+* **SwitchBall:** config redesign and implementation ([14c313b](https://github.com/shuriken-ui/tailwind/commit/14c313b7518f50f8ed3743f0fcf9cd1aa86669fb))
+* **SwitchThin:** config redesign and implementation ([7c4f3cf](https://github.com/shuriken-ui/tailwind/commit/7c4f3cfb0a84bc861a21989d989c5c032004134a))
+* **Tabs:** config redesign and implementation ([be61382](https://github.com/shuriken-ui/tailwind/commit/be61382127416437cfabb79b1e874661391b9c00))
+* **TabSlider:** config redesign and implementation ([9ae744c](https://github.com/shuriken-ui/tailwind/commit/9ae744c48f3bd27913b26fd8d76f8e936cb75837))
+* **Tag:** config redesign and implementation ([fc4c890](https://github.com/shuriken-ui/tailwind/commit/fc4c890a0bd7f2df70008b83cfc4e8100f27b33c))
+* **Textarea:** config redesign and implementation ([e2d4203](https://github.com/shuriken-ui/tailwind/commit/e2d4203a8008aa07c2a97dd5f81e9fee818a0948))
+* **Text:** config redesign and implementation ([4c48806](https://github.com/shuriken-ui/tailwind/commit/4c488064e50db7ae2f12dd355b0e34688f727a9d))
+* **ThemeSwitch:** config redesign and implementation ([0c1ffc8](https://github.com/shuriken-ui/tailwind/commit/0c1ffc8962c351afbb321c127ae75b09ce791a48))
+* **ThemeToggle:** config redesign and implementation ([071d590](https://github.com/shuriken-ui/tailwind/commit/071d5905aaebdf479b4f4a7a7c1f50750f325048))
+* **ThemeToggle:** rework stories, add missing examples ([7969142](https://github.com/shuriken-ui/tailwind/commit/79691424b8a183a43e1a8ee2ba8b0b34d0286540))
+* **Toast:** config redesign and implementation ([7382d0f](https://github.com/shuriken-ui/tailwind/commit/7382d0f43163dc512533a34145e7c32925670656))
+* **Toast:** rework stories, add missing examples ([12105e5](https://github.com/shuriken-ui/tailwind/commit/12105e532c826d6be5555a6c7acfe525afd43828))
+* **Tooltip:** config redesign and implementation ([6dc6f53](https://github.com/shuriken-ui/tailwind/commit/6dc6f5341989aaeea0d00fe3f86c07a7ae652e4d))
+
+
+### Bug Fixes
+
+* **Button:** add missing configs, remove primary-dark from preset ([1d18346](https://github.com/shuriken-ui/tailwind/commit/1d183469bdbca0924c074e112394a4ad1bd58840))
+* **Button:** move config into separate file ([d3363cd](https://github.com/shuriken-ui/tailwind/commit/d3363cd51ccc0ce8dddd1eb9f3933fd014f36dc3))
+
 ### [1.5.3](https://github.com/shuriken-ui/tailwind/compare/v1.5.2...v1.5.3) (2023-11-28)
 
 

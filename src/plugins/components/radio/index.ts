@@ -1,94 +1,125 @@
 import plugin from 'tailwindcss/plugin'
-import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../../options'
 import { type RadioConfig, defaultConfig, key } from './radio.config'
 
-export default plugin.withOptions(
-  function (options: PluginOption) {
-    let { prefix } = defu(options, defaultPluginOptions)
-
-    if (prefix) {
-      prefix = `${prefix}-`
-    }
-
-    return function ({ addComponents, theme }) {
-      const config = theme(`shurikenUi.${key}`) satisfies RadioConfig
-
-      addComponents({
-        [`.${prefix}radio`]: {
-          [`@apply relative inline-flex items-start gap-1`]: {},
-
-          [`.${prefix}radio-outer`]: {
-            [`@apply ${prefix}focus relative flex h-${config.outer.size} w-${config.outer.size} shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-full`]:
-              {},
-          },
-          [`.${prefix}radio-inner`]: {
-            [`@apply border-${config.inner.border} dark:border-${config.inner.borderDark} dark:bg-${config.inner.bgDark} absolute start-0 top-0 z-0 h-${config.inner.size} w-${config.inner.size} rounded-${config.inner.rounded} border-2 bg-${config.inner.bg}`]:
-              {},
-          },
-          [`.${prefix}radio-dot`]: {
-            [`@apply pointer-events-none z-10 block h-${config.dot.size} w-${config.dot.size} scale-0 rounded-${config.dot.rounded} bg-${config.dot.bg} transition duration-${config.dot.duration}`]:
-              {},
-          },
-          [`.${prefix}radio-input`]: {
-            [`@apply absolute z-20 h-${config.input.size} w-${config.input.size} cursor-pointer opacity-0`]:
-              {},
-
-            [`&:checked ~ .${prefix}radio-inner`]: {
-              [`@apply border-current`]: {},
-            },
-
-            [`&:checked ~ .${prefix}radio-dot`]: {
-              [`@apply scale-100`]: {},
-            },
-          },
-          [`.${prefix}radio-label-wrapper`]: {
-            [`@apply inline-flex flex-col`]: {},
-          },
-          [`.${prefix}radio-label-text`]: {
-            [`@apply text-${config.labelText.text} ms-1 cursor-pointer select-none font-${config.labelText.font} text-${config.labelText.textSize}`]:
-              {},
-          },
-          [`.${prefix}radio-error`]: {
-            [`@apply text-${config.error.text} ms-1 inline-block font-${config.error.font} text-${config.error.textSize}`]:
-              {},
-          },
-          [`&.${prefix}radio-default`]: {
-            [`@apply text-${config.default.text} dark:text-${config.default.textDark}`]:
-              {},
-          },
-          [`&.${prefix}radio-light`]: {
-            [`@apply text-${config.light}`]: {},
-          },
-          [`&.${prefix}radio-muted`]: {
-            [`@apply text-${config.muted}`]: {},
-          },
-          [`&.${prefix}radio-primary`]: {
-            [`@apply text-${config.primary}`]: {},
-          },
-          [`&.${prefix}radio-info`]: {
-            [`@apply text-${config.info}`]: {},
-          },
-          [`&.${prefix}radio-success`]: {
-            [`@apply text-${config.success}`]: {},
-          },
-          [`&.${prefix}radio-warning`]: {
-            [`@apply text-${config.warning}`]: {},
-          },
-          [`&.${prefix}radio-danger`]: {
-            [`@apply text-${config.danger}`]: {},
-          },
-        },
-      })
-    }
+const config = {
+  theme: {
+    nui: {
+      [key]: defaultConfig,
+    },
   },
-  function () {
-    return {
-      theme: {
-        shurikenUi: {
-          [key]: defaultConfig,
+}
+
+export default plugin(({ addComponents, theme }) => {
+  const config = theme(`nui.${key}`) satisfies RadioConfig
+
+  addComponents({
+    '.nui-radio': {
+      '@apply relative inline-flex items-start gap-1': {},
+
+      '.nui-radio-outer': {
+        '@apply nui-focus relative flex items-center justify-center shrink-0 cursor-pointer overflow-hidden rounded-full':
+          {},
+        //Size
+        [`@apply h-${config.outer.size} w-${config.outer.size}`]: {},
+      },
+      //Radio:inner
+      '.nui-radio-inner': {
+        //Base
+        [`@apply absolute start-0 top-0 z-0 ${config.inner.rounded}`]: {},
+        //Size
+        [`@apply h-${config.inner.size} w-${config.inner.size}`]: {},
+        //Background
+        [`@apply bg-${config.inner.background.light} dark:bg-${config.inner.background.dark}`]:
+          {},
+        //Border
+        [`@apply border-2 border-${config.inner.border.light} dark:border-${config.inner.border.dark}`]:
+          {},
+      },
+      //Radio:dot
+      '.nui-radio-dot': {
+        //Base
+        [`@apply pointer-events-none z-10 block scale-0 ${config.dot.rounded}`]:
+          {},
+        //Size
+        [`@apply h-${config.dot.size} w-${config.dot.size}`]: {},
+        //Background
+        [`@apply bg-${config.dot.background.light} dark:bg-${config.dot.background.dark}`]:
+          {},
+        //Transition
+        [`@apply transition-${config.dot.transition.property} duration-${config.dot.transition.duration}`]:
+          {},
+      },
+      //Radio:input
+      '.nui-radio-input': {
+        [`@apply absolute z-20 h-${config.input.size} w-${config.input.size} cursor-pointer opacity-0`]:
+          {},
+        //Input:checked:inner
+        '&:checked ~ .nui-radio-inner': {
+          '@apply border-current': {},
+        },
+        //Input:checked:dot
+        '&:checked ~ .nui-radio-dot': {
+          '@apply scale-100': {},
         },
       },
-    }
-  },
-)
+      //Radio:label
+      '.nui-radio-label-wrapper': {
+        '@apply inline-flex flex-col': {},
+      },
+      //Label:text
+      '.nui-radio-label-text': {
+        '@apply ms-1 cursor-pointer select-none': {},
+        //Font
+        [`@apply font-${config.label.font.family} text-${config.label.font.size} text-${config.label.font.color.light} dark:text-${config.label.font.color.dark}`]:
+          {},
+      },
+      //Radio:error
+      '.nui-radio-error': {
+        '@apply ms-1 inline-block': {},
+        //Font
+        [`@apply font-${config.error.font.family} text-${config.error.font.size} text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
+          {},
+      },
+      //Color:default
+      '&.nui-radio-default': {
+        [`@apply text-${config.color.default.light} dark:text-${config.color.default.dark}`]:
+          {},
+      },
+      //Color:light
+      '&.nui-radio-light': {
+        [`@apply text-${config.color.light.light} dark:text-${config.color.light.dark}`]:
+          {},
+      },
+      //Color:muted
+      '&.nui-radio-muted': {
+        [`@apply text-${config.color.muted.light} dark:text-${config.color.muted.dark}`]:
+          {},
+      },
+      //Color:primary
+      '&.nui-radio-primary': {
+        [`@apply text-${config.color.primary.light} dark:text-${config.color.primary.dark}`]:
+          {},
+      },
+      //Color:info
+      '&.nui-radio-info': {
+        [`@apply text-${config.color.info.light} dark:text-${config.color.info.dark}`]:
+          {},
+      },
+      //Color:success
+      '&.nui-radio-success': {
+        [`@apply text-${config.color.success.light} dark:text-${config.color.default.dark}`]:
+          {},
+      },
+      //Color:warning
+      '&.nui-radio-warning': {
+        [`@apply text-${config.color.warning.light} dark:text-${config.color.warning.dark}`]:
+          {},
+      },
+      //Color:danger
+      '&.nui-radio-danger': {
+        [`@apply text-${config.color.danger.light} dark:text-${config.color.danger.dark}`]:
+          {},
+      },
+    },
+  })
+}, config)

@@ -2,22 +2,26 @@ export const key = 'modal' as const
 
 export const defaultConfig = {
   backdrop: {
-    bg: 'muted-800/70',
-    bgDark: 'muted-900/80',
+    background: {
+      light: 'muted-800/70',
+      dark: 'muted-900/80',
+    },
   },
-  contentInner: {
-    space: '4',
+  inner: {
+    padding: '4',
   },
-  contentPanel: {
+  panel: {
     size: 'full',
-    text: 'start',
+    align: 'start',
   },
-  modalSM: 'sm',
-  modalMD: 'md',
-  modalLG: 'xl',
-  modalXL: '2xl',
-  modal2XL: '3xl',
-  modal3XL: '5xl',
+  size: {
+    sm: 'sm',
+    md: 'md',
+    lg: 'xl',
+    xl: '2xl',
+    xxl: '3xl',
+    xxxl: '5xl',
+  },
 }
 
 export type ModalConfig = typeof defaultConfig

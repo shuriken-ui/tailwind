@@ -23,6 +23,7 @@ Snacks are small chips that you can use to display pieces of information.
 Snacks can have two different color. Below are examples of the muted color.
 
 <div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={SnackStories.SizeXs} />
   <Story of={SnackStories.SizeSm} />
   <Story of={SnackStories.SizeMd} />
 </div>
@@ -84,6 +85,19 @@ Snacks have an icon slot that can be used to display an icon. The icon is smalle
 
 <br />
 
+### Slot: icon xs
+
+Snacks have an icon slot that can be used to display an icon. The icon is the smallest if the snack is set to extra-small.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={SnackStories.IconXsOne} />
+  <Story of={SnackStories.IconXsTwo} />
+  <Story of={SnackStories.IconXsThree} />
+  <Story of={SnackStories.IconXsFour} />
+</div>
+
+<br />
+
 ### Slot: image
 
 Snacks have an image slot that can be used to display an image.
@@ -109,18 +123,31 @@ Snacks have an image slot that can be used to display an image. The image is sma
 </div>
 
 <br />
+
+### Slot: image xs
+
+Snacks have an image slot that can be used to display an image. The image is the smallest if the snack is set to extra-small.
+
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <Story of={SnackStories.ImageXsOne} />
+  <Story of={SnackStories.ImageXsTwo} />
+  <Story of={SnackStories.ImageXsThree} />
+  <Story of={SnackStories.ImageXsFour} />
+</div>
+
+<br />
 <br />
 
 ## Customization
 
 ### Default config
 
-<div class="relative">
-  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
-    <summary class="list-none cursor-pointer">
-      <span class="font-sans text-slate-500">View configuration options</span>
+<div className="relative">
+  <details className="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary className="list-none cursor-pointer">
+      <span className="font-sans text-slate-500">View configuration options</span>
       <svg
-        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        className="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -129,15 +156,15 @@ Snacks have an image slot that can be used to display an image. The image is sma
         <path
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m6 9l6 6l6-6"
         />
       </svg>
     </summary>
 
-    <div class="!mt-4">
+    <div className="!mt-4">
       <pre >
         {JSON.stringify(defaultConfig, null, 2)}
       </pre>

@@ -1,118 +1,135 @@
 import plugin from 'tailwindcss/plugin'
-import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../../options'
 import {
   type MessageTextConfig,
   defaultConfig,
   key,
 } from './message-text.config'
 
-export default plugin.withOptions(
-  function (options: PluginOption) {
-    let { prefix } = defu(options, defaultPluginOptions)
-
-    if (prefix) {
-      prefix = `${prefix}-`
-    }
-
-    return function ({ addComponents, theme }) {
-      const config = theme(`shurikenUi.${key}`) satisfies MessageTextConfig
-
-      addComponents({
-        [`.${prefix}message-text`]: {
-          [`@apply relative p-${config.space}`]: {},
-
-          [`.${prefix}message-head`]: {
-            [`@apply flex items-center gap-${config.head.space} mb-2`]: {},
-          },
-          [`.${prefix}message-dot`]: {
-            [`@apply inline-block h-${config.dot.size} w-${config.dot.size} rounded-${config.dot.rounded} bg-${config.dot.bg} dark:bg-${config.dot.bgDark}`]:
-              {},
-          },
-          [`.${prefix}message-close`]: {
-            [`@apply absolute top-${config.close.position} end-${config.close.position}`]:
-              {},
-          },
-          [`&.${prefix}message-white`]: {
-            [`@apply bg-${config.white.bg} dark:bg-${config.white.bgDark}`]: {},
-          },
-          [`&.${prefix}message-white-contrast`]: {
-            [`@apply bg-${config.whiteContrast.bg} dark:bg-${config.whiteContrast.bgDark}`]:
-              {},
-          },
-          [`&.${prefix}message-rounded`]: {
-            [`@apply rounded-${config.rounded.default}`]: {},
-          },
-          [`&.${prefix}message-smooth`]: {
-            [`@apply rounded-${config.rounded.smooth}`]: {},
-          },
-          [`&.${prefix}message-curved`]: {
-            [`@apply rounded-${config.rounded.curved}`]: {},
-          },
-          [`&.${prefix}message-default`]: {
-            [`@apply border border-${config.default.border} dark:border-${config.default.borderDark}`]:
-              {},
-
-            [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.default.dot.bg} dark:bg-${config.default.dot.bgDark}`]:
-                {},
-            },
-          },
-          [`&.${prefix}message-contrast`]: {
-            [`@apply border border-${config.contrast.border} dark:border-${config.contrast.borderDark}`]:
-              {},
-
-            [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.contrast.dot.bg} dark:bg-${config.contrast.dot.bgDark}`]:
-                {},
-            },
-          },
-          [`&.${prefix}message-primary`]: {
-            [`@apply border border-${config.primary.border}`]: {},
-
-            [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.primary.dot.bg}`]: {},
-            },
-          },
-          [`&.${prefix}message-info`]: {
-            [`@apply border border-${config.info.border}`]: {},
-
-            [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.info.dot.bg}`]: {},
-            },
-          },
-          [`&.${prefix}message-success`]: {
-            [`@apply border border-${config.success.border}`]: {},
-
-            [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.success.dot.bg}`]: {},
-            },
-          },
-          [`&.${prefix}message-warning`]: {
-            [`@apply border border-${config.warning.border}`]: {},
-
-            [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.warning.dot.bg}`]: {},
-            },
-          },
-          [`&.${prefix}message-danger`]: {
-            [`@apply border border-${config.danger.border}`]: {},
-
-            [`.${prefix}message-dot`]: {
-              [`@apply bg-${config.danger.dot.bg}`]: {},
-            },
-          },
-        },
-      })
-    }
+const config = {
+  theme: {
+    nui: {
+      [key]: defaultConfig,
+    },
   },
-  function () {
-    return {
-      theme: {
-        shurikenUi: {
-          [key]: defaultConfig,
+}
+
+export default plugin(({ addComponents, theme }) => {
+  const config = theme(`nui.${key}`) satisfies MessageTextConfig
+
+  addComponents({
+    //Wrapper
+    '.nui-message-text': {
+      [`@apply relative p-${config.padding}`]: {},
+      //Message:header
+      '.nui-message-head': {
+        [`@apply flex items-center gap-${config.header.gap} mb-3`]: {},
+      },
+      //Message:dot
+      '.nui-message-dot': {
+        //Base
+        [`@apply inline-block h-${config.dot.size} w-${config.dot.size} rounded-${config.dot.rounded}`]:
+          {},
+        //Background
+        [`@apply bg-${config.dot.background.light} dark:bg-${config.dot.background.dark}`]:
+          {},
+      },
+      //Message:close
+      '.nui-message-close': {
+        [`@apply absolute top-${config.close.position} end-${config.close.position}`]:
+          {},
+      },
+      //Rounded:sm
+      '&.nui-message-rounded': {
+        [`@apply ${config.rounded.default}`]: {},
+      },
+      //Rounded:md
+      '&.nui-message-smooth': {
+        [`@apply ${config.rounded.smooth}`]: {},
+      },
+      //Rounded:lg
+      '&.nui-message-curved': {
+        [`@apply ${config.rounded.curved}`]: {},
+      },
+      //Color:white
+      '&.nui-message-white': {
+        [`@apply bg-${config.color.white.background.light} dark:bg-${config.color.white.background.dark}`]:
+          {},
+      },
+      //Color:whiteContrast
+      '&.nui-message-white-contrast': {
+        [`@apply bg-${config.color.whiteContrast.background.light} dark:bg-${config.color.whiteContrast.background.dark}`]:
+          {},
+      },
+      //Color:default
+      '&.nui-message-default': {
+        [`@apply border border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
+          {},
+        //Message:dot
+        '.nui-message-dot': {
+          [`@apply bg-${config.color.default.dot.background.light} dark:bg-${config.color.default.dot.background.dark}`]:
+            {},
         },
       },
-    }
-  },
-)
+      //Color:contrast
+      '&.nui-message-contrast': {
+        [`@apply border border-${config.color.contrast.border.light} dark:border-${config.color.contrast.border.dark}`]:
+          {},
+        //Message:dot
+        '.nui-message-dot': {
+          [`@apply bg-${config.color.contrast.dot.background.light} dark:bg-${config.color.contrast.dot.background.dark}`]:
+            {},
+        },
+      },
+      //Color:primary
+      '&.nui-message-primary': {
+        [`@apply border border-${config.color.primary.border.light} dark:border-${config.color.primary.border.dark}`]:
+          {},
+        //Message:dot
+        '.nui-message-dot': {
+          [`@apply bg-${config.color.primary.dot.background.light} dark:bg-${config.color.primary.dot.background.dark}`]:
+            {},
+        },
+      },
+      //Color:info
+      '&.nui-message-info': {
+        [`@apply border border-${config.color.info.border.light} dark:border-${config.color.info.border.dark}`]:
+          {},
+        //Message:dot
+        '.nui-message-dot': {
+          [`@apply bg-${config.color.info.dot.background.light} dark:bg-${config.color.info.dot.background.dark}`]:
+            {},
+        },
+      },
+      //Color:success
+      '&.nui-message-success': {
+        [`@apply border border-${config.color.success.border.light} dark:border-${config.color.success.border.dark}`]:
+          {},
+        //Message:dot
+        '.nui-message-dot': {
+          [`@apply bg-${config.color.success.dot.background.light} dark:bg-${config.color.success.dot.background.dark}`]:
+            {},
+        },
+      },
+      //Color:warning
+      '&.nui-message-warning': {
+        [`@apply border border-${config.color.warning.border.light} dark:border-${config.color.warning.border.dark}`]:
+          {},
+        //Message:dot
+        '.nui-message-dot': {
+          [`@apply bg-${config.color.warning.dot.background.light} dark:bg-${config.color.warning.dot.background.dark}`]:
+            {},
+        },
+      },
+      //Color:danger
+      '&.nui-message-danger': {
+        [`@apply border border-${config.color.danger.border.light} dark:border-${config.color.danger.border.dark}`]:
+          {},
+        //Message:dot
+        '.nui-message-dot': {
+          [`@apply bg-${config.color.danger.dot.background.light} dark:bg-${config.color.danger.dot.background.dark}`]:
+            {},
+        },
+      },
+    },
+  })
+}, config)

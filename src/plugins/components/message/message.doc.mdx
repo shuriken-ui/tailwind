@@ -18,122 +18,36 @@ Messages allow you to display important information users should see.
 
 <br />
 
-### Shape: straight
+### Rounded
 
-Messages can have different colors and shapes. The following example shows sizes for the straight shape.
+Messages can have different colors and shapes. The following example shows the available shape variations.
 
 <div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.Straight} />
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+    <Story of={MessageStories.Straight} />
+    <Story of={MessageStories.Rounded} />
+    <Story of={MessageStories.Smooth} />
+    <Story of={MessageStories.Curved} />
+    <Story of={MessageStories.Full} />
+  </div>
 </div>
 
 <br />
 
-### Shape: rounded
+### Types
 
-Messages can have different colors and shapes. The following example shows sizes for the rounded shape.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.Rounded} />
-</div>
-
-<br />
-
-### Shape: smooth
-
-Messages can have different colors and shapes. The following example shows sizes for the smooth shape.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.Smooth} />
-</div>
-
-<br />
-
-### Shape: curved
-
-Messages can have different colors and shapes. The following example shows sizes for the curved shape.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.Curved} />
-</div>
-
-<br />
-
-### Shape: full
-
-Messages can have different colors and shapes. The following example shows sizes for the full shape.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.Full} />
-</div>
-
-<br />
-
-### Type: default
-
-Messages can have different types. The following example shows the default type.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.TypeDefault} />
-</div>
-
-<br />
-
-### Type: muted
-
-Messages can have different types. The following example shows the muted type.
+Messages can have different types. The following example shows the available types.
 
 <div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.TypeMuted} />
-</div>
-
-<br />
-
-### Type: primary
-
-Messages can have different types. The following example shows the primary type.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.TypePrimary} />
-</div>
-
-<br />
-
-### Type: info
-
-Messages can have different types. The following example shows the info type.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.TypeInfo} />
-</div>
-
-<br />
-
-### Type: success
-
-Messages can have different types. The following example shows the success type.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.TypeSuccess} />
-</div>
-
-<br />
-
-### Type: warning
-
-Messages can have different types. The following example shows the warning type.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.TypeWarning} />
-</div>
-
-<br />
-
-### Type: danger
-
-Messages can have different types. The following example shows the danger type.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.TypeDanger} />
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+    <Story of={MessageStories.TypeDefault} />
+    <Story of={MessageStories.TypeMuted} />
+    <Story of={MessageStories.TypePrimary} />
+    <Story of={MessageStories.TypeInfo} />
+    <Story of={MessageStories.TypeSuccess} />
+    <Story of={MessageStories.TypeWarning} />
+    <Story of={MessageStories.TypeDanger} />
+  </div>
 </div>
 
 <br />
@@ -145,10 +59,16 @@ Messages can have different types. The following example shows the danger type.
 
 Messages can have a close button.
 
-<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.ClosableDefault} />
-  <Story of={MessageStories.ClosablePrimary} />
-  <Story of={MessageStories.ClosableInfo} />
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+    <Story of={MessageStories.ClosableDefault} />
+    <Story of={MessageStories.ClosableMuted} />
+    <Story of={MessageStories.ClosablePrimary} />
+    <Story of={MessageStories.ClosableInfo} />
+    <Story of={MessageStories.ClosableSuccess} />
+    <Story of={MessageStories.ClosableWarning} />
+    <Story of={MessageStories.ClosableDanger} />
+  </div>
 </div>
 
 <br />
@@ -160,10 +80,16 @@ Messages can have a close button.
 
 Messages have an icon slot you can use to display an icon.
 
-<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={MessageStories.SlotIconInfo} />
-  <Story of={MessageStories.SlotIconSuccess} />
-  <Story of={MessageStories.SlotIconWarning} />
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+    <Story of={MessageStories.SlotIconDefault} />
+    <Story of={MessageStories.SlotIconMuted} />
+    <Story of={MessageStories.SlotIconPrimary} />
+    <Story of={MessageStories.SlotIconInfo} />
+    <Story of={MessageStories.SlotIconSuccess} />
+    <Story of={MessageStories.SlotIconWarning} />
+    <Story of={MessageStories.SlotIconDanger} />
+  </div>
 </div>
 
 <br />
@@ -173,12 +99,12 @@ Messages have an icon slot you can use to display an icon.
 
 ### Default config
 
-<div class="relative">
-  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
-    <summary class="list-none cursor-pointer">
-      <span class="font-sans text-slate-500">View configuration options</span>
+<div className="relative">
+  <details className="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary className="list-none cursor-pointer">
+      <span className="font-sans text-slate-500">View configuration options</span>
       <svg
-        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        className="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -187,15 +113,15 @@ Messages have an icon slot you can use to display an icon.
         <path
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m6 9l6 6l6-6"
         />
       </svg>
     </summary>
 
-    <div class="!mt-4">
+    <div className="!mt-4">
       <pre >
         {JSON.stringify(defaultConfig, null, 2)}
       </pre>

@@ -2,7 +2,7 @@ import type { PropertyVariant } from '~/types/utils'
 
 export interface ButtonActionProps extends Record<string, unknown> {
   label?: string
-  shape?: 'straight' | 'rounded' | 'smooth' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   loading?: boolean
   color?:
     | 'default'

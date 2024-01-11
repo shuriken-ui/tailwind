@@ -24,25 +24,25 @@ export const Main: Story = {
   args: {
     children: html`
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         children: html`
           <span>Button 1</span>
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         children: html`
           <span>Button 2</span>
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         children: html`
           <span>Button 3</span>
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         children: html`
           <span>Button 4</span>
         `,
@@ -58,14 +58,14 @@ export const SizeSm: Story = {
   args: {
     children: html`
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'sm',
         children: html`
           <span>Button 1</span>
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'sm',
         color: 'primary',
         children: html`
@@ -73,14 +73,14 @@ export const SizeSm: Story = {
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'sm',
         children: html`
           <span>Button 3</span>
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'sm',
         children: html`
           <span>Button 4</span>
@@ -97,14 +97,14 @@ export const SizeMd: Story = {
   args: {
     children: html`
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'md',
         children: html`
           <span>Button 1</span>
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'md',
         color: 'primary',
         children: html`
@@ -112,14 +112,14 @@ export const SizeMd: Story = {
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'md',
         children: html`
           <span>Button 3</span>
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'md',
         children: html`
           <span>Button 4</span>
@@ -136,14 +136,14 @@ export const SizeLg: Story = {
   args: {
     children: html`
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'lg',
         children: html`
           <span>Button 1</span>
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'lg',
         color: 'primary',
         children: html`
@@ -151,14 +151,14 @@ export const SizeLg: Story = {
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        rounded: 'sm',
         size: 'lg',
         children: html`
           <span>Button 3</span>
         `,
       })}
       ${Button({
-        shape: 'rounded',
+        shape: 'sm',
         size: 'lg',
         children: html`
           <span>Button 4</span>

@@ -9,8 +9,12 @@ export interface TabsProps extends Record<string, unknown> {
   type?: 'tabs' | 'box'
   justify?: 'start' | 'center' | 'end'
   hideLabel?: boolean
+  bordered?: boolean
   classes?: {
     wrapper?: string | string[]
+    inner?: string | string[]
+    item?: string | string[]
+    content?: string | string[]
   }
 }
 

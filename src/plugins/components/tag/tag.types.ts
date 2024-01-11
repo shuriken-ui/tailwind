@@ -1,7 +1,7 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface TagProps extends Record<string, unknown> {
-  flavor?: 'solid' | 'outline' | 'pastel'
+  variant?: 'solid' | 'outline' | 'pastel'
   color?:
     | 'default'
     | 'muted'
@@ -10,7 +10,7 @@ export interface TagProps extends Record<string, unknown> {
     | 'success'
     | 'warning'
     | 'danger'
-  shape?: 'straight' | 'rounded' | 'curved' | 'full'
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   size?: 'sm' | 'md'
   shadow?: 'flat' | 'hover'
   classes?: {

@@ -1,302 +1,520 @@
 export const key = 'listbox' as const
 
 export const defaultConfig = {
-  labelFloat: {
-    text: 'primary-500',
-    size: '5',
-    duration: '300',
+  rounded: {
+    none: 'rounded-none',
+    sm: 'rounded-md',
+    md: 'rounded-lg',
+    lg: 'rounded-xl',
+    full: 'rounded-full',
+  },
+  label: {
+    float: {
+      height: '5',
+      font: {
+        color: 'primary-500',
+      },
+      transition: {
+        property: 'all',
+        duration: '300',
+      },
+    },
   },
   button: {
     size: 'full',
-    text: 'sm',
-    textPosition: 'start',
-    font: 'sans',
+    font: {
+      family: 'sans',
+      size: 'sm',
+      align: 'start',
+    },
     iconBox: {
-      space: '2',
-      size: '6',
-      innerSize: '4',
+      margin: {
+        x: '2',
+      },
+      outer: {
+        size: '6',
+      },
+      inner: {
+        size: '4',
+      },
     },
     placeholder: {
-      text: 'muted-300',
-      textDark: 'muted-500',
-      textPosition: 'left',
+      font: {
+        color: {
+          light: 'muted-300',
+          dark: 'muted-500',
+        },
+        align: 'start',
+      },
     },
-  },
-  icon: {
-    text: 'muted-400',
-    duration: '300',
+    icon: {
+      color: {
+        light: 'muted-400',
+        dark: 'muted-400',
+      },
+      transition: {
+        property: 'colors',
+        duration: '300',
+      },
+    },
   },
   chevron: {
     inner: {
       size: '4',
-      text: 'muted-400',
-      duration: '300',
+      color: {
+        light: 'muted-400',
+        dark: 'muted-400',
+      },
+      transition: {
+        property: 'transform',
+        duration: '300',
+      },
     },
   },
   options: {
-    ringFocus: 'primary-500/50',
-    space: '2',
-    text: 'base',
-    shadowSize: 'lg',
-    shadow: 'muted-500/10',
-    shadowDark: 'muted-800/10',
+    ring: {
+      focus: {
+        light: 'primary-500/50',
+        dark: 'primary-500/50',
+      },
+    },
+    padding: '2',
+    font: {
+      size: 'base',
+    },
+    shadow: {
+      size: 'lg',
+      light: 'muted-300/30',
+      dark: 'muted-800/20',
+    },
   },
   option: {
-    duration: '300',
+    transition: {
+      property: 'colors',
+      duration: '300',
+    },
     iconBox: {
-      text: 'muted-200',
-      textDark: 'muted-400',
-      innerSize: '5',
+      color: {
+        light: 'muted-200',
+        dark: 'muted-400',
+      },
+      inner: {
+        size: '5',
+      },
     },
     inner: {
       heading: {
-        text: 'muted-800',
-        textDark: 'white',
+        font: {
+          color: {
+            light: 'muted-800',
+            dark: 'muted-100',
+          },
+        },
       },
-      text: 'muted-400',
+      font: {
+        color: {
+          light: 'muted-400',
+          dark: 'muted-400',
+        },
+      },
     },
     icon: {
-      text: 'primary-600',
+      color: {
+        light: 'primary-600',
+        dark: 'primary-600',
+      },
+      inner: {
+        size: '4',
+      },
     },
-    iconInner: {
-      size: '4',
+    activeHover: {
+      font: {
+        color: {
+          light: 'primary-600',
+          dark: 'primary-400',
+        },
+      },
+      background: {
+        light: 'primary-500/10',
+        dark: 'primary-500/10',
+      },
     },
-    activeOrHover: {
-      text: 'primary-600',
-      textDark: 'primary-400',
-      bg: 'primary-500/10',
-    },
-  },
-  errorText: {
-    text: 'danger-600',
-    textSize: '[0.65rem]',
-    font: 'sans',
-    fontWeight: 'medium',
-  },
-  sm: {
-    text: 'xs',
-    icon: {
-      size: '8',
-      innerSize: '4',
-    },
-    placeload: {
-      size: '8',
-    },
-    chevron: {
-      size: '8',
-      innerSize: '3',
-    },
-  },
-  md: {
-    text: '[0.825rem]',
-    icon: {
-      size: '10',
-      innerSize: '[1.15rem]',
-    },
-    placeload: {
-      size: '10',
-    },
-    chevron: {
-      size: '10',
-      innerSize: '4',
-    },
-  },
-  lg: {
-    text: 'sm',
-    icon: {
-      size: '12',
-      innerSize: '5',
-    },
-    placeload: {
-      size: '12',
-    },
-    chevron: {
-      size: '12',
-      innerSize: '4',
-    },
-  },
-  rounded: {
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
-    full: {
-      button: 'full',
-      option: 'xl',
-    },
-  },
-  default: {
-    bg: 'white',
-    bgDark: 'muted-900',
-    border: 'muted-300',
-    borderDark: 'muted-700',
-    borderFocus: 'muted-300',
-    borderFocusDark: 'muted-700',
-    shadowFocus: 'muted-300/50',
-    shadowFocusDark: 'muted-800/50',
-    text: 'muted-600',
-    textDark: 'muted-200',
-    textPlaceholder: 'muted-300',
-    textPlaceholderDark: 'muted-500',
-    chevron: {
-      border: 'muted-200',
-      borderDark: 'muted-700',
-    },
-    option: {
-      border: 'muted-200',
-      borderDark: 'muted-600',
-      bg: 'white',
-      bgDark: 'muted-700',
-    },
-  },
-  defaultContrast: {
-    bg: 'white',
-    bgDark: 'muted-950',
-    border: 'muted-300',
-    borderDark: 'muted-800',
-    borderFocus: 'muted-300',
-    borderFocusDark: 'muted-700',
-    shadowFocus: 'muted-300/50',
-    shadowFocusDark: 'muted-800/50',
-    text: 'muted-600',
-    textDark: 'muted-200',
-    textPlaceholder: 'muted-300',
-    textPlaceholderDark: 'muted-600',
-    chevron: {
-      border: 'muted-300',
-      borderDark: 'muted-800',
-    },
-    option: {
-      border: 'muted-200',
-      borderDark: 'muted-800',
-      bg: 'white',
-      bgDark: 'muted-950',
-    },
-  },
-  muted: {
-    bg: 'muted-100',
-    bgDark: 'muted-900',
-    border: 'muted-300',
-    borderDark: 'muted-700',
-    borderFocus: 'muted-300',
-    borderFocusDark: 'muted-700',
-    shadowFocus: 'muted-300/50',
-    shadowFocusDark: 'muted-800/50',
-    text: 'muted-600',
-    textDark: 'muted-200',
-    textPlaceholder: 'muted-300',
-    textPlaceholderDark: 'muted-500',
-    chevron: {
-      border: 'muted-300',
-      borderDark: 'muted-700',
-    },
-    option: {
-      border: 'muted-200',
-      borderDark: 'muted-600',
-      bg: 'white',
-      bgDark: 'muted-700',
-    },
-  },
-  mutedContrast: {
-    bg: 'muted-100',
-    bgDark: 'muted-950',
-    border: 'muted-300',
-    borderDark: 'muted-800',
-    borderFocus: 'muted-300',
-    borderFocusDark: 'muted-700',
-    shadowFocus: 'muted-300/50',
-    shadowFocusDark: 'muted-800/50',
-    text: 'muted-600',
-    textDark: 'muted-200',
-    textPlaceholder: 'muted-300',
-    textPlaceholderDark: 'muted-500',
-    chevron: {
-      border: 'muted-300',
-      borderDark: 'muted-800',
-    },
-    option: {
-      border: 'muted-200',
-      borderDark: 'muted-800',
-      bg: 'white',
-      bgDark: 'muted-950',
-    },
-  },
-  notLoading: {
-    text: 'muted-300',
-    textDark: 'muted-600',
   },
   error: {
-    border: 'danger-500',
-    borderDark: 'danger-500',
+    button: {
+      border: {
+        light: 'danger-500',
+        dark: 'danger-500',
+      },
+    },
     icon: {
-      text: 'danger-500',
-    },
-  },
-  hasNotIcon: {
-    text: {
-      sm: 'xs',
-      md: 'sm',
-      lg: 'sm',
-    },
-    labelFloat: {
-      sm: {
-        text: 'xs',
-        focusVisible: {
-          textColor: 'primary-500',
-        },
+      color: {
+        light: 'danger-500',
+        dark: 'danger-500',
       },
-      md: {
-        text: 'xs',
-        focusVisible: {
-          text: 'xs',
-          textColor: 'primary-500',
-        },
-        button: {
-          text: '[0.825rem]',
-        },
-      },
-      lg: {
-        text: 'xs',
-        focusVisible: {
-          text: 'xs',
-          textColor: 'primary-500',
-        },
-        button: {
-          text: '[0.825rem]',
-        },
+    },
+    font: {
+      family: 'sans',
+      size: '[0.65rem]',
+      weight: 'medium',
+      color: {
+        light: 'danger-600',
+        dark: 'danger-600',
       },
     },
   },
-  hasIcon: {
-    text: {
-      sm: 'xs',
-      md: 'sm',
-      lg: 'base',
+  size: {
+    sm: {
+      font: {
+        size: 'xs',
+      },
+      icon: {
+        size: {
+          inner: '4',
+          outer: '8',
+        },
+      },
+      placeload: {
+        size: '8',
+      },
+      chevron: {
+        outer: {
+          size: '8',
+        },
+        inner: {
+          size: '3',
+        },
+      },
     },
-    labelFloat: {
-      sm: {
-        text: 'xs',
-        focusVisible: {
-          textColor: 'primary-500',
+    md: {
+      font: {
+        size: '[0.825rem]',
+      },
+      icon: {
+        size: {
+          inner: '[1.15rem]',
+          outer: '10',
         },
       },
-      md: {
-        text: 'xs',
-        focusVisible: {
-          text: 'xs',
-          textColor: 'primary-500',
+      placeload: {
+        size: '10',
+      },
+      chevron: {
+        outer: {
+          size: '10',
         },
-        button: {
-          text: '[0.825rem]',
+        inner: {
+          size: '4',
         },
       },
-      lg: {
-        text: 'xs',
-        focusVisible: {
-          text: 'xs',
-          textColor: 'primary-500',
+    },
+    lg: {
+      font: {
+        size: 'sm',
+      },
+      icon: {
+        size: {
+          inner: '5',
+          outer: '12',
         },
-        button: {
-          text: '[0.825rem]',
+      },
+      placeload: {
+        size: '12',
+      },
+      chevron: {
+        outer: {
+          size: '12',
+        },
+        inner: {
+          size: '4',
+        },
+      },
+    },
+  },
+  color: {
+    default: {
+      base: {
+        background: {
+          light: 'white',
+          dark: 'muted-900',
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'muted-700',
+        },
+        font: {
+          color: {
+            light: 'muted-600',
+            dark: 'muted-200',
+          },
+        },
+        placeholder: {
+          color: {
+            light: 'muted-300',
+            dark: 'muted-500',
+          },
+        },
+      },
+      shadow: {
+        focus: {
+          light: 'muted-300/30',
+          dark: 'muted-800/20',
+        },
+      },
+      chevron: {
+        color: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
+      },
+      option: {
+        border: {
+          light: 'muted-200',
+          dark: 'muted-600',
+        },
+        background: {
+          light: 'white',
+          dark: 'muted-700',
+        },
+      },
+    },
+    defaultContrast: {
+      base: {
+        background: {
+          light: 'white',
+          dark: 'muted-950',
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'muted-800',
+        },
+        font: {
+          color: {
+            light: 'muted-600',
+            dark: 'muted-200',
+          },
+        },
+        placeholder: {
+          color: {
+            light: 'muted-300',
+            dark: 'muted-600',
+          },
+        },
+      },
+      shadow: {
+        focus: {
+          light: 'muted-300/30',
+          dark: 'muted-800/20',
+        },
+      },
+      chevron: {
+        color: {
+          light: 'muted-300',
+          dark: 'muted-800',
+        },
+      },
+      option: {
+        border: {
+          light: 'muted-200',
+          dark: 'muted-800',
+        },
+        background: {
+          light: 'white',
+          dark: 'muted-950',
+        },
+      },
+    },
+    muted: {
+      base: {
+        background: {
+          light: 'muted-100',
+          dark: 'muted-900',
+        },
+        border: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
+        font: {
+          color: {
+            light: 'muted-600',
+            dark: 'muted-200',
+          },
+        },
+        placeholder: {
+          color: {
+            light: 'muted-300',
+            dark: 'muted-500',
+          },
+        },
+      },
+      shadow: {
+        focus: {
+          light: 'muted-300/30',
+          dark: 'muted-800/20',
+        },
+      },
+      chevron: {
+        color: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
+      },
+      option: {
+        border: {
+          light: 'muted-200',
+          dark: 'muted-600',
+        },
+        background: {
+          light: 'white',
+          dark: 'muted-700',
+        },
+      },
+    },
+    mutedContrast: {
+      base: {
+        background: {
+          light: 'muted-100',
+          dark: 'muted-950',
+        },
+        border: {
+          light: 'muted-200',
+          dark: 'muted-800',
+        },
+        font: {
+          color: {
+            light: 'muted-600',
+            dark: 'muted-200',
+          },
+        },
+        placeholder: {
+          color: {
+            light: 'muted-300',
+            dark: 'muted-600',
+          },
+        },
+      },
+      shadow: {
+        focus: {
+          light: 'muted-300/30',
+          dark: 'muted-800/20',
+        },
+      },
+      chevron: {
+        color: {
+          light: 'muted-300',
+          dark: 'muted-800',
+        },
+      },
+      option: {
+        border: {
+          light: 'muted-200',
+          dark: 'muted-800',
+        },
+        background: {
+          light: 'white',
+          dark: 'muted-950',
+        },
+      },
+    },
+  },
+  loaded: {
+    font: {
+      color: {
+        light: 'muted-300',
+        dark: 'muted-600',
+      },
+    },
+  },
+  icon: {
+    disabled: {
+      input: {
+        sm: {
+          font: {
+            size: 'xs',
+          },
+        },
+        md: {
+          font: {
+            size: 'sm',
+          },
+        },
+        lg: {
+          font: {
+            size: 'sm',
+          },
+        },
+      },
+      label: {
+        float: {
+          sm: {
+            font: {
+              size: 'xs',
+            },
+          },
+          md: {
+            font: {
+              size: {
+                base: 'xs',
+                focus: 'xs',
+                unfocus: '[0.825rem]',
+              },
+            },
+          },
+          lg: {
+            font: {
+              size: {
+                base: 'xs',
+                focus: 'xs',
+                unfocus: '[0.825rem]',
+              },
+            },
+          },
+        },
+      },
+    },
+    enabled: {
+      input: {
+        sm: {
+          font: {
+            size: 'xs',
+          },
+        },
+        md: {
+          font: {
+            size: 'sm',
+          },
+        },
+        lg: {
+          font: {
+            size: 'base',
+          },
+        },
+      },
+      label: {
+        float: {
+          sm: {
+            font: {
+              size: 'xs',
+            },
+          },
+          md: {
+            font: {
+              size: {
+                base: 'xs',
+                focus: 'xs',
+                unfocus: '[0.825rem]',
+              },
+            },
+          },
+          lg: {
+            font: {
+              size: {
+                base: 'xs',
+                focus: 'xs',
+                unfocus: '[0.825rem]',
+              },
+            },
+          },
         },
       },
     },

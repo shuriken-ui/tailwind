@@ -1,20 +1,41 @@
 export const key = 'placeholderPage' as const
 
 export const defaultConfig = {
-  minSize: '[400px]',
-  innerSize: 'full',
-  maxContentSize: 'sm',
-  maxSizeXS: 'xs',
-  maxSizeSM: 'sm',
-  maxSizeMD: 'md',
-  maxSizeLG: 'lg',
-  maxSizeXL: 'xl',
+  height: {
+    min: '[400px]',
+  },
+  inner: {
+    width: 'full',
+  },
+  content: {
+    width: {
+      max: 'sm',
+    },
+  },
+  size: {
+    image: {
+      xs: 'xs',
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg',
+      xl: 'xl',
+    },
+  },
   title: {
-    text: 'muted-800',
-    textDark: 'white',
+    font: {
+      color: {
+        light: 'muted-800',
+        dark: 'white',
+      },
+    },
   },
   subtitle: {
-    text: 'muted-400',
+    font: {
+      color: {
+        light: 'muted-400',
+        dark: 'muted-400',
+      },
+    },
   },
 }
 

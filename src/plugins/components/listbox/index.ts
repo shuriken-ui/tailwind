@@ -1,479 +1,636 @@
 import plugin from 'tailwindcss/plugin'
-import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../../options'
 import { type ListboxConfig, defaultConfig, key } from './listbox.config'
 
-export default plugin.withOptions(
-  function (options: PluginOption) {
-    let { prefix } = defu(options, defaultPluginOptions)
-
-    if (prefix) {
-      prefix = `${prefix}-`
-    }
-
-    return function ({ addComponents, theme }) {
-      const config = theme(`shurikenUi.${key}`) satisfies ListboxConfig
-
-      addComponents({
-        [`.${prefix}listbox`]: {
-          [`@apply relative w-full`]: {},
-
-          [`.${prefix}listbox-label, .${prefix}label-float`]: {
-            [`@apply ${prefix}label`]: {},
-          },
-          [`.${prefix}label-float`]: {
-            [`@apply text-${config.labelFloat.text} pointer-events-none absolute inline-flex h-${config.labelFloat.size} select-none items-center leading-none transition-all duration-${config.labelFloat.duration}`]:
-              {},
-          },
-          [`.${prefix}listbox-outer`]: {
-            [`@apply relative`]: {},
-          },
-          [`.${prefix}listbox-button`]: {
-            [`@apply ${prefix}focus relative w-${config.button.size} flex items-center gap-2 text-${config.button.textPosition} pe-12 ps-4 border font-${config.button.font} text-${config.button.text} leading-5 disabled:cursor-not-allowed disabled:opacity-75`]:
-              {},
-
-            [`.${prefix}listbox-button-inner`]: {
-              '@apply flex w-full items-center': {},
-
-              [`.${prefix}icon-box`]: {
-                [`@apply -ms-${config.button.iconBox.space} me-${config.button.iconBox.space} !h-${config.button.iconBox.size} !w-${config.button.iconBox.size}`]:
-                  {},
-                [`.${prefix}icon-box-inner`]: {
-                  [`@apply h-${config.button.iconBox.innerSize} w-${config.button.iconBox.innerSize}`]:
-                    {},
-                },
-              },
-              [`.${prefix}listbox-placeholder`]: {
-                [`@apply text-${config.button.placeholder.text} dark:text-${config.button.placeholder.textDark} truncate text-${config.button.placeholder.textPosition}`]:
-                  {},
-              },
-            },
-
-            [`&:focus-visible ~ .${prefix}listbox-chevron .${prefix}listbox-chevron-inner, &:focus ~ .${prefix}listbox-chevron .${prefix}listbox-chevron-inner`]:
-              {
-                [`@apply !rotate-180`]: {},
-              },
-          },
-          [`.${prefix}listbox-icon`]: {
-            [`@apply text-${config.icon.text} absolute start-0 top-0 z-10 flex items-center justify-center transition-colors duration-${config.icon.duration}`]:
-              {},
-          },
-          [`.${prefix}listbox-chevron`]: {
-            [`@apply pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center border-s`]:
-              {},
-
-            [`.${prefix}listbox-chevron-inner`]: {
-              [`@apply h-${config.chevron.inner.size} w-${config.chevron.inner.size} text-${config.chevron.inner.text} transition-transform duration-${config.chevron.inner.duration}`]:
-                {},
-            },
-          },
-          [`.${prefix}listbox-options`]: {
-            [`@apply ${prefix}slimscroll focus:ring-${config.options.ringFocus} absolute z-10 mt-1 max-h-60 w-full overflow-auto p-${config.options.space} text-${config.options.text} shadow-${config.options.shadowSize} shadow-${config.options.shadow} dark:shadow-${config.options.shadowDark} focus:outline-none focus:ring-1 sm:text-sm`]:
-              {},
-          },
-          [`.${prefix}listbox-option`]: {
-            [`@apply relative flex gap-2 cursor-pointer select-none items-center px-3 py-2 transition-colors duration-${config.option.duration}`]:
-              {},
-
-            [`.${prefix}icon-box`]: {
-              [`@apply text-${config.option.iconBox.text} dark:text-${config.option.iconBox.textDark} -ms-2 me-1`]:
-                {},
-              [`.${prefix}icon-box-inner`]: {
-                [`@apply h-${config.option.iconBox.innerSize} w-${config.option.iconBox.innerSize}`]:
-                  {},
-              },
-            },
-            [`.${prefix}listbox-selected-icon`]: {
-              [`@apply text-${config.option.icon.text} ms-auto flex items-center`]:
-                {},
-            },
-            [`.${prefix}listbox-selected-icon-inner`]: {
-              [`@apply h-${config.option.iconInner.size} w-${config.option.iconInner.size}`]:
-                {},
-            },
-            [`.${prefix}listbox-option-inner`]: {
-              [`.${prefix}listbox-heading`]: {
-                [`@apply text-${config.option.inner.heading.text} block truncate dark:text-${config.option.inner.heading.textDark}`]:
-                  {},
-              },
-              [`.${prefix}listbox-text`]: {
-                [`@apply text-${config.option.inner.text}`]: {},
-              },
-            },
-
-            [`&:not(.${prefix}active), &:not(:hover)`]: {
-              [`@apply text-muted-600 dark:text-muted-200`]: {},
-            },
-
-            [`&.${prefix}active, &:hover`]: {
-              [`@apply bg-${config.option.activeOrHover.bg} text-${config.option.activeOrHover.text} dark:text-${config.option.activeOrHover.textDark}`]:
-                {},
-            },
-          },
-          [`.${prefix}listbox-error-text`]: {
-            [`@apply text-${config.errorText.text} mt-1 block font-${config.errorText.font} text-${config.errorText.textSize} font-${config.errorText.fontWeight} leading-none`]:
-              {},
-          },
-          [`.${prefix}listbox-placeload`]: {
-            [`@apply absolute start-0 top-0 flex w-full items-center px-4`]: {},
-
-            [`.${prefix}placeload`]: {
-              [`@apply h-3 w-full max-w-[75%] rounded`]: {},
-            },
-          },
-          [`&.${prefix}listbox-sm`]: {
-            [`.${prefix}listbox-label`]: {
-              [`@apply pb-1 text-${config.sm.text}`]: {},
-            },
-
-            [`.${prefix}label-float`]: {
-              [`@apply top-1.5`]: {},
-            },
-
-            [`.${prefix}listbox-icon`]: {
-              [`@apply h-${config.sm.icon.size} w-${config.sm.icon.size}`]: {},
-
-              [`.${prefix}listbox-icon-inner`]: {
-                [`@apply h-${config.sm.icon.innerSize} w-${config.sm.icon.innerSize}`]:
-                  {},
-              },
-            },
-
-            [`.${prefix}listbox-placeload`]: {
-              [`@apply h-${config.sm.placeload.size}`]: {},
-            },
-
-            [`.${prefix}listbox-chevron`]: {
-              [`@apply h-${config.sm.chevron.size} w-${config.sm.chevron.size}`]:
-                {},
-
-              [`.${prefix}listbox-chevron-inner`]: {
-                [`@apply h-${config.sm.chevron.innerSize} w-${config.sm.chevron.innerSize}`]:
-                  {},
-              },
-            },
-          },
-          [`&.${prefix}listbox-md`]: {
-            [`.${prefix}listbox-label`]: {
-              [`@apply pb-1 text-${config.md.text}`]: {},
-            },
-
-            [`.${prefix}label-float`]: {
-              [`@apply top-1.5`]: {},
-            },
-
-            [`.${prefix}listbox-icon`]: {
-              [`@apply h-${config.md.icon.size} w-${config.md.icon.size}`]: {},
-
-              [`.${prefix}listbox-icon-inner`]: {
-                [`@apply h-${config.md.icon.innerSize} w-${config.md.icon.innerSize}`]:
-                  {},
-              },
-            },
-
-            [`.${prefix}listbox-placeload`]: {
-              [`@apply h-${config.md.placeload.size}`]: {},
-            },
-
-            [`.${prefix}listbox-chevron`]: {
-              [`@apply h-${config.md.chevron.size} w-${config.md.chevron.size}`]:
-                {},
-
-              [`.${prefix}listbox-chevron-inner`]: {
-                [`@apply h-${config.md.chevron.innerSize} w-${config.md.chevron.innerSize}`]:
-                  {},
-              },
-            },
-          },
-          [`&.${prefix}listbox-lg`]: {
-            [`.${prefix}listbox-label`]: {
-              [`@apply pb-1 text-${config.lg.text}`]: {},
-            },
-
-            [`.${prefix}label-float`]: {
-              [`@apply top-1.5`]: {},
-            },
-
-            [`.${prefix}listbox-icon`]: {
-              [`@apply h-${config.lg.icon.size} w-${config.lg.icon.size}`]: {},
-
-              [`.${prefix}listbox-icon-inner`]: {
-                [`@apply h-${config.lg.icon.innerSize} w-${config.lg.icon.innerSize}`]:
-                  {},
-              },
-            },
-
-            [`.${prefix}listbox-placeload`]: {
-              [`@apply h-${config.lg.placeload.size}`]: {},
-            },
-
-            [`.${prefix}listbox-chevron`]: {
-              [`@apply h-${config.lg.chevron.size} w-${config.lg.chevron.size}`]:
-                {},
-
-              [`.${prefix}listbox-chevron-inner`]: {
-                [`@apply h-${config.lg.chevron.innerSize} w-${config.lg.chevron.innerSize}`]:
-                  {},
-              },
-            },
-          },
-          [`&.${prefix}listbox-rounded`]: {
-            [`.${prefix}listbox-button, .${prefix}listbox-options, .${prefix}listbox-option`]:
-              {
-                [`@apply rounded-${config.rounded.default}`]: {},
-              },
-          },
-          [`&.${prefix}listbox-smooth`]: {
-            [`.${prefix}listbox-button, .${prefix}listbox-options, .${prefix}listbox-option`]:
-              {
-                [`@apply rounded-${config.rounded.smooth}`]: {},
-              },
-          },
-          [`&.${prefix}listbox-curved`]: {
-            [`.${prefix}listbox-button, .${prefix}listbox-options, .${prefix}listbox-option`]:
-              {
-                [`@apply rounded-${config.rounded.curved}`]: {},
-              },
-          },
-          [`&.${prefix}listbox-full`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply rounded-${config.rounded.full.button}`]: {},
-            },
-
-            [`.${prefix}listbox-option, .${prefix}listbox-options`]: {
-              [`@apply rounded-${config.rounded.full.option}`]: {},
-            },
-          },
-          [`&.${prefix}listbox-default`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply bg-${config.default.bg} border-${config.default.border} text-${config.default.text} placeholder:text-${config.default.textPlaceholder} focus:border-${config.default.borderFocus} focus:shadow-${config.default.shadowFocus} dark:border-${config.default.borderDark} dark:bg-${config.default.bgDark} dark:text-${config.default.textDark} dark:placeholder:text-${config.default.textPlaceholderDark} dark:focus:border-${config.default.borderFocusDark} dark:focus:shadow-${config.default.shadowFocusDark}`]:
-                {},
-            },
-            [`.${prefix}listbox-chevron`]: {
-              [`@apply border-${config.default.chevron.border} dark:border-${config.default.chevron.borderDark}`]:
-                {},
-            },
-            [`.${prefix}listbox-options`]: {
-              [`@apply border-${config.default.option.border} dark:border-${config.default.option.borderDark} dark:bg-${config.default.option.bgDark} border bg-${config.default.option.bg}`]:
-                {},
-            },
-          },
-          [`&.${prefix}listbox-default-contrast`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply bg-${config.defaultContrast.bg} border-${config.defaultContrast.border} text-${config.defaultContrast.text} placeholder:text-${config.defaultContrast.textPlaceholder} focus:border-${config.defaultContrast.borderFocus} focus:shadow-${config.defaultContrast.shadowFocus} dark:border-${config.defaultContrast.borderDark} dark:bg-${config.defaultContrast.bgDark} dark:text-${config.defaultContrast.textDark} dark:placeholder:text-${config.defaultContrast.textPlaceholderDark} dark:focus:border-${config.defaultContrast.borderFocusDark} dark:focus:shadow-${config.defaultContrast.shadowFocusDark}`]:
-                {},
-            },
-            [`.${prefix}listbox-chevron`]: {
-              [`@apply border-${config.defaultContrast.chevron.border} dark:border-${config.defaultContrast.chevron.borderDark}`]:
-                {},
-            },
-            [`.${prefix}listbox-options`]: {
-              [`@apply border-${config.defaultContrast.option.border} dark:border-${config.defaultContrast.option.borderDark} dark:bg-${config.defaultContrast.option.bgDark} border bg-${config.defaultContrast.option.bg}`]:
-                {},
-            },
-          },
-          [`&.${prefix}listbox-muted`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply bg-${config.muted.bg} border-${config.muted.border} text-${config.muted.text} placeholder:text-${config.muted.textPlaceholder} focus:border-${config.muted.borderFocus} focus:shadow-${config.muted.shadowFocus} dark:border-${config.muted.borderDark} dark:bg-${config.muted.bgDark} dark:text-${config.muted.textDark} dark:placeholder:text-${config.muted.textPlaceholderDark} dark:focus:border-${config.muted.borderFocusDark} dark:focus:shadow-${config.muted.shadowFocusDark}`]:
-                {},
-            },
-            [`.${prefix}listbox-chevron`]: {
-              [`@apply border-${config.muted.chevron.border} dark:border-${config.muted.chevron.borderDark}`]:
-                {},
-            },
-            [`.${prefix}listbox-options`]: {
-              [`@apply border-${config.muted.option.border} dark:border-${config.muted.option.borderDark} dark:bg-${config.muted.option.bgDark} border bg-${config.muted.option.bg}`]:
-                {},
-            },
-          },
-          [`&.${prefix}listbox-muted-contrast`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply bg-${config.mutedContrast.bg} border-${config.mutedContrast.border} text-${config.mutedContrast.text} placeholder:text-${config.mutedContrast.textPlaceholder} focus:border-${config.mutedContrast.borderFocus} focus:shadow-${config.mutedContrast.shadowFocus} dark:border-${config.mutedContrast.borderDark} dark:bg-${config.mutedContrast.bgDark} dark:text-${config.mutedContrast.textDark} dark:placeholder:text-${config.mutedContrast.textPlaceholderDark} dark:focus:border-${config.mutedContrast.borderFocusDark} dark:focus:shadow-${config.mutedContrast.shadowFocusDark}`]:
-                {},
-            },
-            [`.${prefix}listbox-chevron`]: {
-              [`@apply border-${config.mutedContrast.chevron.border} dark:border-${config.mutedContrast.chevron.borderDark}`]:
-                {},
-            },
-            [`.${prefix}listbox-options`]: {
-              [`@apply border-${config.mutedContrast.option.border} dark:border-${config.mutedContrast.option.borderDark} dark:bg-${config.mutedContrast.option.bgDark} border bg-${config.mutedContrast.option.bg}`]:
-                {},
-            },
-          },
-          [`&:not(.${prefix}listbox-loading)`]: {
-            [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
-              [`@apply text-${config.notLoading.text} dark:text-${config.notLoading.textDark}`]:
-                {},
-            },
-          },
-          [`&.${prefix}listbox-loading`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply !text-transparent placeholder:!text-transparent dark:placeholder:!text-transparent`]:
-                {},
-            },
-            [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
-              [`@apply text-transparent`]: {},
-            },
-            [`.${prefix}listbox-icon`]: {
-              [`@apply opacity-0`]: {},
-            },
-          },
-          [`&.${prefix}listbox-label-float`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply placeholder:text-transparent dark:placeholder:text-transparent`]:
-                {},
-            },
-          },
-          [`&.${prefix}listbox-error`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply !border-${config.error.border} dark:!border-${config.error.borderDark}`]:
-                {},
-            },
-            [`.${prefix}listbox-icon`]: {
-              [`@apply !text-${config.error.icon.text}`]: {},
-            },
-          },
-          [`&:not(.${prefix}has-icon).${prefix}listbox-sm`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply h-8 py-1 text-${config.hasNotIcon.text.sm} leading-4 px-2`]:
-                {},
-            },
-          },
-          [`&.${prefix}has-icon.${prefix}listbox-sm`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply h-8 py-1 text-${config.hasIcon.text.sm} leading-4 pe-3 ps-8`]:
-                {},
-            },
-          },
-          [`&:not(.${prefix}has-icon).${prefix}listbox-md`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply h-10 py-2 text-${config.hasNotIcon.text.md} leading-5 px-3`]:
-                {},
-            },
-          },
-          [`&.${prefix}has-icon.${prefix}listbox-md`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply h-10 py-2 text-${config.hasIcon.text.md} leading-5 pe-4 ps-10`]:
-                {},
-            },
-          },
-          [`&:not(.${prefix}has-icon).${prefix}listbox-lg`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply h-12 py-2 text-${config.hasNotIcon.text.lg} leading-5 px-4`]:
-                {},
-            },
-          },
-          [`&.${prefix}has-icon.${prefix}listbox-lg`]: {
-            [`.${prefix}listbox-button`]: {
-              [`@apply h-12 py-2 text-${config.hasIcon.text.lg} leading-5 pe-4 ps-11`]:
-                {},
-            },
-          },
-          [`&.${prefix}listbox-label-float:not(.${prefix}has-icon).${prefix}listbox-sm`]:
-            {
-              [`.${prefix}label-float`]: {
-                [`@apply start-3 -ms-3 -mt-7 text-${config.hasNotIcon.labelFloat.sm.text} text-transparent`]:
-                  {},
-              },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
-                {
-                  [`@apply !-ms-3 !-mt-7 !text-${config.hasNotIcon.labelFloat.sm.focusVisible.textColor}`]:
-                    {},
-                },
-              [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
-                [`@apply ms-0 mt-0`]: {},
-              },
-            },
-          [`&.${prefix}listbox-label-float.${prefix}has-icon.${prefix}listbox-sm`]:
-            {
-              [`.${prefix}label-float`]: {
-                [`@apply start-8 -ms-8 -mt-7 text-${config.hasIcon.labelFloat.sm.text} text-transparent`]:
-                  {},
-              },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
-                {
-                  [`@apply !-ms-8 !-mt-7 !text-${config.hasIcon.labelFloat.sm.focusVisible.textColor}`]:
-                    {},
-                },
-              [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
-                [`@apply ms-0 mt-0`]: {},
-              },
-            },
-          [`&.${prefix}listbox-label-float:not(.${prefix}has-icon).${prefix}listbox-md`]:
-            {
-              [`.${prefix}label-float`]: {
-                [`@apply start-3 -ms-3 -mt-8 text-${config.hasNotIcon.labelFloat.md.text} text-transparent`]:
-                  {},
-              },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
-                {
-                  [`@apply !-ms-3 !-mt-8 !text-${config.hasNotIcon.labelFloat.md.focusVisible.text} !text-${config.hasNotIcon.labelFloat.md.focusVisible.textColor}`]:
-                    {},
-                },
-              [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
-                [`@apply ms-0 mt-0 text-${config.hasNotIcon.labelFloat.md.button.text}`]:
-                  {},
-              },
-            },
-          [`&.${prefix}listbox-label-float.${prefix}has-icon.${prefix}listbox-md`]:
-            {
-              [`.${prefix}label-float`]: {
-                [`@apply start-10 -ms-10 -mt-8 text-${config.hasIcon.labelFloat.md.text} text-transparent`]:
-                  {},
-              },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
-                {
-                  [`@apply !-ms-10 !-mt-8 !text-${config.hasIcon.labelFloat.md.focusVisible.text} !text-${config.hasIcon.labelFloat.md.focusVisible.textColor}`]:
-                    {},
-                },
-              [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
-                [`@apply ms-0 mt-0 text-${config.hasIcon.labelFloat.md.button.text}`]:
-                  {},
-              },
-            },
-          [`&.${prefix}listbox-label-float:not(.${prefix}has-icon).${prefix}listbox-lg`]:
-            {
-              [`.${prefix}label-float`]: {
-                [`@apply start-3 -ms-3 -mt-8 text-${config.hasNotIcon.labelFloat.lg.text} text-transparent`]:
-                  {},
-              },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
-                {
-                  [`@apply !-ms-3 !-mt-9 !text-${config.hasNotIcon.labelFloat.lg.focusVisible.text} !text-${config.hasNotIcon.labelFloat.lg.focusVisible.textColor}`]:
-                    {},
-                },
-              [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
-                [`@apply ms-0 mt-0 text-${config.hasNotIcon.labelFloat.lg.button.text}`]:
-                  {},
-              },
-            },
-          [`&.${prefix}listbox-label-float.${prefix}has-icon.${prefix}listbox-lg`]:
-            {
-              [`.${prefix}label-float`]: {
-                [`@apply start-11 -ms-10 -mt-8 text-${config.hasIcon.labelFloat.lg.text} text-transparent`]:
-                  {},
-              },
-              [`.${prefix}listbox-button:focus-visible ~ .${prefix}label-float, .${prefix}listbox-button:focus ~ .${prefix}label-float`]:
-                {
-                  [`@apply !-ms-10 !-mt-9 !text-${config.hasIcon.labelFloat.lg.focusVisible.text} !text-${config.hasIcon.labelFloat.lg.focusVisible.textColor}`]:
-                    {},
-                },
-              [`.${prefix}listbox-button ~ .${prefix}label-float`]: {
-                [`@apply ms-0 mt-0 text-${config.hasIcon.labelFloat.lg.button.text}`]:
-                  {},
-              },
-            },
-        },
-      })
-    }
+const config = {
+  theme: {
+    nui: {
+      [key]: defaultConfig,
+    },
   },
-  function () {
-    return {
-      theme: {
-        shurikenUi: {
-          [key]: defaultConfig,
+}
+
+export default plugin(({ addComponents, theme }) => {
+  const config = theme(`nui.${key}`) satisfies ListboxConfig
+
+  addComponents({
+    //Wrapper
+    '.nui-listbox': {
+      '@apply relative w-full': {},
+      //Listbox:label
+      '.nui-listbox-label, .nui-label-float': {
+        '@apply nui-label': {},
+      },
+      //Label:float
+      '.nui-label-float': {
+        //Base
+        '@apply pointer-events-none absolute inline-flex select-none items-center leading-none':
+          {},
+        //Color & Height
+        [`@apply text-${config.label.float.font.color} h-${config.label.float.height}`]:
+          {},
+        //Transition
+        [`@apply transition-${config.label.float.transition.property} duration-${config.label.float.transition.duration}`]:
+          {},
+      },
+      //Listbox:outer
+      '.nui-listbox-outer': {
+        '@apply relative': {},
+      },
+      //Listbox:button
+      '.nui-listbox-button': {
+        //Base
+        [`@apply nui-focus relative w-${config.button.size} flex items-center gap-2 pe-12 ps-4 border leading-5 disabled:cursor-not-allowed disabled:opacity-75`]:
+          {},
+        //Font
+        [`@apply font-${config.button.font.family} text-${config.button.font.size} text-${config.button.font.align}`]:
+          {},
+        //Button:inner
+        '.nui-listbox-button-inner': {
+          '@apply flex w-full items-center': {},
+          //Inner:icon-box
+          '.nui-icon-box': {
+            //Outer
+            [`@apply !h-${config.button.iconBox.outer.size} !w-${config.button.iconBox.outer.size}`]:
+              {},
+            //Outer:margin
+            [`@apply -ms-${config.button.iconBox.margin.x} me-${config.button.iconBox.margin.x}`]:
+              {},
+            //Inner
+            '.nui-icon-box-inner': {
+              [`@apply h-${config.button.iconBox.inner.size} w-${config.button.iconBox.inner.size}`]:
+                {},
+            },
+          },
+          //Inner:placeholder
+          '.nui-listbox-placeholder': {
+            [`@apply text-${config.button.placeholder.font.color.light} dark:text-${config.button.placeholder.font.color.dark} truncate text-${config.button.placeholder.font.align}`]:
+              {},
+          },
+        },
+        //Inner:chevron
+        '&:focus-visible ~ .nui-listbox-chevron .nui-listbox-chevron-inner, &:focus ~ .nui-listbox-chevron .nui-listbox-chevron-inner':
+          {
+            '@apply !rotate-180': {},
+          },
+      },
+      //Listbox:icon
+      '.nui-listbox-icon.nui-icon': {
+        //Color
+        [`@apply text-${config.button.icon.color.light} dark:text-${config.button.icon.color.dark}`]:
+          {},
+        //Transition
+        [`@apply transition-${config.button.icon.transition.property} duration-${config.button.icon.transition.duration}`]:
+          {},
+        '@apply absolute start-0 top-0 z-10 flex items-center justify-center':
+          {},
+      },
+      //Listbox:chevron
+      '.nui-listbox-chevron.nui-chevron': {
+        //Base
+        '@apply pointer-events-none absolute top-0 end-0 flex items-center justify-center border-s':
+          {},
+        //Chevron:inner
+        '.nui-listbox-chevron-inner': {
+          //Transition
+          [`@apply transition-${config.chevron.inner.transition.property} duration-${config.chevron.inner.transition.duration}`]:
+            {},
+          //Size
+          [`@apply h-${config.chevron.inner.size} w-${config.chevron.inner.size}`]:
+            {},
+          //Color
+          [`@apply text-${config.chevron.inner.color.light} dark:text-${config.chevron.inner.color.dark}`]:
+            {},
         },
       },
-    }
-  },
-)
+      //Listbox:options
+      '.nui-listbox-options': {
+        [`@apply nui-slimscroll absolute z-10 mt-1 max-h-60 w-full overflow-auto p-${config.options.padding}`]:
+          {},
+        //Font
+        [`@apply text-${config.options.font.size} sm:text-sm`]: {},
+        //Ring
+        [`@apply focus:ring-${config.options.ring.focus.light} dark:focus:ring-${config.options.ring.focus.dark} focus:outline-none focus:ring-1`]:
+          {},
+        //Shadow
+        [`@apply shadow-${config.options.shadow.size} shadow-${config.options.shadow.light} dark:shadow-${config.options.shadow.dark}`]:
+          {},
+      },
+      //Listbox:option
+      '.nui-listbox-option': {
+        '@apply relative flex gap-2 cursor-pointer select-none items-center px-3 py-2':
+          {},
+        //Transition
+        [`@apply transition-${config.option.transition.property} duration-${config.option.transition.duration}`]:
+          {},
+        //Option:icon-box
+        '.nui-icon-box': {
+          //Color
+          [`@apply text-${config.option.iconBox.color.light} dark:text-${config.option.iconBox.color.dark} -ms-2 me-1`]:
+            {},
+          //Icon-box:inner
+          '.nui-icon-box-inner': {
+            [`@apply h-${config.option.iconBox.inner.size} w-${config.option.iconBox.inner.size}`]:
+              {},
+          },
+        },
+        //Option:icon
+        '.nui-listbox-selected-icon': {
+          [`@apply text-${config.option.icon.color.light} dark:text-${config.option.icon.color.light} ms-auto flex items-center`]:
+            {},
+        },
+        //Icon:inner
+        '.nui-listbox-selected-icon-inner': {
+          [`@apply h-${config.option.icon.inner.size} w-${config.option.icon.inner.size}`]:
+            {},
+        },
+        //Option:inner
+        '.nui-listbox-option-inner': {
+          '.nui-listbox-heading': {
+            //Base
+            '@apply block truncate': {},
+            //Color
+            [`@apply text-${config.option.inner.heading.font.color.light} dark:text-${config.option.inner.heading.font.color.dark}`]:
+              {},
+          },
+          //Option:inner:text
+          '.nui-listbox-text': {
+            [`@apply text-${config.option.inner.font.color.light} dark:text-${config.option.inner.font.color.dark}`]:
+              {},
+          },
+        },
+        //Option:not-active
+        '&:not(.nui-active), &:not(:hover)': {
+          '@apply text-muted-600 dark:text-muted-200': {},
+        },
+        //Option:active
+        '&.nui-active, &:hover': {
+          //Color
+          [`@apply text-${config.option.activeHover.font.color.light} dark:text-${config.option.activeHover.font.color.light}`]:
+            {},
+          //Background
+          [`@apply bg-${config.option.activeHover.background.light} dark:bg-${config.option.activeHover.background.dark}`]:
+            {},
+        },
+      },
+      //Listbox:error
+      '.nui-listbox-error-text': {
+        //Base
+        '@apply mt-1 block': {},
+        //Font
+        [`@apply font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight} leading-none`]:
+          {},
+        //Color
+        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
+          {},
+      },
+      //Listbox:placeload
+      '.nui-listbox-placeload.nui-loading-placeload': {
+        '@apply absolute start-0 top-0 flex w-full items-center px-4': {},
+
+        '.nui-placeload': {
+          '@apply h-3 w-full max-w-[75%] rounded': {},
+        },
+      },
+      //Size:sm
+      '&.nui-listbox-sm': {
+        '.nui-listbox-label': {
+          [`@apply pb-1 text-${config.size.sm.font.size}`]: {},
+        },
+        //Label:float
+        '.nui-label-float': {
+          '@apply top-1.5': {},
+        },
+        //Listbox:icon
+        '.nui-listbox-icon': {
+          [`@apply h-${config.size.sm.icon.size.outer} w-${config.size.sm.icon.size.outer}`]:
+            {},
+
+          '.nui-listbox-icon-inner': {
+            [`@apply h-${config.size.sm.icon.size.inner} w-${config.size.sm.icon.size.inner}`]:
+              {},
+          },
+        },
+        //Listbox:placeload
+        '.nui-listbox-placeload': {
+          [`@apply h-${config.size.sm.placeload.size}`]: {},
+        },
+        //Listbox:chevron
+        '.nui-listbox-chevron': {
+          [`@apply h-${config.size.sm.chevron.outer.size} w-${config.size.sm.chevron.outer.size}`]:
+            {},
+          //Chevron:inner
+          '.nui-listbox-chevron-inner': {
+            [`@apply h-${config.size.sm.chevron.inner.size} w-${config.size.sm.chevron.inner.size}`]:
+              {},
+          },
+        },
+      },
+      //Size:md
+      '&.nui-listbox-md': {
+        //Listbox:label
+        '.nui-listbox-label': {
+          [`@apply pb-1 text-${config.size.md.font.size}`]: {},
+        },
+        //Label:float
+        '.nui-label-float': {
+          '@apply top-1.5': {},
+        },
+      },
+      //Listbox:icon
+      '.nui-listbox-icon': {
+        [`@apply h-${config.size.md.icon.size.outer} w-${config.size.md.icon.size.outer}`]:
+          {},
+
+        '.nui-listbox-icon-inner': {
+          [`@apply h-${config.size.md.icon.size.inner} w-${config.size.md.icon.size.inner}`]:
+            {},
+        },
+      },
+      //Listbox:placeload
+      '.nui-listbox-placeload': {
+        [`@apply h-${config.size.md.placeload.size}`]: {},
+      },
+      //Listbox:chevron
+      '.nui-listbox-chevron': {
+        [`@apply h-${config.size.md.chevron.outer.size} w-${config.size.md.chevron.outer.size}`]:
+          {},
+        //Chevron:inner
+        '.nui-listbox-chevron-inner': {
+          [`@apply h-${config.size.md.chevron.inner.size} w-${config.size.md.chevron.inner.size}`]:
+            {},
+        },
+      },
+      //Size:lg
+      '&.nui-listbox-lg': {
+        '.nui-listbox-label': {
+          [`@apply pb-1 text-${config.size.lg.font.size}`]: {},
+        },
+        //Label:float
+        '.nui-label-float': {
+          '@apply top-1.5': {},
+        },
+        //Listbox:icon
+        '.nui-listbox-icon': {
+          [`@apply h-${config.size.lg.icon.size.outer} w-${config.size.lg.icon.size.outer}`]:
+            {},
+
+          '.nui-listbox-icon-inner': {
+            [`@apply h-${config.size.lg.icon.size.inner} w-${config.size.lg.icon.size.inner}`]:
+              {},
+          },
+        },
+        //Listbox:placeload
+        '.nui-listbox-placeload': {
+          [`@apply h-${config.size.lg.placeload.size}`]: {},
+        },
+        //Listbox:chevron
+        '.nui-listbox-chevron': {
+          [`@apply h-${config.size.lg.chevron.outer.size} w-${config.size.lg.chevron.outer.size}`]:
+            {},
+          //Chevron:inner
+          '.nui-listbox-chevron-inner': {
+            [`@apply h-${config.size.lg.chevron.inner.size} w-${config.size.lg.chevron.inner.size}`]:
+              {},
+          },
+        },
+      },
+      //Rounded:sm
+      '&.nui-listbox-rounded': {
+        '.nui-listbox-button, .nui-listbox-options, .nui-listbox-option': {
+          [`@apply ${config.rounded.sm}`]: {},
+        },
+      },
+      //Rounded:md
+      '&.nui-listbox-smooth': {
+        '.nui-listbox-button, .nui-listbox-options, .nui-listbox-option': {
+          [`@apply ${config.rounded.md}`]: {},
+        },
+      },
+      //Rounded:lg
+      '&.nui-listbox-curved': {
+        '.nui-listbox-button, .nui-listbox-options, .nui-listbox-option': {
+          [`@apply ${config.rounded.lg}`]: {},
+        },
+      },
+      //Rounded:full
+      '&.nui-listbox-full': {
+        '.nui-listbox-button': {
+          [`@apply ${config.rounded.full}`]: {},
+        },
+
+        '.nui-listbox-option, .nui-listbox-options': {
+          [`@apply ${config.rounded.lg}`]: {},
+        },
+      },
+      //Color:default
+      '&.nui-listbox-default': {
+        '.nui-listbox-button': {
+          //Color
+          [`@apply text-${config.color.default.base.font.color.light} dark:text-${config.color.default.base.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.default.base.background.light} dark:bg-${config.color.default.base.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.color.default.base.border.light} dark:border-${config.color.default.base.border.dark}`]:
+            {},
+          //Placeholder
+          [`@apply placeholder-${config.color.default.base.placeholder.color.light} dark:placeholder-${config.color.default.base.placeholder.color.dark}`]:
+            {},
+          //Focus
+          [`@apply focus:shadow-lg focus:shadow-${config.color.default.shadow.focus.light} dark:focus:shadow-${config.color.default.shadow.focus.dark}`]:
+            {},
+        },
+        //Listbox:chevron
+        '.nui-listbox-chevron': {
+          [`@apply border-${config.color.default.chevron.color.light} dark:border-${config.color.default.chevron.color.dark}`]:
+            {},
+        },
+        //Listbox:options
+        '.nui-listbox-options': {
+          //Background
+          [`@apply bg-${config.color.default.option.background.light} dark:bg-${config.color.default.option.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.color.default.option.border.light} dark:border-${config.color.default.option.border.dark}`]:
+            {},
+        },
+      },
+      //Color:defaultContrast
+      '&.nui-listbox-default-contrast': {
+        '.nui-listbox-button': {
+          //Color
+          [`@apply text-${config.color.defaultContrast.base.font.color.light} dark:text-${config.color.defaultContrast.base.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.defaultContrast.base.background.light} dark:bg-${config.color.defaultContrast.base.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.color.defaultContrast.base.border.light} dark:border-${config.color.defaultContrast.base.border.dark}`]:
+            {},
+          //Placeholder
+          [`@apply placeholder-${config.color.defaultContrast.base.placeholder.color.light} dark:placeholder-${config.color.defaultContrast.base.placeholder.color.dark}`]:
+            {},
+          //Focus
+          [`@apply focus:shadow-lg focus:shadow-${config.color.defaultContrast.shadow.focus.light} dark:focus:shadow-${config.color.defaultContrast.shadow.focus.dark}`]:
+            {},
+        },
+        //Listbox:chevron
+        '.nui-listbox-chevron': {
+          [`@apply border-${config.color.defaultContrast.chevron.color.light} dark:border-${config.color.defaultContrast.chevron.color.dark}`]:
+            {},
+        },
+        //Listbox:options
+        '.nui-listbox-options': {
+          //Background
+          [`@apply bg-${config.color.defaultContrast.option.background.light} dark:bg-${config.color.defaultContrast.option.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.color.defaultContrast.option.border.light} dark:border-${config.color.defaultContrast.option.border.dark}`]:
+            {},
+        },
+      },
+      //Color:muted
+      '&.nui-listbox-muted': {
+        '.nui-listbox-button': {
+          //Color
+          [`@apply text-${config.color.muted.base.font.color.light} dark:text-${config.color.muted.base.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.muted.base.background.light} dark:bg-${config.color.muted.base.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.color.muted.base.border.light} dark:border-${config.color.muted.base.border.dark}`]:
+            {},
+          //Placeholder
+          [`@apply placeholder-${config.color.muted.base.placeholder.color.light} dark:placeholder-${config.color.muted.base.placeholder.color.dark}`]:
+            {},
+          //Focus
+          [`@apply focus:shadow-lg focus:shadow-${config.color.muted.shadow.focus.light} dark:focus:shadow-${config.color.muted.shadow.focus.dark}`]:
+            {},
+        },
+        //Listbox:chevron
+        '.nui-listbox-chevron': {
+          [`@apply border-${config.color.muted.chevron.color.light} dark:border-${config.color.muted.chevron.color.dark}`]:
+            {},
+        },
+        //Listbox:options
+        '.nui-listbox-options': {
+          //Background
+          [`@apply bg-${config.color.muted.option.background.light} dark:bg-${config.color.muted.option.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.color.muted.option.border.light} dark:border-${config.color.muted.option.border.dark}`]:
+            {},
+        },
+      },
+      //Color:mutedContrast
+      '&.nui-listbox-muted-contrast': {
+        '.nui-listbox-button': {
+          //Color
+          [`@apply text-${config.color.mutedContrast.base.font.color.light} dark:text-${config.color.mutedContrast.base.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.mutedContrast.base.background.light} dark:bg-${config.color.mutedContrast.base.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.color.mutedContrast.base.border.light} dark:border-${config.color.mutedContrast.base.border.dark}`]:
+            {},
+          //Placeholder
+          [`@apply placeholder-${config.color.mutedContrast.base.placeholder.color.light} dark:placeholder-${config.color.mutedContrast.base.placeholder.color.dark}`]:
+            {},
+          //Focus
+          [`@apply focus:shadow-lg focus:shadow-${config.color.mutedContrast.shadow.focus.light} dark:focus:shadow-${config.color.mutedContrast.shadow.focus.dark}`]:
+            {},
+        },
+        //Listbox:chevron
+        '.nui-listbox-chevron': {
+          [`@apply border-${config.color.mutedContrast.chevron.color.light} dark:border-${config.color.mutedContrast.chevron.color.dark}`]:
+            {},
+        },
+        //Listbox:options
+        '.nui-listbox-options': {
+          //Background
+          [`@apply bg-${config.color.mutedContrast.option.background.light} dark:bg-${config.color.mutedContrast.option.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.color.mutedContrast.option.border.light} dark:border-${config.color.mutedContrast.option.border.dark}`]:
+            {},
+        },
+      },
+      //Listbox:loaded
+      '&:not(.nui-listbox-loading)': {
+        '.nui-listbox-button ~ .nui-label-float': {
+          [`@apply text-${config.loaded.font.color.light} dark:text-${config.loaded.font.color.dark}`]:
+            {},
+        },
+      },
+      //Listbox:loading
+      '&.nui-listbox-loading': {
+        '.nui-listbox-button': {
+          '@apply !text-transparent placeholder:!text-transparent dark:placeholder:!text-transparent pointer-events-none':
+            {},
+        },
+        '.nui-listbox-button ~ .nui-label-float': {
+          '@apply text-transparent': {},
+        },
+        '.nui-listbox-icon': {
+          '@apply opacity-0': {},
+        },
+      },
+      //Label:float
+      '&.nui-listbox-label-float': {
+        '.nui-listbox-button': {
+          '@apply placeholder:text-transparent dark:placeholder:text-transparent':
+            {},
+        },
+      },
+      //Listbox:error
+      '&.nui-listbox-error': {
+        '.nui-listbox-button': {
+          [`@apply !border-${config.error.button.border.light} dark:!border-${config.error.button.border.dark}`]:
+            {},
+        },
+        //Listbox:icon
+        '.nui-listbox-icon': {
+          [`@apply !text-${config.error.icon.color.light} dark:!text-${config.error.icon.color.dark}`]:
+            {},
+        },
+      },
+      //Without:icon && Size:sm
+      '&:not(.nui-has-icon).nui-listbox-sm': {
+        '.nui-listbox-button': {
+          [`@apply h-8 py-1 text-${config.icon.disabled.input.sm.font.size} leading-4 px-2`]:
+            {},
+        },
+      },
+      //With:icon && Size:sm
+      '&.nui-has-icon.nui-listbox-sm': {
+        '.nui-listbox-button': {
+          [`@apply h-8 py-1 text-${config.icon.enabled.input.sm.font.size} leading-4 pe-3 ps-8`]:
+            {},
+        },
+      },
+      //Without:icon && Size:md
+      '&:not(.nui-has-icon).nui-listbox-md': {
+        '.nui-listbox-button': {
+          [`@apply h-10 py-2 text-${config.icon.disabled.input.md.font.size} leading-5 px-3`]:
+            {},
+        },
+      },
+      //With:icon && Size:md
+      '&.nui-has-icon.nui-listbox-md': {
+        '.nui-listbox-button': {
+          [`@apply h-10 py-2 text-${config.icon.enabled.input.md.font.size} leading-5 pe-4 ps-10`]:
+            {},
+        },
+      },
+      //Without:icon && Size:lg
+      '&:not(.nui-has-icon).nui-listbox-lg': {
+        '.nui-listbox-button': {
+          [`@apply h-12 py-2 text-${config.icon.disabled.input.lg.font.size} leading-5 px-4`]:
+            {},
+        },
+      },
+      //With:icon && Size:lg
+      '&.nui-has-icon.nui-listbox-lg': {
+        '.nui-listbox-button': {
+          [`@apply h-12 py-2 text-${config.icon.enabled.input.lg.font.size} leading-5 pe-4 ps-11`]:
+            {},
+        },
+      },
+      //Without:icon && Size:sm && Label:float
+      '&.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-sm': {
+        '.nui-label-float': {
+          [`@apply start-3 -ms-3 -mt-7 text-${config.icon.disabled.label.float.sm.font.size} text-transparent`]:
+            {},
+        },
+        '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
+          {
+            [`@apply !-ms-3 !-mt-7 !text-${config.label.float.font.color}`]: {},
+          },
+        '.nui-listbox-button ~ .nui-label-float': {
+          '@apply ms-0 mt-0': {},
+        },
+      },
+      //With:icon && Size:sm && Label:float
+      '&.nui-listbox-label-float.nui-has-icon.nui-listbox-sm': {
+        '.nui-label-float': {
+          [`@apply start-8 -ms-8 -mt-7 text-${config.icon.disabled.label.float.sm.font.size} text-transparent`]:
+            {},
+        },
+        '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
+          {
+            [`@apply !-ms-8 !-mt-7 !text-${config.label.float.font.color}`]: {},
+          },
+        '.nui-listbox-button ~ .nui-label-float': {
+          '@apply ms-0 mt-0': {},
+        },
+      },
+      //Without:icon && Size:md && Label:float
+      '&.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-md': {
+        '.nui-label-float': {
+          [`@apply start-3 -ms-3 -mt-7 text-${config.icon.disabled.label.float.md.font.size.base} text-transparent`]:
+            {},
+        },
+        '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
+          {
+            [`@apply !-ms-3 !-mt-7 !text-${config.icon.disabled.label.float.md.font.size.focus} !text-${config.label.float.font.color}`]:
+              {},
+          },
+        '.nui-listbox-button ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.disabled.label.float.md.font.size.base}`]:
+            {},
+        },
+      },
+      //With:icon && Size:md && Label:float
+      '&.nui-listbox-label-float.nui-has-icon.nui-listbox-md': {
+        '.nui-label-float': {
+          [`@apply start-10 -ms-10 -mt-7 text-${config.icon.enabled.label.float.md.font.size.base} text-transparent`]:
+            {},
+        },
+        '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
+          {
+            [`@apply !-ms-10 !-mt-7 !text-${config.icon.enabled.label.float.md.font.size.focus} !text-${config.label.float.font.color}`]:
+              {},
+          },
+        '.nui-listbox-button ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.md.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //Without:icon && Size:lg && Label:float
+      '&.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-lg': {
+        '.nui-label-float': {
+          [`@apply start-3 -ms-3 -mt-7 text-${config.icon.disabled.label.float.lg.font.size.base} text-transparent`]:
+            {},
+        },
+        '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
+          {
+            [`@apply !-ms-3 !-mt-7 !text-${config.icon.disabled.label.float.lg.font.size.focus} !text-${config.label.float.font.color}`]:
+              {},
+          },
+        '.nui-listbox-button ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.disabled.label.float.lg.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //With:icon && Size:lg && Label:float
+      '&.nui-listbox-label-float.nui-has-icon.nui-listbox-lg': {
+        '.nui-label-float': {
+          [`@apply start-11 -ms-10 -mt-7 text-${config.icon.enabled.label.float.lg.font.size.base} text-transparent`]:
+            {},
+        },
+        '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
+          {
+            [`@apply !-ms-10 !-mt-7 !text-${config.icon.enabled.label.float.lg.font.size.focus} !text-${config.label.float.font.color}`]:
+              {},
+          },
+        '.nui-listbox-button ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.lg.font.size.unfocus}`]:
+            {},
+        },
+      },
+    },
+  })
+}, config)

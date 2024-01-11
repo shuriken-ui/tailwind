@@ -16,7 +16,7 @@ File inputs are an essential part of any application. Shuriken UI file inputs ca
 
 <br />
 
-### Combo: straight
+### Combo: Rounded: none
 
 File input shapes allow you to change the border radiuses. below is an example of the combo straight shape.
 
@@ -26,7 +26,7 @@ File input shapes allow you to change the border radiuses. below is an example o
 
 <br />
 
-### Combo: rounded
+### Combo: Rounded: sm
 
 File input shapes allow you to change the border radiuses. below is an example of the combo rounded shape.
 
@@ -36,7 +36,7 @@ File input shapes allow you to change the border radiuses. below is an example o
 
 <br />
 
-### Combo: smooth
+### Combo: Rounded: md
 
 File input shapes allow you to change the border radiuses. below is an example of the combo smooth shape.
 
@@ -46,7 +46,7 @@ File input shapes allow you to change the border radiuses. below is an example o
 
 <br />
 
-### Combo: curved
+### Combo: Rounded: lg
 
 File input shapes allow you to change the border radiuses. below is an example of the combo curved shape.
 
@@ -56,7 +56,7 @@ File input shapes allow you to change the border radiuses. below is an example o
 
 <br />
 
-### Combo: full
+### Combo: Rounded: full
 
 File input shapes allow you to change the border radiuses. below is an example of the combo full shape.
 
@@ -91,12 +91,12 @@ File inputs can be displayed as an upload button.
 
 ### Default config
 
-<div class="relative">
-  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
-    <summary class="list-none cursor-pointer">
-      <span class="font-sans text-slate-500">View configuration options</span>
+<div className="relative">
+  <details className="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary className="list-none cursor-pointer">
+      <span className="font-sans text-slate-500">View configuration options</span>
       <svg
-        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        className="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -105,15 +105,15 @@ File inputs can be displayed as an upload button.
         <path
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m6 9l6 6l6-6"
         />
       </svg>
     </summary>
 
-    <div class="!mt-4">
+    <div className="!mt-4">
       <pre >
         {JSON.stringify(defaultConfig, null, 2)}
       </pre>

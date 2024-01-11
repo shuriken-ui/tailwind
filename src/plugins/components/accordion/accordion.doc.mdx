@@ -18,41 +18,41 @@ Accordions are togglable areas that you can use to hide some pieces of content.
 
 <br />
 
-### Shape: straight
+### Rounded: none
 
 Accordions can have different shapes. Below is an example of the straight shape.
 
-<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AccordionStories.Straight} />
 </div>
 
 <br />
 
-### Shape: rounded
+### Rounded: sm
 
 Accordions can have different shapes. Below is an example of the rounded shape.
 
-<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AccordionStories.Rounded} />
 </div>
 
 <br />
 
-### Shape: smooth
+### Rounded: md
 
 Accordions can have different shapes. Below is an example of the smooth shape.
 
-<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AccordionStories.Smooth} />
 </div>
 
 <br />
 
-### Shape: curved
+### Rounded: lg
 
 Accordions can have different shapes. Below is an example of the curved shape.
 
-<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AccordionStories.Curved} />
 </div>
 
@@ -62,7 +62,7 @@ Accordions can have different shapes. Below is an example of the curved shape.
 
 Accordions can have a dot indicator.
 
-<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AccordionStories.Dot} />
 </div>
 
@@ -72,7 +72,7 @@ Accordions can have a dot indicator.
 
 Accordions can have a chevron indicator.
 
-<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AccordionStories.Chevron} />
 </div>
 
@@ -82,7 +82,7 @@ Accordions can have a chevron indicator.
 
 Accordions can have a plus indicator.
 
-<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AccordionStories.Plus} />
 </div>
 
@@ -93,12 +93,12 @@ Accordions can have a plus indicator.
 
 ### Default config
 
-<div class="relative">
-  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
-    <summary class="list-none cursor-pointer">
-      <span class="font-sans text-slate-500">View configuration options</span>
+<div className="relative">
+  <details className="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary className="list-none cursor-pointer">
+      <span className="font-sans text-slate-500">View configuration options</span>
       <svg
-        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        className="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -107,15 +107,15 @@ Accordions can have a plus indicator.
         <path
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m6 9l6 6l6-6"
         />
       </svg>
     </summary>
 
-    <div class="!mt-4">
+    <div className="!mt-4">
       <pre >
         {JSON.stringify(defaultConfig, null, 2)}
       </pre>

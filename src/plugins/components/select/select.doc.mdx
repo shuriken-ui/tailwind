@@ -18,7 +18,7 @@ Selects are an essential part of any application. Shuriken UI selects can have d
 
 <br />
 
-### Shape: straight
+### Rounded: none
 
 Select shapes allow you to change the border radiuses. Below is an example of a straight select.
 
@@ -28,7 +28,7 @@ Select shapes allow you to change the border radiuses. Below is an example of a 
 
 <br />
 
-### Shape: rounded
+### Rounded: sm
 
 Select shapes allow you to change the border radiuses. Below is an example of a rounded select.
 
@@ -38,7 +38,7 @@ Select shapes allow you to change the border radiuses. Below is an example of a 
 
 <br />
 
-### Shape: smooth
+### Rounded: md
 
 Select shapes allow you to change the border radiuses. Below is an example of a smooth select.
 
@@ -48,7 +48,7 @@ Select shapes allow you to change the border radiuses. Below is an example of a 
 
 <br />
 
-### Shape: curved
+### Rounded: lg
 
 Select shapes allow you to change the border radiuses. Below is an example of a curved select.
 
@@ -58,7 +58,7 @@ Select shapes allow you to change the border radiuses. Below is an example of a 
 
 <br />
 
-### Shape: full
+### Rounded: full
 
 Select shapes allow you to change the border radiuses. Below is an example of a full select.
 
@@ -175,12 +175,12 @@ Selects icon slot also works with floating labels.
 
 ### Default config
 
-<div class="relative">
-  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
-    <summary class="list-none cursor-pointer">
-      <span class="font-sans text-slate-500">View configuration options</span>
+<div className="relative">
+  <details className="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary className="list-none cursor-pointer">
+      <span className="font-sans text-slate-500">View configuration options</span>
       <svg
-        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        className="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -189,15 +189,15 @@ Selects icon slot also works with floating labels.
         <path
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m6 9l6 6l6-6"
         />
       </svg>
     </summary>
 
-    <div class="!mt-4">
+    <div className="!mt-4">
       <pre >
         {JSON.stringify(defaultConfig, null, 2)}
       </pre>

@@ -1,78 +1,121 @@
 export const key = 'avatarGroup' as const
 
 export const defaultConfig = {
-  avatarOuter: {
-    bg: 'white',
-    bgDark: 'muted-800',
+  avatar: {
     rounded: 'full',
-    duration: '100',
-    avatar: {
-      bg: 'primary-500/20',
-      text: 'primary-500',
+    outer: {
+      background: {
+        light: 'white',
+        dark: 'muted-800',
+      },
+    },
+    inner: {
+      background: {
+        light: 'primary-500/20',
+        dark: 'primary-500/20',
+      },
+      font: {
+        color: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+      },
+    },
+    transition: {
+      property: 'all',
+      duration: '100',
     },
   },
-  avatarCount: {
-    bg: 'white',
-    bgDark: 'muted-800',
-    rounded: 'full',
-    duration: '100',
-    inner: {
-      bg: 'muted-200',
-      bgDark: 'muted-700',
-      border: 'white',
-      borderDark: 'muted-800',
-      size: 'full',
+  count: {
+    outer: {
       rounded: 'full',
+      background: {
+        light: 'white',
+        dark: 'muted-800',
+      },
+    },
+    inner: {
+      rounded: 'full',
+      size: 'full',
+      background: {
+        light: 'muted-200',
+        dark: 'muted-700',
+      },
+      border: {
+        light: 'white',
+        dark: 'muted-800',
+      },
     },
     text: {
-      text: 'muted-500',
-      textDark: 'muted-300',
-      font: 'normal',
+      font: {
+        family: 'sans',
+        weight: 'medium',
+        color: {
+          light: 'muted-500',
+          dark: 'muted-300',
+        },
+      },
+    },
+    transition: {
+      property: 'all',
+      duration: '100',
     },
   },
-  avatarGroupXXS: {
-    outer: {
-      size: '6',
+  size: {
+    xxs: {
+      outer: {
+        size: '6',
+      },
+      count: {
+        size: '6',
+        font: {
+          size: 'xs',
+        },
+      },
     },
-    count: {
-      size: '6',
-      text: 'xs',
+    xs: {
+      outer: {
+        size: '8',
+      },
+      count: {
+        size: '8',
+        font: {
+          size: 'sm',
+        },
+      },
     },
-  },
-  avatarGroupXS: {
-    outer: {
-      size: '8',
+    sm: {
+      outer: {
+        size: '10',
+      },
+      count: {
+        size: '10',
+        font: {
+          size: 'sm',
+        },
+      },
     },
-    count: {
-      size: '8',
-      text: 'sm',
+    md: {
+      outer: {
+        size: '12',
+      },
+      count: {
+        size: '12',
+        font: {
+          size: 'lg',
+        },
+      },
     },
-  },
-  avatarGroupSM: {
-    outer: {
-      size: '10',
-    },
-    count: {
-      size: '10',
-      text: 'sm',
-    },
-  },
-  avatarGroupMD: {
-    outer: {
-      size: '12',
-    },
-    count: {
-      size: '12',
-      text: 'lg',
-    },
-  },
-  avatarGroupLG: {
-    outer: {
-      size: '16',
-    },
-    count: {
-      size: '16',
-      text: 'xl',
+    lg: {
+      outer: {
+        size: '16',
+      },
+      count: {
+        size: '16',
+        font: {
+          size: 'xl',
+        },
+      },
     },
   },
 }

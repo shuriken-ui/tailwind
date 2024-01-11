@@ -2,83 +2,155 @@ export const key = 'inputFile' as const
 
 export const defaultConfig = {
   drop: {
-    size: '64',
-    border: 'muted-200',
-    borderDark: 'muted-600',
-    borderHover: 'muted-400',
-    borderHoverDark: 'muted-400',
-    duration: '300',
-    bg: 'white',
-    bgDark: 'muted-700',
-    zone: {
-      font: 'sans',
-      text: 'muted-400',
+    height: '64',
+    border: {
+      base: {
+        light: 'muted-200',
+        dark: 'muted-600',
+      },
+      hover: {
+        light: 'muted-400',
+        dark: 'muted-400',
+      },
     },
-    zoneIcon: {
-      size: '10',
+    background: {
+      light: 'white',
+      dark: 'muted-700',
+    },
+    transition: {
+      property: 'colors',
       duration: '300',
     },
-    zoneText: {
-      font: 'sans',
-      fontWeight: 'normal',
-      text: 'sm',
-    },
-    zoneSeparator: {
-      font: 'sans',
-      fontWeight: 'semibold',
-      text: 'xs',
-    },
-    zoneInput: {
-      size: 'full',
-    },
-    hover: {
-      text: 'primary-500',
+    zone: {
+      font: {
+        family: 'sans',
+        weight: 'normal',
+        size: 'sm',
+        color: {
+          base: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+          hover: {
+            light: 'primary-500',
+            dark: 'primary-500',
+          },
+        },
+      },
+      icon: {
+        size: '10',
+        transition: {
+          property: 'colors',
+          duration: '300',
+        },
+      },
+      separator: {
+        font: {
+          family: 'sans',
+          weight: 'semibold',
+          size: 'xs',
+        },
+      },
+      input: {
+        size: 'full',
+      },
     },
   },
   button: {
-    bg: 'white',
-    bgDark: 'muted-700',
-    text: 'muted-400',
-    borderDark: 'muted-600',
-    borderHover: 'primary-500',
-    borderHoverDark: 'primary-500',
-    textHover: 'primary-500',
-    duration: '300',
+    background: {
+      light: 'white',
+      dark: 'muted-700',
+    },
+    border: {
+      base: {
+        light: 'muted-200',
+        dark: 'muted-600',
+      },
+      hover: {
+        light: 'primary-500',
+        dark: 'primary-500',
+      },
+    },
+    font: {
+      color: {
+        base: {
+          light: 'muted-400',
+          dark: 'muted-400',
+        },
+        hover: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+      },
+    },
     icon: {
       size: '8',
     },
     label: {
-      font: 'sans',
-      text: 'sm',
+      font: {
+        family: 'sans',
+        size: 'sm',
+      },
+    },
+    transition: {
+      property: 'colors',
+      duration: '300',
     },
   },
   combo: {
-    font: 'sans',
-    border: 'muted-200',
-    borderDark: 'muted-600',
-    space: '1',
-    bg: 'white',
-    bgDark: 'muted-700',
+    padding: '1',
+    font: {
+      family: 'sans',
+    },
+    background: {
+      light: 'white',
+      dark: 'muted-700',
+    },
+    border: {
+      light: 'muted-200',
+      dark: 'muted-600',
+    },
     label: {
-      font: 'sans',
-      text: 'sm',
+      font: {
+        family: 'sans',
+        size: 'sm',
+      },
     },
     input: {
-      size: 'full',
-      textSize: 'sm',
-      text: 'muted-500',
-      textDark: 'muted-400',
-      textFile: 'primary-700',
-      textFileSize: 'sm',
-      bgFile: 'primary-500/10',
-      bgFileHover: 'primary-500/20',
+      width: 'full',
+      font: {
+        size: 'sm',
+        color: {
+          light: 'muted-500',
+          dark: 'muted-400',
+        },
+      },
+      file: {
+        font: {
+          size: 'sm',
+          color: {
+            light: 'primary-700',
+            dark: 'primary-700',
+          },
+        },
+        background: {
+          base: {
+            light: 'primary-500/10',
+            dark: 'primary-500/10',
+          },
+          hover: {
+            light: 'primary-500/20',
+            dark: 'primary-500/20',
+          },
+        },
+      },
     },
   },
   rounded: {
-    default: 'md',
-    smooth: 'lg',
-    curved: 'xl',
-    full: 'full',
+    sm: 'rounded-md',
+    md: 'rounded-lg',
+    lg: 'rounded-xl',
+    full: 'rounded-full',
   },
 }
 

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+
 import type { AccordionPluginConfig } from './plugins/components/accordion/accordion.config'
 import type { AutocompletePluginConfig } from './plugins/components/autocomplete/autocomplete.config'
 import type { AvatarPluginConfig } from './plugins/components/avatar/avatar.config'
@@ -22,6 +23,7 @@ import type { InputPluginConfig } from './plugins/components/input/input.config'
 import type { InputFilePluginConfig } from './plugins/components/input-file/input-file.config'
 import type { InputFileRegularPluginConfig } from './plugins/components/input-file-regular/input-file-regular.config'
 import type { InputNumberPluginConfig } from './plugins/components/input-number/input-number.config'
+import type { KbdPluginConfig } from './plugins/components/kbd/kbd.config'
 import type { LabelPluginConfig } from './plugins/components/label/label.config'
 import type { LinkPluginConfig } from './plugins/components/link/link.config'
 import type { ListPluginConfig } from './plugins/components/list/list.config'
@@ -83,6 +85,7 @@ type ShurikenUIPlugins = AccordionPluginConfig &
   InputFilePluginConfig &
   InputFileRegularPluginConfig &
   InputNumberPluginConfig &
+  KbdPluginConfig &
   LabelPluginConfig &
   LinkPluginConfig &
   ListPluginConfig &
@@ -118,7 +121,7 @@ type ShurikenUIPlugins = AccordionPluginConfig &
 type BaseTheme = Config['theme']
 type ShurikenUITheme = BaseTheme &
   DeepPartial<{
-    shurikenUi: ShurikenUIPlugins
+    nui: ShurikenUIPlugins
   }>
 
 export type ShurikenUIConfig = Config & {

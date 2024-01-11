@@ -25,10 +25,10 @@ const meta = {
       options: ['sm', 'md', 'lg'],
       defaultValue: 'md',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'sm',
     },
     contrast: {
       control: { type: 'select' },
@@ -70,7 +70,7 @@ export const Main: Story = {
     label: 'Superhero',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'input',
     placeholder: 'Choose a hero...',
     options: html`
@@ -86,15 +86,15 @@ export const Main: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     id: 'select',
     label: 'Superhero',
     size: 'md',
     contrast: 'default',
-    shape: 'straight',
+    rounded: 'none',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -109,13 +109,13 @@ export const Straight: Story = {
 }
 
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     id: 'select',
     label: 'Superhero',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -130,13 +130,13 @@ export const Rounded: Story = {
 }
 
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     id: 'select',
     label: 'Superhero',
     size: 'md',
     contrast: 'default',
-    shape: 'smooth',
+    rounded: 'md',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -151,13 +151,13 @@ export const Smooth: Story = {
 }
 
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     id: 'select',
     label: 'Superhero',
     size: 'md',
     contrast: 'default',
-    shape: 'curved',
+    rounded: 'lg',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -172,13 +172,13 @@ export const Curved: Story = {
 }
 
 export const Full: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
     id: 'select',
     label: 'Superhero',
     size: 'md',
     contrast: 'default',
-    shape: 'full',
+    rounded: 'full',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -201,7 +201,7 @@ export const SizeSm: Story = {
     label: 'Superhero',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -222,7 +222,7 @@ export const SizeMd: Story = {
     label: 'Superhero',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -243,7 +243,7 @@ export const SizeLg: Story = {
     label: 'Superhero',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -266,7 +266,7 @@ export const ContrastMutedSm: Story = {
     label: 'Superhero',
     size: 'sm',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -287,7 +287,7 @@ export const ContrastMutedMd: Story = {
     label: 'Superhero',
     size: 'md',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -308,7 +308,7 @@ export const ContrastMutedLg: Story = {
     label: 'Superhero',
     size: 'lg',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -332,7 +332,7 @@ export const LabelFloatSm: Story = {
     labelFloat: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -354,7 +354,7 @@ export const LabelFloatMd: Story = {
     labelFloat: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -376,7 +376,7 @@ export const LabelFloatLg: Story = {
     labelFloat: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -400,7 +400,7 @@ export const DisabledSm: Story = {
     '?disabled': true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -422,7 +422,7 @@ export const DisabledMd: Story = {
     '?disabled': true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -444,7 +444,7 @@ export const DisabledLg: Story = {
     '?disabled': true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -468,7 +468,7 @@ export const LoadingSm: Story = {
     loading: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -490,7 +490,7 @@ export const LoadingMd: Story = {
     loading: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -512,7 +512,7 @@ export const LoadingLg: Story = {
     loading: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -536,7 +536,7 @@ export const ErrorSm: Story = {
     error: 'Please select a valid value',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -558,7 +558,7 @@ export const ErrorMd: Story = {
     error: 'Please select a valid value',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -580,7 +580,7 @@ export const ErrorLg: Story = {
     error: 'Please select a valid value',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -603,7 +603,7 @@ export const SlotIconSm: Story = {
     label: 'Superhero',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -648,7 +648,7 @@ export const SlotIconMd: Story = {
     label: 'Superhero',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -693,7 +693,7 @@ export const SlotIconLg: Story = {
     label: 'Superhero',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -741,7 +741,7 @@ export const SlotIconFloatSm: Story = {
     labelFloat: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -787,7 +787,7 @@ export const SlotIconFloatMd: Story = {
     labelFloat: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>
@@ -833,7 +833,7 @@ export const SlotIconFloatLg: Story = {
     labelFloat: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Choose a hero...',
     options: html`
       <option value="1">Superman</option>

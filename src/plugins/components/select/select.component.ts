@@ -9,7 +9,7 @@ import * as variants from './select.variants'
  */
 export const Select = ({
   id,
-  shape = 'rounded',
+  rounded = 'sm',
   size = 'md',
   contrast = 'default',
   label,
@@ -35,7 +35,7 @@ export const Select = ({
         'nui-select-wrapper',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         error && !loading && 'nui-select-error',
         loading && 'nui-select-loading',
         labelFloat && 'nui-select-label-float',
@@ -99,7 +99,7 @@ export const Select = ({
           </div>
         `}
         <div
-          class="${['nui-select-chevron', classes?.chevron]
+          class="${['nui-select-chevron nui-chevron', classes?.chevron]
             .filter(Boolean)
             .join(' ')}"
         >

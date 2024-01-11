@@ -1,83 +1,116 @@
 import plugin from 'tailwindcss/plugin'
-import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../../options'
 import { type TabsConfig, defaultConfig, key } from './tabs.config'
 
-export default plugin.withOptions(
-  function (options: PluginOption) {
-    let { prefix } = defu(options, defaultPluginOptions)
-
-    if (prefix) {
-      prefix = `${prefix}-`
-    }
-
-    return function ({ addComponents, theme }) {
-      const config = theme(`shurikenUi.${key}`) satisfies TabsConfig
-
-      addComponents({
-        [`.${prefix}tabs`]: {
-          [`@apply relative`]: {},
-
-          [`.${prefix}tabs-inner`]: {
-            [`@apply font-${config.inner.font} mb-${config.inner.space} flex`]:
-              {},
-          },
-          [`.${prefix}tab-item`]: {
-            [`@apply cursor-pointer text-${config.item.text} border-b-2 px-4 py-3 transition-all duration-${config.item.duration}`]:
-              {},
-            [`&:not(.${prefix}active)`]: {
-              [`@apply text-${config.item.notActive.text} border-transparent`]:
-                {},
-            },
-            [`&.${prefix}active`]: {
-              [`@apply border-${config.item.active.border} text-${config.item.active.text} dark:text-${config.item.active.textDark}`]:
-                {},
-            },
-            [`&.${prefix}has-icon`]: {
-              [`@apply flex items-center gap-1`]: {},
-            },
-          },
-          [`.${prefix}pill-item`]: {
-            [`@apply flex flex-col rounded-${config.pillItem.rounded} px-5 text-${config.pillItem.textPosition} cursor-pointer text-${config.pillItem.text} transition-all duration-${config.pillItem.duration}`]:
-              {},
-            [`&:not(.${prefix}active)`]: {
-              [`@apply text-${config.pillItem.notActive.text}`]: {},
-            },
-            [`&.${prefix}active`]: {
-              [`@apply bg-${config.pillItem.active.bg} shadow-${config.pillItem.active.shadow} !text-${config.pillItem.active.text} shadow-${config.pillItem.active.shadowSize}`]:
-                {},
-            },
-            [`&:not(.${prefix}has-icon)`]: {
-              [`@apply flex items-center gap-1 py-2`]: {},
-            },
-            [`&.${prefix}has-icon`]: {
-              [`@apply flex items-center gap-1 py-3`]: {},
-            },
-          },
-          [`.${prefix}tab-content`]: {
-            [`@apply relative block`]: {},
-          },
-          [`&.${prefix}tabs-centered`]: {
-            [`.${prefix}tabs-inner`]: {
-              [`@apply justify-center`]: {},
-            },
-          },
-          [`&.${prefix}tabs-end`]: {
-            [`.${prefix}tabs-inner`]: {
-              [`@apply justify-end`]: {},
-            },
-          },
-        },
-      })
-    }
+const config = {
+  theme: {
+    nui: {
+      [key]: defaultConfig,
+    },
   },
-  function () {
-    return {
-      theme: {
-        shurikenUi: {
-          [key]: defaultConfig,
+}
+
+export default plugin(({ addComponents, theme }) => {
+  const config = theme(`nui.${key}`) satisfies TabsConfig
+
+  addComponents({
+    //Wrapper
+    '.nui-tabs': {
+      '@apply relative': {},
+      //Tabs:inner
+      '.nui-tabs-inner': {
+        [`@apply font-${config.inner.font.family} mb-${config.inner.margin.bottom} flex`]:
+          {},
+      },
+
+      //Tabs:bordered
+      '&.nui-tabs-bordered': {
+        //Tabs:inner
+        '.nui-tabs-inner': {
+          '@apply border-b border-muted-200 dark:border-muted-800': {},
         },
       },
-    }
-  },
-)
+      //Tabs:item
+      '.nui-tab-item': {
+        //Base
+        '@apply cursor-pointer border-b-2 px-4 py-3': {},
+        //Color
+        [`@apply text-${config.item.font.size}`]: {},
+        //Transition
+        [`@apply transition-${config.item.transition.property} duration-${config.item.transition.duration}`]:
+          {},
+        //Item:inactive
+        '&:not(.nui-active)': {
+          //Base
+          '@apply border-transparent': {},
+          //Color
+          [`@apply text-${config.item.font.color.inactive.light} dark:text-${config.item.font.color.inactive.dark}`]:
+            {},
+        },
+        //Item:active
+        '&.nui-active': {
+          //Border
+          [`@apply border-${config.item.border.active.light} dark:border-${config.item.border.active.dark}`]:
+            {},
+          //Color
+          [`@apply text-${config.item.font.color.active.light} dark:text-${config.item.font.color.active.dark}`]:
+            {},
+        },
+        //Item:icon
+        '&.nui-has-icon': {
+          '@apply flex items-center gap-1': {},
+        },
+      },
+      //Item:pill
+      '.nui-pill-item': {
+        [`@apply flex flex-col ${config.pill.rounded} px-5 cursor-pointer`]: {},
+        //font
+        [`@apply text-${config.pill.font.align}`]: {},
+        //Transition
+        [`@apply transition-${config.pill.transition.property} duration-${config.pill.transition.duration}`]:
+          {},
+        //Item:inactive
+        '&:not(.nui-active)': {
+          //color
+          [`@apply text-${config.pill.font.color.inactive.light} dark:text-${config.pill.font.color.inactive.dark}`]:
+            {},
+        },
+        //Item:active
+        '&.nui-active': {
+          //Color
+          [`@apply !text-${config.pill.font.color.active.light} dark:!text-${config.pill.font.color.active.dark}`]:
+            {},
+          //Background
+          [`@apply !bg-${config.pill.background.active.light} dark:!bg-${config.pill.background.active.dark}`]:
+            {},
+          //Shadow
+          [`@apply shadow-${config.pill.shadow.active.size} bg-${config.pill.shadow.active.light} dark:bg-${config.pill.shadow.active.dark}`]:
+            {},
+        },
+        //Item:no-icon
+        '&:not(.nui-has-icon)': {
+          '@apply flex items-center gap-1 py-2': {},
+        },
+        //Item:icon
+        '&.nui-has-icon': {
+          '@apply flex items-center gap-1 py-3': {},
+        },
+      },
+      //Tabs:content
+      '.nui-tab-content': {
+        '@apply relative block': {},
+      },
+      //Align:center
+      '&.nui-tabs-centered': {
+        '.nui-tabs-inner': {
+          '@apply justify-center': {},
+        },
+      },
+      //Align:end
+      '&.nui-tabs-end': {
+        '.nui-tabs-inner': {
+          '@apply justify-end': {},
+        },
+      },
+    },
+  })
+}, config)

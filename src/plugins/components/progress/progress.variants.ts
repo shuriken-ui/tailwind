@@ -13,12 +13,13 @@ export const contrast = {
   contrast: 'nui-progress-contrast',
 } as const satisfies ProgressVariant<'contrast'>
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-progress-rounded',
-  curved: 'nui-progress-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-progress-rounded',
+  md: 'nui-progress-smooth',
+  lg: 'nui-progress-curved',
   full: 'nui-progress-full',
-} as const satisfies ProgressVariant<'shape'>
+} as const satisfies ProgressVariant<'rounded'>
 
 export const size = {
   xs: 'nui-progress-xs',

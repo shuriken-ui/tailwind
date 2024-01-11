@@ -7,12 +7,12 @@ import * as variants from './pagination.variants'
 /**
  * Primary UI component for user interaction
  */
-export const Pagination = ({ shape, classes, ...attrs }: PaginationAttrs) => {
+export const Pagination = ({ rounded, classes, ...attrs }: PaginationAttrs) => {
   return html`
     <div
       class=${[
         'nui-pagination',
-        shape && variants.shape[shape],
+        rounded && variants.rounded[rounded],
         classes?.wrapper,
       ]
         .filter(Boolean)

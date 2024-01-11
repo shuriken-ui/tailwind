@@ -1,16 +1,25 @@
 export const key = 'progressCircle' as const
 
 export const defaultConfig = {
-  circleDuration: '500',
-  default: {
-    text: 'muted-200',
-    textDark: 'muted-700',
-    stroke: 'current',
+  transition: {
+    property: 'all',
+    duration: '500',
   },
-  contrast: {
-    text: 'muted-200',
-    textDark: 'muted-900',
-    stroke: 'current',
+  color: {
+    default: {
+      color: {
+        light: 'muted-200',
+        dark: 'muted-700',
+        stroke: 'current',
+      },
+    },
+    contrast: {
+      color: {
+        light: 'muted-200',
+        dark: 'muted-900',
+        stroke: 'current',
+      },
+    },
   },
 }
 

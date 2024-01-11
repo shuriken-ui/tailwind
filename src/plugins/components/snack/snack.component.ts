@@ -50,7 +50,8 @@ export const Snack = ({
         <slot>${label}</slot>
       </span>
       ${ButtonClose({
-        shape: 'full',
+        rounded: 'full',
+        size,
         classes: {
           wrapper: 'nui-snack-button scale-75',
         },

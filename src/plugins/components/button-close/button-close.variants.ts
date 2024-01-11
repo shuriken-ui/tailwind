@@ -1,12 +1,19 @@
 import type { ButtonCloseVariant } from './button-close.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-button-rounded',
-  smooth: 'nui-button-smooth',
-  curved: 'nui-button-curved',
+export const rounded = {
+  none: '',
+  sm: 'nui-button-rounded',
+  md: 'nui-button-smooth',
+  lg: 'nui-button-curved',
   full: 'nui-button-full',
-} as const satisfies ButtonCloseVariant<'shape'>
+} as const satisfies ButtonCloseVariant<'rounded'>
+
+export const size = {
+  xs: 'nui-button-xs',
+  sm: 'nui-button-sm',
+  md: 'nui-button-md',
+  lg: 'nui-button-lg',
+} as const satisfies ButtonCloseVariant<'size'>
 
 export const color = {
   default: 'nui-button-default',

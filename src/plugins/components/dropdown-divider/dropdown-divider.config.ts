@@ -1,9 +1,13 @@
 export const key = 'drodownDivider' as const
 
 export const defaultConfig = {
-  space: '2',
-  border: 'muted-200',
-  borderDark: 'muted-600',
+  margin: {
+    y: '2',
+  },
+  border: {
+    light: 'muted-200',
+    dark: 'muted-700',
+  },
 }
 
 export type DropdownDividerConfig = typeof defaultConfig

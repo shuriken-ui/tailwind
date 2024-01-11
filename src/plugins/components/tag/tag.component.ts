@@ -9,9 +9,9 @@ import * as variants from './tag.variants'
  */
 export const Tag = ({
   shadow,
-  shape = 'full',
+  rounded = 'full',
   children,
-  flavor = 'solid',
+  variant = 'solid',
   size = 'md',
   color = 'default',
   classes,
@@ -22,10 +22,10 @@ export const Tag = ({
       class=${[
         'nui-tag',
         variants.size[size],
-        variants.flavor[flavor],
+        variants.variant[variant],
         variants.color[color],
-        shape && variants.shape[shape],
-        shadow && flavor === 'solid' && variants.shadow[shadow],
+        rounded && variants.rounded[rounded],
+        shadow && variant === 'solid' && variants.shadow[shadow],
         classes?.wrapper,
       ]
         .filter(Boolean)

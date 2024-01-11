@@ -13,7 +13,7 @@ export const Avatar = ({
   text = '?',
   badgeSrc,
   size = 'sm',
-  shape = 'full',
+  rounded = 'full',
   mask,
   color,
   dot = false,
@@ -29,10 +29,8 @@ export const Avatar = ({
         'nui-avatar',
         classes?.wrapper,
         variants.size[size],
-        shape && variants.shape[shape],
-        shape === 'straight' &&
-          mask &&
-          `nui-avatar-mask ${variants.mask[mask]}`,
+        rounded && variants.rounded[rounded],
+        rounded === 'none' && mask && `nui-avatar-mask ${variants.mask[mask]}`,
         color && variants.color[color],
         ring &&
           (ring === true

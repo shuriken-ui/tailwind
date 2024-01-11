@@ -25,10 +25,10 @@ const meta = {
       options: ['sm', 'md', 'lg'],
       defaultValue: 'md',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'none',
     },
     contrast: {
       control: { type: 'select' },
@@ -69,7 +69,7 @@ export const Main: Story = {
   args: {
     label: 'Upload files',
     size: 'md',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'input-file',
     placeholder: 'Select files',
     classes: {
@@ -79,14 +79,14 @@ export const Main: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     id: 'input-file',
     label: 'Upload files',
     size: 'md',
-    shape: 'straight',
+    rounded: 'none',
     placeholder: 'Select files',
     classes: {
       wrapper: 'min-w-[320px] max-w-[320px]',
@@ -95,12 +95,12 @@ export const Straight: Story = {
 }
 
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     id: 'input-file',
     label: 'Upload files',
     size: 'md',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Select files',
     classes: {
       wrapper: 'min-w-[320px] max-w-[320px]',
@@ -109,12 +109,12 @@ export const Rounded: Story = {
 }
 
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     id: 'input-file',
     label: 'Upload files',
     size: 'md',
-    shape: 'smooth',
+    rounded: 'md',
     placeholder: 'Select files',
     classes: {
       wrapper: 'min-w-[320px] max-w-[320px]',
@@ -123,12 +123,12 @@ export const Smooth: Story = {
 }
 
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     id: 'input-file',
     label: 'Upload files',
     size: 'md',
-    shape: 'curved',
+    rounded: 'lg',
     placeholder: 'Select files',
     classes: {
       wrapper: 'min-w-[320px] max-w-[320px]',
@@ -137,12 +137,12 @@ export const Curved: Story = {
 }
 
 export const Full: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
     id: 'input-file',
     label: 'Upload files',
     size: 'md',
-    shape: 'full',
+    rounded: 'full',
     placeholder: 'Select files',
     classes: {
       wrapper: 'min-w-[320px] max-w-[320px]',
@@ -158,7 +158,7 @@ export const SizeSm: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'sm',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Select files',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -172,7 +172,7 @@ export const SizeMd: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'md',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Select files',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -186,7 +186,7 @@ export const SizeLg: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'lg',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Select files',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -202,7 +202,7 @@ export const ColorFocusSm: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'sm',
-    shape: 'rounded',
+    rounded: 'sm',
     colorFocus: true,
     placeholder: 'Select file',
     classes: {
@@ -217,7 +217,7 @@ export const ColorFocusMd: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'md',
-    shape: 'rounded',
+    rounded: 'sm',
     colorFocus: true,
     placeholder: 'Select file',
     classes: {
@@ -232,7 +232,7 @@ export const ColorFocusLg: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'lg',
-    shape: 'rounded',
+    rounded: 'sm',
     colorFocus: true,
     placeholder: 'Select file',
     classes: {
@@ -249,7 +249,7 @@ export const DisabledSm: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'sm',
-    shape: 'rounded',
+    rounded: 'sm',
     '?disabled': true,
     placeholder: 'Select file',
     classes: {
@@ -264,7 +264,7 @@ export const DisabledMd: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'md',
-    shape: 'rounded',
+    rounded: 'sm',
     '?disabled': true,
     placeholder: 'Select file',
     classes: {
@@ -279,7 +279,7 @@ export const DisabledLg: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'lg',
-    shape: 'rounded',
+    rounded: 'sm',
     '?disabled': true,
     placeholder: 'Select file',
     classes: {
@@ -296,7 +296,7 @@ export const LoadingSm: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'sm',
-    shape: 'rounded',
+    rounded: 'sm',
     loading: true,
     placeholder: 'Select file',
     classes: {
@@ -311,7 +311,7 @@ export const LoadingMd: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'md',
-    shape: 'rounded',
+    rounded: 'sm',
     loading: true,
     placeholder: 'Select file',
     classes: {
@@ -326,7 +326,7 @@ export const LoadingLg: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'lg',
-    shape: 'rounded',
+    rounded: 'sm',
     loading: true,
     placeholder: 'Select file',
     classes: {
@@ -343,7 +343,7 @@ export const ErrorSm: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'sm',
-    shape: 'rounded',
+    rounded: 'sm',
     error: 'Please select valid files',
     placeholder: 'Select file',
     classes: {
@@ -358,7 +358,7 @@ export const ErrorMd: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'md',
-    shape: 'rounded',
+    rounded: 'sm',
     error: 'Please select valid files',
     placeholder: 'Select file',
     classes: {
@@ -373,7 +373,7 @@ export const ErrorLg: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'lg',
-    shape: 'rounded',
+    rounded: 'sm',
     error: 'Please select valid files',
     placeholder: 'Select file',
     classes: {

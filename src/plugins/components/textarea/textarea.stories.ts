@@ -27,10 +27,10 @@ const meta = {
       options: ['sm', 'md', 'lg'],
       defaultValue: 'md',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'sm',
     },
     contrast: {
       control: { type: 'select' },
@@ -77,7 +77,7 @@ export const Main: Story = {
     label: 'Message',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     id: 'textarea',
     placeholder: 'Write a message...',
     classes: {
@@ -87,15 +87,15 @@ export const Main: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     id: 'textarea',
     label: 'Message',
     size: 'md',
     contrast: 'default',
-    shape: 'straight',
+    rounded: 'none',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[320px] max-w-[320px]',
@@ -104,13 +104,13 @@ export const Straight: Story = {
 }
 
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     id: 'textarea',
     label: 'Message',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[320px] max-w-[320px]',
@@ -119,13 +119,13 @@ export const Rounded: Story = {
 }
 
 export const Smooth: Story = {
-  name: 'Shape: smooth',
+  name: 'Rounded: md',
   args: {
     id: 'textarea',
     label: 'Message',
     size: 'md',
     contrast: 'default',
-    shape: 'smooth',
+    rounded: 'md',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[320px] max-w-[320px]',
@@ -134,13 +134,13 @@ export const Smooth: Story = {
 }
 
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     id: 'textarea',
     label: 'Message',
     size: 'md',
     contrast: 'default',
-    shape: 'curved',
+    rounded: 'lg',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[320px] max-w-[320px]',
@@ -157,7 +157,7 @@ export const SizeSm: Story = {
     label: 'Message',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -172,7 +172,7 @@ export const SizeMd: Story = {
     label: 'Message',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -187,7 +187,7 @@ export const SizeLg: Story = {
     label: 'Message',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -204,7 +204,7 @@ export const ContrastMutedSm: Story = {
     label: 'Message',
     size: 'sm',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -219,7 +219,7 @@ export const ContrastMutedMd: Story = {
     label: 'Message',
     size: 'md',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -234,7 +234,7 @@ export const ContrastMutedLg: Story = {
     label: 'Message',
     size: 'lg',
     contrast: 'muted',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -252,7 +252,7 @@ export const LabelFloatSm: Story = {
     labelFloat: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -268,7 +268,7 @@ export const LabelFloatMd: Story = {
     labelFloat: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -284,7 +284,7 @@ export const LabelFloatLg: Story = {
     labelFloat: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -302,7 +302,7 @@ export const ColorFocusSm: Story = {
     colorFocus: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -318,7 +318,7 @@ export const ColorFocusMd: Story = {
     colorFocus: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -334,7 +334,7 @@ export const ColorFocusLg: Story = {
     colorFocus: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -352,7 +352,7 @@ export const DisabledSm: Story = {
     '?disabled': true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -368,7 +368,7 @@ export const DisabledMd: Story = {
     '?disabled': true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -384,7 +384,7 @@ export const DisabledLg: Story = {
     '?disabled': true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -402,7 +402,7 @@ export const LoadingSm: Story = {
     loading: true,
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     rows: '4',
     classes: {
@@ -419,7 +419,7 @@ export const LoadingMd: Story = {
     loading: true,
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     rows: '4',
     classes: {
@@ -436,7 +436,7 @@ export const LoadingLg: Story = {
     loading: true,
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     rows: '4',
     classes: {
@@ -455,7 +455,7 @@ export const ErrorSm: Story = {
     error: 'Please enter a valid value',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -471,7 +471,7 @@ export const ErrorMd: Story = {
     error: 'Please enter a valid value',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -487,7 +487,7 @@ export const ErrorLg: Story = {
     error: 'Please enter a valid value',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
@@ -504,7 +504,7 @@ export const NoResizeSm: Story = {
     label: 'Message',
     size: 'sm',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     resize: false,
     classes: {
@@ -520,7 +520,7 @@ export const NoResizeMd: Story = {
     label: 'Message',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     resize: false,
     classes: {
@@ -536,7 +536,7 @@ export const NoResizeLg: Story = {
     label: 'Message',
     size: 'lg',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     resize: false,
     classes: {
@@ -554,7 +554,7 @@ export const Addon: Story = {
     label: 'Message',
     size: 'md',
     contrast: 'default',
-    shape: 'rounded',
+    rounded: 'sm',
     placeholder: 'Write a message...',
     addon: html`
       <div class="flex items-center gap-2">
@@ -571,7 +571,7 @@ export const Addon: Story = {
       </div>
       <div class="flex items-center gap-2">
         ${Button({
-          shape: 'rounded',
+          rounded: 'sm',
           size: 'sm',
           children: html`
             <span>Post Comment</span>

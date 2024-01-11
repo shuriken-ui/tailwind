@@ -29,12 +29,12 @@ const meta = {
       options: ['sm', 'md'],
       defaultValue: 'md',
     },
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'full',
     },
-    flavor: {
+    variant: {
       control: { type: 'select' },
       options: ['solid', 'pastel', 'outline'],
       defaultValue: 'solid',
@@ -57,8 +57,8 @@ export const Solid: Story = {
   args: {
     // set default values used for UI preview
     color: 'default',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -67,13 +67,13 @@ export const Solid: Story = {
 }
 // #endregion
 
-// #region Shapes
+// #region Rounded
 export const Straight: Story = {
-  name: 'Shape: straight',
+  name: 'Rounded: none',
   args: {
     color: 'default',
-    flavor: 'solid',
-    shape: 'straight',
+    variant: 'solid',
+    rounded: 'none',
     size: 'md',
     children: html`
       Category
@@ -82,11 +82,24 @@ export const Straight: Story = {
 }
 
 export const Rounded: Story = {
-  name: 'Shape: rounded',
+  name: 'Rounded: sm',
   args: {
     color: 'default',
-    flavor: 'solid',
-    shape: 'rounded',
+    variant: 'solid',
+    rounded: 'sm',
+    size: 'md',
+    children: html`
+      Category
+    `,
+  },
+}
+
+export const Smooth: Story = {
+  name: 'Rounded: md',
+  args: {
+    color: 'default',
+    variant: 'solid',
+    rounded: 'md',
     size: 'md',
     children: html`
       Category
@@ -95,11 +108,11 @@ export const Rounded: Story = {
 }
 
 export const Curved: Story = {
-  name: 'Shape: curved',
+  name: 'Rounded: lg',
   args: {
     color: 'default',
-    flavor: 'solid',
-    shape: 'curved',
+    variant: 'solid',
+    rounded: 'lg',
     size: 'md',
     children: html`
       Category
@@ -108,11 +121,11 @@ export const Curved: Story = {
 }
 
 export const Full: Story = {
-  name: 'Shape: full',
+  name: 'Rounded: full',
   args: {
     color: 'default',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -126,8 +139,8 @@ export const SizeSm: Story = {
   name: 'Size: sm',
   args: {
     color: 'default',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'sm',
     children: html`
       Category
@@ -139,8 +152,8 @@ export const SizeMd: Story = {
   name: 'Size: md',
   args: {
     color: 'default',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -154,8 +167,8 @@ export const SolidDefault: Story = {
   name: 'Solid: default',
   args: {
     color: 'default',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -167,8 +180,8 @@ export const SolidMuted: Story = {
   name: 'Solid: muted',
   args: {
     color: 'muted',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -180,8 +193,8 @@ export const SolidPrimary: Story = {
   name: 'Solid: primary',
   args: {
     color: 'primary',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -193,8 +206,8 @@ export const SolidInfo: Story = {
   name: 'Solid: info',
   args: {
     color: 'info',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -206,8 +219,8 @@ export const SolidSuccess: Story = {
   name: 'Solid: success',
   args: {
     color: 'success',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -219,8 +232,8 @@ export const SolidWarning: Story = {
   name: 'Solid: warning',
   args: {
     color: 'warning',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -232,8 +245,8 @@ export const SolidDanger: Story = {
   name: 'Solid: danger',
   args: {
     color: 'danger',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -247,8 +260,8 @@ export const PastelDefault: Story = {
   name: 'Pastel: default',
   args: {
     color: 'default',
-    flavor: 'pastel',
-    shape: 'full',
+    variant: 'pastel',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -260,8 +273,8 @@ export const PastelMuted: Story = {
   name: 'Pastel: muted',
   args: {
     color: 'muted',
-    flavor: 'pastel',
-    shape: 'full',
+    variant: 'pastel',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -273,8 +286,8 @@ export const PastelPrimary: Story = {
   name: 'Pastel: primary',
   args: {
     color: 'primary',
-    flavor: 'pastel',
-    shape: 'full',
+    variant: 'pastel',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -286,8 +299,8 @@ export const PastelInfo: Story = {
   name: 'Pastel: info',
   args: {
     color: 'info',
-    flavor: 'pastel',
-    shape: 'full',
+    variant: 'pastel',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -299,8 +312,8 @@ export const PastelSuccess: Story = {
   name: 'Pastel: success',
   args: {
     color: 'success',
-    flavor: 'pastel',
-    shape: 'full',
+    variant: 'pastel',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -312,8 +325,8 @@ export const PastelWarning: Story = {
   name: 'Pastel: warning',
   args: {
     color: 'warning',
-    flavor: 'pastel',
-    shape: 'full',
+    variant: 'pastel',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -325,8 +338,8 @@ export const PastelDanger: Story = {
   name: 'Pastel: danger',
   args: {
     color: 'danger',
-    flavor: 'pastel',
-    shape: 'full',
+    variant: 'pastel',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -340,8 +353,8 @@ export const OutlineDefault: Story = {
   name: 'Outline: default',
   args: {
     color: 'default',
-    flavor: 'outline',
-    shape: 'full',
+    variant: 'outline',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -353,8 +366,8 @@ export const OutlineMuted: Story = {
   name: 'Outline: muted',
   args: {
     color: 'muted',
-    flavor: 'outline',
-    shape: 'full',
+    variant: 'outline',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -366,8 +379,8 @@ export const OutlinePrimary: Story = {
   name: 'Outline: primary',
   args: {
     color: 'primary',
-    flavor: 'outline',
-    shape: 'full',
+    variant: 'outline',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -379,8 +392,8 @@ export const OutlineInfo: Story = {
   name: 'Outline: info',
   args: {
     color: 'info',
-    flavor: 'outline',
-    shape: 'full',
+    variant: 'outline',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -392,8 +405,8 @@ export const OutlineSuccess: Story = {
   name: 'Outline: success',
   args: {
     color: 'success',
-    flavor: 'outline',
-    shape: 'full',
+    variant: 'outline',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -405,8 +418,8 @@ export const OutlineWarning: Story = {
   name: 'Outline: warning',
   args: {
     color: 'warning',
-    flavor: 'outline',
-    shape: 'full',
+    variant: 'outline',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -418,8 +431,8 @@ export const OutlineDanger: Story = {
   name: 'Outline: danger',
   args: {
     color: 'danger',
-    flavor: 'outline',
-    shape: 'full',
+    variant: 'outline',
+    rounded: 'full',
     size: 'md',
     children: html`
       Category
@@ -433,8 +446,8 @@ export const ShadowFlatDefault: Story = {
   name: 'Shadow flat: default',
   args: {
     color: 'default',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'flat',
     children: html`
@@ -447,8 +460,8 @@ export const ShadowFlatMuted: Story = {
   name: 'Shadow flat: muted',
   args: {
     color: 'muted',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'flat',
     children: html`
@@ -461,8 +474,8 @@ export const ShadowFlatPrimary: Story = {
   name: 'Shadow flat: primary',
   args: {
     color: 'primary',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'flat',
     children: html`
@@ -475,8 +488,8 @@ export const ShadowFlatInfo: Story = {
   name: 'Shadow flat: info',
   args: {
     color: 'info',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'flat',
     children: html`
@@ -489,8 +502,8 @@ export const ShadowFlatSuccess: Story = {
   name: 'Shadow flat: success',
   args: {
     color: 'success',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'flat',
     children: html`
@@ -503,8 +516,8 @@ export const ShadowFlatWarning: Story = {
   name: 'Shadow flat: warning',
   args: {
     color: 'warning',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'flat',
     children: html`
@@ -517,8 +530,8 @@ export const ShadowFlatDanger: Story = {
   name: 'Shadow flat: danger',
   args: {
     color: 'danger',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'flat',
     children: html`
@@ -533,8 +546,8 @@ export const ShadowHoverDefault: Story = {
   name: 'Shadow hover: default',
   args: {
     color: 'default',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'hover',
     children: html`
@@ -547,8 +560,8 @@ export const ShadowHoverMuted: Story = {
   name: 'Shadow hover: muted',
   args: {
     color: 'muted',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'hover',
     children: html`
@@ -561,8 +574,8 @@ export const ShadowHoverPrimary: Story = {
   name: 'Shadow hover: primary',
   args: {
     color: 'primary',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'hover',
     children: html`
@@ -575,8 +588,8 @@ export const ShadowHoverInfo: Story = {
   name: 'Shadow hover: info',
   args: {
     color: 'info',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'hover',
     children: html`
@@ -589,8 +602,8 @@ export const ShadowHoverSuccess: Story = {
   name: 'Shadow hover: success',
   args: {
     color: 'success',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'hover',
     children: html`
@@ -603,8 +616,8 @@ export const ShadowHoverWarning: Story = {
   name: 'Shadow hover: warning',
   args: {
     color: 'warning',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'hover',
     children: html`
@@ -617,8 +630,8 @@ export const ShadowHoverDanger: Story = {
   name: 'Shadow hover: danger',
   args: {
     color: 'danger',
-    flavor: 'solid',
-    shape: 'full',
+    variant: 'solid',
+    rounded: 'full',
     size: 'md',
     shadow: 'hover',
     children: html`

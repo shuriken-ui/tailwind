@@ -7,6 +7,11 @@ export interface SwitchBallProps extends Record<string, unknown> {
   color?: 'primary' | 'info' | 'success' | 'warning' | 'danger'
   classes?: {
     wrapper?: string | string[]
+    outer?: string | string[]
+    input?: string | string[]
+    handle?: string | string[]
+    track?: string | string[]
+    icon?: string | string[]
   }
 }
 

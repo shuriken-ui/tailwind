@@ -1,119 +1,167 @@
 import plugin from 'tailwindcss/plugin'
-import { defu } from 'defu'
-import { type PluginOption, defaultPluginOptions } from '../../options'
 import { type AccordionConfig, defaultConfig, key } from './accordion.config'
 
-export default plugin.withOptions(
-  function (options: PluginOption) {
-    let { prefix } = defu(options, defaultPluginOptions)
-
-    if (prefix) {
-      prefix = `${prefix}-`
-    }
-
-    return function ({ addComponents, theme }) {
-      const config = theme(`shurikenUi.${key}`) satisfies AccordionConfig
-      addComponents({
-        [`.${prefix}accordion`]: {
-          [`@apply w-${config.size} border-${config.border} dark:border-${config.borderDark} dark:bg-${config.bgDark} block overflow-hidden border bg-${config.bg}`]:
-            {},
-
-          [`.${prefix}accordion-detail[open]:not(:first-child)`]: {
-            [`@apply border-${config.detail.border} dark:border-${config.detail.borderDark} border-t`]:
-              {},
-          },
-          [`.${prefix}accordion-detail .${prefix}accordion-dot`]: {
-            [`@apply bg-${config.detailAndDot.bg} dark:bg-${config.detailAndDot.bgDark}`]:
-              {},
-          },
-          [`.${prefix}accordion-detail[open] .${prefix}accordion-dot`]: {
-            [`@apply bg-${config.detailOpenAndDot.bg}`]: {},
-          },
-          [`.${prefix}accordion-summary`]: {
-            [`@apply cursor-pointer list-none outline-none`]: {},
-          },
-          [`.${prefix}accordion-header`]: {
-            [`@apply flex items-center justify-between`]: {},
-
-            [`.${prefix}accordion-header-inner`]: {
-              [`@apply text-muted-800 dark:text-white`]: {},
-            },
-          },
-          [`.${prefix}accordion-dot`]: {
-            [`@apply ms-2 h-${config.dot.size} w-${config.dot.size} rounded-${config.dot.rounded} transition-colors duration-${config.dot.duration}`]:
-              {},
-          },
-          [`.${prefix}icon-outer`]: {
-            [`@apply border-${config.outer.border} dark:border-${config.outer.borderDark} dark:bg-${config.outer.bgDark} ms-2 flex h-${config.outer.size} w-${config.outer.size} items-center justify-center rounded-${config.outer.rounded} border bg-${config.outer.bg} transition-all duration-${config.outer.duration}`]:
-              {},
-          },
-          [`.${prefix}chevron-icon`]: {
-            [`@apply text-muted-400 h-${config.chevronIcon.size} w-${config.chevronIcon.size} transition-transform duration-${config.chevronIcon.duration}`]:
-              {},
-          },
-          [`.${prefix}plus-icon`]: {
-            [`@apply text-muted-400 h-${config.plusIcon.size} w-${config.plusIcon.size} transition-transform duration-${config.plusIcon.duration}`]:
-              {},
-          },
-          [`.${prefix}accordion-content`]: {
-            [`@apply px-${config.content.space} pb-${config.content.space} font-${config.content.font} text-${config.content.text} dark:text-${config.content.textDark}`]:
-              {},
-          },
-          [`&.${prefix}accordion-dot`]: {
-            [`.${prefix}accordion-header`]: {
-              [`@apply p-5`]: {},
-            },
-          },
-          [`&.${prefix}accordion-chevron, &.${prefix}accordion-plus`]: {
-            [`.${prefix}accordion-header`]: {
-              [`@apply px-5 py-3`]: {},
-            },
-          },
-          [`&.${prefix}accordion-chevron`]: {
-            [`.${prefix}accordion-detail[open] .${prefix}icon-outer`]: {
-              [`@apply rotate-180`]: {},
-            },
-          },
-          [`&.${prefix}accordion-plus`]: {
-            [`.${prefix}accordion-detail[open] .${prefix}icon-outer`]: {
-              [`@apply rotate-45`]: {},
-            },
-          },
-          [`&.${prefix}accordion-rounded`]: {
-            [`&.${prefix}accordion:first-child`]: {
-              [`@apply rounded-t-${config.rounded.default}`]: {},
-            },
-            [`&.${prefix}accordion:last-child`]: {
-              [`@apply rounded-b-${config.rounded.default}`]: {},
-            },
-          },
-          [`&.${prefix}accordion-smooth`]: {
-            [`&.${prefix}accordion:first-child`]: {
-              [`@apply rounded-t-${config.rounded.smooth}`]: {},
-            },
-            [`&.${prefix}accordion:last-child`]: {
-              [`@apply rounded-b-${config.rounded.smooth}`]: {},
-            },
-          },
-          [`&.${prefix}accordion-curved`]: {
-            [`&.${prefix}accordion:first-child`]: {
-              [`@apply rounded-t-${config.rounded.curved}`]: {},
-            },
-            [`&.${prefix}accordion:last-child`]: {
-              [`@apply rounded-b-${config.rounded.curved}`]: {},
-            },
-          },
-        },
-      })
-    }
+const config = {
+  theme: {
+    nui: {
+      [key]: defaultConfig,
+    },
   },
-  function () {
-    return {
-      theme: {
-        shurikenUi: {
-          [key]: defaultConfig,
+}
+
+export default plugin(({ addComponents, theme }) => {
+  const config = theme(`nui.${key}`) satisfies AccordionConfig
+
+  addComponents({
+    //Accordion:wrapper
+    '.nui-accordion': {
+      //Remove bottom borders
+      '&:not(:last-child)': {
+        '@apply border-b-0': {},
+      },
+      //Base
+      [`@apply w-${config.wrapper.width} block overflow-hidden`]: {},
+      //Background
+      [`@apply bg-${config.wrapper.background.light} dark:bg-${config.wrapper.background.dark}`]:
+        {},
+      //Hover
+      [`@apply hover:bg-${config.wrapper.hover.light} dark:hover:bg-${config.wrapper.hover.dark}`]:
+        {},
+      //Border
+      [`@apply border border-${config.wrapper.border.light} dark:border-${config.wrapper.border.dark}`]:
+        {},
+      //Transition
+      [`@apply transition-${config.wrapper.transition.property} duration-${config.wrapper.transition.duration}`]:
+        {},
+      //Accordion:inner
+      '.nui-accordion-detail[open]:not(:first-child)': {
+        [`@apply border-t border-${config.inner.border.light} dark:border-${config.inner.border.dark}`]:
+          {},
+      },
+      //Inner:dot
+      '.nui-accordion-detail .nui-accordion-dot': {
+        [`@apply bg-${config.icon.dot.background.light} dark:bg-${config.icon.dot.background.dark}`]:
+          {},
+      },
+      //Inner:dot active
+      '.nui-accordion-detail[open] .nui-accordion-dot': {
+        [`@apply bg-${config.icon.dot.background.active}`]: {},
+      },
+      //Inner:summary
+      '.nui-accordion-summary': {
+        '@apply cursor-pointer list-none outline-none': {},
+      },
+      //Inner:header
+      '.nui-accordion-header': {
+        '@apply flex items-center justify-between': {},
+
+        '.nui-accordion-header-inner': {
+          '@apply text-muted-800 dark:text-white': {},
         },
       },
-    }
-  },
-)
+      //Inner:dot
+      '.nui-accordion-dot': {
+        [`@apply ms-2 h-${config.icon.dot.size} w-${config.icon.dot.size} rounded-${config.icon.dot.rounded}`]:
+          {},
+        //Dot transition
+        [`@apply transition-${config.icon.dot.transition.property} duration-${config.icon.dot.transition.duration}`]:
+          {},
+      },
+      //Icon:outer
+      '.nui-icon-outer': {
+        //Base
+        '@apply ms-2 flex items-center justify-center': {},
+        //Width & Radius
+        [`@apply h-${config.icon.wrapper.size} w-${config.icon.wrapper.size} rounded-${config.icon.wrapper.rounded}`]:
+          {},
+        //Border
+        [`@apply border border-${config.icon.wrapper.border.light} dark:border-${config.icon.wrapper.border.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.icon.wrapper.background.light} dark:bg-${config.icon.wrapper.background.dark}`]:
+          {},
+        //Transition
+        [`@apply transition-${config.icon.wrapper.transition.property} duration-${config.icon.wrapper.transition.duration}`]:
+          {},
+      },
+      '.nui-chevron-icon': {
+        //Base
+        [`@apply text-muted-400 h-${config.icon.chevron.size} w-${config.icon.chevron.size}`]:
+          {},
+        //Transition
+        [`@apply transition-${config.icon.chevron.transition.property} duration-${config.icon.chevron.transition.duration}`]:
+          {},
+      },
+      '.nui-plus-icon': {
+        //Base
+        [`@apply text-muted-400 h-${config.icon.plus.size} w-${config.icon.plus.size}`]:
+          {},
+        //Transition
+        [`@apply transition-${config.icon.plus.transition.property} duration-${config.icon.plus.transition.duration}`]:
+          {},
+      },
+      //Accordion:content
+      '.nui-accordion-content': {
+        //Base
+        [`@apply px-${config.content.padding.x} pb-${config.content.padding.y}`]:
+          {},
+        //Font
+        [`@apply font-${config.content.font.family} text-${config.content.font.size} text-${config.content.font.color.light} dark:text-${config.content.font.color.dark}`]:
+          {},
+      },
+      '&.nui-accordion-dot': {
+        '.nui-accordion-header': {
+          [`@apply p-${config.content.padding.x}`]: {},
+        },
+      },
+      '&.nui-accordion-chevron, &.nui-accordion-plus': {
+        '.nui-accordion-header': {
+          [`@apply px-${config.content.padding.x} py-3`]: {},
+        },
+      },
+      '&.nui-accordion-chevron': {
+        '.nui-accordion-detail[open] .nui-icon-outer': {
+          '@apply rotate-180': {},
+        },
+      },
+      '&.nui-accordion-plus': {
+        '.nui-accordion-detail[open] .nui-icon-outer': {
+          '@apply rotate-45': {},
+        },
+      },
+      //Accordion:rounded
+      '&.nui-accordion-straight': {
+        '&.nui-accordion:first-child': {
+          [`@apply rounded-t-${config.wrapper.rounded.none}`]: {},
+        },
+        '&.nui-accordion:last-child': {
+          [`@apply rounded-b-${config.wrapper.rounded.none}`]: {},
+        },
+      },
+      '&.nui-accordion-rounded': {
+        '&.nui-accordion:first-child': {
+          [`@apply rounded-t-${config.wrapper.rounded.sm}`]: {},
+        },
+        '&.nui-accordion:last-child': {
+          [`@apply rounded-b-${config.wrapper.rounded.sm}`]: {},
+        },
+      },
+      '&.nui-accordion-smooth': {
+        '&.nui-accordion:first-child': {
+          [`@apply rounded-t-${config.wrapper.rounded.md}`]: {},
+        },
+        '&.nui-accordion:last-child': {
+          [`@apply rounded-b-${config.wrapper.rounded.md}`]: {},
+        },
+      },
+      '&.nui-accordion-curved': {
+        '&.nui-accordion:first-child': {
+          [`@apply rounded-t-${config.wrapper.rounded.lg}`]: {},
+        },
+        '&.nui-accordion:last-child': {
+          [`@apply rounded-b-${config.wrapper.rounded.lg}`]: {},
+        },
+      },
+    },
+  })
+}, config)

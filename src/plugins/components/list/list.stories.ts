@@ -81,7 +81,7 @@ export const MediaText: Story = {
       <li class="nui-list-item">
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Finish project UX
           </h6>
@@ -95,7 +95,7 @@ export const MediaText: Story = {
       <li class="nui-list-item">
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Meet with Andy at 3:00pm
           </h6>
@@ -109,7 +109,7 @@ export const MediaText: Story = {
       <li class="nui-list-item">
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Get groceries for Anna
           </h6>
@@ -123,7 +123,7 @@ export const MediaText: Story = {
       <li class="nui-list-item">
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Pay water bill
           </h6>
@@ -169,7 +169,7 @@ export const MediaIcon: Story = {
         </svg>
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Finish project UX
           </h6>
@@ -204,7 +204,7 @@ export const MediaIcon: Story = {
         </svg>
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Meet with Andy at 3:00pm
           </h6>
@@ -239,7 +239,7 @@ export const MediaIcon: Story = {
         </svg>
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Get groceries for Anna
           </h6>
@@ -274,7 +274,7 @@ export const MediaIcon: Story = {
         </svg>
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Pay water bill
           </h6>
@@ -300,11 +300,11 @@ export const MediaAvatar: Story = {
         ${Avatar({
           src: 'https://apollux.cssninja.io/img/avatars/15.svg',
           srcDark: 'https://apollux.cssninja.io/img/avatars/15.svg',
-          size: 'sm',
+          size: 'xs',
         })}
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Finish project UX
           </h6>
@@ -319,11 +319,11 @@ export const MediaAvatar: Story = {
         ${Avatar({
           src: 'https://apollux.cssninja.io/img/avatars/10.svg',
           srcDark: 'https://apollux.cssninja.io/img/avatars/10.svg',
-          size: 'sm',
+          size: 'xs',
         })}
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Meet with Andy at 3:00pm
           </h6>
@@ -338,11 +338,11 @@ export const MediaAvatar: Story = {
         ${Avatar({
           src: 'https://apollux.cssninja.io/img/avatars/24.svg',
           srcDark: 'https://apollux.cssninja.io/img/avatars/24.svg',
-          size: 'sm',
+          size: 'xs',
         })}
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Get groceries for Anna
           </h6>
@@ -357,11 +357,11 @@ export const MediaAvatar: Story = {
         ${Avatar({
           src: 'https://apollux.cssninja.io/img/avatars/25.svg',
           srcDark: 'https://apollux.cssninja.io/img/avatars/25.svg',
-          size: 'sm',
+          size: 'xs',
         })}
         <div>
           <h6
-            class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
+            class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-muted-100"
           >
             Pay water bill
           </h6>

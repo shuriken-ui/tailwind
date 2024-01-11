@@ -18,92 +18,71 @@ Toasts allow you to display important information popups users should see.
 
 <br />
 
-### Shape: straight
+### Contrast
 
-Toasts can have different shapes. The following example shows the straight shape.
+Toasts can have different contrasts. The type of contrast defines the main background shade.
 
 <div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.Straight} />
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+    <div>
+      <Story of={ToastStories.White} />
+    </div>
+    <div>
+      <Story of={ToastStories.Contrast} />
+    </div>
+  </div>
 </div>
 
 <br />
 
-### Shape: rounded
+### Rounded
 
-Toasts can have different shapes. The following example shows the rounded shape.
+Toasts can have different border radiuses. The following example shows the available variations.
 
 <div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.Rounded} />
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+    <div>
+      <Story of={ToastStories.Straight} />
+    </div>
+    <div>
+      <Story of={ToastStories.Rounded} />
+    </div>
+    <div>
+      <Story of={ToastStories.Smooth} />
+    </div>
+    <div>
+      <Story of={ToastStories.Curved} />
+    </div>
+  </div>
 </div>
 
 <br />
 
-### Shape: smooth
+### Colors
 
-Toasts can have different shapes. The following example shows the smooth shape.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.Smooth} />
-</div>
-
-<br />
-
-### Shape: curved
-
-Toasts can have different shapes. The following example shows the curved shape.
+Toasts can have different colors. The following example shows the available colors.
 
 <div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.Curved} />
-</div>
-
-<br />
-
-### Color: primary
-
-Toasts can have different colors. The following example shows the primary color.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.Primary} />
-</div>
-
-<br />
-
-### Color: info
-
-Toasts can have different colors. The following example shows the info color.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.Info} />
-</div>
-
-<br />
-
-### Color: success
-
-Toasts can have different colors. The following example shows the success color.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.Success} />
-</div>
-
-<br />
-
-### Color: warning
-
-Toasts can have different colors. The following example shows the warning color.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.Warning} />
-</div>
-
-<br />
-
-### Color: danger
-
-Toasts can have different colors. The following example shows the danger color.
-
-<div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.Danger} />
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+    <div>
+      <Story of={ToastStories.Smooth} />
+    </div>
+    <div>
+      <Story of={ToastStories.Primary} />
+    </div>
+    <div>
+      <Story of={ToastStories.Info} />
+    </div>
+    <div>
+      <Story of={ToastStories.Success} />
+    </div>
+    <div>
+      <Story of={ToastStories.Warning} />
+    </div>
+    <div>
+      <Story of={ToastStories.Danger} />
+    </div>
+  </div>
 </div>
 
 <br />
@@ -113,7 +92,26 @@ Toasts can have different colors. The following example shows the danger color.
 Toasts can be borderless and display a light shadow.
 
 <div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.SlotIconBlockBorderless} />
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+    <div>
+      <Story of={ToastStories.SlotIconBlockBorderlessDefault} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconBlockBorderlessPrimary} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconBlockBorderlessInfo} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconBlockBorderlessSuccess} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconBlockBorderlessWarning} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconBlockBorderlessDanger} />
+    </div>
+  </div>
 </div>
 
 <br />
@@ -126,7 +124,26 @@ Toasts can be borderless and display a light shadow.
 Toasts have an icon slot that you can use to display an icon.
 
 <div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.SlotIcon} />
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+    <div>
+      <Story of={ToastStories.SlotIconDefault} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconPrimary} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconInfo} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconSuccess} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconWarning} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconDanger} />
+    </div>
+  </div>
 </div>
 
 <br />
@@ -136,7 +153,26 @@ Toasts have an icon slot that you can use to display an icon.
 Toasts have an icon slot that you can use to display an icon block.
 
 <div className="bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
-  <Story of={ToastStories.SlotIconBlock} />
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+    <div>
+      <Story of={ToastStories.SlotIconBlockDefault} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconBlockPrimary} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconBlockInfo} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconBlockSuccess} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconBlockWarning} />
+    </div>
+    <div>
+      <Story of={ToastStories.SlotIconBlockDanger} />
+    </div>
+  </div>
 </div>
 
 <br />
@@ -146,12 +182,12 @@ Toasts have an icon slot that you can use to display an icon block.
 
 ### Default config
 
-<div class="relative">
-  <details class="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
-    <summary class="list-none cursor-pointer">
-      <span class="font-sans text-slate-500">View configuration options</span>
+<div className="relative">
+  <details className="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary className="list-none cursor-pointer">
+      <span className="font-sans text-slate-500">View configuration options</span>
       <svg
-        class="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        className="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -160,15 +196,15 @@ Toasts have an icon slot that you can use to display an icon block.
         <path
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m6 9l6 6l6-6"
         />
       </svg>
     </summary>
 
-    <div class="!mt-4">
+    <div className="!mt-4">
       <pre >
         {JSON.stringify(defaultConfig, null, 2)}
       </pre>

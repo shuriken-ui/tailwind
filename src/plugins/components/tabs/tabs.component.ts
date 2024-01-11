@@ -12,6 +12,7 @@ export const Tabs = ({
   type = 'tabs',
   justify = 'start',
   hideLabel,
+  bordered = true,
   classes,
   children,
   ...attrs
@@ -21,6 +22,7 @@ export const Tabs = ({
       class=${[
         'nui-tabs',
         justify && variants.justify[justify],
+        type === 'tabs' && bordered && 'nui-tabs-bordered',
         classes?.wrapper,
       ]
         .filter(Boolean)
@@ -41,7 +43,6 @@ export const Tabs = ({
                 .join(' ')}
               tabindex="0"
             >
-              <!--Icon v-if="tab.icon" :name="tab.icon" class="me-1 block h-5 w-5" /-->
               <span
                 class=${[
                   'nui-tabs',

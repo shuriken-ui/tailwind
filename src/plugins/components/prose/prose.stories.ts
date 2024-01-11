@@ -10,10 +10,10 @@ const meta = {
   // tags: ['autodocs'],
   render: (args) => Prose(args),
   argTypes: {
-    shape: {
+    rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'curved'],
-      defaultValue: 'rounded',
+      options: ['none', 'sm', 'md', 'lg'],
+      defaultValue: 'sm',
     },
   },
 } satisfies Meta<ProseAttrs>

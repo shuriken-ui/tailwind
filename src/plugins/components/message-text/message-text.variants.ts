@@ -1,11 +1,11 @@
 import type { MessageTextVariant } from './message-text.types'
 
-export const shape = {
-  straight: '',
-  rounded: 'nui-message-rounded',
-  smooth: 'nui-message-smooth',
-  curved: 'nui-message-curved',
-} as const satisfies MessageTextVariant<'shape'>
+export const rounded = {
+  none: '',
+  sm: 'nui-message-rounded',
+  md: 'nui-message-smooth',
+  lg: 'nui-message-curved',
+} as const satisfies MessageTextVariant<'rounded'>
 
 export const color = {
   default: 'nui-message-default',
