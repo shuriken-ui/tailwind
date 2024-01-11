@@ -34,7 +34,8 @@ The simplest way to register Shuriken UI is to use `withShurikenUI` helper funct
 import { withShurikenUI } from '@shuriken-ui/tailwind'
 
 export default withShurikenUI({
-  // your config
+  // your tailwind config
+  content: [],
 })
 ```
 
@@ -47,8 +48,45 @@ import type { Config } from 'tailwindcss'
 import preset from '@shuriken-ui/tailwind/preset'
 
 export default {
-  presets: [shurikenUIPreset],
-  // your config
+  // your tailwind config, with the preset
+  content: [],
+  presets: [preset],
+} satisfies Config
+```
+
+
+Also, you can import only the components and utils you needs.
+
+```ts
+// tailwind.config.ts
+import type { Config } from 'tailwindcss'
+import { fontFamily } from 'tailwindcss/defaultTheme'
+import colors from 'tailwindcss/colors'
+
+import { input, button } from '@shuriken-ui/tailwind/plugins'
+
+export default {
+  // your tailwind config, with only the components you need
+  plugins: [input, button],
+  theme: {
+    fontFamily: {
+      sans: fontFamily.sans,
+      heading: fontFamily.sans,
+      alt: fontFamily.sans,
+      mono: fontFamily.mono,
+    },
+    extend: {
+      colors: {
+        primary: colors.violet,
+        'primary-invert': colors.white,
+        muted: colors.slate,
+        info: colors.sky,
+        success: colors.teal,
+        warning: colors.amber,
+        danger: colors.rose,
+      },
+    },
+  },
 } satisfies Config
 ```
 
@@ -60,7 +98,7 @@ Shuriken UI is fully customizable. You can override components by using the `the
 export default withShurikenUI({
   theme: {
     extend: {
-      shurikenUi: {
+      nui: {
         // your customizations
       },
     },

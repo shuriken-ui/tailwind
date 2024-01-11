@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+
 import type { AccordionPluginConfig } from './plugins/components/accordion/accordion.config'
 import type { AutocompletePluginConfig } from './plugins/components/autocomplete/autocomplete.config'
 import type { AvatarPluginConfig } from './plugins/components/avatar/avatar.config'
@@ -120,7 +121,7 @@ type ShurikenUIPlugins = AccordionPluginConfig &
 type BaseTheme = Config['theme']
 type ShurikenUITheme = BaseTheme &
   DeepPartial<{
-    shurikenUi: ShurikenUIPlugins
+    nui: ShurikenUIPlugins
   }>
 
 export type ShurikenUIConfig = Config & {
