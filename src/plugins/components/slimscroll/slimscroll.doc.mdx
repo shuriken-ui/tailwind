@@ -1,0 +1,51 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks'
+import * as SlimscrollStories from './slimscroll.stories'
+import { defaultConfig } from './slimscroll.config'
+
+<Meta of={SlimscrollStories} />
+
+# nui-slimscroll
+
+When using autocompletes or search, you often see some highlighted text. This is the component that does that.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Customization
+
+### Default config
+
+<div className="relative">
+  <details className="relative bg-slate-50 border border-slate-200 rounded-lg p-4 [&>summary>svg]:open:-rotate-180">
+    <summary className="list-none cursor-pointer">
+      <span className="font-sans text-slate-500">View configuration options</span>
+      <svg
+        className="w-5 h-5 text-slate-500 absolute top-5 end-4 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="m6 9l6 6l6-6"
+        />
+      </svg>
+    </summary>
+
+    <div className="!mt-4">
+      <pre >
+        {JSON.stringify(defaultConfig, null, 2)}
+      </pre>
+    </div>
+
+  </details>
+</div>
+
