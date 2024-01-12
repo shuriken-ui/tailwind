@@ -7,7 +7,7 @@ export default create({
   brandTitle: 'Shuriken UI',
   brandUrl: 'https://cssninja.io',
   brandImage:
-    'https://user-images.githubusercontent.com/3911343/232132309-62971744-dcdb-429c-aa93-6ba0c1caac42.png',
+    'https://github.com/shuriken-ui/.github/assets/86636408/06f9d8e2-38aa-45b2-b91e-1c891a20e271',
   brandTarget: '_self',
   // Typography
   fontBase: '"Inter", sans-serif',
