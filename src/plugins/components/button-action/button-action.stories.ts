@@ -24,6 +24,7 @@ const meta = {
       control: { type: 'select' },
       options: [
         'default',
+        'muted',
         'light',
         'primary',
         'info',
@@ -37,7 +38,7 @@ const meta = {
     rounded: {
       control: { type: 'select' },
       options: ['none', 'sm', 'md', 'lg', 'full'],
-      defaultValue: 'straight',
+      defaultValue: 'sm',
     },
     onClick: { action: 'onClick' },
   },

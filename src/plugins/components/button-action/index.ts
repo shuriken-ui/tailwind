@@ -62,7 +62,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:enabled:bg-${config.color.default.background.hover.light} dark:hover:enabled:bg-${config.color.default.background.hover.dark}`]:
           {},
         //Active
-        [`@apply dark:active:enabled:bg-${config.color.default.background.active.light} active:enabled:bg-${config.color.default.background.active.dark}`]:
+        [`@apply active:enabled:bg-${config.color.default.background.active.light} dark:active:enabled:bg-${config.color.default.background.active.dark}`]:
           {},
         //Border
         [`@apply border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
@@ -80,7 +80,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:enabled:bg-${config.color.muted.background.hover.light} dark:hover:enabled:bg-${config.color.muted.background.hover.dark}`]:
           {},
         //Active
-        [`@apply dark:active:enabled:bg-${config.color.muted.background.active.light} active:enabled:bg-${config.color.muted.background.active.dark}`]:
+        [`@apply active:enabled:bg-${config.color.muted.background.active.light} dark:active:enabled:bg-${config.color.muted.background.active.dark}`]:
           {},
         //Border
         [`@apply border-${config.color.muted.border.light} dark:border-${config.color.muted.border.dark}`]:
@@ -98,7 +98,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:enabled:bg-${config.color.primary.background.hover.light} dark:hover:enabled:bg-${config.color.primary.background.hover.dark}`]:
           {},
         //Active
-        [`@apply dark:active:enabled:bg-${config.color.primary.background.active.light} active:enabled:bg-${config.color.primary.background.active.dark}`]:
+        [`@apply active:enabled:bg-${config.color.primary.background.active.light} dark:active:enabled:bg-${config.color.primary.background.active.dark}`]:
           {},
         //Border
         [`@apply border-${config.color.primary.border.light} dark:border-${config.color.primary.border.dark}`]:
@@ -116,7 +116,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:enabled:bg-${config.color.info.background.hover.light} dark:hover:enabled:bg-${config.color.info.background.hover.dark}`]:
           {},
         //Active
-        [`@apply dark:active:enabled:bg-${config.color.info.background.active.light} active:enabled:bg-${config.color.info.background.active.dark}`]:
+        [`@apply active:enabled:bg-${config.color.info.background.active.light} dark:active:enabled:bg-${config.color.info.background.active.dark}`]:
           {},
         //Border
         [`@apply border-${config.color.info.border.light} dark:border-${config.color.info.border.dark}`]:
@@ -134,7 +134,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:enabled:bg-${config.color.success.background.hover.light} dark:hover:enabled:bg-${config.color.success.background.hover.dark}`]:
           {},
         //Active
-        [`@apply dark:active:enabled:bg-${config.color.success.background.active.light} active:enabled:bg-${config.color.success.background.active.dark}`]:
+        [`@apply active:enabled:bg-${config.color.success.background.active.light} dark:active:enabled:bg-${config.color.success.background.active.dark}`]:
           {},
         //Border
         [`@apply border-${config.color.success.border.light} dark:border-${config.color.success.border.dark}`]:
@@ -152,7 +152,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:enabled:bg-${config.color.warning.background.hover.light} dark:hover:enabled:bg-${config.color.warning.background.hover.dark}`]:
           {},
         //Active
-        [`@apply dark:active:enabled:bg-${config.color.warning.background.active.light} active:enabled:bg-${config.color.warning.background.active.dark}`]:
+        [`@apply active:enabled:bg-${config.color.warning.background.active.light} dark:active:enabled:bg-${config.color.warning.background.active.dark}`]:
           {},
         //Border
         [`@apply border-${config.color.warning.border.light} dark:border-${config.color.warning.border.dark}`]:
@@ -170,7 +170,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:enabled:bg-${config.color.danger.background.hover.light} dark:hover:enabled:bg-${config.color.danger.background.hover.dark}`]:
           {},
         //Active
-        [`@apply dark:active:enabled:bg-${config.color.danger.background.active.light} active:enabled:bg-${config.color.danger.background.active.dark}`]:
+        [`@apply active:enabled:bg-${config.color.danger.background.active.light} dark:active:enabled:bg-${config.color.danger.background.active.dark}`]:
           {},
         //Border
         [`@apply border-${config.color.danger.border.light} dark:border-${config.color.danger.border.dark}`]:
