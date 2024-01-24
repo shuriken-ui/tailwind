@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/shuriken-ui/tailwind/compare/v2.0.0...v2.0.1) (2024-01-24)
+
+
+### Bug Fixes
+
+* **ButtonAction:** fix broken active bg color for default and muted colors ([8e5abee](https://github.com/shuriken-ui/tailwind/commit/8e5abee5dbccb11f07a32cdcfdc88b46d7b161a2))
+
 ## [2.0.0](https://github.com/shuriken-ui/tailwind/compare/v2.0.0-next.12...v2.0.0) (2024-01-11)
 
 
