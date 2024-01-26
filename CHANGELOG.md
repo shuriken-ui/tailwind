@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.3](https://github.com/shuriken-ui/tailwind/compare/v2.0.2...v2.0.3) (2024-01-26)
+
+
+### Bug Fixes
+
+* **button-group:** single child + support more kind of components ([726714d](https://github.com/shuriken-ui/tailwind/commit/726714d618cfc733a1aa1056b7f99ae4771efd53))
+* **button:** align default border color with all inputs ([3f6522f](https://github.com/shuriken-ui/tailwind/commit/3f6522f777e33b75c280a373aa6aaf2a6a64cd6d))
+
 ### [2.0.2](https://github.com/shuriken-ui/tailwind/compare/v2.0.1...v2.0.2) (2024-01-26)
 
 
