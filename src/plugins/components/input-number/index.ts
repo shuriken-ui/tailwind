@@ -408,42 +408,42 @@ export default plugin(({ addComponents, theme }) => {
       //Without icon && Size:sm
       '&:not(.nui-has-icon).nui-input-number-sm': {
         '.nui-input-number': {
-          [`@apply h-8 py-1 text-${config.icon.disabled.input.sm.font.size} leading-4 px-2`]:
+          [`@apply h-8 py-1 text-${config.icon.disabled.input.sm.font.size} leading-4 ps-2 pe-[3.75rem]`]:
             {},
         },
       },
       //With icon && Size:sm
       '&.nui-has-icon.nui-input-number-sm': {
         '.nui-input-number': {
-          [`@apply h-8 py-1 text-${config.icon.enabled.input.sm.font.size} leading-4 pe-3 ps-8`]:
+          [`@apply h-8 py-1 text-${config.icon.enabled.input.sm.font.size} leading-4 ps-8 pe-[3.75rem]`]:
             {},
         },
       },
       //Without icon && Size:md
       '&:not(.nui-has-icon).nui-input-number-md': {
         '.nui-input-number': {
-          [`@apply h-10 py-2 text-${config.icon.disabled.input.md.font.size} leading-5 px-3`]:
+          [`@apply h-10 py-2 text-${config.icon.disabled.input.md.font.size} leading-5 ps-3 pe-[4.75rem]`]:
             {},
         },
       },
       //With icon && Size:md
       '&.nui-has-icon.nui-input-number-md': {
         '.nui-input-number': {
-          [`@apply h-10 py-2 text-${config.icon.enabled.input.md.font.size} leading-5 pe-4 ps-10`]:
+          [`@apply h-10 py-2 text-${config.icon.enabled.input.md.font.size} leading-5 ps-10 pe-[4.75rem]`]:
             {},
         },
       },
       //Without icon && Size:lg
       '&:not(.nui-has-icon).nui-input-number-lg': {
         '.nui-input-number': {
-          [`@apply h-12 py-2 text-${config.icon.disabled.input.lg.font.size} leading-5 px-4`]:
+          [`@apply h-12 py-2 text-${config.icon.disabled.input.lg.font.size} leading-5 ps-4 pe-24`]:
             {},
         },
       },
       //With icon && Size:lg
       '&.nui-has-icon.nui-input-number-lg': {
         '.nui-input-number': {
-          [`@apply h-12 py-2 text-${config.icon.enabled.input.lg.font.size} leading-5 pe-4 ps-11`]:
+          [`@apply h-12 py-2 text-${config.icon.enabled.input.lg.font.size} leading-5 ps-11 pe-24`]:
             {},
         },
       },
