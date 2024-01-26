@@ -4,6 +4,8 @@ import { html } from 'lit'
 import type { ButtonGroupAttrs } from './button-group.types'
 import { ButtonGroup } from './button-group.component'
 import { Button } from '../button/button.component'
+import { Select } from '../select/select.component'
+import { Input } from '../input/input.component'
 
 // More on how to set up stories at: https://storybook.js.org/docs/web-components/writing-stories/introduction
 const meta = {
@@ -158,10 +160,38 @@ export const SizeLg: Story = {
         `,
       })}
       ${Button({
-        shape: 'sm',
+        rounded: 'sm',
         size: 'lg',
         children: html`
           <span>Button 4</span>
+        `,
+      })}
+    `,
+  },
+}
+// #endregion
+
+// #region InputCombined
+export const InputCombined: Story = {
+  name: 'Input: Combined',
+  args: {
+    children: html`
+      ${Select({
+        rounded: 'sm',
+        options: html`
+          <option value="1">Superman</option>
+          <option value="2">Batman</option>
+          <option value="3">Spiderman</option>
+          <option value="4">Ironman</option>
+        `,
+      })}
+      ${Input({
+        placeholder: 'Name your hero ...',
+      })}
+      ${Button({
+        rounded: 'sm',
+        children: html`
+          <span>Generate</span>
         `,
       })}
     `,
