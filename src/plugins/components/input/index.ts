@@ -99,13 +99,6 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply transition-${config.input.action.transition.property} duration-${config.input.action.transition.duration}`]:
           {},
       },
-      //Focus:color
-      '&.nui-input-focus': {
-        '.nui-input': {
-          [`@apply focus:border-${config.input.focus.border.color.light} dark:focus:border-${config.input.focus.border.color.dark}`]:
-            {},
-        },
-      },
       //Rounded:sm
       '&.nui-input-rounded': {
         '.nui-input': {
@@ -282,6 +275,17 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Border:hover
           [`@apply hover:border-${config.color.mutedContrast.border.hover.light} dark:hover:border-${config.color.mutedContrast.border.hover.dark}`]:
+            {},
+        },
+      },
+      //Focus:color
+      '&.nui-input-focus': {
+        '.nui-input': {
+          //Focus
+          [`@apply focus:!border-${config.input.focus.border.color.light} dark:focus:!border-${config.input.focus.border.color.dark}`]:
+            {},
+          //Force focus
+          [`@apply focus:hover:!border-${config.input.focus.border.color.light} dark:focus:hover:!border-${config.input.focus.border.color.dark}`]:
             {},
         },
       },
