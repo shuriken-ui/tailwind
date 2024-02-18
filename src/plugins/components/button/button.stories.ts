@@ -29,7 +29,12 @@ const meta = {
       control: { type: 'select' },
       options: [
         'default',
+        'default-contrast',
         'light',
+        'muted',
+        'muted-contrast',
+        'dark',
+        'black',
         'primary',
         'info',
         'success',
@@ -201,10 +206,34 @@ export const SolidDefault: Story = {
   },
 }
 
+export const SolidDefaultContrast: Story = {
+  name: 'Solid: default',
+  args: {
+    color: 'default-contrast',
+    label: 'Button',
+    variant: 'solid',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
 export const SolidMuted: Story = {
   name: 'Solid: muted',
   args: {
     color: 'muted',
+    label: 'Button',
+    variant: 'solid',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
+export const SolidMutedContrast: Story = {
+  name: 'Solid: muted-contrast',
+  args: {
+    color: 'muted-contrast',
     label: 'Button',
     variant: 'solid',
     loading: false,
@@ -272,9 +301,69 @@ export const SolidDanger: Story = {
     size: 'md',
   },
 }
+
+export const SolidLight: Story = {
+  name: 'Solid: light',
+  args: {
+    color: 'light',
+    label: 'Button',
+    variant: 'solid',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
+export const SolidDark: Story = {
+  name: 'Solid: dark',
+  args: {
+    color: 'dark',
+    label: 'Button',
+    variant: 'solid',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
+export const SolidBlack: Story = {
+  name: 'Solid: black',
+  args: {
+    color: 'black',
+    label: 'Button',
+    variant: 'solid',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
 // #endregion
 
 // #region Flavors:pastel
+export const PastelDefault: Story = {
+  name: 'Pastel: default',
+  args: {
+    color: 'default',
+    label: 'Button',
+    variant: 'pastel',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
+export const PastelMuted: Story = {
+  name: 'Pastel: muted',
+  args: {
+    color: 'muted',
+    label: 'Button',
+    variant: 'pastel',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
 export const PastelPrimary: Story = {
   name: 'Pastel: primary',
   args: {
@@ -334,9 +423,69 @@ export const PastelDanger: Story = {
     size: 'md',
   },
 }
+
+export const PastelLight: Story = {
+  name: 'Pastel: light',
+  args: {
+    color: 'light',
+    label: 'Button',
+    variant: 'pastel',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
+export const PastelDark: Story = {
+  name: 'Pastel: dark',
+  args: {
+    color: 'dark',
+    label: 'Button',
+    variant: 'pastel',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
+export const PastelBlack: Story = {
+  name: 'Pastel: black',
+  args: {
+    color: 'black',
+    label: 'Button',
+    variant: 'pastel',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
 // #endregion
 
 // #region Flavors:outline
+export const OutlineDefault: Story = {
+  name: 'Outline: default',
+  args: {
+    color: 'default',
+    label: 'Button',
+    variant: 'outline',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
+export const OutlineMuted: Story = {
+  name: 'Outline: muted',
+  args: {
+    color: 'muted',
+    label: 'Button',
+    variant: 'outline',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
 export const OutlinePrimary: Story = {
   name: 'Outline: primary',
   args: {
@@ -389,6 +538,42 @@ export const OutlineDanger: Story = {
   name: 'Outline: danger',
   args: {
     color: 'danger',
+    label: 'Button',
+    variant: 'outline',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
+export const OutlineLight: Story = {
+  name: 'Outline: light',
+  args: {
+    color: 'light',
+    label: 'Button',
+    variant: 'outline',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
+export const OutlineDark: Story = {
+  name: 'Outline: dark',
+  args: {
+    color: 'dark',
+    label: 'Button',
+    variant: 'outline',
+    loading: false,
+    rounded: 'sm',
+    size: 'md',
+  },
+}
+
+export const OutlineBlack: Story = {
+  name: 'Outline: black',
+  args: {
+    color: 'black',
     label: 'Button',
     variant: 'outline',
     loading: false,
