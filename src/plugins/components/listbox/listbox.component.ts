@@ -16,6 +16,7 @@ export const Listbox = ({
   contrast = 'default',
   label,
   labelFloat,
+  colorFocus,
   multiple,
   loading,
   error,
@@ -33,6 +34,7 @@ export const Listbox = ({
         error && !loading && 'nui-listbox-error',
         loading && 'nui-listbox-loading',
         labelFloat && 'nui-listbox-label-float',
+        colorFocus && 'nui-listbox-focus',
         icon && 'nui-has-icon',
         classes?.wrapper,
       ]

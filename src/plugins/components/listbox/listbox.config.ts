@@ -27,6 +27,14 @@ export const defaultConfig = {
       size: 'sm',
       align: 'start',
     },
+    focus: {
+      border: {
+        color: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+      },
+    },
     iconBox: {
       margin: {
         x: '2',

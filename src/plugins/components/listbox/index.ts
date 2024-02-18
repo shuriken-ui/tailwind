@@ -458,6 +458,19 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Focus:color
+      '&.nui-listbox-focus': {
+        '.nui-listbox-button': {
+          //Transition
+          [`@apply transition-colors duration-300`]: {},
+          //Focus
+          [`@apply focus:!border-${config.button.focus.border.color.light} dark:focus:!border-${config.button.focus.border.color.dark}`]:
+            {},
+          //Force focus
+          [`@apply focus:hover:!border-${config.button.focus.border.color.light} dark:focus:hover:!border-${config.button.focus.border.color.dark}`]:
+            {},
+        },
+      },
       //Listbox:loaded
       '&:not(.nui-listbox-loading)': {
         '.nui-listbox-button ~ .nui-label-float': {
