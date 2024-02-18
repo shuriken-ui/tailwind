@@ -436,6 +436,19 @@ export default plugin(({ addComponents, theme }) => {
               {},
           },
       },
+      //Focus:color
+      '&.nui-autocomplete-focus': {
+        '.nui-autocomplete-input': {
+          //Transition
+          [`@apply transition-colors duration-300`]: {},
+          //Focus
+          [`@apply focus:!border-${config.input.focus.border.color.light} dark:focus:!border-${config.input.focus.border.color.dark}`]:
+            {},
+          //Force focus
+          [`@apply focus:hover:!border-${config.input.focus.border.color.light} dark:focus:hover:!border-${config.input.focus.border.color.dark}`]:
+            {},
+        },
+      },
       //Autocomplete:not loading
       '&:not(.nui-autocomplete-loading)': {
         '.nui-autocomplete-input:placeholder-shown ~ .nui-label-float': {

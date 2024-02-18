@@ -15,6 +15,7 @@ export const Autocomplete = ({
   contrast = 'default',
   label,
   labelFloat,
+  colorFocus,
   clearable,
   dropdown,
   multiple,
@@ -35,6 +36,7 @@ export const Autocomplete = ({
         error && !loading && 'nui-autocomplete-error',
         loading && 'nui-autocomplete-loading',
         labelFloat && 'nui-autocomplete-label-float',
+        colorFocus && 'nui-autocomplete-focus',
         icon && 'nui-has-icon',
         classes?.wrapper,
       ]

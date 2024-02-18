@@ -6,6 +6,7 @@ export interface AutocompleteProps extends Record<string, unknown> {
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   label?: string
   labelFloat?: boolean
+  colorFocus?: boolean
   error?: string | boolean
   size?: 'sm' | 'md' | 'lg'
   contrast?: 'default' | 'default-contrast' | 'muted' | 'muted-contrast'
