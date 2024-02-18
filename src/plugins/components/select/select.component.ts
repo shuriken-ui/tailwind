@@ -14,6 +14,7 @@ export const Select = ({
   contrast = 'default',
   label,
   labelFloat,
+  colorFocus,
   loading,
   placeholder,
   error,
@@ -39,6 +40,7 @@ export const Select = ({
         error && !loading && 'nui-select-error',
         loading && 'nui-select-loading',
         labelFloat && 'nui-select-label-float',
+        colorFocus && 'nui-select-focus',
         icon && 'nui-has-icon',
         classes?.wrapper,
       ]

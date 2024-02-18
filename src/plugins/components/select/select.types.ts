@@ -6,6 +6,7 @@ export interface SelectProps extends Record<string, unknown> {
   label?: string
   placeholder?: string
   labelFloat?: boolean
+  colorFocus?: boolean
   loading?: boolean
   disabled?: boolean
   readonly?: boolean

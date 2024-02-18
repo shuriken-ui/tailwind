@@ -289,6 +289,17 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Focus:color
+      '&.nui-select-focus': {
+        '.nui-select': {
+          //Focus
+          [`@apply focus:!border-${config.select.focus.border.color.light} dark:focus:!border-${config.select.focus.border.color.dark}`]:
+            {},
+          //Force focus
+          [`@apply focus:hover:!border-${config.select.focus.border.color.light} dark:focus:hover:!border-${config.select.focus.border.color.dark}`]:
+            {},
+        },
+      },
       //Loaded
       '&:not(.nui-select-loading)': {
         '.nui-select ~ .nui-label-float': {
