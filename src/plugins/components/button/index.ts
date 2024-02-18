@@ -523,7 +523,7 @@ export default plugin(({ addComponents, theme }) => {
       },
       '&.nui-button-pastel': {
         //Pastel:default
-        '&.nui-button-default': {
+        '&.nui-button-default, &.nui-button-default-contrast': {
           //Text color
           [`@apply text-${config.variant.pastel.default.text.light} dark:text-${config.variant.pastel.default.text.dark}`]:
             {},
@@ -541,7 +541,7 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
         //Pastel:muted
-        '&.nui-button-muted': {
+        '&.nui-button-muted, &.nui-button-muted-contrast': {
           //Text color
           [`@apply text-${config.variant.pastel.muted.text.light} dark:text-${config.variant.pastel.muted.text.dark}`]:
             {},
@@ -706,7 +706,7 @@ export default plugin(({ addComponents, theme }) => {
       //Variant:outline
       '&.nui-button-outline': {
         //Outline:default
-        '&.nui-button-default': {
+        '&.nui-button-default, &.nui-button-default-contrast': {
           //Text color
           [`@apply text-${config.variant.outline.default.text.light.base} dark:text-${config.variant.outline.default.text.dark.base}`]:
             {},
@@ -776,7 +776,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //Outline:muted
-        '&.nui-button-muted': {
+        '&.nui-button-muted, &.nui-button-muted-contrast': {
           //Text color
           [`@apply text-${config.variant.outline.muted.text.light.base} dark:text-${config.variant.outline.muted.text.dark.base}`]:
             {},
