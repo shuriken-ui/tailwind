@@ -14,7 +14,12 @@ const meta = {
       control: { type: 'select' },
       options: [
         'default',
+        'default-contrast',
         'muted',
+        'muted-contrast',
+        'light',
+        'dark',
+        'black',
         'primary',
         'info',
         'success',
@@ -253,6 +258,45 @@ export const SolidDanger: Story = {
     `,
   },
 }
+
+export const SolidLight: Story = {
+  name: 'Solid: light',
+  args: {
+    color: 'light',
+    variant: 'solid',
+    rounded: 'full',
+    size: 'md',
+    children: html`
+      Category
+    `,
+  },
+}
+
+export const SolidDark: Story = {
+  name: 'Solid: dark',
+  args: {
+    color: 'dark',
+    variant: 'solid',
+    rounded: 'full',
+    size: 'md',
+    children: html`
+      Category
+    `,
+  },
+}
+
+export const SolidBlack: Story = {
+  name: 'Solid: black',
+  args: {
+    color: 'black',
+    variant: 'solid',
+    rounded: 'full',
+    size: 'md',
+    children: html`
+      Category
+    `,
+  },
+}
 // #endregion
 
 // #region Colors: pastel
@@ -346,6 +390,45 @@ export const PastelDanger: Story = {
     `,
   },
 }
+
+export const PastelLight: Story = {
+  name: 'Pastel: light',
+  args: {
+    color: 'light',
+    variant: 'pastel',
+    rounded: 'full',
+    size: 'md',
+    children: html`
+      Category
+    `,
+  },
+}
+
+export const PastelDark: Story = {
+  name: 'Pastel: dark',
+  args: {
+    color: 'dark',
+    variant: 'pastel',
+    rounded: 'full',
+    size: 'md',
+    children: html`
+      Category
+    `,
+  },
+}
+
+export const PastelBlack: Story = {
+  name: 'Pastel: black',
+  args: {
+    color: 'black',
+    variant: 'pastel',
+    rounded: 'full',
+    size: 'md',
+    children: html`
+      Category
+    `,
+  },
+}
 // #endregion
 
 // #region Colors: outline
@@ -431,6 +514,45 @@ export const OutlineDanger: Story = {
   name: 'Outline: danger',
   args: {
     color: 'danger',
+    variant: 'outline',
+    rounded: 'full',
+    size: 'md',
+    children: html`
+      Category
+    `,
+  },
+}
+
+export const OutlineLight: Story = {
+  name: 'Outline: light',
+  args: {
+    color: 'light',
+    variant: 'outline',
+    rounded: 'full',
+    size: 'md',
+    children: html`
+      Category
+    `,
+  },
+}
+
+export const OutlineDark: Story = {
+  name: 'Outline: dark',
+  args: {
+    color: 'dark',
+    variant: 'outline',
+    rounded: 'full',
+    size: 'md',
+    children: html`
+      Category
+    `,
+  },
+}
+
+export const OutlineBlack: Story = {
+  name: 'Outline: black',
+  args: {
+    color: 'black',
     variant: 'outline',
     rounded: 'full',
     size: 'md',

@@ -16,7 +16,12 @@ export const rounded = {
 
 export const color = {
   default: 'nui-tag-default',
+  'default-contrast': 'nui-tag-default-contrast',
   muted: 'nui-tag-muted',
+  'muted-contrast': 'nui-tag-muted-contrast',
+  light: 'nui-tag-light',
+  dark: 'nui-tag-dark',
+  black: 'nui-tag-black',
   primary: 'nui-tag-primary',
   info: 'nui-tag-info',
   success: 'nui-tag-success',
