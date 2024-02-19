@@ -66,7 +66,7 @@ export const defaultConfig = {
       naver: {
         background: {
           light: 'white',
-          dark: 'muted-700',
+          dark: 'muted-800',
         },
         border: {
           light: 'muted-300',

@@ -12,7 +12,14 @@ const meta = {
   argTypes: {
     color: {
       control: { type: 'select' },
-      options: ['primary', 'light', 'dark', 'black'],
+      options: [
+        'default',
+        'default-contrast',
+        'primary',
+        'light',
+        'dark',
+        'black',
+      ],
       defaultValue: 'primary',
     },
     rounded: {
