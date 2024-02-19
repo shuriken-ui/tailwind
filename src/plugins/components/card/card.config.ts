@@ -54,6 +54,26 @@ export const defaultConfig = {
         dark: 'muted-800',
       },
     },
+    dark: {
+      background: {
+        light: 'muted-900',
+        dark: 'muted-100',
+      },
+      border: {
+        light: 'muted-800',
+        dark: 'muted-50',
+      },
+    },
+    black: {
+      background: {
+        light: 'black',
+        dark: 'white',
+      },
+      border: {
+        light: 'black',
+        dark: 'white',
+      },
+    },
     primary: {
       background: {
         light: 'primary-500/10',

@@ -53,6 +53,24 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply bg-${config.color.mutedContrast.background.light} dark:bg-${config.color.mutedContrast.background.dark}`]:
           {},
       },
+      //Color:dark
+      '&.nui-card-dark': {
+        //Border
+        [`@apply border border-${config.color.dark.border.light} dark:border-${config.color.dark.border.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.dark.background.light} dark:bg-${config.color.dark.background.dark}`]:
+          {},
+      },
+      //Color:black
+      '&.nui-card-black': {
+        //Border
+        [`@apply border border-${config.color.black.border.light} dark:border-${config.color.black.border.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.black.background.light} dark:bg-${config.color.black.background.dark}`]:
+          {},
+      },
       //Color:primary
       '&.nui-card-primary': {
         //Border

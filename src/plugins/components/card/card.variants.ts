@@ -12,6 +12,8 @@ export const color = {
   'white-contrast': 'nui-card-white-contrast',
   muted: 'nui-card-muted',
   'muted-contrast': 'nui-card-muted-contrast',
+  dark: 'nui-card-dark',
+  black: 'nui-card-black',
   primary: 'nui-card-primary',
   info: 'nui-card-info',
   success: 'nui-card-success',

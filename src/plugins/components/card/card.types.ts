@@ -9,6 +9,8 @@ export interface CardProps extends Record<string, unknown> {
     | 'white-contrast'
     | 'muted'
     | 'muted-contrast'
+    | 'dark'
+    | 'black'
     | 'primary'
     | 'info'
     | 'success'

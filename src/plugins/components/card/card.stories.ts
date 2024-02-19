@@ -18,6 +18,8 @@ const meta = {
         'white-contrast',
         'muted',
         'muted-contrast',
+        'dark',
+        'black',
         'primary',
         'info',
         'success',
@@ -151,6 +153,48 @@ export const ColorMutedContrast: Story = {
       </h6>
       <p
         class="nui-paragraph nui-paragraph-xs text-muted-500 dark:text-muted-400"
+      >
+        Iam a nice and lengthy card subtitle
+      </p>
+    `,
+    style: 'padding: 1.5rem; max-width: 340px;',
+  },
+}
+// #endregion
+
+// #region Color: dark
+export const ColorDark: Story = {
+  name: 'Color: dark',
+  args: {
+    // set default values used for UI preview
+    color: 'dark',
+    children: html`
+      <h6 class="nui-heading nui-weight-medium text-white dark:text-muted-900">
+        Iam a card title
+      </h6>
+      <p
+        class="nui-paragraph nui-paragraph-xs text-muted-200 dark:text-muted-500"
+      >
+        Iam a nice and lengthy card subtitle
+      </p>
+    `,
+    style: 'padding: 1.5rem; max-width: 340px;',
+  },
+}
+// #endregion
+
+// #region Color: black
+export const ColorBlack: Story = {
+  name: 'Color: black',
+  args: {
+    // set default values used for UI preview
+    color: 'black',
+    children: html`
+      <h6 class="nui-heading nui-weight-medium text-white dark:text-muted-900">
+        Iam a card title
+      </h6>
+      <p
+        class="nui-paragraph nui-paragraph-xs text-muted-200 dark:text-muted-500"
       >
         Iam a nice and lengthy card subtitle
       </p>
