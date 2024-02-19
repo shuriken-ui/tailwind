@@ -99,6 +99,21 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply bg-${config.bar.color.danger}`]: {},
         },
       },
+      '&.nui-progress-light': {
+        '.nui-progress-bar': {
+          [`@apply ${config.bar.color.light}`]: {},
+        },
+      },
+      '&.nui-progress-dark': {
+        '.nui-progress-bar': {
+          [`@apply ${config.bar.color.dark}`]: {},
+        },
+      },
+      '&.nui-progress-black': {
+        '.nui-progress-bar': {
+          [`@apply ${config.bar.color.black}`]: {},
+        },
+      },
     },
   })
 }, config)

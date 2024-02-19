@@ -1,7 +1,15 @@
 import type { PropertyVariant } from '~/types/utils'
 
 export interface ProgressProps extends Record<string, unknown> {
-  color?: 'primary' | 'info' | 'success' | 'warning' | 'danger'
+  color?:
+    | 'primary'
+    | 'info'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | 'light'
+    | 'dark'
+    | 'black'
   contrast?: 'default' | 'contrast'
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'

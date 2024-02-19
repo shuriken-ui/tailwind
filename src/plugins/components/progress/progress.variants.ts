@@ -6,6 +6,9 @@ export const color = {
   success: 'nui-progress-success',
   warning: 'nui-progress-warning',
   danger: 'nui-progress-danger',
+  light: 'nui-progress-light',
+  dark: 'nui-progress-dark',
+  black: 'nui-progress-black',
 } as const satisfies ProgressVariant<'color'>
 
 export const contrast = {

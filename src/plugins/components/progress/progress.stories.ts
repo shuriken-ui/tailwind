@@ -12,7 +12,17 @@ const meta = {
   argTypes: {
     color: {
       control: { type: 'select' },
-      options: ['primary', 'info', 'success', 'warning', 'danger', 'none'],
+      options: [
+        'primary',
+        'info',
+        'success',
+        'warning',
+        'danger',
+        'light',
+        'dark',
+        'black',
+        'none',
+      ],
       defaultValue: 'primary',
     },
     contrast: {
@@ -157,6 +167,39 @@ export const ColorDanger: Story = {
   name: 'Color: danger',
   args: {
     color: 'danger',
+    size: 'sm',
+    rounded: 'full',
+    value: 72,
+    style: 'max-width: 320px; min-width: 320px;',
+  },
+}
+
+export const ColorLight: Story = {
+  name: 'Color: light',
+  args: {
+    color: 'light',
+    size: 'sm',
+    rounded: 'full',
+    value: 72,
+    style: 'max-width: 320px; min-width: 320px;',
+  },
+}
+
+export const ColorDark: Story = {
+  name: 'Color: dark',
+  args: {
+    color: 'dark',
+    size: 'sm',
+    rounded: 'full',
+    value: 72,
+    style: 'max-width: 320px; min-width: 320px;',
+  },
+}
+
+export const ColorBlack: Story = {
+  name: 'Color: black',
+  args: {
+    color: 'black',
     size: 'sm',
     rounded: 'full',
     value: 72,
