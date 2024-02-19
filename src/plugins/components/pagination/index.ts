@@ -107,19 +107,55 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply border-${config.link.border.inactive.light} dark:border-${config.link.border.inactive.dark}`]:
             {},
         },
-        //Link:active
-        '&.nui-active': {
+      },
+      '&.nui-pagination-primary': {
+        //Link:primary
+        '.nui-pagination-link.nui-active': {
           //Color
-          [`@apply text-${config.link.font.color.active.light} dark:text-${config.link.font.color.active.dark}`]:
+          [`@apply text-${config.link.font.color.active.primary.light} dark:text-${config.link.font.color.active.primary.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.link.background.active.light} dark:bg-${config.link.background.active.dark}`]:
+          [`@apply bg-${config.link.background.active.primary.light} dark:bg-${config.link.background.active.primary.dark}`]:
             {},
           //Border:active
-          [`@apply border-${config.link.border.active.light} dark:border-${config.link.border.active.dark}`]:
+          [`@apply border-${config.link.border.active.primary.light} dark:border-${config.link.border.active.primary.dark}`]:
             {},
           //Shadow:active
-          [`@apply shadow-${config.link.shadow.active.size} shadow-${config.link.shadow.active.light} dark:shadow-${config.link.shadow.active.dark}`]:
+          [`@apply shadow-${config.link.shadow.active.size} shadow-${config.link.shadow.active.color.primary.light} dark:shadow-${config.link.shadow.active.color.primary.dark}`]:
+            {},
+        },
+      },
+      '&.nui-pagination-dark': {
+        //Link:dark
+        '.nui-pagination-link.nui-active': {
+          //Color
+          [`@apply text-${config.link.font.color.active.dark.light} dark:text-${config.link.font.color.active.dark.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.link.background.active.dark.light} dark:bg-${config.link.background.active.dark.dark}`]:
+            {},
+          //Border:active
+          [`@apply border-${config.link.border.active.dark.light} dark:border-${config.link.border.active.dark.dark}`]:
+            {},
+          //Shadow:active
+          [`@apply shadow-${config.link.shadow.active.size} shadow-${config.link.shadow.active.color.dark.light} dark:shadow-${config.link.shadow.active.color.dark.dark}`]:
+            {},
+        },
+      },
+      '&.nui-pagination-black': {
+        //Link:black
+        '.nui-pagination-link.nui-active': {
+          //Color
+          [`@apply text-${config.link.font.color.active.black.light} dark:text-${config.link.font.color.active.black.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.link.background.active.black.light} dark:bg-${config.link.background.active.black.dark}`]:
+            {},
+          //Border:active
+          [`@apply border-${config.link.border.active.black.light} dark:border-${config.link.border.active.black.dark}`]:
+            {},
+          //Shadow:active
+          [`@apply shadow-${config.link.shadow.active.size} shadow-${config.link.shadow.active.color.black.light} dark:shadow-${config.link.shadow.active.color.black.dark}`]:
             {},
         },
       },

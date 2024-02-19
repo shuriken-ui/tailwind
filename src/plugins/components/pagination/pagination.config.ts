@@ -75,8 +75,18 @@ export const defaultConfig = {
       size: 'sm',
       color: {
         active: {
-          light: 'white',
-          dark: 'white',
+          primary: {
+            light: 'primary-invert',
+            dark: 'primary-invert',
+          },
+          dark: {
+            light: 'muted-100',
+            dark: 'muted-900',
+          },
+          black: {
+            light: 'white',
+            dark: 'black',
+          },
         },
         inactive: {
           base: {
@@ -100,8 +110,18 @@ export const defaultConfig = {
         dark: 'muted-700',
       },
       active: {
-        light: 'primary-500',
-        dark: 'primary-500',
+        primary: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+        dark: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+        black: {
+          light: 'black',
+          dark: 'white',
+        },
       },
     },
     background: {
@@ -120,15 +140,37 @@ export const defaultConfig = {
         },
       },
       active: {
-        light: 'primary-500',
-        dark: 'primary-500',
+        primary: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+        dark: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+        black: {
+          light: 'black',
+          dark: 'white',
+        },
       },
     },
     shadow: {
       active: {
-        light: 'primary-500/50',
-        dark: 'primary-500/20',
         size: 'sm',
+        color: {
+          primary: {
+            light: 'primary-500/50',
+            dark: 'primary-500/20',
+          },
+          dark: {
+            light: 'muted-300/30',
+            dark: 'muted-800/20',
+          },
+          black: {
+            light: 'muted-300/30',
+            dark: 'muted-800/20',
+          },
+        },
       },
     },
   },
