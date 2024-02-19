@@ -130,4 +130,31 @@ export const Danger: Story = {
     value: 72,
   },
 }
+
+export const Light: Story = {
+  name: 'Color: light',
+  args: {
+    color: 'light',
+    size: 55,
+    value: 72,
+  },
+}
+
+export const Dark: Story = {
+  name: 'Color: dark',
+  args: {
+    color: 'dark',
+    size: 55,
+    value: 72,
+  },
+}
+
+export const Black: Story = {
+  name: 'Color: black',
+  args: {
+    color: 'black',
+    size: 55,
+    value: 72,
+  },
+}
 // #endregion
