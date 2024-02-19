@@ -70,6 +70,28 @@ export default plugin(({ addComponents, theme }) => {
               {},
           },
         },
+        //Color:default-contrast
+        '&.nui-tag-default-contrast': {
+          //Color
+          [`@apply text-${config.variant.solid.defaultContrast.font.color.light} dark:text-${config.variant.solid.defaultContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.variant.solid.defaultContrast.background.light} dark:bg-${config.variant.solid.defaultContrast.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.solid.defaultContrast.border.light} dark:border-${config.variant.solid.defaultContrast.border.dark}`]:
+            {},
+          //Shadow:static
+          '&.nui-tag-shadow': {
+            [`@apply shadow-${config.variant.solid.defaultContrast.shadow.size}`]:
+              {},
+          },
+          //Shadow:hover
+          '&.nui-tag-shadow-hover': {
+            [`@apply hover:shadow-${config.variant.solid.defaultContrast.shadow.size}`]:
+              {},
+          },
+        },
         //Color:muted
         '&.nui-tag-muted': {
           //Color
@@ -85,6 +107,79 @@ export default plugin(({ addComponents, theme }) => {
           //Shadow:hover
           '&.nui-tag-shadow-hover': {
             [`@apply hover:shadow-${config.variant.solid.muted.shadow.size}`]:
+              {},
+          },
+        },
+        //Color:muted-contrast
+        '&.nui-tag-muted-contrast': {
+          //Color
+          [`@apply text-${config.variant.solid.mutedContrast.font.color.light} dark:text-${config.variant.solid.mutedContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.variant.solid.mutedContrast.background.light} dark:bg-${config.variant.solid.mutedContrast.background.dark}`]:
+            {},
+          //Shadow:static
+          '&.nui-tag-shadow': {
+            [`@apply shadow-${config.variant.solid.mutedContrast.shadow.size}`]:
+              {},
+          },
+          //Shadow:hover
+          '&.nui-tag-shadow-hover': {
+            [`@apply hover:shadow-${config.variant.solid.mutedContrast.shadow.size}`]:
+              {},
+          },
+        },
+        //Color:light
+        '&.nui-tag-light': {
+          //Color
+          [`@apply text-${config.variant.solid.light.font.color.light} dark:text-${config.variant.solid.light.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.variant.solid.light.background.light} dark:bg-${config.variant.solid.light.background.dark}`]:
+            {},
+          //Shadow:static
+          '&.nui-tag-shadow': {
+            [`@apply shadow-${config.variant.solid.light.shadow.size}`]: {},
+          },
+          //Shadow:hover
+          '&.nui-tag-shadow-hover': {
+            [`@apply hover:shadow-${config.variant.solid.light.shadow.size}`]:
+              {},
+          },
+        },
+        //Color:dark
+        '&.nui-tag-dark': {
+          //Color
+          [`@apply text-${config.variant.solid.dark.font.color.light} dark:text-${config.variant.solid.dark.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.variant.solid.dark.background.light} dark:bg-${config.variant.solid.dark.background.dark}`]:
+            {},
+          //Shadow:static
+          '&.nui-tag-shadow': {
+            [`@apply shadow-${config.variant.solid.dark.shadow.size}`]: {},
+          },
+          //Shadow:hover
+          '&.nui-tag-shadow-hover': {
+            [`@apply hover:shadow-${config.variant.solid.dark.shadow.size}`]:
+              {},
+          },
+        },
+        //Color:black
+        '&.nui-tag-black': {
+          //Color
+          [`@apply text-${config.variant.solid.black.font.color.light} dark:text-${config.variant.solid.black.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.variant.solid.black.background.light} dark:bg-${config.variant.solid.black.background.dark}`]:
+            {},
+          //Shadow:static
+          '&.nui-tag-shadow': {
+            [`@apply shadow-${config.variant.solid.black.shadow.size}`]: {},
+          },
+          //Shadow:hover
+          '&.nui-tag-shadow-hover': {
+            [`@apply hover:shadow-${config.variant.solid.black.shadow.size}`]:
               {},
           },
         },
@@ -187,43 +282,49 @@ export default plugin(({ addComponents, theme }) => {
       //Variant:pastel
       '&.nui-tag-pastel': {
         //Color:default
-        '&.nui-tag-default': {
+        '&.nui-tag-default, &.nui-tag-default-contrast': {
           //Color
-          [`@apply text-${config.variant.solid.default.font.color.light} dark:text-${config.variant.solid.default.font.color.dark}`]:
+          [`@apply text-${config.variant.pastel.default.font.color.light} dark:text-${config.variant.pastel.default.font.color.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.variant.solid.default.background.light} dark:bg-${config.variant.solid.default.background.dark}`]:
+          [`@apply bg-${config.variant.pastel.default.background.light} dark:bg-${config.variant.pastel.default.background.dark}`]:
             {},
-          //Border
-          [`@apply border border-${config.variant.solid.default.border.light} dark:border-${config.variant.solid.default.border.dark}`]:
-            {},
-          //Shadow:static
-          '&.nui-tag-shadow': {
-            [`@apply shadow-${config.variant.solid.default.shadow.size}`]: {},
-          },
-          //Shadow:hover
-          '&.nui-tag-shadow-hover': {
-            [`@apply hover:shadow-${config.variant.solid.default.shadow.size}`]:
-              {},
-          },
         },
         //Color:muted
-        '&.nui-tag-muted': {
+        '&.nui-tag-muted, &.nui-tag-muted-contrast': {
           //Color
-          [`@apply text-${config.variant.solid.muted.font.color.light} dark:text-${config.variant.solid.muted.font.color.dark}`]:
+          [`@apply text-${config.variant.pastel.muted.font.color.light} dark:text-${config.variant.pastel.muted.font.color.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.variant.solid.muted.background.light} dark:bg-${config.variant.solid.muted.background.dark}`]:
+          [`@apply bg-${config.variant.pastel.muted.background.light} dark:bg-${config.variant.pastel.muted.background.dark}`]:
             {},
-          //Shadow:static
-          '&.nui-tag-shadow': {
-            [`@apply shadow-${config.variant.solid.muted.shadow.size}`]: {},
-          },
-          //Shadow:hover
-          '&.nui-tag-shadow-hover': {
-            [`@apply hover:shadow-${config.variant.solid.muted.shadow.size}`]:
-              {},
-          },
+        },
+        //Color:light
+        '&.nui-tag-light': {
+          //Color
+          [`@apply text-${config.variant.pastel.light.font.color.light} dark:text-${config.variant.pastel.light.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.variant.pastel.light.background.light} dark:bg-${config.variant.pastel.light.background.dark}`]:
+            {},
+        },
+        //Color:dark
+        '&.nui-tag-dark': {
+          //Color
+          [`@apply text-${config.variant.pastel.dark.font.color.light} dark:text-${config.variant.pastel.dark.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.variant.pastel.dark.background.light} dark:bg-${config.variant.pastel.dark.background.dark}`]:
+            {},
+        },
+        //Color:black
+        '&.nui-tag-black': {
+          //Color
+          [`@apply text-${config.variant.pastel.black.font.color.light} dark:text-${config.variant.pastel.black.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.variant.pastel.black.background.light} dark:bg-${config.variant.pastel.black.background.dark}`]:
+            {},
         },
         //Color:primary
         '&.nui-tag-primary': {
@@ -274,40 +375,49 @@ export default plugin(({ addComponents, theme }) => {
       //Variant:outline
       '&.nui-tag-outline': {
         //Color:default
-        '&.nui-tag-default': {
+        '&.nui-tag-default, &.nui-tag-default-contrast': {
           //Color
-          [`@apply text-${config.variant.solid.default.font.color.light} dark:text-${config.variant.solid.default.font.color.dark}`]:
+          [`@apply text-${config.variant.outline.default.font.color.light} dark:text-${config.variant.outline.default.font.color.dark}`]:
             {},
           //Border
-          [`@apply border border-${config.variant.solid.default.border.light} dark:border-${config.variant.solid.default.border.dark}`]:
+          [`@apply border border-${config.variant.outline.default.border.light} dark:border-${config.variant.outline.default.border.dark}`]:
             {},
-          //Shadow:static
-          '&.nui-tag-shadow': {
-            [`@apply shadow-${config.variant.solid.default.shadow.size}`]: {},
-          },
-          //Shadow:hover
-          '&.nui-tag-shadow-hover': {
-            [`@apply hover:shadow-${config.variant.solid.default.shadow.size}`]:
-              {},
-          },
         },
         //Color:muted
-        '&.nui-tag-muted': {
+        '&.nui-tag-muted, &.nui-tag-muted-contrast': {
           //Color
-          [`@apply text-${config.variant.solid.muted.font.color.light} dark:text-${config.variant.solid.muted.font.color.dark}`]:
+          [`@apply text-${config.variant.outline.muted.font.color.light} dark:text-${config.variant.outline.muted.font.color.dark}`]:
             {},
           //Border
-          [`@apply border border-${config.variant.solid.default.border.light} dark:border-${config.variant.solid.default.border.dark}`]:
+          [`@apply border border-${config.variant.outline.muted.border.light} dark:border-${config.variant.outline.muted.border.dark}`]:
             {},
-          //Shadow:static
-          '&.nui-tag-shadow': {
-            [`@apply shadow-${config.variant.solid.muted.shadow.size}`]: {},
-          },
-          //Shadow:hover
-          '&.nui-tag-shadow-hover': {
-            [`@apply hover:shadow-${config.variant.solid.muted.shadow.size}`]:
-              {},
-          },
+        },
+        //Color:light
+        '&.nui-tag-light': {
+          //Color
+          [`@apply text-${config.variant.outline.light.font.color.light} dark:text-${config.variant.outline.light.font.color.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.outline.light.border.light} dark:border-${config.variant.outline.light.border.dark}`]:
+            {},
+        },
+        //Color:dark
+        '&.nui-tag-dark': {
+          //Color
+          [`@apply text-${config.variant.outline.dark.font.color.light} dark:text-${config.variant.outline.dark.font.color.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.outline.dark.border.light} dark:border-${config.variant.outline.dark.border.dark}`]:
+            {},
+        },
+        //Color:black
+        '&.nui-tag-black': {
+          //Color
+          [`@apply text-${config.variant.outline.black.font.color.light} dark:text-${config.variant.outline.black.font.color.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.outline.black.border.light} dark:border-${config.variant.outline.black.border.dark}`]:
+            {},
         },
         //Color:primary
         '&.nui-tag-primary': {
