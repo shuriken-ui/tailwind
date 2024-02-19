@@ -86,6 +86,17 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:bg-${config.color.default.background.hover.light} dark:hover:bg-${config.color.default.background.hover.dark}`]:
           {},
       },
+      //Color:default-contrast
+      '&.nui-button-default-contrast': {
+        [`@apply text-${config.color.defaultContrast.font.color.light} dark:text-${config.color.defaultContrast.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.defaultContrast.background.base.light} dark:bg-${config.color.defaultContrast.background.base.dark}`]:
+          {},
+        //Background hover
+        [`@apply hover:bg-${config.color.defaultContrast.background.hover.light} dark:hover:bg-${config.color.defaultContrast.background.hover.dark}`]:
+          {},
+      },
       //Color:muted
       '&.nui-button-muted': {
         [`@apply text-${config.color.muted.font.color.light} dark:text-${config.color.muted.font.color.dark}`]:
@@ -95,6 +106,17 @@ export default plugin(({ addComponents, theme }) => {
           {},
         //Background hover
         [`@apply hover:bg-${config.color.muted.background.hover.light} dark:hover:bg-${config.color.muted.background.hover.dark}`]:
+          {},
+      },
+      //Color:muted-contrast
+      '&.nui-button-muted-contrast': {
+        [`@apply text-${config.color.mutedContrast.font.color.light} dark:text-${config.color.mutedContrast.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.mutedContrast.background.base.light} dark:bg-${config.color.mutedContrast.background.base.dark}`]:
+          {},
+        //Background hover
+        [`@apply hover:bg-${config.color.mutedContrast.background.hover.light} dark:hover:bg-${config.color.mutedContrast.background.hover.dark}`]:
           {},
       },
       //Color:primary

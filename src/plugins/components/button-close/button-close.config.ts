@@ -45,6 +45,24 @@ export const defaultConfig = {
         },
       },
     },
+    defaultContrast: {
+      background: {
+        base: {
+          light: 'transparent',
+          dark: 'transparent',
+        },
+        hover: {
+          light: 'muted-100',
+          dark: 'muted-900',
+        },
+      },
+      font: {
+        color: {
+          light: 'muted-700',
+          dark: 'muted-50',
+        },
+      },
+    },
     muted: {
       background: {
         base: {
@@ -54,6 +72,24 @@ export const defaultConfig = {
         hover: {
           light: 'muted-50',
           dark: 'muted-600',
+        },
+      },
+      font: {
+        color: {
+          light: 'muted-700',
+          dark: 'muted-50',
+        },
+      },
+    },
+    mutedContrast: {
+      background: {
+        base: {
+          light: 'muted-100',
+          dark: 'muted-950',
+        },
+        hover: {
+          light: 'muted-50',
+          dark: 'muted-900',
         },
       },
       font: {
