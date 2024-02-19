@@ -16,7 +16,12 @@ export const size = {
 
 export const color = {
   default: 'nui-button-default',
+  'default-contrast': 'nui-button-default-contrast',
   muted: 'nui-button-muted',
+  'muted-contrast': 'nui-button-muted-contrast',
+  light: 'nui-button-light',
+  dark: 'nui-button-dark',
+  black: 'nui-button-black',
   primary: 'nui-button-primary',
   info: 'nui-button-info',
   success: 'nui-button-success',

@@ -49,6 +49,28 @@ export const defaultConfig = {
         dark: 'muted-600',
       },
     },
+    defaultContrast: {
+      background: {
+        base: {
+          light: 'white',
+          dark: 'muted-950',
+        },
+        hover: {
+          light: 'muted-50',
+          dark: 'muted-900',
+        },
+      },
+      text: {
+        color: {
+          light: 'muted-700',
+          dark: 'muted-100',
+        },
+      },
+      border: {
+        light: 'muted-300',
+        dark: 'muted-800',
+      },
+    },
     muted: {
       background: {
         base: {
@@ -64,6 +86,78 @@ export const defaultConfig = {
         color: {
           light: 'muted-500',
           dark: 'muted-100',
+        },
+      },
+    },
+    mutedContrast: {
+      background: {
+        base: {
+          light: 'muted-200',
+          dark: 'muted-950',
+        },
+        hover: {
+          light: 'muted-100',
+          dark: 'muted-900',
+        },
+      },
+      text: {
+        color: {
+          light: 'muted-500',
+          dark: 'muted-100',
+        },
+      },
+    },
+    light: {
+      background: {
+        base: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
+        hover: {
+          light: 'muted-100',
+          dark: 'muted-600',
+        },
+      },
+      text: {
+        color: {
+          light: 'muted-500',
+          dark: 'muted-100',
+        },
+      },
+    },
+    dark: {
+      background: {
+        base: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+        hover: {
+          light: 'muted-800',
+          dark: 'muted-50',
+        },
+      },
+      text: {
+        color: {
+          light: 'muted-100',
+          dark: 'muted-900',
+        },
+      },
+    },
+    black: {
+      background: {
+        base: {
+          light: 'black',
+          dark: 'white',
+        },
+        hover: {
+          light: 'black/90',
+          dark: 'white/90',
+        },
+      },
+      text: {
+        color: {
+          light: 'white',
+          dark: 'black',
         },
       },
     },
