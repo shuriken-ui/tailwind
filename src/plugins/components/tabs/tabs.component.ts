@@ -11,6 +11,7 @@ export const Tabs = ({
   tabs,
   type = 'tabs',
   justify = 'start',
+  color = 'primary',
   hideLabel,
   bordered = true,
   classes,
@@ -22,6 +23,7 @@ export const Tabs = ({
       class=${[
         'nui-tabs',
         justify && variants.justify[justify],
+        color && variants.color[color],
         type === 'tabs' && bordered && 'nui-tabs-bordered',
         classes?.wrapper,
       ]
