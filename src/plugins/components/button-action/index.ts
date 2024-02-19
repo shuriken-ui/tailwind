@@ -68,6 +68,24 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
           {},
       },
+      //Color:default-contrast
+      '&.nui-button-default-contrast': {
+        //Font
+        [`@apply text-${config.color.defaultContrast.font.color.light} dark:text-${config.color.defaultContrast.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.defaultContrast.background.base.light} dark:bg-${config.color.defaultContrast.background.base.dark}`]:
+          {},
+        //Hover
+        [`@apply hover:enabled:bg-${config.color.defaultContrast.background.hover.light} dark:hover:enabled:bg-${config.color.defaultContrast.background.hover.dark}`]:
+          {},
+        //Active
+        [`@apply active:enabled:bg-${config.color.defaultContrast.background.active.light} dark:active:enabled:bg-${config.color.defaultContrast.background.active.dark}`]:
+          {},
+        //Border
+        [`@apply border-${config.color.defaultContrast.border.light} dark:border-${config.color.defaultContrast.border.dark}`]:
+          {},
+      },
       //Color:muted
       '&.nui-button-muted': {
         //Font
@@ -84,6 +102,78 @@ export default plugin(({ addComponents, theme }) => {
           {},
         //Border
         [`@apply border-${config.color.muted.border.light} dark:border-${config.color.muted.border.dark}`]:
+          {},
+      },
+      //Color:muted-contrast
+      '&.nui-button-muted-contrast': {
+        //Font
+        [`@apply text-${config.color.mutedContrast.font.color.light} dark:text-${config.color.mutedContrast.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.mutedContrast.background.base.light} dark:bg-${config.color.mutedContrast.background.base.dark}`]:
+          {},
+        //Hover
+        [`@apply hover:enabled:bg-${config.color.mutedContrast.background.hover.light} dark:hover:enabled:bg-${config.color.mutedContrast.background.hover.dark}`]:
+          {},
+        //Active
+        [`@apply active:enabled:bg-${config.color.mutedContrast.background.active.light} dark:active:enabled:bg-${config.color.mutedContrast.background.active.dark}`]:
+          {},
+        //Border
+        [`@apply border-${config.color.mutedContrast.border.light} dark:border-${config.color.mutedContrast.border.dark}`]:
+          {},
+      },
+      //Color:light
+      '&.nui-button-light': {
+        //Font
+        [`@apply text-${config.color.light.font.color.light} dark:text-${config.color.light.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.light.background.base.light} dark:bg-${config.color.light.background.base.dark}`]:
+          {},
+        //Hover
+        [`@apply hover:enabled:bg-${config.color.light.background.hover.light} dark:hover:enabled:bg-${config.color.light.background.hover.dark}`]:
+          {},
+        //Active
+        [`@apply active:enabled:bg-${config.color.light.background.active.light} dark:active:enabled:bg-${config.color.light.background.active.dark}`]:
+          {},
+        //Border
+        [`@apply border-${config.color.light.border.light} dark:border-${config.color.light.border.dark}`]:
+          {},
+      },
+      //Color:dark
+      '&.nui-button-dark': {
+        //Font
+        [`@apply text-${config.color.dark.font.color.light} dark:text-${config.color.dark.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.dark.background.base.light} dark:bg-${config.color.dark.background.base.dark}`]:
+          {},
+        //Hover
+        [`@apply hover:enabled:bg-${config.color.dark.background.hover.light} dark:hover:enabled:bg-${config.color.dark.background.hover.dark}`]:
+          {},
+        //Active
+        [`@apply active:enabled:bg-${config.color.dark.background.active.light} dark:active:enabled:bg-${config.color.dark.background.active.dark}`]:
+          {},
+        //Border
+        [`@apply border-${config.color.dark.border.light} dark:border-${config.color.dark.border.dark}`]:
+          {},
+      },
+      //Color:black
+      '&.nui-button-black': {
+        //Font
+        [`@apply text-${config.color.black.font.color.light} dark:text-${config.color.black.font.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.black.background.base.light} dark:bg-${config.color.black.background.base.dark}`]:
+          {},
+        //Hover
+        [`@apply hover:enabled:bg-${config.color.black.background.hover.light} dark:hover:enabled:bg-${config.color.black.background.hover.dark}`]:
+          {},
+        //Active
+        [`@apply active:enabled:bg-${config.color.black.background.active.light} dark:active:enabled:bg-${config.color.black.background.active.dark}`]:
+          {},
+        //Border
+        [`@apply border-${config.color.black.border.light} dark:border-${config.color.black.border.dark}`]:
           {},
       },
       //Color:primary

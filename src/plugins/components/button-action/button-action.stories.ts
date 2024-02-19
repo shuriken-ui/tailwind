@@ -24,8 +24,12 @@ const meta = {
       control: { type: 'select' },
       options: [
         'default',
+        'default-contrast',
         'muted',
+        'muted-contrast',
         'light',
+        'dark',
+        'black',
         'primary',
         'info',
         'success',
@@ -165,6 +169,36 @@ export const ColorDanger: Story = {
   name: 'Color: danger',
   args: {
     color: 'danger',
+    label: 'Button',
+    loading: false,
+    rounded: 'sm',
+  },
+}
+
+export const ColorLight: Story = {
+  name: 'Color: light',
+  args: {
+    color: 'light',
+    label: 'Button',
+    loading: false,
+    rounded: 'sm',
+  },
+}
+
+export const ColorDark: Story = {
+  name: 'Color: dark',
+  args: {
+    color: 'dark',
+    label: 'Button',
+    loading: false,
+    rounded: 'sm',
+  },
+}
+
+export const ColorBlack: Story = {
+  name: 'Color: black',
+  args: {
+    color: 'black',
     label: 'Button',
     loading: false,
     rounded: 'sm',
