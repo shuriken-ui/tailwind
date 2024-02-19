@@ -20,6 +20,25 @@ const meta = {
       options: ['dot', 'chevron', 'plus'],
       defaultValue: 'dot',
     },
+    color: {
+      control: { type: 'select' },
+      options: ['default', 'default-contrast', 'muted', 'muted-contrast'],
+      defaultValue: 'default',
+    },
+    dotColor: {
+      control: { type: 'select' },
+      options: [
+        'default',
+        'primary',
+        'info',
+        'success',
+        'warning',
+        'danger',
+        'dark',
+        'black',
+      ],
+      defaultValue: 'default',
+    },
     rounded: {
       control: { type: 'select' },
       options: ['straight', 'rounded', 'smooth', 'curved'],

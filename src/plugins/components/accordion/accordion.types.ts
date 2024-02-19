@@ -7,6 +7,16 @@ export interface AccordionProps extends Record<string, unknown> {
   }[]
   openItems?: number[]
   exclusive?: boolean
+  color?: 'default' | 'default-contrast' | 'muted' | 'muted-contrast'
+  dotColor?:
+    | 'default'
+    | 'primary'
+    | 'info'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | 'dark'
+    | 'black'
   rounded?: 'none' | 'sm' | 'md' | 'lg'
   action?: 'dot' | 'chevron' | 'plus'
   classes?: {

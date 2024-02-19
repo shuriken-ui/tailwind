@@ -43,10 +43,6 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply bg-${config.icon.dot.background.light} dark:bg-${config.icon.dot.background.dark}`]:
           {},
       },
-      //Inner:dot active
-      '.nui-accordion-detail[open] .nui-accordion-dot': {
-        [`@apply bg-${config.icon.dot.background.active}`]: {},
-      },
       //Inner:summary
       '.nui-accordion-summary': {
         '@apply cursor-pointer list-none outline-none': {},
@@ -109,6 +105,110 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply font-${config.content.font.family} text-${config.content.font.size} text-${config.content.font.color.light} dark:text-${config.content.font.color.dark}`]:
           {},
       },
+      //Color:default
+      '&.nui-accordion-default': {
+        //Background
+        [`@apply bg-${config.color.default.background.base.light} dark:bg-${config.color.default.background.base.dark}`]:
+          {},
+        //Hover
+        [`@apply hover:bg-${config.color.default.background.hover.light} dark:hover:bg-${config.color.default.background.hover.dark}`]:
+          {},
+        //Border
+        [`@apply border border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
+          {},
+      },
+      //Color:default-contrast
+      '&.nui-accordion-default-contrast': {
+        //Background
+        [`@apply bg-${config.color.defaultContrast.background.base.light} dark:bg-${config.color.defaultContrast.background.base.dark}`]:
+          {},
+        //Hover
+        [`@apply hover:bg-${config.color.defaultContrast.background.hover.light} dark:hover:bg-${config.color.defaultContrast.background.hover.dark}`]:
+          {},
+        //Border
+        [`@apply border border-${config.color.defaultContrast.border.light} dark:border-${config.color.defaultContrast.border.dark}`]:
+          {},
+      },
+      //Color:muted
+      '&.nui-accordion-muted': {
+        //Background
+        [`@apply bg-${config.color.muted.background.base.light} dark:bg-${config.color.muted.background.base.dark}`]:
+          {},
+        //Hover
+        [`@apply hover:bg-${config.color.muted.background.hover.light} dark:hover:bg-${config.color.muted.background.hover.dark}`]:
+          {},
+        //Border
+        [`@apply border border-${config.color.muted.border.light} dark:border-${config.color.muted.border.dark}`]:
+          {},
+      },
+      //Color:muted-contrast
+      '&.nui-accordion-muted-contrast': {
+        //Background
+        [`@apply bg-${config.color.mutedContrast.background.base.light} dark:bg-${config.color.mutedContrast.background.base.dark}`]:
+          {},
+        //Hover
+        [`@apply hover:bg-${config.color.mutedContrast.background.hover.light} dark:hover:bg-${config.color.mutedContrast.background.hover.dark}`]:
+          {},
+        //Border
+        [`@apply border border-${config.color.mutedContrast.border.light} dark:border-${config.color.mutedContrast.border.dark}`]:
+          {},
+      },
+      //Dot:default
+      '&.nui-dot-default': {
+        '.nui-accordion-detail[open] .nui-accordion-dot': {
+          [`@apply bg-${config.dotColor.default.background.light} dark:bg-${config.dotColor.default.background.dark}`]:
+            {},
+        },
+      },
+      //Dot:primary
+      '&.nui-dot-primary': {
+        '.nui-accordion-detail[open] .nui-accordion-dot': {
+          [`@apply bg-${config.dotColor.primary.background.light} dark:bg-${config.dotColor.primary.background.dark}`]:
+            {},
+        },
+      },
+      //Dot:info
+      '&.nui-dot-info': {
+        '.nui-accordion-detail[open] .nui-accordion-dot': {
+          [`@apply bg-${config.dotColor.info.background.light} dark:bg-${config.dotColor.info.background.dark}`]:
+            {},
+        },
+      },
+      //Dot:success
+      '&.nui-dot-success': {
+        '.nui-accordion-detail[open] .nui-accordion-dot': {
+          [`@apply bg-${config.dotColor.success.background.light} dark:bg-${config.dotColor.success.background.dark}`]:
+            {},
+        },
+      },
+      //Dot:warning
+      '&.nui-dot-warning': {
+        '.nui-accordion-detail[open] .nui-accordion-dot': {
+          [`@apply bg-${config.dotColor.warning.background.light} dark:bg-${config.dotColor.warning.background.dark}`]:
+            {},
+        },
+      },
+      //Dot:danger
+      '&.nui-dot-danger': {
+        '.nui-accordion-detail[open] .nui-accordion-dot': {
+          [`@apply bg-${config.dotColor.danger.background.light} dark:bg-${config.dotColor.danger.background.dark}`]:
+            {},
+        },
+      },
+      //Dot:dark
+      '&.nui-dot-dark': {
+        '.nui-accordion-detail[open] .nui-accordion-dot': {
+          [`@apply bg-${config.dotColor.dark.background.light} dark:bg-${config.dotColor.dark.background.dark}`]:
+            {},
+        },
+      },
+      //Dot:black
+      '&.nui-dot-black': {
+        '.nui-accordion-detail[open] .nui-accordion-dot': {
+          [`@apply bg-${config.dotColor.black.background.light} dark:bg-${config.dotColor.black.background.dark}`]:
+            {},
+        },
+      },
       '&.nui-accordion-dot': {
         '.nui-accordion-header': {
           [`@apply p-${config.content.padding.x}`]: {},
@@ -161,6 +261,9 @@ export default plugin(({ addComponents, theme }) => {
         '&.nui-accordion:last-child': {
           [`@apply rounded-b-${config.wrapper.rounded.lg}`]: {},
         },
+      },
+      '+ .nui-accordion': {
+        [`@apply !border-t-0`]: {},
       },
     },
   })
