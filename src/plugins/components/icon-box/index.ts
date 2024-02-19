@@ -127,6 +127,24 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Variant:solid
       '&.nui-box-solid': {
+        //Color:default
+        '&.nui-box-default': {
+          //Font
+          [`@apply text-${config.color.variant.solid.default.font.color.light} dark:text-${config.color.variant.solid.default.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.default.background.light} dark:bg-${config.color.variant.solid.default.background.dark}`]:
+            {},
+        },
+        //Color:default-contrast
+        '&.nui-box-default-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.solid.defaultContrast.font.color.light} dark:text-${config.color.variant.solid.defaultContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.defaultContrast.background.light} dark:bg-${config.color.variant.solid.defaultContrast.background.dark}`]:
+            {},
+        },
         //Color:invert
         '&.nui-box-invert': {
           //Font
@@ -134,6 +152,24 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.color.variant.solid.invert.background.light} dark:bg-${config.color.variant.solid.invert.background.dark}`]:
+            {},
+        },
+        //Color:dark
+        '&.nui-box-dark': {
+          //Font
+          [`@apply text-${config.color.variant.solid.dark.font.color.light} dark:text-${config.color.variant.solid.dark.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.dark.background.light} dark:bg-${config.color.variant.solid.dark.background.dark}`]:
+            {},
+        },
+        //Color:black
+        '&.nui-box-black': {
+          //Font
+          [`@apply text-${config.color.variant.solid.black.font.color.light} dark:text-${config.color.variant.solid.black.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.black.background.light} dark:bg-${config.color.variant.solid.black.background.dark}`]:
             {},
         },
         //Color:primary
@@ -184,6 +220,24 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Variant:pastel
       '&.nui-box-pastel': {
+        //Color:default
+        '&.nui-box-default': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.default.font.color.light} dark:text-${config.color.variant.pastel.default.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.default.background.light} dark:bg-${config.color.variant.pastel.default.background.dark}`]:
+            {},
+        },
+        //Color:default-contrast
+        '&.nui-box-default-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.defaultContrast.font.color.light} dark:text-${config.color.variant.pastel.defaultContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.defaultContrast.background.light} dark:bg-${config.color.variant.pastel.defaultContrast.background.dark}`]:
+            {},
+        },
         //Color:invert
         '&.nui-box-invert': {
           //Font
@@ -191,6 +245,24 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.color.variant.pastel.invert.background.light} dark:bg-${config.color.variant.pastel.invert.background.dark}`]:
+            {},
+        },
+        //Color:dark
+        '&.nui-box-dark': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.dark.font.color.light} dark:text-${config.color.variant.pastel.dark.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.dark.background.light} dark:bg-${config.color.variant.pastel.dark.background.dark}`]:
+            {},
+        },
+        //Color:black
+        '&.nui-box-black': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.black.font.color.light} dark:text-${config.color.variant.pastel.black.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.black.background.light} dark:bg-${config.color.variant.pastel.black.background.dark}`]:
             {},
         },
         //Color:primary
@@ -241,6 +313,30 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Variant:outline
       '&.nui-box-outline': {
+        //Color:default
+        '&.nui-box-default': {
+          //Font
+          [`@apply text-${config.color.variant.outline.default.font.color.light} dark:text-${config.color.variant.outline.default.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.default.background.light}  bg-${config.color.variant.outline.default.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.default.border.light} dark:border-${config.color.variant.outline.default.border.dark}`]:
+            {},
+        },
+        //Color:default-contrast
+        '&.nui-box-default-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.outline.defaultContrast.font.color.light} dark:text-${config.color.variant.outline.defaultContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.defaultContrast.background.light}  bg-${config.color.variant.outline.defaultContrast.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.defaultContrast.border.light} dark:border-${config.color.variant.outline.defaultContrast.border.dark}`]:
+            {},
+        },
         //Color:invert
         '&.nui-box-invert': {
           //Font
@@ -251,6 +347,30 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Border
           [`@apply border-2 border-${config.color.variant.outline.invert.border.light} dark:border-${config.color.variant.outline.invert.border.dark}`]:
+            {},
+        },
+        //Color:dark
+        '&.nui-box-dark': {
+          //Font
+          [`@apply text-${config.color.variant.outline.dark.font.color.light} dark:text-${config.color.variant.outline.dark.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.dark.background.light}  bg-${config.color.variant.outline.dark.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.dark.border.light} dark:border-${config.color.variant.outline.dark.border.dark}`]:
+            {},
+        },
+        //Color:black
+        '&.nui-box-black': {
+          //Font
+          [`@apply text-${config.color.variant.outline.black.font.color.light} dark:text-${config.color.variant.outline.black.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.black.background.light}  bg-${config.color.variant.outline.black.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.black.border.light} dark:border-${config.color.variant.outline.black.border.dark}`]:
             {},
         },
         //Color:primary

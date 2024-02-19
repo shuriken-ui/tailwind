@@ -25,7 +25,10 @@ export const variant = {
 
 export const color = {
   default: 'nui-box-default',
+  'default-contrast': 'nui-box-default-contrast',
   invert: 'nui-box-invert',
+  dark: 'nui-box-dark',
+  black: 'nui-box-black',
   primary: 'nui-box-primary',
   info: 'nui-box-info',
   success: 'nui-box-success',
