@@ -21,26 +21,142 @@ export const defaultConfig = {
     font: {
       family: 'sans',
       size: 'sm',
-      color: {
-        active: {
-          light: 'white',
-          dark: 'white',
+    },
+  },
+  naver: {
+    transition: {
+      property: 'all',
+      duration: '300',
+    },
+  },
+  color: {
+    primary: {
+      tabs: {
+        color: {
+          active: {
+            light: 'white',
+            dark: 'white',
+          },
+          inactive: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
         },
-        inactive: {
-          light: 'muted-400',
+      },
+      naver: {
+        background: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+      },
+    },
+    default: {
+      tabs: {
+        color: {
+          active: {
+            light: 'muted-800',
+            dark: 'white',
+          },
+          inactive: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+        },
+      },
+      naver: {
+        background: {
+          light: 'white',
+          dark: 'muted-700',
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'muted-600',
+        },
+      },
+    },
+    defaultContrast: {
+      tabs: {
+        color: {
+          active: {
+            light: 'muted-900',
+            dark: 'white',
+          },
+          inactive: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+        },
+      },
+      naver: {
+        background: {
+          light: 'white',
+          dark: 'muted-950',
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'muted-800',
+        },
+      },
+    },
+    light: {
+      tabs: {
+        color: {
+          active: {
+            light: 'white',
+            dark: 'white',
+          },
+          inactive: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+        },
+      },
+      naver: {
+        background: {
+          light: 'muted-500',
           dark: 'muted-400',
         },
       },
     },
-  },
-  naver: {
-    background: {
-      light: 'primary-500',
-      dark: 'primary-500',
+    dark: {
+      tabs: {
+        color: {
+          active: {
+            light: 'white',
+            dark: 'muted-900',
+          },
+          inactive: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+        },
+      },
+      naver: {
+        background: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+      },
     },
-    transition: {
-      property: 'all',
-      duration: '300',
+    black: {
+      tabs: {
+        color: {
+          active: {
+            light: 'white',
+            dark: 'black',
+          },
+          inactive: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+        },
+      },
+      naver: {
+        background: {
+          light: 'black',
+          dark: 'white',
+        },
+      },
     },
   },
   size: {

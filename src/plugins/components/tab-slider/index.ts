@@ -37,24 +37,11 @@ export default plugin(({ addComponents, theme }) => {
         //Font
         [`@apply text-${config.item.font.size} font-${config.item.font.family}`]:
           {},
-        //Item:inactive
-        '&:not(.nui-active)': {
-          [`@apply text-${config.item.font.color.inactive.light} dark:text-${config.item.font.color.inactive.dark}`]:
-            {},
-        },
-        //Item:active
-        '&.nui-active': {
-          [`@apply text-${config.item.font.color.active.light} dark:text-${config.item.font.color.active.dark}`]:
-            {},
-        },
       },
       //Tabs:naver
       '.nui-tab-slider-naver': {
         //Base
         '@apply absolute start-0 top-0 z-10 h-full': {},
-        //Background
-        [`@apply bg-${config.naver.background.light} dark:bg-${config.naver.background.dark}`]:
-          {},
         //Transition
         [`@apply transition-${config.naver.transition.property} duration-${config.naver.transition.duration}`]:
           {},
@@ -73,6 +60,100 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-tabs-end': {
         '.nui-tab-slider-inner': {
           '@apply justify-end': {},
+        },
+      },
+      //Color:default
+      '&.nui-tabs-default': {
+        '.nui-tab-slider-item:not(.nui-active)': {
+          [`@apply text-${config.color.default.tabs.color.inactive.light} dark:text-${config.color.default.tabs.color.inactive.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-item.nui-active': {
+          [`@apply text-${config.color.default.tabs.color.active.light} dark:text-${config.color.default.tabs.color.active.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-naver': {
+          [`@apply bg-${config.color.default.naver.background.light} dark:bg-${config.color.default.naver.background.dark}`]:
+            {},
+          [`@apply border border-${config.color.default.naver.border.light} dark:border-${config.color.default.naver.border.dark}`]:
+            {},
+        },
+      },
+      //Color:default-contrast
+      '&.nui-tabs-default-contrast': {
+        '.nui-tab-slider-item:not(.nui-active)': {
+          [`@apply text-${config.color.defaultContrast.tabs.color.inactive.light} dark:text-${config.color.defaultContrast.tabs.color.inactive.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-item.nui-active': {
+          [`@apply text-${config.color.defaultContrast.tabs.color.active.light} dark:text-${config.color.defaultContrast.tabs.color.active.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-naver': {
+          [`@apply bg-${config.color.defaultContrast.naver.background.light} dark:bg-${config.color.defaultContrast.naver.background.dark}`]:
+            {},
+          [`@apply border border-${config.color.defaultContrast.naver.border.light} dark:border-${config.color.defaultContrast.naver.border.dark}`]:
+            {},
+        },
+      },
+      //Color:primary
+      '&.nui-tabs-primary': {
+        '.nui-tab-slider-item:not(.nui-active)': {
+          [`@apply text-${config.color.primary.tabs.color.inactive.light} dark:text-${config.color.primary.tabs.color.inactive.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-item.nui-active': {
+          [`@apply text-${config.color.primary.tabs.color.active.light} dark:text-${config.color.primary.tabs.color.active.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-naver': {
+          [`@apply bg-${config.color.primary.naver.background.light} dark:bg-${config.color.primary.naver.background.dark}`]:
+            {},
+        },
+      },
+      //Color:light
+      '&.nui-tabs-light': {
+        '.nui-tab-slider-item:not(.nui-active)': {
+          [`@apply text-${config.color.light.tabs.color.inactive.light} dark:text-${config.color.light.tabs.color.inactive.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-item.nui-active': {
+          [`@apply text-${config.color.light.tabs.color.active.light} dark:text-${config.color.light.tabs.color.active.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-naver': {
+          [`@apply bg-${config.color.light.naver.background.light} dark:bg-${config.color.light.naver.background.dark}`]:
+            {},
+        },
+      },
+      //Color:dark
+      '&.nui-tabs-dark': {
+        '.nui-tab-slider-item:not(.nui-active)': {
+          [`@apply text-${config.color.dark.tabs.color.inactive.light} dark:text-${config.color.dark.tabs.color.inactive.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-item.nui-active': {
+          [`@apply text-${config.color.dark.tabs.color.active.light} dark:text-${config.color.dark.tabs.color.active.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-naver': {
+          [`@apply bg-${config.color.dark.naver.background.light} dark:bg-${config.color.dark.naver.background.dark}`]:
+            {},
+        },
+      },
+      //Color:black
+      '&.nui-tabs-black': {
+        '.nui-tab-slider-item:not(.nui-active)': {
+          [`@apply text-${config.color.black.tabs.color.inactive.light} dark:text-${config.color.black.tabs.color.inactive.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-item.nui-active': {
+          [`@apply text-${config.color.black.tabs.color.active.light} dark:text-${config.color.black.tabs.color.active.dark}`]:
+            {},
+        },
+        '.nui-tab-slider-naver': {
+          [`@apply bg-${config.color.black.naver.background.light} dark:bg-${config.color.black.naver.background.dark}`]:
+            {},
         },
       },
       //Rounded:sm
