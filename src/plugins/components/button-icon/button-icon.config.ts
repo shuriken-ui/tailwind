@@ -45,7 +45,7 @@ export const defaultConfig = {
         },
       },
       border: {
-        light: 'muted-300',
+        light: 'muted-200',
         dark: 'muted-600',
       },
     },
