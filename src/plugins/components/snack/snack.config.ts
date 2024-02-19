@@ -108,10 +108,26 @@ export const defaultConfig = {
         dark: 'muted-600',
       },
     },
+    defaultContrast: {
+      background: {
+        light: 'white',
+        dark: 'muted-950',
+      },
+      border: {
+        light: 'muted-300',
+        dark: 'muted-800',
+      },
+    },
     muted: {
       background: {
         light: 'muted-200',
         dark: 'muted-700',
+      },
+    },
+    mutedContrast: {
+      background: {
+        light: 'muted-200',
+        dark: 'muted-950',
       },
     },
   },
