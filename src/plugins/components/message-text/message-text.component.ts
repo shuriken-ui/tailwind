@@ -13,7 +13,7 @@ import { Paragraph } from '../paragraph/paragraph.component'
 export const MessageText = ({
   title,
   text,
-  contrast = 'white',
+  contrast = 'low-contrast',
   color = 'default',
   rounded = 'sm',
   classes,
@@ -55,6 +55,7 @@ export const MessageText = ({
       ${ButtonClose({
         rounded: 'full',
         color: 'default',
+        size: 'xs',
         classes: {
           wrapper: 'nui-message-close',
         },

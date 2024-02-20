@@ -11,8 +11,10 @@ export interface MessageTextProps extends Record<string, unknown> {
     | 'success'
     | 'warning'
     | 'danger'
+    | 'dark'
+    | 'black'
     | 'none'
-  contrast?: 'white' | 'contrast'
+  contrast?: 'low-contrast' | 'high-contrast'
   classes?: {
     wrapper?: string | string[]
     title?: string | string[]

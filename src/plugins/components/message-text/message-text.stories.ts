@@ -28,6 +28,8 @@ const meta = {
         'success',
         'warning',
         'danger',
+        'dark',
+        'black',
         'none',
       ],
       defaultValue: 'default',
@@ -39,8 +41,8 @@ const meta = {
     },
     contrast: {
       control: { type: 'select' },
-      options: ['white', 'contrast'],
-      defaultValue: 'white',
+      options: ['low-contrast', 'high-contrast'],
+      defaultValue: 'low-contrast',
     },
   },
 } satisfies Meta<MessageTextAttrs>
@@ -148,6 +150,26 @@ export const Danger: Story = {
   name: 'Color: danger',
   args: {
     color: 'danger',
+    title: 'Message title',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec dicuntur inconstantissime. Quamquam te quidem video minime esse deterritum.',
+    style: 'max-width: 440px;',
+  },
+}
+
+export const Dark: Story = {
+  name: 'Color: dark',
+  args: {
+    color: 'dark',
+    title: 'Message title',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec dicuntur inconstantissime. Quamquam te quidem video minime esse deterritum.',
+    style: 'max-width: 440px;',
+  },
+}
+
+export const Black: Story = {
+  name: 'Color: black',
+  args: {
+    color: 'black',
     title: 'Message title',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec dicuntur inconstantissime. Quamquam te quidem video minime esse deterritum.',
     style: 'max-width: 440px;',

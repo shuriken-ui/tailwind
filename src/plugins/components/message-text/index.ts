@@ -29,9 +29,6 @@ export default plugin(({ addComponents, theme }) => {
         //Base
         [`@apply inline-block h-${config.dot.size} w-${config.dot.size} rounded-${config.dot.rounded}`]:
           {},
-        //Background
-        [`@apply bg-${config.dot.background.light} dark:bg-${config.dot.background.dark}`]:
-          {},
       },
       //Message:close
       '.nui-message-close': {
@@ -50,40 +47,34 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-message-curved': {
         [`@apply ${config.rounded.curved}`]: {},
       },
+      //Contrast:low
+      '&.nui-message-low-contrast': {
+        //Background
+        [`@apply bg-${config.contrast.lowContrast.background.light} dark:bg-${config.contrast.lowContrast.background.dark}`]:
+          {},
+        //Border
+        [`@apply border border-${config.contrast.lowContrast.border.light} dark:border-${config.contrast.lowContrast.border.dark}`]:
+          {},
+      },
+      //Contrast:high
+      '&.nui-message-high-contrast': {
+        //Background
+        [`@apply bg-${config.contrast.highContrast.background.light} dark:bg-${config.contrast.highContrast.background.dark}`]:
+          {},
+        //Border
+        [`@apply border border-${config.contrast.highContrast.border.light} dark:border-${config.contrast.highContrast.border.dark}`]:
+          {},
+      },
       //Color:white
-      '&.nui-message-white': {
-        [`@apply bg-${config.color.white.background.light} dark:bg-${config.color.white.background.dark}`]:
-          {},
-      },
-      //Color:whiteContrast
-      '&.nui-message-white-contrast': {
-        [`@apply bg-${config.color.whiteContrast.background.light} dark:bg-${config.color.whiteContrast.background.dark}`]:
-          {},
-      },
-      //Color:default
       '&.nui-message-default': {
-        [`@apply border border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
-          {},
         //Message:dot
         '.nui-message-dot': {
           [`@apply bg-${config.color.default.dot.background.light} dark:bg-${config.color.default.dot.background.dark}`]:
             {},
         },
       },
-      //Color:contrast
-      '&.nui-message-contrast': {
-        [`@apply border border-${config.color.contrast.border.light} dark:border-${config.color.contrast.border.dark}`]:
-          {},
-        //Message:dot
-        '.nui-message-dot': {
-          [`@apply bg-${config.color.contrast.dot.background.light} dark:bg-${config.color.contrast.dot.background.dark}`]:
-            {},
-        },
-      },
       //Color:primary
       '&.nui-message-primary': {
-        [`@apply border border-${config.color.primary.border.light} dark:border-${config.color.primary.border.dark}`]:
-          {},
         //Message:dot
         '.nui-message-dot': {
           [`@apply bg-${config.color.primary.dot.background.light} dark:bg-${config.color.primary.dot.background.dark}`]:
@@ -92,8 +83,6 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Color:info
       '&.nui-message-info': {
-        [`@apply border border-${config.color.info.border.light} dark:border-${config.color.info.border.dark}`]:
-          {},
         //Message:dot
         '.nui-message-dot': {
           [`@apply bg-${config.color.info.dot.background.light} dark:bg-${config.color.info.dot.background.dark}`]:
@@ -102,8 +91,6 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Color:success
       '&.nui-message-success': {
-        [`@apply border border-${config.color.success.border.light} dark:border-${config.color.success.border.dark}`]:
-          {},
         //Message:dot
         '.nui-message-dot': {
           [`@apply bg-${config.color.success.dot.background.light} dark:bg-${config.color.success.dot.background.dark}`]:
@@ -112,8 +99,6 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Color:warning
       '&.nui-message-warning': {
-        [`@apply border border-${config.color.warning.border.light} dark:border-${config.color.warning.border.dark}`]:
-          {},
         //Message:dot
         '.nui-message-dot': {
           [`@apply bg-${config.color.warning.dot.background.light} dark:bg-${config.color.warning.dot.background.dark}`]:
@@ -122,11 +107,25 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Color:danger
       '&.nui-message-danger': {
-        [`@apply border border-${config.color.danger.border.light} dark:border-${config.color.danger.border.dark}`]:
-          {},
         //Message:dot
         '.nui-message-dot': {
           [`@apply bg-${config.color.danger.dot.background.light} dark:bg-${config.color.danger.dot.background.dark}`]:
+            {},
+        },
+      },
+      //Color:dark
+      '&.nui-message-dark': {
+        //Message:dot
+        '.nui-message-dot': {
+          [`@apply bg-${config.color.dark.dot.background.light} dark:bg-${config.color.dark.dot.background.dark}`]:
+            {},
+        },
+      },
+      //Color:black
+      '&.nui-message-black': {
+        //Message:dot
+        '.nui-message-dot': {
+          [`@apply bg-${config.color.black.dot.background.light} dark:bg-${config.color.black.dot.background.dark}`]:
             {},
         },
       },
