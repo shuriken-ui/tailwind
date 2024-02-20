@@ -13,11 +13,18 @@ export const Breadcrumb = ({
   items,
   classes,
   separator = 'dot',
+  color = 'primary',
   ...attrs
 }: BreadcrumbAttrs) => {
   return html`
     <nav
-      class=${['nui-breadcrumb', classes?.wrapper].filter(Boolean).join(' ')}
+      class=${[
+        'nui-breadcrumb',
+        color && variants.color[color],
+        classes?.wrapper,
+      ]
+        .filter(Boolean)
+        .join(' ')}
       ${spread(attrs)}
     >
       <ul class="nui-breadcrumb-list">
