@@ -30,7 +30,7 @@ export const Breadcrumb = ({
       <ul class="nui-breadcrumb-list">
         <li class="nui-breadcrumb-item-mobile">
           ${Dropdown({
-            flavor: 'context',
+            variant: 'context',
             size: 'md',
             children: html`
               ${items?.slice(0, -1).map(

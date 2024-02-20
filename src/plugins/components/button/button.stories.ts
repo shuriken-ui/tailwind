@@ -193,7 +193,7 @@ export const Lg: Story = {
 }
 // #endregion
 
-// #region Flavors:solid
+// #region Variants:solid
 export const SolidDefault: Story = {
   name: 'Solid: default',
   args: {
@@ -339,7 +339,7 @@ export const SolidBlack: Story = {
 }
 // #endregion
 
-// #region Flavors:pastel
+// #region Variants:pastel
 export const PastelDefault: Story = {
   name: 'Pastel: default',
   args: {
@@ -461,7 +461,7 @@ export const PastelBlack: Story = {
 }
 // #endregion
 
-// #region Flavors:outline
+// #region Variants:outline
 export const OutlineDefault: Story = {
   name: 'Outline: default',
   args: {

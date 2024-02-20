@@ -133,7 +133,7 @@ export const Main: Story = {
 }
 // #endregion
 
-// #region Flavor: Button
+// #region Variant: Button
 export const ButtonEnd: Story = {
   name: 'Main example',
   args: {
@@ -179,7 +179,7 @@ export const ButtonEnd: Story = {
 }
 // #endregion
 
-// #region Flavor: context
+// #region Variant: context
 export const ContextStart: Story = {
   name: 'Context: start',
   args: {
@@ -269,7 +269,7 @@ export const ContextEnd: Story = {
 }
 // #endregion
 
-// #region Flavor: text
+// #region Variant: text
 export const TextStart: Story = {
   name: 'Text: start',
   args: {
