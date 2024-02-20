@@ -18,7 +18,9 @@ const meta = {
       control: { type: 'select' },
       options: [
         'default',
+        'default-contrast',
         'muted',
+        'muted-contrast',
         'primary',
         'info',
         'success',
@@ -114,10 +116,28 @@ export const TypeDefault: Story = {
   },
 }
 
+export const TypeDefaultContrast: Story = {
+  name: 'Type: default-contrast',
+  args: {
+    type: 'default-contrast',
+    rounded: 'sm',
+    message: 'Some nice message text',
+  },
+}
+
 export const TypeMuted: Story = {
   name: 'Type: muted',
   args: {
     type: 'muted',
+    rounded: 'sm',
+    message: 'Some nice message text',
+  },
+}
+
+export const TypeMutedContrast: Story = {
+  name: 'Type: muted-contrast',
+  args: {
+    type: 'muted-contrast',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -180,10 +200,30 @@ export const ClosableDefault: Story = {
   },
 }
 
+export const ClosableDefaultContrast: Story = {
+  name: 'Closable: default-contrast',
+  args: {
+    type: 'default-contrast',
+    rounded: 'sm',
+    closable: true,
+    message: 'Some nice message text',
+  },
+}
+
 export const ClosableMuted: Story = {
   name: 'Closable: muted',
   args: {
     type: 'muted',
+    rounded: 'sm',
+    closable: true,
+    message: 'Some nice message text',
+  },
+}
+
+export const ClosableMutedContrast: Story = {
+  name: 'Closable: muted-contrast',
+  args: {
+    type: 'muted-contrast',
     rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
@@ -268,10 +308,62 @@ export const SlotIconDefault: Story = {
   },
 }
 
+export const SlotIconDefaultContrast: Story = {
+  name: 'Slot icon: default-contrast',
+  args: {
+    type: 'default-contrast',
+    rounded: 'sm',
+    closable: true,
+    icon: html`
+      <svg
+        class="nui-message-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1Zm-.5 5a1 1 0 1 0 0 2h.5a1 1 0 1 0 0-2h-.5ZM10 10a1 1 0 1 0 0 2h1v3h-1a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-1v-4a1 1 0 0 0-1-1h-2Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    `,
+    message: 'Some nice message text',
+  },
+}
+
 export const SlotIconMuted: Story = {
   name: 'Slot icon: muted',
   args: {
     type: 'muted',
+    rounded: 'sm',
+    closable: true,
+    icon: html`
+      <svg
+        class="nui-message-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1Zm-.5 5a1 1 0 1 0 0 2h.5a1 1 0 1 0 0-2h-.5ZM10 10a1 1 0 1 0 0 2h1v3h-1a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-1v-4a1 1 0 0 0-1-1h-2Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    `,
+    message: 'Some nice message text',
+  },
+}
+
+export const SlotIconMutedContrast: Story = {
+  name: 'Slot icon: muted-contrast',
+  args: {
+    type: 'muted-contrast',
     rounded: 'sm',
     closable: true,
     icon: html`

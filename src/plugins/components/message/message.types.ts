@@ -3,7 +3,9 @@ import type { PropertyVariant } from '~/types/utils'
 export interface MessageProps extends Record<string, unknown> {
   type?:
     | 'default'
+    | 'default-contrast'
     | 'muted'
+    | 'muted-contrast'
     | 'primary'
     | 'info'
     | 'success'

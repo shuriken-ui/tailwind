@@ -127,6 +127,44 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Color:default-contrast
+      '&.nui-message-default-contrast': {
+        //Border
+        [`@apply border-${config.color.defaultContrast.border.light} dark:border-${config.color.defaultContrast.border.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.defaultContrast.background.light} dark:bg-${config.color.defaultContrast.background.dark}`]:
+          {},
+        //Icon:outer
+        '.nui-message-icon-outer': {
+          //Color
+          [`@apply text-${config.color.defaultContrast.outer.color.light} dark:text-${config.color.defaultContrast.outer.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.defaultContrast.outer.background.light} dark:bg-${config.color.defaultContrast.outer.background.dark}`]:
+            {},
+        },
+        //Inner:text
+        '.nui-message-inner-text': {
+          [`@apply text-${config.color.defaultContrast.inner.color.light} dark:text-${config.color.defaultContrast.inner.color.dark}`]:
+            {},
+        },
+        //Message:close
+        '.nui-message-close': {
+          //Color
+          [`@apply text-${config.color.defaultContrast.close.color.light} dark:text-${config.color.defaultContrast.close.color.dark}`]:
+            {},
+          //Background:hover
+          [`@apply hover:enabled:bg-${config.color.defaultContrast.close.background.hover.light} dark:hover:enabled:bg-${config.color.defaultContrast.close.background.hover.dark}`]:
+            {},
+          //Background:focus
+          [`@apply focus-visible:bg-${config.color.defaultContrast.close.background.focus.light} dark:focus-visible:bg-${config.color.defaultContrast.close.background.focus.dark}`]:
+            {},
+          //Background:active
+          [`@apply active:enabled:bg-${config.color.defaultContrast.close.background.active.light} dark:active:enabled:bg-${config.color.defaultContrast.close.background.active.dark}`]:
+            {},
+        },
+      },
       //Color:muted
       '&.nui-message-muted': {
         //Border
@@ -162,6 +200,44 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background:active
           [`@apply active:enabled:bg-${config.color.muted.close.background.active.light} dark:active:enabled:bg-${config.color.muted.close.background.active.dark}`]:
+            {},
+        },
+      },
+      //Color:muted-contrast
+      '&.nui-message-muted-contrast': {
+        //Border
+        [`@apply border-${config.color.mutedContrast.border.light} dark:border-${config.color.mutedContrast.border.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.mutedContrast.background.light} dark:bg-${config.color.mutedContrast.background.dark}`]:
+          {},
+        //Icon:outer
+        '.nui-message-icon-outer': {
+          //Color
+          [`@apply text-${config.color.mutedContrast.outer.color.light} dark:text-${config.color.mutedContrast.outer.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.mutedContrast.outer.background.light} dark:bg-${config.color.mutedContrast.outer.background.dark}`]:
+            {},
+        },
+        //Inner:text
+        '.nui-message-inner-text': {
+          [`@apply text-${config.color.mutedContrast.inner.color.light} dark:text-${config.color.mutedContrast.inner.color.dark}`]:
+            {},
+        },
+        //Message:close
+        '.nui-message-close': {
+          //Color
+          [`@apply text-${config.color.mutedContrast.close.color.light} dark:text-${config.color.mutedContrast.close.color.dark}`]:
+            {},
+          //Background:hover
+          [`@apply hover:enabled:bg-${config.color.mutedContrast.close.background.hover.light} dark:hover:enabled:bg-${config.color.mutedContrast.close.background.hover.dark}`]:
+            {},
+          //Background:focus
+          [`@apply focus-visible:bg-${config.color.mutedContrast.close.background.focus.light} dark:focus-visible:bg-${config.color.mutedContrast.close.background.focus.dark}`]:
+            {},
+          //Background:active
+          [`@apply active:enabled:bg-${config.color.mutedContrast.close.background.active.light} dark:active:enabled:bg-${config.color.mutedContrast.close.background.active.dark}`]:
             {},
         },
       },
