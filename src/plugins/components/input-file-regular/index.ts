@@ -100,7 +100,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply text-${config.color.white.addon.font.color.light} dark:text-${config.color.white.addon.font.color.dark}`]:
             {},
           //Border
-          [`@apply border-e border border-${config.color.white.addon.border.light} dark:border-${config.color.white.addon.border.dark}`]:
+          [`@apply border-e border-${config.color.white.addon.border.light} dark:border-${config.color.white.addon.border.dark}`]:
             {},
         },
       },
