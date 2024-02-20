@@ -16,7 +16,7 @@ export const Dropdown = ({
   variant = 'button',
   rounded = 'sm',
   orientation = 'start',
-  color = 'white',
+  color = 'default',
   size = 'lg',
   classes,
   children,

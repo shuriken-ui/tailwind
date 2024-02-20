@@ -84,7 +84,7 @@ export const defaultConfig = {
       lg: 'rounded-xl',
     },
     color: {
-      white: {
+      default: {
         background: {
           light: 'white',
           dark: 'muted-800',
@@ -94,7 +94,7 @@ export const defaultConfig = {
           dark: 'muted-700',
         },
       },
-      whiteContrast: {
+      defaultContrast: {
         background: {
           light: 'white',
           dark: 'muted-950',

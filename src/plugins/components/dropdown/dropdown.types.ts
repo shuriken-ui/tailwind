@@ -13,8 +13,8 @@ export interface DropdownProps extends Record<string, unknown> {
     | 'muted'
     | 'none'
   color?:
-    | 'white'
-    | 'white-contrast'
+    | 'default'
+    | 'default-contrast'
     | 'muted'
     | 'muted-contrast'
     | 'primary'

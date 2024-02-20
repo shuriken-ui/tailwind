@@ -30,8 +30,8 @@ const meta = {
     color: {
       control: { type: 'select' },
       options: [
-        'white',
-        'white-contrast',
+        'default',
+        'default-contrast',
         'muted',
         'muted-contrast',
         'primary',
@@ -91,7 +91,7 @@ export const Main: Story = {
   name: 'Main example',
   args: {
     // set default values used for UI preview
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'button',
     orientation: 'start',
@@ -137,7 +137,7 @@ export const Main: Story = {
 export const ButtonEnd: Story = {
   name: 'Main example',
   args: {
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'button',
     orientation: 'end',
@@ -183,7 +183,7 @@ export const ButtonEnd: Story = {
 export const ContextStart: Story = {
   name: 'Context: start',
   args: {
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'context',
     orientation: 'start',
@@ -227,7 +227,7 @@ export const ContextStart: Story = {
 export const ContextEnd: Story = {
   name: 'Context: end',
   args: {
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'context',
     orientation: 'end',
@@ -273,7 +273,7 @@ export const ContextEnd: Story = {
 export const TextStart: Story = {
   name: 'Text: start',
   args: {
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'text',
     orientation: 'start',
@@ -317,7 +317,7 @@ export const TextStart: Story = {
 export const TextEnd: Story = {
   name: 'Text: end',
   args: {
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'text',
     orientation: 'end',
@@ -363,7 +363,7 @@ export const TextEnd: Story = {
 export const ButtonColor: Story = {
   name: 'Button: color',
   args: {
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'button',
     buttonColor: 'primary',
@@ -410,7 +410,7 @@ export const ButtonColor: Story = {
 export const Divider: Story = {
   name: 'Dropdown: divider',
   args: {
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'button',
     orientation: 'start',
@@ -458,7 +458,7 @@ export const Divider: Story = {
 export const SlotIcon: Story = {
   name: 'Slot: icon',
   args: {
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'context',
     orientation: 'start',
@@ -577,7 +577,7 @@ export const SlotIcon: Story = {
 export const SlotAvatar: Story = {
   name: 'Slot: avatar',
   args: {
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'button',
     orientation: 'start',
@@ -647,7 +647,7 @@ export const SlotAvatar: Story = {
 export const SlotAction: Story = {
   name: 'Slot: action',
   args: {
-    color: 'white',
+    color: 'default',
     label: 'Dropdown',
     variant: 'button',
     orientation: 'start',

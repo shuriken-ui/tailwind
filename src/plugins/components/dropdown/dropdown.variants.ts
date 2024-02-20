@@ -19,8 +19,8 @@ export const rounded = {
 } as const satisfies DropdownVariant<'rounded'>
 
 export const color = {
-  white: 'nui-menu-white',
-  'white-contrast': 'nui-menu-white-contrast',
+  default: 'nui-menu-default',
+  'default-contrast': 'nui-menu-default-contrast',
   muted: 'nui-menu-muted',
   'muted-contrast': 'nui-menu-muted-contrast',
   primary: 'nui-menu-primary',
