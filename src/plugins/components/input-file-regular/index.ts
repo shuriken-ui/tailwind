@@ -134,9 +134,9 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Input:focus
-      '&.nui-input-color-focus': {
-        '.nui-input-file-inner': {
-          [`@apply focus-within:!border-${config.focus.border.light} dark:focus-within:!border-${config.focus.border.dark}`]:
+      '&.nui-input-file-color-focus': {
+        '.nui-input-file-inner:focus': {
+          [`@apply !border-${config.focus.border.light} dark:!border-${config.focus.border.dark}`]:
             {},
         },
       },
