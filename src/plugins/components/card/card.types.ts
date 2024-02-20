@@ -2,11 +2,10 @@ import type { PropertyVariant } from '~/types/utils'
 
 export interface CardProps extends Record<string, unknown> {
   rounded?: 'none' | 'sm' | 'md' | 'lg'
-  elevated?: boolean
-  elevatedHover?: boolean
+  shadow?: 'flat' | 'hover'
   color?:
-    | 'white'
-    | 'white-contrast'
+    | 'default'
+    | 'default-contrast'
     | 'muted'
     | 'muted-contrast'
     | 'dark'

@@ -17,22 +17,22 @@ export default plugin(({ addComponents, theme }) => {
       //Base
       [`@apply relative w-${config.width} transition-${config.transition.property} duration-${config.transition.duration}`]:
         {},
-      //Color:white
-      '&.nui-card-white': {
+      //Color:default
+      '&.nui-card-default': {
         //Border
-        [`@apply border border-${config.color.white.border.light} dark:border-${config.color.white.border.dark}`]:
+        [`@apply border border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
           {},
         //Background
-        [`@apply bg-${config.color.white.background.light} dark:bg-${config.color.white.background.dark}`]:
+        [`@apply bg-${config.color.default.background.light} dark:bg-${config.color.default.background.dark}`]:
           {},
       },
-      //Color:whiteContrast
-      '&.nui-card-white-contrast': {
+      //Color:defaultContrast
+      '&.nui-card-default-contrast': {
         //Border
-        [`@apply border border-${config.color.whiteContrast.border.light} dark:border-${config.color.whiteContrast.border.dark}`]:
+        [`@apply border border-${config.color.defaultContrast.border.light} dark:border-${config.color.defaultContrast.border.dark}`]:
           {},
         //Background
-        [`@apply bg-${config.color.whiteContrast.background.light} dark:bg-${config.color.whiteContrast.background.dark}`]:
+        [`@apply bg-${config.color.defaultContrast.background.light} dark:bg-${config.color.defaultContrast.background.dark}`]:
           {},
       },
       //Color:muted

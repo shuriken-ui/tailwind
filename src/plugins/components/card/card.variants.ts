@@ -8,8 +8,8 @@ export const rounded = {
 } as const satisfies CardVariant<'rounded'>
 
 export const color = {
-  white: 'nui-card-white',
-  'white-contrast': 'nui-card-white-contrast',
+  default: 'nui-card-default',
+  'default-contrast': 'nui-card-default-contrast',
   muted: 'nui-card-muted',
   'muted-contrast': 'nui-card-muted-contrast',
   dark: 'nui-card-dark',

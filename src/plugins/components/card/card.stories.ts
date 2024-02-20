@@ -14,8 +14,8 @@ const meta = {
     color: {
       control: { type: 'select' },
       options: [
-        'white',
-        'white-contrast',
+        'default',
+        'default-contrast',
         'muted',
         'muted-contrast',
         'dark',
@@ -27,7 +27,7 @@ const meta = {
         'danger',
         'none',
       ],
-      defaultValue: 'white',
+      defaultValue: 'default',
     },
     elevated: {
       name: 'Elevated',
@@ -52,7 +52,7 @@ export const Main: Story = {
   name: 'Main example',
   args: {
     // set default values used for UI preview
-    color: 'white',
+    color: 'default',
     children: html`
       <h6
         class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
@@ -70,12 +70,12 @@ export const Main: Story = {
 }
 // #endregion
 
-// #region Color: white
+// #region Color: default
 export const ColorWhite: Story = {
-  name: 'Color: white',
+  name: 'Color: default',
   args: {
     // set default values used for UI preview
-    color: 'white',
+    color: 'default',
     children: html`
       <h6
         class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
@@ -93,12 +93,12 @@ export const ColorWhite: Story = {
 }
 // #endregion
 
-// #region Color: white
+// #region Color: default-contrast
 export const ColorWhiteContrast: Story = {
-  name: 'Color: white contrast',
+  name: 'Color: default contrast',
   args: {
     // set default values used for UI preview
-    color: 'white-contrast',
+    color: 'default-contrast',
     children: html`
       <h6
         class="nui-heading nui-weight-medium text-muted-800 dark:text-muted-100"
@@ -324,7 +324,7 @@ export const ShadowFlat: Story = {
   name: 'Shadow: flat',
   args: {
     // set default values used for UI preview
-    color: 'white',
+    color: 'default',
     elevated: true,
     children: html`
       <h6
@@ -348,7 +348,7 @@ export const ShadowHover: Story = {
   name: 'Shadow: hover',
   args: {
     // set default values used for UI preview
-    color: 'white',
+    color: 'default',
     elevatedHover: true,
     children: html`
       <h6
@@ -372,7 +372,7 @@ export const Slot: Story = {
   name: 'Slot: default',
   args: {
     // set default values used for UI preview
-    color: 'white',
+    color: 'default',
     elevatedHover: true,
     children: html`
       <div class="flex items-center gap-2">
@@ -403,7 +403,7 @@ export const Slot2: Story = {
   name: 'Slot: default',
   args: {
     // set default values used for UI preview
-    color: 'white',
+    color: 'default',
     elevatedHover: true,
     children: html`
       <div class="flex items-center gap-2">
@@ -434,7 +434,7 @@ export const Slot3: Story = {
   name: 'Slot: default',
   args: {
     // set default values used for UI preview
-    color: 'white',
+    color: 'default',
     elevatedHover: true,
     children: html`
       <div class="flex items-center gap-2">

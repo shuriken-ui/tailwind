@@ -8,9 +8,8 @@ import * as variants from './card.variants'
  * Primary UI component for user interaction
  */
 export const Card = ({
-  color = 'white',
-  elevated,
-  elevatedHover,
+  color = 'default',
+  shadow,
   rounded = 'sm',
   classes,
   children,
@@ -22,8 +21,8 @@ export const Card = ({
         'nui-card',
         color && variants.color[color],
         rounded && variants.rounded[rounded],
-        elevated && 'nui-card-shadow',
-        elevatedHover && 'nui-card-shadow-hover',
+        shadow === 'flat' && 'nui-card-shadow',
+        shadow === 'hover' && 'nui-card-shadow-hover',
         classes?.wrapper,
       ]
         .filter(Boolean)
