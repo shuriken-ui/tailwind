@@ -50,43 +50,34 @@ export default plugin(({ addComponents, theme }) => {
       '.nui-button-close': {
         '@apply ms-auto': {},
       },
-      //Type:default
+      //Type:low-contrast
+      '&.nui-toast-low-contrast': {
+        //Background
+        [`@apply bg-${config.contrast.lowContrast.background.light} dark:bg-${config.contrast.lowContrast.background.dark}`]:
+          {},
+        //Border
+        [`@apply border-2 border-${config.contrast.lowContrast.border.light} dark:border-${config.contrast.lowContrast.border.dark}`]:
+          {},
+      },
+      //Type:high-contrast
+      '&.nui-toast-high-contrast': {
+        //Background
+        [`@apply bg-${config.contrast.highContrast.background.light} dark:bg-${config.contrast.highContrast.background.dark}`]:
+          {},
+        //Border
+        [`@apply border-2 border-${config.contrast.highContrast.border.light} dark:border-${config.contrast.highContrast.border.dark}`]:
+          {},
+      },
+      //Color:default
       '&.nui-toast-default': {
-        [`@apply border-2 border-${config.type.default.border.light} dark:border-${config.type.default.border.dark}`]:
-          {},
-      },
-      //Type:contrast
-      '&.nui-toast-contrast': {
-        [`@apply border-2 border-${config.type.contrast.border.light} dark:border-${config.type.contrast.border.dark}`]:
-          {},
-      },
-      //Color:white
-      '&.nui-toast-white': {
-        [`@apply bg-${config.color.white.background.light} dark:bg-${config.color.white.background.dark}`]:
-          {},
         //Icon:inner
         '.nui-toast-icon': {
-          [`@apply text-${config.color.white.icon.inner.color.light} dark:text-${config.color.white.icon.inner.color.dark}`]:
+          [`@apply text-${config.color.default.icon.inner.color.light} dark:text-${config.color.default.icon.inner.color.dark}`]:
             {},
         },
         //Icon:outer
         '.nui-toast-icon-block': {
-          [`@apply bg-${config.color.white.icon.outer.background.light} dark:bg-${config.color.white.icon.outer.background.dark}`]:
-            {},
-        },
-      },
-      //Color:whiteContrast
-      '&.nui-toast-white-contrast': {
-        [`@apply bg-${config.color.whiteContrast.background.light} dark:bg-${config.color.whiteContrast.background.dark}`]:
-          {},
-        //Icon:inner
-        '.nui-toast-icon': {
-          [`@apply text-${config.color.whiteContrast.icon.inner.color.light} dark:text-${config.color.whiteContrast.icon.inner.color.dark}`]:
-            {},
-        },
-        //Icon:outer
-        '.nui-toast-icon-block': {
-          [`@apply bg-${config.color.whiteContrast.icon.outer.background.light} dark:bg-${config.color.whiteContrast.icon.outer.background.dark}`]:
+          [`@apply bg-${config.color.default.icon.outer.background.light} dark:bg-${config.color.default.icon.outer.background.dark}`]:
             {},
         },
       },
@@ -167,6 +158,38 @@ export default plugin(({ addComponents, theme }) => {
         //Icon:outer
         '.nui-toast-icon-block': {
           [`@apply bg-${config.color.danger.icon.outer.background.light} dark:bg-${config.color.danger.icon.outer.background.dark}`]:
+            {},
+        },
+      },
+      //Color:dark
+      '&.nui-toast-dark': {
+        //Border
+        [`@apply border-2 border-${config.color.dark.border.light} dark:border-${config.color.dark.border.dark}`]:
+          {},
+        //Icon:inner
+        '.nui-toast-icon': {
+          [`@apply text-${config.color.dark.icon.inner.color.light} dark:text-${config.color.dark.icon.inner.color.dark}`]:
+            {},
+        },
+        //Icon:outer
+        '.nui-toast-icon-block': {
+          [`@apply bg-${config.color.dark.icon.outer.background.light} dark:bg-${config.color.dark.icon.outer.background.dark}`]:
+            {},
+        },
+      },
+      //Color:black
+      '&.nui-toast-black': {
+        //Border
+        [`@apply border-2 border-${config.color.black.border.light} dark:border-${config.color.black.border.dark}`]:
+          {},
+        //Icon:inner
+        '.nui-toast-icon': {
+          [`@apply text-${config.color.black.icon.inner.color.light} dark:text-${config.color.black.icon.inner.color.dark}`]:
+            {},
+        },
+        //Icon:outer
+        '.nui-toast-icon-block': {
+          [`@apply bg-${config.color.black.icon.outer.background.light} dark:bg-${config.color.black.icon.outer.background.dark}`]:
             {},
         },
       },

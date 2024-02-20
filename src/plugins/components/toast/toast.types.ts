@@ -11,8 +11,10 @@ export interface ToastProps extends Record<string, unknown> {
     | 'success'
     | 'warning'
     | 'danger'
+    | 'dark'
+    | 'black'
     | 'none'
-  contrast?: 'white' | 'contrast'
+  contrast?: 'low-contrast' | 'high-contrast'
   borderless?: boolean
   classes?: {
     wrapper?: string | string[]
