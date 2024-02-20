@@ -10,8 +10,10 @@ export const rounded = {
 
 export const color = {
   default: 'nui-checkbox-default',
-  light: 'nui-checkbox-light',
   muted: 'nui-checkbox-muted',
+  light: 'nui-checkbox-light',
+  dark: 'nui-checkbox-dark',
+  black: 'nui-checkbox-black',
   primary: 'nui-checkbox-primary',
   info: 'nui-checkbox-info',
   success: 'nui-checkbox-success',
