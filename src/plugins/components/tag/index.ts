@@ -100,6 +100,9 @@ export default plugin(({ addComponents, theme }) => {
           //Background
           [`@apply bg-${config.variant.solid.muted.background.light} dark:bg-${config.variant.solid.muted.background.dark}`]:
             {},
+          //Border
+          [`@apply border border-${config.variant.solid.muted.border.light} dark:border-${config.variant.solid.muted.border.dark}`]:
+            {},
           //Shadow:static
           '&.nui-tag-shadow': {
             [`@apply shadow-${config.variant.solid.muted.shadow.size}`]: {},
@@ -117,6 +120,9 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.variant.solid.mutedContrast.background.light} dark:bg-${config.variant.solid.mutedContrast.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.solid.mutedContrast.border.light} dark:border-${config.variant.solid.mutedContrast.border.dark}`]:
             {},
           //Shadow:static
           '&.nui-tag-shadow': {
@@ -137,6 +143,9 @@ export default plugin(({ addComponents, theme }) => {
           //Background
           [`@apply bg-${config.variant.solid.light.background.light} dark:bg-${config.variant.solid.light.background.dark}`]:
             {},
+          //Border
+          [`@apply border border-${config.variant.solid.light.border.light} dark:border-${config.variant.solid.light.border.dark}`]:
+            {},
           //Shadow:static
           '&.nui-tag-shadow': {
             [`@apply shadow-${config.variant.solid.light.shadow.size}`]: {},
@@ -154,6 +163,9 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.variant.solid.dark.background.light} dark:bg-${config.variant.solid.dark.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.solid.dark.border.light} dark:border-${config.variant.solid.dark.border.dark}`]:
             {},
           //Shadow:static
           '&.nui-tag-shadow': {
@@ -173,6 +185,9 @@ export default plugin(({ addComponents, theme }) => {
           //Background
           [`@apply bg-${config.variant.solid.black.background.light} dark:bg-${config.variant.solid.black.background.dark}`]:
             {},
+          //Border
+          [`@apply border border-${config.variant.solid.black.border.light} dark:border-${config.variant.solid.black.border.dark}`]:
+            {},
           //Shadow:static
           '&.nui-tag-shadow': {
             [`@apply shadow-${config.variant.solid.black.shadow.size}`]: {},
@@ -190,6 +205,9 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.variant.solid.primary.background.light} dark:bg-${config.variant.solid.primary.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.solid.primary.border.light} dark:border-${config.variant.solid.primary.border.dark}`]:
             {},
           //Shadow:static
           '&.nui-tag-shadow': {
@@ -210,6 +228,9 @@ export default plugin(({ addComponents, theme }) => {
           //Background
           [`@apply bg-${config.variant.solid.info.background.light} dark:bg-${config.variant.solid.info.background.dark}`]:
             {},
+          //Border
+          [`@apply border border-${config.variant.solid.info.border.light} dark:border-${config.variant.solid.info.border.dark}`]:
+            {},
           //Shadow:static
           '&.nui-tag-shadow': {
             [`@apply shadow-${config.variant.solid.info.shadow.size} shadow-${config.variant.solid.info.shadow.light} shadow-${config.variant.solid.info.shadow.dark}`]:
@@ -228,6 +249,9 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.variant.solid.success.background.light} dark:bg-${config.variant.solid.success.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.solid.success.border.light} dark:border-${config.variant.solid.success.border.dark}`]:
             {},
           //Shadow:static
           '&.nui-tag-shadow': {
@@ -248,6 +272,9 @@ export default plugin(({ addComponents, theme }) => {
           //Background
           [`@apply bg-${config.variant.solid.warning.background.light} dark:bg-${config.variant.solid.warning.background.dark}`]:
             {},
+          //Border
+          [`@apply border border-${config.variant.solid.warning.border.light} dark:border-${config.variant.solid.warning.border.dark}`]:
+            {},
           //Shadow:static
           '&.nui-tag-shadow': {
             [`@apply shadow-${config.variant.solid.warning.shadow.size} shadow-${config.variant.solid.warning.shadow.light} shadow-${config.variant.solid.warning.shadow.dark}`]:
@@ -266,6 +293,9 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.variant.solid.danger.background.light} dark:bg-${config.variant.solid.danger.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.solid.danger.border.light} dark:border-${config.variant.solid.danger.border.dark}`]:
             {},
           //Shadow:static
           '&.nui-tag-shadow': {
@@ -289,6 +319,9 @@ export default plugin(({ addComponents, theme }) => {
           //Background
           [`@apply bg-${config.variant.pastel.default.background.light} dark:bg-${config.variant.pastel.default.background.dark}`]:
             {},
+          //Border
+          [`@apply border border-${config.variant.pastel.default.border.light} dark:border-${config.variant.pastel.default.border.dark}`]:
+            {},
         },
         //Color:muted
         '&.nui-tag-muted, &.nui-tag-muted-contrast': {
@@ -297,6 +330,9 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.variant.pastel.muted.background.light} dark:bg-${config.variant.pastel.muted.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.pastel.muted.border.light} dark:border-${config.variant.pastel.muted.border.dark}`]:
             {},
         },
         //Color:light
@@ -307,6 +343,9 @@ export default plugin(({ addComponents, theme }) => {
           //Background
           [`@apply bg-${config.variant.pastel.light.background.light} dark:bg-${config.variant.pastel.light.background.dark}`]:
             {},
+          //Border
+          [`@apply border border-${config.variant.pastel.light.border.light} dark:border-${config.variant.pastel.light.border.dark}`]:
+            {},
         },
         //Color:dark
         '&.nui-tag-dark': {
@@ -315,6 +354,9 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.variant.pastel.dark.background.light} dark:bg-${config.variant.pastel.dark.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.pastel.dark.border.light} dark:border-${config.variant.pastel.dark.border.dark}`]:
             {},
         },
         //Color:black
@@ -325,6 +367,9 @@ export default plugin(({ addComponents, theme }) => {
           //Background
           [`@apply bg-${config.variant.pastel.black.background.light} dark:bg-${config.variant.pastel.black.background.dark}`]:
             {},
+          //Border
+          [`@apply border border-${config.variant.pastel.black.border.light} dark:border-${config.variant.pastel.black.border.dark}`]:
+            {},
         },
         //Color:primary
         '&.nui-tag-primary': {
@@ -333,6 +378,9 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.variant.pastel.primary.background.light} dark:bg-${config.variant.pastel.primary.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.pastel.primary.border.light} dark:border-${config.variant.pastel.primary.border.dark}`]:
             {},
         },
         //Color:info
@@ -343,6 +391,9 @@ export default plugin(({ addComponents, theme }) => {
           //Background
           [`@apply bg-${config.variant.pastel.info.background.light} dark:bg-${config.variant.pastel.info.background.dark}`]:
             {},
+          //Border
+          [`@apply border border-${config.variant.pastel.info.border.light} dark:border-${config.variant.pastel.info.border.dark}`]:
+            {},
         },
         //Color:success
         '&.nui-tag-success': {
@@ -351,6 +402,9 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.variant.pastel.success.background.light} dark:bg-${config.variant.pastel.success.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.pastel.success.border.light} dark:border-${config.variant.pastel.success.border.dark}`]:
             {},
         },
         //Color:warning
@@ -361,6 +415,9 @@ export default plugin(({ addComponents, theme }) => {
           //Background
           [`@apply bg-${config.variant.pastel.warning.background.light} dark:bg-${config.variant.pastel.warning.background.dark}`]:
             {},
+          //Border
+          [`@apply border border-${config.variant.pastel.warning.border.light} dark:border-${config.variant.pastel.warning.border.dark}`]:
+            {},
         },
         //Color:danger
         '&.nui-tag-danger': {
@@ -369,6 +426,9 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.variant.pastel.danger.background.light} dark:bg-${config.variant.pastel.danger.background.dark}`]:
+            {},
+          //Border
+          [`@apply border border-${config.variant.pastel.danger.border.light} dark:border-${config.variant.pastel.danger.border.dark}`]:
             {},
         },
       },

@@ -82,6 +82,10 @@ export const defaultConfig = {
           light: 'muted-100',
           dark: 'muted-800',
         },
+        border: {
+          light: 'muted-100',
+          dark: 'muted-800',
+        },
         shadow: {
           size: 'xl',
         },
@@ -94,6 +98,10 @@ export const defaultConfig = {
           },
         },
         background: {
+          light: 'muted-100',
+          dark: 'muted-950',
+        },
+        border: {
           light: 'muted-100',
           dark: 'muted-950',
         },
@@ -112,6 +120,10 @@ export const defaultConfig = {
           light: 'muted-200',
           dark: 'muted-700',
         },
+        border: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
         shadow: {
           size: 'xl',
         },
@@ -124,6 +136,10 @@ export const defaultConfig = {
           },
         },
         background: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+        border: {
           light: 'muted-900',
           dark: 'muted-100',
         },
@@ -142,6 +158,10 @@ export const defaultConfig = {
           light: 'black',
           dark: 'white',
         },
+        border: {
+          light: 'black',
+          dark: 'white',
+        },
         shadow: {
           size: 'xl',
         },
@@ -154,6 +174,10 @@ export const defaultConfig = {
           },
         },
         background: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+        border: {
           light: 'primary-500',
           dark: 'primary-500',
         },
@@ -174,6 +198,10 @@ export const defaultConfig = {
           light: 'info-500',
           dark: 'info-500',
         },
+        border: {
+          light: 'info-500',
+          dark: 'info-500',
+        },
         shadow: {
           size: 'xl',
           light: 'info-500/30',
@@ -188,6 +216,10 @@ export const defaultConfig = {
           },
         },
         background: {
+          light: 'success-500',
+          dark: 'success-500',
+        },
+        border: {
           light: 'success-500',
           dark: 'success-500',
         },
@@ -208,6 +240,10 @@ export const defaultConfig = {
           light: 'warning-500',
           dark: 'warning-500',
         },
+        border: {
+          light: 'warning-500',
+          dark: 'warning-500',
+        },
         shadow: {
           size: 'xl',
           light: 'warning-500/30',
@@ -222,6 +258,10 @@ export const defaultConfig = {
           },
         },
         background: {
+          light: 'danger-500',
+          dark: 'danger-500',
+        },
+        border: {
           light: 'danger-500',
           dark: 'danger-500',
         },
@@ -244,6 +284,10 @@ export const defaultConfig = {
           light: 'muted-100',
           dark: 'muted-100/10',
         },
+        border: {
+          light: 'muted-100',
+          dark: 'muted-100/10',
+        },
         shadow: {
           size: 'xl',
         },
@@ -256,6 +300,10 @@ export const defaultConfig = {
           },
         },
         background: {
+          light: 'muted-100',
+          dark: 'muted-800',
+        },
+        border: {
           light: 'muted-100',
           dark: 'muted-800',
         },
@@ -274,6 +322,10 @@ export const defaultConfig = {
           light: 'white/30',
           dark: 'white/20',
         },
+        border: {
+          light: 'white/30',
+          dark: 'white/20',
+        },
         shadow: {
           size: 'xl',
         },
@@ -286,6 +338,10 @@ export const defaultConfig = {
           },
         },
         background: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+        border: {
           light: 'muted-900',
           dark: 'muted-100',
         },
@@ -304,12 +360,20 @@ export const defaultConfig = {
           light: 'black',
           dark: 'white',
         },
+        border: {
+          light: 'black',
+          dark: 'white',
+        },
         shadow: {
           size: 'xl',
         },
       },
       primary: {
         background: {
+          light: 'primary-500/20',
+          dark: 'primary-500/10',
+        },
+        border: {
           light: 'primary-500/20',
           dark: 'primary-500/10',
         },
@@ -325,6 +389,10 @@ export const defaultConfig = {
           light: 'info-500/20',
           dark: 'info-500/10',
         },
+        border: {
+          light: 'info-500/20',
+          dark: 'info-500/10',
+        },
         font: {
           color: {
             light: 'info-500',
@@ -334,6 +402,10 @@ export const defaultConfig = {
       },
       success: {
         background: {
+          light: 'success-500/20',
+          dark: 'success-500/10',
+        },
+        border: {
           light: 'success-500/20',
           dark: 'success-500/10',
         },
@@ -349,6 +421,10 @@ export const defaultConfig = {
           light: 'warning-500/20',
           dark: 'warning-500/10',
         },
+        border: {
+          light: 'warning-500/20',
+          dark: 'warning-500/10',
+        },
         font: {
           color: {
             light: 'warning-500',
@@ -358,6 +434,10 @@ export const defaultConfig = {
       },
       danger: {
         background: {
+          light: 'danger-500/20',
+          dark: 'danger-500/10',
+        },
+        border: {
           light: 'danger-500/20',
           dark: 'danger-500/10',
         },
