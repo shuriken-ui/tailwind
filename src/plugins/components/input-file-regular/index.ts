@@ -74,62 +74,62 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
           {},
       },
-      //Color:white
-      '&.nui-input-white': {
+      //Color:default
+      '&.nui-input-default': {
         //Input:inner
         '.nui-input-file-inner': {
           //Base
-          [`@apply text-${config.color.white.inner.font.color.light} dark:text-${config.color.white.inner.font.color.dark}`]:
+          [`@apply text-${config.color.default.inner.font.color.light} dark:text-${config.color.default.inner.font.color.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.color.white.inner.background.light} dark:bg-${config.color.white.inner.background.dark}`]:
+          [`@apply bg-${config.color.default.inner.background.light} dark:bg-${config.color.default.inner.background.dark}`]:
             {},
           //Border
-          [`@apply border border-${config.color.white.inner.border.light} dark:border-${config.color.white.inner.border.dark}`]:
+          [`@apply border border-${config.color.default.inner.border.light} dark:border-${config.color.default.inner.border.dark}`]:
             {},
           //Placeholder
-          [`@apply placeholder:text-${config.color.white.inner.placeholder.light} dark:placeholder:text-${config.color.white.inner.placeholder.dark}`]:
+          [`@apply placeholder:text-${config.color.default.inner.placeholder.light} dark:placeholder:text-${config.color.default.inner.placeholder.dark}`]:
             {},
         },
         //Input:addon
         '.nui-input-file-addon': {
           //Background
-          [`@apply bg-${config.color.white.addon.background.light} dark:bg-${config.color.white.addon.background.dark}`]:
+          [`@apply bg-${config.color.default.addon.background.light} dark:bg-${config.color.default.addon.background.dark}`]:
             {},
           //Color
-          [`@apply text-${config.color.white.addon.font.color.light} dark:text-${config.color.white.addon.font.color.dark}`]:
+          [`@apply text-${config.color.default.addon.font.color.light} dark:text-${config.color.default.addon.font.color.dark}`]:
             {},
           //Border
-          [`@apply border-e border-${config.color.white.addon.border.light} dark:border-${config.color.white.addon.border.dark}`]:
+          [`@apply border-e border-${config.color.default.addon.border.light} dark:border-${config.color.default.addon.border.dark}`]:
             {},
         },
       },
-      '&.nui-input-white-contrast': {
+      '&.nui-input-default-contrast': {
         //Input:inner
         '.nui-input-file-inner': {
           //Base
-          [`@apply text-${config.color.whiteContrast.inner.font.color.light} dark:text-${config.color.whiteContrast.inner.font.color.dark}`]:
+          [`@apply text-${config.color.defaultContrast.inner.font.color.light} dark:text-${config.color.defaultContrast.inner.font.color.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.color.whiteContrast.inner.background.light} dark:bg-${config.color.whiteContrast.inner.background.dark}`]:
+          [`@apply bg-${config.color.defaultContrast.inner.background.light} dark:bg-${config.color.defaultContrast.inner.background.dark}`]:
             {},
           //Border
-          [`@apply border border-${config.color.whiteContrast.inner.border.light} dark:border-${config.color.whiteContrast.inner.border.dark}`]:
+          [`@apply border border-${config.color.defaultContrast.inner.border.light} dark:border-${config.color.defaultContrast.inner.border.dark}`]:
             {},
           //Placeholder
-          [`@apply placeholder:text-${config.color.whiteContrast.inner.placeholder.light} dark:placeholder:text-${config.color.whiteContrast.inner.placeholder.dark}`]:
+          [`@apply placeholder:text-${config.color.defaultContrast.inner.placeholder.light} dark:placeholder:text-${config.color.defaultContrast.inner.placeholder.dark}`]:
             {},
         },
         //Input:addon
         '.nui-input-file-addon': {
           //Background
-          [`@apply bg-${config.color.whiteContrast.addon.background.light} dark:bg-${config.color.whiteContrast.addon.background.dark}`]:
+          [`@apply bg-${config.color.defaultContrast.addon.background.light} dark:bg-${config.color.defaultContrast.addon.background.dark}`]:
             {},
           //Color
-          [`@apply text-${config.color.whiteContrast.addon.font.color.light} dark:text-${config.color.whiteContrast.addon.font.color.dark}`]:
+          [`@apply text-${config.color.defaultContrast.addon.font.color.light} dark:text-${config.color.defaultContrast.addon.font.color.dark}`]:
             {},
           //Border
-          [`@apply border-e border border-${config.color.whiteContrast.addon.border.light} dark:border-${config.color.whiteContrast.addon.border.dark}`]:
+          [`@apply border-e border border-${config.color.defaultContrast.addon.border.light} dark:border-${config.color.defaultContrast.addon.border.dark}`]:
             {},
         },
       },

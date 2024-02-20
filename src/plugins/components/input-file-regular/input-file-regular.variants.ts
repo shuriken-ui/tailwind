@@ -15,6 +15,6 @@ export const size = {
 } as const satisfies InputFileRegularVariant<'size'>
 
 export const contrast = {
-  white: 'nui-input-white',
-  'white-contrast': 'nui-input-white-contrast',
+  default: 'nui-input-default',
+  'default-contrast': 'nui-input-default-contrast',
 } as const satisfies InputFileRegularVariant<'contrast'>

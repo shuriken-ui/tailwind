@@ -16,7 +16,7 @@ export const InputFileRegular = ({
   loading,
   placeholder,
   colorFocus,
-  contrast = 'white',
+  contrast = 'default',
   error,
   classes = {
     wrapper: '',
