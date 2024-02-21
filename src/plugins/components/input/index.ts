@@ -100,25 +100,25 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-input-rounded': {
+      '&.nui-input-rounded-sm': {
         '.nui-input': {
           [`@apply ${config.rounded.sm}`]: {},
         },
       },
       //Rounded:md
-      '&.nui-input-smooth': {
+      '&.nui-input-rounded-md': {
         '.nui-input': {
           [`@apply ${config.rounded.md}`]: {},
         },
       },
       //Rounded:lg
-      '&.nui-input-curved': {
+      '&.nui-input-rounded-lg': {
         '.nui-input': {
           [`@apply ${config.rounded.lg}`]: {},
         },
       },
       //Rounded:full
-      '&.nui-input-full': {
+      '&.nui-input-rounded-full': {
         '.nui-input': {
           [`@apply ${config.rounded.full}`]: {},
         },
