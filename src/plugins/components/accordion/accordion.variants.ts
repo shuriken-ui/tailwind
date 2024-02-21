@@ -20,9 +20,9 @@ export const dotColor = {
 
 export const rounded = {
   none: '',
-  sm: 'nui-accordion-rounded',
-  md: 'nui-accordion-smooth',
-  lg: 'nui-accordion-curved',
+  sm: 'nui-accordion-rounded-sm',
+  md: 'nui-accordion-rounded-md',
+  lg: 'nui-accordion-rounded-lg',
 } as const satisfies AccordionVariant<'rounded'>
 
 export const action = {

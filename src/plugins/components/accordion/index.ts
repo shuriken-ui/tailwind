@@ -238,7 +238,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply rounded-b-${config.wrapper.rounded.none}`]: {},
         },
       },
-      '&.nui-accordion-rounded': {
+      '&.nui-accordion-rounded-sm': {
         '&.nui-accordion:first-child': {
           [`@apply rounded-t-${config.wrapper.rounded.sm}`]: {},
         },
@@ -246,7 +246,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply rounded-b-${config.wrapper.rounded.sm}`]: {},
         },
       },
-      '&.nui-accordion-smooth': {
+      '&.nui-accordion-rounded-md': {
         '&.nui-accordion:first-child': {
           [`@apply rounded-t-${config.wrapper.rounded.md}`]: {},
         },
@@ -254,7 +254,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply rounded-b-${config.wrapper.rounded.md}`]: {},
         },
       },
-      '&.nui-accordion-curved': {
+      '&.nui-accordion-rounded-lg': {
         '&.nui-accordion:first-child': {
           [`@apply rounded-t-${config.wrapper.rounded.lg}`]: {},
         },
