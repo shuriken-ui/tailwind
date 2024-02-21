@@ -60,19 +60,19 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-button-rounded': {
+      '&.nui-button-rounded-sm': {
         [`@apply ${config.rounded.sm}`]: {},
       },
       //Rounded:md
-      '&.nui-button-smooth': {
+      '&.nui-button-rounded-md': {
         [`@apply ${config.rounded.md}`]: {},
       },
       //Rounded:lg
-      '&.nui-button-curved': {
+      '&.nui-button-rounded-lg': {
         [`@apply ${config.rounded.lg}`]: {},
       },
       //Rounded:full
-      '&.nui-button-full': {
+      '&.nui-button-rounded-full': {
         [`@apply ${config.rounded.full}`]: {},
       },
       //Color:default
