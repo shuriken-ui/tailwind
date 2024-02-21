@@ -2,9 +2,9 @@ import type { CardVariant } from './card.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-card-rounded',
-  md: 'nui-card-smooth',
-  lg: 'nui-card-curved',
+  sm: 'nui-card-rounded-sm',
+  md: 'nui-card-rounded-md',
+  lg: 'nui-card-rounded-lg',
 } as const satisfies CardVariant<'rounded'>
 
 export const color = {

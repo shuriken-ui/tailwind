@@ -117,15 +117,15 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-card-rounded': {
+      '&.nui-card-rounded-sm': {
         [`@apply rounded-${config.rounded.sm}`]: {},
       },
       //Rounded:md
-      '&.nui-card-smooth': {
+      '&.nui-card-rounded-md': {
         [`@apply rounded-${config.rounded.md}`]: {},
       },
       //Rounded:lg
-      '&.nui-card-curved': {
+      '&.nui-card-rounded-lg': {
         [`@apply rounded-${config.rounded.lg}`]: {},
       },
       //Shadow
