@@ -58,7 +58,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-message-rounded': {
+      '&.nui-message-rounded-sm': {
         [`@apply ${config.rounded.sm}`]: {},
 
         '.nui-message-icon-outer': {
@@ -66,7 +66,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:md
-      '&.nui-message-smooth': {
+      '&.nui-message-rounded-md': {
         [`@apply ${config.rounded.md}`]: {},
 
         '.nui-message-icon-outer': {
@@ -74,7 +74,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:lg
-      '&.nui-message-curved': {
+      '&.nui-message-rounded-lg': {
         [`@apply ${config.rounded.lg}`]: {},
 
         '.nui-message-icon-outer': {
@@ -82,7 +82,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:full
-      '&.nui-message-full': {
+      '&.nui-message-rounded-full': {
         [`@apply ${config.rounded.full}`]: {},
 
         '.nui-message-icon-outer': {

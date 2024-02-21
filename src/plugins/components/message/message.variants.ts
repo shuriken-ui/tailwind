@@ -2,10 +2,10 @@ import type { MessageVariant } from './message.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-message-rounded',
-  md: 'nui-message-smooth',
-  lg: 'nui-message-curved',
-  full: 'nui-message-full',
+  sm: 'nui-message-rounded-sm',
+  md: 'nui-message-rounded-md',
+  lg: 'nui-message-rounded-lg',
+  full: 'nui-message-rounded-full',
 } as const satisfies MessageVariant<'rounded'>
 
 export const type = {
