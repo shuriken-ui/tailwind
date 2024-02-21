@@ -2,9 +2,9 @@ import type { DropdownItemVariant } from './dropdown-item.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-item-rounded',
-  md: 'nui-item-smooth',
-  lg: 'nui-item-curved',
+  sm: 'nui-item-rounded-sm',
+  md: 'nui-item-rounded-md',
+  lg: 'nui-item-rounded-lg',
 } as const satisfies DropdownItemVariant<'rounded'>
 
 export const color = {

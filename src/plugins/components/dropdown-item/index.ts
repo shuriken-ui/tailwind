@@ -71,15 +71,15 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-item-rounded': {
+      '&.nui-item-rounded-sm': {
         [`@apply rounded-${config.rounded.sm}`]: {},
       },
       //Rounded:md
-      '&.nui-item-smooth': {
+      '&.nui-item-rounded-md': {
         [`@apply rounded-${config.rounded.md}`]: {},
       },
       //Rounded:lg
-      '&.nui-item-curved': {
+      '&.nui-item-rounded-lg': {
         [`@apply rounded-${config.rounded.lg}`]: {},
       },
     },
