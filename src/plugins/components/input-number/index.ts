@@ -123,7 +123,7 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-input-number-rounded': {
+      '&.nui-input-number-rounded-sm': {
         '.nui-input-number, .nui-input-number-outer': {
           [`@apply ${config.rounded.sm}`]: {},
         },
@@ -133,7 +133,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:md
-      '&.nui-input-number-smooth': {
+      '&.nui-input-number-rounded-md': {
         '.nui-input-number, .nui-input-number-outer': {
           [`@apply ${config.rounded.md}`]: {},
         },
@@ -143,7 +143,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:lg
-      '&.nui-input-number-curved': {
+      '&.nui-input-number-rounded-lg': {
         '.nui-input-number, .nui-input-number-outer': {
           [`@apply ${config.rounded.lg}`]: {},
         },
@@ -153,7 +153,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:full
-      '&.nui-input-number-full': {
+      '&.nui-input-number-rounded-full': {
         '.nui-input-number, .nui-input-number-outer': {
           [`@apply ${config.rounded.full}`]: {},
         },
