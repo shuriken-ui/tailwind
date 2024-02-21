@@ -295,25 +295,25 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-listbox-rounded': {
+      '&.nui-listbox-rounded-sm': {
         '.nui-listbox-button, .nui-listbox-options, .nui-listbox-option': {
           [`@apply ${config.rounded.sm}`]: {},
         },
       },
       //Rounded:md
-      '&.nui-listbox-smooth': {
+      '&.nui-listbox-rounded-md': {
         '.nui-listbox-button, .nui-listbox-options, .nui-listbox-option': {
           [`@apply ${config.rounded.md}`]: {},
         },
       },
       //Rounded:lg
-      '&.nui-listbox-curved': {
+      '&.nui-listbox-rounded-lg': {
         '.nui-listbox-button, .nui-listbox-options, .nui-listbox-option': {
           [`@apply ${config.rounded.lg}`]: {},
         },
       },
       //Rounded:full
-      '&.nui-listbox-full': {
+      '&.nui-listbox-rounded-full': {
         '.nui-listbox-button': {
           [`@apply ${config.rounded.full}`]: {},
         },
