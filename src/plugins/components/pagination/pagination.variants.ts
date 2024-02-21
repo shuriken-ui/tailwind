@@ -2,10 +2,10 @@ import type { PaginationVariant } from './pagination.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-pagination-rounded',
-  md: 'nui-pagination-smooth',
-  lg: 'nui-pagination-curved',
-  full: 'nui-pagination-full',
+  sm: 'nui-pagination-rounded-sm',
+  md: 'nui-pagination-rounded-md',
+  lg: 'nui-pagination-rounded-lg',
+  full: 'nui-pagination-rounded-full',
 } as const satisfies PaginationVariant<'rounded'>
 
 export const color = {

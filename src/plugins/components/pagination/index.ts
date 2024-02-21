@@ -178,22 +178,22 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-pagination-rounded .nui-pagination-list, &.nui-pagination-rounded .nui-pagination-buttons, &.nui-pagination-rounded .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-rounded .nui-pagination-link, &.nui-pagination-rounded .nui-pagination-ellipsis':
+      '&.nui-pagination-rounded-sm .nui-pagination-list, &.nui-pagination-rounded-sm .nui-pagination-buttons, &.nui-pagination-rounded-sm .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-rounded-sm .nui-pagination-link, &.nui-pagination-rounded-sm .nui-pagination-ellipsis':
         {
           [`@apply ${config.rounded.sm}`]: {},
         },
       //Rounded:md
-      '&.nui-pagination-smooth .nui-pagination-list, &.nui-pagination-smooth .nui-pagination-buttons, &.nui-pagination-smooth .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-smooth .nui-pagination-link, &.nui-pagination-smooth .nui-pagination-ellipsis':
+      '&.nui-pagination-rounded-md .nui-pagination-list, &.nui-pagination-rounded-md .nui-pagination-buttons, &.nui-pagination-rounded-md .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-rounded-md .nui-pagination-link, &.nui-pagination-rounded-md .nui-pagination-ellipsis':
         {
           [`@apply ${config.rounded.md}`]: {},
         },
       //Rounded:lg
-      '&.nui-pagination-curved .nui-pagination-list, &.nui-pagination-curved .nui-pagination-buttons, &.nui-pagination-curved .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-curved .nui-pagination-link, &.nui-pagination-curved .nui-pagination-ellipsis':
+      '&.nui-pagination-rounded-lg .nui-pagination-list, &.nui-pagination-rounded-lg .nui-pagination-buttons, &.nui-pagination-rounded-lg .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-rounded-lg .nui-pagination-link, &.nui-pagination-rounded-lg .nui-pagination-ellipsis':
         {
           [`@apply ${config.rounded.lg}`]: {},
         },
       //Rounded:full
-      '&.nui-pagination-full .nui-pagination-list, &.nui-pagination-full .nui-pagination-buttons, &.nui-pagination-full .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-full .nui-pagination-link, &.nui-pagination-full .nui-pagination-ellipsis':
+      '&.nui-pagination-rounded-full .nui-pagination-list, &.nui-pagination-rounded-full .nui-pagination-buttons, &.nui-pagination-rounded-full .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-rounded-full .nui-pagination-link, &.nui-pagination-rounded-full .nui-pagination-ellipsis':
         {
           [`@apply ${config.rounded.full}`]: {},
         },
