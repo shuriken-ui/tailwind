@@ -2,10 +2,10 @@ import type { ButtonIconVariant } from './button-icon.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-button-rounded',
-  md: 'nui-button-smooth',
-  lg: 'nui-button-curved',
-  full: 'nui-button-full',
+  sm: 'nui-button-rounded-sm',
+  md: 'nui-button-rounded-md',
+  lg: 'nui-button-rounded-lg',
+  full: 'nui-button-rounded-full',
 } as const satisfies ButtonIconVariant<'rounded'>
 
 export const size = {
