@@ -46,9 +46,6 @@ export default plugin(({ addComponents, theme }) => {
           //Base
           [`@apply w-${config.drop.zone.icon.size} h-${config.drop.zone.icon.size} mb-2`]:
             {},
-          //Color
-          [`@apply text-${config.drop.zone.font.color.base.light} dark:text-${config.drop.zone.font.color.base.dark}`]:
-            {},
           //Transition
           [`@apply transition-${config.drop.zone.icon.transition.property} duration-${config.drop.zone.icon.transition.duration}`]:
             {},
@@ -58,17 +55,11 @@ export default plugin(({ addComponents, theme }) => {
           //Base
           [`@apply block font-${config.drop.zone.font.family} font-${config.drop.zone.font.weight}`]:
             {},
-          //Color
-          [`@apply text-${config.drop.zone.font.color.base.light} dark:text-${config.drop.zone.font.color.base.dark}`]:
-            {},
         },
         //Zone:separator
         '.nui-drop-zone-separator': {
           //Base
           [`@apply block font-${config.drop.zone.separator.font.family} font-${config.drop.zone.separator.font.weight} leading-none py-1`]:
-            {},
-          //Color
-          [`@apply text-${config.drop.zone.font.color.base.light} dark:text-${config.drop.zone.font.color.base.dark}`]:
             {},
         },
         //Zone:input
@@ -76,11 +67,88 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply absolute top-0 left-0 h-${config.drop.zone.input.size} w-${config.drop.zone.input.size} opacity-0 file:cursor-pointer z-20`]:
             {},
         },
-        //Zone:hover
-        '&:hover': {
+        //Color:primary
+        '&.nui-input-file-primary': {
+          //Zone:icon
           '.nui-drop-zone-icon': {
-            [`@apply text-${config.drop.zone.font.color.hover.light} dark:text-${config.drop.zone.font.color.hover.dark}`]:
+            //Color
+            [`@apply text-${config.drop.zone.font.color.primary.base.light} dark:text-${config.drop.zone.font.color.primary.base.dark}`]:
               {},
+          },
+          //Zone:text
+          '.nui-drop-zone-text': {
+            //Color
+            [`@apply text-${config.drop.zone.font.color.primary.base.light} dark:text-${config.drop.zone.font.color.primary.base.dark}`]:
+              {},
+          },
+          //Zone:separator
+          '.nui-drop-zone-separator': {
+            //Color
+            [`@apply text-${config.drop.zone.font.color.primary.base.light} dark:text-${config.drop.zone.font.color.primary.base.dark}`]:
+              {},
+          },
+          //Zone:hover
+          '&:hover': {
+            '.nui-drop-zone-icon': {
+              [`@apply text-${config.drop.zone.font.color.primary.hover.light} dark:text-${config.drop.zone.font.color.primary.hover.dark}`]:
+                {},
+            },
+          },
+        },
+        //Color:dark
+        '&.nui-input-file-dark': {
+          //Zone:icon
+          '.nui-drop-zone-icon': {
+            //Color
+            [`@apply text-${config.drop.zone.font.color.dark.base.light} dark:text-${config.drop.zone.font.color.dark.base.dark}`]:
+              {},
+          },
+          //Zone:text
+          '.nui-drop-zone-text': {
+            //Color
+            [`@apply text-${config.drop.zone.font.color.dark.base.light} dark:text-${config.drop.zone.font.color.dark.base.dark}`]:
+              {},
+          },
+          //Zone:separator
+          '.nui-drop-zone-separator': {
+            //Color
+            [`@apply text-${config.drop.zone.font.color.dark.base.light} dark:text-${config.drop.zone.font.color.dark.base.dark}`]:
+              {},
+          },
+          //Zone:hover
+          '&:hover': {
+            '.nui-drop-zone-icon': {
+              [`@apply text-${config.drop.zone.font.color.dark.hover.light} dark:text-${config.drop.zone.font.color.dark.hover.dark}`]:
+                {},
+            },
+          },
+        },
+        //Color:black
+        '&.nui-input-file-black': {
+          //Zone:icon
+          '.nui-drop-zone-icon': {
+            //Color
+            [`@apply text-${config.drop.zone.font.color.black.base.light} dark:text-${config.drop.zone.font.color.black.base.dark}`]:
+              {},
+          },
+          //Zone:text
+          '.nui-drop-zone-text': {
+            //Color
+            [`@apply text-${config.drop.zone.font.color.black.base.light} dark:text-${config.drop.zone.font.color.black.base.dark}`]:
+              {},
+          },
+          //Zone:separator
+          '.nui-drop-zone-separator': {
+            //Color
+            [`@apply text-${config.drop.zone.font.color.black.base.light} dark:text-${config.drop.zone.font.color.black.base.dark}`]:
+              {},
+          },
+          //Zone:hover
+          '&:hover': {
+            '.nui-drop-zone-icon': {
+              [`@apply text-${config.drop.zone.font.color.black.hover.light} dark:text-${config.drop.zone.font.color.black.hover.dark}`]:
+                {},
+            },
           },
         },
       },
@@ -89,20 +157,8 @@ export default plugin(({ addComponents, theme }) => {
         //Base
         '@apply w-64 max-w-full flex flex-col items-center px-4 py-8 tracking-wide cursor-pointer':
           {},
-        //Font
-        [`@apply text-${config.button.font.color.base.light} dark:text-${config.button.font.color.base.dark}`]:
-          {},
-        //Font:hover
-        [`@apply hover:text-${config.button.font.color.hover.light} dark:hover:text-${config.button.font.color.hover.dark}`]:
-          {},
         //Background
         [`@apply bg-${config.button.background.light} dark:bg-${config.button.background.dark}`]:
-          {},
-        //Border
-        [`@apply border-2 border-${config.button.border.base.light} dark:border-${config.button.border.base.dark}`]:
-          {},
-        //Border:hover
-        [`@apply hover:border-${config.button.border.hover.light} dark:hover:border-${config.button.border.hover.dark}`]:
           {},
         //Transition
         [`@apply transition-${config.button.transition.property} duration-${config.button.transition.duration}`]:
@@ -118,6 +174,51 @@ export default plugin(({ addComponents, theme }) => {
           '@apply block mt-2 leading-normal': {},
           //Font
           [`@apply font-${config.button.label.font.family} text-${config.button.label.font.size}`]:
+            {},
+        },
+        //Color:primary
+        '&.nui-input-file-primary': {
+          //Font
+          [`@apply text-${config.button.font.color.primary.base.light} dark:text-${config.button.font.color.primary.base.dark}`]:
+            {},
+          //Font:hover
+          [`@apply hover:text-${config.button.font.color.primary.hover.light} dark:hover:text-${config.button.font.color.primary.hover.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.button.border.primary.base.light} dark:border-${config.button.border.primary.base.dark}`]:
+            {},
+          //Border:hover
+          [`@apply hover:border-${config.button.border.primary.hover.light} dark:hover:border-${config.button.border.primary.hover.dark}`]:
+            {},
+        },
+        //Color:dark
+        '&.nui-input-file-dark': {
+          //Font
+          [`@apply text-${config.button.font.color.dark.base.light} dark:text-${config.button.font.color.dark.base.dark}`]:
+            {},
+          //Font:hover
+          [`@apply hover:text-${config.button.font.color.dark.hover.light} dark:hover:text-${config.button.font.color.dark.hover.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.button.border.dark.base.light} dark:border-${config.button.border.dark.base.dark}`]:
+            {},
+          //Border:hover
+          [`@apply hover:border-${config.button.border.dark.hover.light} dark:hover:border-${config.button.border.dark.hover.dark}`]:
+            {},
+        },
+        //Color:black
+        '&.nui-input-file-black': {
+          //Font
+          [`@apply text-${config.button.font.color.black.base.light} dark:text-${config.button.font.color.black.base.dark}`]:
+            {},
+          //Font:hover
+          [`@apply hover:text-${config.button.font.color.black.hover.light} dark:hover:text-${config.button.font.color.black.hover.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.button.border.black.base.light} dark:border-${config.button.border.black.base.dark}`]:
+            {},
+          //Border:hover
+          [`@apply hover:border-${config.button.border.black.hover.light} dark:hover:border-${config.button.border.black.hover.dark}`]:
             {},
         },
       },
@@ -146,15 +247,48 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //File
           [`@apply file:text-${config.combo.input.file.font.size}`]: {},
-          //File colot
-          [`@apply file:text-${config.combo.input.file.font.color.light} dark:file:text-${config.combo.input.file.font.color.dark}`]:
-            {},
-          //Background
-          [`@apply file:bg-${config.combo.input.file.background.base.light} dark:file:bg-${config.combo.input.file.background.base.dark}`]:
-            {},
-          //Background:hover
-          [`@apply file:hover:bg-${config.combo.input.file.background.hover.light} dark:file:hover:bg-${config.combo.input.file.background.hover.dark}`]:
-            {},
+        },
+        //Color:primary
+        '&.nui-input-file-primary': {
+          '.nui-combo-input': {
+            //Background
+            [`@apply file:bg-${config.combo.input.file.background.primary.base.light} dark:file:bg-${config.combo.input.file.background.primary.base.dark}`]:
+              {},
+            //Background:hover
+            [`@apply file:hover:bg-${config.combo.input.file.background.primary.hover.light} dark:file:hover:bg-${config.combo.input.file.background.primary.hover.dark}`]:
+              {},
+            //File color
+            [`@apply file:text-${config.combo.input.file.font.color.primary.light} dark:file:text-${config.combo.input.file.font.color.primary.dark}`]:
+              {},
+          },
+        },
+        //Color:dark
+        '&.nui-input-file-dark': {
+          '.nui-combo-input': {
+            //Background
+            [`@apply file:bg-${config.combo.input.file.background.dark.base.light} dark:file:bg-${config.combo.input.file.background.dark.base.dark}`]:
+              {},
+            //Background:hover
+            [`@apply file:hover:bg-${config.combo.input.file.background.dark.hover.light} dark:file:hover:bg-${config.combo.input.file.background.dark.hover.dark}`]:
+              {},
+            //File color
+            [`@apply file:text-${config.combo.input.file.font.color.dark.light} dark:file:text-${config.combo.input.file.font.color.dark.dark}`]:
+              {},
+          },
+        },
+        //Color:black
+        '&.nui-input-file-black': {
+          '.nui-combo-input': {
+            //Background
+            [`@apply file:bg-${config.combo.input.file.background.black.base.light} dark:file:bg-${config.combo.input.file.background.black.base.dark}`]:
+              {},
+            //Background:hover
+            [`@apply file:hover:bg-${config.combo.input.file.background.black.hover.light} dark:file:hover:bg-${config.combo.input.file.background.black.hover.dark}`]:
+              {},
+            //File color
+            [`@apply file:text-${config.combo.input.file.font.color.black.light} dark:file:text-${config.combo.input.file.font.color.black.dark}`]:
+              {},
+          },
         },
       },
       //Rounded:sm

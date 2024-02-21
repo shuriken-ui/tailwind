@@ -10,6 +10,11 @@ const meta = {
   // tags: ['autodocs'],
   render: (args) => InputFile(args),
   argTypes: {
+    color: {
+      control: { type: 'select' },
+      options: ['primary', 'dark', 'black'],
+      defaultValue: 'default',
+    },
     rounded: {
       control: { type: 'select' },
       options: ['none', 'sm', 'md', 'lg', 'full'],
