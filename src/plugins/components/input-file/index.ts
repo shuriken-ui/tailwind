@@ -292,7 +292,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-input-file-rounded': {
+      '&.nui-input-file-rounded-sm': {
         '&.nui-input-file-drop, &.nui-input-file-button': {
           [`@apply ${config.rounded.sm}`]: {},
         },
@@ -304,7 +304,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:md
-      '&.nui-input-file-smooth': {
+      '&.nui-input-file-rounded-md': {
         '&.nui-input-file-drop, &.nui-input-file-button': {
           [`@apply ${config.rounded.md}`]: {},
         },
@@ -316,7 +316,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:lg
-      '&.nui-input-file-curved': {
+      '&.nui-input-file-rounded-lg': {
         '&.nui-input-file-drop, &.nui-input-file-button': {
           [`@apply ${config.rounded.lg}`]: {},
         },
@@ -328,7 +328,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:full
-      '&.nui-input-file-full': {
+      '&.nui-input-file-rounded-full': {
         '&.nui-input-file-drop, &.nui-input-file-button': {
           [`@apply ${config.rounded.full}`]: {},
         },
