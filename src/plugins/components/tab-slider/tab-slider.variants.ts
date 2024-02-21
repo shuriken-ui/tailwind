@@ -13,10 +13,10 @@ export const size = {
 
 export const rounded = {
   none: '',
-  sm: 'nui-tabs-rounded',
-  md: 'nui-tabs-smooth',
-  lg: 'nui-tabs-curved',
-  full: 'nui-tabs-full',
+  sm: 'nui-tabs-rounded-sm',
+  md: 'nui-tabs-rounded-md',
+  lg: 'nui-tabs-rounded-lg',
+  full: 'nui-tabs-rounded-full',
 } as const satisfies TabSliderVariant<'rounded'>
 
 export const color = {

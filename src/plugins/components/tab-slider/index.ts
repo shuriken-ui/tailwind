@@ -157,25 +157,25 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-tabs-rounded': {
+      '&.nui-tabs-rounded-sm': {
         '.nui-tab-slider-track, .nui-tab-slider-naver': {
           [`@apply ${config.rounded.sm}`]: {},
         },
       },
       //Rounded:md
-      '&.nui-tabs-smooth': {
+      '&.nui-tabs-rounded-md': {
         '.nui-tab-slider-track, .nui-tab-slider-naver': {
           [`@apply ${config.rounded.md}`]: {},
         },
       },
       //Rounded:lg
-      '&.nui-tabs-curved': {
+      '&.nui-tabs-rounded-lg': {
         '.nui-tab-slider-track, .nui-tab-slider-naver': {
           [`@apply ${config.rounded.lg}`]: {},
         },
       },
       //Rounded:full
-      '&.nui-tabs-full': {
+      '&.nui-tabs-rounded-full': {
         '.nui-tab-slider-track, .nui-tab-slider-naver': {
           [`@apply ${config.rounded.full}`]: {},
         },
