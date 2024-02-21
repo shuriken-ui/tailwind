@@ -13,7 +13,7 @@ const meta = {
     color: {
       control: { type: 'select' },
       options: ['primary', 'dark', 'black'],
-      defaultValue: 'default',
+      defaultValue: 'primary',
     },
     rounded: {
       control: { type: 'select' },

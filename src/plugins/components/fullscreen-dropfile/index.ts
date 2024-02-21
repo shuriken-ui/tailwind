@@ -41,13 +41,54 @@ export default plugin(({ addComponents, theme }) => {
               {},
             //Icon
             '.nui-fullscreen-dropfile-icon': {
-              [`@apply h-${config.icon.size} w-${config.icon.size} text-${config.icon.font.color.light} dark:text-${config.icon.font.color.dark}`]:
-                {},
+              [`@apply h-${config.icon.size} w-${config.icon.size}`]: {},
             },
             //Label
             '.nui-fullscreen-dropfile-label': {
               [`@apply text-${config.label.font.size} text-muted-500 dark:text-muted-400`]:
                 {},
+            },
+          },
+        },
+      },
+      //Color: primary
+      '&.nui-dropfile-primary': {
+        '.nui-fullscreen-dropfile-inner': {
+          '.nui-fullscreen-dropfile-container': {
+            '.nui-fullscreen-dropfile-content': {
+              //Icon
+              '.nui-fullscreen-dropfile-icon': {
+                [`@apply text-${config.color.primary.light} dark:text-${config.color.primary.dark}`]:
+                  {},
+              },
+            },
+          },
+        },
+      },
+      //Color: dark
+      '&.nui-dropfile-dark': {
+        '.nui-fullscreen-dropfile-inner': {
+          '.nui-fullscreen-dropfile-container': {
+            '.nui-fullscreen-dropfile-content': {
+              //Icon
+              '.nui-fullscreen-dropfile-icon': {
+                [`@apply text-${config.color.dark.light} dark:text-${config.color.dark.dark}`]:
+                  {},
+              },
+            },
+          },
+        },
+      },
+      //Color: black
+      '&.nui-dropfile-black': {
+        '.nui-fullscreen-dropfile-inner': {
+          '.nui-fullscreen-dropfile-container': {
+            '.nui-fullscreen-dropfile-content': {
+              //Icon
+              '.nui-fullscreen-dropfile-icon': {
+                [`@apply text-${config.color.black.light} dark:text-${config.color.black.dark}`]:
+                  {},
+              },
             },
           },
         },

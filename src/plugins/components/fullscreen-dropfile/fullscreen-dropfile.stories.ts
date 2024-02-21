@@ -9,7 +9,13 @@ const meta = {
   title: 'Shuriken UI/Form/Fullscreen Dropfile',
   // tags: ['autodocs'],
   render: (args) => FullscreenDropfile(args),
-  argTypes: {},
+  argTypes: {
+    color: {
+      control: { type: 'select' },
+      options: ['primary', 'dark', 'black'],
+      defaultValue: 'primary',
+    },
+  },
 } satisfies Meta<FullscreenDropfileAttrs>
 
 export default meta

@@ -13,10 +13,20 @@ export const defaultConfig = {
     size: '10',
     font: {
       size: '6xl',
-      color: {
-        light: 'primary-500',
-        dark: 'primary-500',
-      },
+    },
+  },
+  color: {
+    primary: {
+      light: 'primary-500',
+      dark: 'primary-500',
+    },
+    dark: {
+      light: 'muted-900',
+      dark: 'muted-100',
+    },
+    black: {
+      light: 'black',
+      dark: 'white',
     },
   },
   border: {
