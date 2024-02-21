@@ -2,10 +2,10 @@ import type { InputFileRegularVariant } from './input-file-regular.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-input-rounded',
-  md: 'nui-input-smooth',
-  lg: 'nui-input-curved',
-  full: 'nui-input-full',
+  sm: 'nui-input-rounded-sm',
+  md: 'nui-input-rounded-md',
+  lg: 'nui-input-rounded-lg',
+  full: 'nui-input-rounded-full',
 } as const satisfies InputFileRegularVariant<'rounded'>
 
 export const size = {
