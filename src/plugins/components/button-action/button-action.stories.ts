@@ -98,7 +98,7 @@ export const Curved: Story = {
 export const Full: Story = {
   name: 'Rounded: full',
   args: {
-    shape: 'full',
+    rounded: 'full',
     label: 'Button',
   },
 }
@@ -285,7 +285,7 @@ export const CurvedDisabled: Story = {
 export const FullDisabled: Story = {
   name: 'Rounded:',
   args: {
-    shape: 'full',
+    rounded: 'full',
     label: 'Button',
     '?disabled': true,
   },

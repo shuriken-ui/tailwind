@@ -8,7 +8,7 @@ describe('Autocomplete', () => {
   test('Should have no axe violations', async () => {
     const input = Autocomplete({
       label: 'Autocomplete',
-      shape: 'rounded',
+      rounded: 'sm',
       id: 'autocomplete',
       placeholder: 'Search...',
     })

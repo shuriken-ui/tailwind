@@ -158,7 +158,7 @@ export const SizeLg: Story = {
         `,
       })}
       ${Button({
-        shape: 'sm',
+        rounded: 'sm',
         size: 'lg',
         children: html`
           <span>Button 4</span>

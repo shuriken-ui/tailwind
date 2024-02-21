@@ -38,7 +38,7 @@ export const Solid: Story = {
     size: 'md',
     children: html`
       ${Card({
-        shape: 'smooth',
+        rounded: 'md',
         children: html`
           <!-- Header -->
           <div class="flex items-center justify-between p-4">
@@ -118,7 +118,7 @@ export const SizeSm: Story = {
     size: 'sm',
     children: html`
       ${Card({
-        shape: 'smooth',
+        rounded: 'md',
         children: html`
           <!-- Header -->
           <div class="flex items-center justify-between p-4 md:p-6">
@@ -132,7 +132,7 @@ export const SizeSm: Story = {
               children: 'Invitation',
             })}
             ${ButtonClose({
-              shape: 'full',
+              rounded: 'full',
             })}
           </div>
           <!-- Body -->
@@ -170,13 +170,13 @@ export const SizeSm: Story = {
               ${Button({
                 size: 'md',
                 variant: 'solid',
-                shape: 'smooth',
+                rounded: 'md',
                 children: 'Cancel',
               })}
               ${Button({
                 size: 'md',
                 variant: 'solid',
-                shape: 'smooth',
+                rounded: 'md',
                 color: 'primary',
                 children: 'Confirm',
               })}

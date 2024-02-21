@@ -8,7 +8,7 @@ describe('InputFileRegular', () => {
   test('Should have no axe violations', async () => {
     const input = InputFileRegular({
       label: 'File input',
-      shape: 'rounded',
+      rounded: 'sm',
       id: 'input',
       placeholder: 'Upload files',
     })

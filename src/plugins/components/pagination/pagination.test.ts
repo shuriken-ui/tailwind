@@ -7,7 +7,7 @@ import { Pagination } from './pagination.component'
 describe('Pagination', () => {
   test('Should have no axe violations', async () => {
     const input = Pagination({
-      shape: 'rounded',
+      rounded: 'sm',
     })
 
     render(input, document.body)

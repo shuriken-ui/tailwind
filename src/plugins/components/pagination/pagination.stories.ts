@@ -41,7 +41,7 @@ export const Main: Story = {
 export const ShapeStraight: Story = {
   name: 'Rounded: none',
   args: {
-    shape: 'straight',
+    rounded: 'none',
     style: 'min-width: 480px;',
   },
 }
