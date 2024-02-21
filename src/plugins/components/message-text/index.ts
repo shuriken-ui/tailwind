@@ -36,15 +36,15 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-message-rounded': {
+      '&.nui-message-rounded-sm': {
         [`@apply ${config.rounded.default}`]: {},
       },
       //Rounded:md
-      '&.nui-message-smooth': {
+      '&.nui-message-rounded-md': {
         [`@apply ${config.rounded.smooth}`]: {},
       },
       //Rounded:lg
-      '&.nui-message-curved': {
+      '&.nui-message-rounded-lg': {
         [`@apply ${config.rounded.curved}`]: {},
       },
       //Contrast:low
