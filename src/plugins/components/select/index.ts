@@ -111,25 +111,25 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-select-rounded': {
+      '&.nui-select-rounded-sm': {
         '.nui-select': {
           [`@apply ${config.rounded.sm}`]: {},
         },
       },
       //Rounded:md
-      '&.nui-select-smooth': {
+      '&.nui-select-rounded-md': {
         '.nui-select': {
           [`@apply ${config.rounded.md}`]: {},
         },
       },
       //Rounded:lg
-      '&.nui-select-curved': {
+      '&.nui-select-rounded-lg': {
         '.nui-select': {
           [`@apply ${config.rounded.lg}`]: {},
         },
       },
       //Rounded:full
-      '&.nui-select-full': {
+      '&.nui-select-rounded-full': {
         '.nui-select': {
           [`@apply ${config.rounded.full}`]: {},
         },
