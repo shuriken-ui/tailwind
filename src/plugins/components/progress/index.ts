@@ -58,18 +58,22 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply h-${config.size.xl}`]: {},
       },
       //Rounded
-      '&.nui-progress-rounded, &.nui-progress-rounded .nui-progress-bar': {
-        [`@apply ${config.rounded.sm}`]: {},
-      },
-      '&.nui-progress-smooth, &.nui-progress-smooth .nui-progress-bar': {
-        [`@apply ${config.rounded.md}`]: {},
-      },
-      '&.nui-progress-curved, &.nui-progress-curved .nui-progress-bar': {
-        [`@apply ${config.rounded.lg}`]: {},
-      },
-      '&.nui-progress-full, &.nui-progress-full .nui-progress-bar': {
-        [`@apply ${config.rounded.full}`]: {},
-      },
+      '&.nui-progress-rounded-sm, &.nui-progress-rounded-sm .nui-progress-bar':
+        {
+          [`@apply ${config.rounded.sm}`]: {},
+        },
+      '&.nui-progress-rounded-md, &.nui-progress-rounded-md .nui-progress-bar':
+        {
+          [`@apply ${config.rounded.md}`]: {},
+        },
+      '&.nui-progress-rounded-lg, &.nui-progress-rounded-lg .nui-progress-bar':
+        {
+          [`@apply ${config.rounded.lg}`]: {},
+        },
+      '&.nui-progress-rounded-full, &.nui-progress-rounded-full .nui-progress-bar':
+        {
+          [`@apply ${config.rounded.full}`]: {},
+        },
       '&.nui-progress-indeterminate .nui-progress-bar': {
         '@apply w-full': {},
       },
