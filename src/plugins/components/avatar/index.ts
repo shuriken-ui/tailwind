@@ -103,7 +103,7 @@ export default plugin(({ addComponents, theme }) => {
       //Avatar:ring
       '&.nui-avatar-ring': {
         //Base (requires rounded:full)
-        '&.nui-avatar-full': {
+        '&.nui-avatar-rounded-full': {
           [`@apply ring-${config.ring.width}`]: {},
           //Offset
           [`@apply ring-offset-${config.ring.offset.size} ring-offset-${config.ring.offset.color.light} dark:ring-offset-${config.ring.offset.color.dark}`]:
@@ -160,7 +160,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply text-${config.size.xxs.text.font.size}`]: {},
         },
         //xxs:rounded-none
-        '&.nui-avatar-straight': {
+        '&.nui-avatar-rounded-none': {
           [`@apply ${config.size.xxs.rounded.none}`]: {},
           //xxs:inner
           '.nui-avatar-inner': {
@@ -173,7 +173,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xxs:rounded-sm
-        '&.nui-avatar-rounded': {
+        '&.nui-avatar-rounded-sm': {
           [`@apply ${config.size.xxs.rounded.sm}`]: {},
           //xxs:inner
           '.nui-avatar-inner': {
@@ -186,7 +186,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xxs:rounded-md
-        '&.nui-avatar-smooth': {
+        '&.nui-avatar-rounded-md': {
           [`@apply ${config.size.xxs.rounded.md}`]: {},
           //xxs:inner
           '.nui-avatar-inner': {
@@ -199,7 +199,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xxs:rounded-lg
-        '&.nui-avatar-curved': {
+        '&.nui-avatar-rounded-lg': {
           [`@apply ${config.size.xxs.rounded.lg}`]: {},
           //xxs:inner
           '.nui-avatar-inner': {
@@ -212,7 +212,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xxs:rounded-full
-        '&.nui-avatar-full': {
+        '&.nui-avatar-rounded-full': {
           '.nui-avatar-dot': {
             [`@apply end-${config.size.xxs.dot.position.rounded.full} top-${config.size.xxs.dot.position.rounded.full}`]:
               {},
@@ -237,7 +237,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply text-${config.size.xs.text.font.size}`]: {},
         },
         //xs:rounded-none
-        '&.nui-avatar-straight': {
+        '&.nui-avatar-rounded-none': {
           [`@apply ${config.size.xs.rounded.none}`]: {},
           //xs:inner
           '.nui-avatar-inner': {
@@ -250,7 +250,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xs:rounded-sm
-        '&.nui-avatar-rounded': {
+        '&.nui-avatar-rounded-sm': {
           [`@apply ${config.size.xs.rounded.sm}`]: {},
           //xs:inner
           '.nui-avatar-inner': {
@@ -263,7 +263,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xs:rounded-md
-        '&.nui-avatar-smooth': {
+        '&.nui-avatar-rounded-md': {
           [`@apply ${config.size.xs.rounded.md}`]: {},
           //xs:inner
           '.nui-avatar-inner': {
@@ -276,7 +276,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xs:rounded-lg
-        '&.nui-avatar-curved': {
+        '&.nui-avatar-rounded-lg': {
           [`@apply ${config.size.xs.rounded.lg}`]: {},
           //xs:inner
           '.nui-avatar-inner': {
@@ -289,7 +289,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xs:rounded-full
-        '&.nui-avatar-full': {
+        '&.nui-avatar-rounded-full': {
           '.nui-avatar-dot': {
             [`@apply end-${config.size.xs.dot.position.rounded.full} top-${config.size.xs.dot.position.rounded.full}`]:
               {},
@@ -314,7 +314,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply text-${config.size.sm.text.font.size}`]: {},
         },
         //sm:rounded-none
-        '&.nui-avatar-straight': {
+        '&.nui-avatar-rounded-none': {
           [`@apply ${config.size.sm.rounded.none}`]: {},
           //sm:inner
           '.nui-avatar-inner': {
@@ -327,7 +327,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //sm:rounded-sm
-        '&.nui-avatar-rounded': {
+        '&.nui-avatar-rounded-sm': {
           [`@apply ${config.size.sm.rounded.sm}`]: {},
           //sm:inner
           '.nui-avatar-inner': {
@@ -340,7 +340,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //sm:rounded-md
-        '&.nui-avatar-smooth': {
+        '&.nui-avatar-rounded-md': {
           [`@apply ${config.size.sm.rounded.md}`]: {},
           //sm:inner
           '.nui-avatar-inner': {
@@ -353,7 +353,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //sm:rounded-lg
-        '&.nui-avatar-curved': {
+        '&.nui-avatar-rounded-lg': {
           [`@apply ${config.size.sm.rounded.lg}`]: {},
           //sm:inner
           '.nui-avatar-inner': {
@@ -366,7 +366,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //sm:rounded-full
-        '&.nui-avatar-full': {
+        '&.nui-avatar-rounded-full': {
           '.nui-avatar-dot': {
             [`@apply end-${config.size.sm.dot.position.rounded.full} top-${config.size.sm.dot.position.rounded.full}`]:
               {},
@@ -391,7 +391,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply text-${config.size.md.text.font.size}`]: {},
         },
         //md:rounded-none
-        '&.nui-avatar-straight': {
+        '&.nui-avatar-rounded-none': {
           [`@apply ${config.size.md.rounded.none}`]: {},
           //md:inner
           '.nui-avatar-inner': {
@@ -404,7 +404,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //md:rounded-sm
-        '&.nui-avatar-rounded': {
+        '&.nui-avatar-rounded-sm': {
           [`@apply ${config.size.md.rounded.sm}`]: {},
           //md:inner
           '.nui-avatar-inner': {
@@ -417,7 +417,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //md:rounded-md
-        '&.nui-avatar-smooth': {
+        '&.nui-avatar-rounded-md': {
           [`@apply ${config.size.md.rounded.md}`]: {},
           //md:inner
           '.nui-avatar-inner': {
@@ -430,7 +430,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //md:rounded-lg
-        '&.nui-avatar-curved': {
+        '&.nui-avatar-rounded-lg': {
           [`@apply ${config.size.md.rounded.lg}`]: {},
           //md:inner
           '.nui-avatar-inner': {
@@ -443,7 +443,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //md:rounded-full
-        '&.nui-avatar-full': {
+        '&.nui-avatar-rounded-full': {
           '.nui-avatar-dot': {
             [`@apply end-${config.size.md.dot.position.rounded.full} top-${config.size.md.dot.position.rounded.full}`]:
               {},
@@ -468,7 +468,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply text-${config.size.lg.text.font.size}`]: {},
         },
         //lg:rounded-none
-        '&.nui-avatar-straight': {
+        '&.nui-avatar-rounded-none': {
           [`@apply ${config.size.lg.rounded.none}`]: {},
           //lg:inner
           '.nui-avatar-inner': {
@@ -481,7 +481,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //lg:rounded-sm
-        '&.nui-avatar-rounded': {
+        '&.nui-avatar-rounded-sm': {
           [`@apply ${config.size.lg.rounded.sm}`]: {},
           //lg:inner
           '.nui-avatar-inner': {
@@ -494,7 +494,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //lg:rounded-md
-        '&.nui-avatar-smooth': {
+        '&.nui-avatar-rounded-md': {
           [`@apply ${config.size.lg.rounded.md}`]: {},
           //lg:inner
           '.nui-avatar-inner': {
@@ -507,7 +507,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //lg:rounded-lg
-        '&.nui-avatar-curved': {
+        '&.nui-avatar-rounded-lg': {
           [`@apply ${config.size.lg.rounded.lg}`]: {},
           //lg:inner
           '.nui-avatar-inner': {
@@ -520,7 +520,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //lg:rounded-full
-        '&.nui-avatar-full': {
+        '&.nui-avatar-rounded-full': {
           '.nui-avatar-dot': {
             [`@apply end-${config.size.lg.dot.position.rounded.full} top-${config.size.lg.dot.position.rounded.full}`]:
               {},
@@ -545,7 +545,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply text-${config.size.xl.text.font.size}`]: {},
         },
         //xl:rounded-none
-        '&.nui-avatar-straight': {
+        '&.nui-avatar-rounded-none': {
           [`@apply ${config.size.xl.rounded.none}`]: {},
           //xl:inner
           '.nui-avatar-inner': {
@@ -558,7 +558,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xl:rounded-sm
-        '&.nui-avatar-rounded': {
+        '&.nui-avatar-rounded-sm': {
           [`@apply ${config.size.xl.rounded.sm}`]: {},
           //xl:inner
           '.nui-avatar-inner': {
@@ -571,7 +571,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xl:rounded-md
-        '&.nui-avatar-smooth': {
+        '&.nui-avatar-rounded-md': {
           [`@apply ${config.size.xl.rounded.md}`]: {},
           //xl:inner
           '.nui-avatar-inner': {
@@ -584,7 +584,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xl:rounded-lg
-        '&.nui-avatar-curved': {
+        '&.nui-avatar-rounded-lg': {
           [`@apply ${config.size.xl.rounded.lg}`]: {},
           //xl:inner
           '.nui-avatar-inner': {
@@ -597,7 +597,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //xl:rounded-full
-        '&.nui-avatar-full': {
+        '&.nui-avatar-rounded-full': {
           '.nui-avatar-dot': {
             [`@apply end-${config.size.xl.dot.position.rounded.full} top-${config.size.xl.dot.position.rounded.full}`]:
               {},
@@ -622,7 +622,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply text-${config.size.xxl.text.font.size}`]: {},
         },
         //2xl:rounded-none
-        '&.nui-avatar-straight': {
+        '&.nui-avatar-rounded-none': {
           [`@apply ${config.size.xxl.rounded.none}`]: {},
           //2xl:inner
           '.nui-avatar-inner': {
@@ -635,7 +635,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //2xl:rounded-sm
-        '&.nui-avatar-rounded': {
+        '&.nui-avatar-rounded-sm': {
           [`@apply ${config.size.xxl.rounded.sm}`]: {},
           //2xl:inner
           '.nui-avatar-inner': {
@@ -648,7 +648,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //2xl:rounded-md
-        '&.nui-avatar-smooth': {
+        '&.nui-avatar-rounded-md': {
           [`@apply ${config.size.xxl.rounded.md}`]: {},
           //2xl:inner
           '.nui-avatar-inner': {
@@ -661,7 +661,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //2xl:rounded-lg
-        '&.nui-avatar-curved': {
+        '&.nui-avatar-rounded-lg': {
           [`@apply ${config.size.xxl.rounded.lg}`]: {},
           //2xl:inner
           '.nui-avatar-inner': {
@@ -674,7 +674,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //2xl:rounded-full
-        '&.nui-avatar-full': {
+        '&.nui-avatar-rounded-full': {
           '.nui-avatar-dot': {
             [`@apply end-${config.size.xxl.dot.position.rounded.full} top-${config.size.xxl.dot.position.rounded.full}`]:
               {},
@@ -700,7 +700,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply text-${config.size.xxxl.text.font.size}`]: {},
         },
         //3xl:rounded-none
-        '&.nui-avatar-straight': {
+        '&.nui-avatar-rounded-none': {
           [`@apply ${config.size.xxxl.rounded.none}`]: {},
           //3xl:inner
           '.nui-avatar-inner': {
@@ -713,7 +713,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //3xl:rounded-sm
-        '&.nui-avatar-rounded': {
+        '&.nui-avatar-rounded-sm': {
           [`@apply ${config.size.xxxl.rounded.sm}`]: {},
           //3xl:inner
           '.nui-avatar-inner': {
@@ -726,7 +726,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //3xl:rounded-md
-        '&.nui-avatar-smooth': {
+        '&.nui-avatar-rounded-md': {
           [`@apply ${config.size.xxxl.rounded.md}`]: {},
           //3xl:inner
           '.nui-avatar-inner': {
@@ -739,7 +739,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //3xl:rounded-lg
-        '&.nui-avatar-curved': {
+        '&.nui-avatar-rounded-lg': {
           [`@apply ${config.size.xxxl.rounded.lg}`]: {},
           //3xl:inner
           '.nui-avatar-inner': {
@@ -752,7 +752,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //3xl:rounded-full
-        '&.nui-avatar-full': {
+        '&.nui-avatar-rounded-full': {
           '.nui-avatar-dot': {
             [`@apply end-${config.size.xxxl.dot.position.rounded.full} top-${config.size.xxxl.dot.position.rounded.full}`]:
               {},
@@ -778,7 +778,7 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply text-${config.size.xxxxl.text.font.size}`]: {},
         },
         //4xl:rounded-none
-        '&.nui-avatar-straight': {
+        '&.nui-avatar-rounded-none': {
           [`@apply ${config.size.xxxxl.rounded.none}`]: {},
           //4xl:inner
           '.nui-avatar-inner': {
@@ -791,7 +791,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //4xl:rounded-sm
-        '&.nui-avatar-rounded': {
+        '&.nui-avatar-rounded-sm': {
           [`@apply ${config.size.xxxxl.rounded.sm}`]: {},
           //4xl:inner
           '.nui-avatar-inner': {
@@ -804,7 +804,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //4xl:rounded-md
-        '&.nui-avatar-smooth': {
+        '&.nui-avatar-rounded-md': {
           [`@apply ${config.size.xxxxl.rounded.md}`]: {},
           //4xl:inner
           '.nui-avatar-inner': {
@@ -817,7 +817,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //4xl:rounded-lg
-        '&.nui-avatar-curved': {
+        '&.nui-avatar-rounded-lg': {
           [`@apply ${config.size.xxxxl.rounded.lg}`]: {},
           //4xl:inner
           '.nui-avatar-inner': {
@@ -830,7 +830,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //4xl:rounded-full
-        '&.nui-avatar-full': {
+        '&.nui-avatar-rounded-full': {
           '.nui-avatar-dot': {
             [`@apply end-${config.size.xxxxl.dot.position.rounded.full} top-${config.size.xxxxl.dot.position.rounded.full}`]:
               {},
@@ -838,7 +838,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
 
-      '&.nui-avatar-full': {
+      '&.nui-avatar-rounded-full': {
         '@apply rounded-full': {},
 
         '.nui-avatar-inner': {
@@ -850,7 +850,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
 
-      '&.nui-avatar-mask:not(.nui-avatar-rounded):not(.nui-avatar-smooth):not(.nui-avatar-curved):not(.nui-avatar-full)':
+      '&.nui-avatar-mask:not(.nui-avatar-rounded):not(.nui-avatar-rounded-md):not(.nui-avatar-rounded-lg):not(.nui-avatar-rounded-full)':
         {
           '@apply nui-mask': {},
         },
