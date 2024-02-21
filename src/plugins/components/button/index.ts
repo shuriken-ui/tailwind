@@ -133,16 +133,16 @@ export default plugin(({ addComponents, theme }) => {
       // #endregion
 
       // #region Rounded
-      '&.nui-button-rounded': {
+      '&.nui-button-rounded-sm': {
         [`@apply rounded-${config.rounded.small}`]: {},
       },
-      '&.nui-button-smooth': {
+      '&.nui-button-rounded-md': {
         [`@apply rounded-${config.rounded.medium}`]: {},
       },
-      '&.nui-button-curved': {
+      '&.nui-button-rounded-lg': {
         [`@apply rounded-${config.rounded.large}`]: {},
       },
-      '&.nui-button-full': {
+      '&.nui-button-rounded-full': {
         [`@apply rounded-${config.rounded.full}`]: {},
 
         '.nui-button-badge': {

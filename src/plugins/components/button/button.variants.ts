@@ -9,10 +9,10 @@ export const size = {
 
 export const rounded = {
   none: '',
-  sm: 'nui-button-rounded',
-  md: 'nui-button-curved',
-  lg: 'nui-button-smooth',
-  full: 'nui-button-full',
+  sm: 'nui-button-rounded-sm',
+  md: 'nui-button-rounded-md',
+  lg: 'nui-button-rounded-lg',
+  full: 'nui-button-rounded-full',
 } as const satisfies ButtonVariant<'rounded'>
 
 export const variant = {
