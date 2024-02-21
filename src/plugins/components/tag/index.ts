@@ -32,19 +32,19 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply text-${config.size.md.font.size}`]: {},
       },
       //Rounded:sm
-      '&.nui-tag-rounded': {
+      '&.nui-tag-rounded-sm': {
         [`@apply ${config.rounded.sm}`]: {},
       },
       //Rounded:md
-      '&.nui-tag-smooth': {
+      '&.nui-tag-rounded-md': {
         [`@apply ${config.rounded.md}`]: {},
       },
       //Rounded:lg
-      '&.nui-tag-curved': {
+      '&.nui-tag-rounded-lg': {
         [`@apply ${config.rounded.lg}`]: {},
       },
       //Rounded:full
-      '&.nui-tag-full': {
+      '&.nui-tag-rounded-full': {
         [`@apply ${config.rounded.full}`]: {},
       },
       //Variant:solid

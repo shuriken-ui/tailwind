@@ -8,10 +8,10 @@ export const variant = {
 
 export const rounded = {
   none: '',
-  sm: 'nui-tag-rounded',
-  md: 'nui-tag-smooth',
-  lg: 'nui-tag-curved',
-  full: 'nui-tag-full',
+  sm: 'nui-tag-rounded-sm',
+  md: 'nui-tag-rounded-md',
+  lg: 'nui-tag-rounded-lg',
+  full: 'nui-tag-rounded-full',
 } as const satisfies TagVariant<'rounded'>
 
 export const color = {
