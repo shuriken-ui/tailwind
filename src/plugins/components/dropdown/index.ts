@@ -123,15 +123,15 @@ export default plugin(({ addComponents, theme }) => {
           '@apply w-72': {},
         },
         //Rounded:sm
-        '&.nui-menu-rounded': {
+        '&.nui-menu-rounded-sm': {
           [`@apply ${config.menu.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-menu-smooth': {
+        '&.nui-menu-rounded-md': {
           [`@apply ${config.menu.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-menu-curved': {
+        '&.nui-menu-rounded-lg': {
           [`@apply ${config.menu.rounded.lg}`]: {},
         },
         //Color:default

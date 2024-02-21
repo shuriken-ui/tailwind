@@ -12,10 +12,10 @@ export const size = {
 
 export const rounded = {
   none: '',
-  sm: 'nui-menu-rounded',
-  md: 'nui-menu-smooth',
-  lg: 'nui-menu-curved',
-  full: 'nui-menu-curved',
+  sm: 'nui-menu-rounded-sm',
+  md: 'nui-menu-rounded-md',
+  lg: 'nui-menu-rounded-lg',
+  full: 'nui-menu-rounded-lg',
 } as const satisfies DropdownVariant<'rounded'>
 
 export const color = {
