@@ -29,6 +29,11 @@ const meta = {
       ],
       defaultValue: 'default',
     },
+    rounded: {
+      control: { type: 'select' },
+      options: ['none', 'sm', 'md', 'lg'],
+      defaultValue: 'sm',
+    },
     elevated: {
       name: 'Elevated',
       control: { type: 'boolean' },
