@@ -41,8 +41,8 @@ const meta = {
     },
     rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved'],
-      defaultValue: 'rounded',
+      options: ['none', 'sm', 'md', 'lg'],
+      defaultValue: 'sm',
     },
   },
 } satisfies Meta<AccordionAttrs>

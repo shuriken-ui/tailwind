@@ -51,8 +51,8 @@ const meta = {
     },
     rounded: {
       control: { type: 'select' },
-      options: ['straight', 'rounded', 'smooth', 'curved', 'full'],
-      defaultValue: 'straight',
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      defaultValue: 'none',
     },
     variant: {
       control: { type: 'select' },

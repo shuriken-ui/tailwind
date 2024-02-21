@@ -197,11 +197,11 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-toast-rounded-sm': {
         [`@apply rounded-${config.rounded.sm}`]: {},
       },
-      //Rounded:smooth
+      //Rounded:md
       '&.nui-toast-rounded-md': {
         [`@apply rounded-${config.rounded.md}`]: {},
       },
-      //Rounded:curved
+      //Rounded:lg
       '&.nui-toast-rounded-lg': {
         [`@apply rounded-${config.rounded.lg}`]: {},
       },

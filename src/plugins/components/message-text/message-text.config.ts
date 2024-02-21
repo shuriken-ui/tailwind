@@ -3,9 +3,9 @@ export const key = 'messageText' as const
 export const defaultConfig = {
   padding: '5',
   rounded: {
-    default: 'rounded-md',
-    smooth: 'rounded-lg',
-    curved: 'rounded-xl',
+    sm: 'rounded-md',
+    md: 'rounded-lg',
+    lg: 'rounded-xl',
   },
   header: {
     gap: '2',
