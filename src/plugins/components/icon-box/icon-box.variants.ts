@@ -2,10 +2,10 @@ import type { IconBoxVariant } from './icon-box.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-box-rounded',
-  md: 'nui-box-smooth',
-  lg: 'nui-box-curved',
-  full: 'nui-box-full',
+  sm: 'nui-box-rounded-sm',
+  md: 'nui-box-rounded-md',
+  lg: 'nui-box-rounded-lg',
+  full: 'nui-box-rounded-full',
 } as const satisfies IconBoxVariant<'rounded'>
 
 export const size = {

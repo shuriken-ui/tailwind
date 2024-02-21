@@ -20,15 +20,15 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-xs': {
         [`@apply h-${config.size.xs.size} w-${config.size.xs.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.xs.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.xs.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.xs.rounded.lg}`]: {},
         },
       },
@@ -36,15 +36,15 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-sm': {
         [`@apply h-${config.size.sm.size} w-${config.size.sm.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.sm.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.sm.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.sm.rounded.lg}`]: {},
         },
       },
@@ -52,15 +52,15 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-md': {
         [`@apply h-${config.size.md.size} w-${config.size.md.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.md.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.md.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.md.rounded.lg}`]: {},
         },
       },
@@ -68,15 +68,15 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-lg': {
         [`@apply h-${config.size.lg.size} w-${config.size.lg.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.lg.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.lg.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.lg.rounded.lg}`]: {},
         },
       },
@@ -84,15 +84,15 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-xl': {
         [`@apply h-${config.size.xl.size} w-${config.size.xl.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.xl.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.xl.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.xl.rounded.lg}`]: {},
         },
       },
@@ -100,20 +100,20 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-2xl': {
         [`@apply h-${config.size.xxl.size} w-${config.size.xxl.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.xxl.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.xxl.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.xxl.rounded.lg}`]: {},
         },
       },
       //Rounded:full
-      '&.nui-box-full': {
+      '&.nui-box-rounded-full': {
         '@apply rounded-full': {},
       },
       //Color:default
@@ -440,7 +440,7 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Masks
-      '&.nui-box-mask:not(.nui-box-rounded):not(.nui-box-curved):not(.nui-box-full):not(.nui-box-outline):not(.nui-box-bordered)':
+      '&.nui-box-mask:not(.nui-box-rounded-sm):not(.nui-box-rounded-lg):not(.nui-box-rounded-full):not(.nui-box-outline):not(.nui-box-bordered)':
         {
           '@apply nui-mask': {},
         },
