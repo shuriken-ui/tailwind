@@ -2,10 +2,10 @@ import type { CheckboxVariant } from './checkbox.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-checkbox-rounded',
-  md: 'nui-checkbox-smooth',
-  lg: 'nui-checkbox-curved',
-  full: 'nui-checkbox-full',
+  sm: 'nui-checkbox-rounded-sm',
+  md: 'nui-checkbox-rounded-md',
+  lg: 'nui-checkbox-rounded-lg',
+  full: 'nui-checkbox-rounded-full',
 } as const satisfies CheckboxVariant<'rounded'>
 
 export const color = {

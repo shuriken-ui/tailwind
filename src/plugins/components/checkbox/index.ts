@@ -95,22 +95,22 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-checkbox-rounded .nui-checkbox-outer, &.nui-checkbox-rounded .nui-checkbox-inner':
+      '&.nui-checkbox-rounded-sm .nui-checkbox-outer, &.nui-checkbox-rounded-sm .nui-checkbox-inner':
         {
           [`@apply ${config.rounded.sm}`]: {},
         },
       //Rounded:md
-      '&.nui-checkbox-smooth .nui-checkbox-outer, &.nui-checkbox-smooth .nui-checkbox-inner':
+      '&.nui-checkbox-rounded-md .nui-checkbox-outer, &.nui-checkbox-rounded-md .nui-checkbox-inner':
         {
           [`@apply ${config.rounded.md}`]: {},
         },
       //Rounded:lg
-      '&.nui-checkbox-curved .nui-checkbox-outer, &.nui-checkbox-curved .nui-checkbox-inner':
+      '&.nui-checkbox-rounded-lg .nui-checkbox-outer, &.nui-checkbox-rounded-lg .nui-checkbox-inner':
         {
           [`@apply ${config.rounded.lg}`]: {},
         },
       //Rounded:full
-      '&.nui-checkbox-full .nui-checkbox-outer, &.nui-checkbox-full .nui-checkbox-inner':
+      '&.nui-checkbox-rounded-full .nui-checkbox-outer, &.nui-checkbox-rounded-full .nui-checkbox-inner':
         {
           [`@apply ${config.rounded.full}`]: {},
         },
