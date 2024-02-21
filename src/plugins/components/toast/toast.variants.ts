@@ -2,9 +2,9 @@ import type { ToastVariant } from './toast.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-toast-rounded',
-  md: 'nui-toast-smooth',
-  lg: 'nui-toast-curved',
+  sm: 'nui-toast-rounded-sm',
+  md: 'nui-toast-rounded-md',
+  lg: 'nui-toast-rounded-lg',
 } as const satisfies ToastVariant<'rounded'>
 
 export const color = {
