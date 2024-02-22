@@ -125,8 +125,8 @@ export default plugin(({ addComponents, theme }) => {
     [`[${tooltip}][${position}^='start']::before, [${tooltip}][${position}^='left']::before`]:
       {
         top: '50%',
-        borderEndWidth: '0',
-        borderStartColor: 'currentColor',
+        borderRightWidth: '0',
+        borderLeftColor: 'currentColor',
         insetInlineStart: 'calc(0em - 5px)',
         transform: 'translate(-0.5em, -50%)',
         [`@apply text-${config.background.light}`]: {},
@@ -143,8 +143,8 @@ export default plugin(({ addComponents, theme }) => {
     [`[${tooltip}][${position}^='end']::before, [${tooltip}][${position}^='right']::before`]:
       {
         top: '50%',
-        borderStartWidth: '0',
-        borderEndColor: 'currentColor',
+        borderLefttWidth: '0',
+        borderRightColor: 'currentColor',
         insetInlineEnd: 'calc(0em - 5px)',
         transform: 'translate(0.5em, -50%)',
         [`@apply text-${config.background.light}`]: {},
