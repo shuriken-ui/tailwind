@@ -37,8 +37,8 @@ export const defaultConfig = {
         },
         color: {
           hover: {
-            light: 'primary-500',
-            dark: 'primary-500',
+            light: 'muted-200',
+            dark: 'muted-700',
           },
         },
       },
