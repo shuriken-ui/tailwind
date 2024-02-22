@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-next.3](https://github.com/shuriken-ui/tailwind/compare/v3.0.0-next.2...v3.0.0-next.3) (2024-02-22)
+
+
+### Bug Fixes
+
+* **Tooltip:** fix right and left arrows ([4376b60](https://github.com/shuriken-ui/tailwind/commit/4376b6011dc1611badf157d543f2afc3c068a272))
+
 ## [3.0.0-next.2](https://github.com/shuriken-ui/tailwind/compare/v3.0.0-next.1...v3.0.0-next.2) (2024-02-22)
 
 
