@@ -90,7 +90,7 @@ export const defaultConfig = {
             },
           },
         },
-        invert: {
+        light: {
           background: {
             light: 'white',
             dark: 'muted-950',
@@ -212,7 +212,7 @@ export const defaultConfig = {
             },
           },
         },
-        invert: {
+        light: {
           background: {
             light: 'white/10',
             dark: 'white/10',
@@ -342,7 +342,7 @@ export const defaultConfig = {
             },
           },
         },
-        invert: {
+        light: {
           background: {
             light: 'transparent',
             dark: 'transparent',

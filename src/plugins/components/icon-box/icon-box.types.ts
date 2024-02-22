@@ -8,7 +8,7 @@ export interface IconBoxProps extends Record<string, unknown> {
     | 'default-contrast'
     | 'dark'
     | 'black'
-    | 'invert'
+    | 'light'
     | 'primary'
     | 'info'
     | 'success'

@@ -145,13 +145,13 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply bg-${config.color.variant.solid.defaultContrast.background.light} dark:bg-${config.color.variant.solid.defaultContrast.background.dark}`]:
             {},
         },
-        //Color:invert
-        '&.nui-box-invert': {
+        //Color:light
+        '&.nui-box-light': {
           //Font
-          [`@apply text-${config.color.variant.solid.invert.font.color.light} dark:text-${config.color.variant.solid.invert.font.color.dark}`]:
+          [`@apply text-${config.color.variant.solid.light.font.color.light} dark:text-${config.color.variant.solid.light.font.color.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.color.variant.solid.invert.background.light} dark:bg-${config.color.variant.solid.invert.background.dark}`]:
+          [`@apply bg-${config.color.variant.solid.light.background.light} dark:bg-${config.color.variant.solid.light.background.dark}`]:
             {},
         },
         //Color:dark
@@ -238,13 +238,13 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply bg-${config.color.variant.pastel.defaultContrast.background.light} dark:bg-${config.color.variant.pastel.defaultContrast.background.dark}`]:
             {},
         },
-        //Color:invert
-        '&.nui-box-invert': {
+        //Color:light
+        '&.nui-box-light': {
           //Font
-          [`@apply text-${config.color.variant.pastel.invert.font.color.light} dark:text-${config.color.variant.pastel.invert.font.color.dark}`]:
+          [`@apply text-${config.color.variant.pastel.light.font.color.light} dark:text-${config.color.variant.pastel.light.font.color.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.color.variant.pastel.invert.background.light} dark:bg-${config.color.variant.pastel.invert.background.dark}`]:
+          [`@apply bg-${config.color.variant.pastel.light.background.light} dark:bg-${config.color.variant.pastel.light.background.dark}`]:
             {},
         },
         //Color:dark
@@ -337,16 +337,16 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply border-2 border-${config.color.variant.outline.defaultContrast.border.light} dark:border-${config.color.variant.outline.defaultContrast.border.dark}`]:
             {},
         },
-        //Color:invert
-        '&.nui-box-invert': {
+        //Color:light
+        '&.nui-box-light': {
           //Font
-          [`@apply text-${config.color.variant.outline.invert.font.color.light} dark:text-${config.color.variant.outline.invert.font.color.dark}`]:
+          [`@apply text-${config.color.variant.outline.light.font.color.light} dark:text-${config.color.variant.outline.light.font.color.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.color.variant.outline.invert.background.light}  bg-${config.color.variant.outline.invert.background.dark}`]:
+          [`@apply bg-${config.color.variant.outline.light.background.light}  bg-${config.color.variant.outline.light.background.dark}`]:
             {},
           //Border
-          [`@apply border-2 border-${config.color.variant.outline.invert.border.light} dark:border-${config.color.variant.outline.invert.border.dark}`]:
+          [`@apply border-2 border-${config.color.variant.outline.light.border.light} dark:border-${config.color.variant.outline.light.border.dark}`]:
             {},
         },
         //Color:dark
