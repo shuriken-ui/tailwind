@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-next.1](https://github.com/shuriken-ui/tailwind/compare/v3.0.0-next.0...v3.0.0-next.1) (2024-02-22)
+
+
+### Features
+
+* **ButtonGroup:** add role group selector to main class ([78a8204](https://github.com/shuriken-ui/tailwind/commit/78a820461f7bc49b69745e55da4f72cd30a38961))
+* **DropdownItem:** add color prop, rename existing color prop to contrast, update bindings ([9aa5f01](https://github.com/shuriken-ui/tailwind/commit/9aa5f01b4f97a30b23deefbd321b235d673567a6))
+
+
+### Bug Fixes
+
+* **BaseDropdown:** change context ring color to muted ([b47deb1](https://github.com/shuriken-ui/tailwind/commit/b47deb142e467c113ad2b1872edf67d8e9e71e34))
+* **IconBox:** change invert color name to light ([15b0d15](https://github.com/shuriken-ui/tailwind/commit/15b0d15ed54c78243dc4b28a307ca3c6e2695449))
+
 ## [3.0.0-next.0](https://github.com/shuriken-ui/tailwind/compare/v2.0.1...v3.0.0-next.0) (2024-02-21)
 
 
