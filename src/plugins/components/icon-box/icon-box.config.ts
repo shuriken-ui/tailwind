@@ -93,7 +93,7 @@ export const defaultConfig = {
         light: {
           background: {
             light: 'white',
-            dark: 'muted-950',
+            dark: 'muted-700',
           },
           font: {
             color: {
@@ -220,7 +220,7 @@ export const defaultConfig = {
           font: {
             color: {
               light: 'muted-800',
-              dark: 'muted-800',
+              dark: 'muted-300',
             },
           },
         },
@@ -232,7 +232,7 @@ export const defaultConfig = {
           font: {
             color: {
               light: 'muted-800',
-              dark: 'muted-900',
+              dark: 'muted-100',
             },
           },
         },
@@ -354,7 +354,7 @@ export const defaultConfig = {
           font: {
             color: {
               light: 'muted-800',
-              dark: 'muted-800',
+              dark: 'muted-400',
             },
           },
         },
