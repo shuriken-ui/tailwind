@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-next.2](https://github.com/shuriken-ui/tailwind/compare/v3.0.0-next.1...v3.0.0-next.2) (2024-02-22)
+
+
+### Bug Fixes
+
+* **IconBox:** dark color config ([d05ede9](https://github.com/shuriken-ui/tailwind/commit/d05ede9871a6683d106069632d263272b2875381))
+
 ## [3.0.0-next.1](https://github.com/shuriken-ui/tailwind/compare/v3.0.0-next.0...v3.0.0-next.1) (2024-02-22)
 
 
