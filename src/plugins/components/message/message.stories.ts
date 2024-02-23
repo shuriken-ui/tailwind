@@ -11,11 +11,11 @@ const meta = {
   render: (args) => Message(args),
   argTypes: {
     message: {
-      control: { type: 'text' },
+      control: { color: 'text' },
       defaultValue: 'Some nice message text',
     },
     color: {
-      control: { type: 'select' },
+      control: { color: 'select' },
       options: [
         'default',
         'default-contrast',
@@ -30,12 +30,12 @@ const meta = {
       defaultValue: 'default',
     },
     rounded: {
-      control: { type: 'select' },
+      control: { color: 'select' },
       options: ['none', 'sm', 'md', 'lg', 'full'],
       defaultValue: 'sm',
     },
     closable: {
-      control: { type: 'boolean' },
+      control: { color: 'boolean' },
       defaultValue: false,
     },
   },
@@ -51,7 +51,7 @@ export const Main: Story = {
   name: 'Main example',
   args: {
     // set default values used for UI preview
-    type: 'default',
+    color: 'default',
     rounded: 'sm',
     message: 'Some nice message text',
     style: 'max-width: 280px;',
@@ -63,7 +63,7 @@ export const Main: Story = {
 export const Straight: Story = {
   name: 'Rounded: none',
   args: {
-    type: 'default',
+    color: 'default',
     rounded: 'none',
     message: 'Some nice message text',
   },
@@ -72,7 +72,7 @@ export const Straight: Story = {
 export const Rounded: Story = {
   name: 'Rounded: sm',
   args: {
-    type: 'default',
+    color: 'default',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -81,7 +81,7 @@ export const Rounded: Story = {
 export const Smooth: Story = {
   name: 'Rounded: md',
   args: {
-    type: 'default',
+    color: 'default',
     rounded: 'md',
     message: 'Some nice message text',
   },
@@ -90,7 +90,7 @@ export const Smooth: Story = {
 export const Curved: Story = {
   name: 'Rounded: lg',
   args: {
-    type: 'default',
+    color: 'default',
     rounded: 'lg',
     message: 'Some nice message text',
   },
@@ -99,7 +99,7 @@ export const Curved: Story = {
 export const Full: Story = {
   name: 'Rounded: full',
   args: {
-    type: 'default',
+    color: 'default',
     rounded: 'full',
     message: 'Some nice message text',
   },
@@ -110,7 +110,7 @@ export const Full: Story = {
 export const TypeDefault: Story = {
   name: 'Type: default',
   args: {
-    type: 'default',
+    color: 'default',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -119,7 +119,7 @@ export const TypeDefault: Story = {
 export const TypeDefaultContrast: Story = {
   name: 'Type: default-contrast',
   args: {
-    type: 'default-contrast',
+    color: 'default-contrast',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -128,7 +128,7 @@ export const TypeDefaultContrast: Story = {
 export const TypeMuted: Story = {
   name: 'Type: muted',
   args: {
-    type: 'muted',
+    color: 'muted',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -137,7 +137,7 @@ export const TypeMuted: Story = {
 export const TypeMutedContrast: Story = {
   name: 'Type: muted-contrast',
   args: {
-    type: 'muted-contrast',
+    color: 'muted-contrast',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -146,7 +146,7 @@ export const TypeMutedContrast: Story = {
 export const TypePrimary: Story = {
   name: 'Type: primary',
   args: {
-    type: 'primary',
+    color: 'primary',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -155,7 +155,7 @@ export const TypePrimary: Story = {
 export const TypeInfo: Story = {
   name: 'Type: info',
   args: {
-    type: 'info',
+    color: 'info',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -164,7 +164,7 @@ export const TypeInfo: Story = {
 export const TypeSuccess: Story = {
   name: 'Type: success',
   args: {
-    type: 'success',
+    color: 'success',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -173,7 +173,7 @@ export const TypeSuccess: Story = {
 export const TypeWarning: Story = {
   name: 'Type: warning',
   args: {
-    type: 'warning',
+    color: 'warning',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -182,7 +182,7 @@ export const TypeWarning: Story = {
 export const TypeDanger: Story = {
   name: 'Type: danger',
   args: {
-    type: 'danger',
+    color: 'danger',
     rounded: 'sm',
     message: 'Some nice message text',
   },
@@ -193,7 +193,7 @@ export const TypeDanger: Story = {
 export const ClosableDefault: Story = {
   name: 'Closable: default',
   args: {
-    type: 'default',
+    color: 'default',
     rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
@@ -203,7 +203,7 @@ export const ClosableDefault: Story = {
 export const ClosableDefaultContrast: Story = {
   name: 'Closable: default-contrast',
   args: {
-    type: 'default-contrast',
+    color: 'default-contrast',
     rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
@@ -213,7 +213,7 @@ export const ClosableDefaultContrast: Story = {
 export const ClosableMuted: Story = {
   name: 'Closable: muted',
   args: {
-    type: 'muted',
+    color: 'muted',
     rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
@@ -223,7 +223,7 @@ export const ClosableMuted: Story = {
 export const ClosableMutedContrast: Story = {
   name: 'Closable: muted-contrast',
   args: {
-    type: 'muted-contrast',
+    color: 'muted-contrast',
     rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
@@ -233,7 +233,7 @@ export const ClosableMutedContrast: Story = {
 export const ClosablePrimary: Story = {
   name: 'Closable: primary',
   args: {
-    type: 'primary',
+    color: 'primary',
     rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
@@ -243,7 +243,7 @@ export const ClosablePrimary: Story = {
 export const ClosableInfo: Story = {
   name: 'Closable: info',
   args: {
-    type: 'info',
+    color: 'info',
     rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
@@ -253,7 +253,7 @@ export const ClosableInfo: Story = {
 export const ClosableSuccess: Story = {
   name: 'Closable: success',
   args: {
-    type: 'success',
+    color: 'success',
     rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
@@ -263,7 +263,7 @@ export const ClosableSuccess: Story = {
 export const ClosableWarning: Story = {
   name: 'Closable: warning',
   args: {
-    type: 'warning',
+    color: 'warning',
     rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
@@ -273,7 +273,7 @@ export const ClosableWarning: Story = {
 export const ClosableDanger: Story = {
   name: 'Closable: danger',
   args: {
-    type: 'danger',
+    color: 'danger',
     rounded: 'sm',
     closable: true,
     message: 'Some nice message text',
@@ -285,7 +285,7 @@ export const ClosableDanger: Story = {
 export const SlotIconDefault: Story = {
   name: 'Slot icon: default',
   args: {
-    type: 'default',
+    color: 'default',
     rounded: 'sm',
     closable: true,
     icon: html`
@@ -311,7 +311,7 @@ export const SlotIconDefault: Story = {
 export const SlotIconDefaultContrast: Story = {
   name: 'Slot icon: default-contrast',
   args: {
-    type: 'default-contrast',
+    color: 'default-contrast',
     rounded: 'sm',
     closable: true,
     icon: html`
@@ -337,7 +337,7 @@ export const SlotIconDefaultContrast: Story = {
 export const SlotIconMuted: Story = {
   name: 'Slot icon: muted',
   args: {
-    type: 'muted',
+    color: 'muted',
     rounded: 'sm',
     closable: true,
     icon: html`
@@ -363,7 +363,7 @@ export const SlotIconMuted: Story = {
 export const SlotIconMutedContrast: Story = {
   name: 'Slot icon: muted-contrast',
   args: {
-    type: 'muted-contrast',
+    color: 'muted-contrast',
     rounded: 'sm',
     closable: true,
     icon: html`
@@ -389,7 +389,7 @@ export const SlotIconMutedContrast: Story = {
 export const SlotIconPrimary: Story = {
   name: 'Slot icon: primary',
   args: {
-    type: 'primary',
+    color: 'primary',
     rounded: 'sm',
     closable: true,
     icon: html`
@@ -415,7 +415,7 @@ export const SlotIconPrimary: Story = {
 export const SlotIconInfo: Story = {
   name: 'Slot icon: info',
   args: {
-    type: 'info',
+    color: 'info',
     rounded: 'sm',
     closable: true,
     icon: html`
@@ -441,7 +441,7 @@ export const SlotIconInfo: Story = {
 export const SlotIconSuccess: Story = {
   name: 'Slot icon: success',
   args: {
-    type: 'success',
+    color: 'success',
     rounded: 'lg',
     closable: true,
     icon: html`
@@ -469,7 +469,7 @@ export const SlotIconSuccess: Story = {
 export const SlotIconWarning: Story = {
   name: 'Slot icon: warning',
   args: {
-    type: 'warning',
+    color: 'warning',
     icon: html`
       <svg
         class="nui-message-icon"
@@ -493,7 +493,7 @@ export const SlotIconWarning: Story = {
 export const SlotIconDanger: Story = {
   name: 'Slot icon: danger',
   args: {
-    type: 'danger',
+    color: 'danger',
     icon: html`
       <svg
         class="nui-message-icon"

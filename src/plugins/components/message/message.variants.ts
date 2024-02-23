@@ -8,7 +8,7 @@ export const rounded = {
   full: 'nui-message-rounded-full',
 } as const satisfies MessageVariant<'rounded'>
 
-export const type = {
+export const color = {
   default: 'nui-message-default',
   'default-contrast': 'nui-message-default-contrast',
   muted: 'nui-message-muted',
@@ -18,4 +18,4 @@ export const type = {
   success: 'nui-message-success',
   warning: 'nui-message-warning',
   danger: 'nui-message-danger',
-} as const satisfies MessageVariant<'type'>
+} as const satisfies MessageVariant<'color'>
