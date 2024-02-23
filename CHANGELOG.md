@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-next.5](https://github.com/shuriken-ui/tailwind/compare/v3.0.0-next.4...v3.0.0-next.5) (2024-02-23)
+
+
+### Bug Fixes
+
+* **Message:** rename type prop to color ([b94522c](https://github.com/shuriken-ui/tailwind/commit/b94522cda643ca8eec556ee3c4af80b7777bc4aa))
+
 ## [3.0.0-next.4](https://github.com/shuriken-ui/tailwind/compare/v3.0.0-next.3...v3.0.0-next.4) (2024-02-22)
 
 
