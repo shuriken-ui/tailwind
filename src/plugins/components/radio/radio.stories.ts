@@ -24,8 +24,10 @@ const meta = {
       control: { type: 'select' },
       options: [
         'default',
-        'light',
         'muted',
+        'light',
+        'dark',
+        'black',
         'primary',
         'info',
         'success',
@@ -360,6 +362,92 @@ export const ColorDangerFour: Story = {
     color: 'danger',
     id: 'radio-danger-four',
     name: 'radio-danger',
+  },
+}
+// #endregion
+
+// #region Color: dark
+export const ColorDarkOne: Story = {
+  name: 'Color: dark',
+  args: {
+    label: 'Radio',
+    color: 'dark',
+    id: 'radio-dark-one',
+    name: 'radio-dark',
+    checked: 'true',
+  },
+}
+
+export const ColorDarkTwo: Story = {
+  name: 'Color: dark',
+  args: {
+    label: 'Radio',
+    color: 'dark',
+    id: 'radio-dark-two',
+    name: 'radio-dark',
+  },
+}
+
+export const ColorDarkThree: Story = {
+  name: 'Color: dark',
+  args: {
+    label: 'Radio',
+    color: 'dark',
+    id: 'radio-dark-three',
+    name: 'radio-dark',
+  },
+}
+
+export const ColorDarkFour: Story = {
+  name: 'Color: dark',
+  args: {
+    label: 'Radio',
+    color: 'dark',
+    id: 'radio-dark-four',
+    name: 'radio-dark',
+  },
+}
+// #endregion
+
+// #region Color: black
+export const ColorBlackOne: Story = {
+  name: 'Color: black',
+  args: {
+    label: 'Radio',
+    color: 'black',
+    id: 'radio-black-one',
+    name: 'radio-black',
+    checked: 'true',
+  },
+}
+
+export const ColorBlackTwo: Story = {
+  name: 'Color: black',
+  args: {
+    label: 'Radio',
+    color: 'black',
+    id: 'radio-black-two',
+    name: 'radio-black',
+  },
+}
+
+export const ColorBlackThree: Story = {
+  name: 'Color: black',
+  args: {
+    label: 'Radio',
+    color: 'black',
+    id: 'radio-black-three',
+    name: 'radio-black',
+  },
+}
+
+export const ColorBlackFour: Story = {
+  name: 'Color: black',
+  args: {
+    label: 'Radio',
+    color: 'black',
+    id: 'radio-black-four',
+    name: 'radio-black',
   },
 }
 // #endregion

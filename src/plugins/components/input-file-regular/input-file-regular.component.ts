@@ -16,7 +16,7 @@ export const InputFileRegular = ({
   loading,
   placeholder,
   colorFocus,
-  contrast = 'white',
+  contrast = 'default',
   error,
   classes = {
     wrapper: '',
@@ -38,7 +38,7 @@ export const InputFileRegular = ({
         error && !loading && 'nui-input-file-error',
         loading && 'nui-input-file-loading',
         icon && 'nui-has-icon',
-        colorFocus && 'nui-input-color-focus',
+        colorFocus && 'nui-input-file-color-focus',
         classes?.wrapper,
       ]
         .filter(Boolean)
@@ -68,11 +68,7 @@ export const InputFileRegular = ({
         <label
           tabindex="0"
           for="${id}"
-          class=${[
-            'nui-input-file-inner',
-            colorFocus && 'nui-color-focus',
-            classes?.input,
-          ]
+          class=${['nui-input-file-inner', classes?.input]
             .filter(Boolean)
             .join(' ')}
         >

@@ -6,8 +6,10 @@ export interface RadioProps extends Record<string, unknown> {
   error?: string | boolean
   color?:
     | 'default'
-    | 'light'
     | 'muted'
+    | 'light'
+    | 'dark'
+    | 'black'
     | 'primary'
     | 'info'
     | 'success'

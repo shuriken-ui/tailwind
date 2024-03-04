@@ -122,15 +122,8 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply transition-${config.input.action.transition.property} duration-${config.input.action.transition.duration}`]:
           {},
       },
-      //Focus:color
-      '&.nui-input-number-focus': {
-        '.nui-input': {
-          [`@apply focus:border-${config.input.focus.border.color.light} dark:focus:border-${config.input.focus.border.color.dark}`]:
-            {},
-        },
-      },
       //Rounded:sm
-      '&.nui-input-number-rounded': {
+      '&.nui-input-number-rounded-sm': {
         '.nui-input-number, .nui-input-number-outer': {
           [`@apply ${config.rounded.sm}`]: {},
         },
@@ -140,7 +133,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:md
-      '&.nui-input-number-smooth': {
+      '&.nui-input-number-rounded-md': {
         '.nui-input-number, .nui-input-number-outer': {
           [`@apply ${config.rounded.md}`]: {},
         },
@@ -150,7 +143,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:lg
-      '&.nui-input-number-curved': {
+      '&.nui-input-number-rounded-lg': {
         '.nui-input-number, .nui-input-number-outer': {
           [`@apply ${config.rounded.lg}`]: {},
         },
@@ -160,7 +153,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:full
-      '&.nui-input-number-full': {
+      '&.nui-input-number-rounded-full': {
         '.nui-input-number, .nui-input-number-outer': {
           [`@apply ${config.rounded.full}`]: {},
         },
@@ -354,6 +347,17 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Border:hover
           [`@apply hover:border-${config.color.mutedContrast.border.hover.light} dark:hover:border-${config.color.mutedContrast.border.hover.dark}`]:
+            {},
+        },
+      },
+      //Focus:color
+      '&.nui-input-number-focus': {
+        '.nui-input-number': {
+          //Focus
+          [`@apply focus:!border-${config.input.focus.border.color.light} dark:focus:!border-${config.input.focus.border.color.dark}`]:
+            {},
+          //Force focus
+          [`@apply focus:hover:!border-${config.input.focus.border.color.light} dark:focus:hover:!border-${config.input.focus.border.color.dark}`]:
             {},
         },
       },

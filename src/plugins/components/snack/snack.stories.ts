@@ -16,7 +16,7 @@ const meta = {
     },
     color: {
       control: { type: 'select' },
-      options: ['default', 'muted'],
+      options: ['default', 'default-contrast', 'muted', 'muted-contrast'],
       defaultValue: 'muted',
     },
     size: {
@@ -98,36 +98,104 @@ export const MutedFour: Story = {
 }
 // #endregion
 
-// #region Color: light
-export const LightOne: Story = {
-  name: 'Light: Ex. 1',
+// #region Color: muted-contrast
+export const MutedContrastOne: Story = {
+  name: 'Muted contrast: Ex. 1',
+  args: {
+    label: 'React',
+    color: 'muted-contrast',
+  },
+}
+
+export const MutedContrastTwo: Story = {
+  name: 'Muted contrast: Ex. 2',
+  args: {
+    label: 'Angular',
+    color: 'muted-contrast',
+  },
+}
+
+export const MutedContrastThree: Story = {
+  name: 'Muted contrast: Ex. 3',
+  args: {
+    label: 'Vue',
+    color: 'muted-contrast',
+  },
+}
+
+export const MutedContrastFour: Story = {
+  name: 'Muted contrast: Ex. 4',
+  args: {
+    label: 'Html5',
+    color: 'muted-contrast',
+  },
+}
+// #endregion
+
+// #region Color: default
+export const DefaultOne: Story = {
+  name: 'Default: Ex. 1',
   args: {
     label: 'React',
     color: 'default',
   },
 }
 
-export const LightTwo: Story = {
-  name: 'Light: Ex. 2',
+export const DefaultTwo: Story = {
+  name: 'Default: Ex. 2',
   args: {
     label: 'Angular',
     color: 'default',
   },
 }
 
-export const LightThree: Story = {
-  name: 'Light: Ex. 3',
+export const DefaultThree: Story = {
+  name: 'Default: Ex. 3',
   args: {
     label: 'Vue',
     color: 'default',
   },
 }
 
-export const LightFour: Story = {
-  name: 'Light: Ex. 4',
+export const DefaultFour: Story = {
+  name: 'Default: Ex. 4',
   args: {
     label: 'Html5',
     color: 'default',
+  },
+}
+// #endregion
+
+// #region Color: default-contrast
+export const DefaultContrastOne: Story = {
+  name: 'Default contrast: Ex. 1',
+  args: {
+    label: 'React',
+    color: 'default-contrast',
+  },
+}
+
+export const DefaultContrastTwo: Story = {
+  name: 'Default contrast: Ex. 2',
+  args: {
+    label: 'Angular',
+    color: 'default-contrast',
+  },
+}
+
+export const DefaultContrastThree: Story = {
+  name: 'Default contrast: Ex. 3',
+  args: {
+    label: 'Vue',
+    color: 'default-contrast',
+  },
+}
+
+export const DefaultContrastFour: Story = {
+  name: 'Default contrast: Ex. 4',
+  args: {
+    label: 'Html5',
+    color: 'default-contrast',
   },
 }
 // #endregion

@@ -47,14 +47,42 @@ export default plugin(({ addComponents, theme }) => {
               [`@apply text-${config.item.dot.font.size}`]: {},
             },
           },
-          //Item:link
-          '&.nui-has-link': {
-            [`@apply hover:text-${config.item.link.font.color.hover} focus:text-${config.item.link.font.color.focus}`]:
-              {},
-          },
           //Item:text
           '.nui-item-text': {
             [`@apply text-${config.item.text.font.color.light} dark:text-${config.item.text.font.color.dark} px-${config.item.text.padding.x}`]:
+              {},
+          },
+        },
+      },
+      //Color:primary
+      '&.nui-breadcrumb-primary': {
+        '.nui-item-inner': {
+          '&.nui-has-link': {
+            [`@apply hover:text-${config.item.link.font.color.primary.light.hover} focus:text-${config.item.link.font.color.primary.light.focus}`]:
+              {},
+            [`@apply dark:hover:text-${config.item.link.font.color.primary.dark.hover} dark:focus:text-${config.item.link.font.color.primary.dark.focus}`]:
+              {},
+          },
+        },
+      },
+      //Color:dark
+      '&.nui-breadcrumb-dark': {
+        '.nui-item-inner': {
+          '&.nui-has-link': {
+            [`@apply hover:text-${config.item.link.font.color.dark.light.hover} focus:text-${config.item.link.font.color.dark.light.focus}`]:
+              {},
+            [`@apply dark:hover:text-${config.item.link.font.color.dark.dark.hover} dark:focus:text-${config.item.link.font.color.dark.dark.focus}`]:
+              {},
+          },
+        },
+      },
+      //Color:black
+      '&.nui-breadcrumb-black': {
+        '.nui-item-inner': {
+          '&.nui-has-link': {
+            [`@apply hover:text-${config.item.link.font.color.black.light.hover} focus:text-${config.item.link.font.color.black.light.focus}`]:
+              {},
+            [`@apply dark:hover:text-${config.item.link.font.color.black.dark.hover} dark:focus:text-${config.item.link.font.color.black.dark.focus}`]:
               {},
           },
         },

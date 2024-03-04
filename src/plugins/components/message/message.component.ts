@@ -8,7 +8,7 @@ import * as variants from './message.variants'
  * Primary UI component for user interaction
  */
 export const Message = ({
-  type = 'success',
+  color = 'success',
   rounded = 'sm',
   closable,
   icon,
@@ -20,7 +20,7 @@ export const Message = ({
     <div
       class=${[
         'nui-message',
-        type && variants.type[type],
+        color && variants.color[color],
         rounded && variants.rounded[rounded],
         classes?.wrapper,
       ]

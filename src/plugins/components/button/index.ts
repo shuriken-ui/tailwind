@@ -133,16 +133,16 @@ export default plugin(({ addComponents, theme }) => {
       // #endregion
 
       // #region Rounded
-      '&.nui-button-rounded': {
+      '&.nui-button-rounded-sm': {
         [`@apply rounded-${config.rounded.small}`]: {},
       },
-      '&.nui-button-smooth': {
+      '&.nui-button-rounded-md': {
         [`@apply rounded-${config.rounded.medium}`]: {},
       },
-      '&.nui-button-curved': {
+      '&.nui-button-rounded-lg': {
         [`@apply rounded-${config.rounded.large}`]: {},
       },
-      '&.nui-button-full': {
+      '&.nui-button-rounded-full': {
         [`@apply rounded-${config.rounded.full}`]: {},
 
         '.nui-button-badge': {
@@ -187,6 +187,39 @@ export default plugin(({ addComponents, theme }) => {
               {},
           },
         },
+        //Solid:default-contrast
+        '&.nui-button-default-contrast': {
+          //Text color
+          [`@apply text-${config.variant.solid.defaultContrast.text.light} dark:text-${config.variant.solid.defaultContrast.text.dark}`]:
+            {},
+          //Bg main
+          [`@apply bg-${config.variant.solid.defaultContrast.background.light.base} dark:bg-${config.variant.solid.defaultContrast.background.dark.base}`]:
+            {},
+          //Bg hover
+          [`@apply hover:enabled:bg-${config.variant.solid.defaultContrast.background.light.hover} dark:hover:enabled:bg-${config.variant.solid.defaultContrast.background.dark.hover}`]:
+            {},
+          //Bg active
+          [`@apply active:enabled:bg-${config.variant.solid.defaultContrast.background.light.active} dark:active:enabled:bg-${config.variant.solid.defaultContrast.background.dark.active}`]:
+            {},
+          //Bg focus
+          [`@apply focus-visible:bg-${config.variant.solid.defaultContrast.background.light.focus} dark:focus-visible:bg-${config.variant.solid.defaultContrast.background.dark.focus}`]:
+            {},
+          //Border main
+          [`@apply border border-${config.variant.solid.defaultContrast.border.light.base} dark:border-${config.variant.solid.defaultContrast.border.dark.base}`]:
+            {},
+          //Border hover
+          [`@apply hover:enabled:border-${config.variant.solid.defaultContrast.border.light.hover} dark:hover:enabled:border-${config.variant.solid.defaultContrast.border.dark.hover}`]:
+            {},
+          //shadows
+          '&.nui-button-shadow': {
+            [`@apply enabled:shadow-${config.variant.solid.defaultContrast.shadow.size} enabled:shadow-${config.variant.solid.defaultContrast.shadow.light} dark:enabled:shadow-${config.variant.solid.defaultContrast.shadow.dark}`]:
+              {},
+          },
+          '&.nui-button-shadow-hover': {
+            [`@apply hover:enabled:shadow-${config.variant.solid.defaultContrast.shadow.size} hover:enabled:shadow-${config.variant.solid.defaultContrast.shadow.light} dark:hover:enabled:shadow-${config.variant.solid.defaultContrast.shadow.dark}`]:
+              {},
+          },
+        },
         //Solid:muted
         '&.nui-button-muted': {
           //Text color
@@ -220,6 +253,39 @@ export default plugin(({ addComponents, theme }) => {
               {},
           },
         },
+        //Solid:muted-contrast
+        '&.nui-button-muted-contrast': {
+          //Text color
+          [`@apply text-${config.variant.solid.mutedContrast.text.light} dark:text-${config.variant.solid.mutedContrast.text.dark}`]:
+            {},
+          //Bg main
+          [`@apply bg-${config.variant.solid.mutedContrast.background.light.base} dark:bg-${config.variant.solid.mutedContrast.background.dark.base}`]:
+            {},
+          //Bg hover
+          [`@apply hover:enabled:bg-${config.variant.solid.mutedContrast.background.light.hover} dark:hover:enabled:bg-${config.variant.solid.mutedContrast.background.dark.hover}`]:
+            {},
+          //Bg active
+          [`@apply active:enabled:bg-${config.variant.solid.mutedContrast.background.light.active} dark:active:enabled:bg-${config.variant.solid.mutedContrast.background.dark.active}`]:
+            {},
+          //Bg focus
+          [`@apply focus-visible:bg-${config.variant.solid.mutedContrast.background.light.focus} dark:focus-visible:bg-${config.variant.solid.mutedContrast.background.dark.focus}`]:
+            {},
+          //Border main
+          [`@apply border border-${config.variant.solid.mutedContrast.border.light.base} dark:border-${config.variant.solid.mutedContrast.border.dark.base}`]:
+            {},
+          //Border hover
+          [`@apply hover:enabled:border-${config.variant.solid.mutedContrast.border.light.hover} dark:hover:enabled:border-${config.variant.solid.mutedContrast.border.dark.hover}`]:
+            {},
+          //shadows
+          '&.nui-button-shadow': {
+            [`@apply enabled:shadow-${config.variant.solid.mutedContrast.shadow.size} enabled:shadow-${config.variant.solid.mutedContrast.shadow.light} dark:enabled:shadow-${config.variant.solid.mutedContrast.shadow.dark}`]:
+              {},
+          },
+          '&.nui-button-shadow-hover': {
+            [`@apply hover:enabled:shadow-${config.variant.solid.mutedContrast.shadow.size} hover:enabled:shadow-${config.variant.solid.mutedContrast.shadow.light} dark:hover:enabled:shadow-${config.variant.solid.mutedContrast.shadow.dark}`]:
+              {},
+          },
+        },
         //Solid:light
         '&.nui-button-light': {
           //Text color
@@ -250,6 +316,72 @@ export default plugin(({ addComponents, theme }) => {
           },
           '&.nui-button-shadow-hover': {
             [`@apply hover:enabled:shadow-${config.variant.solid.light.shadow.size} hover:enabled:shadow-${config.variant.solid.light.shadow.light} dark:hover:enabled:shadow-${config.variant.solid.light.shadow.dark}`]:
+              {},
+          },
+        },
+        //Solid:dark
+        '&.nui-button-dark': {
+          //Text color
+          [`@apply text-${config.variant.solid.dark.text.light} dark:text-${config.variant.solid.dark.text.dark}`]:
+            {},
+          //Bg main
+          [`@apply bg-${config.variant.solid.dark.background.light.base} dark:bg-${config.variant.solid.dark.background.dark.base}`]:
+            {},
+          //Bg hover
+          [`@apply hover:enabled:bg-${config.variant.solid.dark.background.light.hover} dark:hover:enabled:bg-${config.variant.solid.dark.background.dark.hover}`]:
+            {},
+          //Bg active
+          [`@apply active:enabled:bg-${config.variant.solid.dark.background.light.active} dark:active:enabled:bg-${config.variant.solid.dark.background.dark.active}`]:
+            {},
+          //Bg focus
+          [`@apply focus-visible:bg-${config.variant.solid.dark.background.light.focus} dark:focus-visible:bg-${config.variant.solid.dark.background.dark.focus}`]:
+            {},
+          //Border main
+          [`@apply border border-${config.variant.solid.dark.border.light.base} dark:border-${config.variant.solid.dark.border.dark.base}`]:
+            {},
+          //Border hover
+          [`@apply border-${config.variant.solid.dark.border.light.hover} dark:border-${config.variant.solid.dark.border.dark.hover}`]:
+            {},
+          //Shadows
+          '&.nui-button-shadow': {
+            [`@apply enabled:shadow-${config.variant.solid.dark.shadow.size} enabled:shadow-${config.variant.solid.dark.shadow.dark} dark:enabled:shadow-${config.variant.solid.dark.shadow.dark}`]:
+              {},
+          },
+          '&.nui-button-shadow-hover': {
+            [`@apply hover:enabled:shadow-${config.variant.solid.dark.shadow.size} hover:enabled:shadow-${config.variant.solid.dark.shadow.dark} dark:hover:enabled:shadow-${config.variant.solid.dark.shadow.dark}`]:
+              {},
+          },
+        },
+        //Solid:black
+        '&.nui-button-black': {
+          //Text color
+          [`@apply text-${config.variant.solid.black.text.light} dark:text-${config.variant.solid.black.text.dark}`]:
+            {},
+          //Bg main
+          [`@apply bg-${config.variant.solid.black.background.light.base} dark:bg-${config.variant.solid.black.background.dark.base}`]:
+            {},
+          //Bg hover
+          [`@apply hover:enabled:bg-${config.variant.solid.black.background.light.hover} dark:hover:enabled:bg-${config.variant.solid.black.background.dark.hover}`]:
+            {},
+          //Bg active
+          [`@apply active:enabled:bg-${config.variant.solid.black.background.light.active} dark:active:enabled:bg-${config.variant.solid.black.background.dark.active}`]:
+            {},
+          //Bg focus
+          [`@apply focus-visible:bg-${config.variant.solid.black.background.light.focus} dark:focus-visible:bg-${config.variant.solid.black.background.dark.focus}`]:
+            {},
+          //Border main
+          [`@apply border border-${config.variant.solid.black.border.light.base} dark:border-${config.variant.solid.black.border.dark.base}`]:
+            {},
+          //Border hover
+          [`@apply border-${config.variant.solid.black.border.light.hover} dark:border-${config.variant.solid.black.border.dark.hover}`]:
+            {},
+          //Shadows
+          '&.nui-button-shadow': {
+            [`@apply enabled:shadow-${config.variant.solid.black.shadow.size} enabled:shadow-${config.variant.solid.black.shadow.dark} dark:enabled:shadow-${config.variant.solid.black.shadow.dark}`]:
+              {},
+          },
+          '&.nui-button-shadow-hover': {
+            [`@apply hover:enabled:shadow-${config.variant.solid.black.shadow.size} hover:enabled:shadow-${config.variant.solid.black.shadow.dark} dark:hover:enabled:shadow-${config.variant.solid.black.shadow.dark}`]:
               {},
           },
         },
@@ -391,7 +523,7 @@ export default plugin(({ addComponents, theme }) => {
       },
       '&.nui-button-pastel': {
         //Pastel:default
-        '&.nui-button-default': {
+        '&.nui-button-default, &.nui-button-default-contrast': {
           //Text color
           [`@apply text-${config.variant.pastel.default.text.light} dark:text-${config.variant.pastel.default.text.dark}`]:
             {},
@@ -409,21 +541,21 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
         //Pastel:muted
-        '&.nui-button-muted': {
+        '&.nui-button-muted, &.nui-button-muted-contrast': {
           //Text color
-          [`@apply text-${config.variant.pastel.default.text.light} dark:text-${config.variant.pastel.default.text.dark}`]:
+          [`@apply text-${config.variant.pastel.muted.text.light} dark:text-${config.variant.pastel.muted.text.dark}`]:
             {},
           //Bg main
-          [`@apply bg-${config.variant.pastel.default.background.light.base} dark:bg-${config.variant.pastel.default.background.dark.base}`]:
+          [`@apply bg-${config.variant.pastel.muted.background.light.base} dark:bg-${config.variant.pastel.muted.background.dark.base}`]:
             {},
           //Bg hover
-          [`@apply hover:enabled:bg-${config.variant.pastel.default.background.light.hover} dark:hover:enabled:bg-${config.variant.pastel.default.background.dark.hover}`]:
+          [`@apply hover:enabled:bg-${config.variant.pastel.muted.background.light.hover} dark:hover:enabled:bg-${config.variant.pastel.muted.background.dark.hover}`]:
             {},
           //Bg active
-          [`@apply active:enabled:bg-${config.variant.pastel.default.background.light.active} dark:active:enabled:bg-${config.variant.pastel.default.background.dark.active}`]:
+          [`@apply active:enabled:bg-${config.variant.pastel.muted.background.light.active} dark:active:enabled:bg-${config.variant.pastel.muted.background.dark.active}`]:
             {},
           //Bg focus
-          [`@apply focus-visible:bg-${config.variant.pastel.default.background.light.focus} dark:focus-visible:bg-${config.variant.pastel.default.background.dark.focus}`]:
+          [`@apply focus-visible:bg-${config.variant.pastel.muted.background.light.focus} dark:focus-visible:bg-${config.variant.pastel.muted.background.dark.focus}`]:
             {},
         },
         //Pastel:light
@@ -442,6 +574,42 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Bg focus
           [`@apply focus-visible:bg-${config.variant.pastel.light.background.light.focus} dark:focus-visible:bg-${config.variant.pastel.light.background.dark.focus}`]:
+            {},
+        },
+        //Pastel:dark
+        '&.nui-button-dark': {
+          //Text color
+          [`@apply text-${config.variant.pastel.dark.text.light} dark:text-${config.variant.pastel.dark.text.dark}`]:
+            {},
+          //Bg main
+          [`@apply bg-${config.variant.pastel.dark.background.light.base} dark:bg-${config.variant.pastel.dark.background.dark.base}`]:
+            {},
+          //Bg hover
+          [`@apply hover:enabled:bg-${config.variant.pastel.dark.background.light.hover} dark:hover:enabled:bg-${config.variant.pastel.dark.background.dark.hover}`]:
+            {},
+          //Bg active
+          [`@apply active:enabled:bg-${config.variant.pastel.dark.background.light.active} dark:active:enabled:bg-${config.variant.pastel.dark.background.dark.active}`]:
+            {},
+          //Bg focus
+          [`@apply focus-visible:bg-${config.variant.pastel.dark.background.light.focus} dark:focus-visible:bg-${config.variant.pastel.dark.background.dark.focus}`]:
+            {},
+        },
+        //Pastel:black
+        '&.nui-button-black': {
+          //Text color
+          [`@apply text-${config.variant.pastel.black.text.light} dark:text-${config.variant.pastel.black.text.dark}`]:
+            {},
+          //Bg main
+          [`@apply bg-${config.variant.pastel.black.background.light.base} dark:bg-${config.variant.pastel.black.background.dark.base}`]:
+            {},
+          //Bg hover
+          [`@apply hover:enabled:bg-${config.variant.pastel.black.background.light.hover} dark:hover:enabled:bg-${config.variant.pastel.black.background.dark.hover}`]:
+            {},
+          //Bg active
+          [`@apply active:enabled:bg-${config.variant.pastel.black.background.light.active} dark:active:enabled:bg-${config.variant.pastel.black.background.dark.active}`]:
+            {},
+          //Bg focus
+          [`@apply focus-visible:bg-${config.variant.pastel.black.background.light.focus} dark:focus-visible:bg-${config.variant.pastel.black.background.dark.focus}`]:
             {},
         },
         //Pastel:primary
@@ -538,7 +706,7 @@ export default plugin(({ addComponents, theme }) => {
       //Variant:outline
       '&.nui-button-outline': {
         //Outline:default
-        '&.nui-button-default': {
+        '&.nui-button-default, &.nui-button-default-contrast': {
           //Text color
           [`@apply text-${config.variant.outline.default.text.light.base} dark:text-${config.variant.outline.default.text.dark.base}`]:
             {},
@@ -608,7 +776,7 @@ export default plugin(({ addComponents, theme }) => {
           },
         },
         //Outline:muted
-        '&.nui-button-muted': {
+        '&.nui-button-muted, &.nui-button-muted-contrast': {
           //Text color
           [`@apply text-${config.variant.outline.muted.text.light.base} dark:text-${config.variant.outline.muted.text.dark.base}`]:
             {},
@@ -639,6 +807,76 @@ export default plugin(({ addComponents, theme }) => {
           //Shadows
           '&.nui-button-shadow-hover': {
             [`@apply hover:enabled:shadow-${config.variant.outline.muted.shadow.size} hover:enabled:shadow-${config.variant.outline.muted.shadow.light} dark:hover:enabled:shadow-${config.variant.outline.muted.shadow.dark}`]:
+              {},
+          },
+        },
+        //Outline:dark
+        '&.nui-button-dark': {
+          //Text color
+          [`@apply text-${config.variant.outline.dark.text.light.base} dark:text-${config.variant.outline.dark.text.dark.base}`]:
+            {},
+          //Text hover
+          [`@apply hover:enabled:text-${config.variant.outline.dark.text.light.hover} dark:hover:enabled:text-${config.variant.outline.dark.text.dark.hover}`]:
+            {},
+          //Text focus
+          [`@apply focus-visible:text-${config.variant.outline.dark.text.light.active} dark:focus-visible:text-${config.variant.outline.dark.text.dark.active}`]:
+            {},
+          //Text active
+          [`@apply active:enabled:text-${config.variant.outline.dark.text.light.focus} dark:active:enabled:text-${config.variant.outline.dark.text.dark.focus}`]:
+            {},
+          //Bg main
+          [`@apply bg-${config.variant.outline.dark.background.light.base} dark:bg-${config.variant.outline.dark.background.dark.base}`]:
+            {},
+          //Bg hover
+          [`@apply hover:enabled:bg-${config.variant.outline.dark.background.light.hover} dark:hover:enabled:bg-${config.variant.outline.dark.background.dark.hover}`]:
+            {},
+          //Bg active
+          [`@apply active:enabled:bg-${config.variant.outline.dark.background.light.active} dark:active:enabled:bg-${config.variant.outline.dark.background.dark.active}`]:
+            {},
+          //Bg focus
+          [`@apply focus-visible:bg-${config.variant.outline.dark.background.light.focus} dark:focus-visible:bg-${config.variant.outline.dark.background.dark.focus}`]:
+            {},
+          //Border main
+          [`@apply border-2 border-${config.variant.outline.dark.border.light} dark:border-${config.variant.outline.dark.border.dark}`]:
+            {},
+          //Shadows
+          '&.nui-button-shadow-hover': {
+            [`@apply hover:enabled:shadow-${config.variant.outline.dark.shadow.size} hover:enabled:shadow-${config.variant.outline.dark.shadow.light} dark:hover:enabled:shadow-${config.variant.outline.dark.shadow.dark}`]:
+              {},
+          },
+        },
+        //Outline:black
+        '&.nui-button-black': {
+          //Text color
+          [`@apply text-${config.variant.outline.black.text.light.base} dark:text-${config.variant.outline.black.text.dark.base}`]:
+            {},
+          //Text hover
+          [`@apply hover:enabled:text-${config.variant.outline.black.text.light.hover} dark:hover:enabled:text-${config.variant.outline.black.text.dark.hover}`]:
+            {},
+          //Text focus
+          [`@apply focus-visible:text-${config.variant.outline.black.text.light.active} dark:focus-visible:text-${config.variant.outline.black.text.dark.active}`]:
+            {},
+          //Text active
+          [`@apply active:enabled:text-${config.variant.outline.black.text.light.focus} dark:active:enabled:text-${config.variant.outline.black.text.dark.focus}`]:
+            {},
+          //Bg main
+          [`@apply bg-${config.variant.outline.black.background.light.base} dark:bg-${config.variant.outline.black.background.dark.base}`]:
+            {},
+          //Bg hover
+          [`@apply hover:enabled:bg-${config.variant.outline.black.background.light.hover} dark:hover:enabled:bg-${config.variant.outline.black.background.dark.hover}`]:
+            {},
+          //Bg active
+          [`@apply active:enabled:bg-${config.variant.outline.black.background.light.active} dark:active:enabled:bg-${config.variant.outline.black.background.dark.active}`]:
+            {},
+          //Bg focus
+          [`@apply focus-visible:bg-${config.variant.outline.black.background.light.focus} dark:focus-visible:bg-${config.variant.outline.black.background.dark.focus}`]:
+            {},
+          //Border main
+          [`@apply border-2 border-${config.variant.outline.black.border.light} dark:border-${config.variant.outline.black.border.dark}`]:
+            {},
+          //Shadows
+          '&.nui-button-shadow-hover': {
+            [`@apply hover:enabled:shadow-${config.variant.outline.black.shadow.size} hover:enabled:shadow-${config.variant.outline.black.shadow.light} dark:hover:enabled:shadow-${config.variant.outline.black.shadow.dark}`]:
               {},
           },
         },

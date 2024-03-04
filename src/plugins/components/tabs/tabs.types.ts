@@ -8,6 +8,7 @@ export interface TabsProps extends Record<string, unknown> {
   }[]
   type?: 'tabs' | 'box'
   justify?: 'start' | 'center' | 'end'
+  color?: 'default' | 'primary' | 'light' | 'dark' | 'black'
   hideLabel?: boolean
   bordered?: boolean
   classes?: {

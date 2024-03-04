@@ -17,7 +17,7 @@ const meta = {
     },
     color: {
       control: { type: 'select' },
-      options: ['default', 'muted'],
+      options: ['default', 'default-contrast', 'muted', 'muted-contrast'],
       defaultValue: 'default',
     },
     rounded: {
@@ -87,6 +87,48 @@ export const DefaultLg: Story = {
 }
 // #endregion
 
+// #region Default Contrast
+export const DefaultContrastXs: Story = {
+  name: 'Default contrast: xs',
+  args: {
+    size: 'xs',
+    children: html`
+      Esc
+    `,
+  },
+}
+
+export const DefaultContrastSm: Story = {
+  name: 'Default contrast: sm',
+  args: {
+    size: 'sm',
+    children: html`
+      Esc
+    `,
+  },
+}
+
+export const DefaultContrastMd: Story = {
+  name: 'Default contrast: md',
+  args: {
+    size: 'md',
+    children: html`
+      Esc
+    `,
+  },
+}
+
+export const DefaultContrastLg: Story = {
+  name: 'Default contrast: lg',
+  args: {
+    size: 'lg',
+    children: html`
+      Esc
+    `,
+  },
+}
+// #endregion
+
 // #region Muted
 export const MutedXs: Story = {
   name: 'Muted: xs',
@@ -123,6 +165,52 @@ export const MutedMd: Story = {
 
 export const MutedLg: Story = {
   name: 'Muted: lg',
+  args: {
+    size: 'lg',
+    color: 'muted',
+    children: html`
+      Esc
+    `,
+  },
+}
+// #endregion
+
+// #region Muted Contrast
+export const MutedContrastXs: Story = {
+  name: 'Muted contrast: xs',
+  args: {
+    size: 'xs',
+    color: 'muted',
+    children: html`
+      Esc
+    `,
+  },
+}
+
+export const MutedContrastSm: Story = {
+  name: 'Muted contrast: sm',
+  args: {
+    size: 'sm',
+    color: 'muted',
+    children: html`
+      Esc
+    `,
+  },
+}
+
+export const MutedContrastMd: Story = {
+  name: 'Muted contrast: md',
+  args: {
+    size: 'md',
+    color: 'muted',
+    children: html`
+      Esc
+    `,
+  },
+}
+
+export const MutedContrastLg: Story = {
+  name: 'Muted contrast: lg',
   args: {
     size: 'lg',
     color: 'muted',

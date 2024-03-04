@@ -9,6 +9,7 @@ import * as variants from './tab-slider.variants'
  */
 export const TabSlider = ({
   tabs,
+  color = 'primary',
   justify = 'start',
   rounded = 'md',
   size = 'md',
@@ -23,6 +24,7 @@ export const TabSlider = ({
     <div
       class=${[
         'nui-tab-slider',
+        color && variants.color[color],
         justify && variants.justify[justify],
         rounded && variants.rounded[rounded],
         size && variants.size[size],

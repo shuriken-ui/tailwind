@@ -295,25 +295,25 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-listbox-rounded': {
+      '&.nui-listbox-rounded-sm': {
         '.nui-listbox-button, .nui-listbox-options, .nui-listbox-option': {
           [`@apply ${config.rounded.sm}`]: {},
         },
       },
       //Rounded:md
-      '&.nui-listbox-smooth': {
+      '&.nui-listbox-rounded-md': {
         '.nui-listbox-button, .nui-listbox-options, .nui-listbox-option': {
           [`@apply ${config.rounded.md}`]: {},
         },
       },
       //Rounded:lg
-      '&.nui-listbox-curved': {
+      '&.nui-listbox-rounded-lg': {
         '.nui-listbox-button, .nui-listbox-options, .nui-listbox-option': {
           [`@apply ${config.rounded.lg}`]: {},
         },
       },
       //Rounded:full
-      '&.nui-listbox-full': {
+      '&.nui-listbox-rounded-full': {
         '.nui-listbox-button': {
           [`@apply ${config.rounded.full}`]: {},
         },
@@ -455,6 +455,19 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Border
           [`@apply border border-${config.color.mutedContrast.option.border.light} dark:border-${config.color.mutedContrast.option.border.dark}`]:
+            {},
+        },
+      },
+      //Focus:color
+      '&.nui-listbox-focus': {
+        '.nui-listbox-button': {
+          //Transition
+          [`@apply transition-colors duration-300`]: {},
+          //Focus
+          [`@apply focus:!border-${config.button.focus.border.color.light} dark:focus:!border-${config.button.focus.border.color.dark}`]:
+            {},
+          //Force focus
+          [`@apply focus:hover:!border-${config.button.focus.border.color.light} dark:focus:hover:!border-${config.button.focus.border.color.dark}`]:
             {},
         },
       },

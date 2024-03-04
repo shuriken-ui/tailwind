@@ -12,7 +12,7 @@ const config = {
 export default plugin(
   ({ addComponents }) =>
     addComponents({
-      '.nui-button-group': {
+      '.nui-button-group, [role="group"]': {
         '@apply flex': {},
 
         // Button

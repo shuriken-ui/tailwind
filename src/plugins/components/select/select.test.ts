@@ -8,7 +8,7 @@ describe('Select', () => {
   test('Should have no axe violations', async () => {
     const select = Select({
       label: 'Select',
-      shape: 'rounded',
+      rounded: 'sm',
       type: 'text',
       id: 'select',
       placeholder: 'Write something...',

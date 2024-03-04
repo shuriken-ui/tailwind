@@ -9,6 +9,7 @@ import * as variants from './fullscreen-dropfile.variants'
  */
 export const FullscreenDropfile = ({
   label = 'Drop your files',
+  color = 'primary',
   icon,
   isDropping,
   classes,
@@ -16,7 +17,11 @@ export const FullscreenDropfile = ({
 }: FullscreenDropfileAttrs) => {
   return html`
     <div
-      class=${['nui-fullscreen-dropfile', classes?.wrapper]
+      class=${[
+        'nui-fullscreen-dropfile',
+        color && variants.color[color],
+        classes?.wrapper,
+      ]
         .filter(Boolean)
         .join(' ')}
       ${spread(attrs)}

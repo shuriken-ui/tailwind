@@ -5,7 +5,15 @@ export interface ProgressCircleProps extends Record<string, unknown> {
   max?: number
   size?: number
   thickness?: number
-  color?: 'primary' | 'info' | 'success' | 'warning' | 'danger'
+  color?:
+    | 'primary'
+    | 'info'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | 'light'
+    | 'dark'
+    | 'black'
   classes?: {
     wrapper?: string | string[]
     track?: string | string[]

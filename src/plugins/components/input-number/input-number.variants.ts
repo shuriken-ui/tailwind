@@ -2,10 +2,10 @@ import type { InputVariant } from './input-number.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-input-number-rounded',
-  md: 'nui-input-number-smooth',
-  lg: 'nui-input-number-curved',
-  full: 'nui-input-number-full',
+  sm: 'nui-input-number-rounded-sm',
+  md: 'nui-input-number-rounded-md',
+  lg: 'nui-input-number-rounded-lg',
+  full: 'nui-input-number-rounded-full',
 } as const satisfies InputVariant<'rounded'>
 
 export const size = {

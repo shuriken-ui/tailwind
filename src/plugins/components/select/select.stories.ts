@@ -459,6 +459,74 @@ export const DisabledLg: Story = {
 }
 // #endregion
 
+// #region State: color focus
+export const ColorFocusSm: Story = {
+  name: 'Color focus: sm',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    colorFocus: true,
+    size: 'sm',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
+
+export const ColorFocusMd: Story = {
+  name: 'Color focus: md',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    colorFocus: true,
+    size: 'md',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
+
+export const ColorFocusLg: Story = {
+  name: 'Color focus: lg',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    colorFocus: true,
+    size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
+// #endregion
+
 // #region State: loading
 export const LoadingSm: Story = {
   name: 'Loading: sm',

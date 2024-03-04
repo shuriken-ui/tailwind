@@ -5,7 +5,9 @@ export interface ButtonCloseProps extends Record<string, unknown> {
   size?: 'xs' | 'sm' | 'md' | 'lg'
   color?:
     | 'default'
+    | 'default-contrast'
     | 'muted'
+    | 'muted-contrast'
     | 'primary'
     | 'info'
     | 'success'

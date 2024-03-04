@@ -58,18 +58,22 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply h-${config.size.xl}`]: {},
       },
       //Rounded
-      '&.nui-progress-rounded, &.nui-progress-rounded .nui-progress-bar': {
-        [`@apply ${config.rounded.sm}`]: {},
-      },
-      '&.nui-progress-smooth, &.nui-progress-smooth .nui-progress-bar': {
-        [`@apply ${config.rounded.md}`]: {},
-      },
-      '&.nui-progress-curved, &.nui-progress-curved .nui-progress-bar': {
-        [`@apply ${config.rounded.lg}`]: {},
-      },
-      '&.nui-progress-full, &.nui-progress-full .nui-progress-bar': {
-        [`@apply ${config.rounded.full}`]: {},
-      },
+      '&.nui-progress-rounded-sm, &.nui-progress-rounded-sm .nui-progress-bar':
+        {
+          [`@apply ${config.rounded.sm}`]: {},
+        },
+      '&.nui-progress-rounded-md, &.nui-progress-rounded-md .nui-progress-bar':
+        {
+          [`@apply ${config.rounded.md}`]: {},
+        },
+      '&.nui-progress-rounded-lg, &.nui-progress-rounded-lg .nui-progress-bar':
+        {
+          [`@apply ${config.rounded.lg}`]: {},
+        },
+      '&.nui-progress-rounded-full, &.nui-progress-rounded-full .nui-progress-bar':
+        {
+          [`@apply ${config.rounded.full}`]: {},
+        },
       '&.nui-progress-indeterminate .nui-progress-bar': {
         '@apply w-full': {},
       },
@@ -97,6 +101,21 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-progress-danger': {
         '.nui-progress-bar': {
           [`@apply bg-${config.bar.color.danger}`]: {},
+        },
+      },
+      '&.nui-progress-light': {
+        '.nui-progress-bar': {
+          [`@apply ${config.bar.color.light}`]: {},
+        },
+      },
+      '&.nui-progress-dark': {
+        '.nui-progress-bar': {
+          [`@apply ${config.bar.color.dark}`]: {},
+        },
+      },
+      '&.nui-progress-black': {
+        '.nui-progress-bar': {
+          [`@apply ${config.bar.color.black}`]: {},
         },
       },
     },

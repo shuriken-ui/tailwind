@@ -8,7 +8,7 @@ describe('Checkbox', () => {
   test('Should have no axe violations', async () => {
     const input = Checkbox({
       label: 'Checkbox',
-      shape: 'rounded',
+      rounded: 'sm',
       id: 'checkbox',
     })
 

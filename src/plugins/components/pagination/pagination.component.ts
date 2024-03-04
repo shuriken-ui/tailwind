@@ -7,11 +7,17 @@ import * as variants from './pagination.variants'
 /**
  * Primary UI component for user interaction
  */
-export const Pagination = ({ rounded, classes, ...attrs }: PaginationAttrs) => {
+export const Pagination = ({
+  rounded,
+  classes,
+  color = 'primary',
+  ...attrs
+}: PaginationAttrs) => {
   return html`
     <div
       class=${[
         'nui-pagination',
+        color && variants.color[color],
         rounded && variants.rounded[rounded],
         classes?.wrapper,
       ]

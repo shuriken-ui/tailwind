@@ -6,7 +6,15 @@ export interface DropdownItemProps extends Record<string, unknown> {
   active?: boolean
   disabled?: boolean
   rounded?: 'none' | 'sm' | 'md' | 'lg'
-  color?: 'default' | 'contrast'
+  contrast?: 'default' | 'contrast'
+  color?:
+    | 'primary'
+    | 'info'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | 'dark'
+    | 'black'
   rel?: string
   target?: string
   title?: string

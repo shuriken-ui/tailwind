@@ -11,7 +11,7 @@ import { ButtonClose } from '../button-close/button-close.component'
 export const Toast = ({
   title,
   text,
-  contrast = 'white',
+  contrast = 'low-contrast',
   color = 'default',
   rounded = 'md',
   borderless,

@@ -30,7 +30,7 @@ export const AvatarGroup = ({
         (avatar) => html`
           <div class="nui-avatar-outer">
             ${Avatar({
-              shape: 'full',
+              rounded: 'full',
               size: size,
               src: avatar.src,
               'data-nui-tooltip': avatar.text,

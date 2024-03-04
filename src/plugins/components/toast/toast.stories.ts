@@ -28,6 +28,8 @@ const meta = {
         'success',
         'warning',
         'danger',
+        'dark',
+        'black',
         'none',
       ],
       defaultValue: 'default',
@@ -39,8 +41,8 @@ const meta = {
     },
     contrast: {
       control: { type: 'select' },
-      options: ['white', 'contrast'],
-      defaultValue: 'white',
+      options: ['low-contrast', 'high-contrast'],
+      defaultValue: 'low-contrast',
     },
   },
 } satisfies Meta<ToastAttrs>
@@ -69,7 +71,7 @@ export const White: Story = {
     rounded: 'sm',
     title: 'Toast title',
     text: 'You need to take some action.',
-    contrast: 'white',
+    contrast: 'low-contrast',
   },
 }
 
@@ -79,7 +81,7 @@ export const Contrast: Story = {
     rounded: 'sm',
     title: 'Toast title',
     text: 'You need to take some action.',
-    contrast: 'contrast',
+    contrast: 'high-contrast',
   },
 }
 // #endregion
@@ -171,6 +173,26 @@ export const Danger: Story = {
   name: 'Color: danger',
   args: {
     color: 'danger',
+    title: 'Toast title',
+    text: 'You need to take some action.',
+    style: 'max-width: 340px;',
+  },
+}
+
+export const Dark: Story = {
+  name: 'Color: dark',
+  args: {
+    color: 'dark',
+    title: 'Toast title',
+    text: 'You need to take some action.',
+    style: 'max-width: 340px;',
+  },
+}
+
+export const Black: Story = {
+  name: 'Color: black',
+  args: {
+    color: 'black',
     title: 'Toast title',
     text: 'You need to take some action.',
     style: 'max-width: 340px;',
@@ -347,6 +369,66 @@ export const SlotIconDanger: Story = {
           />
           <path
             d="M120 136V80a8 8 0 0 1 16 0v56a8 8 0 0 1-16 0Zm112-44.45v72.9a15.86 15.86 0 0 1-4.69 11.31l-51.55 51.55a15.86 15.86 0 0 1-11.31 4.69h-72.9a15.86 15.86 0 0 1-11.31-4.69l-51.55-51.55A15.86 15.86 0 0 1 24 164.45v-72.9a15.86 15.86 0 0 1 4.69-11.31l51.55-51.55A15.86 15.86 0 0 1 91.55 24h72.9a15.86 15.86 0 0 1 11.31 4.69l51.55 51.55A15.86 15.86 0 0 1 232 91.55Zm-16 0L164.45 40h-72.9L40 91.55v72.9L91.55 216h72.9L216 164.45ZM128 160a12 12 0 1 0 12 12a12 12 0 0 0-12-12Z"
+          />
+        </g>
+      </svg>
+    `,
+  },
+}
+// #endregion
+
+// #region Slot: icon (dark)
+export const SlotIconDark: Story = {
+  name: 'Slot: icon',
+  args: {
+    color: 'dark',
+    title: 'Dark',
+    text: 'You need to take some action.',
+    icon: html`
+      <svg
+        class="nui-toast-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 256 256"
+      >
+        <g fill="currentColor">
+          <path
+            d="M208 192H48a8 8 0 0 1-6.88-12C47.71 168.6 56 139.81 56 104a72 72 0 0 1 144 0c0 35.82 8.3 64.6 14.9 76a8 8 0 0 1-6.9 12Z"
+            opacity=".2"
+          />
+          <path
+            d="M168 224a8 8 0 0 1-8 8H96a8 8 0 1 1 0-16h64a8 8 0 0 1 8 8Zm53.85-32a15.8 15.8 0 0 1-13.85 8H48a16 16 0 0 1-13.8-24.06C39.75 166.38 48 139.34 48 104a80 80 0 1 1 160 0c0 35.33 8.26 62.38 13.81 71.94a15.89 15.89 0 0 1 .03 16.06ZM208 184c-7.73-13.27-16-43.95-16-80a64 64 0 1 0-128 0c0 36.06-8.28 66.74-16 80Z"
+          />
+        </g>
+      </svg>
+    `,
+  },
+}
+// #endregion
+
+// #region Slot: icon (black)
+export const SlotIconBlack: Story = {
+  name: 'Slot: icon',
+  args: {
+    color: 'black',
+    title: 'Black',
+    text: 'You need to take some action.',
+    icon: html`
+      <svg
+        class="nui-toast-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 256 256"
+      >
+        <g fill="currentColor">
+          <path
+            d="M208 192H48a8 8 0 0 1-6.88-12C47.71 168.6 56 139.81 56 104a72 72 0 0 1 144 0c0 35.82 8.3 64.6 14.9 76a8 8 0 0 1-6.9 12Z"
+            opacity=".2"
+          />
+          <path
+            d="M168 224a8 8 0 0 1-8 8H96a8 8 0 1 1 0-16h64a8 8 0 0 1 8 8Zm53.85-32a15.8 15.8 0 0 1-13.85 8H48a16 16 0 0 1-13.8-24.06C39.75 166.38 48 139.34 48 104a80 80 0 1 1 160 0c0 35.33 8.26 62.38 13.81 71.94a15.89 15.89 0 0 1 .03 16.06ZM208 184c-7.73-13.27-16-43.95-16-80a64 64 0 1 0-128 0c0 36.06-8.28 66.74-16 80Z"
           />
         </g>
       </svg>
@@ -532,6 +614,66 @@ export const SlotIconBlockDanger: Story = {
 }
 // #endregion
 
+// #region Slot: icon block (dark)
+export const SlotIconBlockDark: Story = {
+  name: 'Slot: icon',
+  args: {
+    color: 'dark',
+    title: 'Dark',
+    text: 'You need to take some action.',
+    iconBlock: html`
+      <svg
+        class="nui-toast-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 256 256"
+      >
+        <g fill="currentColor">
+          <path
+            d="M208 192H48a8 8 0 0 1-6.88-12C47.71 168.6 56 139.81 56 104a72 72 0 0 1 144 0c0 35.82 8.3 64.6 14.9 76a8 8 0 0 1-6.9 12Z"
+            opacity=".2"
+          />
+          <path
+            d="M168 224a8 8 0 0 1-8 8H96a8 8 0 1 1 0-16h64a8 8 0 0 1 8 8Zm53.85-32a15.8 15.8 0 0 1-13.85 8H48a16 16 0 0 1-13.8-24.06C39.75 166.38 48 139.34 48 104a80 80 0 1 1 160 0c0 35.33 8.26 62.38 13.81 71.94a15.89 15.89 0 0 1 .03 16.06ZM208 184c-7.73-13.27-16-43.95-16-80a64 64 0 1 0-128 0c0 36.06-8.28 66.74-16 80Z"
+          />
+        </g>
+      </svg>
+    `,
+  },
+}
+// #endregion
+
+// #region Slot: icon block (black)
+export const SlotIconBlockBlack: Story = {
+  name: 'Slot: icon',
+  args: {
+    color: 'black',
+    title: 'Black',
+    text: 'You need to take some action.',
+    iconBlock: html`
+      <svg
+        class="nui-toast-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 256 256"
+      >
+        <g fill="currentColor">
+          <path
+            d="M208 192H48a8 8 0 0 1-6.88-12C47.71 168.6 56 139.81 56 104a72 72 0 0 1 144 0c0 35.82 8.3 64.6 14.9 76a8 8 0 0 1-6.9 12Z"
+            opacity=".2"
+          />
+          <path
+            d="M168 224a8 8 0 0 1-8 8H96a8 8 0 1 1 0-16h64a8 8 0 0 1 8 8Zm53.85-32a15.8 15.8 0 0 1-13.85 8H48a16 16 0 0 1-13.8-24.06C39.75 166.38 48 139.34 48 104a80 80 0 1 1 160 0c0 35.33 8.26 62.38 13.81 71.94a15.89 15.89 0 0 1 .03 16.06ZM208 184c-7.73-13.27-16-43.95-16-80a64 64 0 1 0-128 0c0 36.06-8.28 66.74-16 80Z"
+          />
+        </g>
+      </svg>
+    `,
+  },
+}
+// #endregion
+
 // #region Slot: icon block borderless (default)
 export const SlotIconBlockBorderlessDefault: Story = {
   name: 'Slot: icon',
@@ -707,6 +849,68 @@ export const SlotIconBlockBorderlessDanger: Story = {
           />
           <path
             d="M120 136V80a8 8 0 0 1 16 0v56a8 8 0 0 1-16 0Zm112-44.45v72.9a15.86 15.86 0 0 1-4.69 11.31l-51.55 51.55a15.86 15.86 0 0 1-11.31 4.69h-72.9a15.86 15.86 0 0 1-11.31-4.69l-51.55-51.55A15.86 15.86 0 0 1 24 164.45v-72.9a15.86 15.86 0 0 1 4.69-11.31l51.55-51.55A15.86 15.86 0 0 1 91.55 24h72.9a15.86 15.86 0 0 1 11.31 4.69l51.55 51.55A15.86 15.86 0 0 1 232 91.55Zm-16 0L164.45 40h-72.9L40 91.55v72.9L91.55 216h72.9L216 164.45ZM128 160a12 12 0 1 0 12 12a12 12 0 0 0-12-12Z"
+          />
+        </g>
+      </svg>
+    `,
+  },
+}
+// #endregion
+
+// #region Slot: icon block borderless (dark)
+export const SlotIconBlockBorderlessDark: Story = {
+  name: 'Slot: icon',
+  args: {
+    color: 'dark',
+    title: 'Dark',
+    text: 'You need to take some action.',
+    borderless: true,
+    iconBlock: html`
+      <svg
+        class="nui-toast-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 256 256"
+      >
+        <g fill="currentColor">
+          <path
+            d="M208 192H48a8 8 0 0 1-6.88-12C47.71 168.6 56 139.81 56 104a72 72 0 0 1 144 0c0 35.82 8.3 64.6 14.9 76a8 8 0 0 1-6.9 12Z"
+            opacity=".2"
+          />
+          <path
+            d="M168 224a8 8 0 0 1-8 8H96a8 8 0 1 1 0-16h64a8 8 0 0 1 8 8Zm53.85-32a15.8 15.8 0 0 1-13.85 8H48a16 16 0 0 1-13.8-24.06C39.75 166.38 48 139.34 48 104a80 80 0 1 1 160 0c0 35.33 8.26 62.38 13.81 71.94a15.89 15.89 0 0 1 .03 16.06ZM208 184c-7.73-13.27-16-43.95-16-80a64 64 0 1 0-128 0c0 36.06-8.28 66.74-16 80Z"
+          />
+        </g>
+      </svg>
+    `,
+  },
+}
+// #endregion
+
+// #region Slot: icon block borderless (black)
+export const SlotIconBlockBorderlessBlack: Story = {
+  name: 'Slot: icon',
+  args: {
+    color: 'black',
+    title: 'Black',
+    text: 'You need to take some action.',
+    borderless: true,
+    iconBlock: html`
+      <svg
+        class="nui-toast-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 256 256"
+      >
+        <g fill="currentColor">
+          <path
+            d="M208 192H48a8 8 0 0 1-6.88-12C47.71 168.6 56 139.81 56 104a72 72 0 0 1 144 0c0 35.82 8.3 64.6 14.9 76a8 8 0 0 1-6.9 12Z"
+            opacity=".2"
+          />
+          <path
+            d="M168 224a8 8 0 0 1-8 8H96a8 8 0 1 1 0-16h64a8 8 0 0 1 8 8Zm53.85-32a15.8 15.8 0 0 1-13.85 8H48a16 16 0 0 1-13.8-24.06C39.75 166.38 48 139.34 48 104a80 80 0 1 1 160 0c0 35.33 8.26 62.38 13.81 71.94a15.89 15.89 0 0 1 .03 16.06ZM208 184c-7.73-13.27-16-43.95-16-80a64 64 0 1 0-128 0c0 36.06-8.28 66.74-16 80Z"
           />
         </g>
       </svg>

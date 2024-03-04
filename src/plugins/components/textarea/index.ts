@@ -85,7 +85,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-textarea-rounded': {
+      '&.nui-textarea-rounded-sm': {
         '.nui-textarea': {
           [`@apply rounded-${config.rounded.sm}`]: {},
         },
@@ -94,7 +94,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:md
-      '&.nui-textarea-smooth': {
+      '&.nui-textarea-rounded-md': {
         '.nui-textarea': {
           [`@apply rounded-${config.rounded.md}`]: {},
         },
@@ -103,7 +103,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:lg
-      '&.nui-textarea-curved': {
+      '&.nui-textarea-rounded-lg': {
         '.nui-textarea': {
           [`@apply rounded-${config.rounded.lg}`]: {},
         },

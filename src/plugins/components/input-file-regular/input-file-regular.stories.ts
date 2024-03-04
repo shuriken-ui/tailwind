@@ -32,7 +32,7 @@ const meta = {
     },
     contrast: {
       control: { type: 'select' },
-      options: ['white', 'white-contrast'],
+      options: ['default', 'default-contrast'],
       defaultValue: 'default',
     },
     colorFocus: {

@@ -2,10 +2,10 @@ import type { TextareaVariant } from './textarea.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-textarea-rounded',
-  md: 'nui-textarea-smooth',
-  lg: 'nui-textarea-curved',
-  full: 'nui-textarea-full',
+  sm: 'nui-textarea-rounded-sm',
+  md: 'nui-textarea-rounded-md',
+  lg: 'nui-textarea-rounded-lg',
+  full: 'nui-textarea-rounded-lg',
 } as const satisfies TextareaVariant<'rounded'>
 
 export const size = {

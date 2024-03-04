@@ -6,7 +6,12 @@ export interface ButtonActionProps extends Record<string, unknown> {
   loading?: boolean
   color?:
     | 'default'
+    | 'default-contrast'
     | 'muted'
+    | 'muted-contrast'
+    | 'light'
+    | 'dark'
+    | 'black'
     | 'primary'
     | 'info'
     | 'success'

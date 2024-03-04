@@ -42,6 +42,12 @@ export const defaultConfig = {
           dark: 'primary-500',
         },
       },
+      border: {
+        color: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+      },
     },
     icon: {
       color: {

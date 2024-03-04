@@ -767,6 +767,89 @@ export const DisabledLg: Story = {
 }
 // #endregion
 
+// #region State: color focus
+export const ColorFocusSm: Story = {
+  name: 'Color focus: sm',
+  args: {
+    label: 'Search',
+    colorFocus: true,
+    size: 'sm',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const ColorFocusMd: Story = {
+  name: 'Color focus: md',
+  args: {
+    label: 'Search',
+    colorFocus: true,
+    size: 'md',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const ColorFocusLg: Story = {
+  name: 'Color focus: lg',
+  args: {
+    label: 'Search',
+    colorFocus: true,
+    size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+// #endregion
+
 // #region State: loading
 export const LoadingSm: Story = {
   name: 'Loading: sm',

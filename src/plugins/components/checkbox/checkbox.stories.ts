@@ -29,8 +29,10 @@ const meta = {
       control: { type: 'select' },
       options: [
         'default',
-        'light',
         'muted',
+        'light',
+        'dark',
+        'black',
         'primary',
         'info',
         'success',
@@ -146,6 +148,28 @@ export const StraightDanger: Story = {
     checked: true,
   },
 }
+
+export const StraightDark: Story = {
+  name: 'Straight: dark',
+  args: {
+    label: 'Checkbox',
+    rounded: 'none',
+    color: 'dark',
+    id: 'checkbox-straight-dark',
+    checked: true,
+  },
+}
+
+export const StraightBlack: Story = {
+  name: 'Straight: black',
+  args: {
+    label: 'Checkbox',
+    rounded: 'none',
+    color: 'black',
+    id: 'checkbox-straight-black',
+    checked: true,
+  },
+}
 // #endregion
 
 // #region Rounded:sm
@@ -222,6 +246,28 @@ export const RoundedDanger: Story = {
     rounded: 'sm',
     color: 'danger',
     id: 'checkbox-rounded-danger',
+    checked: true,
+  },
+}
+
+export const RoundedDark: Story = {
+  name: 'Rounded: dark',
+  args: {
+    label: 'Checkbox',
+    rounded: 'sm',
+    color: 'dark',
+    id: 'checkbox-rounded-dark',
+    checked: true,
+  },
+}
+
+export const RoundedBlack: Story = {
+  name: 'Rounded: black',
+  args: {
+    label: 'Checkbox',
+    rounded: 'sm',
+    color: 'black',
+    id: 'checkbox-rounded-black',
     checked: true,
   },
 }
@@ -304,6 +350,28 @@ export const SmoothDanger: Story = {
     checked: true,
   },
 }
+
+export const SmoothDark: Story = {
+  name: 'Smooth: dark',
+  args: {
+    label: 'Checkbox',
+    rounded: 'md',
+    color: 'dark',
+    id: 'checkbox-smooth-dark',
+    checked: true,
+  },
+}
+
+export const SmoothBlack: Story = {
+  name: 'Smooth: black',
+  args: {
+    label: 'Checkbox',
+    rounded: 'md',
+    color: 'black',
+    id: 'checkbox-smooth-black',
+    checked: true,
+  },
+}
 // #endregion
 
 // #region Rounded:lg
@@ -383,6 +451,28 @@ export const CurvedDanger: Story = {
     checked: true,
   },
 }
+
+export const CurvedDark: Story = {
+  name: 'Curved: dark',
+  args: {
+    label: 'Checkbox',
+    rounded: 'lg',
+    color: 'dark',
+    id: 'checkbox-curved-dark',
+    checked: true,
+  },
+}
+
+export const CurvedBlack: Story = {
+  name: 'Curved: black',
+  args: {
+    label: 'Checkbox',
+    rounded: 'lg',
+    color: 'black',
+    id: 'checkbox-curved-black',
+    checked: true,
+  },
+}
 // #endregion
 
 // #region Rounded:full
@@ -459,6 +549,28 @@ export const FullDanger: Story = {
     rounded: 'full',
     color: 'danger',
     id: 'checkbox-full-danger',
+    checked: true,
+  },
+}
+
+export const FullDark: Story = {
+  name: 'Full: dark',
+  args: {
+    label: 'Checkbox',
+    rounded: 'full',
+    color: 'dark',
+    id: 'checkbox-full-dark',
+    checked: true,
+  },
+}
+
+export const FullBlack: Story = {
+  name: 'Full: black',
+  args: {
+    label: 'Checkbox',
+    rounded: 'full',
+    color: 'black',
+    id: 'checkbox-full-black',
     checked: true,
   },
 }

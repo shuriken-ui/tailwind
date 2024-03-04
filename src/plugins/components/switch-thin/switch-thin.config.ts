@@ -87,6 +87,14 @@ export const defaultConfig = {
       light: 'danger-400',
       dark: 'danger-400',
     },
+    dark: {
+      light: 'muted-900',
+      dark: 'muted-100',
+    },
+    black: {
+      light: 'black',
+      dark: 'white',
+    },
   },
 }
 

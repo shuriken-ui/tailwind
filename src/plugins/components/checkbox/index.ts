@@ -95,22 +95,22 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-checkbox-rounded .nui-checkbox-outer, &.nui-checkbox-rounded .nui-checkbox-inner':
+      '&.nui-checkbox-rounded-sm .nui-checkbox-outer, &.nui-checkbox-rounded-sm .nui-checkbox-inner':
         {
           [`@apply ${config.rounded.sm}`]: {},
         },
       //Rounded:md
-      '&.nui-checkbox-smooth .nui-checkbox-outer, &.nui-checkbox-smooth .nui-checkbox-inner':
+      '&.nui-checkbox-rounded-md .nui-checkbox-outer, &.nui-checkbox-rounded-md .nui-checkbox-inner':
         {
           [`@apply ${config.rounded.md}`]: {},
         },
       //Rounded:lg
-      '&.nui-checkbox-curved .nui-checkbox-outer, &.nui-checkbox-curved .nui-checkbox-inner':
+      '&.nui-checkbox-rounded-lg .nui-checkbox-outer, &.nui-checkbox-rounded-lg .nui-checkbox-inner':
         {
           [`@apply ${config.rounded.lg}`]: {},
         },
       //Rounded:full
-      '&.nui-checkbox-full .nui-checkbox-outer, &.nui-checkbox-full .nui-checkbox-inner':
+      '&.nui-checkbox-rounded-full .nui-checkbox-outer, &.nui-checkbox-rounded-full .nui-checkbox-inner':
         {
           [`@apply ${config.rounded.full}`]: {},
         },
@@ -119,14 +119,24 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply text-${config.color.default.light} dark:text-${config.color.default.dark}`]:
           {},
       },
+      //Color:muted
+      '&.nui-checkbox-muted': {
+        [`@apply text-${config.color.muted.light} dark:text-${config.color.muted.dark}`]:
+          {},
+      },
       //Color:light
       '&.nui-checkbox-light': {
         [`@apply text-${config.color.light.light} dark:text-${config.color.light.dark}`]:
           {},
       },
-      //Color:muted
-      '&.nui-checkbox-muted': {
-        [`@apply text-${config.color.muted.light} dark:text-${config.color.muted.dark}`]:
+      //Color:dark
+      '&.nui-checkbox-dark': {
+        [`@apply text-${config.color.dark.light} dark:text-${config.color.dark.dark}`]:
+          {},
+      },
+      //Color:black
+      '&.nui-checkbox-black': {
+        [`@apply text-${config.color.black.light} dark:text-${config.color.black.dark}`]:
           {},
       },
       //Color:primary

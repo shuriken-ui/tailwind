@@ -13,17 +13,24 @@ export const Breadcrumb = ({
   items,
   classes,
   separator = 'dot',
+  color = 'primary',
   ...attrs
 }: BreadcrumbAttrs) => {
   return html`
     <nav
-      class=${['nui-breadcrumb', classes?.wrapper].filter(Boolean).join(' ')}
+      class=${[
+        'nui-breadcrumb',
+        color && variants.color[color],
+        classes?.wrapper,
+      ]
+        .filter(Boolean)
+        .join(' ')}
       ${spread(attrs)}
     >
       <ul class="nui-breadcrumb-list">
         <li class="nui-breadcrumb-item-mobile">
           ${Dropdown({
-            flavor: 'context',
+            variant: 'context',
             size: 'md',
             children: html`
               ${items?.slice(0, -1).map(

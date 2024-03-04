@@ -31,14 +31,22 @@ export const defaultConfig = {
       size: '6',
     },
   },
-  type: {
-    default: {
+  contrast: {
+    lowContrast: {
+      background: {
+        light: 'white',
+        dark: 'muted-800',
+      },
       border: {
         light: 'muted-300',
         dark: 'muted-700',
       },
     },
-    contrast: {
+    highContrast: {
+      background: {
+        light: 'white',
+        dark: 'muted-950',
+      },
       border: {
         light: 'muted-300',
         dark: 'muted-800',
@@ -46,11 +54,7 @@ export const defaultConfig = {
     },
   },
   color: {
-    white: {
-      background: {
-        light: 'white',
-        dark: 'muted-800',
-      },
+    default: {
       icon: {
         outer: {
           background: {
@@ -66,31 +70,7 @@ export const defaultConfig = {
         },
       },
     },
-    whiteContrast: {
-      background: {
-        light: 'white',
-        dark: 'muted-950',
-      },
-      icon: {
-        outer: {
-          background: {
-            light: 'muted-100',
-            dark: 'muted-800',
-          },
-        },
-        inner: {
-          color: {
-            light: 'muted-500',
-            dark: 'muted-500',
-          },
-        },
-      },
-    },
     primary: {
-      background: {
-        light: 'primary-500',
-        dark: 'primary-500',
-      },
       border: {
         light: 'primary-500',
         dark: 'primary-500',
@@ -111,10 +91,6 @@ export const defaultConfig = {
       },
     },
     info: {
-      background: {
-        light: 'info-500',
-        dark: 'info-500',
-      },
       border: {
         light: 'info-500',
         dark: 'info-500',
@@ -135,10 +111,6 @@ export const defaultConfig = {
       },
     },
     success: {
-      background: {
-        light: 'success-500',
-        dark: 'success-500',
-      },
       border: {
         light: 'success-500',
         dark: 'success-500',
@@ -159,10 +131,6 @@ export const defaultConfig = {
       },
     },
     warning: {
-      background: {
-        light: 'warning-500',
-        dark: 'warning-500',
-      },
       border: {
         light: 'warning-500',
         dark: 'warning-500',
@@ -183,10 +151,6 @@ export const defaultConfig = {
       },
     },
     danger: {
-      background: {
-        light: 'danger-500',
-        dark: 'danger-500',
-      },
       border: {
         light: 'danger-500',
         dark: 'danger-500',
@@ -202,6 +166,46 @@ export const defaultConfig = {
           color: {
             light: 'danger-500',
             dark: 'danger-500',
+          },
+        },
+      },
+    },
+    dark: {
+      border: {
+        light: 'muted-900',
+        dark: 'muted-100',
+      },
+      icon: {
+        outer: {
+          background: {
+            light: 'muted-900/10',
+            dark: 'muted-100/10',
+          },
+        },
+        inner: {
+          color: {
+            light: 'muted-900',
+            dark: 'muted-100',
+          },
+        },
+      },
+    },
+    black: {
+      border: {
+        light: 'black',
+        dark: 'white',
+      },
+      icon: {
+        outer: {
+          background: {
+            light: 'black/10',
+            dark: 'white/10',
+          },
+        },
+        inner: {
+          color: {
+            light: 'black',
+            dark: 'white',
           },
         },
       },

@@ -12,6 +12,8 @@ import { Paragraph } from '../paragraph/paragraph.component'
 export const Accordion = ({
   items,
   openItems,
+  color = 'default',
+  dotColor = 'primary',
   rounded,
   exclusive,
   action = 'dot',
@@ -26,6 +28,8 @@ export const Accordion = ({
             'nui-accordion',
             action && variants.action[action],
             rounded && variants.rounded[rounded],
+            color && variants.color[color],
+            action === 'dot' && dotColor && variants.dotColor[dotColor],
             classes?.wrapper,
           ]
             .filter(Boolean)

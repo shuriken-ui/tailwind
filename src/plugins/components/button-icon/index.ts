@@ -39,19 +39,19 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-button-rounded': {
+      '&.nui-button-rounded-sm': {
         [`@apply ${config.rounded.sm}`]: {},
       },
       //Rounded:md
-      '&.nui-button-smooth': {
+      '&.nui-button-rounded-md': {
         [`@apply ${config.rounded.md}`]: {},
       },
       //Rounded:lg
-      '&.nui-button-curved': {
+      '&.nui-button-rounded-lg': {
         [`@apply ${config.rounded.lg}`]: {},
       },
       //Rounded:full
-      '&.nui-button-full': {
+      '&.nui-button-rounded-full': {
         [`@apply ${config.rounded.full}`]: {},
       },
       //Loading
@@ -73,6 +73,22 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply border border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
           {},
       },
+      //Color:default-contrast
+      '&.nui-button-default-contrast': {
+        //Font
+        [`@apply text-${config.color.defaultContrast.text.color.light} dark:text-${config.color.defaultContrast.text.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.defaultContrast.background.base.light} dark:bg-${config.color.defaultContrast.background.base.dark}`]:
+          {},
+        //Background:hover
+        [`@apply hover:bg-${config.color.defaultContrast.background.hover.light} dark:hover:bg-${config.color.defaultContrast.background.hover.dark}`]:
+          {},
+        //Border
+        [`@apply border border-${config.color.defaultContrast.border.light} dark:border-${config.color.defaultContrast.border.dark}`]:
+          {},
+      },
+      //Color:muted
       '&.nui-button-muted': {
         //Font
         [`@apply text-${config.color.muted.text.color.light} dark:text-${config.color.muted.text.color.dark}`]:
@@ -84,6 +100,55 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:bg-${config.color.muted.background.hover.light} dark:hover:bg-${config.color.muted.background.hover.dark}`]:
           {},
       },
+      //Color:muted-contrast
+      '&.nui-button-muted-contrast': {
+        //Font
+        [`@apply text-${config.color.mutedContrast.text.color.light} dark:text-${config.color.mutedContrast.text.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.mutedContrast.background.base.light} dark:bg-${config.color.mutedContrast.background.base.dark}`]:
+          {},
+        //Background:hover
+        [`@apply hover:bg-${config.color.mutedContrast.background.hover.light} dark:hover:bg-${config.color.mutedContrast.background.hover.dark}`]:
+          {},
+      },
+      //Color:light
+      '&.nui-button-light': {
+        //Font
+        [`@apply text-${config.color.light.text.color.light} dark:text-${config.color.light.text.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.light.background.base.light} dark:bg-${config.color.light.background.base.dark}`]:
+          {},
+        //Background:hover
+        [`@apply hover:bg-${config.color.light.background.hover.light} dark:hover:bg-${config.color.light.background.hover.dark}`]:
+          {},
+      },
+      //Color:dark
+      '&.nui-button-dark': {
+        //Font
+        [`@apply text-${config.color.dark.text.color.light} dark:text-${config.color.dark.text.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.dark.background.base.light} dark:bg-${config.color.dark.background.base.dark}`]:
+          {},
+        //Background:hover
+        [`@apply hover:bg-${config.color.dark.background.hover.light} dark:hover:bg-${config.color.dark.background.hover.dark}`]:
+          {},
+      },
+      //Color:black
+      '&.nui-button-black': {
+        //Font
+        [`@apply text-${config.color.black.text.color.light} dark:text-${config.color.black.text.color.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.black.background.base.light} dark:bg-${config.color.black.background.base.dark}`]:
+          {},
+        //Background:hover
+        [`@apply hover:bg-${config.color.black.background.hover.light} dark:hover:bg-${config.color.black.background.hover.dark}`]:
+          {},
+      },
+      //Color:primary
       '&.nui-button-primary': {
         //Font
         [`@apply text-${config.color.primary.text.color.light} dark:text-${config.color.primary.text.color.dark}`]:
@@ -95,6 +160,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:bg-${config.color.primary.background.hover.light} dark:hover:bg-${config.color.primary.background.hover.dark}`]:
           {},
       },
+      //Color:info
       '&.nui-button-info': {
         //Font
         [`@apply text-${config.color.info.text.color.light} dark:text-${config.color.info.text.color.dark}`]:
@@ -106,6 +172,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:bg-${config.color.info.background.hover.light} dark:hover:bg-${config.color.info.background.hover.dark}`]:
           {},
       },
+      //Color:success
       '&.nui-button-success': {
         //Font
         [`@apply text-${config.color.success.text.color.light} dark:text-${config.color.success.text.color.dark}`]:
@@ -117,6 +184,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:bg-${config.color.success.background.hover.light} dark:hover:bg-${config.color.success.background.hover.dark}`]:
           {},
       },
+      //Color:warning
       '&.nui-button-warning': {
         //Font
         [`@apply text-${config.color.warning.text.color.light} dark:text-${config.color.warning.text.color.dark}`]:
@@ -128,6 +196,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply hover:bg-${config.color.warning.background.hover.light} dark:hover:bg-${config.color.warning.background.hover.dark}`]:
           {},
       },
+      //Color:danger
       '&.nui-button-danger': {
         //Font
         [`@apply text-${config.color.danger.text.color.light} dark:text-${config.color.danger.text.color.dark}`]:

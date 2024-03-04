@@ -2,10 +2,10 @@ import type { ListboxVariant } from './listbox.types'
 
 export const rounded = {
   none: '',
-  sm: 'nui-listbox-rounded',
-  md: 'nui-listbox-smooth',
-  lg: 'nui-listbox-curved',
-  full: 'nui-listbox-full',
+  sm: 'nui-listbox-rounded-sm',
+  md: 'nui-listbox-rounded-md',
+  lg: 'nui-listbox-rounded-lg',
+  full: 'nui-listbox-rounded-full',
 } as const satisfies ListboxVariant<'rounded'>
 
 export const size = {

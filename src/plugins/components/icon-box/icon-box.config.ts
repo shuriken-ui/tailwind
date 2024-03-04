@@ -78,15 +78,51 @@ export const defaultConfig = {
             },
           },
         },
-        invert: {
+        defaultContrast: {
+          background: {
+            light: 'muted-100',
+            dark: 'muted-950',
+          },
+          font: {
+            color: {
+              light: 'muted-600',
+              dark: 'muted-100',
+            },
+          },
+        },
+        light: {
           background: {
             light: 'white',
-            dark: 'muted-950',
+            dark: 'muted-700',
           },
           font: {
             color: {
               light: 'muted-800',
               dark: 'muted-100',
+            },
+          },
+        },
+        dark: {
+          background: {
+            light: 'muted-900',
+            dark: 'muted-100',
+          },
+          font: {
+            color: {
+              light: 'muted-100',
+              dark: 'muted-900',
+            },
+          },
+        },
+        black: {
+          background: {
+            light: 'black',
+            dark: 'white',
+          },
+          font: {
+            color: {
+              light: 'white',
+              dark: 'black',
             },
           },
         },
@@ -152,7 +188,31 @@ export const defaultConfig = {
         },
       },
       pastel: {
-        invert: {
+        default: {
+          background: {
+            light: 'muted-500/10',
+            dark: 'muted-700/10',
+          },
+          font: {
+            color: {
+              light: 'muted-500',
+              dark: 'muted-200',
+            },
+          },
+        },
+        defaultContrast: {
+          background: {
+            light: 'muted-500/10',
+            dark: 'muted-950/10',
+          },
+          font: {
+            color: {
+              light: 'muted-500',
+              dark: 'muted-100',
+            },
+          },
+        },
+        light: {
           background: {
             light: 'white/10',
             dark: 'white/10',
@@ -160,7 +220,31 @@ export const defaultConfig = {
           font: {
             color: {
               light: 'muted-800',
-              dark: 'muted-800',
+              dark: 'muted-300',
+            },
+          },
+        },
+        dark: {
+          background: {
+            light: 'muted-900/10',
+            dark: 'muted-100/10',
+          },
+          font: {
+            color: {
+              light: 'muted-800',
+              dark: 'muted-100',
+            },
+          },
+        },
+        black: {
+          background: {
+            light: 'black/10',
+            dark: 'white/10',
+          },
+          font: {
+            color: {
+              light: 'black',
+              dark: 'white',
             },
           },
         },
@@ -226,7 +310,39 @@ export const defaultConfig = {
         },
       },
       outline: {
-        invert: {
+        default: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'muted-500',
+              dark: 'muted-200',
+            },
+          },
+        },
+        defaultContrast: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'muted-500',
+              dark: 'muted-100',
+            },
+          },
+        },
+        light: {
           background: {
             light: 'transparent',
             dark: 'transparent',
@@ -238,7 +354,39 @@ export const defaultConfig = {
           font: {
             color: {
               light: 'muted-800',
-              dark: 'muted-800',
+              dark: 'muted-400',
+            },
+          },
+        },
+        dark: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'muted-800',
+              dark: 'muted-100',
+            },
+          },
+        },
+        black: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'black',
+              dark: 'white',
             },
           },
         },

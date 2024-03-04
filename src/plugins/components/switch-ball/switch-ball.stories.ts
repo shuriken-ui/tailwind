@@ -27,7 +27,15 @@ const meta = {
     },
     color: {
       control: { type: 'select' },
-      options: ['primary', 'info', 'success', 'warning', 'danger'],
+      options: [
+        'primary',
+        'info',
+        'success',
+        'warning',
+        'danger',
+        'dark',
+        'black',
+      ],
       defaultValue: 'primary',
     },
     '?disabled': {
@@ -102,6 +110,26 @@ export const ColorDanger: Story = {
     label: 'Ball switch',
     color: 'danger',
     id: 'switch-ball-danger',
+    checked: 'true',
+  },
+}
+
+export const ColorDark: Story = {
+  name: 'Color: dark',
+  args: {
+    label: 'Ball switch',
+    color: 'dark',
+    id: 'switch-ball-dark',
+    checked: 'true',
+  },
+}
+
+export const ColorBlack: Story = {
+  name: 'Color: black',
+  args: {
+    label: 'Ball switch',
+    color: 'black',
+    id: 'switch-ball-black',
     checked: 'true',
   },
 }

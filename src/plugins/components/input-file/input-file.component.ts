@@ -9,6 +9,7 @@ import * as variants from './input-file.variants'
  */
 export const InputFile = ({
   rounded = 'sm',
+  color = 'primary',
   type = 'combo',
   classes,
   ...attrs
@@ -20,6 +21,7 @@ export const InputFile = ({
             class=${[
               'nui-input-file',
               rounded && variants.rounded[rounded],
+              color && variants.color[color],
               type === 'combo' && 'nui-input-file-combo',
               classes?.wrapper,
             ]
@@ -37,6 +39,7 @@ export const InputFile = ({
             class=${[
               'nui-input-file',
               rounded && variants.rounded[rounded],
+              color && variants.color[color],
               type === 'dropzone' && 'nui-input-file-drop',
               classes?.wrapper,
             ]
@@ -76,6 +79,7 @@ export const InputFile = ({
           <label
             class=${[
               'nui-input-file',
+              color && variants.color[color],
               rounded && variants.rounded[rounded],
               type === 'button' && 'nui-input-file-button',
               classes?.wrapper,

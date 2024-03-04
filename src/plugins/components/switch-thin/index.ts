@@ -123,6 +123,18 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply bg-${config.color.danger.light} dark:bg-${config.color.danger.dark}`]:
             {},
         },
+      //color:dark
+      '&.nui-switch-thin-dark .nui-switch-thin-input:checked ~ .nui-switch-thin-track':
+        {
+          [`@apply bg-${config.color.dark.light} dark:bg-${config.color.dark.dark}`]:
+            {},
+        },
+      //color:black
+      '&.nui-switch-thin-black .nui-switch-thin-input:checked ~ .nui-switch-thin-track':
+        {
+          [`@apply bg-${config.color.black.light} dark:bg-${config.color.black.dark}`]:
+            {},
+        },
     },
   })
 }, config)

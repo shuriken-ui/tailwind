@@ -12,15 +12,15 @@ export const size = {
 
 export const rounded = {
   none: '',
-  sm: 'nui-menu-rounded',
-  md: 'nui-menu-smooth',
-  lg: 'nui-menu-curved',
-  full: 'nui-menu-curved',
+  sm: 'nui-menu-rounded-sm',
+  md: 'nui-menu-rounded-md',
+  lg: 'nui-menu-rounded-lg',
+  full: 'nui-menu-rounded-lg',
 } as const satisfies DropdownVariant<'rounded'>
 
 export const color = {
-  white: 'nui-menu-white',
-  'white-contrast': 'nui-menu-white-contrast',
+  default: 'nui-menu-default',
+  'default-contrast': 'nui-menu-default-contrast',
   muted: 'nui-menu-muted',
   'muted-contrast': 'nui-menu-muted-contrast',
   primary: 'nui-menu-primary',

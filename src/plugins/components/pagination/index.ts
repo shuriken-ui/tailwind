@@ -107,19 +107,55 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply border-${config.link.border.inactive.light} dark:border-${config.link.border.inactive.dark}`]:
             {},
         },
-        //Link:active
-        '&.nui-active': {
+      },
+      '&.nui-pagination-primary': {
+        //Link:primary
+        '.nui-pagination-link.nui-active': {
           //Color
-          [`@apply text-${config.link.font.color.active.light} dark:text-${config.link.font.color.active.dark}`]:
+          [`@apply text-${config.link.font.color.active.primary.light} dark:text-${config.link.font.color.active.primary.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.link.background.active.light} dark:bg-${config.link.background.active.dark}`]:
+          [`@apply bg-${config.link.background.active.primary.light} dark:bg-${config.link.background.active.primary.dark}`]:
             {},
           //Border:active
-          [`@apply border-${config.link.border.active.light} dark:border-${config.link.border.active.dark}`]:
+          [`@apply border-${config.link.border.active.primary.light} dark:border-${config.link.border.active.primary.dark}`]:
             {},
           //Shadow:active
-          [`@apply shadow-${config.link.shadow.active.size} shadow-${config.link.shadow.active.light} dark:shadow-${config.link.shadow.active.dark}`]:
+          [`@apply shadow-${config.link.shadow.active.size} shadow-${config.link.shadow.active.color.primary.light} dark:shadow-${config.link.shadow.active.color.primary.dark}`]:
+            {},
+        },
+      },
+      '&.nui-pagination-dark': {
+        //Link:dark
+        '.nui-pagination-link.nui-active': {
+          //Color
+          [`@apply text-${config.link.font.color.active.dark.light} dark:text-${config.link.font.color.active.dark.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.link.background.active.dark.light} dark:bg-${config.link.background.active.dark.dark}`]:
+            {},
+          //Border:active
+          [`@apply border-${config.link.border.active.dark.light} dark:border-${config.link.border.active.dark.dark}`]:
+            {},
+          //Shadow:active
+          [`@apply shadow-${config.link.shadow.active.size} shadow-${config.link.shadow.active.color.dark.light} dark:shadow-${config.link.shadow.active.color.dark.dark}`]:
+            {},
+        },
+      },
+      '&.nui-pagination-black': {
+        //Link:black
+        '.nui-pagination-link.nui-active': {
+          //Color
+          [`@apply text-${config.link.font.color.active.black.light} dark:text-${config.link.font.color.active.black.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.link.background.active.black.light} dark:bg-${config.link.background.active.black.dark}`]:
+            {},
+          //Border:active
+          [`@apply border-${config.link.border.active.black.light} dark:border-${config.link.border.active.black.dark}`]:
+            {},
+          //Shadow:active
+          [`@apply shadow-${config.link.shadow.active.size} shadow-${config.link.shadow.active.color.black.light} dark:shadow-${config.link.shadow.active.color.black.dark}`]:
             {},
         },
       },
@@ -142,22 +178,22 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-pagination-rounded .nui-pagination-list, &.nui-pagination-rounded .nui-pagination-buttons, &.nui-pagination-rounded .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-rounded .nui-pagination-link, &.nui-pagination-rounded .nui-pagination-ellipsis':
+      '&.nui-pagination-rounded-sm .nui-pagination-list, &.nui-pagination-rounded-sm .nui-pagination-buttons, &.nui-pagination-rounded-sm .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-rounded-sm .nui-pagination-link, &.nui-pagination-rounded-sm .nui-pagination-ellipsis':
         {
           [`@apply ${config.rounded.sm}`]: {},
         },
       //Rounded:md
-      '&.nui-pagination-smooth .nui-pagination-list, &.nui-pagination-smooth .nui-pagination-buttons, &.nui-pagination-smooth .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-smooth .nui-pagination-link, &.nui-pagination-smooth .nui-pagination-ellipsis':
+      '&.nui-pagination-rounded-md .nui-pagination-list, &.nui-pagination-rounded-md .nui-pagination-buttons, &.nui-pagination-rounded-md .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-rounded-md .nui-pagination-link, &.nui-pagination-rounded-md .nui-pagination-ellipsis':
         {
           [`@apply ${config.rounded.md}`]: {},
         },
       //Rounded:lg
-      '&.nui-pagination-curved .nui-pagination-list, &.nui-pagination-curved .nui-pagination-buttons, &.nui-pagination-curved .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-curved .nui-pagination-link, &.nui-pagination-curved .nui-pagination-ellipsis':
+      '&.nui-pagination-rounded-lg .nui-pagination-list, &.nui-pagination-rounded-lg .nui-pagination-buttons, &.nui-pagination-rounded-lg .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-rounded-lg .nui-pagination-link, &.nui-pagination-rounded-lg .nui-pagination-ellipsis':
         {
           [`@apply ${config.rounded.lg}`]: {},
         },
       //Rounded:full
-      '&.nui-pagination-full .nui-pagination-list, &.nui-pagination-full .nui-pagination-buttons, &.nui-pagination-full .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-full .nui-pagination-link, &.nui-pagination-full .nui-pagination-ellipsis':
+      '&.nui-pagination-rounded-full .nui-pagination-list, &.nui-pagination-rounded-full .nui-pagination-buttons, &.nui-pagination-rounded-full .nui-pagination-buttons .nui-pagination-button,  &.nui-pagination-rounded-full .nui-pagination-link, &.nui-pagination-rounded-full .nui-pagination-ellipsis':
         {
           [`@apply ${config.rounded.full}`]: {},
         },

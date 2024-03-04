@@ -29,22 +29,22 @@ export default plugin(({ addComponents, theme }) => {
       [`@apply prose-td:border-t prose-td:border-${config.table.border.light} dark:prose-td:border-${config.table.border.dark}`]:
         {},
       //Rounded:none
-      '&.nui-prose-straight': {
+      '&.nui-prose-rounded-none': {
         '@apply prose-img:rounded-none prose-pre:rounded-none prose-table:rounded-none':
           {},
       },
       //Rounded:sm
-      '&.nui-prose-rounded': {
+      '&.nui-prose-rounded-sm': {
         [`@apply prose-img:${config.rounded.sm} prose-pre:${config.rounded.sm} prose-table:${config.rounded.sm}`]:
           {},
       },
       //Rounded:md
-      '&.nui-prose-smooth': {
+      '&.nui-prose-rounded-md': {
         [`@apply prose-img:${config.rounded.md} prose-pre:${config.rounded.md} prose-table:${config.rounded.md}`]:
           {},
       },
       //Rounded:lg
-      '&.nui-prose-curved': {
+      '&.nui-prose-rounded-lg': {
         [`@apply prose-img:${config.rounded.lg} prose-pre:${config.rounded.lg} prose-table:${config.rounded.lg}`]:
           {},
       },

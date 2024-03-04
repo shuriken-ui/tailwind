@@ -2,6 +2,7 @@ import type { PropertyVariant } from '~/types/utils'
 
 export interface BreadcrumbProps extends Record<string, unknown> {
   separator?: 'slash' | 'chevron' | 'dot' | 'arrow'
+  color?: 'primary' | 'dark' | 'black'
   items?: {
     label?: string
     hideLabel?: boolean

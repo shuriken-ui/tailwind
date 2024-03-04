@@ -10,6 +10,11 @@ const meta = {
   // tags: ['autodocs'],
   render: (args) => Breadcrumb(args),
   argTypes: {
+    color: {
+      control: { type: 'select' },
+      options: ['primary', 'dark', 'black'],
+      defaultValue: 'default',
+    },
     separator: {
       control: { type: 'select' },
       options: ['dot', 'slash', 'arrow', 'chevron'],
