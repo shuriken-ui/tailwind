@@ -93,8 +93,8 @@ export const defaultConfig = {
         },
         border: {
           light: {
-            base: 'muted-200',
-            hover: 'muted-300',
+            base: 'muted-300',
+            hover: 'muted-200',
           },
           dark: {
             base: 'muted-600',
