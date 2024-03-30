@@ -23,6 +23,7 @@ import inputFileRegular from './input-file-regular'
 import inputFile from './input-file'
 import input from './input'
 import inputNumber from './input-number'
+import inputHelpText from './input-help-text'
 import kbd from './kbd'
 import label from './label'
 import link from './link'
@@ -79,6 +80,7 @@ export { default as inputFileRegular } from './input-file-regular'
 export { default as inputFile } from './input-file'
 export { default as input } from './input'
 export { default as inputNumber } from './input-number'
+export { default as inputHelpText } from './input-help-text'
 export { default as kbd } from './kbd'
 export { default as label } from './label'
 export { default as link } from './link'
@@ -136,6 +138,7 @@ export const components = mergePlugins([
   inputFile,
   input,
   inputNumber,
+  inputHelpText,
   kbd,
   label,
   link,
