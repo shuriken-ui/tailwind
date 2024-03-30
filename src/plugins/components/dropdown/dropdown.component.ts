@@ -106,7 +106,12 @@ export const Dropdown = ({
           ? html`
               <button
                 type="button"
-                class="nui-text-button"
+                class=${[
+                  'nui-text-button',
+                  buttonColor && variants.textColor[buttonColor],
+                ]
+                  .filter(Boolean)
+                  .join(' ')}
                 @click="${() => (open = !open)}"
               >
                 <span class="nui-text-button-inner">${label}</span>

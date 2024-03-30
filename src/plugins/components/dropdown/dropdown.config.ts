@@ -47,15 +47,6 @@ export const defaultConfig = {
         duration: '300',
       },
     },
-    text: {
-      font: {
-        family: 'sans',
-        color: {
-          light: 'muted-400',
-          dark: 'muted-400',
-        },
-      },
-    },
     chevron: {
       size: '4',
       transition: {
