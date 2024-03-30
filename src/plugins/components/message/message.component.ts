@@ -37,32 +37,34 @@ export const Message = ({
       <span class="nui-message-inner-text">${message}</span>
       ${closable
         ? html`
-            <button
-              type="button"
-              tabindex="0"
-              class="nui-message-close"
-              class=${[
-                'nui-message-close',
-                rounded && variants.rounded[rounded],
-              ]
-                .filter(Boolean)
-                .join(' ')}
-            >
-              <svg
-                class="nui-close-icon"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
+            <div class="nui-message-close-wrapper">
+              <button
+                type="button"
+                tabindex="0"
+                class="nui-message-close"
+                class=${[
+                  'nui-message-close',
+                  rounded && variants.rounded[rounded],
+                ]
+                  .filter(Boolean)
+                  .join(' ')}
               >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M18 6 6 18M6 6l12 12"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="nui-close-icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18 6 6 18M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
           `
         : ''}
     </div>

@@ -1,6 +1,9 @@
 export const key = 'message' as const
 
 export const defaultConfig = {
+  safeArea: {
+    end: '6',
+  },
   icon: {
     outer: {
       size: '10',
@@ -31,9 +34,21 @@ export const defaultConfig = {
     icon: {
       size: '4',
     },
+    position: {
+      top: '[-0.5rem]',
+      end: '[-0.5rem]',
+    },
+    size: {
+      outer: {
+        width: '8',
+        height: '8',
+      },
+      inner: {
+        width: '6',
+        height: '6',
+      },
+    },
     rounded: 'rounded-full',
-    width: '6',
-    height: '6',
     transition: {
       property: 'colors',
       duration: '200',
