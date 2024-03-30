@@ -32,7 +32,8 @@ export const defaultConfig = {
       size: '4',
     },
     rounded: 'rounded-full',
-    padding: '1',
+    width: '6',
+    height: '6',
     transition: {
       property: 'colors',
       duration: '200',

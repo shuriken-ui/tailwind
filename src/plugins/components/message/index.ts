@@ -15,7 +15,7 @@ export default plugin(({ addComponents, theme }) => {
   addComponents({
     //Wrapper
     '.nui-message': {
-      '@apply flex min-h-[3rem] items-center border p-1 pe-2': {},
+      '@apply flex gap-2 border': {},
       //Icon:outer
       '.nui-message-icon-outer': {
         [`@apply flex h-${config.icon.outer.size} w-${config.icon.outer.size} shrink-0 items-center justify-center`]:
@@ -33,7 +33,7 @@ export default plugin(({ addComponents, theme }) => {
       //Inner:text
       '.nui-message-inner-text': {
         //Base
-        '@apply px-3 block': {},
+        '@apply inline-flex items-center leading-normal': {},
         //Font
         [`@apply font-${config.inner.font.family} text-${config.inner.font.size}`]:
           {},
@@ -43,7 +43,7 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Meesage:close
       '.nui-message-close': {
-        [`@apply nui-focus me-2 ms-auto flex cursor-pointer items-center justify-center p-${config.close.padding} ${config.close.rounded}`]:
+        [`@apply nui-focus ms-auto flex cursor-pointer items-center justify-center shrink-0 h-${config.close.height} w-${config.close.width} ${config.close.rounded}`]:
           {},
         //Color
         [`@apply text-${config.close.color.light} dark:text-${config.close.color.dark}`]:
@@ -55,6 +55,22 @@ export default plugin(({ addComponents, theme }) => {
         '.nui-close-icon': {
           [`@apply h-${config.close.icon.size} w-${config.close.icon.size}`]:
             {},
+        },
+      },
+      //Message:text
+      '&.nui-has-text': {
+        [`@apply p-2`]: {},
+
+        '.nui-message-close': {
+          [`@apply mt-0.5`]: {},
+        },
+      },
+      //Message:icon
+      '&.nui-has-icon': {
+        [`@apply p-1`]: {},
+
+        '.nui-message-close': {
+          [`@apply mt-2`]: {},
         },
       },
       //Rounded:sm

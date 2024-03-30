@@ -23,6 +23,7 @@ export const Message = ({
         color && variants.color[color],
         rounded && variants.rounded[rounded],
         classes?.wrapper,
+        icon ? 'nui-has-icon' : 'nui-has-text',
       ]
         .filter(Boolean)
         .join(' ')}
