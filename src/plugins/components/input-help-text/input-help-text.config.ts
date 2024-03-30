@@ -2,6 +2,7 @@ export const key = 'inputHelpText' as const
 
 export const defaultConfig = {
   font: {
+    family: 'sans',
     size: '[0.65rem]',
     weight: 'medium',
   },
