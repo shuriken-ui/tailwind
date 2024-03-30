@@ -18,6 +18,7 @@ export const DropdownItem = ({
   title,
   text,
   active,
+  disabled,
   classes,
   start,
   end,
@@ -37,6 +38,7 @@ export const DropdownItem = ({
                 rounded && variants.rounded[rounded],
                 contrast && variants.contrast[contrast],
                 color && variants.color[color],
+                disabled && 'nui-item-disabled',
               ]
                 .filter(Boolean)
                 .join(' ')}

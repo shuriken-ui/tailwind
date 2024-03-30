@@ -36,6 +36,10 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply text-${config.font.color.inactive.light} dark:text-${config.font.color.inactive.dark}`]:
           {},
       },
+      //Item:disabled
+      '&.nui-item-disabled': {
+        [`@apply opacity-50 pointer-events-none`]: {},
+      },
       //Contrast:default
       '&.nui-item-default': {
         //Background:hover
