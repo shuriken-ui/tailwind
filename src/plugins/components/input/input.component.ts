@@ -1,8 +1,10 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '~/utils/lit'
 
 import type { InputAttrs } from './input.types'
 import * as variants from './input.variants'
+import { InputHelpText } from '../input-help-text/input-help-text.component'
 
 /**
  * Primary UI component for user interaction
@@ -31,7 +33,7 @@ export const Input = ({
 }: InputAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-input-wrapper',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
@@ -42,18 +44,11 @@ export const Input = ({
         icon && 'nui-has-icon',
         colorFocus && 'nui-input-focus',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       ${label && !labelFloat
         ? html`
-            <label
-              class="${['nui-input-label', classes?.label]
-                .filter(Boolean)
-                .join(' ')}"
-              for="${id}"
-            >
+            <label class="${cn('nui-input-label', classes?.label)}" for="${id}">
               ${label}
             </label>
           `
@@ -61,15 +56,13 @@ export const Input = ({
       <div class="nui-input-outer">
         <input
           id="${id}"
-          class="${['nui-input', classes?.input].filter(Boolean).join(' ')}"
+          class="${cn('nui-input', classes?.input)}"
           ${spread(attrs)}
         />
         ${label && labelFloat
           ? html`
               <label
-                class="${['nui-label-float', classes?.label]
-                  .filter(Boolean)
-                  .join(' ')}"
+                class="${cn('nui-label-float', classes?.label)}"
                 for="${id}"
               >
                 ${label}
@@ -84,13 +77,7 @@ export const Input = ({
         `}
         ${icon &&
         html`
-          <div
-            class="${['nui-input-icon', classes?.icon]
-              .filter(Boolean)
-              .join(' ')}"
-          >
-            ${icon}
-          </div>
+          <div class="${cn('nui-input-icon', classes?.icon)}">${icon}</div>
         `}
         ${actionSlot &&
         html`
@@ -99,13 +86,10 @@ export const Input = ({
         ${error &&
         typeof error === 'string' &&
         html`
-          <span
-            class="${['nui-input-error-text', classes?.error]
-              .filter(Boolean)
-              .join(' ')}"
-          >
-            ${error}
-          </span>
+          ${InputHelpText({
+            color: 'danger',
+            children: error,
+          })}
         `}
       </div>
     </div>
