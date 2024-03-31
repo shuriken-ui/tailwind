@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { SwitchBallAttrs } from './switch-ball.types'
 import * as variants from './switch-ball.variants'
@@ -19,14 +20,12 @@ export const SwitchBall = ({
   return html`
     <label
       for="${id}"
-      class=${[
+      class=${cn(
         'nui-switch-ball',
         color && variants.color[color],
         '?disabled' in attrs && 'opacity-50',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       <span class="nui-switch-ball-outer">
         <input

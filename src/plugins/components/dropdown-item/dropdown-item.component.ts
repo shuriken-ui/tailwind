@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { DropdownItemAttrs } from './dropdown-item.types'
 import * as variants from './dropdown-item.variants'
@@ -32,26 +33,22 @@ export const DropdownItem = ({
             <a
               href="${href}"
               ${spread(attrs)}
-              class=${[
+              class=${cn(
                 'nui-dropdown-item',
                 active && 'nui-active',
                 rounded && variants.rounded[rounded],
                 contrast && variants.contrast[contrast],
                 color && variants.color[color],
                 disabled && 'nui-item-disabled',
-              ]
-                .filter(Boolean)
-                .join(' ')}
+              )}
             >
               ${start}
               <div class="nui-item-content">
                 <h3
-                  class=${[
+                  class=${cn(
                     'nui-heading nui-heading-sm nui-weight-semibold nui-lead-tight text-muted-800 dark:text-white',
                     classes?.title,
-                  ]
-                    .filter(Boolean)
-                    .join(' ')}
+                  )}
                 >
                   ${title}
                 </h3>
@@ -68,23 +65,17 @@ export const DropdownItem = ({
               rel="${rel}"
               target="${target}"
               ${spread(attrs)}
-              class=${[
+              class=${cn(
                 'nui-dropdown-item',
                 active && 'nui-active',
                 rounded && variants.rounded[rounded],
                 color && variants.color[color],
-              ]
-                .filter(Boolean)
-                .join(' ')}
+              )}
               @click=${onClick}
             >
               ${start}
               <div class="nui-item-content">
-                <div
-                  class=${['nui-item-content', classes?.title]
-                    .filter(Boolean)
-                    .join(' ')}
-                >
+                <div class=${cn('nui-item-content', classes?.title)}>
                   > ${title}
                 </div>
                 <p class="text-muted-400 font-sans text-xs">${text}</p>

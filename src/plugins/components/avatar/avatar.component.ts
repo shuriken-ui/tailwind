@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { AvatarAttrs } from './avatar.types'
 import * as variants from './avatar.variants'
@@ -25,7 +26,7 @@ export const Avatar = ({
 }: AvatarAttrs) => {
   return html`
     <div
-      class="${[
+      class="${cn(
         'nui-avatar',
         classes?.wrapper,
         variants.size[size],
@@ -36,9 +37,7 @@ export const Avatar = ({
           (ring === true
             ? `nui-avatar-ring ${variants.ring['primary']}`
             : `nui-avatar-ring ${variants.ring[ring]}`),
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
        ${spread(attrs)}"
     >
       <div class="nui-avatar-inner">
@@ -74,12 +73,10 @@ export const Avatar = ({
       ${dot
         ? html`
             <span
-              class="${[
+              class="${cn(
                 'nui-avatar-dot',
                 dot === true ? variants.dot['primary'] : variants.dot[dot],
-              ]
-                .filter(Boolean)
-                .join(' ')}"
+              )}"
             ></span>
           `
         : ''}

@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { InputHelpTextAttrs } from './input-help-text.types'
 import * as variants from './input-help-text.variants'
@@ -14,9 +15,7 @@ export const InputHelpText = ({
 }: InputHelpTextAttrs) => {
   return html`
     <span
-      class=${['nui-input-help-text', color && variants.color[color]]
-        .filter(Boolean)
-        .join(' ')}
+      class=${cn('nui-input-help-text', color && variants.color[color])}
       ${spread(attrs)}
     >
       ${children}

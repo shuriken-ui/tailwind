@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { IconBoxAttrs } from './icon-box.types'
 import * as variants from './icon-box.variants'
@@ -21,7 +22,7 @@ export const IconBox = ({
 }: IconBoxAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-icon-box',
         variants.size[size],
         variants.variant[variant],
@@ -30,9 +31,7 @@ export const IconBox = ({
         rounded && variants.rounded[rounded],
         rounded === 'none' && mask && `nui-box-mask ${variants.mask[mask]}`,
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       @click=${onClick}
       ${spread(attrs)}
     >

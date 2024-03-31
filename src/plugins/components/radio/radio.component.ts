@@ -24,53 +24,43 @@ export const Radio = ({
 }: RadioAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-radio',
         color && variants.color[color],
         classes?.wrapper,
         '?disabled' in attrs && 'opacity-50',
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       <div class="nui-radio-outer">
         <input
           id="${id}"
-          class=${['nui-radio-input', '?disabled' && 'cursor-not-allowed']
-            .filter(Boolean)
-            .join(' ')}
+          class=${cn('nui-radio-input', '?disabled' && 'cursor-not-allowed')}
           ${spread(attrs)}
           type="radio"
         />
         <div
-          class=${[
+          class=${cn(
             'nui-radio-inner',
             classes?.inputBg,
             '?disabled' in attrs && 'opacity-50 cursor-not-allowed',
-          ]
-            .filter(Boolean)
-            .join(' ')}
+          )}
         ></div>
         <div
-          class=${[
+          class=${cn(
             'nui-radio-dot',
             classes?.inputDot,
             '?disabled' in attrs && 'opacity-50',
-          ]
-            .filter(Boolean)
-            .join(' ')}
+          )}
         ></div>
       </div>
       <div class="nui-radio-label-wrapper">
         <label
           for="${id}"
-          class=${[
+          class=${cn(
             'nui-radio-label-text',
             classes?.label,
             '?disabled' in attrs && 'cursor-not-allowed',
-          ]
-            .filter(Boolean)
-            .join(' ')}
+          )}
         >
           ${label}
         </label>

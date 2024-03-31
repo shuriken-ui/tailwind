@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { InputFileAttrs } from './input-file.types'
 import * as variants from './input-file.variants'
@@ -18,15 +19,13 @@ export const InputFile = ({
     ${type === 'combo'
       ? html`
           <label
-            class=${[
+            class=${cn(
               'nui-input-file',
               rounded && variants.rounded[rounded],
               color && variants.color[color],
               type === 'combo' && 'nui-input-file-combo',
               classes?.wrapper,
-            ]
-              .filter(Boolean)
-              .join(' ')}
+            )}
           >
             <span class="nui-combo-label-text">Choose profile photo</span>
             <input type="file" class="nui-combo-input" ${spread(attrs)} />
@@ -36,15 +35,13 @@ export const InputFile = ({
     ${type === 'dropzone'
       ? html`
           <div
-            class=${[
+            class=${cn(
               'nui-input-file',
               rounded && variants.rounded[rounded],
               color && variants.color[color],
               type === 'dropzone' && 'nui-input-file-drop',
               classes?.wrapper,
-            ]
-              .filter(Boolean)
-              .join(' ')}
+            )}
           >
             <div class="nui-drop-area-inner">
               <div class="nui-drop-zone">
@@ -77,15 +74,13 @@ export const InputFile = ({
     ${type === 'button'
       ? html`
           <label
-            class=${[
+            class=${cn(
               'nui-input-file',
               color && variants.color[color],
               rounded && variants.rounded[rounded],
               type === 'button' && 'nui-input-file-button',
               classes?.wrapper,
-            ]
-              .filter(Boolean)
-              .join(' ')}
+            )}
           >
             <svg
               class="nui-upload-button-icon"

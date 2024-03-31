@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { MessageAttrs } from './message.types'
 import * as variants from './message.variants'
@@ -18,15 +19,13 @@ export const Message = ({
 }: MessageAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-message',
         color && variants.color[color],
         rounded && variants.rounded[rounded],
         classes?.wrapper,
         icon ? 'nui-has-icon' : 'nui-has-text',
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       ${icon
@@ -42,12 +41,10 @@ export const Message = ({
                 type="button"
                 tabindex="0"
                 class="nui-message-close"
-                class=${[
+                class=${cn(
                   'nui-message-close',
                   rounded && variants.rounded[rounded],
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
+                )}
               >
                 <svg
                   class="nui-close-icon"

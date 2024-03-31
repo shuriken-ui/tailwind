@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { TagAttrs } from './tag.types'
 import * as variants from './tag.variants'
@@ -19,7 +20,7 @@ export const Tag = ({
 }: TagAttrs) => {
   return html`
     <span
-      class=${[
+      class=${cn(
         'nui-tag',
         variants.size[size],
         variants.variant[variant],
@@ -27,9 +28,7 @@ export const Tag = ({
         rounded && variants.rounded[rounded],
         shadow && variant === 'solid' && variants.shadow[shadow],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       ${children}

@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ListAttrs } from './list.types'
 import * as variants from './list.variants'
@@ -16,16 +17,13 @@ export const List = ({
 }: ListAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-list',
         ordered && !hasMedia && 'nui-list-base nui-list-ol',
         !ordered && !hasMedia && 'nui-list-base nui-list-ul',
         hasMedia && 'nui-list-media',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
-      ${spread(attrs)}
+      )}
     >
       ${children}
     </div>

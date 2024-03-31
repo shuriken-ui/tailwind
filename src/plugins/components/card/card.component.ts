@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { CardAttrs } from './card.types'
 import * as variants from './card.variants'
@@ -17,16 +18,14 @@ export const Card = ({
 }: CardAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-card',
         color && variants.color[color],
         rounded && variants.rounded[rounded],
         shadow === 'flat' && 'nui-card-shadow',
         shadow === 'hover' && 'nui-card-shadow-hover',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       ${children}

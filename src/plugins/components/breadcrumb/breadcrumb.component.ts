@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { BreadcrumbAttrs } from './breadcrumb.types'
 import * as variants from './breadcrumb.variants'
@@ -18,13 +19,11 @@ export const Breadcrumb = ({
 }: BreadcrumbAttrs) => {
   return html`
     <nav
-      class=${[
+      class=${cn(
         'nui-breadcrumb',
         color && variants.color[color],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       <ul class="nui-breadcrumb-list">
@@ -47,18 +46,14 @@ export const Breadcrumb = ({
         ${items?.map(
           (item, index) => html`
             <li
-              class=${[
+              class=${cn(
                 'nui-breadcrumb-item',
                 index === items.length - 1 ? 'flex' : 'hidden sm:flex',
-              ]
-                .filter(Boolean)
-                .join(' ')}
+              )}
             >
               <a
                 href="${item.href}"
-                class=${['nui-item-inner', item.href && 'nui-has-link']
-                  .filter(Boolean)
-                  .join(' ')}
+                class=${cn('nui-item-inner', item.href && 'nui-has-link')}
               >
                 <svg
                   class="nui-item-icon"
@@ -77,11 +72,7 @@ export const Breadcrumb = ({
                     />
                   </g>
                 </svg>
-                <span
-                  class=${[item.hideLabel && 'sr-only']
-                    .filter(Boolean)
-                    .join(' ')}
-                >
+                <span class=${cn(item.hideLabel && 'sr-only')}>
                   ${item.label}
                 </span>
               </a>
