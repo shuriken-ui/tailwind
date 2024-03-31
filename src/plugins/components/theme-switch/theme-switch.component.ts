@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ThemeSwitchAttrs } from './theme-switch.types'
 import * as variants from './theme-switch.variants'
@@ -15,15 +16,13 @@ export const ThemeSwitch = ({
 }: ThemeSwitchAttrs) => {
   return html`
     <label
-      class=${[
+      class=${cn(
         'nui-theme-switch',
         inverted && 'nui-theme-switch-inverted',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
-      <input type="checkbox" class="nui-theme-switch-input" />
+      <input type="checkbox" class="nui-theme-switch-input" ${spread(attrs)} />
       <span class="nui-theme-switch-inner">
         <svg class="nui-sun" aria-hidden="true" viewBox="0 0 24 24">
           <g fill="currentColor" stroke="currentColor" class="stroke-2">

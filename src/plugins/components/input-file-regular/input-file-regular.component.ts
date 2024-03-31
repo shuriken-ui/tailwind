@@ -1,8 +1,10 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { InputFileRegularAttrs } from './input-file-regular.types'
 import * as variants from './input-file-regular.variants'
+import { InputHelpText } from '../input-help-text/input-help-text.component'
 
 /**
  * Primary UI component for user interaction
@@ -30,7 +32,7 @@ export const InputFileRegular = ({
 }: InputFileRegularAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-input-file-regular',
         size && variants.size[size],
         rounded && variants.rounded[rounded],
@@ -40,43 +42,31 @@ export const InputFileRegular = ({
         icon && 'nui-has-icon',
         colorFocus && 'nui-input-file-color-focus',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       ${label
         ? html`
             <label
               for="${id}"
-              class="${['nui-input-file-label', classes?.label]
-                .filter(Boolean)
-                .join(' ')}"
+              class="${cn('nui-input-file-label', classes?.label)}"
             >
               ${label}
             </label>
           `
         : ''}
       <div
-        class="${[
+        class="${cn(
           'nui-input-file-outer',
           '?disabled' in attrs &&
             'opacity-50 cursor-not-allowed pointer-events-none',
-        ]
-          .filter(Boolean)
-          .join(' ')}"
+        )}"
       >
         <label
           tabindex="0"
           for="${id}"
-          class=${['nui-input-file-inner', classes?.input]
-            .filter(Boolean)
-            .join(' ')}
+          class=${cn('nui-input-file-inner', classes?.input)}
         >
-          <div
-            class=${['nui-input-file-addon', classes?.text]
-              .filter(Boolean)
-              .join(' ')}
-          >
+          <div class=${cn('nui-input-file-addon', classes?.text)}>
             <span class="text-xs">${placeholder}</span>
             ${icon}
           </div>
@@ -93,13 +83,10 @@ export const InputFileRegular = ({
         ${error &&
         typeof error === 'string' &&
         html`
-          <span
-            class="${['nui-input-file-error-text', classes?.error]
-              .filter(Boolean)
-              .join(' ')}"
-          >
-            ${error}
-          </span>
+          ${InputHelpText({
+            color: 'danger',
+            children: error,
+          })}
         `}
       </div>
     </div>

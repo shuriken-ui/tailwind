@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ButtonCloseAttrs } from './button-close.types'
 import * as variants from './button-close.variants'
@@ -17,15 +18,13 @@ export const ButtonClose = ({
 }: ButtonCloseAttrs) => {
   return html`
     <button
-      class=${[
+      class=${cn(
         'nui-button-close',
         variants.color[color],
         variants.size[size],
         rounded && variants.rounded[rounded],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       @click=${onClick}
       ${spread(attrs)}
     >

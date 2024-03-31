@@ -65,7 +65,7 @@ export default plugin(({ addComponents, theme }) => {
       borderRadius: '0.5ch',
       zIndex: '1000',
       [`@apply font-${config.font.family} text-xs shadow-lg`]: {},
-      [`@apply text-${config.font.color.light} dark:text-${config.font.color.light}`]:
+      [`@apply text-${config.font.color.light} dark:text-${config.font.color.dark}`]:
         {},
       [`@apply !bg-${config.background.light} dark:!bg-${config.background.dark}`]:
         {},
@@ -84,7 +84,7 @@ export default plugin(({ addComponents, theme }) => {
         bottom: 'calc(100% + 8px)',
         borderBottomWidth: '0',
         borderTopColor: 'currentColor',
-        [`@apply !text-${config.background.light} dark:!text-${config.background.light}`]:
+        [`@apply !text-${config.background.light} dark:!text-${config.background.dark}`]:
           {},
       },
     [`[${tooltip}]:not([${position}])::after, [${tooltip}][${position}^='up']::after`]:

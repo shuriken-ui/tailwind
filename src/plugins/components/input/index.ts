@@ -46,17 +46,6 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply transition-${config.input.icon.transition.property} duration-${config.input.icon.transition.duration}`]:
           {},
       },
-      //Error:text
-      '.nui-input-error-text': {
-        //Base
-        '@apply mt-1 block': {},
-        //Font
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight} leading-none`]:
-          {},
-        //Font color
-        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
-      },
       //Input
       '.nui-input': {
         //Base

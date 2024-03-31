@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { FullscreenDropfileAttrs } from './fullscreen-dropfile.types'
 import * as variants from './fullscreen-dropfile.variants'
@@ -17,13 +18,11 @@ export const FullscreenDropfile = ({
 }: FullscreenDropfileAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-fullscreen-dropfile',
         color && variants.color[color],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       ${isDropping

@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ProgressCircleAttrs } from './progress-circle.types'
 import * as variants from './progress-circle.variants'
@@ -18,9 +19,7 @@ export const ProgressCircle = ({
 }: ProgressCircleAttrs) => {
   return html`
     <svg
-      class=${['block', color && variants.color[color], classes?.wrapper]
-        .filter(Boolean)
-        .join(' ')}
+      class=${cn('block', color && variants.color[color], classes?.wrapper)}
       ${spread(attrs)}
       role="progressbar"
       aria-valuenow="${value}"

@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { TabsAttrs } from './tabs.types'
 import * as variants from './tabs.variants'
@@ -20,39 +21,33 @@ export const Tabs = ({
 }: TabsAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-tabs',
         justify && variants.justify[justify],
         color && variants.color[color],
         type === 'tabs' && bordered && 'nui-tabs-bordered',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       <div class="nui-tabs-inner">
         ${tabs?.map(
           (tab, index) => html`
             <a
-              class=${[
+              class=${cn(
                 'nui-tabs',
                 type && variants.type[type],
                 index === 0 && 'nui-active',
                 tab.icon && 'nui-has-icon',
-              ]
-                .filter(Boolean)
-                .join(' ')}
+              )}
               tabindex="0"
             >
               <span
-                class=${[
+                class=${cn(
                   'nui-tabs',
                   type === 'box' && tab.icon && 'text-[.85rem]',
                   type === 'tabs' && 'text-sm',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
+                )}
               >
                 ${tab.label}
               </span>

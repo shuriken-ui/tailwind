@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { LabelAttrs } from './label.types'
 import * as variants from './label.variants'
@@ -9,10 +10,7 @@ import * as variants from './label.variants'
  */
 export const Label = ({ classes, children, ...attrs }: LabelAttrs) => {
   return html`
-    <label
-      class=${['nui-label', classes?.wrapper].filter(Boolean).join(' ')}
-      ${spread(attrs)}
-    >
+    <label class=${cn('nui-label', classes?.wrapper)} ${spread(attrs)}>
       ${children}
     </label>
   `

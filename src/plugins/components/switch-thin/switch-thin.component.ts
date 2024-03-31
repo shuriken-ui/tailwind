@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { SwitchThinAttrs } from './switch-thin.types'
 import * as variants from './switch-thin.variants'
@@ -19,14 +20,12 @@ export const SwitchThin = ({
   return html`
     <label
       for="${id}"
-      class=${[
+      class=${cn(
         'nui-switch-thin',
         color && variants.color[color],
         '?disabled' in attrs && 'opacity-50',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       <span class="nui-switch-thin-outer">
         <input

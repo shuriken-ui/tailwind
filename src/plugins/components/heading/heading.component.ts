@@ -1,5 +1,6 @@
 import { html, unsafeStatic } from 'lit/static-html.js'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { HeadingAttrs } from './heading.types'
 import * as variants from './heading.variants'
@@ -17,15 +18,13 @@ export const Heading = ({
   ...attrs
 }: HeadingAttrs) => {
   return html`
-   <${unsafeStatic(as)} class=${[
+   <${unsafeStatic(as)} class=${cn(
      'nui-heading',
      size && variants.size[size],
      weight && variants.weight[weight],
      lead && variants.lead[lead],
      classes?.wrapper,
-   ]
-     .filter(Boolean)
-     .join(' ')}
+   )}
      ${spread(attrs)}>${children}</${unsafeStatic(as)}>
   `
 }

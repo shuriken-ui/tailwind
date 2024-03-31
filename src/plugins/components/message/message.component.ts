@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { MessageAttrs } from './message.types'
 import * as variants from './message.variants'
@@ -18,14 +19,13 @@ export const Message = ({
 }: MessageAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-message',
         color && variants.color[color],
         rounded && variants.rounded[rounded],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+        icon ? 'nui-has-icon' : 'nui-has-text',
+      )}
       ${spread(attrs)}
     >
       ${icon
@@ -36,32 +36,32 @@ export const Message = ({
       <span class="nui-message-inner-text">${message}</span>
       ${closable
         ? html`
-            <button
-              type="button"
-              tabindex="0"
-              class="nui-message-close"
-              class=${[
-                'nui-message-close',
-                rounded && variants.rounded[rounded],
-              ]
-                .filter(Boolean)
-                .join(' ')}
-            >
-              <svg
-                class="nui-close-icon"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
+            <div class="nui-message-close-wrapper">
+              <button
+                type="button"
+                tabindex="0"
+                class="nui-message-close"
+                class=${cn(
+                  'nui-message-close',
+                  rounded && variants.rounded[rounded],
+                )}
               >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M18 6 6 18M6 6l12 12"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="nui-close-icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18 6 6 18M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
           `
         : ''}
     </div>

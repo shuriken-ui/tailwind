@@ -1,5 +1,6 @@
 import { html, unsafeStatic } from 'lit/static-html.js'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ParagraphAttrs } from './paragraph.types'
 import * as variants from './paragraph.variants'
@@ -17,15 +18,13 @@ export const Paragraph = ({
   ...attrs
 }: ParagraphAttrs) => {
   return html`
-   <${unsafeStatic(as)} class=${[
+   <${unsafeStatic(as)} class=${cn(
      'nui-paragraph',
      size && variants.size[size],
      weight && variants.weight[weight],
      lead && variants.lead[lead],
      classes?.wrapper,
-   ]
-     .filter(Boolean)
-     .join(' ')}
+   )}
      ${spread(attrs)}>${children}</${unsafeStatic(as)}>
   `
 }

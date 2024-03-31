@@ -88,11 +88,7 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Error
       '.nui-checkbox-error': {
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} ms-1 inline-block`]:
-          {},
-        //Color
-        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
+        [`@apply ms-1 inline-block`]: {},
       },
       //Rounded:sm
       '&.nui-checkbox-rounded-sm .nui-checkbox-outer, &.nui-checkbox-rounded-sm .nui-checkbox-inner':

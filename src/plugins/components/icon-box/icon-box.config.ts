@@ -90,6 +90,30 @@ export const defaultConfig = {
             },
           },
         },
+        muted: {
+          background: {
+            light: 'muted-200',
+            dark: 'muted-700',
+          },
+          font: {
+            color: {
+              light: 'muted-700',
+              dark: 'muted-200',
+            },
+          },
+        },
+        mutedContrast: {
+          background: {
+            light: 'muted-200',
+            dark: 'muted-950',
+          },
+          font: {
+            color: {
+              light: 'muted-700',
+              dark: 'muted-100',
+            },
+          },
+        },
         light: {
           background: {
             light: 'white',
@@ -208,6 +232,30 @@ export const defaultConfig = {
           font: {
             color: {
               light: 'muted-500',
+              dark: 'muted-100',
+            },
+          },
+        },
+        muted: {
+          background: {
+            light: 'muted-600/10',
+            dark: 'muted-700/10',
+          },
+          font: {
+            color: {
+              light: 'muted-700',
+              dark: 'muted-200',
+            },
+          },
+        },
+        mutedContrast: {
+          background: {
+            light: 'muted-600/10',
+            dark: 'muted-950/10',
+          },
+          font: {
+            color: {
+              light: 'muted-700',
               dark: 'muted-100',
             },
           },
@@ -338,6 +386,38 @@ export const defaultConfig = {
           font: {
             color: {
               light: 'muted-500',
+              dark: 'muted-100',
+            },
+          },
+        },
+        muted: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'muted-700',
+              dark: 'muted-200',
+            },
+          },
+        },
+        mutedContrast: {
+          background: {
+            light: 'transparent',
+            dark: 'transparent',
+          },
+          border: {
+            light: 'current',
+            dark: 'current',
+          },
+          font: {
+            color: {
+              light: 'muted-700',
               dark: 'muted-100',
             },
           },

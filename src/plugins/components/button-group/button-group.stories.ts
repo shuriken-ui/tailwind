@@ -6,6 +6,8 @@ import { ButtonGroup } from './button-group.component'
 import { Button } from '../button/button.component'
 import { Select } from '../select/select.component'
 import { Input } from '../input/input.component'
+import { Dropdown } from '../dropdown/dropdown.component'
+import { DropdownItem } from '../dropdown-item/dropdown-item.component'
 
 // More on how to set up stories at: https://storybook.js.org/docs/web-components/writing-stories/introduction
 const meta = {

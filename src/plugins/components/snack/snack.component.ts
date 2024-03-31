@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { SnackAttrs } from './snack.types'
 import * as variants from './snack.variants'
@@ -19,15 +20,13 @@ export const Snack = ({
 }: SnackAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-snack',
         color && variants.color[color],
         size && variants.size[size],
         icon || image ? 'nui-has-media' : '',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       ${icon &&

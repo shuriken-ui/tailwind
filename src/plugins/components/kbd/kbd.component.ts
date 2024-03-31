@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { KbdAttrs } from './kbd.types'
 import * as variants from './kbd.variants'
@@ -17,15 +18,13 @@ export const Kbd = ({
 }: KbdAttrs) => {
   return html`
     <kbd
-      class=${[
+      class=${cn(
         'nui-kbd',
         rounded && variants.rounded[rounded],
         size && variants.size[size],
         color && variants.color[color],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       ${children}
