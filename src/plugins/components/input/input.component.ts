@@ -1,6 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
-import { cn } from '~/utils/lit'
+import { cn } from '../../../utils/lit'
 
 import type { InputAttrs } from './input.types'
 import * as variants from './input.variants'
