@@ -172,17 +172,6 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
-      //Listbox:error
-      '.nui-listbox-error-text': {
-        //Base
-        '@apply mt-1 block': {},
-        //Font
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight} leading-none`]:
-          {},
-        //Color
-        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
-      },
       //Listbox:placeload
       '.nui-listbox-placeload.nui-loading-placeload': {
         '@apply absolute start-0 top-0 flex w-full items-center px-4': {},

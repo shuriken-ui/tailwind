@@ -1,8 +1,10 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { RadioAttrs } from './radio.types'
 import * as variants from './radio.variants'
+import { InputHelpText } from '../input-help-text/input-help-text.component'
 
 /**
  * Primary UI component for user interaction
@@ -74,7 +76,12 @@ export const Radio = ({
         </label>
         ${error && typeof error === 'string'
           ? html`
-              <div class="nui-radio-error">${error}</div>
+              <div class="nui-radio-error">
+                ${InputHelpText({
+                  color: 'danger',
+                  children: error,
+                })}
+              </div>
             `
           : ''}
       </div>

@@ -1,8 +1,10 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { InputAttrs } from './input-number.types'
 import * as variants from './input-number.variants'
+import { InputHelpText } from '../input-help-text/input-help-text.component'
 
 /**
  * Primary UI component for user interaction
@@ -32,7 +34,7 @@ export const InputNumber = ({
 }: InputAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-input-number-wrapper',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
@@ -43,16 +45,12 @@ export const InputNumber = ({
         icon && 'nui-has-icon',
         colorFocus && 'nui-input-number-focus',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       ${label && !labelFloat
         ? html`
             <label
-              class="${['nui-input-number-label', classes?.label]
-                .filter(Boolean)
-                .join(' ')}"
+              class="${cn('nui-input-number-label', classes?.label)}"
               for="${id}"
             >
               ${label}
@@ -62,18 +60,14 @@ export const InputNumber = ({
       <div class="nui-input-number-outer">
         <input
           id="${id}"
-          class="${['nui-input-number', classes?.input]
-            .filter(Boolean)
-            .join(' ')}"
+          class="${cn('nui-input-number', classes?.input)}"
           ?disabled="${disabled}"
           ${spread(attrs)}
         />
         ${label && labelFloat
           ? html`
               <label
-                class="${['nui-label-float', classes?.label]
-                  .filter(Boolean)
-                  .join(' ')}"
+                class="${cn('nui-label-float', classes?.label)}"
                 for="${id}"
               >
                 ${label}
@@ -88,18 +82,14 @@ export const InputNumber = ({
         `}
         ${icon &&
         html`
-          <div
-            class="${['nui-input-number-icon', classes?.icon]
-              .filter(Boolean)
-              .join(' ')}"
-          >
+          <div class="${cn('nui-input-number-icon', classes?.icon)}">
             ${icon}
           </div>
         `}
         <div class="nui-input-number-buttons">
           <button aria-label="Increment" ?disabled="${disabled}">
             <svg
-              class=${['nui-chevron', 'rotate-180'].filter(Boolean).join(' ')}
+              class=${cn('nui-chevron', 'rotate-180')}
               aria-hidden="true"
               viewBox="0 0 24 24"
             >
@@ -115,7 +105,7 @@ export const InputNumber = ({
           </button>
           <button aria-label="Decrement" ?disabled="${disabled}">
             <svg
-              class=${['nui-chevron'].filter(Boolean).join(' ')}
+              class=${cn('nui-chevron')}
               aria-hidden="true"
               viewBox="0 0 24 24"
             >
@@ -134,13 +124,10 @@ export const InputNumber = ({
       ${error &&
       typeof error === 'string' &&
       html`
-        <span
-          class="${['nui-input-number-error-text', classes?.error]
-            .filter(Boolean)
-            .join(' ')}"
-        >
-          ${error}
-        </span>
+        ${InputHelpText({
+          color: 'danger',
+          children: error,
+        })}
       `}
     </div>
   `

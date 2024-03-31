@@ -1,8 +1,10 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { AutocompleteAttrs } from './autocomplete.types'
 import * as variants from './autocomplete.variants'
+import { InputHelpText } from '../input-help-text/input-help-text.component'
 
 /**
  * Primary UI component for user interaction
@@ -28,7 +30,7 @@ export const Autocomplete = ({
 }: AutocompleteAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-autocomplete',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
@@ -39,9 +41,7 @@ export const Autocomplete = ({
         colorFocus && 'nui-autocomplete-focus',
         icon && 'nui-has-icon',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       ${multiple &&
       html`
@@ -54,9 +54,7 @@ export const Autocomplete = ({
       ${label && !labelFloat
         ? html`
             <label
-              class="${['nui-autocomplete-label', classes?.label]
-                .filter(Boolean)
-                .join(' ')}"
+              class="${cn('nui-autocomplete-label', classes?.label)}"
               for="${id}"
             >
               ${label}
@@ -67,17 +65,13 @@ export const Autocomplete = ({
         <input
           id="${id}"
           type="text"
-          class="${['nui-autocomplete-input', classes?.input]
-            .filter(Boolean)
-            .join(' ')}"
+          class="${cn('nui-autocomplete-input', classes?.input)}"
           ${spread(attrs)}
         />
         ${label && labelFloat
           ? html`
               <label
-                class="${['nui-label-float', classes?.label]
-                  .filter(Boolean)
-                  .join(' ')}"
+                class="${cn('nui-label-float', classes?.label)}"
                 for="${id}"
               >
                 ${label}
@@ -92,11 +86,7 @@ export const Autocomplete = ({
         `}
         ${icon &&
         html`
-          <div
-            class="${['nui-autocomplete-icon', classes?.icon]
-              .filter(Boolean)
-              .join(' ')}"
-          >
+          <div class="${cn('nui-autocomplete-icon', classes?.icon)}">
             ${icon}
           </div>
         `}
@@ -122,13 +112,10 @@ export const Autocomplete = ({
         ${error &&
         typeof error === 'string' &&
         html`
-          <span
-            class="${['nui-autocomplete-error-text', classes?.error]
-              .filter(Boolean)
-              .join(' ')}"
-          >
-            ${error}
-          </span>
+          ${InputHelpText({
+            color: 'danger',
+            children: error,
+          })}
         `}
         <div class="nui-autocomplete-results">${items}</div>
       </div>

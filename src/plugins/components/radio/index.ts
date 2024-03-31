@@ -76,9 +76,6 @@ export default plugin(({ addComponents, theme }) => {
       //Radio:error
       '.nui-radio-error': {
         '@apply ms-1 inline-block': {},
-        //Font
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
       },
       //Color:default
       '&.nui-radio-default': {

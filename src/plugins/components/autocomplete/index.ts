@@ -128,17 +128,6 @@ export default plugin(({ addComponents, theme }) => {
           '@apply h-3 w-full max-w-[75%] rounded': {},
         },
       },
-      //Autocomplete:error
-      '.nui-autocomplete-error-text': {
-        //Base
-        '@apply mt-1 block leading-none': {},
-        //Error text font
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight}`]:
-          {},
-        //Error text color
-        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
-      },
       //Autocomplete:results
       '.nui-autocomplete-results': {
         '@apply nui-slimscroll absolute z-20 mt-1 max-h-[265px] w-full overflow-auto py-1 outline-none sm:text-sm':

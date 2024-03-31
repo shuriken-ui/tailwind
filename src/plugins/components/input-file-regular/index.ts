@@ -65,15 +65,6 @@ export default plugin(({ addComponents, theme }) => {
           '@apply h-3 w-full max-w-[75%] rounded': {},
         },
       },
-      //Input:error
-      '.nui-input-file-error-text': {
-        //Base
-        [`@apply mt-1 block font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight} leading-none`]:
-          {},
-        //Color
-        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
-      },
       //Color:default
       '&.nui-input-default': {
         //Input:inner

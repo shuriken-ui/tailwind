@@ -69,17 +69,6 @@ export default plugin(({ addComponents, theme }) => {
       '.nui-input-number-buttons svg': {
         '@apply h-4 w-4': {},
       },
-      //Error:text
-      '.nui-input-number-error-text': {
-        //Base
-        '@apply mt-1 block': {},
-        //Font
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight} leading-none`]:
-          {},
-        //Font color
-        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
-      },
       //Input
       '.nui-input-number': {
         //Base
