@@ -46,10 +46,6 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply text-${config.font.color.light} dark:text-${config.font.color.dark}`]:
           {},
       },
-      //Snack:button
-      '.nui-snack-button': {
-        '@apply hover:!bg-transparent': {},
-      },
       //Size:xs
       '&.nui-snack-xs': {
         //Snack:media:xs

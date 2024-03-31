@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { PaginationAttrs } from './pagination.types'
 import * as variants from './pagination.variants'
@@ -15,14 +16,12 @@ export const Pagination = ({
 }: PaginationAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-pagination',
         color && variants.color[color],
         rounded && variants.rounded[rounded],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       <ul class="nui-pagination-list">

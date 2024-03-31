@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ThemeToggleAttrs } from './theme-toggle.types'
 import * as variants from './theme-toggle.variants'
@@ -15,15 +16,13 @@ export const ThemeToggle = ({
 }: ThemeToggleAttrs) => {
   return html`
     <label
-      class=${[
+      class=${cn(
         'nui-theme-toggle',
         inverted && 'nui-theme-toggle-inverted',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
-      <input type="checkbox" class="nui-theme-toggle-input" />
+      <input type="checkbox" class="nui-theme-toggle-input" ${spread(attrs)} />
       <span class="nui-theme-toggle-inner">
         <svg class="nui-sun" aria-hidden="true" viewBox="0 0 24 24">
           <g fill="currentColor" stroke="currentColor" class="stroke-2">

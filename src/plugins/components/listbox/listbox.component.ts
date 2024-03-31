@@ -1,8 +1,10 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ListboxAttrs } from './listbox.types'
 import * as variants from './listbox.variants'
+import { InputHelpText } from '../input-help-text/input-help-text.component'
 
 /**
  * Primary UI component for user interaction
@@ -26,7 +28,7 @@ export const Listbox = ({
 }: ListboxAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-listbox',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
@@ -37,16 +39,12 @@ export const Listbox = ({
         colorFocus && 'nui-listbox-focus',
         icon && 'nui-has-icon',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       ${label && !labelFloat
         ? html`
             <label
-              class="${['nui-listbox-label', classes?.label]
-                .filter(Boolean)
-                .join(' ')}"
+              class="${cn('nui-listbox-label', classes?.label)}"
               for="${id}"
             >
               ${label}
@@ -60,9 +58,7 @@ export const Listbox = ({
         ${label && labelFloat
           ? html`
               <label
-                class="${['nui-label-float', classes?.label]
-                  .filter(Boolean)
-                  .join(' ')}"
+                class="${cn('nui-label-float', classes?.label)}"
                 for="${id}"
               >
                 ${label}
@@ -71,11 +67,7 @@ export const Listbox = ({
           : ''}
         ${icon &&
         html`
-          <div
-            class="${['nui-listbox-icon nui-icon', classes?.icon]
-              .filter(Boolean)
-              .join(' ')}"
-          >
+          <div class="${cn('nui-listbox-icon nui-icon', classes?.icon)}">
             ${icon}
           </div>
         `}
@@ -105,13 +97,10 @@ export const Listbox = ({
         ${error &&
         typeof error === 'string' &&
         html`
-          <span
-            class="${['nui-listbox-error-text', classes?.error]
-              .filter(Boolean)
-              .join(' ')}"
-          >
-            ${error}
-          </span>
+          ${InputHelpText({
+            color: 'danger',
+            children: error,
+          })}
         `}
         <div class="nui-listbox-options">${items}</div>
       </div>

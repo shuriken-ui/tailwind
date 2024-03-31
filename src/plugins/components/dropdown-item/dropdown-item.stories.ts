@@ -20,7 +20,7 @@ const meta = {
       control: { type: 'text' },
       defaultValue: '',
     },
-    '?disabled': {
+    disabled: {
       name: 'disabled',
       control: { type: 'boolean' },
       defaultValue: false,

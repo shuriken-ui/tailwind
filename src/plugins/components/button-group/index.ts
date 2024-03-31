@@ -16,7 +16,7 @@ export default plugin(
         '@apply flex': {},
 
         // Button
-        '.nui-button:not(:only-child), .nui-button-action:not(:only-child), .nui-button-icon:not(:only-child)':
+        '> .nui-button:not(:only-child), > .nui-button-action:not(:only-child), > .nui-button-icon:not(:only-child)':
           {
             '@apply !border-e-0': {},
             '&:focus': {

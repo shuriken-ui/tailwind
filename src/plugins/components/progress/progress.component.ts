@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ProgressAttrs } from './progress.types'
 import * as variants from './progress.variants'
@@ -22,26 +23,22 @@ export const Progress = ({
       role="progressbar"
       aria-valuenow="${value}"
       aria-valuemax="${max}"
-      class=${[
+      class=${cn(
         'nui-progress',
         color && variants.color[color],
         contrast && variants.contrast[contrast],
         size && variants.size[size],
         rounded && variants.rounded[rounded],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       <div
-        class=${[
+        class=${cn(
           'nui-progress-bar',
           value === undefined &&
             'nui-progress-indeterminate animate-nui-progress-indeterminate',
-        ]
-          .filter(Boolean)
-          .join(' ')}
+        )}
         style="${value ? `width: ${value}%` : 'width: 100%'}"
       ></div>
     </div>

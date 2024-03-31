@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ButtonActionAttrs } from './button-action.types'
 import * as variants from './button-action.variants'
@@ -19,15 +20,13 @@ export const ButtonAction = ({
 }: ButtonActionAttrs) => {
   return html`
     <button
-      class=${[
+      class=${cn(
         'nui-button-action',
         variants.color[color],
         loading && 'nui-button-loading',
         rounded && variants.rounded[rounded],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       @click=${onClick}
       ${spread(attrs)}
     >

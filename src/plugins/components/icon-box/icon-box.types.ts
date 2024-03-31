@@ -6,6 +6,8 @@ export interface IconBoxProps extends Record<string, unknown> {
   color?:
     | 'default'
     | 'default-contrast'
+    | 'muted'
+    | 'muted-contrast'
     | 'dark'
     | 'black'
     | 'light'

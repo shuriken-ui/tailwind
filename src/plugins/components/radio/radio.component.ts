@@ -1,8 +1,10 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { RadioAttrs } from './radio.types'
 import * as variants from './radio.variants'
+import { InputHelpText } from '../input-help-text/input-help-text.component'
 
 /**
  * Primary UI component for user interaction
@@ -22,59 +24,54 @@ export const Radio = ({
 }: RadioAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-radio',
         color && variants.color[color],
         classes?.wrapper,
         '?disabled' in attrs && 'opacity-50',
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       <div class="nui-radio-outer">
         <input
           id="${id}"
-          class=${['nui-radio-input', '?disabled' && 'cursor-not-allowed']
-            .filter(Boolean)
-            .join(' ')}
+          class=${cn('nui-radio-input', '?disabled' && 'cursor-not-allowed')}
           ${spread(attrs)}
           type="radio"
         />
         <div
-          class=${[
+          class=${cn(
             'nui-radio-inner',
             classes?.inputBg,
             '?disabled' in attrs && 'opacity-50 cursor-not-allowed',
-          ]
-            .filter(Boolean)
-            .join(' ')}
+          )}
         ></div>
         <div
-          class=${[
+          class=${cn(
             'nui-radio-dot',
             classes?.inputDot,
             '?disabled' in attrs && 'opacity-50',
-          ]
-            .filter(Boolean)
-            .join(' ')}
+          )}
         ></div>
       </div>
       <div class="nui-radio-label-wrapper">
         <label
           for="${id}"
-          class=${[
+          class=${cn(
             'nui-radio-label-text',
             classes?.label,
             '?disabled' in attrs && 'cursor-not-allowed',
-          ]
-            .filter(Boolean)
-            .join(' ')}
+          )}
         >
           ${label}
         </label>
         ${error && typeof error === 'string'
           ? html`
-              <div class="nui-radio-error">${error}</div>
+              <div class="nui-radio-error">
+                ${InputHelpText({
+                  color: 'danger',
+                  children: error,
+                })}
+              </div>
             `
           : ''}
       </div>

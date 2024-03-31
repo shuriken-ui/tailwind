@@ -145,6 +145,24 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply bg-${config.color.variant.solid.defaultContrast.background.light} dark:bg-${config.color.variant.solid.defaultContrast.background.dark}`]:
             {},
         },
+        //Color:muted
+        '&.nui-box-muted': {
+          //Font
+          [`@apply text-${config.color.variant.solid.muted.font.color.light} dark:text-${config.color.variant.solid.muted.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.muted.background.light} dark:bg-${config.color.variant.solid.muted.background.dark}`]:
+            {},
+        },
+        //Color:muted-contrast
+        '&.nui-box-muted-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.solid.mutedContrast.font.color.light} dark:text-${config.color.variant.solid.mutedContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.mutedContrast.background.light} dark:bg-${config.color.variant.solid.mutedContrast.background.dark}`]:
+            {},
+        },
         //Color:light
         '&.nui-box-light': {
           //Font
@@ -236,6 +254,24 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background
           [`@apply bg-${config.color.variant.pastel.defaultContrast.background.light} dark:bg-${config.color.variant.pastel.defaultContrast.background.dark}`]:
+            {},
+        },
+        //Color:muted
+        '&.nui-box-muted': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.muted.font.color.light} dark:text-${config.color.variant.pastel.muted.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.muted.background.light} dark:bg-${config.color.variant.pastel.muted.background.dark}`]:
+            {},
+        },
+        //Color:muted-contrast
+        '&.nui-box-muted-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.mutedContrast.font.color.light} dark:text-${config.color.variant.pastel.mutedContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.mutedContrast.background.light} dark:bg-${config.color.variant.pastel.mutedContrast.background.dark}`]:
             {},
         },
         //Color:light
@@ -335,6 +371,30 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Border
           [`@apply border-2 border-${config.color.variant.outline.defaultContrast.border.light} dark:border-${config.color.variant.outline.defaultContrast.border.dark}`]:
+            {},
+        },
+        //Color:muted
+        '&.nui-box-muted': {
+          //Font
+          [`@apply text-${config.color.variant.outline.muted.font.color.light} dark:text-${config.color.variant.outline.muted.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.muted.background.light}  bg-${config.color.variant.outline.muted.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.muted.border.light} dark:border-${config.color.variant.outline.muted.border.dark}`]:
+            {},
+        },
+        //Color:muted-contrast
+        '&.nui-box-muted-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.outline.mutedContrast.font.color.light} dark:text-${config.color.variant.outline.mutedContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.mutedContrast.background.light}  bg-${config.color.variant.outline.mutedContrast.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.mutedContrast.border.light} dark:border-${config.color.variant.outline.mutedContrast.border.dark}`]:
             {},
         },
         //Color:light

@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ButtonGroupAttrs } from './button-group.types'
 import * as variants from './button-group.variants'
@@ -13,10 +14,7 @@ export const ButtonGroup = ({
   ...attrs
 }: ButtonGroupAttrs) => {
   return html`
-    <div
-      class=${['nui-button-group', classes?.wrapper].filter(Boolean).join(' ')}
-      ${spread(attrs)}
-    >
+    <div class=${cn('nui-button-group', classes?.wrapper)} ${spread(attrs)}>
       ${children}
     </div>
   `

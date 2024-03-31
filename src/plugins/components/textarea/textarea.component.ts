@@ -1,8 +1,10 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { TextareaAttrs } from './textarea.types'
 import * as variants from './textarea.variants'
+import { InputHelpText } from '../input-help-text/input-help-text.component'
 
 /**
  * Primary UI component for user interaction
@@ -24,7 +26,7 @@ export const Textarea = ({
 }: TextareaAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-textarea-wrapper',
         contrast && variants.contrast[contrast],
         size && variants.size[size],
@@ -35,19 +37,14 @@ export const Textarea = ({
         loading && 'nui-textarea-loading',
         labelFloat && 'nui-textarea-label-float',
         colorFocus && 'nui-textarea-focus',
-
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       ${label && !labelFloat
         ? html`
             <label
               for="${id}"
-              class="${['nui-textarea-label', classes?.label]
-                .filter(Boolean)
-                .join(' ')}"
+              class="${cn('nui-textarea-label', classes?.label)}"
             >
               ${label}
             </label>
@@ -56,22 +53,18 @@ export const Textarea = ({
       <div class="nui-textarea-outer">
         <textarea
           id="${id}"
-          class="${[
+          class="${cn(
             'nui-textarea',
             colorFocus && 'nui-textarea-focus',
             '?disabled' in attrs && 'opacity-50 cursor-not-allowed',
             classes?.textarea,
-          ]
-            .filter(Boolean)
-            .join(' ')}"
+          )}"
           ${spread(attrs)}
         ></textarea>
         ${label && labelFloat
           ? html`
               <label
-                class="${['nui-label-float', classes?.label]
-                  .filter(Boolean)
-                  .join(' ')}"
+                class="${cn('nui-label-float', classes?.label)}"
                 for="${id}"
               >
                 ${label}
@@ -88,24 +81,17 @@ export const Textarea = ({
         `}
         ${addon &&
         html`
-          <div
-            class="${['nui-textarea-addon', classes?.addon]
-              .filter(Boolean)
-              .join(' ')}"
-          >
+          <div class="${cn('nui-textarea-addon', classes?.addon)}">
             ${addon}
           </div>
         `}
         ${error &&
         typeof error === 'string' &&
         html`
-          <span
-            class="${['nui-textarea-error-text', classes?.error]
-              .filter(Boolean)
-              .join(' ')}"
-          >
-            ${error}
-          </span>
+          ${InputHelpText({
+            color: 'danger',
+            children: error,
+          })}
         `}
       </div>
     </div>

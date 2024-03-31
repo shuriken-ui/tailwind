@@ -15,7 +15,7 @@ export default plugin(({ addComponents, theme }) => {
   addComponents({
     //Wrapper
     '.nui-message': {
-      '@apply flex min-h-[3rem] items-center border p-1 pe-2': {},
+      '@apply relative flex gap-2 border': {},
       //Icon:outer
       '.nui-message-icon-outer': {
         [`@apply flex h-${config.icon.outer.size} w-${config.icon.outer.size} shrink-0 items-center justify-center`]:
@@ -33,7 +33,7 @@ export default plugin(({ addComponents, theme }) => {
       //Inner:text
       '.nui-message-inner-text': {
         //Base
-        '@apply px-3 block': {},
+        '@apply inline-flex items-center leading-normal': {},
         //Font
         [`@apply font-${config.inner.font.family} text-${config.inner.font.size}`]:
           {},
@@ -41,9 +41,14 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply text-${config.inner.font.color.light} dark:text-${config.inner.font.color.dark}`]:
           {},
       },
-      //Meesage:close
+      //Message:close
+      '.nui-message-close-wrapper': {
+        [`@apply absolute top-${config.close.position.top} end-${config.close.position.end} flex items-center justify-center bg-white dark:bg-muted-950 border border-muted-200 dark:border-muted-800 ${config.close.rounded} h-${config.close.size.outer.height} w-${config.close.size.outer.width}`]:
+          {},
+      },
+      //Message:close
       '.nui-message-close': {
-        [`@apply nui-focus me-2 ms-auto flex cursor-pointer items-center justify-center p-${config.close.padding} ${config.close.rounded}`]:
+        [`@apply nui-focus flex cursor-pointer items-center justify-center shrink-0 h-${config.close.size.inner.height} w-${config.close.size.inner.width} ${config.close.rounded}`]:
           {},
         //Color
         [`@apply text-${config.close.color.light} dark:text-${config.close.color.dark}`]:
@@ -56,6 +61,14 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply h-${config.close.icon.size} w-${config.close.icon.size}`]:
             {},
         },
+      },
+      //Message:text
+      '&.nui-has-text': {
+        [`@apply py-2 ps-2 pe-${config.safeArea.end}`]: {},
+      },
+      //Message:icon
+      '&.nui-has-icon': {
+        [`@apply py-1 ps-1 pe-${config.safeArea.end}`]: {},
       },
       //Rounded:sm
       '&.nui-message-rounded-sm': {

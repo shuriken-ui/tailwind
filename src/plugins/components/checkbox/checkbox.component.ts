@@ -1,8 +1,10 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { CheckboxAttrs } from './checkbox.types'
 import * as variants from './checkbox.variants'
+import { InputHelpText } from '../input-help-text/input-help-text.component'
 
 /**
  * Primary UI component for user interaction
@@ -22,23 +24,18 @@ export const Checkbox = ({
 }: CheckboxAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-checkbox',
         rounded && variants.rounded[rounded],
         color && variants.color[color],
         classes?.wrapper,
         '?disabled' in attrs && 'opacity-50',
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
     >
       <div class="nui-checkbox-outer">
         <input
           id="${id}"
-          class=${['nui-checkbox-input', classes?.input]
-            .filter(Boolean)
-            .join(' ')}
-          ${spread(attrs)}
+          class=${cn('nui-checkbox-input', classes?.input)}
           type="checkbox"
         />
         <div class="nui-checkbox-inner"></div>
@@ -52,19 +49,22 @@ export const Checkbox = ({
       <div class="nui-checkbox-label-wrapper">
         <label
           for="${id}"
-          class=${[
+          class=${cn(
             'nui-checkbox-label-text',
             classes?.label,
             '?disabled' in attrs && 'cursor-not-allowed',
-          ]
-            .filter(Boolean)
-            .join(' ')}
+          )}
         >
           ${label}
         </label>
         ${error && typeof error === 'string'
           ? html`
-              <div class="nui-checkbox-error">${error}</div>
+              <div class="nui-checkbox-error">
+                ${InputHelpText({
+                  color: 'danger',
+                  children: error,
+                })}
+              </div>
             `
           : ''}
       </div>

@@ -15,6 +15,8 @@ const meta = {
       options: [
         'default',
         'default-contrast',
+        'muted',
+        'muted-contrast',
         'invert',
         'dark',
         'black',

@@ -17,7 +17,7 @@ export default plugin(({ addComponents, theme }) => {
       {
         scrollBehavior: 'smooth',
         scrollbarGutter: 'stable',
-        [`@apply w-${config.width}`]: {},
+        [`@apply w-${config.width} h-${config.height}`]: {},
       },
     '.nui-slimscroll::-webkit-scrollbar-thumb': {
       [`@apply rounded-lg bg-${config.background.base.light} dark:bg-${config.background.base.dark} duration-300 transition-all`]:

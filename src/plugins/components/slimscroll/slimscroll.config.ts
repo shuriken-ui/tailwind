@@ -2,6 +2,7 @@ export const key = 'slimscroll' as const
 
 export const defaultConfig = {
   width: '[6px]',
+  height: '[6px]',
   background: {
     base: {
       light: 'black/5',

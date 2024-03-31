@@ -70,13 +70,6 @@ export default plugin(({ addComponents, theme }) => {
       '.nui-text-button': {
         //Base
         '@apply flex items-center space-x-1': {},
-        //Font
-        [`@apply font-${config.button.text.font.family} text-${config.button.text.font.color.light} dark:text-${config.button.text.font.color.dark}`]:
-          {},
-        //Text:inner
-        '.nui-text-button-inner': {
-          [`@apply font-${config.button.text.font.family}`]: {},
-        },
       },
       //Button:chevron
       '.nui-chevron': {
