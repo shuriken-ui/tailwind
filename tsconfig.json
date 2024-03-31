@@ -9,8 +9,6 @@
     "paths": {
       "~/types": ["types"],
       "~/types/*": ["types/*"],
-      "~/utils": ["src/utils"],
-      "~/utils/*": ["src/utils/*"],
     }
   },
   
