@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.2](https://github.com/shuriken-ui/tailwind/compare/v3.0.1...v3.0.2) (2024-04-08)
+
+
+### Bug Fixes
+
+* **button:** update demo xl variant class to xlarge ([894a679](https://github.com/shuriken-ui/tailwind/commit/894a679c3d560085c75be74610b9a1f8cf1b4615))
+* **button:** update size config keys ([18e3d6c](https://github.com/shuriken-ui/tailwind/commit/18e3d6c2317038df3b271d348dd6d2a0a49fe3ca))
+
 ### [3.0.1](https://github.com/shuriken-ui/tailwind/compare/v3.0.0...v3.0.1) (2024-03-31)
 
 ## [3.0.0](https://github.com/shuriken-ui/tailwind/compare/v3.0.0-next.6...v3.0.0) (2024-03-04)
