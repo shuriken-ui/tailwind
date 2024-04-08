@@ -94,39 +94,30 @@ export default plugin(({ addComponents, theme }) => {
       // #endregion
 
       // #region Sizes
-      '&.nui-button-small': {
-        [`@apply h-${config.size.small.button.height} px-${config.size.small.button.padding.x} py-${config.size.small.button.padding.y} text-${config.size.small.button.text}`]:
+      '&.nui-button-sm': {
+        [`@apply h-${config.size.sm.button.height} px-${config.size.sm.button.padding.x} py-${config.size.sm.button.padding.y} text-${config.size.sm.button.text}`]:
           {},
 
         '.nui-button-icon': {
-          [`@apply w-${config.size.small.icon.size} h-${config.size.small.icon.size}`]:
+          [`@apply w-${config.size.sm.icon.size} h-${config.size.sm.icon.size}`]:
             {},
         },
       },
-      '&.nui-button-medium': {
-        [`@apply h-${config.size.medium.button.height} px-${config.size.medium.button.padding.x} py-${config.size.medium.button.padding.y} text-${config.size.medium.button.text}`]:
+      '&.nui-button-md': {
+        [`@apply h-${config.size.md.button.height} px-${config.size.md.button.padding.x} py-${config.size.md.button.padding.y} text-${config.size.md.button.text}`]:
           {},
 
         '.nui-button-icon': {
-          [`@apply w-${config.size.medium.icon.size} h-${config.size.medium.icon.size}`]:
+          [`@apply w-${config.size.md.icon.size} h-${config.size.md.icon.size}`]:
             {},
         },
       },
-      '&.nui-button-large': {
-        [`@apply h-${config.size.large.button.height} px-${config.size.large.button.padding.x} py-${config.size.large.button.padding.y} text-${config.size.large.button.text}`]:
+      '&.nui-button-lg': {
+        [`@apply h-${config.size.lg.button.height} px-${config.size.lg.button.padding.x} py-${config.size.lg.button.padding.y} text-${config.size.lg.button.text}`]:
           {},
 
         '.nui-button-icon': {
-          [`@apply w-${config.size.large.icon.size} h-${config.size.large.icon.size}`]:
-            {},
-        },
-      },
-      '&.nui-button-xlarge': {
-        [`@apply h-${config.size.xlarge.button.height} px-${config.size.xlarge.button.padding.x} py-${config.size.xlarge.button.padding.y} text-${config.size.xlarge.button.text}`]:
-          {},
-
-        '.nui-button-icon': {
-          [`@apply w-${config.size.xlarge.icon.size} h-${config.size.xlarge.icon.size}`]:
+          [`@apply w-${config.size.lg.icon.size} h-${config.size.lg.icon.size}`]:
             {},
         },
       },
@@ -134,13 +125,13 @@ export default plugin(({ addComponents, theme }) => {
 
       // #region Rounded
       '&.nui-button-rounded-sm': {
-        [`@apply rounded-${config.rounded.small}`]: {},
+        [`@apply rounded-${config.rounded.sm}`]: {},
       },
       '&.nui-button-rounded-md': {
-        [`@apply rounded-${config.rounded.medium}`]: {},
+        [`@apply rounded-${config.rounded.md}`]: {},
       },
       '&.nui-button-rounded-lg': {
-        [`@apply rounded-${config.rounded.large}`]: {},
+        [`@apply rounded-${config.rounded.lg}`]: {},
       },
       '&.nui-button-rounded-full': {
         [`@apply rounded-${config.rounded.full}`]: {},

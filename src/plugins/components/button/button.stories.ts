@@ -46,7 +46,7 @@ const meta = {
     },
     size: {
       control: { type: 'select' },
-      options: ['sm', 'md', 'lg', 'xl'],
+      options: ['sm', 'md', 'lg'],
       defaultValue: 'md',
     },
     rounded: {
