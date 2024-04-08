@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { PlaceholderPageAttrs } from './placeholder-page.types'
 import * as variants from './placeholder-page.variants'
@@ -19,13 +20,11 @@ export const PlaceholderPage = ({
 }: PlaceholderPageAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-placeholder-page',
         imageSize && variants.size[imageSize],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       <div class="nui-placeholder-page-inner">

@@ -33,11 +33,11 @@ export const size = {
 } as const satisfies AvatarVariant<'size'>
 
 export const rounded = {
-  none: 'nui-avatar-straight',
-  sm: 'nui-avatar-rounded',
-  md: 'nui-avatar-smooth',
-  lg: 'nui-avatar-curved',
-  full: 'nui-avatar-full',
+  none: 'nui-avatar-rounded-none',
+  sm: 'nui-avatar-rounded-sm',
+  md: 'nui-avatar-rounded-md',
+  lg: 'nui-avatar-rounded-lg',
+  full: 'nui-avatar-rounded-full',
 } as const satisfies AvatarVariant<'rounded'>
 
 export const mask = {

@@ -128,17 +128,6 @@ export default plugin(({ addComponents, theme }) => {
           '@apply h-3 w-full max-w-[75%] rounded': {},
         },
       },
-      //Autocomplete:error
-      '.nui-autocomplete-error-text': {
-        //Base
-        '@apply mt-1 block leading-none': {},
-        //Error text font
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight}`]:
-          {},
-        //Error text color
-        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
-      },
       //Autocomplete:results
       '.nui-autocomplete-results': {
         '@apply nui-slimscroll absolute z-20 mt-1 max-h-[265px] w-full overflow-auto py-1 outline-none sm:text-sm':
@@ -193,7 +182,7 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-autocomplete-rounded': {
+      '&.nui-autocomplete-rounded-sm': {
         '.nui-autocomplete-input': {
           [`@apply rounded-${config.rounded.sm}`]: {},
         },
@@ -204,7 +193,7 @@ export default plugin(({ addComponents, theme }) => {
           },
       },
       //Rounded:md
-      '&.nui-autocomplete-smooth': {
+      '&.nui-autocomplete-rounded-md': {
         '.nui-autocomplete-input': {
           [`@apply rounded-${config.rounded.md}`]: {},
         },
@@ -215,7 +204,7 @@ export default plugin(({ addComponents, theme }) => {
           },
       },
       //Rounded:lg
-      '&.nui-autocomplete-curved': {
+      '&.nui-autocomplete-rounded-lg': {
         '.nui-autocomplete-input': {
           [`@apply rounded-${config.rounded.lg}`]: {},
         },
@@ -226,7 +215,7 @@ export default plugin(({ addComponents, theme }) => {
           },
       },
       //Rounded:full
-      '&.nui-autocomplete-full': {
+      '&.nui-autocomplete-rounded-full': {
         '.nui-autocomplete-input, .nui-autocomplete-multiple .nui-autocomplete-multiple-list-item':
           {
             [`@apply rounded-${config.rounded.full}`]: {},
@@ -435,6 +424,19 @@ export default plugin(({ addComponents, theme }) => {
             [`@apply bg-${config.color.mutedContrast.results.inner.background.light} dark:bg-${config.color.mutedContrast.results.inner.background.dark}`]:
               {},
           },
+      },
+      //Focus:color
+      '&.nui-autocomplete-focus': {
+        '.nui-autocomplete-input': {
+          //Transition
+          [`@apply transition-colors duration-300`]: {},
+          //Focus
+          [`@apply focus:!border-${config.input.focus.border.color.light} dark:focus:!border-${config.input.focus.border.color.dark}`]:
+            {},
+          //Force focus
+          [`@apply focus:hover:!border-${config.input.focus.border.color.light} dark:focus:hover:!border-${config.input.focus.border.color.dark}`]:
+            {},
+        },
       },
       //Autocomplete:not loading
       '&:not(.nui-autocomplete-loading)': {

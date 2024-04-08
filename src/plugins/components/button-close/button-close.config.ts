@@ -37,6 +37,40 @@ export const defaultConfig = {
           light: 'muted-100',
           dark: 'muted-700',
         },
+        focus: {
+          light: 'muted-100',
+          dark: 'muted-700',
+        },
+        active: {
+          light: 'transparent',
+          dark: 'transparent',
+        },
+      },
+      font: {
+        color: {
+          light: 'muted-700',
+          dark: 'muted-50',
+        },
+      },
+    },
+    defaultContrast: {
+      background: {
+        base: {
+          light: 'transparent',
+          dark: 'transparent',
+        },
+        hover: {
+          light: 'muted-100',
+          dark: 'muted-900',
+        },
+        focus: {
+          light: 'muted-100',
+          dark: 'muted-900',
+        },
+        active: {
+          light: 'transparent',
+          dark: 'transparent',
+        },
       },
       font: {
         color: {
@@ -54,6 +88,40 @@ export const defaultConfig = {
         hover: {
           light: 'muted-50',
           dark: 'muted-600',
+        },
+        focus: {
+          light: 'muted-50',
+          dark: 'muted-600',
+        },
+        active: {
+          light: 'muted-100',
+          dark: 'muted-700',
+        },
+      },
+      font: {
+        color: {
+          light: 'muted-700',
+          dark: 'muted-50',
+        },
+      },
+    },
+    mutedContrast: {
+      background: {
+        base: {
+          light: 'muted-100',
+          dark: 'muted-950',
+        },
+        hover: {
+          light: 'muted-50',
+          dark: 'muted-900',
+        },
+        focus: {
+          light: 'muted-50',
+          dark: 'muted-900',
+        },
+        active: {
+          light: 'muted-100',
+          dark: 'muted-950',
         },
       },
       font: {
@@ -73,6 +141,14 @@ export const defaultConfig = {
           light: 'primary-500/20',
           dark: 'primary-500/20',
         },
+        focus: {
+          light: 'primary-500/20',
+          dark: 'primary-500/20',
+        },
+        active: {
+          light: 'primary-500/10',
+          dark: 'primary-500/10',
+        },
       },
       font: {
         color: {
@@ -90,6 +166,14 @@ export const defaultConfig = {
         hover: {
           light: 'info-500/20',
           dark: 'info-500/20',
+        },
+        focus: {
+          light: 'info-500/20',
+          dark: 'info-500/20',
+        },
+        active: {
+          light: 'info-500/10',
+          dark: 'info-500/10',
         },
       },
       font: {
@@ -109,6 +193,14 @@ export const defaultConfig = {
           light: 'success-500/20',
           dark: 'success-500/20',
         },
+        focus: {
+          light: 'success-500/20',
+          dark: 'success-500/20',
+        },
+        active: {
+          light: 'success-500/10',
+          dark: 'success-500/10',
+        },
       },
       font: {
         color: {
@@ -127,6 +219,14 @@ export const defaultConfig = {
           light: 'warning-500/20',
           dark: 'warning-500/20',
         },
+        focus: {
+          light: 'warning-500/20',
+          dark: 'warning-500/20',
+        },
+        active: {
+          light: 'warning-500/10',
+          dark: 'warning-500/10',
+        },
       },
       font: {
         color: {
@@ -144,6 +244,14 @@ export const defaultConfig = {
         hover: {
           light: 'danger-500/20',
           dark: 'danger-500/20',
+        },
+        focus: {
+          light: 'danger-500/20',
+          dark: 'danger-500/20',
+        },
+        active: {
+          light: 'danger-500/10',
+          dark: 'danger-500/10',
         },
       },
       font: {

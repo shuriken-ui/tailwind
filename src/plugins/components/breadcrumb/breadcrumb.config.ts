@@ -26,8 +26,36 @@ export const defaultConfig = {
     link: {
       font: {
         color: {
-          hover: 'primary-500',
-          focus: 'primary-500',
+          primary: {
+            light: {
+              hover: 'primary-500',
+              focus: 'primary-500',
+            },
+            dark: {
+              hover: 'primary-500',
+              focus: 'primary-500',
+            },
+          },
+          dark: {
+            light: {
+              hover: 'muted-900',
+              focus: 'muted-900',
+            },
+            dark: {
+              hover: 'muted-100',
+              focus: 'muted-100',
+            },
+          },
+          black: {
+            light: {
+              hover: 'black',
+              focus: 'black',
+            },
+            dark: {
+              hover: 'white',
+              focus: 'white',
+            },
+          },
         },
       },
     },

@@ -37,23 +37,14 @@ export const defaultConfig = {
         },
         color: {
           hover: {
-            light: 'primary-500',
-            dark: 'primary-500',
+            light: 'muted-200',
+            dark: 'muted-700',
           },
         },
       },
       transition: {
         property: 'all',
         duration: '300',
-      },
-    },
-    text: {
-      font: {
-        family: 'sans',
-        color: {
-          light: 'muted-400',
-          dark: 'muted-400',
-        },
       },
     },
     chevron: {
@@ -84,7 +75,7 @@ export const defaultConfig = {
       lg: 'rounded-xl',
     },
     color: {
-      white: {
+      default: {
         background: {
           light: 'white',
           dark: 'muted-800',
@@ -94,7 +85,7 @@ export const defaultConfig = {
           dark: 'muted-700',
         },
       },
-      whiteContrast: {
+      defaultContrast: {
         background: {
           light: 'white',
           dark: 'muted-950',

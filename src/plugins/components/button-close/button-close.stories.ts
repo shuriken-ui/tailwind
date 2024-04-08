@@ -19,7 +19,9 @@ const meta = {
       control: { type: 'select' },
       options: [
         'default',
+        'default-contrast',
         'muted',
+        'muted-contrast',
         'primary',
         'info',
         'success',

@@ -46,17 +46,6 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply transition-${config.input.icon.transition.property} duration-${config.input.icon.transition.duration}`]:
           {},
       },
-      //Error:text
-      '.nui-input-error-text': {
-        //Base
-        '@apply mt-1 block': {},
-        //Font
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight} leading-none`]:
-          {},
-        //Font color
-        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
-      },
       //Input
       '.nui-input': {
         //Base
@@ -99,33 +88,26 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply transition-${config.input.action.transition.property} duration-${config.input.action.transition.duration}`]:
           {},
       },
-      //Focus:color
-      '&.nui-input-focus': {
-        '.nui-input': {
-          [`@apply focus:border-${config.input.focus.border.color.light} dark:focus:border-${config.input.focus.border.color.dark}`]:
-            {},
-        },
-      },
       //Rounded:sm
-      '&.nui-input-rounded': {
+      '&.nui-input-rounded-sm': {
         '.nui-input': {
           [`@apply ${config.rounded.sm}`]: {},
         },
       },
       //Rounded:md
-      '&.nui-input-smooth': {
+      '&.nui-input-rounded-md': {
         '.nui-input': {
           [`@apply ${config.rounded.md}`]: {},
         },
       },
       //Rounded:lg
-      '&.nui-input-curved': {
+      '&.nui-input-rounded-lg': {
         '.nui-input': {
           [`@apply ${config.rounded.lg}`]: {},
         },
       },
       //Rounded:full
-      '&.nui-input-full': {
+      '&.nui-input-rounded-full': {
         '.nui-input': {
           [`@apply ${config.rounded.full}`]: {},
         },
@@ -282,6 +264,17 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Border:hover
           [`@apply hover:border-${config.color.mutedContrast.border.hover.light} dark:hover:border-${config.color.mutedContrast.border.hover.dark}`]:
+            {},
+        },
+      },
+      //Focus:color
+      '&.nui-input-focus': {
+        '.nui-input': {
+          //Focus
+          [`@apply focus:!border-${config.input.focus.border.color.light} dark:focus:!border-${config.input.focus.border.color.dark}`]:
+            {},
+          //Force focus
+          [`@apply focus:hover:!border-${config.input.focus.border.color.light} dark:focus:hover:!border-${config.input.focus.border.color.dark}`]:
             {},
         },
       },

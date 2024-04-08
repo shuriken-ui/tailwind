@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { AccordionAttrs } from './accordion.types'
 import * as variants from './accordion.variants'
@@ -12,6 +13,8 @@ import { Paragraph } from '../paragraph/paragraph.component'
 export const Accordion = ({
   items,
   openItems,
+  color = 'default',
+  dotColor = 'primary',
   rounded,
   exclusive,
   action = 'dot',
@@ -22,14 +25,14 @@ export const Accordion = ({
     ${items?.map(
       (item) => html`
         <div
-          class=${[
+          class=${cn(
             'nui-accordion',
             action && variants.action[action],
             rounded && variants.rounded[rounded],
+            color && variants.color[color],
+            action === 'dot' && dotColor && variants.dotColor[dotColor],
             classes?.wrapper,
-          ]
-            .filter(Boolean)
-            .join(' ')}
+          )}
           ${spread(attrs)}
         >
           <details class="nui-accordion-detail" ?open=${openItems?.includes(0)}>

@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ToastAttrs } from './toast.types'
 import * as variants from './toast.variants'
@@ -11,7 +12,7 @@ import { ButtonClose } from '../button-close/button-close.component'
 export const Toast = ({
   title,
   text,
-  contrast = 'white',
+  contrast = 'low-contrast',
   color = 'default',
   rounded = 'md',
   borderless,
@@ -22,16 +23,14 @@ export const Toast = ({
 }: ToastAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-toast',
         color && variants.color[color],
         contrast && variants.contrast[contrast],
         rounded && variants.rounded[rounded],
         borderless && 'nui-toast-borderless',
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       ${iconBlock && !icon
@@ -45,7 +44,7 @@ export const Toast = ({
               ${icon}
             `
           : ''}
-        <div class=${[icon && !iconBlock && 'ms-2'].filter(Boolean).join(' ')}>
+        <div class=${cn(icon && !iconBlock && 'ms-2')}>
           <h4 class="nui-toast-title">${title}</h4>
           <p class="nui-toast-subtitle">${text}</p>
         </div>

@@ -8,7 +8,7 @@ describe('Listbox', () => {
   test('Should have no axe violations', async () => {
     const input = Listbox({
       label: 'Listbox',
-      shape: 'rounded',
+      rounded: 'sm',
       id: 'listbox',
     })
 

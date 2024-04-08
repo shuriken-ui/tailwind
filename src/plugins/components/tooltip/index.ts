@@ -65,12 +65,10 @@ export default plugin(({ addComponents, theme }) => {
       borderRadius: '0.5ch',
       zIndex: '1000',
       [`@apply font-${config.font.family} text-xs shadow-lg`]: {},
-      [`@apply text-${config.font.color.light}`]: {},
-      [`@apply bg-${config.background.light}`]: {},
-    },
-    [`.dark [${tooltip}]::after`]: {
-      [`@apply text-${config.font.color.dark}`]: {},
-      [`@apply bg-${config.background.dark}`]: {},
+      [`@apply text-${config.font.color.light} dark:text-${config.font.color.dark}`]:
+        {},
+      [`@apply !bg-${config.background.light} dark:!bg-${config.background.dark}`]:
+        {},
     },
     [`[${tooltip}]:hover::before, [${tooltip}]:hover::after, [${tooltip}]:focus-visible::before, [${tooltip}]:focus-visible::after`]:
       {
@@ -86,11 +84,8 @@ export default plugin(({ addComponents, theme }) => {
         bottom: 'calc(100% + 8px)',
         borderBottomWidth: '0',
         borderTopColor: 'currentColor',
-        [`@apply text-${config.background.light}`]: {},
-      },
-    [`.dark [${tooltip}]:not([${position}])::before, .dark [${tooltip}][${position}^='up']::before`]:
-      {
-        [`@apply text-${config.background.dark}`]: {},
+        [`@apply !text-${config.background.light} dark:!text-${config.background.dark}`]:
+          {},
       },
     [`[${tooltip}]:not([${position}])::after, [${tooltip}][${position}^='up']::after`]:
       {
@@ -107,10 +102,8 @@ export default plugin(({ addComponents, theme }) => {
       top: '100%',
       borderTopWidth: '0',
       borderBottomColor: 'currentColor',
-      [`@apply text-${config.background.light}`]: {},
-    },
-    [`.dark [${tooltip}][${position}^='down']::before`]: {
-      [`@apply text-${config.background.dark}`]: {},
+      [`@apply !text-${config.background.light} dark:!text-${config.background.dark}`]:
+        {},
     },
     [`[${tooltip}][${position}^='down']::after`]: {
       top: 'calc(100% + 5px)',
@@ -125,12 +118,12 @@ export default plugin(({ addComponents, theme }) => {
     [`[${tooltip}][${position}^='start']::before, [${tooltip}][${position}^='left']::before`]:
       {
         top: '50%',
-        borderEndWidth: '0',
-        borderStartColor: 'currentColor',
+        borderRightWidth: '0',
+        borderLeftColor: 'currentColor',
         insetInlineStart: 'calc(0em - 5px)',
         transform: 'translate(-0.5em, -50%)',
-        [`@apply text-${config.background.light}`]: {},
-        [`@apply text-${config.background.dark}`]: {},
+        [`@apply !text-${config.background.light} dark:!text-${config.background.dark}`]:
+          {},
       },
     [`[${tooltip}][${position}^='start']::after, [${tooltip}][${position}^='left']::after`]:
       {
@@ -143,12 +136,12 @@ export default plugin(({ addComponents, theme }) => {
     [`[${tooltip}][${position}^='end']::before, [${tooltip}][${position}^='right']::before`]:
       {
         top: '50%',
-        borderStartWidth: '0',
-        borderEndColor: 'currentColor',
+        borderLefttWidth: '0',
+        borderRightColor: 'currentColor',
         insetInlineEnd: 'calc(0em - 5px)',
         transform: 'translate(0.5em, -50%)',
-        [`@apply text-${config.background.light}`]: {},
-        [`@apply text-${config.background.dark}`]: {},
+        [`@apply !text-${config.background.light} dark:!text-${config.background.dark}`]:
+          {},
       },
     [`[${tooltip}][${position}^='end']::after, [${tooltip}][${position}^='right']::after`]:
       {

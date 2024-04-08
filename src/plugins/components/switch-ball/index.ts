@@ -141,6 +141,24 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply bg-${config.color.danger.light} dark:bg-${config.color.danger.dark}`]:
             {},
         },
+      //color:dark
+      '&.nui-switch-ball-dark .nui-switch-ball-input:checked ~ .nui-switch-ball-track':
+        {
+          [`@apply bg-${config.color.dark.light} dark:bg-${config.color.dark.dark}`]:
+            {},
+        },
+      '&.nui-switch-ball-dark .nui-switch-ball-icon': {
+        [`@apply text-muted-100 dark:text-muted-900`]: {},
+      },
+      //color:black
+      '&.nui-switch-ball-black .nui-switch-ball-input:checked ~ .nui-switch-ball-track':
+        {
+          [`@apply bg-${config.color.black.light} dark:bg-${config.color.black.dark}`]:
+            {},
+        },
+      '&.nui-switch-ball-black .nui-switch-ball-icon': {
+        [`@apply text-white dark:text-black`]: {},
+      },
     },
   })
 }, config)

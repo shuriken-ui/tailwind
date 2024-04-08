@@ -20,15 +20,15 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-xs': {
         [`@apply h-${config.size.xs.size} w-${config.size.xs.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.xs.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.xs.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.xs.rounded.lg}`]: {},
         },
       },
@@ -36,15 +36,15 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-sm': {
         [`@apply h-${config.size.sm.size} w-${config.size.sm.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.sm.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.sm.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.sm.rounded.lg}`]: {},
         },
       },
@@ -52,15 +52,15 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-md': {
         [`@apply h-${config.size.md.size} w-${config.size.md.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.md.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.md.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.md.rounded.lg}`]: {},
         },
       },
@@ -68,15 +68,15 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-lg': {
         [`@apply h-${config.size.lg.size} w-${config.size.lg.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.lg.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.lg.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.lg.rounded.lg}`]: {},
         },
       },
@@ -84,15 +84,15 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-xl': {
         [`@apply h-${config.size.xl.size} w-${config.size.xl.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.xl.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.xl.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.xl.rounded.lg}`]: {},
         },
       },
@@ -100,20 +100,20 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-box-2xl': {
         [`@apply h-${config.size.xxl.size} w-${config.size.xxl.size}`]: {},
         //Rounded:sm
-        '&.nui-box-rounded': {
+        '&.nui-box-rounded-sm': {
           [`@apply ${config.size.xxl.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-box-smooth': {
+        '&.nui-box-rounded-md': {
           [`@apply ${config.size.xxl.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-box-curved': {
+        '&.nui-box-rounded-lg': {
           [`@apply ${config.size.xxl.rounded.lg}`]: {},
         },
       },
       //Rounded:full
-      '&.nui-box-full': {
+      '&.nui-box-rounded-full': {
         '@apply rounded-full': {},
       },
       //Color:default
@@ -127,13 +127,67 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Variant:solid
       '&.nui-box-solid': {
-        //Color:invert
-        '&.nui-box-invert': {
+        //Color:default
+        '&.nui-box-default': {
           //Font
-          [`@apply text-${config.color.variant.solid.invert.font.color.light} dark:text-${config.color.variant.solid.invert.font.color.dark}`]:
+          [`@apply text-${config.color.variant.solid.default.font.color.light} dark:text-${config.color.variant.solid.default.font.color.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.color.variant.solid.invert.background.light} dark:bg-${config.color.variant.solid.invert.background.dark}`]:
+          [`@apply bg-${config.color.variant.solid.default.background.light} dark:bg-${config.color.variant.solid.default.background.dark}`]:
+            {},
+        },
+        //Color:default-contrast
+        '&.nui-box-default-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.solid.defaultContrast.font.color.light} dark:text-${config.color.variant.solid.defaultContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.defaultContrast.background.light} dark:bg-${config.color.variant.solid.defaultContrast.background.dark}`]:
+            {},
+        },
+        //Color:muted
+        '&.nui-box-muted': {
+          //Font
+          [`@apply text-${config.color.variant.solid.muted.font.color.light} dark:text-${config.color.variant.solid.muted.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.muted.background.light} dark:bg-${config.color.variant.solid.muted.background.dark}`]:
+            {},
+        },
+        //Color:muted-contrast
+        '&.nui-box-muted-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.solid.mutedContrast.font.color.light} dark:text-${config.color.variant.solid.mutedContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.mutedContrast.background.light} dark:bg-${config.color.variant.solid.mutedContrast.background.dark}`]:
+            {},
+        },
+        //Color:light
+        '&.nui-box-light': {
+          //Font
+          [`@apply text-${config.color.variant.solid.light.font.color.light} dark:text-${config.color.variant.solid.light.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.light.background.light} dark:bg-${config.color.variant.solid.light.background.dark}`]:
+            {},
+        },
+        //Color:dark
+        '&.nui-box-dark': {
+          //Font
+          [`@apply text-${config.color.variant.solid.dark.font.color.light} dark:text-${config.color.variant.solid.dark.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.dark.background.light} dark:bg-${config.color.variant.solid.dark.background.dark}`]:
+            {},
+        },
+        //Color:black
+        '&.nui-box-black': {
+          //Font
+          [`@apply text-${config.color.variant.solid.black.font.color.light} dark:text-${config.color.variant.solid.black.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.solid.black.background.light} dark:bg-${config.color.variant.solid.black.background.dark}`]:
             {},
         },
         //Color:primary
@@ -184,13 +238,67 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Variant:pastel
       '&.nui-box-pastel': {
-        //Color:invert
-        '&.nui-box-invert': {
+        //Color:default
+        '&.nui-box-default': {
           //Font
-          [`@apply text-${config.color.variant.pastel.invert.font.color.light} dark:text-${config.color.variant.pastel.invert.font.color.dark}`]:
+          [`@apply text-${config.color.variant.pastel.default.font.color.light} dark:text-${config.color.variant.pastel.default.font.color.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.color.variant.pastel.invert.background.light} dark:bg-${config.color.variant.pastel.invert.background.dark}`]:
+          [`@apply bg-${config.color.variant.pastel.default.background.light} dark:bg-${config.color.variant.pastel.default.background.dark}`]:
+            {},
+        },
+        //Color:default-contrast
+        '&.nui-box-default-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.defaultContrast.font.color.light} dark:text-${config.color.variant.pastel.defaultContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.defaultContrast.background.light} dark:bg-${config.color.variant.pastel.defaultContrast.background.dark}`]:
+            {},
+        },
+        //Color:muted
+        '&.nui-box-muted': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.muted.font.color.light} dark:text-${config.color.variant.pastel.muted.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.muted.background.light} dark:bg-${config.color.variant.pastel.muted.background.dark}`]:
+            {},
+        },
+        //Color:muted-contrast
+        '&.nui-box-muted-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.mutedContrast.font.color.light} dark:text-${config.color.variant.pastel.mutedContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.mutedContrast.background.light} dark:bg-${config.color.variant.pastel.mutedContrast.background.dark}`]:
+            {},
+        },
+        //Color:light
+        '&.nui-box-light': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.light.font.color.light} dark:text-${config.color.variant.pastel.light.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.light.background.light} dark:bg-${config.color.variant.pastel.light.background.dark}`]:
+            {},
+        },
+        //Color:dark
+        '&.nui-box-dark': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.dark.font.color.light} dark:text-${config.color.variant.pastel.dark.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.dark.background.light} dark:bg-${config.color.variant.pastel.dark.background.dark}`]:
+            {},
+        },
+        //Color:black
+        '&.nui-box-black': {
+          //Font
+          [`@apply text-${config.color.variant.pastel.black.font.color.light} dark:text-${config.color.variant.pastel.black.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.pastel.black.background.light} dark:bg-${config.color.variant.pastel.black.background.dark}`]:
             {},
         },
         //Color:primary
@@ -241,16 +349,88 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Variant:outline
       '&.nui-box-outline': {
-        //Color:invert
-        '&.nui-box-invert': {
+        //Color:default
+        '&.nui-box-default': {
           //Font
-          [`@apply text-${config.color.variant.outline.invert.font.color.light} dark:text-${config.color.variant.outline.invert.font.color.dark}`]:
+          [`@apply text-${config.color.variant.outline.default.font.color.light} dark:text-${config.color.variant.outline.default.font.color.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.color.variant.outline.invert.background.light}  bg-${config.color.variant.outline.invert.background.dark}`]:
+          [`@apply bg-${config.color.variant.outline.default.background.light}  bg-${config.color.variant.outline.default.background.dark}`]:
             {},
           //Border
-          [`@apply border-2 border-${config.color.variant.outline.invert.border.light} dark:border-${config.color.variant.outline.invert.border.dark}`]:
+          [`@apply border-2 border-${config.color.variant.outline.default.border.light} dark:border-${config.color.variant.outline.default.border.dark}`]:
+            {},
+        },
+        //Color:default-contrast
+        '&.nui-box-default-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.outline.defaultContrast.font.color.light} dark:text-${config.color.variant.outline.defaultContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.defaultContrast.background.light}  bg-${config.color.variant.outline.defaultContrast.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.defaultContrast.border.light} dark:border-${config.color.variant.outline.defaultContrast.border.dark}`]:
+            {},
+        },
+        //Color:muted
+        '&.nui-box-muted': {
+          //Font
+          [`@apply text-${config.color.variant.outline.muted.font.color.light} dark:text-${config.color.variant.outline.muted.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.muted.background.light}  bg-${config.color.variant.outline.muted.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.muted.border.light} dark:border-${config.color.variant.outline.muted.border.dark}`]:
+            {},
+        },
+        //Color:muted-contrast
+        '&.nui-box-muted-contrast': {
+          //Font
+          [`@apply text-${config.color.variant.outline.mutedContrast.font.color.light} dark:text-${config.color.variant.outline.mutedContrast.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.mutedContrast.background.light}  bg-${config.color.variant.outline.mutedContrast.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.mutedContrast.border.light} dark:border-${config.color.variant.outline.mutedContrast.border.dark}`]:
+            {},
+        },
+        //Color:light
+        '&.nui-box-light': {
+          //Font
+          [`@apply text-${config.color.variant.outline.light.font.color.light} dark:text-${config.color.variant.outline.light.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.light.background.light}  bg-${config.color.variant.outline.light.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.light.border.light} dark:border-${config.color.variant.outline.light.border.dark}`]:
+            {},
+        },
+        //Color:dark
+        '&.nui-box-dark': {
+          //Font
+          [`@apply text-${config.color.variant.outline.dark.font.color.light} dark:text-${config.color.variant.outline.dark.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.dark.background.light}  bg-${config.color.variant.outline.dark.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.dark.border.light} dark:border-${config.color.variant.outline.dark.border.dark}`]:
+            {},
+        },
+        //Color:black
+        '&.nui-box-black': {
+          //Font
+          [`@apply text-${config.color.variant.outline.black.font.color.light} dark:text-${config.color.variant.outline.black.font.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.variant.outline.black.background.light}  bg-${config.color.variant.outline.black.background.dark}`]:
+            {},
+          //Border
+          [`@apply border-2 border-${config.color.variant.outline.black.border.light} dark:border-${config.color.variant.outline.black.border.dark}`]:
             {},
         },
         //Color:primary
@@ -320,7 +500,7 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Masks
-      '&.nui-box-mask:not(.nui-box-rounded):not(.nui-box-curved):not(.nui-box-full):not(.nui-box-outline):not(.nui-box-bordered)':
+      '&.nui-box-mask:not(.nui-box-rounded-sm):not(.nui-box-rounded-lg):not(.nui-box-rounded-full):not(.nui-box-outline):not(.nui-box-bordered)':
         {
           '@apply nui-mask': {},
         },

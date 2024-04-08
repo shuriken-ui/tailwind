@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { AvatarGroupAttrs } from './avatar-group.types'
 import { Avatar } from '../avatar/avatar.component'
@@ -17,20 +18,18 @@ export const AvatarGroup = ({
 }: AvatarGroupAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-avatar-group',
         size && variants.size[size],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       ${avatars.map(
         (avatar) => html`
           <div class="nui-avatar-outer">
             ${Avatar({
-              shape: 'full',
+              rounded: 'full',
               size: size,
               src: avatar.src,
               'data-nui-tooltip': avatar.text,

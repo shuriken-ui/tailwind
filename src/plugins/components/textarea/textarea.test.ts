@@ -8,7 +8,7 @@ describe('Textarea', () => {
   test('Should have no axe violations', async () => {
     const textarea = Textarea({
       label: 'Textarea',
-      shape: 'rounded',
+      rounded: 'sm',
       id: 'textarea',
       placeholder: 'Write something...',
     })

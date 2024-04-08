@@ -52,6 +52,25 @@ export const defaultConfig = {
           size: 'xl',
         },
       },
+      defaultContrast: {
+        font: {
+          color: {
+            light: 'muted-600',
+            dark: 'muted-100',
+          },
+        },
+        background: {
+          light: 'white',
+          dark: 'muted-950',
+        },
+        border: {
+          light: 'muted-300',
+          dark: 'muted-800',
+        },
+        shadow: {
+          size: 'xl',
+        },
+      },
       muted: {
         font: {
           color: {
@@ -62,6 +81,86 @@ export const defaultConfig = {
         background: {
           light: 'muted-100',
           dark: 'muted-800',
+        },
+        border: {
+          light: 'muted-100',
+          dark: 'muted-800',
+        },
+        shadow: {
+          size: 'xl',
+        },
+      },
+      mutedContrast: {
+        font: {
+          color: {
+            light: 'muted-500',
+            dark: 'muted-200',
+          },
+        },
+        background: {
+          light: 'muted-100',
+          dark: 'muted-950',
+        },
+        border: {
+          light: 'muted-100',
+          dark: 'muted-950',
+        },
+        shadow: {
+          size: 'xl',
+        },
+      },
+      light: {
+        font: {
+          color: {
+            light: 'muted-500',
+            dark: 'muted-100',
+          },
+        },
+        background: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
+        border: {
+          light: 'muted-200',
+          dark: 'muted-700',
+        },
+        shadow: {
+          size: 'xl',
+        },
+      },
+      dark: {
+        font: {
+          color: {
+            light: 'muted-100',
+            dark: 'muted-900',
+          },
+        },
+        background: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+        border: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+        shadow: {
+          size: 'xl',
+        },
+      },
+      black: {
+        font: {
+          color: {
+            light: 'white',
+            dark: 'black',
+          },
+        },
+        background: {
+          light: 'black',
+          dark: 'white',
+        },
+        border: {
+          light: 'black',
+          dark: 'white',
         },
         shadow: {
           size: 'xl',
@@ -75,6 +174,10 @@ export const defaultConfig = {
           },
         },
         background: {
+          light: 'primary-500',
+          dark: 'primary-500',
+        },
+        border: {
           light: 'primary-500',
           dark: 'primary-500',
         },
@@ -95,6 +198,10 @@ export const defaultConfig = {
           light: 'info-500',
           dark: 'info-500',
         },
+        border: {
+          light: 'info-500',
+          dark: 'info-500',
+        },
         shadow: {
           size: 'xl',
           light: 'info-500/30',
@@ -109,6 +216,10 @@ export const defaultConfig = {
           },
         },
         background: {
+          light: 'success-500',
+          dark: 'success-500',
+        },
+        border: {
           light: 'success-500',
           dark: 'success-500',
         },
@@ -129,6 +240,10 @@ export const defaultConfig = {
           light: 'warning-500',
           dark: 'warning-500',
         },
+        border: {
+          light: 'warning-500',
+          dark: 'warning-500',
+        },
         shadow: {
           size: 'xl',
           light: 'warning-500/30',
@@ -146,6 +261,10 @@ export const defaultConfig = {
           light: 'danger-500',
           dark: 'danger-500',
         },
+        border: {
+          light: 'danger-500',
+          dark: 'danger-500',
+        },
         shadow: {
           size: 'xl',
           light: 'danger-500/30',
@@ -154,8 +273,107 @@ export const defaultConfig = {
       },
     },
     pastel: {
+      default: {
+        font: {
+          color: {
+            light: 'muted-500',
+            dark: 'muted-100',
+          },
+        },
+        background: {
+          light: 'muted-100',
+          dark: 'muted-100/10',
+        },
+        border: {
+          light: 'muted-100',
+          dark: 'muted-100/10',
+        },
+        shadow: {
+          size: 'xl',
+        },
+      },
+      muted: {
+        font: {
+          color: {
+            light: 'muted-500',
+            dark: 'muted-200',
+          },
+        },
+        background: {
+          light: 'muted-100',
+          dark: 'muted-800',
+        },
+        border: {
+          light: 'muted-100',
+          dark: 'muted-800',
+        },
+        shadow: {
+          size: 'xl',
+        },
+      },
+      light: {
+        font: {
+          color: {
+            light: 'muted-800',
+            dark: 'muted-100',
+          },
+        },
+        background: {
+          light: 'white/30',
+          dark: 'white/20',
+        },
+        border: {
+          light: 'white/30',
+          dark: 'white/20',
+        },
+        shadow: {
+          size: 'xl',
+        },
+      },
+      dark: {
+        font: {
+          color: {
+            light: 'muted-100',
+            dark: 'muted-900',
+          },
+        },
+        background: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+        border: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+        shadow: {
+          size: 'xl',
+        },
+      },
+      black: {
+        font: {
+          color: {
+            light: 'white',
+            dark: 'black',
+          },
+        },
+        background: {
+          light: 'black',
+          dark: 'white',
+        },
+        border: {
+          light: 'black',
+          dark: 'white',
+        },
+        shadow: {
+          size: 'xl',
+        },
+      },
       primary: {
         background: {
+          light: 'primary-500/20',
+          dark: 'primary-500/10',
+        },
+        border: {
           light: 'primary-500/20',
           dark: 'primary-500/10',
         },
@@ -171,6 +389,10 @@ export const defaultConfig = {
           light: 'info-500/20',
           dark: 'info-500/10',
         },
+        border: {
+          light: 'info-500/20',
+          dark: 'info-500/10',
+        },
         font: {
           color: {
             light: 'info-500',
@@ -180,6 +402,10 @@ export const defaultConfig = {
       },
       success: {
         background: {
+          light: 'success-500/20',
+          dark: 'success-500/10',
+        },
+        border: {
           light: 'success-500/20',
           dark: 'success-500/10',
         },
@@ -195,6 +421,10 @@ export const defaultConfig = {
           light: 'warning-500/20',
           dark: 'warning-500/10',
         },
+        border: {
+          light: 'warning-500/20',
+          dark: 'warning-500/10',
+        },
         font: {
           color: {
             light: 'warning-500',
@@ -207,6 +437,10 @@ export const defaultConfig = {
           light: 'danger-500/20',
           dark: 'danger-500/10',
         },
+        border: {
+          light: 'danger-500/20',
+          dark: 'danger-500/10',
+        },
         font: {
           color: {
             light: 'danger-500',
@@ -216,6 +450,86 @@ export const defaultConfig = {
       },
     },
     outline: {
+      default: {
+        background: {
+          light: 'transparent',
+          dark: 'transparent',
+        },
+        border: {
+          light: 'muted-500',
+          dark: 'muted-100',
+        },
+        font: {
+          color: {
+            light: 'muted-500',
+            dark: 'muted-100',
+          },
+        },
+      },
+      muted: {
+        background: {
+          light: 'transparent',
+          dark: 'transparent',
+        },
+        border: {
+          light: 'muted-400',
+          dark: 'muted-100',
+        },
+        font: {
+          color: {
+            light: 'muted-400',
+            dark: 'muted-100',
+          },
+        },
+      },
+      light: {
+        background: {
+          light: 'transparent',
+          dark: 'transparent',
+        },
+        border: {
+          light: 'muted-100',
+          dark: 'muted-100',
+        },
+        font: {
+          color: {
+            light: 'muted-100',
+            dark: 'muted-100',
+          },
+        },
+      },
+      dark: {
+        background: {
+          light: 'transparent',
+          dark: 'transparent',
+        },
+        border: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+        font: {
+          color: {
+            light: 'muted-900',
+            dark: 'muted-100',
+          },
+        },
+      },
+      black: {
+        background: {
+          light: 'transparent',
+          dark: 'transparent',
+        },
+        border: {
+          light: 'black',
+          dark: 'white',
+        },
+        font: {
+          color: {
+            light: 'black',
+            dark: 'white',
+          },
+        },
+      },
       primary: {
         background: {
           light: 'transparent',

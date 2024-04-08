@@ -107,6 +107,41 @@ export const defaultConfig = {
           dark: 'muted-800/20',
         },
       },
+      defaultContrast: {
+        text: {
+          light: 'muted-800',
+          dark: 'muted-100',
+        },
+        background: {
+          light: {
+            base: 'white',
+            hover: 'muted-50',
+            active: 'white',
+            focus: 'muted-50',
+          },
+          dark: {
+            base: 'muted-950',
+            hover: 'muted-900',
+            active: 'muted-950',
+            focus: 'muted-900',
+          },
+        },
+        border: {
+          light: {
+            base: 'muted-300',
+            hover: 'muted-200',
+          },
+          dark: {
+            base: 'muted-800',
+            hover: 'muted-700',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/30',
+          dark: 'muted-800/20',
+        },
+      },
       muted: {
         text: {
           light: 'muted-500',
@@ -142,6 +177,41 @@ export const defaultConfig = {
           dark: 'muted-800/20',
         },
       },
+      mutedContrast: {
+        text: {
+          light: 'muted-500',
+          dark: 'muted-100',
+        },
+        background: {
+          light: {
+            base: 'muted-200',
+            hover: 'muted-100',
+            active: 'muted-200',
+            focus: 'muted-100',
+          },
+          dark: {
+            base: 'muted-950',
+            hover: 'muted-900',
+            active: 'muted-950',
+            focus: 'muted-900',
+          },
+        },
+        border: {
+          light: {
+            base: 'muted-200',
+            hover: 'muted-100',
+          },
+          dark: {
+            base: 'muted-800',
+            hover: 'muted-700',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/30',
+          dark: 'muted-800/20',
+        },
+      },
       light: {
         text: {
           light: 'muted-500',
@@ -169,6 +239,76 @@ export const defaultConfig = {
           dark: {
             base: 'muted-700',
             hover: 'muted-600',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/30',
+          dark: 'muted-800/20',
+        },
+      },
+      dark: {
+        text: {
+          light: 'muted-100',
+          dark: 'muted-900',
+        },
+        background: {
+          light: {
+            base: 'muted-900',
+            hover: 'muted-800',
+            active: 'muted-900',
+            focus: 'muted-800',
+          },
+          dark: {
+            base: 'muted-100',
+            hover: 'muted-50',
+            active: 'muted-100',
+            focus: 'muted-50',
+          },
+        },
+        border: {
+          light: {
+            base: 'muted-900',
+            hover: 'muted-800',
+          },
+          dark: {
+            base: 'muted-100',
+            hover: 'muted-50',
+          },
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/30',
+          dark: 'muted-800/20',
+        },
+      },
+      black: {
+        text: {
+          light: 'white',
+          dark: 'black',
+        },
+        background: {
+          light: {
+            base: 'black',
+            hover: 'black/90',
+            active: 'black',
+            focus: 'black/90',
+          },
+          dark: {
+            base: 'white',
+            hover: 'white/90',
+            active: 'white',
+            focus: 'white/90',
+          },
+        },
+        border: {
+          light: {
+            base: 'black',
+            hover: 'black/90',
+          },
+          dark: {
+            base: 'white',
+            hover: 'white/90',
           },
         },
         shadow: {
@@ -361,6 +501,46 @@ export const defaultConfig = {
             hover: 'white/10',
             active: 'white/20',
             focus: 'white/10',
+          },
+        },
+      },
+      dark: {
+        text: {
+          light: 'muted-800',
+          dark: 'muted-100',
+        },
+        background: {
+          light: {
+            base: 'muted-500/10',
+            hover: 'muted-500/20',
+            active: 'muted-500/10',
+            focus: 'muted-500/20',
+          },
+          dark: {
+            base: 'muted-500/10',
+            hover: 'muted-500/20',
+            active: 'muted-500/10',
+            focus: 'muted-500/20',
+          },
+        },
+      },
+      black: {
+        text: {
+          light: 'black',
+          dark: 'white',
+        },
+        background: {
+          light: {
+            base: 'black/10',
+            hover: 'black/20',
+            active: 'black/10',
+            focus: 'black/20',
+          },
+          dark: {
+            base: 'black/10',
+            hover: 'black/20',
+            active: 'black/10',
+            focus: 'black/20',
           },
         },
       },
@@ -575,6 +755,84 @@ export const defaultConfig = {
         },
         border: {
           light: 'muted-300',
+          dark: 'white',
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/50',
+          dark: 'muted-800/20',
+        },
+      },
+      dark: {
+        text: {
+          light: {
+            base: 'muted-900',
+            hover: 'white',
+            active: 'muted-800',
+            focus: 'white',
+          },
+          dark: {
+            base: 'white',
+            hover: 'muted-900',
+            active: 'muted-800',
+            focus: 'muted-900',
+          },
+        },
+        background: {
+          light: {
+            base: 'transparent',
+            hover: 'muted-900',
+            active: 'muted-800',
+            focus: 'muted-800',
+          },
+          dark: {
+            base: 'transparent',
+            hover: 'muted-100',
+            active: 'muted-50',
+            focus: 'muted-50',
+          },
+        },
+        border: {
+          light: 'muted-900',
+          dark: 'white',
+        },
+        shadow: {
+          size: 'xl',
+          light: 'muted-500/50',
+          dark: 'muted-800/20',
+        },
+      },
+      black: {
+        text: {
+          light: {
+            base: 'black',
+            hover: 'white',
+            active: 'black/90',
+            focus: 'white',
+          },
+          dark: {
+            base: 'white',
+            hover: 'black',
+            active: 'black/90',
+            focus: 'black',
+          },
+        },
+        background: {
+          light: {
+            base: 'transparent',
+            hover: 'black',
+            active: 'black/90',
+            focus: 'black/90',
+          },
+          dark: {
+            base: 'transparent',
+            hover: 'white',
+            active: 'white/90',
+            focus: 'white/90',
+          },
+        },
+        border: {
+          light: 'black',
           dark: 'white',
         },
         shadow: {

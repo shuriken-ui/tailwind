@@ -27,13 +27,35 @@ export const defaultConfig = {
         weight: 'normal',
         size: 'sm',
         color: {
-          base: {
-            light: 'muted-400',
-            dark: 'muted-400',
+          primary: {
+            base: {
+              light: 'muted-400',
+              dark: 'muted-400',
+            },
+            hover: {
+              light: 'primary-500',
+              dark: 'primary-500',
+            },
           },
-          hover: {
-            light: 'primary-500',
-            dark: 'primary-500',
+          dark: {
+            base: {
+              light: 'muted-400',
+              dark: 'muted-400',
+            },
+            hover: {
+              light: 'muted-900',
+              dark: 'muted-100',
+            },
+          },
+          black: {
+            base: {
+              light: 'muted-400',
+              dark: 'muted-400',
+            },
+            hover: {
+              light: 'black',
+              dark: 'white',
+            },
           },
         },
       },
@@ -62,24 +84,68 @@ export const defaultConfig = {
       dark: 'muted-700',
     },
     border: {
-      base: {
-        light: 'muted-200',
-        dark: 'muted-600',
-      },
-      hover: {
-        light: 'primary-500',
-        dark: 'primary-500',
-      },
-    },
-    font: {
-      color: {
+      primary: {
         base: {
-          light: 'muted-400',
-          dark: 'muted-400',
+          light: 'muted-200',
+          dark: 'muted-600',
         },
         hover: {
           light: 'primary-500',
           dark: 'primary-500',
+        },
+      },
+      dark: {
+        base: {
+          light: 'muted-200',
+          dark: 'muted-600',
+        },
+        hover: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+      },
+      black: {
+        base: {
+          light: 'muted-200',
+          dark: 'muted-600',
+        },
+        hover: {
+          light: 'black',
+          dark: 'white',
+        },
+      },
+    },
+    font: {
+      color: {
+        primary: {
+          base: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+          hover: {
+            light: 'primary-500',
+            dark: 'primary-500',
+          },
+        },
+        dark: {
+          base: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+          hover: {
+            light: 'muted-900',
+            dark: 'muted-100',
+          },
+        },
+        black: {
+          base: {
+            light: 'muted-400',
+            dark: 'muted-400',
+          },
+          hover: {
+            light: 'black',
+            dark: 'white',
+          },
         },
       },
     },
@@ -129,18 +195,50 @@ export const defaultConfig = {
         font: {
           size: 'sm',
           color: {
-            light: 'primary-700',
-            dark: 'primary-700',
+            primary: {
+              light: 'primary-700',
+              dark: 'primary-700',
+            },
+            dark: {
+              light: 'muted-900',
+              dark: 'muted-100',
+            },
+            black: {
+              light: 'black',
+              dark: 'white',
+            },
           },
         },
         background: {
-          base: {
-            light: 'primary-500/10',
-            dark: 'primary-500/10',
+          primary: {
+            base: {
+              light: 'primary-500/10',
+              dark: 'primary-500/10',
+            },
+            hover: {
+              light: 'primary-500/20',
+              dark: 'primary-500/20',
+            },
           },
-          hover: {
-            light: 'primary-500/20',
-            dark: 'primary-500/20',
+          dark: {
+            base: {
+              light: 'muted-900/10',
+              dark: 'muted-100/10',
+            },
+            hover: {
+              light: 'muted-900/20',
+              dark: 'muted-100/20',
+            },
+          },
+          black: {
+            base: {
+              light: 'black/10',
+              dark: 'white/10',
+            },
+            hover: {
+              light: 'black/20',
+              dark: 'white/20',
+            },
           },
         },
       },

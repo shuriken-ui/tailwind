@@ -15,6 +15,9 @@ export const defaultConfig = {
       success: 'success-500',
       warning: 'warning-500',
       danger: 'danger-500',
+      light: 'bg-muted-500 dark:bg-muted-400',
+      dark: 'bg-muted-900 dark:bg-muted-100',
+      black: 'bg-black dark:bg-white',
     },
     transition: {
       property: 'all',

@@ -6,6 +6,9 @@ export const color = {
   success: 'nui-progress-success',
   warning: 'nui-progress-warning',
   danger: 'nui-progress-danger',
+  light: 'nui-progress-light',
+  dark: 'nui-progress-dark',
+  black: 'nui-progress-black',
 } as const satisfies ProgressVariant<'color'>
 
 export const contrast = {
@@ -15,10 +18,10 @@ export const contrast = {
 
 export const rounded = {
   none: '',
-  sm: 'nui-progress-rounded',
-  md: 'nui-progress-smooth',
-  lg: 'nui-progress-curved',
-  full: 'nui-progress-full',
+  sm: 'nui-progress-rounded-sm',
+  md: 'nui-progress-rounded-md',
+  lg: 'nui-progress-rounded-lg',
+  full: 'nui-progress-rounded-full',
 } as const satisfies ProgressVariant<'rounded'>
 
 export const size = {

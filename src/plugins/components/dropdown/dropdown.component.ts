@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { DropdownAttrs } from './dropdown.types'
 import * as variants from './dropdown.variants'
@@ -16,7 +17,7 @@ export const Dropdown = ({
   variant = 'button',
   rounded = 'sm',
   orientation = 'start',
-  color = 'white',
+  color = 'default',
   size = 'lg',
   classes,
   children,
@@ -25,13 +26,11 @@ export const Dropdown = ({
 }: DropdownAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-dropdown',
         orientation && variants.orientation[orientation],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       <div class="nui-menu">
@@ -43,9 +42,7 @@ export const Dropdown = ({
                 children: html`
                   <span>${label}</span>
                   <svg
-                    class=${['nui-chevron', open && 'rotate-180']
-                      .filter(Boolean)
-                      .join(' ')}
+                    class=${cn('nui-chevron', open && 'rotate-180')}
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
                     height="32"
@@ -74,9 +71,7 @@ export const Dropdown = ({
               >
                 <span class="nui-context-button-inner">
                   <svg
-                    class=${['nui-context-icon', open && 'rotate-180']
-                      .filter(Boolean)
-                      .join(' ')}
+                    class=${cn('nui-context-icon', open && 'rotate-180')}
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     aria-hidden="true"
@@ -106,14 +101,15 @@ export const Dropdown = ({
           ? html`
               <button
                 type="button"
-                class="nui-text-button"
+                class=${cn(
+                  'nui-text-button',
+                  buttonColor && variants.textColor[buttonColor],
+                )}
                 @click="${() => (open = !open)}"
               >
                 <span class="nui-text-button-inner">${label}</span>
                 <svg
-                  class=${['nui-chevron', open && 'rotate-180']
-                    .filter(Boolean)
-                    .join(' ')}
+                  class=${cn('nui-chevron', open && 'rotate-180')}
                   aria-hidden="true"
                   viewBox="0 0 24 24"
                 >
@@ -132,14 +128,12 @@ export const Dropdown = ({
         ${open
           ? html`
               <div
-                class=${[
+                class=${cn(
                   'nui-dropdown-menu',
                   rounded && variants.rounded[rounded],
                   color && variants.color[color],
                   size && variants.size[size],
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
+                )}
               >
                 ${headerLabel &&
                 html`

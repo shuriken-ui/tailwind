@@ -10,6 +10,11 @@ const meta = {
   // tags: ['autodocs'],
   render: (args) => Tabs(args),
   argTypes: {
+    color: {
+      control: { type: 'select' },
+      options: ['default', 'primary', 'light', 'dark', 'black'],
+      defaultValue: 'primary',
+    },
     type: {
       control: { type: 'select' },
       options: ['tabs', 'box'],

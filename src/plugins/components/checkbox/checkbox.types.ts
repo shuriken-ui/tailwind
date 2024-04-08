@@ -8,8 +8,10 @@ export interface CheckboxProps extends Record<string, unknown> {
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   color?:
     | 'default'
-    | 'light'
     | 'muted'
+    | 'light'
+    | 'dark'
+    | 'black'
     | 'primary'
     | 'info'
     | 'success'

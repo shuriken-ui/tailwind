@@ -46,10 +46,6 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply text-${config.font.color.light} dark:text-${config.font.color.dark}`]:
           {},
       },
-      //Snack:button
-      '.nui-snack-button': {
-        '@apply hover:!bg-transparent': {},
-      },
       //Size:xs
       '&.nui-snack-xs': {
         //Snack:media:xs
@@ -146,9 +142,25 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply border border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
           {},
       },
+      //Color:default-contrast
+      '&.nui-snack-default-contrast': {
+        //Background
+        [`@apply bg-${config.color.defaultContrast.background.light} dark:bg-${config.color.defaultContrast.background.dark}`]:
+          {},
+        //Border
+        [`@apply border border-${config.color.defaultContrast.border.light} dark:border-${config.color.defaultContrast.border.dark}`]:
+          {},
+      },
+      //Color:muted
       '&.nui-snack-muted': {
         //Background
         [`@apply bg-${config.color.muted.background.light} dark:bg-${config.color.muted.background.dark}`]:
+          {},
+      },
+      //Color:muted-contrast
+      '&.nui-snack-muted-contrast': {
+        //Background
+        [`@apply bg-${config.color.mutedContrast.background.light} dark:bg-${config.color.mutedContrast.background.dark}`]:
           {},
       },
     },

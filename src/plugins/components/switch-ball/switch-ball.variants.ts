@@ -6,4 +6,6 @@ export const color = {
   success: 'nui-switch-ball-success',
   warning: 'nui-switch-ball-warning',
   danger: 'nui-switch-ball-danger',
+  dark: 'nui-switch-ball-dark',
+  black: 'nui-switch-ball-black',
 } as const satisfies SwitchBallVariant<'color'>

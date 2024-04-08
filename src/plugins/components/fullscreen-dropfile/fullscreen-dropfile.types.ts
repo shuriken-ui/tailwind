@@ -3,6 +3,7 @@ import type { PropertyVariant } from '~/types/utils'
 export interface FullscreenDropfileProps extends Record<string, unknown> {
   label?: string
   filterFileDropped?: (file: File) => boolean
+  color?: 'primary' | 'dark' | 'black'
   classes?: {
     wrapper?: string | string[]
   }

@@ -4,7 +4,12 @@ export interface ButtonIconProps extends Record<string, unknown> {
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   color?:
     | 'default'
+    | 'default-contrast'
     | 'muted'
+    | 'muted-contrast'
+    | 'light'
+    | 'dark'
+    | 'black'
     | 'primary'
     | 'info'
     | 'success'

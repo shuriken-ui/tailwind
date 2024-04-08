@@ -38,10 +38,10 @@ export const Solid: Story = {
     size: 'md',
     children: html`
       ${Card({
-        shape: 'smooth',
+        rounded: 'md',
         children: html`
           <!-- Header -->
-          <div class="flex items-center justify-between p-4 md:p-6">
+          <div class="flex items-center justify-between p-4">
             ${Heading({
               as: 'h3',
               size: 'lg',
@@ -85,17 +85,17 @@ export const Solid: Story = {
             </div>
           </div>
           <!-- Footer -->
-          <div class="p-4 md:p-6 ">
+          <div class="p-4">
             <div class="flex justify-end w-full gap-x-2">
               ${Button({
                 size: 'md',
-                flavor: 'solid',
+                variant: 'solid',
                 rounded: 'md',
                 children: 'Cancel',
               })}
               ${Button({
                 size: 'md',
-                flavor: 'solid',
+                variant: 'solid',
                 rounded: 'md',
                 color: 'primary',
                 children: 'Confirm',
@@ -118,7 +118,7 @@ export const SizeSm: Story = {
     size: 'sm',
     children: html`
       ${Card({
-        shape: 'smooth',
+        rounded: 'md',
         children: html`
           <!-- Header -->
           <div class="flex items-center justify-between p-4 md:p-6">
@@ -132,7 +132,7 @@ export const SizeSm: Story = {
               children: 'Invitation',
             })}
             ${ButtonClose({
-              shape: 'full',
+              rounded: 'full',
             })}
           </div>
           <!-- Body -->
@@ -169,14 +169,14 @@ export const SizeSm: Story = {
             <div class="flex justify-end w-full gap-x-2">
               ${Button({
                 size: 'md',
-                flavor: 'solid',
-                shape: 'smooth',
+                variant: 'solid',
+                rounded: 'md',
                 children: 'Cancel',
               })}
               ${Button({
                 size: 'md',
-                flavor: 'solid',
-                shape: 'smooth',
+                variant: 'solid',
+                rounded: 'md',
                 color: 'primary',
                 children: 'Confirm',
               })}

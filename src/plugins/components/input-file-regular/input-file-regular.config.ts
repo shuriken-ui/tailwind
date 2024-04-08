@@ -73,7 +73,7 @@ export const defaultConfig = {
     },
   },
   color: {
-    white: {
+    default: {
       inner: {
         background: {
           light: 'white',
@@ -111,7 +111,7 @@ export const defaultConfig = {
         },
       },
     },
-    whiteContrast: {
+    defaultContrast: {
       inner: {
         background: {
           light: 'white',

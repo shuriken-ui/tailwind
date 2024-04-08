@@ -5,7 +5,12 @@ export interface IconBoxProps extends Record<string, unknown> {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
   color?:
     | 'default'
-    | 'invert'
+    | 'default-contrast'
+    | 'muted'
+    | 'muted-contrast'
+    | 'dark'
+    | 'black'
+    | 'light'
     | 'primary'
     | 'info'
     | 'success'

@@ -63,13 +63,21 @@ export const defaultConfig = {
       light: 'muted-600',
       dark: 'muted-200',
     },
+    muted: {
+      light: 'muted-400',
+      dark: 'muted-400',
+    },
     light: {
       light: 'white',
       dark: 'white',
     },
-    muted: {
-      light: 'muted-400',
-      dark: 'muted-400',
+    dark: {
+      light: 'muted-900',
+      dark: 'muted-100',
+    },
+    black: {
+      light: 'black',
+      dark: 'white',
     },
     primary: {
       light: 'primary-500',

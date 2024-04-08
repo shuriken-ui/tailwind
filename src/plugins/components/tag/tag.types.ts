@@ -4,7 +4,12 @@ export interface TagProps extends Record<string, unknown> {
   variant?: 'solid' | 'outline' | 'pastel'
   color?:
     | 'default'
+    | 'default-contrast'
     | 'muted'
+    | 'muted-contrast'
+    | 'light'
+    | 'dark'
+    | 'black'
     | 'primary'
     | 'info'
     | 'success'

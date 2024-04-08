@@ -46,17 +46,6 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply transition-${config.select.icon.transition.property} duration-${config.select.icon.transition.duration}`]:
           {},
       },
-      //Error:text
-      '.nui-select-error-text': {
-        //Base
-        '@apply mt-1 block': {},
-        //Font
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight} leading-none`]:
-          {},
-        //Font color
-        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
-      },
       //Select
       '.nui-select': {
         //Base
@@ -111,25 +100,25 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-select-rounded': {
+      '&.nui-select-rounded-sm': {
         '.nui-select': {
           [`@apply ${config.rounded.sm}`]: {},
         },
       },
       //Rounded:md
-      '&.nui-select-smooth': {
+      '&.nui-select-rounded-md': {
         '.nui-select': {
           [`@apply ${config.rounded.md}`]: {},
         },
       },
       //Rounded:lg
-      '&.nui-select-curved': {
+      '&.nui-select-rounded-lg': {
         '.nui-select': {
           [`@apply ${config.rounded.lg}`]: {},
         },
       },
       //Rounded:full
-      '&.nui-select-full': {
+      '&.nui-select-rounded-full': {
         '.nui-select': {
           [`@apply ${config.rounded.full}`]: {},
         },
@@ -286,6 +275,17 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Border:hover
           [`@apply hover:border-${config.color.mutedContrast.border.hover.light} dark:hover:border-${config.color.mutedContrast.border.hover.dark}`]:
+            {},
+        },
+      },
+      //Focus:color
+      '&.nui-select-focus': {
+        '.nui-select': {
+          //Focus
+          [`@apply focus:!border-${config.select.focus.border.color.light} dark:focus:!border-${config.select.focus.border.color.dark}`]:
+            {},
+          //Force focus
+          [`@apply focus:hover:!border-${config.select.focus.border.color.light} dark:focus:hover:!border-${config.select.focus.border.color.dark}`]:
             {},
         },
       },

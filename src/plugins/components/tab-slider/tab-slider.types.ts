@@ -5,6 +5,13 @@ export interface TabSliderProps extends Record<string, unknown> {
     label: string
     value: string
   }[]
+  color?:
+    | 'default'
+    | 'default-contrast'
+    | 'primary'
+    | 'light'
+    | 'dark'
+    | 'black'
   justify?: 'start' | 'center' | 'end'
   size?: 'sm' | 'md'
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'

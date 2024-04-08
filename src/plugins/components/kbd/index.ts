@@ -133,12 +133,38 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Color:default
       '&.nui-kbd-default': {
-        '@apply bg-white dark:bg-muted-800 border border-b-2 border-muted-500/20 dark:border-muted-300/20':
+        //Background
+        [`@apply bg-${config.color.default.background.light} dark:bg-${config.color.default.background.dark} border border-b-2`]:
+          {},
+        //Border
+        [`@apply border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
+          {},
+      },
+      //Color:default-contrast
+      '&.nui-kbd-default-contrast': {
+        //Background
+        [`@apply bg-${config.color.defaultContrast.background.light} dark:bg-${config.color.defaultContrast.background.dark} border border-b-2`]:
+          {},
+        //Border
+        [`@apply border-${config.color.defaultContrast.border.light} dark:border-${config.color.defaultContrast.border.dark}`]:
           {},
       },
       //Color:muted
       '&.nui-kbd-muted': {
-        '@apply bg-muted-50 dark:bg-muted-800 border border-b-2 border-muted-600/20 dark:border-muted-300/20':
+        //Background
+        [`@apply bg-${config.color.muted.background.light} dark:bg-${config.color.muted.background.dark} border border-b-2`]:
+          {},
+        //Border
+        [`@apply border-${config.color.muted.border.light} dark:border-${config.color.muted.border.dark}`]:
+          {},
+      },
+      //Color:muted-contrast
+      '&.nui-kbd-muted-contrast': {
+        //Background
+        [`@apply bg-${config.color.mutedContrast.background.light} dark:bg-${config.color.mutedContrast.background.dark} border border-b-2`]:
+          {},
+        //Border
+        [`@apply border-${config.color.mutedContrast.border.light} dark:border-${config.color.mutedContrast.border.dark}`]:
           {},
       },
     },

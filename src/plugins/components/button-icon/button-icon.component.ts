@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { ButtonIconAttrs } from './button-icon.types'
 import * as variants from './button-icon.variants'
@@ -19,16 +20,14 @@ export const ButtonIcon = ({
 }: ButtonIconAttrs) => {
   return html`
     <button
-      class=${[
+      class=${cn(
         'nui-button-icon',
         variants.size[size],
         variants.color[color],
         loading && 'nui-button-loading',
         rounded && variants.rounded[rounded],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       @click=${onClick}
       ${spread(attrs)}
     >

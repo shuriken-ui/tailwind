@@ -17,5 +17,7 @@ export const size = {
 
 export const color = {
   default: 'nui-kbd-default',
+  'default-contrast': 'nui-kbd-default-contrast',
   muted: 'nui-kbd-muted',
+  'muted-contrast': 'nui-kbd-muted-contrast',
 } as const satisfies KbdVariant<'color'>

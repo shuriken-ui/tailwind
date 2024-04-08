@@ -10,6 +10,18 @@ const meta = {
   // tags: ['autodocs'],
   render: (args) => TabSlider(args),
   argTypes: {
+    color: {
+      control: { type: 'select' },
+      options: [
+        'default',
+        'default-contrast',
+        'primary',
+        'light',
+        'dark',
+        'black',
+      ],
+      defaultValue: 'primary',
+    },
     rounded: {
       control: { type: 'select' },
       options: ['none', 'sm', 'md', 'lg', 'full'],

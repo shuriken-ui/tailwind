@@ -8,7 +8,7 @@ describe('Input', () => {
   test('Should have no axe violations', async () => {
     const input = Input({
       label: 'Input',
-      shape: 'rounded',
+      rounded: 'sm',
       type: 'text',
       id: 'input',
       placeholder: 'Write something...',

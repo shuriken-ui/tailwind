@@ -1,5 +1,6 @@
 import { html } from 'lit'
 import { spread } from '@open-wc/lit-helpers'
+import { cn } from '../../../utils/lit'
 
 import type { MessageTextAttrs } from './message-text.types'
 import * as variants from './message-text.variants'
@@ -13,7 +14,7 @@ import { Paragraph } from '../paragraph/paragraph.component'
 export const MessageText = ({
   title,
   text,
-  contrast = 'white',
+  contrast = 'low-contrast',
   color = 'default',
   rounded = 'sm',
   classes,
@@ -21,15 +22,13 @@ export const MessageText = ({
 }: MessageTextAttrs) => {
   return html`
     <div
-      class=${[
+      class=${cn(
         'nui-message-text',
         color && variants.color[color],
         contrast && variants.contrast[contrast],
         rounded && variants.rounded[rounded],
         classes?.wrapper,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       ${spread(attrs)}
     >
       <div class="nui-message-head">
@@ -55,6 +54,7 @@ export const MessageText = ({
       ${ButtonClose({
         rounded: 'full',
         color: 'default',
+        size: 'xs',
         classes: {
           wrapper: 'nui-message-close',
         },

@@ -76,13 +76,15 @@ export default plugin(({ addComponents, theme }) => {
       //Radio:error
       '.nui-radio-error': {
         '@apply ms-1 inline-block': {},
-        //Font
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
       },
       //Color:default
       '&.nui-radio-default': {
         [`@apply text-${config.color.default.light} dark:text-${config.color.default.dark}`]:
+          {},
+      },
+      //Color:muted
+      '&.nui-radio-muted': {
+        [`@apply text-${config.color.muted.light} dark:text-${config.color.muted.dark}`]:
           {},
       },
       //Color:light
@@ -90,9 +92,14 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply text-${config.color.light.light} dark:text-${config.color.light.dark}`]:
           {},
       },
-      //Color:muted
-      '&.nui-radio-muted': {
-        [`@apply text-${config.color.muted.light} dark:text-${config.color.muted.dark}`]:
+      //Color:dark
+      '&.nui-radio-dark': {
+        [`@apply text-${config.color.dark.light} dark:text-${config.color.dark.dark}`]:
+          {},
+      },
+      //Color:black
+      '&.nui-radio-black': {
+        [`@apply text-${config.color.black.light} dark:text-${config.color.black.dark}`]:
           {},
       },
       //Color:primary

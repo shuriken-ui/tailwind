@@ -1072,6 +1072,152 @@ export const DisabledLg: Story = {
 }
 // #endregion
 
+// #region State: color focus
+export const ColorFocusSm: Story = {
+  name: 'State color focus: sm',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    colorFocus: true,
+    size: 'sm',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const ColorFocusMd: Story = {
+  name: 'State color focus: md',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    colorFocus: true,
+    size: 'md',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const ColorFocusLg: Story = {
+  name: 'State color focus: lg',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    colorFocus: true,
+    size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+// #endregion
+
 // #region State: loading
 export const LoadingSm: Story = {
   name: 'State loading: sm',

@@ -15,7 +15,7 @@ export default plugin(({ addComponents, theme }) => {
   addComponents({
     //Wrapper
     '.nui-message': {
-      '@apply flex min-h-[3rem] items-center border p-1 pe-2': {},
+      '@apply relative flex gap-2 border': {},
       //Icon:outer
       '.nui-message-icon-outer': {
         [`@apply flex h-${config.icon.outer.size} w-${config.icon.outer.size} shrink-0 items-center justify-center`]:
@@ -33,7 +33,7 @@ export default plugin(({ addComponents, theme }) => {
       //Inner:text
       '.nui-message-inner-text': {
         //Base
-        '@apply px-3 block': {},
+        '@apply inline-flex items-center leading-normal': {},
         //Font
         [`@apply font-${config.inner.font.family} text-${config.inner.font.size}`]:
           {},
@@ -41,9 +41,14 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply text-${config.inner.font.color.light} dark:text-${config.inner.font.color.dark}`]:
           {},
       },
-      //Meesage:close
+      //Message:close
+      '.nui-message-close-wrapper': {
+        [`@apply absolute top-${config.close.position.top} end-${config.close.position.end} flex items-center justify-center bg-white dark:bg-muted-950 border border-muted-200 dark:border-muted-800 ${config.close.rounded} h-${config.close.size.outer.height} w-${config.close.size.outer.width}`]:
+          {},
+      },
+      //Message:close
       '.nui-message-close': {
-        [`@apply nui-focus me-2 ms-auto flex cursor-pointer items-center justify-center p-${config.close.padding} ${config.close.rounded}`]:
+        [`@apply nui-focus flex cursor-pointer items-center justify-center shrink-0 h-${config.close.size.inner.height} w-${config.close.size.inner.width} ${config.close.rounded}`]:
           {},
         //Color
         [`@apply text-${config.close.color.light} dark:text-${config.close.color.dark}`]:
@@ -57,8 +62,16 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Message:text
+      '&.nui-has-text': {
+        [`@apply py-2 ps-2 pe-${config.safeArea.end}`]: {},
+      },
+      //Message:icon
+      '&.nui-has-icon': {
+        [`@apply py-1 ps-1 pe-${config.safeArea.end}`]: {},
+      },
       //Rounded:sm
-      '&.nui-message-rounded': {
+      '&.nui-message-rounded-sm': {
         [`@apply ${config.rounded.sm}`]: {},
 
         '.nui-message-icon-outer': {
@@ -66,7 +79,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:md
-      '&.nui-message-smooth': {
+      '&.nui-message-rounded-md': {
         [`@apply ${config.rounded.md}`]: {},
 
         '.nui-message-icon-outer': {
@@ -74,7 +87,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:lg
-      '&.nui-message-curved': {
+      '&.nui-message-rounded-lg': {
         [`@apply ${config.rounded.lg}`]: {},
 
         '.nui-message-icon-outer': {
@@ -82,7 +95,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:full
-      '&.nui-message-full': {
+      '&.nui-message-rounded-full': {
         [`@apply ${config.rounded.full}`]: {},
 
         '.nui-message-icon-outer': {
@@ -127,6 +140,44 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Color:default-contrast
+      '&.nui-message-default-contrast': {
+        //Border
+        [`@apply border-${config.color.defaultContrast.border.light} dark:border-${config.color.defaultContrast.border.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.defaultContrast.background.light} dark:bg-${config.color.defaultContrast.background.dark}`]:
+          {},
+        //Icon:outer
+        '.nui-message-icon-outer': {
+          //Color
+          [`@apply text-${config.color.defaultContrast.outer.color.light} dark:text-${config.color.defaultContrast.outer.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.defaultContrast.outer.background.light} dark:bg-${config.color.defaultContrast.outer.background.dark}`]:
+            {},
+        },
+        //Inner:text
+        '.nui-message-inner-text': {
+          [`@apply text-${config.color.defaultContrast.inner.color.light} dark:text-${config.color.defaultContrast.inner.color.dark}`]:
+            {},
+        },
+        //Message:close
+        '.nui-message-close': {
+          //Color
+          [`@apply text-${config.color.defaultContrast.close.color.light} dark:text-${config.color.defaultContrast.close.color.dark}`]:
+            {},
+          //Background:hover
+          [`@apply hover:enabled:bg-${config.color.defaultContrast.close.background.hover.light} dark:hover:enabled:bg-${config.color.defaultContrast.close.background.hover.dark}`]:
+            {},
+          //Background:focus
+          [`@apply focus-visible:bg-${config.color.defaultContrast.close.background.focus.light} dark:focus-visible:bg-${config.color.defaultContrast.close.background.focus.dark}`]:
+            {},
+          //Background:active
+          [`@apply active:enabled:bg-${config.color.defaultContrast.close.background.active.light} dark:active:enabled:bg-${config.color.defaultContrast.close.background.active.dark}`]:
+            {},
+        },
+      },
       //Color:muted
       '&.nui-message-muted': {
         //Border
@@ -162,6 +213,44 @@ export default plugin(({ addComponents, theme }) => {
             {},
           //Background:active
           [`@apply active:enabled:bg-${config.color.muted.close.background.active.light} dark:active:enabled:bg-${config.color.muted.close.background.active.dark}`]:
+            {},
+        },
+      },
+      //Color:muted-contrast
+      '&.nui-message-muted-contrast': {
+        //Border
+        [`@apply border-${config.color.mutedContrast.border.light} dark:border-${config.color.mutedContrast.border.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.mutedContrast.background.light} dark:bg-${config.color.mutedContrast.background.dark}`]:
+          {},
+        //Icon:outer
+        '.nui-message-icon-outer': {
+          //Color
+          [`@apply text-${config.color.mutedContrast.outer.color.light} dark:text-${config.color.mutedContrast.outer.color.dark}`]:
+            {},
+          //Background
+          [`@apply bg-${config.color.mutedContrast.outer.background.light} dark:bg-${config.color.mutedContrast.outer.background.dark}`]:
+            {},
+        },
+        //Inner:text
+        '.nui-message-inner-text': {
+          [`@apply text-${config.color.mutedContrast.inner.color.light} dark:text-${config.color.mutedContrast.inner.color.dark}`]:
+            {},
+        },
+        //Message:close
+        '.nui-message-close': {
+          //Color
+          [`@apply text-${config.color.mutedContrast.close.color.light} dark:text-${config.color.mutedContrast.close.color.dark}`]:
+            {},
+          //Background:hover
+          [`@apply hover:enabled:bg-${config.color.mutedContrast.close.background.hover.light} dark:hover:enabled:bg-${config.color.mutedContrast.close.background.hover.dark}`]:
+            {},
+          //Background:focus
+          [`@apply focus-visible:bg-${config.color.mutedContrast.close.background.focus.light} dark:focus-visible:bg-${config.color.mutedContrast.close.background.focus.dark}`]:
+            {},
+          //Background:active
+          [`@apply active:enabled:bg-${config.color.mutedContrast.close.background.active.light} dark:active:enabled:bg-${config.color.mutedContrast.close.background.active.dark}`]:
             {},
         },
       },

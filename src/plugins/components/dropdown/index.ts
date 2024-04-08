@@ -70,13 +70,6 @@ export default plugin(({ addComponents, theme }) => {
       '.nui-text-button': {
         //Base
         '@apply flex items-center space-x-1': {},
-        //Font
-        [`@apply font-${config.button.text.font.family} text-${config.button.text.font.color.light} dark:text-${config.button.text.font.color.dark}`]:
-          {},
-        //Text:inner
-        '.nui-text-button-inner': {
-          [`@apply font-${config.button.text.font.family}`]: {},
-        },
       },
       //Button:chevron
       '.nui-chevron': {
@@ -123,33 +116,33 @@ export default plugin(({ addComponents, theme }) => {
           '@apply w-72': {},
         },
         //Rounded:sm
-        '&.nui-menu-rounded': {
+        '&.nui-menu-rounded-sm': {
           [`@apply ${config.menu.rounded.sm}`]: {},
         },
         //Rounded:md
-        '&.nui-menu-smooth': {
+        '&.nui-menu-rounded-md': {
           [`@apply ${config.menu.rounded.md}`]: {},
         },
         //Rounded:lg
-        '&.nui-menu-curved': {
+        '&.nui-menu-rounded-lg': {
           [`@apply ${config.menu.rounded.lg}`]: {},
         },
-        //Color:white
-        '&.nui-menu-white': {
+        //Color:default
+        '&.nui-menu-default': {
           //Border
-          [`@apply border border-${config.menu.color.white.border.light} dark:border-${config.menu.color.white.border.dark}`]:
+          [`@apply border border-${config.menu.color.default.border.light} dark:border-${config.menu.color.default.border.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.menu.color.white.background.light} dark:bg-${config.menu.color.white.background.dark}`]:
+          [`@apply bg-${config.menu.color.default.background.light} dark:bg-${config.menu.color.default.background.dark}`]:
             {},
         },
-        //Color:white-contrast
-        '&.nui-menu-white-contrast': {
+        //Color:default-contrast
+        '&.nui-menu-default-contrast': {
           //Border
-          [`@apply border border-${config.menu.color.whiteContrast.border.light} dark:border-${config.menu.color.whiteContrast.border.dark}`]:
+          [`@apply border border-${config.menu.color.defaultContrast.border.light} dark:border-${config.menu.color.defaultContrast.border.dark}`]:
             {},
           //Background
-          [`@apply bg-${config.menu.color.whiteContrast.background.light} dark:bg-${config.menu.color.whiteContrast.background.dark}`]:
+          [`@apply bg-${config.menu.color.defaultContrast.background.light} dark:bg-${config.menu.color.defaultContrast.background.dark}`]:
             {},
         },
         //Color:muted

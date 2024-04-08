@@ -14,7 +14,7 @@ export const defaultConfig = {
     size: 'xl',
   },
   color: {
-    white: {
+    default: {
       background: {
         light: 'white',
         dark: 'muted-800',
@@ -24,7 +24,7 @@ export const defaultConfig = {
         dark: 'muted-700',
       },
     },
-    whiteContrast: {
+    defaultContrast: {
       background: {
         light: 'white',
         dark: 'muted-950',
@@ -52,6 +52,26 @@ export const defaultConfig = {
       border: {
         light: 'muted-200',
         dark: 'muted-800',
+      },
+    },
+    dark: {
+      background: {
+        light: 'muted-900',
+        dark: 'muted-100',
+      },
+      border: {
+        light: 'muted-800',
+        dark: 'muted-50',
+      },
+    },
+    black: {
+      background: {
+        light: 'black',
+        dark: 'white',
+      },
+      border: {
+        light: 'black',
+        dark: 'white',
       },
     },
     primary: {

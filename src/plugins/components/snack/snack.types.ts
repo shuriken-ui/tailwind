@@ -4,7 +4,7 @@ export interface SnackProps extends Record<string, unknown> {
   label?: string
   image?: string
   size?: 'xs' | 'sm' | 'md'
-  color?: 'default' | 'muted'
+  color?: 'default' | 'default-contrast' | 'muted' | 'muted-contrast'
   classes?: {
     wrapper?: string | string[]
     icon?: string | string[]

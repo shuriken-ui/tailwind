@@ -54,17 +54,6 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
-      //Error:text
-      '.nui-textarea-error-text': {
-        //Base
-        '@apply mt-1 block': {},
-        //Font
-        [`@apply font-${config.error.font.family} text-${config.error.font.size} font-${config.error.font.weight} leading-none`]:
-          {},
-        //Font color
-        [`@apply text-${config.error.font.color.light} dark:text-${config.error.font.color.dark}`]:
-          {},
-      },
       //Textrea:placeload
       '.nui-textarea-placeload': {
         [`@apply absolute start-0 top-4 flex h-${config.textarea.placeload.size} w-${config.textarea.placeload.size} flex-col space-y-${config.textarea.placeload.space} px-3`]:
@@ -85,7 +74,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:sm
-      '&.nui-textarea-rounded': {
+      '&.nui-textarea-rounded-sm': {
         '.nui-textarea': {
           [`@apply rounded-${config.rounded.sm}`]: {},
         },
@@ -94,7 +83,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:md
-      '&.nui-textarea-smooth': {
+      '&.nui-textarea-rounded-md': {
         '.nui-textarea': {
           [`@apply rounded-${config.rounded.md}`]: {},
         },
@@ -103,7 +92,7 @@ export default plugin(({ addComponents, theme }) => {
         },
       },
       //Rounded:lg
-      '&.nui-textarea-curved': {
+      '&.nui-textarea-rounded-lg': {
         '.nui-textarea': {
           [`@apply rounded-${config.rounded.lg}`]: {},
         },

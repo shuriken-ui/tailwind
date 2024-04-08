@@ -17,22 +17,22 @@ export default plugin(({ addComponents, theme }) => {
       //Base
       [`@apply relative w-${config.width} transition-${config.transition.property} duration-${config.transition.duration}`]:
         {},
-      //Color:white
-      '&.nui-card-white': {
+      //Color:default
+      '&.nui-card-default': {
         //Border
-        [`@apply border border-${config.color.white.border.light} dark:border-${config.color.white.border.dark}`]:
+        [`@apply border border-${config.color.default.border.light} dark:border-${config.color.default.border.dark}`]:
           {},
         //Background
-        [`@apply bg-${config.color.white.background.light} dark:bg-${config.color.white.background.dark}`]:
+        [`@apply bg-${config.color.default.background.light} dark:bg-${config.color.default.background.dark}`]:
           {},
       },
-      //Color:whiteContrast
-      '&.nui-card-white-contrast': {
+      //Color:defaultContrast
+      '&.nui-card-default-contrast': {
         //Border
-        [`@apply border border-${config.color.whiteContrast.border.light} dark:border-${config.color.whiteContrast.border.dark}`]:
+        [`@apply border border-${config.color.defaultContrast.border.light} dark:border-${config.color.defaultContrast.border.dark}`]:
           {},
         //Background
-        [`@apply bg-${config.color.whiteContrast.background.light} dark:bg-${config.color.whiteContrast.background.dark}`]:
+        [`@apply bg-${config.color.defaultContrast.background.light} dark:bg-${config.color.defaultContrast.background.dark}`]:
           {},
       },
       //Color:muted
@@ -51,6 +51,24 @@ export default plugin(({ addComponents, theme }) => {
           {},
         //Background
         [`@apply bg-${config.color.mutedContrast.background.light} dark:bg-${config.color.mutedContrast.background.dark}`]:
+          {},
+      },
+      //Color:dark
+      '&.nui-card-dark': {
+        //Border
+        [`@apply border border-${config.color.dark.border.light} dark:border-${config.color.dark.border.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.dark.background.light} dark:bg-${config.color.dark.background.dark}`]:
+          {},
+      },
+      //Color:black
+      '&.nui-card-black': {
+        //Border
+        [`@apply border border-${config.color.black.border.light} dark:border-${config.color.black.border.dark}`]:
+          {},
+        //Background
+        [`@apply bg-${config.color.black.background.light} dark:bg-${config.color.black.background.dark}`]:
           {},
       },
       //Color:primary
@@ -99,15 +117,15 @@ export default plugin(({ addComponents, theme }) => {
           {},
       },
       //Rounded:sm
-      '&.nui-card-rounded': {
+      '&.nui-card-rounded-sm': {
         [`@apply rounded-${config.rounded.sm}`]: {},
       },
       //Rounded:md
-      '&.nui-card-smooth': {
+      '&.nui-card-rounded-md': {
         [`@apply rounded-${config.rounded.md}`]: {},
       },
       //Rounded:lg
-      '&.nui-card-curved': {
+      '&.nui-card-rounded-lg': {
         [`@apply rounded-${config.rounded.lg}`]: {},
       },
       //Shadow

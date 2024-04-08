@@ -1,68 +1,54 @@
 export const key = 'messageText' as const
 
 export const defaultConfig = {
-  padding: '6',
+  padding: '5',
   rounded: {
-    default: 'rounded-md',
-    smooth: 'rounded-lg',
-    curved: 'rounded-xl',
+    sm: 'rounded-md',
+    md: 'rounded-lg',
+    lg: 'rounded-xl',
   },
   header: {
     gap: '2',
   },
   dot: {
-    size: '3',
+    size: '2',
     rounded: 'full',
-    background: {
-      light: 'muted-200',
-      dark: 'muted-700',
-    },
   },
   close: {
     position: '2',
   },
-  color: {
-    default: {
+  contrast: {
+    lowContrast: {
+      background: {
+        light: 'white',
+        dark: 'muted-800',
+      },
       border: {
         light: 'muted-300',
         dark: 'muted-700',
       },
-      dot: {
-        background: {
-          light: 'muted-200',
-          dark: 'muted-700',
-        },
-      },
     },
-    white: {
-      background: {
-        light: 'white',
-        dark: 'muted-800',
-      },
-    },
-    whiteContrast: {
+    highContrast: {
       background: {
         light: 'white',
         dark: 'muted-950',
       },
-    },
-    contrast: {
       border: {
         light: 'muted-300',
         dark: 'muted-800',
       },
+    },
+  },
+  color: {
+    default: {
       dot: {
         background: {
-          light: 'muted-200',
-          dark: 'muted-800',
+          light: 'muted-300',
+          dark: 'muted-700',
         },
       },
     },
     primary: {
-      border: {
-        light: 'primary-500',
-        dark: 'primary-500',
-      },
       dot: {
         background: {
           light: 'primary-500',
@@ -71,10 +57,6 @@ export const defaultConfig = {
       },
     },
     info: {
-      border: {
-        light: 'info-500',
-        dark: 'info-500',
-      },
       dot: {
         background: {
           light: 'info-500',
@@ -83,10 +65,6 @@ export const defaultConfig = {
       },
     },
     success: {
-      border: {
-        light: 'success-500',
-        dark: 'success-500',
-      },
       dot: {
         background: {
           light: 'success-500',
@@ -95,10 +73,6 @@ export const defaultConfig = {
       },
     },
     warning: {
-      border: {
-        light: 'warning-500',
-        dark: 'warning-500',
-      },
       dot: {
         background: {
           light: 'warning-500',
@@ -107,14 +81,26 @@ export const defaultConfig = {
       },
     },
     danger: {
-      border: {
-        light: 'danger-500',
-        dark: 'danger-500',
-      },
       dot: {
         background: {
           light: 'danger-500',
           dark: 'danger-500',
+        },
+      },
+    },
+    dark: {
+      dot: {
+        background: {
+          light: 'muted-900',
+          dark: 'muted-100',
+        },
+      },
+    },
+    black: {
+      dot: {
+        background: {
+          light: 'black',
+          dark: 'white',
         },
       },
     },

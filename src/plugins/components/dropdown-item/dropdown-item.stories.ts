@@ -20,12 +20,12 @@ const meta = {
       control: { type: 'text' },
       defaultValue: '',
     },
-    '?disabled': {
+    disabled: {
       name: 'disabled',
       control: { type: 'boolean' },
       defaultValue: false,
     },
-    color: {
+    contrast: {
       control: { type: 'select' },
       options: ['default', 'contrast'],
       defaultValue: 'default',
@@ -50,7 +50,7 @@ export const Main: Story = {
   args: {
     // set default values used for UI preview
     href: '#',
-    color: 'default',
+    contrast: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
     rounded: 'sm',
@@ -64,7 +64,7 @@ export const ShapeStraight: Story = {
   name: 'Rounded: none',
   args: {
     href: '#',
-    color: 'default',
+    contrast: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
     rounded: 'none',
@@ -76,7 +76,7 @@ export const ShapeRounded: Story = {
   name: 'Rounded: sm',
   args: {
     href: '#',
-    color: 'default',
+    contrast: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
     rounded: 'sm',
@@ -88,7 +88,7 @@ export const ShapeSmooth: Story = {
   name: 'Rounded: md',
   args: {
     href: '#',
-    color: 'default',
+    contrast: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
     rounded: 'md',
@@ -100,7 +100,7 @@ export const ShapeCurved: Story = {
   name: 'Rounded: lg',
   args: {
     href: '#',
-    color: 'default',
+    contrast: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
     rounded: 'lg',
@@ -114,7 +114,8 @@ export const SlotStartIcon: Story = {
   name: 'Start slot: icon',
   args: {
     href: '#',
-    color: 'default',
+    contrast: 'default',
+    color: 'dark',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
     rounded: 'sm',
@@ -147,7 +148,7 @@ export const SlotStartAvatar: Story = {
   name: 'Start slot: avatar',
   args: {
     href: '#',
-    color: 'default',
+    contrast: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
     rounded: 'sm',
@@ -167,7 +168,7 @@ export const SlotEndAction: Story = {
   name: 'End slot: action',
   args: {
     href: '#',
-    color: 'default',
+    contrast: 'default',
     title: 'Dropdown Item',
     text: 'Some nice item subtitle',
     rounded: 'sm',
@@ -179,7 +180,7 @@ export const SlotEndAction: Story = {
     `,
     end: html`
       ${Button({
-        color: 'default',
+        contrast: 'default',
         size: 'sm',
         rounded: 'sm',
         children: html`

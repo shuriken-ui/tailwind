@@ -10,6 +10,11 @@ const meta = {
   // tags: ['autodocs'],
   render: (args) => Pagination(args),
   argTypes: {
+    color: {
+      control: { type: 'select' },
+      options: ['dark', 'black', 'primary'],
+      defaultValue: 'primary',
+    },
     rounded: {
       control: { type: 'select' },
       options: ['none', 'sm', 'md', 'lg', 'full'],
@@ -36,7 +41,7 @@ export const Main: Story = {
 export const ShapeStraight: Story = {
   name: 'Rounded: none',
   args: {
-    shape: 'straight',
+    rounded: 'none',
     style: 'min-width: 480px;',
   },
 }

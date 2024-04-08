@@ -9,8 +9,12 @@ export interface ButtonProps extends Record<string, unknown> {
   variant?: 'solid' | 'pastel' | 'outline'
   color?:
     | 'default'
-    | 'light'
+    | 'default-contrast'
     | 'muted'
+    | 'muted-contrast'
+    | 'light'
+    | 'dark'
+    | 'black'
     | 'primary'
     | 'info'
     | 'success'
