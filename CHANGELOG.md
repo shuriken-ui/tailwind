@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.3](https://github.com/shuriken-ui/tailwind/compare/v3.0.2...v3.0.3) (2024-04-09)
+
+
+### Bug Fixes
+
+* **button:** re add xl size ([3de5184](https://github.com/shuriken-ui/tailwind/commit/3de5184897c73855d33474cf5763e1a0cae6a638))
+
 ### [3.0.2](https://github.com/shuriken-ui/tailwind/compare/v3.0.1...v3.0.2) (2024-04-08)
 
 
