@@ -4,6 +4,7 @@ export const size = {
   sm: 'nui-button-sm',
   md: 'nui-button-md',
   lg: 'nui-button-lg',
+  xl: 'nui-button-xl',
 } as const satisfies ButtonVariant<'size'>
 
 export const rounded = {

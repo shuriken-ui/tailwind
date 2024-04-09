@@ -4,7 +4,7 @@ export interface ButtonProps extends Record<string, unknown> {
   label?: string
   loading?: boolean
   badge?: boolean
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xl'
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   variant?: 'solid' | 'pastel' | 'outline'
   color?:

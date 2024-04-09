@@ -121,6 +121,15 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      '&.nui-button-xl': {
+        [`@apply h-${config.size.xl.button.height} px-${config.size.xl.button.padding.x} py-${config.size.xl.button.padding.y} text-${config.size.xl.button.text}`]:
+          {},
+
+        '.nui-button-icon': {
+          [`@apply w-${config.size.xl.icon.size} h-${config.size.xl.icon.size}`]:
+            {},
+        },
+      },
       // #endregion
 
       // #region Rounded

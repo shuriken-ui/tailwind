@@ -46,7 +46,7 @@ const meta = {
     },
     size: {
       control: { type: 'select' },
-      options: ['sm', 'md', 'lg'],
+      options: ['sm', 'md', 'lg', 'xl'],
       defaultValue: 'md',
     },
     rounded: {
@@ -187,6 +187,14 @@ export const Lg: Story = {
   name: 'Size: lg',
   args: {
     size: 'lg',
+    label: 'Button',
+    rounded: 'sm',
+  },
+}
+export const Xl: Story = {
+  name: 'Size: xl',
+  args: {
+    size: 'xl',
     label: 'Button',
     rounded: 'sm',
   },

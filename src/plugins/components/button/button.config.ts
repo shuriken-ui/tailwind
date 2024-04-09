@@ -49,6 +49,19 @@ export const defaultConfig = {
         size: '5',
       },
     },
+    xl: {
+      button: {
+        text: 'base',
+        height: '14',
+        padding: {
+          x: '10',
+          y: '4',
+        },
+      },
+      icon: {
+        size: '5',
+      },
+    },
   },
   rounded: {
     none: 'none',
