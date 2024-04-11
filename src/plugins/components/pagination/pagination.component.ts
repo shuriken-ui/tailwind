@@ -51,18 +51,18 @@ export const Pagination = ({
           </a>
         </li>
         <li>
-          <a href="#" class="nui-pagination-ellipsis">
+          <span class="nui-pagination-ellipsis">
             <span>...</span>
-          </a>
+          </span>
         </li>
         <li>
           <a href="#" class="nui-pagination-link">
-            <span>64</span>
+            <span>64000</span>
           </a>
         </li>
       </ul>
       <div class="nui-pagination-buttons">
-        <button type="button" class="nui-pagination-link">
+        <button type="button" class="nui-pagination-button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -83,7 +83,7 @@ export const Pagination = ({
             ></path>
           </svg>
         </button>
-        <button type="button" class="nui-pagination-link">
+        <button type="button" class="nui-pagination-button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
