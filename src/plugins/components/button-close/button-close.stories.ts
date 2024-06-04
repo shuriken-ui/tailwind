@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     size: {
       control: { type: 'select' },
-      options: ['xs', 'sm', 'md', 'lg'],
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
       defaultValue: 'md',
     },
     color: {
@@ -89,6 +89,15 @@ export const SizeLg: Story = {
   args: {
     color: 'muted',
     size: 'lg',
+    rounded: 'md',
+  },
+}
+
+export const SizeXl: Story = {
+  name: 'Size: xl',
+  args: {
+    color: 'muted',
+    size: 'xl',
     rounded: 'md',
   },
 }
