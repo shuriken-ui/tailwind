@@ -9,9 +9,10 @@ export const rounded = {
 } as const satisfies ButtonIconVariant<'rounded'>
 
 export const size = {
-  sm: 'nui-button-small',
-  md: 'nui-button-medium',
-  lg: 'nui-button-large',
+  sm: 'nui-button-sm',
+  md: 'nui-button-md',
+  lg: 'nui-button-lg',
+  xl: 'nui-button-xl',
 } as const satisfies ButtonIconVariant<'size'>
 
 export const color = {

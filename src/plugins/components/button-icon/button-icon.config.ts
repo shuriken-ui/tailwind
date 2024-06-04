@@ -25,6 +25,10 @@ export const defaultConfig = {
       size: '12',
       padding: '3',
     },
+    xl: {
+      size: '14',
+      padding: '4',
+    },
   },
   color: {
     default: {
