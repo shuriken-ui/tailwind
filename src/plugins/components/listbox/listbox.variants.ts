@@ -12,6 +12,7 @@ export const size = {
   sm: 'nui-listbox-sm',
   md: 'nui-listbox-md',
   lg: 'nui-listbox-lg',
+  xl: 'nui-listbox-xl',
 } as const satisfies ListboxVariant<'size'>
 
 export const contrast = {

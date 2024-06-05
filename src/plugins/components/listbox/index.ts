@@ -222,7 +222,7 @@ export default plugin(({ addComponents, theme }) => {
         },
         //Label:float
         '.nui-label-float': {
-          '@apply top-1.5': {},
+          '@apply top-2.5': {},
         },
       },
       //Listbox:icon
@@ -256,7 +256,7 @@ export default plugin(({ addComponents, theme }) => {
         },
         //Label:float
         '.nui-label-float': {
-          '@apply top-1.5': {},
+          '@apply top-3.5': {},
         },
         //Listbox:icon
         '.nui-listbox-icon': {
@@ -279,6 +279,40 @@ export default plugin(({ addComponents, theme }) => {
           //Chevron:inner
           '.nui-listbox-chevron-inner': {
             [`@apply h-${config.size.lg.chevron.inner.size} w-${config.size.lg.chevron.inner.size}`]:
+              {},
+          },
+        },
+      },
+      //Size:xl
+      '&.nui-listbox-xl': {
+        '.nui-listbox-label': {
+          [`@apply pb-1 text-${config.size.xl.font.size}`]: {},
+        },
+        //Label:float
+        '.nui-label-float': {
+          '@apply top-[1.1rem]': {},
+        },
+        //Listbox:icon
+        '.nui-listbox-icon': {
+          [`@apply h-${config.size.xl.icon.size.outer} w-${config.size.xl.icon.size.outer}`]:
+            {},
+
+          '.nui-listbox-icon-inner': {
+            [`@apply h-${config.size.xl.icon.size.inner} w-${config.size.xl.icon.size.inner}`]:
+              {},
+          },
+        },
+        //Listbox:placeload
+        '.nui-listbox-placeload': {
+          [`@apply h-${config.size.xl.placeload.size}`]: {},
+        },
+        //Listbox:chevron
+        '.nui-listbox-chevron': {
+          [`@apply h-${config.size.xl.chevron.outer.size} w-${config.size.xl.chevron.outer.size}`]:
+            {},
+          //Chevron:inner
+          '.nui-listbox-chevron-inner': {
+            [`@apply h-${config.size.xl.chevron.inner.size} w-${config.size.xl.chevron.inner.size}`]:
               {},
           },
         },
@@ -541,6 +575,20 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Without:icon && Size:xl
+      '&:not(.nui-has-icon).nui-listbox-xl': {
+        '.nui-listbox-button': {
+          [`@apply h-14 py-2 text-${config.icon.disabled.input.xl.font.size} leading-5 px-4`]:
+            {},
+        },
+      },
+      //With:icon && Size:xl
+      '&.nui-has-icon.nui-listbox-xl': {
+        '.nui-listbox-button': {
+          [`@apply h-14 py-2 text-${config.icon.enabled.input.xl.font.size} leading-5 pe-4 ps-12`]:
+            {},
+        },
+      },
       //Without:icon && Size:sm && Label:float
       '&.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-sm': {
         '.nui-label-float': {
@@ -572,12 +620,12 @@ export default plugin(({ addComponents, theme }) => {
       //Without:icon && Size:md && Label:float
       '&.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-md': {
         '.nui-label-float': {
-          [`@apply start-3 -ms-3 -mt-7 text-${config.icon.disabled.label.float.md.font.size.base} text-transparent`]:
+          [`@apply start-3 -ms-3 -mt-8 text-${config.icon.disabled.label.float.md.font.size.base} text-transparent`]:
             {},
         },
         '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
           {
-            [`@apply !-ms-3 !-mt-7 !text-${config.icon.disabled.label.float.md.font.size.focus} !text-${config.label.float.font.color}`]:
+            [`@apply !-ms-3 !-mt-8 !text-${config.icon.disabled.label.float.md.font.size.focus} !text-${config.label.float.font.color}`]:
               {},
           },
         '.nui-listbox-button ~ .nui-label-float': {
@@ -588,12 +636,12 @@ export default plugin(({ addComponents, theme }) => {
       //With:icon && Size:md && Label:float
       '&.nui-listbox-label-float.nui-has-icon.nui-listbox-md': {
         '.nui-label-float': {
-          [`@apply start-10 -ms-10 -mt-7 text-${config.icon.enabled.label.float.md.font.size.base} text-transparent`]:
+          [`@apply start-10 -ms-10 -mt-8 text-${config.icon.enabled.label.float.md.font.size.base} text-transparent`]:
             {},
         },
         '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
           {
-            [`@apply !-ms-10 !-mt-7 !text-${config.icon.enabled.label.float.md.font.size.focus} !text-${config.label.float.font.color}`]:
+            [`@apply !-ms-10 !-mt-8 !text-${config.icon.enabled.label.float.md.font.size.focus} !text-${config.label.float.font.color}`]:
               {},
           },
         '.nui-listbox-button ~ .nui-label-float': {
@@ -604,12 +652,12 @@ export default plugin(({ addComponents, theme }) => {
       //Without:icon && Size:lg && Label:float
       '&.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-lg': {
         '.nui-label-float': {
-          [`@apply start-3 -ms-3 -mt-7 text-${config.icon.disabled.label.float.lg.font.size.base} text-transparent`]:
+          [`@apply start-3 -ms-3 -mt-9 text-${config.icon.disabled.label.float.lg.font.size.base} text-transparent`]:
             {},
         },
         '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
           {
-            [`@apply !-ms-3 !-mt-7 !text-${config.icon.disabled.label.float.lg.font.size.focus} !text-${config.label.float.font.color}`]:
+            [`@apply !-ms-3 !-mt-9 !text-${config.icon.disabled.label.float.lg.font.size.focus} !text-${config.label.float.font.color}`]:
               {},
           },
         '.nui-listbox-button ~ .nui-label-float': {
@@ -620,16 +668,48 @@ export default plugin(({ addComponents, theme }) => {
       //With:icon && Size:lg && Label:float
       '&.nui-listbox-label-float.nui-has-icon.nui-listbox-lg': {
         '.nui-label-float': {
-          [`@apply start-11 -ms-10 -mt-7 text-${config.icon.enabled.label.float.lg.font.size.base} text-transparent`]:
+          [`@apply start-11 -ms-10 -mt-9 text-${config.icon.enabled.label.float.lg.font.size.base} text-transparent`]:
             {},
         },
         '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
           {
-            [`@apply !-ms-10 !-mt-7 !text-${config.icon.enabled.label.float.lg.font.size.focus} !text-${config.label.float.font.color}`]:
+            [`@apply !-ms-10 !-mt-9 !text-${config.icon.enabled.label.float.lg.font.size.focus} !text-${config.label.float.font.color}`]:
               {},
           },
         '.nui-listbox-button ~ .nui-label-float': {
           [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.lg.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //Without:icon && Size:xl && Label:float
+      '&.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-xl': {
+        '.nui-label-float': {
+          [`@apply start-3 -ms-3 -mt-10 text-${config.icon.disabled.label.float.xl.font.size.base} text-transparent`]:
+            {},
+        },
+        '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
+          {
+            [`@apply !-ms-3 !-mt-10 !text-${config.icon.disabled.label.float.xl.font.size.focus} !text-${config.label.float.font.color}`]:
+              {},
+          },
+        '.nui-listbox-button ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.disabled.label.float.xl.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //With:icon && Size:xl && Label:float
+      '&.nui-listbox-label-float.nui-has-icon.nui-listbox-xl': {
+        '.nui-label-float': {
+          [`@apply start-[3.25rem] -ms-[3.25rem] -mt-10 text-${config.icon.enabled.label.float.xl.font.size.base} text-transparent`]:
+            {},
+        },
+        '.nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active':
+          {
+            [`@apply !-ms-[3.25rem] !-mt-10 !text-${config.icon.enabled.label.float.xl.font.size.focus} !text-${config.label.float.font.color}`]:
+              {},
+          },
+        '.nui-listbox-button ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.xl.font.size.unfocus}`]:
             {},
         },
       },

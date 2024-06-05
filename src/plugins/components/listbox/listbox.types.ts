@@ -9,7 +9,7 @@ export interface ListboxProps extends Record<string, unknown> {
   labelFloat?: boolean
   colorFocus?: boolean
   error?: string | boolean
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xl'
   contrast?: 'default' | 'default-contrast' | 'muted' | 'muted-contrast'
   loading?: boolean
   clearable?: boolean
