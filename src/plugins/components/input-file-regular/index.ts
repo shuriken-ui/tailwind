@@ -258,6 +258,36 @@ export default plugin(({ addComponents, theme }) => {
           '@apply top-[1.2rem]': {},
         },
       },
+      //Without icon && Size:xl
+      '&.nui-input-xl:not(.nui-has-icon)': {
+        [`@apply text-${config.icon.disabled.xl.font.size} leading-5`]: {},
+        '.nui-input-file-inner': {
+          '@apply h-14 gap-2': {},
+        },
+        '.nui-input-file-addon': {
+          '@apply h-14 px-5': {},
+        },
+        '.nui-input-file-placeload': {
+          '@apply top-[1.4rem]': {},
+        },
+      },
+      //With icon && Size:xl
+      '&.nui-input-xl.nui-has-icon': {
+        [`@apply text-${config.icon.enabled.xl.font.size} leading-5`]: {},
+        '.nui-input-file-inner': {
+          '@apply h-14 pe-4': {},
+        },
+        '.nui-input-file-addon': {
+          '@apply h-14 px-5': {},
+        },
+        '.nui-input-file-icon': {
+          [`@apply w-${config.icon.enabled.xl.icon.size} h-${config.icon.enabled.xl.icon.size}`]:
+            {},
+        },
+        '.nui-input-file-placeload': {
+          '@apply top-[1.4rem]': {},
+        },
+      },
       //Input:hover
       '&:hover': {
         '.nui-input-file-addon': {

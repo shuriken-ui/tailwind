@@ -12,6 +12,7 @@ export const size = {
   sm: 'nui-input-sm',
   md: 'nui-input-md',
   lg: 'nui-input-lg',
+  xl: 'nui-input-xl',
 } as const satisfies InputFileRegularVariant<'size'>
 
 export const contrast = {
