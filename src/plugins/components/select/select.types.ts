@@ -11,7 +11,7 @@ export interface SelectProps extends Record<string, unknown> {
   disabled?: boolean
   readonly?: boolean
   error?: string | boolean
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xl'
   contrast?: 'default' | 'default-contrast' | 'muted' | 'muted-contrast'
   classes?: {
     wrapper?: string | string[]

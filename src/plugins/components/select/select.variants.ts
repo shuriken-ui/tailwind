@@ -12,6 +12,7 @@ export const size = {
   sm: 'nui-select-sm',
   md: 'nui-select-md',
   lg: 'nui-select-lg',
+  xl: 'nui-select-xl',
 } as const satisfies SelectVariant<'size'>
 
 export const contrast = {

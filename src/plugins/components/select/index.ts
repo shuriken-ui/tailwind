@@ -164,7 +164,7 @@ export default plugin(({ addComponents, theme }) => {
         },
         //Label:float
         '.nui-label-float': {
-          '@apply top-1.5': {},
+          '@apply top-2.5': {},
         },
         //Select:icon
         '.nui-select-icon, .nui-select-chevron': {
@@ -193,7 +193,7 @@ export default plugin(({ addComponents, theme }) => {
         },
         //Label:float
         '.nui-label-float': {
-          '@apply top-1.5': {},
+          '@apply top-3.5': {},
         },
         //Select:icon
         '.nui-select-icon, .nui-select-chevron': {
@@ -208,6 +208,35 @@ export default plugin(({ addComponents, theme }) => {
         //Select:placeload
         '.nui-select-placeload': {
           [`@apply h-${config.size.lg.placeload.size}`]: {},
+        },
+      },
+      //Size:xl
+      '&.nui-select-xl': {
+        //Select
+        '.nui-select': {
+          [`@apply pe-${config.size.xl.padding}`]: {},
+        },
+        //Select:label
+        '.nui-select-label': {
+          [`@apply pb-1 text-${config.size.xl.label.font.size}`]: {},
+        },
+        //Label:float
+        '.nui-label-float': {
+          '@apply top-[1.1rem]': {},
+        },
+        //Select:icon
+        '.nui-select-icon, .nui-select-chevron': {
+          [`@apply h-${config.size.xl.icon.outer.size} w-${config.size.xl.icon.outer.size}`]:
+            {},
+
+          '.nui-select-icon-inner, .nui-select-chevron-inner': {
+            [`@apply h-${config.size.xl.icon.inner.size} w-${config.size.xl.icon.inner.size}`]:
+              {},
+          },
+        },
+        //Select:placeload
+        '.nui-select-placeload': {
+          [`@apply h-${config.size.xl.placeload.size}`]: {},
         },
       },
       //Color:default
@@ -370,6 +399,20 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Without:icon && Size:xl
+      '&:not(.nui-has-icon).nui-select-xl': {
+        '.nui-select': {
+          [`@apply h-14 py-2 text-${config.icon.disabled.select.xl.font.size} leading-5 ps-4 pe-9`]:
+            {},
+        },
+      },
+      //With:icon && Size:xl
+      '&.nui-has-icon.nui-select-xl': {
+        '.nui-select': {
+          [`@apply h-14 py-2 text-${config.icon.enabled.select.xl.font.size} leading-5 pe-9 ps-12`]:
+            {},
+        },
+      },
       //Without:icon && Size:sm && Label:float
       '&.nui-select-label-float:not(.nui-has-icon).nui-select-sm': {
         '.nui-label-float': {
@@ -433,7 +476,7 @@ export default plugin(({ addComponents, theme }) => {
       //Without:icon && Size:lg && Label:float
       '&.nui-select-label-float:not(.nui-has-icon).nui-select-lg': {
         '.nui-label-float': {
-          [`@apply start-3 -ms-3 -mt-8 text-${config.icon.disabled.label.float.lg.font.size.base}`]:
+          [`@apply start-3 -ms-3 -mt-9 text-${config.icon.disabled.label.float.lg.font.size.base}`]:
             {},
         },
         '.nui-select:focus-visible ~ .nui-label-float': {
@@ -448,7 +491,7 @@ export default plugin(({ addComponents, theme }) => {
       //With:icon && Size:lg && Label:float
       '&.nui-select-label-float.nui-has-icon.nui-select-lg': {
         '.nui-label-float': {
-          [`@apply start-11 -ms-10 -mt-8 text-${config.icon.enabled.label.float.lg.font.size.base}`]:
+          [`@apply start-11 -ms-10 -mt-9 text-${config.icon.enabled.label.float.lg.font.size.base}`]:
             {},
         },
         '.nui-select:focus-visible ~ .nui-label-float': {
@@ -457,6 +500,36 @@ export default plugin(({ addComponents, theme }) => {
         },
         '.nui-select ~ .nui-label-float': {
           [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.lg.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //Without:icon && Size:xl && Label:float
+      '&.nui-select-label-float:not(.nui-has-icon).nui-select-xl': {
+        '.nui-label-float': {
+          [`@apply start-3 -ms-3 -mt-10 text-${config.icon.disabled.label.float.xl.font.size.base}`]:
+            {},
+        },
+        '.nui-select:focus-visible ~ .nui-label-float': {
+          [`@apply !-ms-3 !-mt-10 !text-${config.icon.disabled.label.float.xl.font.size.focus}`]:
+            {},
+        },
+        '.nui-select ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.disabled.label.float.xl.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //With:icon && Size:xl && Label:float
+      '&.nui-select-label-float.nui-has-icon.nui-select-xl': {
+        '.nui-label-float': {
+          [`@apply start-[3.25rem] -ms-[3.25rem] -mt-10 text-${config.icon.enabled.label.float.xl.font.size.base}`]:
+            {},
+        },
+        '.nui-select:focus-visible ~ .nui-label-float': {
+          [`@apply !-ms-[3.25rem] !-mt-10 !text-${config.icon.enabled.label.float.xl.font.size.focus}`]:
+            {},
+        },
+        '.nui-select ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.xl.font.size.unfocus}`]:
             {},
         },
       },
