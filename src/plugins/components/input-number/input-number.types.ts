@@ -8,7 +8,7 @@ export interface InputProps extends Record<string, unknown> {
   colorFocus?: boolean
   loading?: boolean
   error?: string | boolean
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xl'
   contrast?: 'default' | 'default-contrast' | 'muted' | 'muted-contrast'
   classes?: {
     wrapper?: string | string[]

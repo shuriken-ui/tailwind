@@ -238,6 +238,35 @@ export default plugin(({ addComponents, theme }) => {
           '@apply h-10 w-10': {},
         },
       },
+      //Size:xl
+      '&.nui-input-number-xl': {
+        //Input:label
+        '.nui-input-number-label': {
+          [`@apply pb-1 text-${config.size.xl.label.font.size}`]: {},
+        },
+        //Label:float
+        '.nui-label-float': {
+          '@apply top-[1.1rem]': {},
+        },
+        //Input:icon && Input:action
+        '.nui-input-number-icon, .nui-input-number-action': {
+          [`@apply h-${config.size.xl.icon.outer.size} w-${config.size.xl.icon.outer.size}`]:
+            {},
+
+          '.nui-input-number-icon-inner, .nui-input-number-action-inner': {
+            [`@apply h-${config.size.xl.icon.inner.size} w-${config.size.xl.icon.inner.size}`]:
+              {},
+          },
+        },
+        //Input:placeload
+        '.nui-input-number-placeload': {
+          [`@apply h-${config.size.xl.placeload.size}`]: {},
+        },
+        //Input:buttons
+        '.nui-input-number-buttons button': {
+          '@apply h-12 w-12': {},
+        },
+      },
       //Color:default
       '&.nui-input-number-default': {
         '.nui-input-number': {
@@ -440,6 +469,20 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Without icon && Size:xl
+      '&:not(.nui-has-icon).nui-input-number-xl': {
+        '.nui-input-number': {
+          [`@apply h-14 py-2 text-${config.icon.disabled.input.xl.font.size} leading-5 ps-4 pe-24`]:
+            {},
+        },
+      },
+      //With icon && Size:xl
+      '&.nui-has-icon.nui-input-number-xl': {
+        '.nui-input-number': {
+          [`@apply h-14 py-2 text-${config.icon.enabled.input.xl.font.size} leading-5 ps-[3.25rem] pe-24`]:
+            {},
+        },
+      },
       //With action && Size:sm
       '&.nui-has-action.nui-input-number-sm': {
         '.nui-input-number': {
@@ -518,7 +561,7 @@ export default plugin(({ addComponents, theme }) => {
       //Without icon && Size:lg && Label:float
       '&.nui-input-number-label-float:not(.nui-has-icon).nui-input-number-lg': {
         '.nui-label-float': {
-          [`@apply start-3 -ms-3 -mt-8 text-${config.icon.disabled.label.float.lg.font.size.base}`]:
+          [`@apply start-3 -ms-3 -mt-9 text-${config.icon.disabled.label.float.lg.font.size.base}`]:
             {},
         },
         '.nui-input-number:focus-visible ~ .nui-label-float': {
@@ -533,7 +576,7 @@ export default plugin(({ addComponents, theme }) => {
       //With icon && Size:lg && Label:float
       '&.nui-input-number-label-float.nui-has-icon.nui-input-number-lg': {
         '.nui-label-float': {
-          [`@apply start-11 -ms-10 -mt-8 text-${config.icon.enabled.label.float.lg.font.size.base}`]:
+          [`@apply start-11 -ms-10 -mt-9 text-${config.icon.enabled.label.float.lg.font.size.base}`]:
             {},
         },
         '.nui-input-number:focus-visible ~ .nui-label-float': {
@@ -542,6 +585,36 @@ export default plugin(({ addComponents, theme }) => {
         },
         '.nui-input-number:placeholder-shown ~ .nui-label-float': {
           [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.lg.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //Without icon && Size:xl && Label:float
+      '&.nui-input-number-label-float:not(.nui-has-icon).nui-input-number-xl': {
+        '.nui-label-float': {
+          [`@apply start-3 -ms-3 -mt-10 text-${config.icon.disabled.label.float.xl.font.size.base}`]:
+            {},
+        },
+        '.nui-input-number:focus-visible ~ .nui-label-float': {
+          [`@apply !-ms-3 !-mt-10 !text-${config.icon.disabled.label.float.xl.font.size.focus}`]:
+            {},
+        },
+        '.nui-input-number:placeholder-shown ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.disabled.label.float.xl.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //With icon && Size:xl && Label:float
+      '&.nui-input-number-label-float.nui-has-icon.nui-input-number-xl': {
+        '.nui-label-float': {
+          [`@apply start-[3.25rem] -ms-[3.25rem] -mt-10 text-${config.icon.enabled.label.float.xl.font.size.base}`]:
+            {},
+        },
+        '.nui-input-number:focus-visible ~ .nui-label-float': {
+          [`@apply !-ms-[3.25rem] !-mt-10 !text-${config.icon.enabled.label.float.xl.font.size.focus}`]:
+            {},
+        },
+        '.nui-input-number:placeholder-shown ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.xl.font.size.unfocus}`]:
             {},
         },
       },

@@ -4,9 +4,9 @@ import { defaultConfig } from './input-number.config'
 
 <Meta of={InputStories} />
 
-# Input
+# Input Number
 
-Inputs are an essential part of any application. Shuriken UI inputs can have different sizes, shapes and colors.
+Number inputs are an essential part of any application. Shuriken UI number inputs can have different sizes, shapes and colors.
 
 <Primary />
 
@@ -72,10 +72,11 @@ Input shapes allow you to change the border radiuses. Below is an example of a f
 
 Input size allows you to change the input size.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={InputStories.SizeSm} />
   <Story of={InputStories.SizeMd} />
   <Story of={InputStories.SizeLg} />
+  <Story of={InputStories.SizeXl} />
 </div>
 
 <br />
@@ -84,10 +85,11 @@ Input size allows you to change the input size.
 
 Inputs can have different contrasts, making their background color heavier in dark mode.
 
-<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
   <Story of={InputStories.ContrastMutedSm} />
   <Story of={InputStories.ContrastMutedMd} />
   <Story of={InputStories.ContrastMutedLg} />
+  <Story of={InputStories.ContrastMutedXl} />
 </div>
 
 <br />
@@ -96,10 +98,11 @@ Inputs can have different contrasts, making their background color heavier in da
 
 Inputs can have a floating label instead of the regular label.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={InputStories.LabelFloatSm} />
   <Story of={InputStories.LabelFloatMd} />
   <Story of={InputStories.LabelFloatLg} />
+  <Story of={InputStories.LabelFloatXl} />
 </div>
 
 <br />
@@ -111,10 +114,11 @@ Inputs can have a floating label instead of the regular label.
 
 Inputs can be configured to have a colored border when being focused.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={InputStories.ColorFocusSm} />
   <Story of={InputStories.ColorFocusMd} />
   <Story of={InputStories.ColorFocusLg} />
+  <Story of={InputStories.ColorFocusXl} />
 </div>
 
 <br />
@@ -123,10 +127,11 @@ Inputs can be configured to have a colored border when being focused.
 
 Inputs can be shown in a disabled state.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={InputStories.DisabledSm} />
   <Story of={InputStories.DisabledMd} />
   <Story of={InputStories.DisabledLg} />
+  <Story of={InputStories.DisabledXl} />
 </div>
 
 <br />
@@ -135,10 +140,11 @@ Inputs can be shown in a disabled state.
 
 Inputs can be shown in a loading state. The loading indicator informs the user that something is being loaded.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={InputStories.LoadingSm} />
   <Story of={InputStories.LoadingMd} />
   <Story of={InputStories.LoadingLg} />
+  <Story of={InputStories.LoadingXl} />
 </div>
 
 <br />
@@ -147,10 +153,11 @@ Inputs can be shown in a loading state. The loading indicator informs the user t
 
 Inputs can be shown in an error state. This indicates that the input value contains an error.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={InputStories.ErrorSm} />
   <Story of={InputStories.ErrorMd} />
   <Story of={InputStories.ErrorLg} />
+  <Story of={InputStories.ErrorXl} />
 </div>
 
 <br />
@@ -162,10 +169,11 @@ Inputs can be shown in an error state. This indicates that the input value conta
 
 Inputs have an icon slot that you can use to display an icon inside the input.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={InputStories.SlotIconSm} />
   <Story of={InputStories.SlotIconMd} />
   <Story of={InputStories.SlotIconLg} />
+  <Story of={InputStories.SlotIconXl} />
 </div>
 
 <br />
@@ -174,10 +182,11 @@ Inputs have an icon slot that you can use to display an icon inside the input.
 
 Inputs icon slot also works with floating labels.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={InputStories.SlotIconFloatSm} />
   <Story of={InputStories.SlotIconFloatMd} />
   <Story of={InputStories.SlotIconFloatLg} />
+  <Story of={InputStories.SlotIconFloatXl} />
 </div>
 
 <br />
@@ -186,10 +195,11 @@ Inputs icon slot also works with floating labels.
 
 Inputs have an action slot that you can use to display an action inside the input.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={InputStories.SlotActionSm} />
   <Story of={InputStories.SlotActionMd} />
   <Story of={InputStories.SlotActionLg} />
+  <Story of={InputStories.SlotActionXl} />
 </div>
 
 <br />
