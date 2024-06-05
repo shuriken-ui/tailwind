@@ -305,7 +305,7 @@ export const defaultConfig = {
         },
         xl: {
           font: {
-            size: 'sm',
+            size: 'base',
           },
         },
       },
@@ -360,7 +360,7 @@ export const defaultConfig = {
         },
         lg: {
           font: {
-            size: 'base',
+            size: 'sm',
           },
         },
         xl: {
