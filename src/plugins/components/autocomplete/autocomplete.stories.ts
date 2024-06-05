@@ -24,7 +24,7 @@ const meta = {
     },
     size: {
       control: { type: 'select' },
-      options: ['sm', 'md', 'lg'],
+      options: ['sm', 'md', 'lg', 'xl'],
       defaultValue: 'md',
     },
     rounded: {
@@ -446,6 +446,32 @@ export const SizeLg: Story = {
     `,
   },
 }
+
+export const SizeXl: Story = {
+  name: 'Size: xl',
+  args: {
+    label: 'Search',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
 // #endregion
 
 // #region Contrast: muted
@@ -506,6 +532,32 @@ export const ContrastMutedLg: Story = {
   args: {
     label: 'Search',
     size: 'lg',
+    contrast: 'muted',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const ContrastMutedXl: Story = {
+  name: 'Contrast muted: xl',
+  args: {
+    label: 'Search',
+    size: 'xl',
     contrast: 'muted',
     rounded: 'sm',
     id: 'autocomplete',
@@ -589,6 +641,33 @@ export const LabelFloatLg: Story = {
     label: 'Search',
     labelFloat: true,
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const LabelFloatXl: Story = {
+  name: 'Label float: xl',
+  args: {
+    label: 'Search',
+    labelFloat: true,
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     id: 'autocomplete',
@@ -765,6 +844,33 @@ export const DisabledLg: Story = {
     `,
   },
 }
+
+export const DisabledXl: Story = {
+  name: 'Disabled: xl',
+  args: {
+    label: 'Search',
+    '?disabled': true,
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
 // #endregion
 
 // #region State: color focus
@@ -828,6 +934,33 @@ export const ColorFocusLg: Story = {
     label: 'Search',
     colorFocus: true,
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const ColorFocusXl: Story = {
+  name: 'Color focus: xl',
+  args: {
+    label: 'Search',
+    colorFocus: true,
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     id: 'autocomplete',
@@ -931,6 +1064,33 @@ export const LoadingLg: Story = {
     `,
   },
 }
+
+export const LoadingXl: Story = {
+  name: 'Loading: xl',
+  args: {
+    label: 'Search',
+    loading: true,
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
 // #endregion
 
 // #region State: error
@@ -1014,6 +1174,33 @@ export const ErrorLg: Story = {
     `,
   },
 }
+
+export const ErrorXl: Story = {
+  name: 'Error: xl',
+  args: {
+    label: 'Search',
+    error: 'Please select a valid value',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
 // #endregion
 
 // #region State: clearable
@@ -1077,6 +1264,33 @@ export const ClearableLg: Story = {
     label: 'Search',
     clearable: true,
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const ClearableXl: Story = {
+  name: 'Clearable: xl',
+  args: {
+    label: 'Search',
+    clearable: true,
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     id: 'autocomplete',
@@ -1197,6 +1411,52 @@ export const SlotIconLg: Story = {
   args: {
     label: 'Search',
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[280px]',
+    },
+    icon: html`
+      <svg
+        class="nui-autocomplete-icon-inner"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21l-4.35-4.35" />
+        </g>
+      </svg>
+    `,
+    items: html`
+      ${languages.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              <span>${item.name}</span>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const SlotIconXl: Story = {
+  name: 'Icon slot: xl',
+  args: {
+    label: 'Search',
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     id: 'autocomplete',
@@ -1473,6 +1733,84 @@ export const MediaIconLg: Story = {
     `,
   },
 }
+
+export const MediaIconXl: Story = {
+  name: 'Media icon: xl',
+  args: {
+    label: 'Search',
+    labelFloat: true,
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search languages...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
+    },
+    icon: html`
+      <svg
+        class="nui-autocomplete-icon-inner"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21l-4.35-4.35" />
+        </g>
+      </svg>
+    `,
+    items: html`
+      ${activities.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              ${IconBox({
+                size: 'sm',
+                children: item.icon,
+              })}
+              <div>
+                <h4
+                  class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-white"
+                >
+                  ${item.title}
+                </h4>
+                <p class="nui-paragraph nui-paragraph-xs text-muted-400">
+                  ${item.subtitle}
+                </p>
+              </div>
+              <div class="nui-autocomplete-results-item-selected">
+                <svg
+                  class="nui-autocomplete-results-item-selected-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 6L9 17l-5-5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
 // #endregion
 
 // #region Slot: media img
@@ -1484,7 +1822,7 @@ export const MediaImgSm: Story = {
     contrast: 'default',
     rounded: 'sm',
     id: 'autocomplete',
-    placeholder: 'Search activities...',
+    placeholder: 'Search people...',
     classes: {
       wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
@@ -1561,7 +1899,7 @@ export const MediaImgMd: Story = {
     contrast: 'default',
     rounded: 'sm',
     id: 'autocomplete',
-    placeholder: 'Search languages...',
+    placeholder: 'Search people...',
     classes: {
       wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },
@@ -1638,7 +1976,84 @@ export const MediaImgLg: Story = {
     contrast: 'default',
     rounded: 'sm',
     id: 'autocomplete',
-    placeholder: 'Search languages...',
+    placeholder: 'Search people...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
+    },
+    icon: html`
+      <svg
+        class="nui-autocomplete-icon-inner"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21l-4.35-4.35" />
+        </g>
+      </svg>
+    `,
+    items: html`
+      ${people.map(
+        (item) => html`
+          <div class="nui-autocomplete-results-item">
+            <div class="nui-autocomplete-results-item-inner">
+              ${Avatar({
+                size: 'sm',
+                src: item.img,
+              })}
+              <div>
+                <h4
+                  class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-white"
+                >
+                  ${item.name}
+                </h4>
+                <p class="nui-paragraph nui-paragraph-xs text-muted-400">
+                  ${item.role}
+                </p>
+              </div>
+              <div class="nui-autocomplete-results-item-selected">
+                <svg
+                  class="nui-autocomplete-results-item-selected-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 6L9 17l-5-5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const MediaImgXl: Story = {
+  name: 'Media img: xl',
+  args: {
+    label: 'Search',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'autocomplete',
+    placeholder: 'Search people...',
     classes: {
       wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
     },

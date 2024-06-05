@@ -12,6 +12,7 @@ export const size = {
   sm: 'nui-autocomplete-sm',
   md: 'nui-autocomplete-md',
   lg: 'nui-autocomplete-lg',
+  xl: 'nui-autocomplete-xl',
 } as const satisfies AutocompleteVariant<'size'>
 
 export const contrast = {

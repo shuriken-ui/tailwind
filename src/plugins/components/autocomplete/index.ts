@@ -297,6 +297,30 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Size:xl
+      '&.nui-autocomplete-xl': {
+        '.nui-autocomplete-label': {
+          [`@apply pb-1 text-${config.size.xl.font.size}`]: {},
+        },
+        '.nui-label-float': {
+          '@apply top-[1.1rem]': {},
+        },
+        '.nui-autocomplete-icon': {
+          [`@apply h-${config.size.xl.icon.size.outer} w-${config.size.xl.icon.size.outer}`]:
+            {},
+          '.nui-autocomplete-icon-inner': {
+            [`@apply h-${config.size.xl.icon.size.inner} w-${config.size.xl.icon.size.inner}`]:
+              {},
+          },
+        },
+        '.nui-autocomplete-placeload': {
+          [`@apply h-${config.size.xl.placeload.size}`]: {},
+        },
+        '.nui-autocomplete-clear': {
+          [`@apply h-${config.size.xl.clear.size} w-${config.size.xl.clear.size}`]:
+            {},
+        },
+      },
       //Color:default
       '&.nui-autocomplete-default': {
         '.nui-autocomplete-input': {
@@ -523,6 +547,20 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Size:xl without icon
+      '&:not(.nui-has-icon).nui-autocomplete-xl': {
+        '.nui-autocomplete-input': {
+          [`@apply h-14 py-2 text-${config.icon.disabled.input.xl.font.size} leading-5 px-4`]:
+            {},
+        },
+      },
+      //Size:xl with icon
+      '&.nui-has-icon.nui-autocomplete-xl': {
+        '.nui-autocomplete-input': {
+          [`@apply h-14 py-2 text-${config.icon.enabled.input.xl.font.size} leading-5 pe-4 ps-12`]:
+            {},
+        },
+      },
       //Size:sm without icon and label float
       '&.nui-autocomplete-label-float:not(.nui-has-icon).nui-autocomplete-sm': {
         '.nui-label-float': {
@@ -586,7 +624,7 @@ export default plugin(({ addComponents, theme }) => {
       //Size:lg without icon and label float
       '&.nui-autocomplete-label-float:not(.nui-has-icon).nui-autocomplete-lg': {
         '.nui-label-float': {
-          [`@apply start-3 -ms-3 -mt-8 text-${config.icon.disabled.label.float.lg.font.size.base}`]:
+          [`@apply start-3 -ms-3 -mt-9 text-${config.icon.disabled.label.float.lg.font.size.base}`]:
             {},
         },
         '.nui-autocomplete-input:focus-visible ~ .nui-label-float': {
@@ -601,7 +639,7 @@ export default plugin(({ addComponents, theme }) => {
       //Size:lg with icon and label float
       '&.nui-autocomplete-label-float.nui-has-icon.nui-autocomplete-lg': {
         '.nui-label-float': {
-          [`@apply start-11 -ms-10 -mt-8 text-${config.icon.enabled.label.float.lg.font.size.base}`]:
+          [`@apply start-11 -ms-10 -mt-9 text-${config.icon.enabled.label.float.lg.font.size.base}`]:
             {},
         },
         '.nui-autocomplete-input:focus-visible ~ .nui-label-float': {
@@ -610,6 +648,36 @@ export default plugin(({ addComponents, theme }) => {
         },
         '.nui-autocomplete-input:placeholder-shown ~ .nui-label-float': {
           [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.lg.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //Size:xl without icon and label float
+      '&.nui-autocomplete-label-float:not(.nui-has-icon).nui-autocomplete-xl': {
+        '.nui-label-float': {
+          [`@apply start-3 -ms-3 -mt-10 text-${config.icon.disabled.label.float.xl.font.size.base}`]:
+            {},
+        },
+        '.nui-autocomplete-input:focus-visible ~ .nui-label-float': {
+          [`@apply !-ms-3 !-mt-10 !text-${config.icon.disabled.label.float.xl.font.size.focus}`]:
+            {},
+        },
+        '.nui-autocomplete-input:placeholder-shown ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.disabled.label.float.xl.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //Size:xl with icon and label float
+      '&.nui-autocomplete-label-float.nui-has-icon.nui-autocomplete-xl': {
+        '.nui-label-float': {
+          [`@apply start-[3.25rem] -ms-[3.25rem] -mt-10 text-${config.icon.enabled.label.float.xl.font.size.base}`]:
+            {},
+        },
+        '.nui-autocomplete-input:focus-visible ~ .nui-label-float': {
+          [`@apply !-ms-[3.25rem] !-mt-10 !text-${config.icon.enabled.label.float.xl.font.size.focus}`]:
+            {},
+        },
+        '.nui-autocomplete-input:placeholder-shown ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.xl.font.size.unfocus}`]:
             {},
         },
       },
