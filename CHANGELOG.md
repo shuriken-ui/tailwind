@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/shuriken-ui/tailwind/compare/v3.0.4...v3.1.0) (2024-06-06)
+
+
+### 🚀 Features
+
+* **Autocomplete:** add xl size ([ca67808](https://github.com/shuriken-ui/tailwind/commit/ca6780847639845888da6a69e7c0ddd0d62ca632))
+* **ButtonClose:** add xl size ([30c1f92](https://github.com/shuriken-ui/tailwind/commit/30c1f928e872e05dd4482bd4b38a53d80b9f992e))
+* **ButtonIcon:** add xl size ([9092677](https://github.com/shuriken-ui/tailwind/commit/90926774158ef7b4f55bbc57e1af7ae6a7f52925))
+* **Input:** add xl size ([2c0de2e](https://github.com/shuriken-ui/tailwind/commit/2c0de2edf55ca24d6fbb942050d7f74bf3d66780))
+* **InputFile:** add xl size ([6398560](https://github.com/shuriken-ui/tailwind/commit/6398560d11148ab153ab5052942c186b8aee7db4))
+* **InputNumber:** add xl size ([8e58e6c](https://github.com/shuriken-ui/tailwind/commit/8e58e6c05b595938a5c2759653e7a792c4cb56d3))
+* **Listbox:** add xl size ([fb78f84](https://github.com/shuriken-ui/tailwind/commit/fb78f84aa03943cf06a8363d6a85a81bc3c8317b))
+* **Select:** add xl size ([0c0d9a9](https://github.com/shuriken-ui/tailwind/commit/0c0d9a9024d98a1b62b508a22e26054450e7dfc5))
+
+
+### 🩹 Bug Fixes
+
+* **Input:** adjust font size configuration ([93b81a2](https://github.com/shuriken-ui/tailwind/commit/93b81a2add4aed7e79d88785fd3f02e2a4fb6bf0))
+* **Input:** fix xl input icon size ([e655061](https://github.com/shuriken-ui/tailwind/commit/e655061817b32be1b86528159f4a98572a42d42b))
+* **InputNumber:** fix xl input icon size ([92eaabc](https://github.com/shuriken-ui/tailwind/commit/92eaabc583a41d373eaa97208b76fc81f3b49218))
+* **Select:** fix xl select icon size ([be072f6](https://github.com/shuriken-ui/tailwind/commit/be072f6ad766352127630d86c368d93ac05907c1))
+
 ### [3.0.4](https://github.com/shuriken-ui/tailwind/compare/v3.0.3...v3.0.4) (2024-04-11)
 
 
