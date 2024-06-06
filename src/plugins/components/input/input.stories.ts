@@ -1079,7 +1079,7 @@ export const SlotActionXl: Story = {
         data-nui-tooltip="Show password"
       >
         <svg
-          class="w-6 h-6"
+          class="w-5 h-5"
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"
