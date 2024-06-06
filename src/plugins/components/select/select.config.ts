@@ -182,7 +182,7 @@ export const defaultConfig = {
           size: '14',
         },
         inner: {
-          size: '6',
+          size: '5',
         },
       },
       placeload: {
