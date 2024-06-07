@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.1](https://github.com/shuriken-ui/tailwind/compare/v3.1.0...v3.1.1) (2024-06-07)
+
+
+### 🩹 Bug Fixes
+
+* **ButtonGroup:** fix select last child border radius ([7d21674](https://github.com/shuriken-ui/tailwind/commit/7d2167438168dc8d1f9528c05741a8ee26683627))
+
 ## [3.1.0](https://github.com/shuriken-ui/tailwind/compare/v3.0.4...v3.1.0) (2024-06-06)
 
 
