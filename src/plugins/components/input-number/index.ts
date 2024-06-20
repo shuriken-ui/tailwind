@@ -52,7 +52,7 @@ export default plugin(({ addComponents, theme }) => {
       },
       //Input:buttons
       '.nui-input-number-buttons': {
-        '@apply absolute top-1 end-1 flex': {},
+        '@apply absolute top-1 end-1 flex z-10': {},
       },
       //Buttons:button
       '.nui-input-number-buttons > button': {
