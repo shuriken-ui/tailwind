@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.2](https://github.com/shuriken-ui/tailwind/compare/v3.1.1...v3.1.2) (2024-06-26)
+
+
+### 🩹 Bug Fixes
+
+* **input-number:** set inc/dec buttons z-index ([952f052](https://github.com/shuriken-ui/tailwind/commit/952f0523a8bac77cae0d3e22cb98e0cb4edcb5c8))
+
 ### [3.1.1](https://github.com/shuriken-ui/tailwind/compare/v3.1.0...v3.1.1) (2024-06-07)
 
 
