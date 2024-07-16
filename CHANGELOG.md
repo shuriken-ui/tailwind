@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.3](https://github.com/shuriken-ui/tailwind/compare/v3.1.2...v3.1.3) (2024-07-16)
+
+
+### 💅 Refactors
+
+* **Dropdown:** move .nui-dropdown-menu outside the scope of .nui-dropdown ([#69](https://github.com/shuriken-ui/tailwind/issues/69)) ([48f3542](https://github.com/shuriken-ui/tailwind/commit/48f3542b9dc39ec7082657b52095053435c6e63e))
+
 ### [3.1.2](https://github.com/shuriken-ui/tailwind/compare/v3.1.1...v3.1.2) (2024-06-26)
 
 
