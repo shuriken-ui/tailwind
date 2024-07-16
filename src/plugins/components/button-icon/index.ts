@@ -24,18 +24,23 @@ export default plugin(({ addComponents, theme }) => {
       [`@apply transition-${config.transition.property} duration-${config.transition.duration}`]:
         {},
       //Size:sm
-      '&.nui-button-small': {
+      '&.nui-button-sm': {
         [`@apply h-${config.size.sm.size} w-${config.size.sm.size} p-${config.size.sm.padding}`]:
           {},
       },
       //Size:md
-      '&.nui-button-medium': {
+      '&.nui-button-md': {
         [`@apply h-${config.size.md.size} w-${config.size.md.size} p-${config.size.md.padding}`]:
           {},
       },
       //Size:lg
-      '&.nui-button-large': {
+      '&.nui-button-lg': {
         [`@apply h-${config.size.lg.size} w-${config.size.lg.size} p-${config.size.lg.padding}`]:
+          {},
+      },
+      //Size:xl
+      '&.nui-button-xl': {
+        [`@apply h-${config.size.xl.size} w-${config.size.xl.size} p-${config.size.xl.padding}`]:
           {},
       },
       //Rounded:sm

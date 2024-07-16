@@ -22,7 +22,7 @@ const meta = {
     },
     size: {
       control: { type: 'select' },
-      options: ['sm', 'md', 'lg'],
+      options: ['sm', 'md', 'lg', 'xl'],
       defaultValue: 'md',
     },
     rounded: {
@@ -256,6 +256,27 @@ export const SizeLg: Story = {
     },
   },
 }
+
+export const SizeXl: Story = {
+  name: 'Size: xl',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
 // #endregion
 
 // #region Contrast: muted
@@ -307,6 +328,27 @@ export const ContrastMutedLg: Story = {
     id: 'select',
     label: 'Superhero',
     size: 'lg',
+    contrast: 'muted',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
+
+export const ContrastMutedXl: Story = {
+  name: 'Muted: xl',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    size: 'xl',
     contrast: 'muted',
     rounded: 'sm',
     placeholder: 'Choose a hero...',
@@ -389,6 +431,28 @@ export const LabelFloatLg: Story = {
     },
   },
 }
+
+export const LabelFloatXl: Story = {
+  name: 'Label float: xl',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    labelFloat: true,
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
 // #endregion
 
 // #region State: disabled
@@ -443,6 +507,28 @@ export const DisabledLg: Story = {
     label: 'Superhero',
     '?disabled': true,
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
+
+export const DisabledXl: Story = {
+  name: 'Disabled: xl',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    '?disabled': true,
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     placeholder: 'Choose a hero...',
@@ -525,6 +611,28 @@ export const ColorFocusLg: Story = {
     },
   },
 }
+
+export const ColorFocusXl: Story = {
+  name: 'Color focus: xl',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    colorFocus: true,
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
 // #endregion
 
 // #region State: loading
@@ -593,6 +701,28 @@ export const LoadingLg: Story = {
     },
   },
 }
+
+export const LoadingXl: Story = {
+  name: 'Loading: xl',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    loading: true,
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
 // #endregion
 
 // #region State: error
@@ -647,6 +777,28 @@ export const ErrorLg: Story = {
     label: 'Superhero',
     error: 'Please select a valid value',
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
+
+export const ErrorXl: Story = {
+  name: 'Error: xl',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    error: 'Please select a valid value',
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     placeholder: 'Choose a hero...',
@@ -798,6 +950,51 @@ export const SlotIconLg: Story = {
     },
   },
 }
+
+export const SlotIconXl: Story = {
+  name: 'Icon slot: xl',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    icon: html`
+      <svg
+        class="nui-select-icon-inner"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <path
+            d="M2 12a5 5 0 0 0 5 5a8 8 0 0 1 5 2a8 8 0 0 1 5-2a5 5 0 0 0 5-5V7h-5a8 8 0 0 0-5 2a8 8 0 0 0-5-2H2Z"
+          />
+          <path
+            d="M6 11c1.5 0 3 .5 3 2c-2 0-3 0-3-2Zm12 0c-1.5 0-3 .5-3 2c2 0 3 0 3-2Z"
+          />
+        </g>
+      </svg>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
 // #endregion
 
 // #region Slot: icon float
@@ -900,6 +1097,52 @@ export const SlotIconFloatLg: Story = {
     label: 'Superhero',
     labelFloat: true,
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    placeholder: 'Choose a hero...',
+    options: html`
+      <option value="1">Superman</option>
+      <option value="2">Batman</option>
+      <option value="3">Spiderman</option>
+      <option value="4">Ironman</option>
+    `,
+    icon: html`
+      <svg
+        class="nui-select-icon-inner"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <path
+            d="M2 12a5 5 0 0 0 5 5a8 8 0 0 1 5 2a8 8 0 0 1 5-2a5 5 0 0 0 5-5V7h-5a8 8 0 0 0-5 2a8 8 0 0 0-5-2H2Z"
+          />
+          <path
+            d="M6 11c1.5 0 3 .5 3 2c-2 0-3 0-3-2Zm12 0c-1.5 0-3 .5-3 2c2 0 3 0 3-2Z"
+          />
+        </g>
+      </svg>
+    `,
+    classes: {
+      wrapper: 'w-60 max-w-xs',
+    },
+  },
+}
+
+export const SlotIconFloatXl: Story = {
+  name: 'Icon float: xl',
+  args: {
+    id: 'select',
+    label: 'Superhero',
+    labelFloat: true,
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     placeholder: 'Choose a hero...',

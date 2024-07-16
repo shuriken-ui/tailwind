@@ -12,6 +12,7 @@ export const size = {
   sm: 'nui-input-number-sm',
   md: 'nui-input-number-md',
   lg: 'nui-input-number-lg',
+  xl: 'nui-input-number-xl',
 } as const satisfies InputVariant<'size'>
 
 export const contrast = {

@@ -16,7 +16,7 @@ export interface ButtonIconProps extends Record<string, unknown> {
     | 'warning'
     | 'danger'
     | 'none'
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xl'
   loading?: boolean
   classes?: {
     wrapper?: string | string[]

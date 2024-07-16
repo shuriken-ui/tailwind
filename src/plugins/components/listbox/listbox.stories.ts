@@ -24,7 +24,7 @@ const meta = {
     },
     size: {
       control: { type: 'select' },
-      options: ['sm', 'md', 'lg'],
+      options: ['sm', 'md', 'lg', 'xl'],
       defaultValue: 'md',
     },
     rounded: {
@@ -635,6 +635,53 @@ export const SizeLg: Story = {
     `,
   },
 }
+
+export const SizeXl: Story = {
+  name: 'Size: xl',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
 // #endregion
 
 // #region Contrast: muted
@@ -738,6 +785,53 @@ export const ContrastMutedLg: Story = {
     value: languages[0].name,
     label: 'Languages',
     size: 'lg',
+    contrast: 'muted',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const ContrastMutedXl: Story = {
+  name: 'Contrast muted: xl',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    size: 'xl',
     contrast: 'muted',
     rounded: 'sm',
     id: 'listbox',
@@ -924,6 +1018,54 @@ export const LabelFloatLg: Story = {
     `,
   },
 }
+
+export const LabelFloatXl: Story = {
+  name: 'Label float: xl',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    labelFloat: true,
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
 // #endregion
 
 // #region State: disabled
@@ -1030,6 +1172,54 @@ export const DisabledLg: Story = {
     label: 'Languages',
     '?disabled': true,
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const DisabledXl: Story = {
+  name: 'State disabled: xl',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    '?disabled': true,
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     id: 'listbox',
@@ -1216,6 +1406,54 @@ export const ColorFocusLg: Story = {
     `,
   },
 }
+
+export const ColorFocusXl: Story = {
+  name: 'State color focus: xl',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    colorFocus: true,
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
 // #endregion
 
 // #region State: loading
@@ -1322,6 +1560,54 @@ export const LoadingLg: Story = {
     label: 'Languages',
     loading: true,
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const LoadingXl: Story = {
+  name: 'State loading: xl',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    loading: true,
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     id: 'listbox',
@@ -1508,6 +1794,54 @@ export const ErrorLg: Story = {
     `,
   },
 }
+
+export const ErrorXl: Story = {
+  name: 'State error: xl',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    error: 'Please select a valid value',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
 // #endregion
 
 // #region Slot: icon
@@ -1649,6 +1983,72 @@ export const SlotIconLg: Story = {
     value: languages[0].name,
     label: 'Languages',
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[260px]',
+    },
+    icon: html`
+      <svg
+        class="nui-listbox-icon-inner"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 256 256"
+      >
+        <g fill="currentColor">
+          <path
+            d="M224 56v144a8 8 0 0 1-8 8H40a8 8 0 0 1-8-8V56a8 8 0 0 1 8-8h176a8 8 0 0 1 8 8Z"
+            opacity=".2"
+          />
+          <path
+            d="M128 128a8 8 0 0 1-3 6.25l-40 32a8 8 0 1 1-10-12.5L107.19 128L75 102.25a8 8 0 1 1 10-12.5l40 32a8 8 0 0 1 3 6.25Zm48 24h-40a8 8 0 0 0 0 16h40a8 8 0 0 0 0-16Zm56-96v144a16 16 0 0 1-16 16H40a16 16 0 0 1-16-16V56a16 16 0 0 1 16-16h176a16 16 0 0 1 16 16Zm-16 144V56H40v144h176Z"
+          />
+        </g>
+      </svg>
+    `,
+    items: html`
+      ${languages.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            <span class="font-sans">${item.name}</span>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const SlotIconXl: Story = {
+  name: 'Slot icon: xl',
+  args: {
+    value: languages[0].name,
+    label: 'Languages',
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     id: 'listbox',
@@ -1947,6 +2347,85 @@ export const MediaIconLg: Story = {
     `,
   },
 }
+
+export const MediaIconXl: Story = {
+  name: 'Media icon: xl',
+  args: {
+    value: activities[0].title,
+    label: 'Languages',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
+    },
+    icon: html`
+      <svg
+        class="nui-listbox-icon-inner"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 256 256"
+      >
+        <g fill="currentColor">
+          <path
+            d="M141.66 201L129 213.66a8 8 0 0 1-11.32 0L92 188l-33.65 33.66a8 8 0 0 1-11.32 0L34.34 209a8 8 0 0 1 0-11.31L68 164l-25.66-25.64a8 8 0 0 1 0-11.32L55 114.34a8 8 0 0 1 11.32 0l75.3 75.3a8 8 0 0 1 .04 11.36Z"
+            opacity=".2"
+          />
+          <path
+            d="M216 32h-64a8 8 0 0 0-6.34 3.12l-64 83.21l-9.66-9.64a16 16 0 0 0-22.64 0l-12.69 12.7a16 16 0 0 0 0 22.63l20 20l-28 28a16 16 0 0 0 0 22.63l12.69 12.68a16 16 0 0 0 22.62 0l28-28l20 20a16 16 0 0 0 22.64 0l12.69-12.7a16 16 0 0 0 0-22.63l-9.64-9.64l83.21-64A8 8 0 0 0 224 104V40a8 8 0 0 0-8-8ZM52.69 216L40 203.32l28-28L80.68 188Zm70.61-8L48 132.71L60.7 120l75.3 75.31ZM208 100.06l-81.74 62.88L115.32 152l50.34-50.34a8 8 0 0 0-11.32-11.31L104 140.68l-10.93-10.94L155.94 48H208Z"
+          />
+        </g>
+      </svg>
+    `,
+    items: html`
+      ${activities.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            ${IconBox({
+              size: 'sm',
+              children: item.icon,
+            })}
+            <div class="nui-listbox-option-inner">
+              <h4
+                class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-white"
+              >
+                ${item.title}
+              </h4>
+              <p class="nui-paragraph nui-paragraph-xs text-muted-400">
+                ${item.subtitle}
+              </p>
+            </div>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
 // #endregion
 
 // #region Slot: media img
@@ -2088,6 +2567,72 @@ export const MediaImgLg: Story = {
     value: people[0].name,
     label: 'Languages',
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    id: 'listbox',
+    placeholder: 'Select a language...',
+    classes: {
+      wrapper: 'min-w-[280px] max-w-[280px] min-h-[360px]',
+    },
+    icon: html`
+      ${Avatar({
+        size: 'xxs',
+        src: people[0].img,
+      })}
+    `,
+    items: html`
+      ${people.map(
+        (item, index) => html`
+          <div class="nui-listbox-option">
+            ${Avatar({
+              size: 'xs',
+              src: item.img,
+            })}
+            <div class="nui-listbox-option-inner">
+              <h4
+                class="nui-heading nui-heading-sm nui-weight-medium text-muted-800 dark:text-white"
+              >
+                ${item.name}
+              </h4>
+              <p class="nui-paragraph nui-paragraph-xs text-muted-400">
+                ${item.role}
+              </p>
+            </div>
+            ${index === 0
+              ? html`
+                  <div class="nui-listbox-selected-icon">
+                    <svg
+                      class="nui-listbox-selected-icon-inner"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"
+                      />
+                    </svg>
+                  </div>
+                `
+              : ''}
+          </div>
+        `,
+      )}
+    `,
+  },
+}
+
+export const MediaImgXl: Story = {
+  name: 'Media img: xl',
+  args: {
+    value: people[0].name,
+    label: 'Languages',
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     id: 'listbox',

@@ -22,7 +22,7 @@ const meta = {
     },
     size: {
       control: { type: 'select' },
-      options: ['sm', 'md', 'lg'],
+      options: ['sm', 'md', 'lg', 'xl'],
       defaultValue: 'md',
     },
     rounded: {
@@ -193,6 +193,20 @@ export const SizeLg: Story = {
     },
   },
 }
+
+export const SizeXl: Story = {
+  name: 'Size: xl',
+  args: {
+    id: 'input-file',
+    label: 'Upload files',
+    size: 'xl',
+    rounded: 'sm',
+    placeholder: 'Select files',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
 // #endregion
 
 // #region State: color focus
@@ -232,6 +246,21 @@ export const ColorFocusLg: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'lg',
+    rounded: 'sm',
+    colorFocus: true,
+    placeholder: 'Select file',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
+
+export const ColorFocusXl: Story = {
+  name: 'Color focus: xl',
+  args: {
+    id: 'input-file',
+    label: 'Upload files',
+    size: 'xl',
     rounded: 'sm',
     colorFocus: true,
     placeholder: 'Select file',
@@ -287,6 +316,21 @@ export const DisabledLg: Story = {
     },
   },
 }
+
+export const DisabledXl: Story = {
+  name: 'Disabled: xl',
+  args: {
+    id: 'input-file',
+    label: 'Upload files',
+    size: 'xl',
+    rounded: 'sm',
+    '?disabled': true,
+    placeholder: 'Select file',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
 // #endregion
 
 // #region State: loading
@@ -334,6 +378,21 @@ export const LoadingLg: Story = {
     },
   },
 }
+
+export const LoadingXl: Story = {
+  name: 'Loading: xl',
+  args: {
+    id: 'input-file',
+    label: 'Upload files',
+    size: 'xl',
+    rounded: 'sm',
+    loading: true,
+    placeholder: 'Select file',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
 // #endregion
 
 // #region State: error
@@ -373,6 +432,21 @@ export const ErrorLg: Story = {
     id: 'input-file',
     label: 'Upload files',
     size: 'lg',
+    rounded: 'sm',
+    error: 'Please select valid files',
+    placeholder: 'Select file',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
+
+export const ErrorXl: Story = {
+  name: 'Error: xl',
+  args: {
+    id: 'input-file',
+    label: 'Upload files',
+    size: 'xl',
     rounded: 'sm',
     error: 'Please select valid files',
     placeholder: 'Select file',

@@ -191,6 +191,14 @@ export const Lg: Story = {
     rounded: 'sm',
   },
 }
+export const Xl: Story = {
+  name: 'Size: xl',
+  args: {
+    size: 'xl',
+    label: 'Button',
+    rounded: 'sm',
+  },
+}
 // #endregion
 
 // #region Variants:solid

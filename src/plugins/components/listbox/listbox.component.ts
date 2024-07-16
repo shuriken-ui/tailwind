@@ -90,7 +90,7 @@ export const Listbox = ({
         </div>
         ${loading &&
         html`
-          <div class="nui-listbox-placeload">
+          <div class="nui-listbox-placeload nui-loading-placeload">
             <span class="nui-placeload animate-nui-placeload"></span>
           </div>
         `}

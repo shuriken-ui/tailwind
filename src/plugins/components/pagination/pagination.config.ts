@@ -68,7 +68,7 @@ export const defaultConfig = {
     },
   },
   link: {
-    padding: '1',
+    padding: '4',
     size: '10',
     font: {
       family: 'sans',

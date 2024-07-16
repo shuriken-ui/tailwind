@@ -187,6 +187,31 @@ export default plugin(({ addComponents, theme }) => {
           [`@apply h-${config.size.lg.placeload.size}`]: {},
         },
       },
+      //Size:xl
+      '&.nui-input-xl': {
+        //Input:label
+        '.nui-input-label': {
+          [`@apply pb-1 text-${config.size.xl.label.font.size}`]: {},
+        },
+        //Label:float
+        '.nui-label-float': {
+          '@apply top-[1.1rem]': {},
+        },
+        //Input:icon && Input:action
+        '.nui-input-icon, .nui-input-action': {
+          [`@apply h-${config.size.xl.icon.outer.size} w-${config.size.xl.icon.outer.size}`]:
+            {},
+
+          '.nui-input-icon-inner, .nui-input-action-inner': {
+            [`@apply h-${config.size.xl.icon.inner.size} w-${config.size.xl.icon.inner.size}`]:
+              {},
+          },
+        },
+        //Input:placeload
+        '.nui-input-placeload': {
+          [`@apply h-${config.size.xl.placeload.size}`]: {},
+        },
+      },
       //Color:default
       '&.nui-input-default': {
         '.nui-input': {
@@ -360,6 +385,20 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Without icon && Size:xl
+      '&:not(.nui-has-icon).nui-input-xl': {
+        '.nui-input': {
+          [`@apply h-14 py-2 text-${config.icon.disabled.input.xl.font.size} leading-5 px-4`]:
+            {},
+        },
+      },
+      //With icon && Size:xl
+      '&.nui-has-icon.nui-input-xl': {
+        '.nui-input': {
+          [`@apply h-14 py-2 text-${config.icon.enabled.input.xl.font.size} leading-5 pe-4 ps-[3.25rem]`]:
+            {},
+        },
+      },
       //With action && Size:sm
       '&.nui-has-action.nui-input-sm': {
         '.nui-input': {
@@ -376,6 +415,12 @@ export default plugin(({ addComponents, theme }) => {
       '&.nui-has-action.nui-input-lg': {
         '.nui-input': {
           [`@apply pe-${config.input.action.padding.lg}`]: {},
+        },
+      },
+      //With action && Size:xl
+      '&.nui-has-action.nui-input-xl': {
+        '.nui-input': {
+          [`@apply pe-${config.input.action.padding.xl}`]: {},
         },
       },
       //Without icon && Size:sm && Label:float
@@ -438,7 +483,7 @@ export default plugin(({ addComponents, theme }) => {
       //Without icon && Size:lg && Label:float
       '&.nui-input-label-float:not(.nui-has-icon).nui-input-lg': {
         '.nui-label-float': {
-          [`@apply start-3 -ms-3 -mt-8 text-${config.icon.disabled.label.float.lg.font.size.base}`]:
+          [`@apply start-3 -ms-3 -mt-9 text-${config.icon.disabled.label.float.lg.font.size.base}`]:
             {},
         },
         '.nui-input:focus-visible ~ .nui-label-float': {
@@ -453,7 +498,7 @@ export default plugin(({ addComponents, theme }) => {
       //With icon && Size:lg && Label:float
       '&.nui-input-label-float.nui-has-icon.nui-input-lg': {
         '.nui-label-float': {
-          [`@apply start-11 -ms-10 -mt-8 text-${config.icon.enabled.label.float.lg.font.size.base}`]:
+          [`@apply start-11 -ms-9 -mt-10 text-${config.icon.enabled.label.float.lg.font.size.base}`]:
             {},
         },
         '.nui-input:focus-visible ~ .nui-label-float': {
@@ -462,6 +507,37 @@ export default plugin(({ addComponents, theme }) => {
         },
         '.nui-input:placeholder-shown ~ .nui-label-float': {
           [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.lg.font.size.unfocus}`]:
+            {},
+        },
+      },
+
+      //Without icon && Size:xl && Label:float
+      '&.nui-input-label-float:not(.nui-has-icon).nui-input-xl': {
+        '.nui-label-float': {
+          [`@apply start-3 -ms-3 -mt-10 text-${config.icon.disabled.label.float.xl.font.size.base}`]:
+            {},
+        },
+        '.nui-input:focus-visible ~ .nui-label-float': {
+          [`@apply !-ms-3 !-mt-10 !text-${config.icon.disabled.label.float.xl.font.size.focus}`]:
+            {},
+        },
+        '.nui-input:placeholder-shown ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.disabled.label.float.xl.font.size.unfocus}`]:
+            {},
+        },
+      },
+      //With icon && Size:xl && Label:float
+      '&.nui-input-label-float.nui-has-icon.nui-input-xl': {
+        '.nui-label-float': {
+          [`@apply start-[3.25rem] ms-[-3.25rem] -mt-8 text-${config.icon.enabled.label.float.xl.font.size.base}`]:
+            {},
+        },
+        '.nui-input:focus-visible ~ .nui-label-float': {
+          [`@apply !ms-[-3.25rem] !-mt-10 !text-${config.icon.enabled.label.float.xl.font.size.focus}`]:
+            {},
+        },
+        '.nui-input:placeholder-shown ~ .nui-label-float': {
+          [`@apply ms-0 mt-0 text-${config.icon.enabled.label.float.xl.font.size.unfocus}`]:
             {},
         },
       },

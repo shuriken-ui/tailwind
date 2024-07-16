@@ -59,6 +59,15 @@ export default plugin(({ addComponents, theme }) => {
             {},
         },
       },
+      //Size:xl
+      '&.nui-button-xl': {
+        [`@apply h-${config.size.xl.outer} w-${config.size.xl.outer}`]: {},
+        //Icon
+        '.nui-button-icon': {
+          [`@apply h-${config.size.xl.inner} w-${config.size.xl.inner} fill-current`]:
+            {},
+        },
+      },
       //Rounded:sm
       '&.nui-button-rounded-sm': {
         [`@apply ${config.rounded.sm}`]: {},

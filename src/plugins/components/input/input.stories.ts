@@ -22,7 +22,7 @@ const meta = {
     },
     size: {
       control: { type: 'select' },
-      options: ['sm', 'md', 'lg'],
+      options: ['sm', 'md', 'lg', 'xl'],
       defaultValue: 'md',
     },
     rounded: {
@@ -204,6 +204,22 @@ export const SizeLg: Story = {
     },
   },
 }
+
+export const SizeXl: Story = {
+  name: 'Size: xl',
+  args: {
+    id: 'input',
+    label: 'Username',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    type: 'text',
+    placeholder: 'Choose a username...',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
 // #endregion
 
 // #region Contrast: muted
@@ -245,6 +261,22 @@ export const ContrastMutedLg: Story = {
     id: 'input',
     label: 'Username',
     size: 'lg',
+    contrast: 'muted',
+    rounded: 'sm',
+    type: 'text',
+    placeholder: 'Choose a username...',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
+
+export const ContrastMutedXl: Story = {
+  name: 'Contrast muted: xl',
+  args: {
+    id: 'input',
+    label: 'Username',
+    size: 'xl',
     contrast: 'muted',
     rounded: 'sm',
     type: 'text',
@@ -297,6 +329,23 @@ export const LabelFloatLg: Story = {
     id: 'input',
     label: 'Username',
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    labelFloat: true,
+    type: 'text',
+    placeholder: 'Choose a username...',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
+
+export const LabelFloatXl: Story = {
+  name: 'Label float: xl',
+  args: {
+    id: 'input',
+    label: 'Username',
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     labelFloat: true,
@@ -360,6 +409,23 @@ export const ColorFocusLg: Story = {
     },
   },
 }
+
+export const ColorFocusXl: Story = {
+  name: 'Color focus: xl',
+  args: {
+    id: 'input',
+    label: 'Username',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    colorFocus: true,
+    type: 'text',
+    placeholder: 'Choose a username...',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
 // #endregion
 
 // #region State: disabled
@@ -403,6 +469,23 @@ export const DisabledLg: Story = {
     id: 'input',
     label: 'Username',
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    '?disabled': true,
+    type: 'text',
+    placeholder: 'Choose a username...',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
+
+export const DisabledXl: Story = {
+  name: 'Disabled: xl',
+  args: {
+    id: 'input',
+    label: 'Username',
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     '?disabled': true,
@@ -466,6 +549,23 @@ export const LoadingLg: Story = {
     },
   },
 }
+
+export const LoadingXl: Story = {
+  name: 'Loading: xl',
+  args: {
+    id: 'input',
+    label: 'Username',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    loading: true,
+    type: 'text',
+    placeholder: 'Choose a username...',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
 // #endregion
 
 // #region State: error
@@ -509,6 +609,23 @@ export const ErrorLg: Story = {
     id: 'input',
     label: 'Username',
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    error: 'Please enter a valid value',
+    type: 'text',
+    placeholder: 'Choose a username...',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
+
+export const ErrorXl: Story = {
+  name: 'Error: xl',
+  args: {
+    id: 'input',
+    label: 'Username',
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     error: 'Please enter a valid value',
@@ -629,6 +746,42 @@ export const SlotIconLg: Story = {
     },
   },
 }
+
+export const SlotIconXl: Story = {
+  name: 'Slot icon: xl',
+  args: {
+    id: 'input',
+    label: 'Username',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    icon: html`
+      <svg
+        class="nui-input-icon-inner"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21l-4.35-4.35" />
+        </g>
+      </svg>
+    `,
+    type: 'text',
+    placeholder: 'Choose a username...',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
 // #endregion
 
 // #region Slot:icon float
@@ -712,6 +865,43 @@ export const SlotIconFloatLg: Story = {
     id: 'input',
     label: 'Username',
     size: 'lg',
+    contrast: 'default',
+    rounded: 'sm',
+    labelFloat: true,
+    icon: html`
+      <svg
+        class="nui-input-icon-inner"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21l-4.35-4.35" />
+        </g>
+      </svg>
+    `,
+    type: 'text',
+    placeholder: 'Choose a username...',
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+    },
+  },
+}
+
+export const SlotIconFloatXl: Story = {
+  name: 'Slot icon float: xl',
+  args: {
+    id: 'input',
+    label: 'Username',
+    size: 'xl',
     contrast: 'default',
     rounded: 'sm',
     labelFloat: true,
@@ -868,6 +1058,49 @@ export const SlotActionLg: Story = {
     classes: {
       wrapper: 'min-w-[260px] max-w-[260px]',
       input: 'pe-12',
+    },
+    type: 'password',
+    placeholder: 'Choose a password...',
+  },
+}
+
+export const SlotActionXl: Story = {
+  name: 'Slot icon: xl',
+  args: {
+    id: 'input',
+    label: 'Password',
+    size: 'xl',
+    contrast: 'default',
+    rounded: 'sm',
+    actionSlot: html`
+      <button
+        type="button"
+        class="absolute top-0 end-0 h-14 w-14 flex items-center justify-center text-muted-400 hover:text-primary-500 transition-colors duration-300"
+        data-nui-tooltip="Show password"
+      >
+        <svg
+          class="w-5 h-5"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path d="M2 12s3-7 10-7s10 7 10 7s-3 7-10 7s-10-7-10-7Z" />
+            <circle cx="12" cy="12" r="3" />
+          </g>
+        </svg>
+      </button>
+    `,
+    classes: {
+      wrapper: 'min-w-[260px] max-w-[260px]',
+      input: 'pe-14',
     },
     type: 'password',
     placeholder: 'Choose a password...',

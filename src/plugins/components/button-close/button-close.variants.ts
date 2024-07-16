@@ -13,6 +13,7 @@ export const size = {
   sm: 'nui-button-sm',
   md: 'nui-button-md',
   lg: 'nui-button-lg',
+  xl: 'nui-button-xl',
 } as const satisfies ButtonCloseVariant<'size'>
 
 export const color = {

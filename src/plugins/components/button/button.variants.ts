@@ -1,10 +1,10 @@
 import type { ButtonVariant } from './button.types'
 
 export const size = {
-  sm: 'nui-button-small',
-  md: 'nui-button-medium',
-  lg: 'nui-button-large',
-  xl: 'nui-button-big',
+  sm: 'nui-button-sm',
+  md: 'nui-button-md',
+  lg: 'nui-button-lg',
+  xl: 'nui-button-xl',
 } as const satisfies ButtonVariant<'size'>
 
 export const rounded = {

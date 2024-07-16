@@ -147,6 +147,16 @@ export default plugin(
           },
         },
 
+        '.nui-select-wrapper:last-child:not(:first-child)': {
+          '.nui-select': {
+            '@apply !border-e !rounded-s-none': {},
+
+            '&:focus': {
+              '@apply !z-10 relative': {},
+            },
+          },
+        },
+
         // Autocomplete
         '.nui-autocomplete:not(:first-child):not(:last-child)': {
           '.nui-autocomplete-input': {

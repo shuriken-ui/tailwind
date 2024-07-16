@@ -43,7 +43,8 @@ export default plugin(({ addComponents, theme }) => {
         //Buttons:button
         '.nui-pagination-button': {
           //Base
-          '@apply flex h-10 w-full items-center justify-center md:w-10': {},
+          '@apply nui-focus flex h-10 w-full items-center justify-center md:w-10':
+            {},
           //Font
           [`@apply font-${config.buttons.button.font.family} text-${config.buttons.button.font.size}`]:
             {},
@@ -75,11 +76,10 @@ export default plugin(({ addComponents, theme }) => {
       //Pagination:link
       '.nui-pagination-link': {
         //Base
-        '@apply flex items-center justify-center mb-4 md:mb-0 inline-flex flex-wrap gap-2 md:gap-1':
+        '@apply nui-focus flex items-center justify-center mb-0 inline-flex flex-wrap gap-2 md:gap-1':
           {},
         //Size
-        [`@apply h-${config.link.size} w-${config.link.size} p-${config.link.padding}`]:
-          {},
+        [`@apply h-${config.link.size} px-${config.link.padding}`]: {},
         //Font
         [`@apply font-${config.link.font.family} text-${config.link.font.size}`]:
           {},
@@ -162,7 +162,7 @@ export default plugin(({ addComponents, theme }) => {
       //Pagination:ellipsis
       '.nui-pagination-ellipsis': {
         //Base
-        [`@apply flex h-${config.ellipsis.size} w-${config.ellipsis.size} items-center justify-center`]:
+        [`@apply select-none flex h-${config.ellipsis.size} w-${config.ellipsis.size} items-center justify-center`]:
           {},
         //Font
         [`@apply font-${config.ellipsis.font.family} text-${config.ellipsis.font.size}`]:

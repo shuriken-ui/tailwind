@@ -7,7 +7,7 @@ export interface InputFileRegularProps extends Record<string, unknown> {
   placeholder?: string
   colorFocus?: boolean
   loading?: boolean
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xl'
   contrast?: 'default' | 'default-contrast'
   error?: string | boolean
   textValue?: (fileList?: FileList | null) => string

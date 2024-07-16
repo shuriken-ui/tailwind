@@ -18,6 +18,10 @@ export const defaultConfig = {
       outer: '12',
       inner: '5',
     },
+    xl: {
+      outer: '14',
+      inner: '6',
+    },
   },
   rounded: {
     none: 'rounded-none',

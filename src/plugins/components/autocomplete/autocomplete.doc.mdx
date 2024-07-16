@@ -72,10 +72,11 @@ Autocompletes shapes allow you to change the border radiuses. Below is an exampl
 
 Autocomplete size allows you to change the input size.
 
-<div className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.SizeSm} />
   <Story of={AutocompleteStories.SizeMd} />
   <Story of={AutocompleteStories.SizeLg} />
+  <Story of={AutocompleteStories.SizeXl} />
 </div>
 
 <br />
@@ -84,10 +85,11 @@ Autocomplete size allows you to change the input size.
 
 Autocompletes can have different contrasts, making their background color heavier in dark mode.
 
-<div className="flex items-end gap-2 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 border border-muted-200 dark:border-muted-800 bg-white dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.ContrastMutedSm} />
   <Story of={AutocompleteStories.ContrastMutedMd} />
   <Story of={AutocompleteStories.ContrastMutedLg} />
+  <Story of={AutocompleteStories.ContrastMutedXl} />
 </div>
 
 <br />
@@ -96,10 +98,11 @@ Autocompletes can have different contrasts, making their background color heavie
 
 Autocompletes can have a floating label instead of the regular label.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.LabelFloatSm} />
   <Story of={AutocompleteStories.LabelFloatMd} />
   <Story of={AutocompleteStories.LabelFloatLg} />
+  <Story of={AutocompleteStories.LabelFloatXl} />
 </div>
 
 <br />
@@ -108,7 +111,7 @@ Autocompletes can have a floating label instead of the regular label.
 
 Autocompletes can allow multiple selections.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.Multiple} />
 </div>
 
@@ -121,10 +124,11 @@ Autocompletes can allow multiple selections.
 
 Autocompletes can have a clear button.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.ClearableSm} />
   <Story of={AutocompleteStories.ClearableMd} />
   <Story of={AutocompleteStories.ClearableLg} />
+  <Story of={AutocompleteStories.ClearableXl} />
 </div>
 
 <br />
@@ -133,10 +137,11 @@ Autocompletes can have a clear button.
 
 Autocompletes can have a different border color when focused.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.ColorFocusSm} />
   <Story of={AutocompleteStories.ColorFocusMd} />
   <Story of={AutocompleteStories.ColorFocusLg} />
+  <Story of={AutocompleteStories.ColorFocusXl} />
 </div>
 
 <br />
@@ -145,10 +150,11 @@ Autocompletes can have a different border color when focused.
 
 Autocompletes can be shown in a disabled state.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.DisabledSm} />
   <Story of={AutocompleteStories.DisabledMd} />
   <Story of={AutocompleteStories.DisabledLg} />
+  <Story of={AutocompleteStories.DisabledXl} />
 </div>
 
 <br />
@@ -157,10 +163,11 @@ Autocompletes can be shown in a disabled state.
 
 Autocompletes can be shown in a loading state. The loading indicator informs the user that something is being loaded.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.LoadingSm} />
   <Story of={AutocompleteStories.LoadingMd} />
   <Story of={AutocompleteStories.LoadingLg} />
+  <Story of={AutocompleteStories.LoadingXl} />
 </div>
 
 <br />
@@ -169,10 +176,11 @@ Autocompletes can be shown in a loading state. The loading indicator informs the
 
 Autocompletes can be shown in an error state. This indicates that the input value contains an error.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.ErrorSm} />
   <Story of={AutocompleteStories.ErrorMd} />
   <Story of={AutocompleteStories.ErrorLg} />
+  <Story of={AutocompleteStories.ErrorXl} />
 </div>
 
 <br />
@@ -184,10 +192,11 @@ Autocompletes can be shown in an error state. This indicates that the input valu
 
 Autocompletes have an icon slot that you can use to display an icon inside the input.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.SlotIconSm} />
   <Story of={AutocompleteStories.SlotIconMd} />
   <Story of={AutocompleteStories.SlotIconLg} />
+  <Story of={AutocompleteStories.SlotIconXl} />
 </div>
 
 <br />
@@ -196,10 +205,11 @@ Autocompletes have an icon slot that you can use to display an icon inside the i
 
 Autocompletes have icon displayed inside result items.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.MediaIconSm} />
   <Story of={AutocompleteStories.MediaIconMd} />
   <Story of={AutocompleteStories.MediaIconLg} />
+  <Story of={AutocompleteStories.MediaIconXl} />
 </div>
 
 <br />
@@ -208,10 +218,11 @@ Autocompletes have icon displayed inside result items.
 
 Autocompletes have images displayed inside result items.
 
-<div className="flex items-end gap-2 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
+<div className="flex items-end flex-wrap gap-x-2 gap-y-6 bg-slate-100 dark:bg-slate-900 p-6 rounded-sm">
   <Story of={AutocompleteStories.MediaImgSm} />
   <Story of={AutocompleteStories.MediaImgMd} />
   <Story of={AutocompleteStories.MediaImgLg} />
+  <Story of={AutocompleteStories.MediaImgXl} />
 </div>
 
 <br />

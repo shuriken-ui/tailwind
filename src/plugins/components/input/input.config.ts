@@ -70,6 +70,7 @@ export const defaultConfig = {
         sm: '8',
         md: '10',
         lg: '12',
+        xl: '14',
       },
       transition: {
         property: 'colors',
@@ -165,6 +166,24 @@ export const defaultConfig = {
       },
       placeload: {
         size: '12',
+      },
+    },
+    xl: {
+      label: {
+        font: {
+          size: 'sm',
+        },
+      },
+      icon: {
+        outer: {
+          size: '14',
+        },
+        inner: {
+          size: '5',
+        },
+      },
+      placeload: {
+        size: '14',
       },
     },
   },
@@ -284,6 +303,11 @@ export const defaultConfig = {
             size: 'sm',
           },
         },
+        xl: {
+          font: {
+            size: 'base',
+          },
+        },
       },
       label: {
         float: {
@@ -302,6 +326,15 @@ export const defaultConfig = {
             },
           },
           lg: {
+            font: {
+              size: {
+                base: 'xs',
+                focus: 'xs',
+                unfocus: '[0.825rem]',
+              },
+            },
+          },
+          xl: {
             font: {
               size: {
                 base: 'xs',
@@ -327,6 +360,11 @@ export const defaultConfig = {
         },
         lg: {
           font: {
+            size: 'sm',
+          },
+        },
+        xl: {
+          font: {
             size: 'base',
           },
         },
@@ -348,6 +386,15 @@ export const defaultConfig = {
             },
           },
           lg: {
+            font: {
+              size: {
+                base: 'xs',
+                focus: 'xs',
+                unfocus: '[0.825rem]',
+              },
+            },
+          },
+          xl: {
             font: {
               size: {
                 base: 'xs',

@@ -2,6 +2,83 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.2](https://github.com/shuriken-ui/tailwind/compare/v3.1.1...v3.1.2) (2024-06-26)
+
+
+### 🩹 Bug Fixes
+
+* **input-number:** set inc/dec buttons z-index ([952f052](https://github.com/shuriken-ui/tailwind/commit/952f0523a8bac77cae0d3e22cb98e0cb4edcb5c8))
+
+### [3.1.1](https://github.com/shuriken-ui/tailwind/compare/v3.1.0...v3.1.1) (2024-06-07)
+
+
+### 🩹 Bug Fixes
+
+* **ButtonGroup:** fix select last child border radius ([7d21674](https://github.com/shuriken-ui/tailwind/commit/7d2167438168dc8d1f9528c05741a8ee26683627))
+
+## [3.1.0](https://github.com/shuriken-ui/tailwind/compare/v3.0.4...v3.1.0) (2024-06-06)
+
+
+### 🚀 Features
+
+* **Autocomplete:** add xl size ([ca67808](https://github.com/shuriken-ui/tailwind/commit/ca6780847639845888da6a69e7c0ddd0d62ca632))
+* **ButtonClose:** add xl size ([30c1f92](https://github.com/shuriken-ui/tailwind/commit/30c1f928e872e05dd4482bd4b38a53d80b9f992e))
+* **ButtonIcon:** add xl size ([9092677](https://github.com/shuriken-ui/tailwind/commit/90926774158ef7b4f55bbc57e1af7ae6a7f52925))
+* **Input:** add xl size ([2c0de2e](https://github.com/shuriken-ui/tailwind/commit/2c0de2edf55ca24d6fbb942050d7f74bf3d66780))
+* **InputFile:** add xl size ([6398560](https://github.com/shuriken-ui/tailwind/commit/6398560d11148ab153ab5052942c186b8aee7db4))
+* **InputNumber:** add xl size ([8e58e6c](https://github.com/shuriken-ui/tailwind/commit/8e58e6c05b595938a5c2759653e7a792c4cb56d3))
+* **Listbox:** add xl size ([fb78f84](https://github.com/shuriken-ui/tailwind/commit/fb78f84aa03943cf06a8363d6a85a81bc3c8317b))
+* **Select:** add xl size ([0c0d9a9](https://github.com/shuriken-ui/tailwind/commit/0c0d9a9024d98a1b62b508a22e26054450e7dfc5))
+
+
+### 🩹 Bug Fixes
+
+* **Input:** adjust font size configuration ([93b81a2](https://github.com/shuriken-ui/tailwind/commit/93b81a2add4aed7e79d88785fd3f02e2a4fb6bf0))
+* **Input:** fix xl input icon size ([e655061](https://github.com/shuriken-ui/tailwind/commit/e655061817b32be1b86528159f4a98572a42d42b))
+* **InputNumber:** fix xl input icon size ([92eaabc](https://github.com/shuriken-ui/tailwind/commit/92eaabc583a41d373eaa97208b76fc81f3b49218))
+* **Select:** fix xl select icon size ([be072f6](https://github.com/shuriken-ui/tailwind/commit/be072f6ad766352127630d86c368d93ac05907c1))
+
+### [3.0.4](https://github.com/shuriken-ui/tailwind/compare/v3.0.3...v3.0.4) (2024-04-11)
+
+
+### 🩹 Bug Fixes
+
+* **pagination:** improve responsive and large number styles ([e633f3a](https://github.com/shuriken-ui/tailwind/commit/e633f3a42ffccec3abe7f042aa87f196c50ca338))
+
+### [3.0.3](https://github.com/shuriken-ui/tailwind/compare/v3.0.2...v3.0.3) (2024-04-09)
+
+
+### Bug Fixes
+
+* **button:** re add xl size ([3de5184](https://github.com/shuriken-ui/tailwind/commit/3de5184897c73855d33474cf5763e1a0cae6a638))
+
+### [3.0.2](https://github.com/shuriken-ui/tailwind/compare/v3.0.1...v3.0.2) (2024-04-08)
+
+
+### Bug Fixes
+
+* **button:** update demo xl variant class to xlarge ([894a679](https://github.com/shuriken-ui/tailwind/commit/894a679c3d560085c75be74610b9a1f8cf1b4615))
+* **button:** update size config keys ([18e3d6c](https://github.com/shuriken-ui/tailwind/commit/18e3d6c2317038df3b271d348dd6d2a0a49fe3ca))
+
+### [3.0.1](https://github.com/shuriken-ui/tailwind/compare/v3.0.0...v3.0.1) (2024-03-31)
+
+## [3.0.0](https://github.com/shuriken-ui/tailwind/compare/v3.0.0-next.6...v3.0.0) (2024-03-04)
+
+### [2.0.3](https://github.com/shuriken-ui/tailwind/compare/v2.0.2...v2.0.3) (2024-01-26)
+
+
+### Bug Fixes
+
+* **button-group:** single child + support more kind of components ([726714d](https://github.com/shuriken-ui/tailwind/commit/726714d618cfc733a1aa1056b7f99ae4771efd53))
+* **button:** align default border color with all inputs ([3f6522f](https://github.com/shuriken-ui/tailwind/commit/3f6522f777e33b75c280a373aa6aaf2a6a64cd6d))
+
+### [2.0.2](https://github.com/shuriken-ui/tailwind/compare/v2.0.1...v2.0.2) (2024-01-26)
+
+
+### Bug Fixes
+
+* **input-number:** add end padding to allow large input or right aligned input ([6f61fba](https://github.com/shuriken-ui/tailwind/commit/6f61fba8a1cae31b8927794fcda7c260683442a3))
+
 ## [3.0.0-next.6](https://github.com/shuriken-ui/tailwind/compare/v3.0.0-next.5...v3.0.0-next.6) (2024-03-04)
 
 

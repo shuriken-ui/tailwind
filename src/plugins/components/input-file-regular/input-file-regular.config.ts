@@ -167,6 +167,11 @@ export const defaultConfig = {
           size: 'sm',
         },
       },
+      xl: {
+        font: {
+          size: 'sm',
+        },
+      },
     },
     enabled: {
       sm: {
@@ -191,6 +196,14 @@ export const defaultConfig = {
         },
         icon: {
           size: '5',
+        },
+      },
+      xl: {
+        font: {
+          size: 'sm',
+        },
+        icon: {
+          size: '6',
         },
       },
     },

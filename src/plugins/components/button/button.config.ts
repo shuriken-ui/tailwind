@@ -10,7 +10,7 @@ export const defaultConfig = {
     duration: '300',
   },
   size: {
-    small: {
+    sm: {
       button: {
         text: 'sm',
         height: '8',
@@ -23,7 +23,7 @@ export const defaultConfig = {
         size: '3',
       },
     },
-    medium: {
+    md: {
       button: {
         text: 'sm',
         height: '10',
@@ -36,7 +36,7 @@ export const defaultConfig = {
         size: '4',
       },
     },
-    large: {
+    lg: {
       button: {
         text: 'base',
         height: '12',
@@ -49,7 +49,7 @@ export const defaultConfig = {
         size: '5',
       },
     },
-    xlarge: {
+    xl: {
       button: {
         text: 'base',
         height: '14',
@@ -65,9 +65,9 @@ export const defaultConfig = {
   },
   rounded: {
     none: 'none',
-    small: 'md',
-    medium: 'lg',
-    large: 'xl',
+    sm: 'md',
+    md: 'lg',
+    lg: 'xl',
     full: 'full',
   },
   variant: {
