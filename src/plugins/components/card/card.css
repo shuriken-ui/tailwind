@@ -1,0 +1,85 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-card */
+
+@layer components {
+  .nui-card {
+    @apply relative w-full transition-all duration-300;
+
+    &.nui-card-default {
+      @apply border border-muted-200 dark:border-muted-700;
+      @apply bg-white dark:bg-muted-800;
+    }
+
+    &.nui-card-default-contrast {
+      @apply border border-muted-300 dark:border-muted-800;
+      @apply bg-white dark:bg-muted-950;
+    }
+
+    &.nui-card-muted {
+      @apply border border-muted-200 dark:border-muted-700;
+      @apply bg-muted-100 dark:bg-muted-800;
+    }
+
+    &.nui-card-muted-contrast {
+      @apply border border-muted-200 dark:border-muted-800;
+      @apply bg-muted-100 dark:bg-muted-950;
+    }
+
+    &.nui-card-dark {
+      @apply border border-muted-800 dark:border-muted-50;
+      @apply bg-muted-900 dark:bg-muted-100;
+    }
+
+    &.nui-card-black {
+      @apply border border-black dark:border-white;
+      @apply bg-black dark:bg-white;
+    }
+
+    &.nui-card-primary {
+      @apply border border-primary-500 dark:border-primary-500;
+      @apply bg-primary-500/10 dark:bg-primary-500/10;
+    }
+
+    &.nui-card-info {
+      @apply border border-info-500 dark:border-info-500;
+      @apply bg-info-500/10 dark:bg-info-500/10;
+    }
+
+    &.nui-card-success {
+      @apply border border-success-500 dark:border-success-500;
+      @apply bg-success-500/10 dark:bg-success-500/10;
+    }
+
+    &.nui-card-warning {
+      @apply border border-warning-500 dark:border-warning-500;
+      @apply bg-warning-500/10 dark:bg-warning-500/10;
+    }
+
+    &.nui-card-danger {
+      @apply border border-danger-500 dark:border-danger-500;
+      @apply bg-danger-500/10 dark:bg-danger-500/10;
+    }
+
+    &.nui-card-rounded-sm {
+      @apply rounded-md;
+    }
+
+    &.nui-card-rounded-md {
+      @apply rounded-lg;
+    }
+
+    &.nui-card-rounded-lg {
+      @apply rounded-xl;
+    }
+
+    &:not(.nui-card-primary):not(.nui-card-info):not(.nui-card-success):not(.nui-card-warning):not(.nui-card-danger) {
+      &.nui-card-shadow {
+        @apply shadow-muted-300/30 dark:shadow-muted-800/30 shadow-xl;
+      }
+
+      &.nui-card-shadow-hover {
+        @apply hover:shadow-muted-300/30 dark:hover:shadow-muted-800/30 hover:shadow-xl;
+      }
+    }
+  }
+}

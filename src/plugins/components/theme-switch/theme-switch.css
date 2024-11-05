@@ -1,0 +1,72 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-theme-switch */
+
+@layer components {
+  .nui-theme-switch {
+    @apply relative block h-6 w-14 scale-[0.8] rounded-full;
+    @apply bg-muted-200 dark:bg-muted-700;
+
+    .nui-theme-switch-input {
+      @apply absolute start-0 top-0 z-10 h-full w-full cursor-pointer opacity-0;
+    }
+
+    .nui-theme-switch-inner {
+      @apply absolute -start-1 -top-2 -ms-1 flex items-center justify-center peer-checked:ms-[45%] peer-checked:rotate-[360deg];
+      @apply h-10 w-10 rounded-full;
+      @apply bg-white dark:bg-muted-900;
+      @apply border border-muted-200 dark:border-muted-800;
+      @apply transition-all duration-300;
+    }
+
+    .nui-sun {
+      @apply pointer-events-none;
+      @apply text-yellow-400 dark:text-yellow-400;
+      @apply h-6 w-6;
+      @apply transition-all duration-300;
+    }
+
+    .nui-moon {
+      @apply pointer-events-none;
+      @apply text-yellow-400 dark:text-yellow-400;
+      @apply h-6 w-6;
+      @apply transition-all duration-300;
+    }
+
+    .nui-theme-switch-input:checked ~ .nui-theme-switch-inner {
+      @apply ms-[45%] rotate-[360deg];
+    }
+
+    .nui-theme-switch-input:not(:checked) ~ .nui-theme-switch-inner .nui-sun {
+      @apply block;
+    }
+
+    .nui-theme-switch-input:checked ~ .nui-theme-switch-inner .nui-sun {
+      @apply hidden;
+    }
+
+    .nui-theme-switch-input:not(:checked) ~ .nui-theme-switch-inner .nui-moon {
+      @apply hidden;
+    }
+
+    .nui-theme-switch-input:checked ~ .nui-theme-switch-inner .nui-moon {
+      @apply block;
+    }
+
+    &.nui-theme-switch-inverted {
+      @apply ring-offset-muted-500 dark:ring-offset-muted-400;
+
+      .nui-theme-switch-inner {
+        @apply bg-primary-700 dark:bg-primary-700;
+      }
+    }
+
+    &:not(nui-theme-switch-inverted) {
+      @apply ring-offset-muted-500 dark:ring-offset-muted-900;
+
+      .nui-theme-switch-inner {
+        @apply border border-muted-300 dark:border-muted-700;
+        @apply bg-white dark:bg-muted-800;
+      }
+    }
+  }
+}

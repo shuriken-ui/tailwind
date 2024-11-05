@@ -1,0 +1,548 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-listbox */
+
+@layer components {
+  .nui-listbox {
+    @apply relative w-full;
+
+    .nui-listbox-label, .nui-label-float {
+      @apply nui-label;
+    }
+
+    .nui-label-float {
+      @apply pointer-events-none absolute inline-flex select-none items-center leading-none;
+      @apply text-primary-500 h-5;
+      @apply transition-all duration-300;
+    }
+
+    .nui-listbox-outer {
+      @apply relative;
+    }
+
+    .nui-listbox-button {
+      @apply nui-focus relative w-full flex items-center gap-2 pe-12 ps-4 border leading-5 disabled:cursor-not-allowed disabled:opacity-75;
+      @apply font-sans text-sm text-start;
+
+      .nui-listbox-button-inner {
+        @apply flex w-full items-center;
+
+        .nui-icon-box {
+          @apply !h-6 !w-6;
+          @apply -ms-2 me-2;
+
+          .nui-icon-box-inner {
+            @apply h-4 w-4;
+          }
+        }
+
+        .nui-listbox-placeholder {
+          @apply text-muted-300 dark:text-muted-500 truncate text-start;
+        }
+      }
+
+      &:focus-visible ~ .nui-listbox-chevron .nui-listbox-chevron-inner, &:focus ~ .nui-listbox-chevron .nui-listbox-chevron-inner {
+        @apply !rotate-180;
+      }
+    }
+
+    .nui-listbox-icon.nui-icon {
+      @apply text-muted-400 dark:text-muted-400;
+      @apply transition-colors duration-300;
+      @apply absolute start-0 top-0 z-10 flex items-center justify-center;
+    }
+
+    .nui-listbox-chevron.nui-chevron {
+      @apply pointer-events-none absolute top-0 end-0 flex items-center justify-center border-s;
+
+      .nui-listbox-chevron-inner {
+        @apply transition-transform duration-300;
+        @apply h-4 w-4;
+        @apply text-muted-400 dark:text-muted-400;
+      }
+    }
+
+    .nui-listbox-options {
+      @apply nui-slimscroll absolute z-10 mt-1 max-h-60 w-full overflow-auto p-2;
+      @apply text-base sm:text-sm;
+      @apply focus:ring-primary-500/50 dark:focus:ring-primary-500/50 focus:outline-none focus:ring-1;
+      @apply shadow-lg shadow-muted-300/30 dark:shadow-muted-800/20;
+    }
+
+    .nui-listbox-option {
+      @apply relative flex gap-2 cursor-pointer select-none items-center px-3 py-2;
+      @apply transition-colors duration-300;
+
+      .nui-icon-box {
+        @apply text-muted-200 dark:text-muted-400 -ms-2 me-1;
+
+        .nui-icon-box-inner {
+          @apply h-5 w-5;
+        }
+      }
+
+      .nui-listbox-selected-icon {
+        @apply text-primary-600 dark:text-primary-600 ms-auto flex items-center;
+      }
+
+      .nui-listbox-selected-icon-inner {
+        @apply h-4 w-4;
+      }
+
+      .nui-listbox-option-inner {
+        .nui-listbox-heading {
+          @apply block truncate;
+          @apply text-muted-800 dark:text-muted-100;
+        }
+
+        .nui-listbox-text {
+          @apply text-muted-400 dark:text-muted-400;
+        }
+      }
+
+      &:not(.nui-active), &:not(:hover) {
+        @apply text-muted-600 dark:text-muted-200;
+      }
+
+      &.nui-active, &:hover {
+        @apply text-primary-600 dark:text-primary-600;
+        @apply bg-primary-500/10 dark:bg-primary-500/10;
+      }
+    }
+
+    .nui-listbox-placeload.nui-loading-placeload {
+      @apply absolute start-0 top-0 flex w-full items-center px-4;
+
+      .nui-placeload {
+        @apply h-3 w-full max-w-[75%] rounded;
+      }
+    }
+
+    &.nui-listbox-sm {
+      .nui-listbox-label {
+        @apply pb-1 text-xs;
+      }
+
+      .nui-label-float {
+        @apply top-1.5;
+      }
+
+      .nui-listbox-icon {
+        @apply h-8 w-8;
+
+        .nui-listbox-icon-inner {
+          @apply h-4 w-4;
+        }
+      }
+
+      .nui-listbox-placeload {
+        @apply h-8;
+      }
+
+      .nui-listbox-chevron {
+        @apply h-8 w-8;
+
+        .nui-listbox-chevron-inner {
+          @apply h-3 w-3;
+        }
+      }
+    }
+
+    &.nui-listbox-md {
+      .nui-listbox-label {
+        @apply pb-1 text-[0.825rem];
+      }
+
+      .nui-label-float {
+        @apply top-2.5;
+      }
+    }
+
+    .nui-listbox-icon {
+      @apply h-10 w-10;
+
+      .nui-listbox-icon-inner {
+        @apply h-[1.15rem] w-[1.15rem];
+      }
+    }
+
+    .nui-listbox-placeload {
+      @apply h-10;
+    }
+
+    .nui-listbox-chevron {
+      @apply h-10 w-10;
+
+      .nui-listbox-chevron-inner {
+        @apply h-4 w-4;
+      }
+    }
+
+    &.nui-listbox-lg {
+      .nui-listbox-label {
+        @apply pb-1 text-sm;
+      }
+
+      .nui-label-float {
+        @apply top-3.5;
+      }
+
+      .nui-listbox-icon {
+        @apply h-12 w-12;
+
+        .nui-listbox-icon-inner {
+          @apply h-5 w-5;
+        }
+      }
+
+      .nui-listbox-placeload {
+        @apply h-12;
+      }
+
+      .nui-listbox-chevron {
+        @apply h-12 w-12;
+
+        .nui-listbox-chevron-inner {
+          @apply h-5 w-5;
+        }
+      }
+    }
+
+    &.nui-listbox-xl {
+      .nui-listbox-label {
+        @apply pb-1 text-sm;
+      }
+
+      .nui-label-float {
+        @apply top-[1.1rem];
+      }
+
+      .nui-listbox-icon {
+        @apply h-14 w-14;
+
+        .nui-listbox-icon-inner {
+          @apply h-5 w-5;
+        }
+      }
+
+      .nui-listbox-placeload {
+        @apply h-14;
+      }
+
+      .nui-listbox-chevron {
+        @apply h-14 w-14;
+
+        .nui-listbox-chevron-inner {
+          @apply h-5 w-5;
+        }
+      }
+    }
+
+    &.nui-listbox-rounded-sm {
+      .nui-listbox-button, .nui-listbox-options, .nui-listbox-option {
+        @apply rounded-md;
+      }
+    }
+
+    &.nui-listbox-rounded-md {
+      .nui-listbox-button, .nui-listbox-options, .nui-listbox-option {
+        @apply rounded-lg;
+      }
+    }
+
+    &.nui-listbox-rounded-lg {
+      .nui-listbox-button, .nui-listbox-options, .nui-listbox-option {
+        @apply rounded-xl;
+      }
+    }
+
+    &.nui-listbox-rounded-full {
+      .nui-listbox-button {
+        @apply rounded-full;
+      }
+
+      .nui-listbox-option, .nui-listbox-options {
+        @apply rounded-xl;
+      }
+    }
+
+    &.nui-listbox-default {
+      .nui-listbox-button {
+        @apply text-muted-600 dark:text-muted-200;
+        @apply bg-white dark:bg-muted-900;
+        @apply border border-muted-300 dark:border-muted-700;
+        @apply placeholder-muted-300 dark:placeholder-muted-500;
+        @apply focus:shadow-lg focus:shadow-muted-300/30 dark:focus:shadow-muted-800/20;
+      }
+
+      .nui-listbox-chevron {
+        @apply border-muted-200 dark:border-muted-700;
+      }
+
+      .nui-listbox-options {
+        @apply bg-white dark:bg-muted-700;
+        @apply border border-muted-200 dark:border-muted-600;
+      }
+    }
+
+    &.nui-listbox-default-contrast {
+      .nui-listbox-button {
+        @apply text-muted-600 dark:text-muted-200;
+        @apply bg-white dark:bg-muted-950;
+        @apply border border-muted-300 dark:border-muted-800;
+        @apply placeholder-muted-300 dark:placeholder-muted-600;
+        @apply focus:shadow-lg focus:shadow-muted-300/30 dark:focus:shadow-muted-800/20;
+      }
+
+      .nui-listbox-chevron {
+        @apply border-muted-300 dark:border-muted-800;
+      }
+
+      .nui-listbox-options {
+        @apply bg-white dark:bg-muted-950;
+        @apply border border-muted-200 dark:border-muted-800;
+      }
+    }
+
+    &.nui-listbox-muted {
+      .nui-listbox-button {
+        @apply text-muted-600 dark:text-muted-200;
+        @apply bg-muted-100 dark:bg-muted-900;
+        @apply border border-muted-200 dark:border-muted-700;
+        @apply placeholder-muted-300 dark:placeholder-muted-500;
+        @apply focus:shadow-lg focus:shadow-muted-300/30 dark:focus:shadow-muted-800/20;
+      }
+
+      .nui-listbox-chevron {
+        @apply border-muted-200 dark:border-muted-700;
+      }
+
+      .nui-listbox-options {
+        @apply bg-white dark:bg-muted-700;
+        @apply border border-muted-200 dark:border-muted-600;
+      }
+    }
+
+    &.nui-listbox-muted-contrast {
+      .nui-listbox-button {
+        @apply text-muted-600 dark:text-muted-200;
+        @apply bg-muted-100 dark:bg-muted-950;
+        @apply border border-muted-200 dark:border-muted-800;
+        @apply placeholder-muted-300 dark:placeholder-muted-600;
+        @apply focus:shadow-lg focus:shadow-muted-300/30 dark:focus:shadow-muted-800/20;
+      }
+
+      .nui-listbox-chevron {
+        @apply border-muted-300 dark:border-muted-800;
+      }
+
+      .nui-listbox-options {
+        @apply bg-white dark:bg-muted-950;
+        @apply border border-muted-200 dark:border-muted-800;
+      }
+    }
+
+    &.nui-listbox-focus {
+      .nui-listbox-button {
+        @apply transition-colors duration-300;
+        @apply focus:!border-primary-500 dark:focus:!border-primary-500;
+        @apply focus:hover:!border-primary-500 dark:focus:hover:!border-primary-500;
+      }
+    }
+
+    &:not(.nui-listbox-loading) {
+      .nui-listbox-button ~ .nui-label-float {
+        @apply text-muted-300 dark:text-muted-600;
+      }
+    }
+
+    &.nui-listbox-loading {
+      .nui-listbox-button {
+        @apply !text-transparent placeholder:!text-transparent dark:placeholder:!text-transparent pointer-events-none;
+      }
+
+      .nui-listbox-button ~ .nui-label-float {
+        @apply text-transparent;
+      }
+
+      .nui-listbox-icon {
+        @apply opacity-0;
+      }
+    }
+
+    &.nui-listbox-label-float {
+      .nui-listbox-button {
+        @apply placeholder:text-transparent dark:placeholder:text-transparent;
+      }
+    }
+
+    &.nui-listbox-error {
+      .nui-listbox-button {
+        @apply !border-danger-500 dark:!border-danger-500;
+      }
+
+      .nui-listbox-icon {
+        @apply !text-danger-500 dark:!text-danger-500;
+      }
+    }
+
+    &:not(.nui-has-icon).nui-listbox-sm {
+      .nui-listbox-button {
+        @apply h-8 py-1 text-xs leading-4 px-2;
+      }
+    }
+
+    &.nui-has-icon.nui-listbox-sm {
+      .nui-listbox-button {
+        @apply h-8 py-1 text-xs leading-4 pe-3 ps-8;
+      }
+    }
+
+    &:not(.nui-has-icon).nui-listbox-md {
+      .nui-listbox-button {
+        @apply h-10 py-2 text-sm leading-5 px-3;
+      }
+    }
+
+    &.nui-has-icon.nui-listbox-md {
+      .nui-listbox-button {
+        @apply h-10 py-2 text-sm leading-5 pe-4 ps-10;
+      }
+    }
+
+    &:not(.nui-has-icon).nui-listbox-lg {
+      .nui-listbox-button {
+        @apply h-12 py-2 text-sm leading-5 px-4;
+      }
+    }
+
+    &.nui-has-icon.nui-listbox-lg {
+      .nui-listbox-button {
+        @apply h-12 py-2 text-sm leading-5 pe-4 ps-11;
+      }
+    }
+
+    &:not(.nui-has-icon).nui-listbox-xl {
+      .nui-listbox-button {
+        @apply h-14 py-2 text-base leading-5 px-4;
+      }
+    }
+
+    &.nui-has-icon.nui-listbox-xl {
+      .nui-listbox-button {
+        @apply h-14 py-2 text-base leading-5 pe-4 ps-12;
+      }
+    }
+
+    &.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-sm {
+      .nui-label-float {
+        @apply start-3 -ms-3 -mt-7 text-xs text-transparent;
+      }
+
+      .nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active {
+        @apply !-ms-3 !-mt-7 !text-primary-500;
+      }
+
+      .nui-listbox-button ~ .nui-label-float {
+        @apply ms-0 mt-0;
+      }
+    }
+
+    &.nui-listbox-label-float.nui-has-icon.nui-listbox-sm {
+      .nui-label-float {
+        @apply start-8 -ms-8 -mt-7 text-xs text-transparent;
+      }
+
+      .nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active {
+        @apply !-ms-8 !-mt-7 !text-primary-500;
+      }
+
+      .nui-listbox-button ~ .nui-label-float {
+        @apply ms-0 mt-0;
+      }
+    }
+
+    &.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-md {
+      .nui-label-float {
+        @apply start-3 -ms-3 -mt-8 text-xs text-transparent;
+      }
+
+      .nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active {
+        @apply !-ms-3 !-mt-8 !text-xs !text-primary-500;
+      }
+
+      .nui-listbox-button ~ .nui-label-float {
+        @apply ms-0 mt-0 text-xs;
+      }
+    }
+
+    &.nui-listbox-label-float.nui-has-icon.nui-listbox-md {
+      .nui-label-float {
+        @apply start-10 -ms-10 -mt-8 text-xs text-transparent;
+      }
+
+      .nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active {
+        @apply !-ms-10 !-mt-8 !text-xs !text-primary-500;
+      }
+
+      .nui-listbox-button ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+
+    &.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-lg {
+      .nui-label-float {
+        @apply start-3 -ms-3 -mt-9 text-xs text-transparent;
+      }
+
+      .nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active {
+        @apply !-ms-3 !-mt-9 !text-xs !text-primary-500;
+      }
+
+      .nui-listbox-button ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+
+    &.nui-listbox-label-float.nui-has-icon.nui-listbox-lg {
+      .nui-label-float {
+        @apply start-11 -ms-10 -mt-9 text-xs text-transparent;
+      }
+
+      .nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active {
+        @apply !-ms-10 !-mt-9 !text-xs !text-primary-500;
+      }
+
+      .nui-listbox-button ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+
+    &.nui-listbox-label-float:not(.nui-has-icon).nui-listbox-xl {
+      .nui-label-float {
+        @apply start-3 -ms-3 -mt-10 text-xs text-transparent;
+      }
+
+      .nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active {
+        @apply !-ms-3 !-mt-10 !text-xs !text-primary-500;
+      }
+
+      .nui-listbox-button ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+
+    &.nui-listbox-label-float.nui-has-icon.nui-listbox-xl {
+      .nui-label-float {
+        @apply start-[3.25rem] -ms-[3.25rem] -mt-10 text-xs text-transparent;
+      }
+
+      .nui-listbox-button:focus-visible ~ .nui-label-float, .nui-listbox-button:focus ~ .nui-label-float, .nui-label-float-active {
+        @apply !-ms-[3.25rem] !-mt-10 !text-xs !text-primary-500;
+      }
+
+      .nui-listbox-button ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+  }
+}

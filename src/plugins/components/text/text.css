@@ -1,0 +1,104 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-text */
+
+@layer components {
+  .nui-text {
+    @apply font-sans;
+
+    &.nui-content-xs {
+      @apply text-xs;
+    }
+
+    &.nui-content-sm {
+      @apply text-sm;
+    }
+
+    &.nui-content-md {
+      @apply text-base;
+    }
+
+    &.nui-content-lg {
+      @apply text-lg;
+    }
+
+    &.nui-content-xl {
+      @apply text-xl;
+    }
+
+    &.nui-content-2xl {
+      @apply text-2xl;
+    }
+
+    &.nui-content-3xl {
+      @apply text-3xl;
+    }
+
+    &.nui-content-4xl {
+      @apply text-4xl;
+    }
+
+    &.nui-content-5xl {
+      @apply text-5xl;
+    }
+
+    &.nui-content-6xl {
+      @apply text-6xl;
+    }
+
+    &.nui-content-7xl {
+      @apply text-7xl;
+    }
+
+    &.nui-content-8xl {
+      @apply text-8xl;
+    }
+
+    &.nui-content-9xl {
+      @apply text-9xl;
+    }
+
+    &.nui-weight-light {
+      @apply font-light;
+    }
+
+    &.nui-weight-normal {
+      @apply font-normal;
+    }
+
+    &.nui-weight-medium {
+      @apply font-medium;
+    }
+
+    &.nui-weight-semibold {
+      @apply font-semibold;
+    }
+
+    &.nui-weight-bold {
+      @apply font-bold;
+    }
+
+    &.nui-weight-extrabold {
+      @apply font-extrabold;
+    }
+
+    &.nui-lead-none {
+      @apply leading-none;
+    }
+
+    &.nui-lead-normal {
+      @apply leading-normal;
+    }
+
+    &.nui-lead-tight {
+      @apply leading-tight;
+    }
+
+    &.nui-lead-snug {
+      @apply leading-snug;
+    }
+
+    &.nui-lead-loose {
+      @apply leading-loose;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-avatar-group */
+
+@layer components {
+  .nui-avatar-group {
+    @apply flex;
+
+    .nui-avatar-outer {
+      @apply relative flex shrink-0 items-center justify-center rounded-full;
+      @apply bg-white dark:bg-muted-800;
+      @apply transition-all duration-100 ease-in;
+
+      .nui-avatar {
+        @apply bg-primary-500/20 text-primary-500/20 !scale-90;
+      }
+    }
+
+    .nui-avatar-count {
+      @apply relative shrink-0 rounded-full;
+      @apply bg-white dark:bg-muted-800;
+      @apply transition-all duration-100 ease-in;
+
+      .nui-avatar-count-inner {
+        @apply relative scale-90 inline-flex items-center justify-center rounded-full;
+        @apply h-full w-full;
+        @apply bg-muted-200 dark:bg-muted-700;
+        @apply border border-white dark:border-muted-800;
+      }
+
+      .nui-avatar-count-text {
+        @apply -ms-1 uppercase;
+        @apply font-sans font-medium;
+        @apply text-muted-500 dark:text-muted-300;
+      }
+    }
+
+    &.nui-avatar-group-xxs {
+      .nui-avatar-outer {
+        @apply h-6 w-6;
+
+        &:first-child {
+          @apply hover:-ms-2 hover:me-2 focus:-ms-2 focus:me-2;
+        }
+
+        &:not(:first-child) {
+          @apply -ms-2 hover:-ms-4 hover:me-2 focus:-ms-4 focus:me-2;
+        }
+      }
+
+      .nui-avatar-count {
+        @apply -ms-2 h-6 w-6;
+
+        .nui-avatar-count-text {
+          @apply text-xs;
+        }
+      }
+    }
+
+    &.nui-avatar-group-xs {
+      .nui-avatar-outer {
+        @apply h-8 w-8;
+
+        &:first-child {
+          @apply hover:-ms-2 hover:me-2 focus:-ms-2 focus:me-2;
+        }
+
+        &:not(:first-child) {
+          @apply -ms-2 hover:-ms-4 hover:me-2 focus:-ms-4 focus:me-2;
+        }
+      }
+
+      .nui-avatar-count {
+        @apply -ms-2 h-8 w-8;
+
+        .nui-avatar-count-text {
+          @apply text-sm;
+        }
+      }
+    }
+
+    &.nui-avatar-group-sm {
+      .nui-avatar-outer {
+        @apply h-10 w-10;
+
+        &:first-child {
+          @apply hover:-ms-2 hover:me-2 focus:me-2;
+        }
+
+        &:not(:first-child) {
+          @apply -ms-3 hover:-ms-5 hover:me-2 focus:-ms-5 focus:me-2;
+        }
+      }
+
+      .nui-avatar-count {
+        @apply -ms-3 h-10 w-10;
+
+        .nui-avatar-count-text {
+          @apply text-sm;
+        }
+      }
+    }
+
+    &.nui-avatar-group-md {
+      .nui-avatar-outer {
+        @apply h-12 w-12;
+
+        &:first-child {
+          @apply hover:-ms-3 hover:me-3 focus:me-3;
+        }
+
+        &:not(:first-child) {
+          @apply -ms-4 hover:-ms-7 hover:me-3 focus:me-3;
+        }
+      }
+
+      .nui-avatar-count {
+        @apply -ms-4 h-12 w-12;
+
+        .nui-avatar-count-text {
+          @apply text-lg;
+        }
+      }
+    }
+
+    &.nui-avatar-group-lg {
+      .nui-avatar-outer {
+        @apply h-16 w-16;
+
+        &:first-child {
+          @apply hover:-ms-4 hover:me-4 focus:me-4;
+        }
+
+        &:not(:first-child) {
+          @apply -ms-5 hover:-ms-9 hover:me-4 focus:-ms-9 focus:me-4;
+        }
+      }
+
+      .nui-avatar-count {
+        @apply -ms-5 h-16 w-16;
+
+        .nui-avatar-count-text {
+          @apply text-xl;
+        }
+      }
+    }
+  }
+}

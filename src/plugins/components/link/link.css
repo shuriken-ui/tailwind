@@ -1,0 +1,10 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-link */
+
+@layer components {
+  .nui-link {
+    @apply font-sans underline-offset-4 hover:underline focus:underline;
+    @apply hover:text-primary-500 dark:hover:text-primary-400;
+    @apply focus:text-primary-500 dark:focus:text-primary-400;
+  }
+}

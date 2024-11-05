@@ -1,0 +1,9 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-mark */
+
+@layer components {
+  .nui-mark {
+    @apply bg-primary-100 dark:bg-primary-800;
+    @apply text-primary-800 dark:text-primary-200;
+  }
+}

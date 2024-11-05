@@ -1,0 +1,92 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-radio */
+
+@layer components {
+  .nui-radio {
+    @apply relative inline-flex items-start gap-1;
+
+    .nui-radio-outer {
+      @apply nui-focus relative flex items-center justify-center shrink-0 cursor-pointer overflow-hidden rounded-full;
+      @apply h-5 w-5;
+    }
+
+    .nui-radio-inner {
+      @apply absolute start-0 top-0 z-0 rounded-full;
+      @apply h-full w-full;
+      @apply bg-white dark:bg-muted-700;
+      @apply border-2 border-muted-400 dark:border-muted-600;
+    }
+
+    .nui-radio-dot {
+      @apply pointer-events-none z-10 block scale-0 rounded-full;
+      @apply h-1 w-1;
+      @apply bg-current dark:bg-current;
+      @apply transition-all duration-300;
+    }
+
+    .nui-radio-input {
+      @apply absolute z-20 h-5 w-5 cursor-pointer opacity-0;
+
+      &:checked ~ .nui-radio-inner {
+        @apply border-current;
+      }
+
+      &:checked ~ .nui-radio-dot {
+        @apply scale-100;
+      }
+    }
+
+    .nui-radio-label-wrapper {
+      @apply inline-flex flex-col;
+    }
+
+    .nui-radio-label-text {
+      @apply ms-1 cursor-pointer select-none;
+      @apply font-sans text-sm text-muted-400 dark:text-muted-400;
+    }
+
+    .nui-radio-error {
+      @apply ms-1 inline-block;
+    }
+
+    &.nui-radio-default {
+      @apply text-muted-600 dark:text-muted-200;
+    }
+
+    &.nui-radio-muted {
+      @apply text-muted-400 dark:text-muted-400;
+    }
+
+    &.nui-radio-light {
+      @apply text-muted-100 dark:text-muted-100;
+    }
+
+    &.nui-radio-dark {
+      @apply text-muted-900 dark:text-muted-100;
+    }
+
+    &.nui-radio-black {
+      @apply text-black dark:text-white;
+    }
+
+    &.nui-radio-primary {
+      @apply text-primary-500 dark:text-primary-500;
+    }
+
+    &.nui-radio-info {
+      @apply text-info-500 dark:text-info-500;
+    }
+
+    &.nui-radio-success {
+      @apply text-success-500 dark:text-muted-200;
+    }
+
+    &.nui-radio-warning {
+      @apply text-warning-500 dark:text-warning-500;
+    }
+
+    &.nui-radio-danger {
+      @apply text-danger-500 dark:text-danger-500;
+    }
+  }
+}

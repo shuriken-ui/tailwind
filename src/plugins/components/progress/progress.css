@@ -1,0 +1,108 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-progress */
+
+@layer components {
+  .nui-progress {
+    @apply relative w-full overflow-hidden;
+
+    .nui-progress-bar {
+      @apply absolute start-0 top-0 h-full transition-all duration-300;
+    }
+
+    &.nui-progress-default {
+      @apply bg-muted-200 dark:bg-muted-700;
+    }
+
+    &.nui-progress-contrast {
+      @apply bg-muted-200 dark:bg-muted-900;
+    }
+
+    &.nui-progress-xs {
+      @apply h-1;
+    }
+
+    &.nui-progress-sm {
+      @apply h-2;
+    }
+
+    &.nui-progress-md {
+      @apply h-3;
+    }
+
+    &.nui-progress-lg {
+      @apply h-3;
+    }
+
+    &.nui-progress-xl {
+      @apply h-5;
+    }
+
+    &.nui-progress-rounded-sm, &.nui-progress-rounded-sm .nui-progress-bar {
+      @apply rounded;
+    }
+
+    &.nui-progress-rounded-md, &.nui-progress-rounded-md .nui-progress-bar {
+      @apply rounded-md;
+    }
+
+    &.nui-progress-rounded-lg, &.nui-progress-rounded-lg .nui-progress-bar {
+      @apply rounded-lg;
+    }
+
+    &.nui-progress-rounded-full, &.nui-progress-rounded-full .nui-progress-bar {
+      @apply rounded-full;
+    }
+
+    &.nui-progress-indeterminate .nui-progress-bar {
+      @apply w-full;
+    }
+
+    &.nui-progress-primary {
+      .nui-progress-bar {
+        @apply bg-primary-500;
+      }
+    }
+
+    &.nui-progress-info {
+      .nui-progress-bar {
+        @apply bg-info-500;
+      }
+    }
+
+    &.nui-progress-success {
+      .nui-progress-bar {
+        @apply bg-success-500;
+      }
+    }
+
+    &.nui-progress-warning {
+      .nui-progress-bar {
+        @apply bg-warning-500;
+      }
+    }
+
+    &.nui-progress-danger {
+      .nui-progress-bar {
+        @apply bg-danger-500;
+      }
+    }
+
+    &.nui-progress-light {
+      .nui-progress-bar {
+        @apply bg-muted-500 dark:bg-muted-400;
+      }
+    }
+
+    &.nui-progress-dark {
+      .nui-progress-bar {
+        @apply bg-muted-900 dark:bg-muted-100;
+      }
+    }
+
+    &.nui-progress-black {
+      .nui-progress-bar {
+        @apply bg-black dark:bg-white;
+      }
+    }
+  }
+}

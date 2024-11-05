@@ -1,0 +1,548 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-autocomplete */
+
+@layer components {
+  .nui-autocomplete {
+    @apply w-full relative;
+
+    .nui-autocomplete-label, .nui-label-float {
+      @apply nui-label;
+    }
+
+    .nui-label-float {
+      @apply pointer-events-none absolute inline-flex select-none items-center leading-none;
+      @apply text-primary-500 h-5;
+      @apply transition-all duration-300;
+    }
+
+    .nui-autocomplete-multiple {
+      @apply block;
+
+      .nui-autocomplete-multiple-list {
+        @apply my-2 flex flex-wrap gap-1;
+      }
+
+      .nui-autocomplete-multiple-list-item {
+        @apply flex items-center py-2 pe-2 ps-3;
+        @apply font-sans text-xs font-medium;
+        @apply text-muted-400 dark:text-muted-400;
+        @apply bg-muted-200 dark:bg-muted-700;
+      }
+
+      .nui-autocomplete-multiple-list-item-icon {
+        @apply ms-1 block h-3 w-3;
+      }
+    }
+
+    .nui-autocomplete-outer {
+      @apply relative;
+    }
+
+    .nui-autocomplete-icon {
+      @apply absolute start-0 top-0 z-10 flex items-center justify-center;
+      @apply text-muted-400 dark:text-muted-400;
+      @apply transition-colors duration-300;
+    }
+
+    .nui-autocomplete-input {
+      @apply nui-focus w-full font-sans;
+      @apply disabled:cursor-not-allowed disabled:opacity-75;
+      @apply transition-all duration-300;
+
+      &:focus-visible ~ .nui-label-float {
+        @apply !text-primary-500 dark:!text-primary-500;
+      }
+
+      &:focus-visible ~ .nui-autocomplete-icon {
+        @apply !text-primary-500 dark:!text-primary-500;
+      }
+
+      &:disabled ~ .nui-autocomplete-icon {
+        @apply cursor-not-allowed opacity-75;
+      }
+    }
+
+    .nui-autocomplete-clear {
+      @apply absolute end-0 top-0 z-auto flex items-center justify-center cursor-pointer;
+      @apply text-muted-400 dark:text-muted-400;
+      @apply hover:text-muted-700 dark:hover:text-muted-200;
+      @apply transition-colors duration-300;
+
+      .nui-autocomplete-clear-inner {
+        @apply w-4 h-4;
+      }
+    }
+
+    .nui-autocomplete-placeload {
+      @apply absolute start-0 top-0 flex w-full items-center px-4;
+
+      .nui-placeload {
+        @apply h-3 w-full max-w-[75%] rounded;
+      }
+    }
+
+    .nui-autocomplete-results {
+      @apply nui-slimscroll absolute z-20 mt-1 max-h-[265px] w-full overflow-auto py-1 outline-none sm:text-sm;
+      @apply text-base;
+      @apply shadow-lg shadow-muted-300/30 dark:shadow-muted-800/20;
+
+      .nui-autocomplete-results-header, .nui-autocomplete-results-footer {
+        @apply relative px-2 py-1;
+      }
+    }
+
+    .nui-autocomplete-results-item {
+      @apply px-2 py-1;
+    }
+
+    .nui-autocomplete-results-item-inner {
+      @apply text-muted-800 dark:text-muted-100 flex gap-2 cursor-pointer items-center;
+      @apply p-2;
+      @apply transition-colors duration-300;
+
+      .nui-autocomplete-results-item-selected {
+        @apply ms-auto flex items-center justify-center;
+      }
+
+      .nui-autocomplete-results-item-selected-icon {
+        @apply block text-success-500;
+        @apply h-4 w-4;
+      }
+
+      &.nui-has-media {
+        .nui-autocomplete-results-item-selected {
+          @apply h-8 w-8;
+        }
+      }
+    }
+
+    .nui-autocomplete-results-placeholder {
+      @apply relative px-4 py-2 cursor-default select-none;
+      @apply font-sans text-muted-700 dark:text-muted-400;
+    }
+
+    &.nui-autocomplete-rounded-sm {
+      .nui-autocomplete-input {
+        @apply rounded-md;
+      }
+
+      .nui-autocomplete-results, .nui-autocomplete-results-item-inner, .nui-autocomplete-multiple .nui-autocomplete-multiple-list-item {
+        @apply rounded-md;
+      }
+    }
+
+    &.nui-autocomplete-rounded-md {
+      .nui-autocomplete-input {
+        @apply rounded-lg;
+      }
+
+      .nui-autocomplete-results, .nui-autocomplete-results-item-inner, .nui-autocomplete-multiple .nui-autocomplete-multiple-list-item {
+        @apply rounded-lg;
+      }
+    }
+
+    &.nui-autocomplete-rounded-lg {
+      .nui-autocomplete-input {
+        @apply rounded-xl;
+      }
+
+      .nui-autocomplete-results, .nui-autocomplete-results-item-inner, .nui-autocomplete-multiple .nui-autocomplete-multiple-list-item {
+        @apply rounded-xl;
+      }
+    }
+
+    &.nui-autocomplete-rounded-full {
+      .nui-autocomplete-input, .nui-autocomplete-multiple .nui-autocomplete-multiple-list-item {
+        @apply rounded-full;
+      }
+
+      .nui-autocomplete-results, .nui-autocomplete-results-item-inner {
+        @apply rounded-xl;
+      }
+    }
+
+    &.nui-autocomplete-sm {
+      .nui-autocomplete-label {
+        @apply pb-1 text-xs;
+      }
+
+      .nui-label-float {
+        @apply top-1.5;
+      }
+
+      .nui-autocomplete-icon {
+        @apply h-8 w-8;
+
+        .nui-autocomplete-icon-inner {
+          @apply h-4 w-4;
+        }
+      }
+
+      .nui-autocomplete-placeload {
+        @apply h-8;
+      }
+
+      .nui-autocomplete-clear {
+        @apply h-8 w-8;
+      }
+    }
+
+    &.nui-autocomplete-md {
+      .nui-autocomplete-label {
+        @apply pb-1 text-[0.825rem];
+      }
+
+      .nui-label-float {
+        @apply top-2.5;
+      }
+
+      .nui-autocomplete-icon {
+        @apply h-10 w-10;
+
+        .nui-autocomplete-icon-inner {
+          @apply h-[1.15rem] w-[1.15rem];
+        }
+      }
+
+      .nui-autocomplete-placeload {
+        @apply h-10;
+      }
+
+      .nui-autocomplete-clear {
+        @apply h-10 w-10;
+      }
+    }
+
+    &.nui-autocomplete-lg {
+      .nui-autocomplete-label {
+        @apply pb-1 text-sm;
+      }
+
+      .nui-label-float {
+        @apply top-3.5;
+      }
+
+      .nui-autocomplete-icon {
+        @apply h-12 w-12;
+
+        .nui-autocomplete-icon-inner {
+          @apply h-5 w-5;
+        }
+      }
+
+      .nui-autocomplete-placeload {
+        @apply h-12;
+      }
+
+      .nui-autocomplete-clear {
+        @apply h-12 w-12;
+      }
+    }
+
+    &.nui-autocomplete-xl {
+      .nui-autocomplete-label {
+        @apply pb-1 text-sm;
+      }
+
+      .nui-label-float {
+        @apply top-[1.1rem];
+      }
+
+      .nui-autocomplete-icon {
+        @apply h-14 w-14;
+
+        .nui-autocomplete-icon-inner {
+          @apply h-5 w-5;
+        }
+      }
+
+      .nui-autocomplete-placeload {
+        @apply h-14;
+      }
+
+      .nui-autocomplete-clear {
+        @apply h-14 w-14;
+      }
+    }
+
+    &.nui-autocomplete-default {
+      .nui-autocomplete-input {
+        @apply text-muted-600 dark:text-muted-200;
+        @apply bg-white dark:bg-muted-900;
+        @apply border border-muted-300 dark:border-muted-700;
+        @apply placeholder:text-muted-300 dark:placeholder:text-muted-500;
+      }
+
+      .nui-autocomplete-results {
+        @apply border border-muted-200 dark:border-muted-700;
+        @apply bg-white dark:bg-muted-800;
+      }
+
+      .nui-autocomplete-results-item-inner.nui-active, .nui-autocomplete-results-item-inner:hover {
+        @apply bg-muted-100 dark:bg-muted-700;
+      }
+    }
+
+    &.nui-autocomplete-default-contrast {
+      .nui-autocomplete-input {
+        @apply text-muted-600 dark:text-muted-200;
+        @apply bg-white dark:bg-muted-950;
+        @apply border border-muted-300 dark:border-muted-800;
+        @apply placeholder:text-muted-300 dark:placeholder:text-muted-600;
+      }
+
+      .nui-autocomplete-results {
+        @apply border border-muted-200 dark:border-muted-800;
+        @apply bg-white dark:bg-muted-950;
+      }
+
+      .nui-autocomplete-results-item-inner.nui-active, .nui-autocomplete-results-item-inner:hover {
+        @apply bg-muted-100 dark:bg-muted-800;
+      }
+    }
+
+    &.nui-autocomplete-muted {
+      .nui-autocomplete-input {
+        @apply text-muted-600 dark:text-muted-200;
+        @apply bg-muted-100 dark:bg-muted-900;
+        @apply border border-muted-200 dark:border-muted-700;
+        @apply placeholder:text-muted-300 dark:placeholder:text-muted-500;
+      }
+
+      .nui-autocomplete-results {
+        @apply border border-muted-200 dark:border-muted-700;
+        @apply bg-white dark:bg-muted-800;
+      }
+
+      .nui-autocomplete-results-item-inner.nui-active, .nui-autocomplete-results-item-inner:hover {
+        @apply bg-muted-100 dark:bg-muted-700;
+      }
+    }
+
+    &.nui-autocomplete-muted-contrast {
+      .nui-autocomplete-input {
+        @apply text-muted-600 dark:text-muted-200;
+        @apply bg-muted-100 dark:bg-muted-950;
+        @apply border border-muted-100 dark:border-muted-800;
+        @apply placeholder:text-muted-300 dark:placeholder:text-muted-600;
+      }
+
+      .nui-autocomplete-results {
+        @apply border border-muted-200 dark:border-muted-800;
+        @apply bg-white dark:bg-muted-950;
+      }
+
+      .nui-autocomplete-results-item-inner.nui-active, .nui-autocomplete-results-item-inner:hover {
+        @apply bg-muted-100 dark:bg-muted-800;
+      }
+    }
+
+    &.nui-autocomplete-focus {
+      .nui-autocomplete-input {
+        @apply transition-colors duration-300;
+        @apply focus:!border-primary-500 dark:focus:!border-primary-500;
+        @apply focus:hover:!border-primary-500 dark:focus:hover:!border-primary-500;
+      }
+    }
+
+    &:not(.nui-autocomplete-loading) {
+      .nui-autocomplete-input:placeholder-shown ~ .nui-label-float {
+        @apply text-muted-300 dark:text-muted-600;
+      }
+    }
+
+    &.nui-autocomplete-loading {
+      .nui-autocomplete-input {
+        @apply !text-transparent placeholder:!text-transparent dark:placeholder:!text-transparent;
+      }
+
+      .nui-autocomplete-input:placeholder-shown ~ .nui-label-float {
+        @apply text-transparent;
+      }
+
+      .nui-autocomplete-icon {
+        @apply opacity-50;
+      }
+    }
+
+    &.nui-autocomplete-label-float {
+      .nui-autocomplete-input {
+        @apply placeholder:text-transparent dark:placeholder:text-transparent;
+      }
+
+      .nui-autocomplete-multiple .nui-autocomplete-multiple-list {
+        @apply mb-6;
+      }
+    }
+
+    &.nui-autocomplete-error {
+      .nui-autocomplete-input {
+        @apply !border-danger-500 dark:!border-danger-500;
+      }
+
+      .nui-autocomplete-icon {
+        @apply !text-danger-500 dark:!text-danger-500;
+      }
+    }
+
+    &:not(.nui-has-icon).nui-autocomplete-sm {
+      .nui-autocomplete-input {
+        @apply h-8 py-1 text-xs leading-4 px-2;
+      }
+    }
+
+    &.nui-has-icon.nui-autocomplete-sm {
+      .nui-autocomplete-input {
+        @apply h-8 py-1 text-xs leading-4 pe-3 ps-8;
+      }
+    }
+
+    &:not(.nui-has-icon).nui-autocomplete-md {
+      .nui-autocomplete-input {
+        @apply h-10 py-2 text-sm leading-5 px-3;
+      }
+    }
+
+    &.nui-has-icon.nui-autocomplete-md {
+      .nui-autocomplete-input {
+        @apply h-10 py-2 text-sm leading-5 pe-4 ps-10;
+      }
+    }
+
+    &:not(.nui-has-icon).nui-autocomplete-lg {
+      .nui-autocomplete-input {
+        @apply h-12 py-2 text-sm leading-5 px-4;
+      }
+    }
+
+    &.nui-has-icon.nui-autocomplete-lg {
+      .nui-autocomplete-input {
+        @apply h-12 py-2 text-sm leading-5 pe-4 ps-11;
+      }
+    }
+
+    &:not(.nui-has-icon).nui-autocomplete-xl {
+      .nui-autocomplete-input {
+        @apply h-14 py-2 text-base leading-5 px-4;
+      }
+    }
+
+    &.nui-has-icon.nui-autocomplete-xl {
+      .nui-autocomplete-input {
+        @apply h-14 py-2 text-base leading-5 pe-4 ps-12;
+      }
+    }
+
+    &.nui-autocomplete-label-float:not(.nui-has-icon).nui-autocomplete-sm {
+      .nui-label-float {
+        @apply start-3 -ms-3 -mt-7 text-xs;
+      }
+
+      .nui-autocomplete-input:focus-visible ~ .nui-label-float {
+        @apply !-ms-3 !-mt-7;
+      }
+
+      .nui-autocomplete-input:placeholder-shown ~ .nui-label-float {
+        @apply ms-0 mt-0;
+      }
+    }
+
+    &.nui-autocomplete-label-float.nui-has-icon.nui-autocomplete-sm {
+      .nui-label-float {
+        @apply start-8 -ms-8 -mt-7 text-xs;
+      }
+
+      .nui-autocomplete-input:focus-visible ~ .nui-label-float {
+        @apply !-ms-8 !-mt-7;
+      }
+
+      .nui-autocomplete-input:placeholder-shown ~ .nui-label-float {
+        @apply ms-0 mt-0;
+      }
+    }
+
+    &.nui-autocomplete-label-float:not(.nui-has-icon).nui-autocomplete-md {
+      .nui-label-float {
+        @apply start-3 -ms-3 -mt-8 text-xs;
+      }
+
+      .nui-autocomplete-input:focus-visible ~ .nui-label-float {
+        @apply !-ms-3 !-mt-8 !text-xs;
+      }
+
+      .nui-autocomplete-input:placeholder-shown ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+
+    &.nui-autocomplete-label-float.nui-has-icon.nui-autocomplete-md {
+      .nui-label-float {
+        @apply start-10 -ms-10 -mt-8 text-xs;
+      }
+
+      .nui-autocomplete-input:focus-visible ~ .nui-label-float {
+        @apply !-ms-10 !-mt-8 !text-xs;
+      }
+
+      .nui-autocomplete-input:placeholder-shown ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+
+    &.nui-autocomplete-label-float:not(.nui-has-icon).nui-autocomplete-lg {
+      .nui-label-float {
+        @apply start-3 -ms-3 -mt-9 text-xs;
+      }
+
+      .nui-autocomplete-input:focus-visible ~ .nui-label-float {
+        @apply !-ms-3 !-mt-9 !text-xs;
+      }
+
+      .nui-autocomplete-input:placeholder-shown ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+
+    &.nui-autocomplete-label-float.nui-has-icon.nui-autocomplete-lg {
+      .nui-label-float {
+        @apply start-11 -ms-10 -mt-9 text-xs;
+      }
+
+      .nui-autocomplete-input:focus-visible ~ .nui-label-float {
+        @apply !-ms-10 !-mt-9 !text-xs;
+      }
+
+      .nui-autocomplete-input:placeholder-shown ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+
+    &.nui-autocomplete-label-float:not(.nui-has-icon).nui-autocomplete-xl {
+      .nui-label-float {
+        @apply start-3 -ms-3 -mt-10 text-xs;
+      }
+
+      .nui-autocomplete-input:focus-visible ~ .nui-label-float {
+        @apply !-ms-3 !-mt-10 !text-xs;
+      }
+
+      .nui-autocomplete-input:placeholder-shown ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+
+    &.nui-autocomplete-label-float.nui-has-icon.nui-autocomplete-xl {
+      .nui-label-float {
+        @apply start-[3.25rem] -ms-[3.25rem] -mt-10 text-xs;
+      }
+
+      .nui-autocomplete-input:focus-visible ~ .nui-label-float {
+        @apply !-ms-[3.25rem] !-mt-10 !text-xs;
+      }
+
+      .nui-autocomplete-input:placeholder-shown ~ .nui-label-float {
+        @apply ms-0 mt-0 text-[0.825rem];
+      }
+    }
+  }
+}

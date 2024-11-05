@@ -1,0 +1,64 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-modal */
+
+@layer components {
+  .nui-modal {
+    @apply fixed inset-0 z-[9999] flex items-center justify-center;
+
+    .nui-modal-inner {
+      @apply relative z-[9999];
+    }
+
+    .nui-modal-backdrop {
+      @apply bg-muted-800/70 dark:bg-muted-900/80 fixed inset-0;
+    }
+
+    .nui-modal-content {
+      @apply fixed inset-0;
+    }
+
+    .nui-modal-content-inner {
+      @apply flex w-full min-h-full items-center justify-center p-4 text-center;
+    }
+
+    .nui-modal-content-panel {
+      @apply w-full text-start align-middle transition-all;
+    }
+
+    &.nui-modal-sm {
+      .nui-modal-content-panel {
+        @apply max-w-sm;
+      }
+    }
+
+    &.nui-modal-md {
+      .nui-modal-content-panel {
+        @apply max-w-md;
+      }
+    }
+
+    &.nui-modal-lg {
+      .nui-modal-content-panel {
+        @apply max-w-xl;
+      }
+    }
+
+    &.nui-modal-xl {
+      .nui-modal-content-panel {
+        @apply max-w-2xl;
+      }
+    }
+
+    &.nui-modal-2xl {
+      .nui-modal-content-panel {
+        @apply max-w-3xl;
+      }
+    }
+
+    &.nui-modal-3xl {
+      .nui-modal-content-panel {
+        @apply max-w-5xl;
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-button-close */
+
+@layer components {
+  .nui-button-close {
+    @apply nui-focus flex items-center justify-center disabled:opacity-30 cursor-pointer;
+    @apply transition-colors duration-300;
+
+    &.nui-button-xs {
+      @apply h-6 w-6;
+
+      .nui-button-icon {
+        @apply h-3 w-3 fill-current;
+      }
+    }
+
+    &.nui-button-sm {
+      @apply h-8 w-8;
+
+      .nui-button-icon {
+        @apply h-4 w-4 fill-current;
+      }
+    }
+
+    &.nui-button-md {
+      @apply h-10 w-10;
+
+      .nui-button-icon {
+        @apply h-4 w-4 fill-current;
+      }
+    }
+
+    &.nui-button-lg {
+      @apply h-12 w-12;
+
+      .nui-button-icon {
+        @apply h-5 w-5 fill-current;
+      }
+    }
+
+    &.nui-button-xl {
+      @apply h-14 w-14;
+
+      .nui-button-icon {
+        @apply h-6 w-6 fill-current;
+      }
+    }
+
+    &.nui-button-rounded-sm {
+      @apply rounded;
+    }
+
+    &.nui-button-rounded-md {
+      @apply rounded-md;
+    }
+
+    &.nui-button-rounded-lg {
+      @apply rounded-lg;
+    }
+
+    &.nui-button-rounded-full {
+      @apply rounded-full;
+    }
+
+    &.nui-button-default {
+      @apply text-muted-700 dark:text-muted-50;
+      @apply bg-transparent dark:bg-transparent;
+      @apply hover:bg-muted-100 dark:hover:bg-muted-700;
+      @apply focus-visible:bg-muted-100 dark:focus-visible:bg-muted-700;
+      @apply active:enabled:bg-transparent dark:active:enabled:bg-transparent;
+    }
+
+    &.nui-button-default-contrast {
+      @apply text-muted-700 dark:text-muted-50;
+      @apply bg-transparent dark:bg-transparent;
+      @apply hover:bg-muted-100 dark:hover:bg-muted-900;
+      @apply focus-visible:bg-muted-100 dark:focus-visible:bg-muted-900;
+      @apply active:enabled:bg-transparent dark:active:enabled:bg-transparent;
+    }
+
+    &.nui-button-muted {
+      @apply text-muted-700 dark:text-muted-50;
+      @apply bg-muted-100 dark:bg-muted-700;
+      @apply hover:bg-muted-50 dark:hover:bg-muted-600;
+      @apply focus-visible:bg-muted-50 dark:focus-visible:bg-muted-600;
+      @apply active:enabled:bg-muted-100 dark:active:enabled:bg-muted-700;
+    }
+
+    &.nui-button-muted-contrast {
+      @apply text-muted-700 dark:text-muted-50;
+      @apply bg-muted-100 dark:bg-muted-950;
+      @apply hover:bg-muted-50 dark:hover:bg-muted-900;
+      @apply focus-visible:bg-muted-50 dark:focus-visible:bg-muted-900;
+      @apply active:enabled:bg-muted-100 dark:active:enabled:bg-muted-950;
+    }
+
+    &.nui-button-primary {
+      @apply text-primary-500 dark:text-primary-500;
+      @apply bg-primary-500/10 dark:bg-primary-500/10;
+      @apply hover:bg-primary-500/20 dark:hover:bg-primary-500/20;
+      @apply focus-visible:bg-primary-500/20 dark:focus-visible:bg-primary-500/20;
+      @apply active:enabled:bg-primary-500/10 dark:active:enabled:bg-primary-500/10;
+    }
+
+    &.nui-button-info {
+      @apply text-info-500 dark:text-info-500;
+      @apply bg-info-500/10 dark:bg-info-500/10;
+      @apply hover:bg-info-500/20 dark:hover:bg-info-500/20;
+      @apply focus-visible:bg-info-500/20 dark:focus-visible:bg-info-500/20;
+      @apply active:enabled:bg-info-500/10 dark:active:enabled:bg-info-500/10;
+    }
+
+    &.nui-button-success {
+      @apply text-success-500 dark:text-success-500;
+      @apply bg-success-500/10 dark:bg-success-500/10;
+      @apply hover:bg-success-500/20 dark:hover:bg-success-500/20;
+      @apply focus-visible:bg-success-500/20 dark:focus-visible:bg-success-500/20;
+      @apply active:enabled:bg-success-500/10 dark:active:enabled:bg-success-500/10;
+    }
+
+    &.nui-button-warning {
+      @apply text-warning-500 dark:text-warning-500;
+      @apply bg-warning-500/10 dark:bg-warning-500/10;
+      @apply hover:bg-warning-500/20 dark:hover:bg-warning-500/20;
+      @apply focus-visible:bg-warning-500/20 dark:focus-visible:bg-warning-500/20;
+      @apply active:enabled:bg-warning-500/10 dark:active:enabled:bg-warning-500/10;
+    }
+
+    &.nui-button-danger {
+      @apply text-danger-500 dark:text-danger-500;
+      @apply bg-danger-500/10 dark:bg-danger-500/10;
+      @apply hover:bg-danger-500/20 dark:hover:bg-danger-500/20;
+      @apply focus-visible:bg-danger-500/20 dark:focus-visible:bg-danger-500/20;
+      @apply active:enabled:bg-danger-500/10 dark:active:enabled:bg-danger-500/10;
+    }
+  }
+}

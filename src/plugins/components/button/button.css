@@ -1,0 +1,580 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-button */
+
+@layer components {
+  .nui-button {
+    @apply relative inline-flex justify-center items-center space-x-1;
+    @apply font-sans font-normal leading-5 no-underline;
+    @apply nui-focus transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none;
+
+    .nui-button-badge {
+      @apply flex absolute h-2.5 w-2.5 top-0 -end-0.5 -mt-0.5;
+
+      .nui-button-badge-pulse {
+        @apply absolute inline-flex h-full w-full rounded-full opacity-75 bg-primary-500 animate-ping;
+      }
+
+      .nui-button-badge-inner {
+        @apply relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-500;
+      }
+
+      &.nui-badge-primary {
+        .nui-button-badge-pulse {
+          @apply bg-primary-400;
+        }
+
+        .nui-button-badge-inner {
+          @apply bg-primary-400;
+        }
+      }
+
+      &.nui-badge-info {
+        .nui-button-badge-pulse {
+          @apply bg-info-400;
+        }
+
+        .nui-button-badge-inner {
+          @apply bg-info-400;
+        }
+      }
+
+      &.nui-badge-success {
+        .nui-button-badge-pulse {
+          @apply bg-success-400;
+        }
+
+        .nui-button-badge-inner {
+          @apply bg-success-400;
+        }
+      }
+
+      &.nui-badge-warning {
+        .nui-button-badge-pulse {
+          @apply bg-warning-400;
+        }
+
+        .nui-button-badge-inner {
+          @apply bg-warning-400;
+        }
+      }
+
+      &.nui-badge-danger {
+        .nui-button-badge-pulse {
+          @apply bg-danger-400;
+        }
+
+        .nui-button-badge-inner {
+          @apply bg-danger-400;
+        }
+      }
+    }
+
+    &.nui-button-loading {
+      @apply !text-transparent;
+    }
+
+    &.nui-button-sm {
+      @apply h-8 px-3 py-1 text-sm;
+
+      .nui-button-icon {
+        @apply w-3 h-3;
+      }
+    }
+
+    &.nui-button-md {
+      @apply h-10 px-5 py-2 text-sm;
+
+      .nui-button-icon {
+        @apply w-4 h-4;
+      }
+    }
+
+    &.nui-button-lg {
+      @apply h-12 px-6 py-2 text-base;
+
+      .nui-button-icon {
+        @apply w-5 h-5;
+      }
+    }
+
+    &.nui-button-xl {
+      @apply h-14 px-10 py-4 text-base;
+
+      .nui-button-icon {
+        @apply w-5 h-5;
+      }
+    }
+
+    &.nui-button-rounded-sm {
+      @apply rounded-md;
+    }
+
+    &.nui-button-rounded-md {
+      @apply rounded-lg;
+    }
+
+    &.nui-button-rounded-lg {
+      @apply rounded-xl;
+    }
+
+    &.nui-button-rounded-full {
+      @apply rounded-full;
+
+      .nui-button-badge {
+        @apply flex absolute h-2.5 w-2.5 top-0 -end-1 -mt-0.5 me-2;
+      }
+    }
+
+    &.nui-button-solid {
+      &.nui-button-default {
+        @apply text-muted-700 dark:text-muted-100;
+        @apply bg-white dark:bg-muted-700;
+        @apply hover:enabled:bg-muted-50 dark:hover:enabled:bg-muted-600;
+        @apply active:enabled:bg-white dark:active:enabled:bg-muted-700;
+        @apply focus-visible:bg-muted-50 dark:focus-visible:bg-muted-600;
+        @apply border border-muted-300 dark:border-muted-600;
+        @apply hover:enabled:border-muted-200 dark:hover:enabled:border-muted-500;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-muted-500/30 dark:enabled:shadow-muted-800/20;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-500/30 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-default-contrast {
+        @apply text-muted-800 dark:text-muted-100;
+        @apply bg-white dark:bg-muted-950;
+        @apply hover:enabled:bg-muted-50 dark:hover:enabled:bg-muted-900;
+        @apply active:enabled:bg-white dark:active:enabled:bg-muted-950;
+        @apply focus-visible:bg-muted-50 dark:focus-visible:bg-muted-900;
+        @apply border border-muted-300 dark:border-muted-800;
+        @apply hover:enabled:border-muted-200 dark:hover:enabled:border-muted-700;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-muted-500/30 dark:enabled:shadow-muted-800/20;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-500/30 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-muted {
+        @apply text-muted-500 dark:text-muted-100;
+        @apply bg-muted-200 dark:bg-muted-700;
+        @apply hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-600;
+        @apply active:enabled:bg-muted-200 dark:active:enabled:bg-muted-700;
+        @apply focus-visible:bg-muted-100 dark:focus-visible:bg-muted-600;
+        @apply border border-muted-200 dark:border-muted-700;
+        @apply border-muted-100 dark:border-muted-600;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-muted-500/30 dark:enabled:shadow-muted-800/20;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-500/30 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-muted-contrast {
+        @apply text-muted-500 dark:text-muted-100;
+        @apply bg-muted-200 dark:bg-muted-950;
+        @apply hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-900;
+        @apply active:enabled:bg-muted-200 dark:active:enabled:bg-muted-950;
+        @apply focus-visible:bg-muted-100 dark:focus-visible:bg-muted-900;
+        @apply border border-muted-200 dark:border-muted-800;
+        @apply hover:enabled:border-muted-100 dark:hover:enabled:border-muted-700;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-muted-500/30 dark:enabled:shadow-muted-800/20;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-500/30 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-light {
+        @apply text-muted-500 dark:text-muted-100;
+        @apply bg-muted-200 dark:bg-muted-700;
+        @apply hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-600;
+        @apply active:enabled:bg-muted-200 dark:active:enabled:bg-muted-700;
+        @apply focus-visible:bg-muted-100 dark:focus-visible:bg-muted-600;
+        @apply border border-muted-200 dark:border-muted-700;
+        @apply border-muted-100 dark:border-muted-600;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-muted-500/30 dark:enabled:shadow-muted-800/20;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-500/30 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-dark {
+        @apply text-muted-100 dark:text-muted-900;
+        @apply bg-muted-900 dark:bg-muted-100;
+        @apply hover:enabled:bg-muted-800 dark:hover:enabled:bg-muted-50;
+        @apply active:enabled:bg-muted-900 dark:active:enabled:bg-muted-100;
+        @apply focus-visible:bg-muted-800 dark:focus-visible:bg-muted-50;
+        @apply border border-muted-900 dark:border-muted-100;
+        @apply border-muted-800 dark:border-muted-50;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-muted-800/20 dark:enabled:shadow-muted-800/20;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-800/20 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-black {
+        @apply text-white dark:text-black;
+        @apply bg-black dark:bg-white;
+        @apply hover:enabled:bg-black/90 dark:hover:enabled:bg-white/90;
+        @apply active:enabled:bg-black dark:active:enabled:bg-white;
+        @apply focus-visible:bg-black/90 dark:focus-visible:bg-white/90;
+        @apply border border-black dark:border-white;
+        @apply border-black/90 dark:border-white/90;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-muted-800/20 dark:enabled:shadow-muted-800/20;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-800/20 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-primary {
+        @apply text-primary-invert dark:text-primary-invert;
+        @apply bg-primary-500 dark:bg-primary-500;
+        @apply hover:enabled:bg-primary-400 dark:hover:enabled:bg-primary-400;
+        @apply active:enabled:bg-primary-500 dark:active:enabled:bg-primary-500;
+        @apply focus-visible:bg-primary-400 dark:focus-visible:bg-primary-400;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-primary-500/50 dark:enabled:shadow-primary-800/50;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-primary-500/50 dark:hover:enabled:shadow-primary-800/50;
+        }
+      }
+
+      &.nui-button-info {
+        @apply text-white text-white;
+        @apply bg-info-500 dark:bg-info-500;
+        @apply hover:enabled:bg-info-400 dark:hover:enabled:bg-info-400;
+        @apply active:enabled:bg-info-500 dark:active:enabled:bg-info-500;
+        @apply focus-visible:bg-info-400 dark:focus-visible:bg-info-400;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-info-500/50 dark:enabled:shadow-info-800/50;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-info-500/50 dark:hover:enabled:shadow-info-800/50;
+        }
+      }
+
+      &.nui-button-success {
+        @apply text-white text-white;
+        @apply bg-success-500 dark:bg-success-500;
+        @apply hover:enabled:bg-success-400 dark:hover:enabled:bg-success-400;
+        @apply active:enabled:bg-success-500 dark:active:enabled:bg-success-500;
+        @apply focus-visible:bg-success-400 dark:focus-visible:bg-success-400;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-success-500/50 dark:enabled:shadow-success-800/50;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-success-500/50 dark:hover:enabled:shadow-success-800/50;
+        }
+      }
+
+      &.nui-button-warning {
+        @apply text-white text-white;
+        @apply bg-warning-500 dark:bg-warning-500;
+        @apply hover:enabled:bg-warning-400 dark:hover:enabled:bg-warning-400;
+        @apply active:enabled:bg-warning-500 dark:active:enabled:bg-warning-500;
+        @apply focus-visible:bg-warning-400 dark:focus-visible:bg-warning-400;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-warning-500/50 dark:enabled:shadow-warning-800/50;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-warning-500/50 dark:hover:enabled:shadow-warning-800/50;
+        }
+      }
+
+      &.nui-button-danger {
+        @apply text-white text-white;
+        @apply bg-danger-500 dark:bg-danger-500;
+        @apply hover:enabled:bg-danger-400 dark:hover:enabled:bg-danger-400;
+        @apply active:enabled:bg-danger-500 dark:active:enabled:bg-danger-500;
+        @apply focus-visible:bg-danger-400 dark:focus-visible:bg-danger-400;
+
+        &.nui-button-shadow {
+          @apply enabled:shadow-xl enabled:shadow-danger-500/50 dark:enabled:shadow-danger-800/50;
+        }
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-danger-500/50 dark:hover:enabled:shadow-danger-800/50;
+        }
+      }
+    }
+
+    &.nui-button-pastel {
+      &.nui-button-default, &.nui-button-default-contrast {
+        @apply text-muted-800 dark:text-muted-100;
+        @apply bg-muted-500/10 dark:bg-muted-500/10;
+        @apply hover:enabled:bg-muted-500/20 dark:hover:enabled:bg-muted-500/20;
+        @apply active:enabled:bg-muted-500/10 dark:active:enabled:bg-muted-500/10;
+        @apply focus-visible:bg-muted-500/20 dark:focus-visible:bg-muted-500/20;
+      }
+
+      &.nui-button-muted, &.nui-button-muted-contrast {
+        @apply text-muted-800 dark:text-muted-100;
+        @apply bg-muted-500/10 dark:bg-muted-500/10;
+        @apply hover:enabled:bg-muted-500/20 dark:hover:enabled:bg-muted-500/20;
+        @apply active:enabled:bg-muted-500/10 dark:active:enabled:bg-muted-500/10;
+        @apply focus-visible:bg-muted-500/20 dark:focus-visible:bg-muted-500/20;
+      }
+
+      &.nui-button-light {
+        @apply text-muted-800 dark:text-muted-100;
+        @apply bg-white/30 dark:bg-white/20;
+        @apply hover:enabled:bg-white/20 dark:hover:enabled:bg-white/10;
+        @apply active:enabled:bg-white/30 dark:active:enabled:bg-white/20;
+        @apply focus-visible:bg-white/20 dark:focus-visible:bg-white/10;
+      }
+
+      &.nui-button-dark {
+        @apply text-muted-800 dark:text-muted-100;
+        @apply bg-muted-500/10 dark:bg-muted-500/10;
+        @apply hover:enabled:bg-muted-500/20 dark:hover:enabled:bg-muted-500/20;
+        @apply active:enabled:bg-muted-500/10 dark:active:enabled:bg-muted-500/10;
+        @apply focus-visible:bg-muted-500/20 dark:focus-visible:bg-muted-500/20;
+      }
+
+      &.nui-button-black {
+        @apply text-black dark:text-white;
+        @apply bg-black/10 dark:bg-black/10;
+        @apply hover:enabled:bg-black/20 dark:hover:enabled:bg-black/20;
+        @apply active:enabled:bg-black/10 dark:active:enabled:bg-black/10;
+        @apply focus-visible:bg-black/20 dark:focus-visible:bg-black/20;
+      }
+
+      &.nui-button-primary {
+        @apply text-primary-500 dark:text-primary-500;
+        @apply bg-primary-500/10 dark:bg-primary-500/10;
+        @apply hover:enabled:bg-primary-500/20 dark:hover:enabled:bg-primary-500/20;
+        @apply active:enabled:bg-primary-500/10 dark:active:enabled:bg-primary-500/10;
+        @apply focus-visible:bg-primary-500/20 dark:focus-visible:bg-primary-500/20;
+      }
+
+      &.nui-button-info {
+        @apply text-info-500 dark:text-info-500;
+        @apply bg-info-500/10 dark:bg-info-500/10;
+        @apply hover:enabled:bg-info-500/20 dark:hover:enabled:bg-info-500/20;
+        @apply active:enabled:bg-info-500/10 dark:active:enabled:bg-info-500/10;
+        @apply focus-visible:bg-info-500/20 dark:focus-visible:bg-info-500/20;
+      }
+
+      &.nui-button-success {
+        @apply text-success-500 dark:text-success-500;
+        @apply bg-success-500/10 dark:bg-success-500/10;
+        @apply hover:enabled:bg-success-500/20 dark:hover:enabled:bg-success-500/20;
+        @apply active:enabled:bg-success-500/10 dark:active:enabled:bg-success-500/10;
+        @apply focus-visible:bg-success-500/20 dark:focus-visible:bg-success-500/20;
+      }
+
+      &.nui-button-warning {
+        @apply text-warning-500 dark:text-warning-500;
+        @apply bg-warning-500/10 dark:bg-warning-500/10;
+        @apply hover:enabled:bg-warning-500/20 dark:hover:enabled:bg-warning-500/20;
+        @apply active:enabled:bg-warning-500/10 dark:active:enabled:bg-warning-500/10;
+        @apply focus-visible:bg-warning-500/20 dark:focus-visible:bg-warning-500/20;
+      }
+
+      &.nui-button-danger {
+        @apply text-danger-500 dark:text-danger-500;
+        @apply bg-danger-500/10 dark:bg-danger-500/10;
+        @apply hover:enabled:bg-danger-500/20 dark:hover:enabled:bg-danger-500/20;
+        @apply active:enabled:bg-danger-500/10 dark:active:enabled:bg-danger-500/10;
+        @apply focus-visible:bg-danger-500/20 dark:focus-visible:bg-danger-500/20;
+      }
+    }
+
+    &.nui-button-outline {
+      &.nui-button-default, &.nui-button-default-contrast {
+        @apply text-muted-500 dark:text-white;
+        @apply hover:enabled:text-white dark:hover:enabled:text-muted-800;
+        @apply focus-visible:text-muted-800 dark:focus-visible:text-muted-800;
+        @apply active:enabled:text-white dark:active:enabled:text-muted-800;
+        @apply bg-transparent dark:bg-transparent;
+        @apply hover:enabled:bg-muted-500 dark:hover:enabled:bg-white;
+        @apply active:enabled:bg-muted-400 dark:active:enabled:bg-muted-700;
+        @apply focus-visible:bg-muted-500 dark:focus-visible:bg-muted-800;
+        @apply border-2 border-muted-500 dark:border-white;
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-500/50 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-light {
+        @apply text-white dark:text-white;
+        @apply hover:enabled:text-muted-800 dark:hover:enabled:text-muted-800;
+        @apply focus-visible:text-muted-800 dark:focus-visible:text-muted-800;
+        @apply active:enabled:text-muted-800 dark:active:enabled:text-muted-800;
+        @apply bg-transparent dark:bg-transparent;
+        @apply hover:enabled:bg-white dark:hover:enabled:bg-white;
+        @apply active:enabled:bg-muted-800 dark:active:enabled:bg-muted-800;
+        @apply focus-visible:bg-white dark:focus-visible:bg-white;
+        @apply border-2 border-white dark:border-white;
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-500/50 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-muted, &.nui-button-muted-contrast {
+        @apply text-muted-400 dark:text-white;
+        @apply hover:enabled:text-white dark:hover:enabled:text-muted-800;
+        @apply focus-visible:text-muted-800 dark:focus-visible:text-muted-800;
+        @apply active:enabled:text-white dark:active:enabled:text-muted-800;
+        @apply bg-transparent dark:bg-transparent;
+        @apply hover:enabled:bg-muted-300 dark:hover:enabled:bg-white;
+        @apply active:enabled:bg-muted-400 dark:active:enabled:bg-white/80;
+        @apply focus-visible:bg-muted-300 dark:focus-visible:bg-white;
+        @apply border-2 border-muted-300 dark:border-white;
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-500/50 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-dark {
+        @apply text-muted-900 dark:text-white;
+        @apply hover:enabled:text-white dark:hover:enabled:text-muted-900;
+        @apply focus-visible:text-muted-800 dark:focus-visible:text-muted-800;
+        @apply active:enabled:text-white dark:active:enabled:text-muted-900;
+        @apply bg-transparent dark:bg-transparent;
+        @apply hover:enabled:bg-muted-900 dark:hover:enabled:bg-muted-100;
+        @apply active:enabled:bg-muted-800 dark:active:enabled:bg-muted-50;
+        @apply focus-visible:bg-muted-800 dark:focus-visible:bg-muted-50;
+        @apply border-2 border-muted-900 dark:border-white;
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-500/50 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-black {
+        @apply text-black dark:text-white;
+        @apply hover:enabled:text-white dark:hover:enabled:text-black;
+        @apply focus-visible:text-black/90 dark:focus-visible:text-black/90;
+        @apply active:enabled:text-white dark:active:enabled:text-black;
+        @apply bg-transparent dark:bg-transparent;
+        @apply hover:enabled:bg-black dark:hover:enabled:bg-white;
+        @apply active:enabled:bg-black/90 dark:active:enabled:bg-white/90;
+        @apply focus-visible:bg-black/90 dark:focus-visible:bg-white/90;
+        @apply border-2 border-black dark:border-white;
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-muted-500/50 dark:hover:enabled:shadow-muted-800/20;
+        }
+      }
+
+      &.nui-button-primary {
+        @apply text-primary-500 dark:text-primary-500;
+        @apply hover:enabled:text-white dark:hover:enabled:text-white;
+        @apply focus-visible:text-white dark:focus-visible:text-white;
+        @apply active:enabled:text-white dark:active:enabled:text-white;
+        @apply bg-transparent dark:bg-transparent;
+        @apply hover:enabled:bg-primary-500 dark:hover:enabled:bg-primary-500;
+        @apply active:enabled:bg-primary-400 dark:active:enabled:bg-primary-400;
+        @apply focus-visible:bg-primary-500 dark:focus-visible:bg-primary-500;
+        @apply border-2 border-primary-500 dark:border-primary-500;
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-primary-500/30 dark:hover:enabled:shadow-primary-800/30;
+        }
+      }
+
+      &.nui-button-info {
+        @apply text-info-500 dark:text-info-500;
+        @apply hover:enabled:text-white dark:hover:enabled:text-white;
+        @apply focus-visible:text-white dark:focus-visible:text-white;
+        @apply active:enabled:text-white dark:active:enabled:text-white;
+        @apply bg-transparent dark:bg-transparent;
+        @apply hover:enabled:bg-info-500 dark:hover:enabled:bg-info-500;
+        @apply active:enabled:bg-info-400 dark:active:enabled:bg-info-400;
+        @apply focus-visible:bg-info-500 dark:focus-visible:bg-info-500;
+        @apply border-2 border-info-500 dark:border-info-500;
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-info-500/30 dark:hover:enabled:shadow-info-800/30;
+        }
+      }
+
+      &.nui-button-success {
+        @apply text-success-500 dark:text-success-500;
+        @apply hover:enabled:text-white dark:hover:enabled:text-white;
+        @apply focus-visible:text-white dark:focus-visible:text-white;
+        @apply active:enabled:text-white dark:active:enabled:text-white;
+        @apply bg-transparent dark:bg-transparent;
+        @apply hover:enabled:bg-success-500 dark:hover:enabled:bg-success-500;
+        @apply active:enabled:bg-success-400 dark:active:enabled:bg-success-400;
+        @apply focus-visible:bg-success-500 dark:focus-visible:bg-success-500;
+        @apply border-2 border-success-500 dark:border-success-500;
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-success-500/30 dark:hover:enabled:shadow-success-800/30;
+        }
+      }
+
+      &.nui-button-warning {
+        @apply text-warning-500 dark:text-warning-500;
+        @apply hover:enabled:text-white dark:hover:enabled:text-white;
+        @apply focus-visible:text-white dark:focus-visible:text-white;
+        @apply active:enabled:text-white dark:active:enabled:text-white;
+        @apply bg-transparent dark:bg-transparent;
+        @apply hover:enabled:bg-warning-500 dark:hover:enabled:bg-warning-500;
+        @apply active:enabled:bg-warning-400 dark:active:enabled:bg-warning-400;
+        @apply focus-visible:bg-warning-500 dark:focus-visible:bg-warning-500;
+        @apply border-2 border-warning-500 dark:border-warning-500;
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-warning-500/30 dark:hover:enabled:shadow-warning-800/30;
+        }
+      }
+
+      &.nui-button-danger {
+        @apply text-danger-500 dark:text-danger-500;
+        @apply hover:enabled:text-white dark:hover:enabled:text-white;
+        @apply focus-visible:text-white dark:focus-visible:text-white;
+        @apply active:enabled:text-white dark:active:enabled:text-white;
+        @apply bg-transparent dark:bg-transparent;
+        @apply hover:enabled:bg-danger-500 dark:hover:enabled:bg-danger-500;
+        @apply active:enabled:bg-danger-400 dark:active:enabled:bg-danger-400;
+        @apply focus-visible:bg-danger-500 dark:focus-visible:bg-danger-500;
+        @apply border-2 border-danger-500 dark:border-danger-500;
+
+        &.nui-button-shadow-hover {
+          @apply hover:enabled:shadow-xl hover:enabled:shadow-danger-500/30 dark:hover:enabled:shadow-danger-800/30;
+        }
+      }
+    }
+  }
+}

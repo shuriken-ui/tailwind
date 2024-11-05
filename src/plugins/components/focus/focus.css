@@ -1,0 +1,14 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-focus */
+
+@layer components {
+  .nui-focus {
+    @apply outline-2 outline-dashed outline-offset-2;
+    @apply outline-transparent;
+
+    &:focus-within {
+      @apply outline-muted-300 dark:outline-muted-600;
+      @apply outline-dashed ring-0;
+    }
+  }
+}

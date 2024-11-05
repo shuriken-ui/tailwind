@@ -1,0 +1,238 @@
+/* generated using "pnpm jiti scripts/generate-css.ts" */
+/* @component nui-button-group */
+
+@layer components {
+  .nui-button-group, [role="group"] {
+    @apply flex;
+
+    > .nui-button:not(:only-child), > .nui-button-action:not(:only-child), > .nui-button-icon:not(:only-child) {
+      @apply !border-e-0;
+
+      &:focus {
+        @apply !z-10 relative;
+      }
+
+      &:not(:first-child):not(:last-child) {
+        @apply !rounded-none;
+      }
+
+      &:first-child {
+        @apply !rounded-e-none;
+      }
+
+      &:last-child {
+        @apply !border-e !rounded-s-none;
+      }
+    }
+
+    .nui-input-wrapper:not(:first-child):not(:last-child) {
+      .nui-input {
+        @apply !border-e-0 !rounded-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-input-wrapper:first-child:not(:last-child) {
+      .nui-input {
+        @apply !border-e-0 !rounded-e-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-input-wrapper:last-child:not(:first-child) {
+      .nui-input {
+        @apply !border-e !rounded-s-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-input-number-wrapper:not(:first-child):not(:last-child) {
+      .nui-input-number {
+        @apply !border-e-0 !rounded-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-input-number-wrapper:first-child:not(:last-child) {
+      .nui-input-number {
+        @apply !border-e-0 !rounded-e-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-input-number-wrapper:last-child:not(:first-child) {
+      .nui-input-number {
+        @apply !border-e !rounded-s-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-input-file-regular:not(:first-child):not(:last-child) {
+      .nui-input-file-inner {
+        @apply !border-e-0 !rounded-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-input-file-regular:first-child:not(:last-child) {
+      .nui-input-file-inner {
+        @apply !border-e-0 !rounded-e-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-input-file-regular:last-child:not(:first-child) {
+      .nui-input-file-inner {
+        @apply !border-e !rounded-s-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-select-wrapper:not(:first-child):not(:last-child) {
+      .nui-select {
+        @apply !border-e-0 !rounded-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-select-wrapper:first-child:not(:last-child) {
+      .nui-select {
+        @apply !border-e-0 !rounded-e-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-select-wrapper:last-child:not(:first-child) {
+      .nui-select {
+        @apply !border-e !rounded-s-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-autocomplete:not(:first-child):not(:last-child) {
+      .nui-autocomplete-input {
+        @apply !border-e-0 !rounded-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-autocomplete:first-child:not(:last-child) {
+      .nui-autocomplete-input {
+        @apply !border-e-0 !rounded-e-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-autocomplete:last-child:not(:first-child) {
+      .nui-autocomplete-input {
+        @apply !border-e !rounded-s-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-dropdown:not(:first-child):not(:last-child) {
+      .nui-button {
+        @apply !border-e-0 !rounded-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-dropdown:first-child:not(:last-child) {
+      .nui-button {
+        @apply !border-e-0 !rounded-e-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-dropdown:last-child:not(:first-child) {
+      .nui-button {
+        @apply !border-e !rounded-s-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-listbox:not(:first-child):not(:last-child) {
+      .nui-listbox-button {
+        @apply !border-e-0 !rounded-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-listbox:first-child:not(:last-child) {
+      .nui-listbox-button {
+        @apply !border-e-0 !rounded-e-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+
+    .nui-listbox:last-child:not(:first-child) {
+      .nui-listbox-button {
+        @apply !border-e !rounded-s-none;
+
+        &:focus {
+          @apply !z-10 relative;
+        }
+      }
+    }
+  }
+}
