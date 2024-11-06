@@ -1,5 +1,4 @@
 import process from 'node:process';
-import { fileURLToPath } from 'node:url';
 import { writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { glob } from "glob";
@@ -13,11 +12,9 @@ const files = await glob('src/plugins/components/**/index.ts', {
 });
 
 for (const file of files) {
-
-
   const dir = dirname(file);
   const folder = dir.split('/').pop();
-  const out = join(cwd, dir, `${folder}.css`);
+  const out = join(cwd, 'src/components', `${folder}.css`);
   const mod = await import(join('../..', dir, 'index.ts')).then((mod) => mod.default);
 
   // mock functions
@@ -49,31 +46,35 @@ for (const file of files) {
   await writeFile(out, css);
 }
 
-function toCSS(component: any, level = 0) {
+function toCSS(component: any, level = 0, addSelector = true) {
   let css = '';
   for (const [selector, rules] of Object.entries(component)) {
-    css += `${'  '.repeat(level)}${selector} {\n`;
+    if (addSelector) {
+      css += `${'  '.repeat(level)}${selector} {\n`;
+    }
 
     let hasRules = false;
     for (const [rule, value] of Object.entries(rules as any)) {
       if (typeof value === 'object') {
         if (Object.keys(value as any).length === 0) {
-          css += `${'  '.repeat(level + 1)}${rule};\n`;
+          css += `${'  '.repeat(level + (addSelector ? 1 : 0))}${rule};\n`;
           hasRules = true;
         } else {
           if (hasRules) {
             css += `\n`;
           }
 
-          css += toCSS({ [rule]: value }, level + 1);
+          css += toCSS({ [rule]: value }, level + (addSelector ? 1 : 0));
           hasRules = true;
         }
       } else {
-        css += `${'  '.repeat(level + 1)}${kebabCase(rule)}: ${value};\n`;
+        css += `${'  '.repeat(level + (addSelector ? 1 : 0))}${kebabCase(rule)}: ${value};\n`;
       }
     }
 
-    css += `${'  '.repeat(level)}}\n`;
+    if (addSelector) {
+      css += `${'  '.repeat(level)}}\n`;
+    }
   }
   return css;
 }

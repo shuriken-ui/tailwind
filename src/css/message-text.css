@@ -1,0 +1,72 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-message-text */
+
+@utility nui-message-text {
+  @apply relative p-5;
+}
+@utility nui-message-head {
+  @apply flex items-center gap-2 mb-3;
+}
+@utility nui-message-dot {
+  @apply inline-block h-2 w-2 rounded-full;
+}
+@utility nui-message-close {
+  @apply absolute top-2 end-2;
+}
+@utility nui-message-rounded-sm {
+  @apply rounded-md;
+}
+@utility nui-message-rounded-md {
+  @apply rounded-lg;
+}
+@utility nui-message-rounded-lg {
+  @apply rounded-xl;
+}
+@utility nui-message-low-contrast {
+  @apply bg-white dark:bg-muted-800;
+  @apply border border-muted-300 dark:border-muted-700;
+}
+@utility nui-message-high-contrast {
+  @apply bg-white dark:bg-muted-950;
+  @apply border border-muted-300 dark:border-muted-800;
+}
+@utility nui-message-default {
+  .nui-message-dot {
+    @apply bg-muted-300 dark:bg-muted-700;
+  }
+}
+@utility nui-message-primary {
+  .nui-message-dot {
+    @apply bg-primary-500 dark:bg-primary-500;
+  }
+}
+@utility nui-message-info {
+  .nui-message-dot {
+    @apply bg-info-500 dark:bg-info-500;
+  }
+}
+@utility nui-message-success {
+  .nui-message-dot {
+    @apply bg-success-500 dark:bg-success-500;
+  }
+}
+@utility nui-message-warning {
+  .nui-message-dot {
+    @apply bg-warning-500 dark:bg-warning-500;
+  }
+}
+@utility nui-message-danger {
+  .nui-message-dot {
+    @apply bg-danger-500 dark:bg-danger-500;
+  }
+}
+@utility nui-message-dark {
+  .nui-message-dot {
+    @apply bg-muted-900 dark:bg-muted-100;
+  }
+}
+@utility nui-message-black {
+  .nui-message-dot {
+    @apply bg-black dark:bg-white;
+  }
+}

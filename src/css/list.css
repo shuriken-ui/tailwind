@@ -1,0 +1,23 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-list */
+
+@utility nui-list {
+}
+@utility nui-list-ul {
+  @apply list-disc;
+}
+@utility nui-list-ol {
+  @apply list-decimal;
+}
+@utility nui-list-base {
+  @apply space-y-1 font-sans;
+  @apply text-muted-700 dark:text-muted-300;
+  @apply marker:text-muted-500 dark:marker:text-muted-400;
+}
+@utility nui-list-media {
+  @apply space-y-4 marker:text-muted-500 dark:marker:text-muted-400;
+
+  .nui-list-item {
+    @apply flex gap-2;
+  }
+}

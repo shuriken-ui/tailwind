@@ -1,0 +1,102 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-dropdown */
+
+@utility nui-dropdown {
+  @apply text-start;
+
+  &:hover {
+    .nui-context-button {
+      @apply ring-offset-4 ring-muted-200 dark:ring-muted-700;
+    }
+  }
+}
+@utility nui-dropdown-menu {
+  @apply absolute z-50 mt-2 focus:outline-none;
+  @apply shadow-lg shadow-muted-300/30 dark:shadow-muted-800/20;
+}
+@utility nui-menu {
+  @apply relative inline-block;
+}
+@utility nui-menu-content {
+  @apply p-2;
+}
+@utility nui-context-button {
+  @apply inline-flex items-center justify-center rounded-full;
+  @apply h-9 w-9;
+  @apply ring-1 ring-transparent ring-offset-white dark:ring-offset-muted-900;
+  @apply transition-all duration-300;
+
+  .nui-context-button-inner {
+    @apply flex items-center justify-center rounded-full;
+    @apply h-9 w-9;
+    @apply bg-white dark:bg-muted-800;
+    @apply border border-muted-200 dark:border-muted-700;
+  }
+
+  .nui-context-icon {
+    @apply h-5 w-5;
+    @apply text-muted-400 dark:text-muted-400;
+    @apply transition-all duration-300;
+  }
+}
+@utility nui-text-button {
+  @apply flex items-center space-x-1;
+}
+@utility nui-chevron {
+  @apply h-4 w-4;
+  @apply transition-transform duration-300;
+}
+@utility nui-dropdown-start {
+  .nui-dropdown-menu {
+    @apply start-0 origin-top-left;
+  }
+}
+@utility nui-dropdown-end {
+  .nui-dropdown-menu {
+    @apply end-0 origin-top-right;
+  }
+}
+@utility nui-menu-header {
+  @apply px-4 pt-5;
+}
+@utility nui-menu-header-inner {
+  @apply relative flex items-center justify-between;
+}
+@utility nui-menu-header-title {
+  @apply font-sans font-medium text-xs uppercase;
+  @apply text-muted-500 dark:text-muted-200;
+}
+@utility nui-menu-content {
+  @apply p-2 space-y-1;
+}
+@utility nui-menu-md {
+  @apply w-56;
+}
+@utility nui-menu-lg {
+  @apply w-72;
+}
+@utility nui-menu-rounded-sm {
+  @apply rounded-md;
+}
+@utility nui-menu-rounded-md {
+  @apply rounded-lg;
+}
+@utility nui-menu-rounded-lg {
+  @apply rounded-xl;
+}
+@utility nui-menu-default {
+  @apply border border-muted-200 dark:border-muted-700;
+  @apply bg-white dark:bg-muted-800;
+}
+@utility nui-menu-default-contrast {
+  @apply border border-muted-200 dark:border-muted-800;
+  @apply bg-white dark:bg-muted-950;
+}
+@utility nui-menu-muted {
+  @apply border border-muted-200 dark:border-muted-700;
+  @apply bg-white dark:bg-muted-800;
+}
+@utility nui-menu-muted-contrast {
+  @apply border border-muted-200 dark:border-muted-800;
+  @apply bg-white dark:bg-muted-950;
+}

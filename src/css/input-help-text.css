@@ -1,0 +1,7 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-input-help-text */
+
+@utility nui-input-help-text {
+  @apply mt-1 block;
+  @apply font-sans text-[0.65rem] font-medium leading-none;
+}

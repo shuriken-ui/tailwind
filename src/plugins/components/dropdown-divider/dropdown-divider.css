@@ -1,8 +1,0 @@
-/* generated using "pnpm jiti scripts/generate-css.ts" */
-/* @component nui-dropdown-divider */
-
-@layer components {
-  .nui-dropdown-divider {
-    @apply my-2 block h-px w-full border-t border-muted-200 dark:border-muted-700;
-  }
-}

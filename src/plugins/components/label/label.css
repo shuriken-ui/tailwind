@@ -1,8 +1,0 @@
-/* generated using "pnpm jiti scripts/generate-css.ts" */
-/* @component nui-label */
-
-@layer components {
-  .nui-label {
-    @apply inline-block font-sans leading-none text-muted-400 dark:text-muted-400/80;
-  }
-}

@@ -1,0 +1,8 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-link */
+
+@utility nui-link {
+  @apply font-sans underline-offset-4 hover:underline focus:underline;
+  @apply hover:text-primary-500 dark:hover:text-primary-400;
+  @apply focus:text-primary-500 dark:focus:text-primary-400;
+}

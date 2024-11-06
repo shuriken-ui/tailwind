@@ -1,0 +1,76 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-switch-thin */
+
+@utility nui-switch-thin {
+  @apply flex cursor-pointer items-center;
+
+  &.nui-switch-thin-primary .nui-switch-thin-input:checked ~ .nui-switch-thin-track {
+    @apply bg-primary-400 dark:bg-primary-400;
+  }
+
+  &.nui-switch-thin-info .nui-switch-thin-input:checked ~ .nui-switch-thin-track {
+    @apply bg-info-400 dark:bg-info-400;
+  }
+
+  &.nui-switch-thin-success .nui-switch-thin-input:checked ~ .nui-switch-thin-track {
+    @apply bg-success-400 dark:bg-success-400;
+  }
+
+  &.nui-switch-thin-warning .nui-switch-thin-input:checked ~ .nui-switch-thin-track {
+    @apply bg-warning-400 dark:bg-warning-400;
+  }
+
+  &.nui-switch-thin-danger .nui-switch-thin-input:checked ~ .nui-switch-thin-track {
+    @apply bg-danger-400 dark:bg-danger-400;
+  }
+
+  &.nui-switch-thin-dark .nui-switch-thin-input:checked ~ .nui-switch-thin-track {
+    @apply bg-muted-900 dark:bg-muted-100;
+  }
+
+  &.nui-switch-thin-black .nui-switch-thin-input:checked ~ .nui-switch-thin-track {
+    @apply bg-black dark:bg-white;
+  }
+}
+@utility nui-switch-thin-outer {
+  @apply nui-focus relative block h-4 rounded-full;
+}
+@utility nui-switch-thin-handle {
+  @apply absolute -start-1 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full;
+  @apply h-6 w-6;
+  @apply bg-white dark:bg-muted-700;
+  @apply border border-muted-300 dark:border-muted-600;
+  @apply transition-all duration-300;
+}
+@utility nui-switch-thin-track {
+  @apply block h-4 w-10 rounded-full;
+  @apply bg-muted-300 dark:bg-muted-600;
+  @apply transition-all duration-300;
+}
+@utility nui-switch-thin-single-label {
+  @apply relative ms-3 cursor-pointer select-none;
+  @apply font-sans text-sm;
+  @apply text-muted-400 dark:text-muted-400;
+}
+@utility nui-switch-thin-dual-label {
+  @apply ms-3;
+
+  .nui-switch-thin-label {
+    @apply block;
+    @apply font-sans text-sm;
+    @apply text-muted-800 dark:text-white;
+  }
+
+  .nui-switch-thin-sublabel {
+    @apply block;
+    @apply font-sans text-xs;
+    @apply text-muted-400 dark:text-muted-400;
+  }
+}
+@utility nui-switch-thin-input {
+  @apply absolute z-20 h-full w-full cursor-pointer opacity-0;
+
+  &:checked ~ .nui-switch-thin-handle {
+    @apply -translate-y-1/2 translate-x-full rtl:-translate-x-full;
+  }
+}

@@ -1,9 +1,0 @@
-/* generated using "pnpm jiti scripts/generate-css.ts" */
-/* @component nui-input-help-text */
-
-@layer components {
-  .nui-input-help-text {
-    @apply mt-1 block;
-    @apply font-sans text-[0.65rem] font-medium leading-none;
-  }
-}

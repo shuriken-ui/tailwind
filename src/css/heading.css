@@ -1,0 +1,78 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-heading */
+
+@utility nui-heading {
+  @apply font-sans;
+}
+@utility nui-heading-xs {
+  @apply text-xs;
+}
+@utility nui-heading-sm {
+  @apply text-sm;
+}
+@utility nui-heading-md {
+  @apply text-base;
+}
+@utility nui-heading-lg {
+  @apply text-lg;
+}
+@utility nui-heading-xl {
+  @apply text-xl;
+}
+@utility nui-heading-2xl {
+  @apply text-2xl;
+}
+@utility nui-heading-3xl {
+  @apply text-3xl;
+}
+@utility nui-heading-4xl {
+  @apply text-4xl;
+}
+@utility nui-heading-5xl {
+  @apply text-5xl;
+}
+@utility nui-heading-6xl {
+  @apply text-6xl;
+}
+@utility nui-heading-7xl {
+  @apply text-7xl;
+}
+@utility nui-heading-8xl {
+  @apply text-8xl;
+}
+@utility nui-heading-9xl {
+  @apply text-9xl;
+}
+@utility nui-weight-light {
+  @apply font-light;
+}
+@utility nui-weight-normal {
+  @apply font-normal;
+}
+@utility nui-weight-medium {
+  @apply font-medium;
+}
+@utility nui-weight-semibold {
+  @apply font-semibold;
+}
+@utility nui-weight-bold {
+  @apply font-bold;
+}
+@utility nui-weight-extrabold {
+  @apply font-extrabold;
+}
+@utility nui-lead-none {
+  @apply leading-none;
+}
+@utility nui-lead-normal {
+  @apply leading-normal;
+}
+@utility nui-lead-tight {
+  @apply leading-tight;
+}
+@utility nui-lead-snug {
+  @apply leading-snug;
+}
+@utility nui-lead-loose {
+  @apply leading-loose;
+}

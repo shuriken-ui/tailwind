@@ -1,0 +1,63 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-breadcrumb */
+
+@utility nui-breadcrumb {
+  @apply block;
+}
+@utility nui-breadcrumb-list {
+  @apply mb-6 flex items-center font-sans text-[0.85rem];
+
+  .nui-breadcrumb-item-mobile {
+    @apply me-3 sm:hidden;
+  }
+
+  .nui-breadcrumb-item:not(:last-child) {
+    @apply hidden sm:flex;
+  }
+
+  .nui-breadcrumb-item:last-child {
+    @apply flex text-muted-500 dark:text-muted-400;
+  }
+
+  .nui-item-inner {
+    @apply text-[0.85rem] flex items-center gap-x-1;
+    @apply text-muted-500 dark:text-muted-400;
+    @apply transition-colors duration-300;
+
+    .nui-item-icon {
+      @apply flex items-center justify-center h-4 w-4 shrink-0;
+
+      &.nui-has-dot {
+        @apply text-xl;
+      }
+    }
+
+    .nui-item-text {
+      @apply text-muted-500 dark:text-muted-400 px-2;
+    }
+  }
+}
+@utility nui-breadcrumb-primary {
+  .nui-item-inner {
+    &.nui-has-link {
+      @apply hover:text-primary-500 focus:text-primary-500;
+      @apply dark:hover:text-primary-500 dark:focus:text-primary-500;
+    }
+  }
+}
+@utility nui-breadcrumb-dark {
+  .nui-item-inner {
+    &.nui-has-link {
+      @apply hover:text-muted-900 focus:text-muted-900;
+      @apply dark:hover:text-muted-100 dark:focus:text-muted-100;
+    }
+  }
+}
+@utility nui-breadcrumb-black {
+  .nui-item-inner {
+    &.nui-has-link {
+      @apply hover:text-black focus:text-black;
+      @apply dark:hover:text-white dark:focus:text-white;
+    }
+  }
+}

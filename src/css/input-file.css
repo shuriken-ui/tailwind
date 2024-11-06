@@ -1,0 +1,224 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-input-file */
+
+@utility nui-input-file {
+  @apply relative block nui-focus;
+}
+@utility nui-input-file-drop {
+  @apply relative h-64 flex justify-center items-center;
+  @apply bg-white dark:bg-muted-700;
+  @apply border-2 border-dashed border-muted-200 dark:border-muted-200;
+  @apply hover:border-muted-400 dark:hover:border-muted-400;
+  @apply transition-colors duration-300;
+
+  .nui-drop-area-inner {
+    @apply absolute z-10;
+  }
+
+  .nui-drop-zone {
+    @apply flex flex-col items-center font-sans text-sm;
+  }
+
+  .nui-drop-zone-icon {
+    @apply w-10 h-10 mb-2;
+    @apply transition-colors duration-300;
+  }
+
+  .nui-drop-zone-text {
+    @apply block font-sans font-normal;
+  }
+
+  .nui-drop-zone-separator {
+    @apply block font-sans font-semibold leading-none py-1;
+  }
+
+  .nui-drop-zone-input {
+    @apply absolute top-0 left-0 h-full w-full opacity-0 file:cursor-pointer z-20;
+  }
+
+  &.nui-input-file-primary {
+    .nui-drop-zone-icon {
+      @apply text-muted-400 dark:text-muted-400;
+    }
+
+    .nui-drop-zone-text {
+      @apply text-muted-400 dark:text-muted-400;
+    }
+
+    .nui-drop-zone-separator {
+      @apply text-muted-400 dark:text-muted-400;
+    }
+
+    &:hover {
+      .nui-drop-zone-icon {
+        @apply text-primary-500 dark:text-primary-500;
+      }
+    }
+  }
+
+  &.nui-input-file-dark {
+    .nui-drop-zone-icon {
+      @apply text-muted-400 dark:text-muted-400;
+    }
+
+    .nui-drop-zone-text {
+      @apply text-muted-400 dark:text-muted-400;
+    }
+
+    .nui-drop-zone-separator {
+      @apply text-muted-400 dark:text-muted-400;
+    }
+
+    &:hover {
+      .nui-drop-zone-icon {
+        @apply text-muted-900 dark:text-muted-100;
+      }
+    }
+  }
+
+  &.nui-input-file-black {
+    .nui-drop-zone-icon {
+      @apply text-muted-400 dark:text-muted-400;
+    }
+
+    .nui-drop-zone-text {
+      @apply text-muted-400 dark:text-muted-400;
+    }
+
+    .nui-drop-zone-separator {
+      @apply text-muted-400 dark:text-muted-400;
+    }
+
+    &:hover {
+      .nui-drop-zone-icon {
+        @apply text-black dark:text-white;
+      }
+    }
+  }
+}
+@utility nui-input-file-button {
+  @apply w-64 max-w-full flex flex-col items-center px-4 py-8 tracking-wide cursor-pointer;
+  @apply bg-white dark:bg-muted-700;
+  @apply transition-colors duration-300;
+
+  .nui-upload-button-icon {
+    @apply w-8 h-8;
+  }
+
+  .nui-upload-button-label {
+    @apply block mt-2 leading-normal;
+    @apply font-sans text-sm;
+  }
+
+  &.nui-input-file-primary {
+    @apply text-muted-400 dark:text-muted-400;
+    @apply hover:text-primary-500 dark:hover:text-primary-500;
+    @apply border-2 border-muted-200 dark:border-muted-600;
+    @apply hover:border-primary-500 dark:hover:border-primary-500;
+  }
+
+  &.nui-input-file-dark {
+    @apply text-muted-400 dark:text-muted-400;
+    @apply hover:text-muted-900 dark:hover:text-muted-100;
+    @apply border-2 border-muted-200 dark:border-muted-600;
+    @apply hover:border-muted-900 dark:hover:border-muted-100;
+  }
+
+  &.nui-input-file-black {
+    @apply text-muted-400 dark:text-muted-400;
+    @apply hover:text-black dark:hover:text-white;
+    @apply border-2 border-muted-200 dark:border-muted-600;
+    @apply hover:border-black dark:hover:border-white;
+  }
+}
+@utility nui-input-file-combo {
+  @apply block font-sans p-1;
+  @apply bg-white dark:bg-muted-700;
+  @apply border border-muted-200 dark:border-muted-600;
+
+  .nui-combo-label-text {
+    @apply font-sans sr-only text-sm;
+  }
+
+  .nui-combo-input {
+    @apply outline-none block w-full file:me-4 file:py-2 file:px-4 file:border-0 file:cursor-pointer file:transition-colors file:duration-300;
+    @apply text-sm text-muted-500 dark:text-muted-400;
+    @apply file:text-sm;
+  }
+
+  &.nui-input-file-primary {
+    .nui-combo-input {
+      @apply file:bg-primary-500/10 dark:file:bg-primary-500/10;
+      @apply file:hover:bg-primary-500/20 dark:file:hover:bg-primary-500/20;
+      @apply file:text-primary-700 dark:file:text-primary-700;
+    }
+  }
+
+  &.nui-input-file-dark {
+    .nui-combo-input {
+      @apply file:bg-muted-900/10 dark:file:bg-muted-100/10;
+      @apply file:hover:bg-muted-900/20 dark:file:hover:bg-muted-100/20;
+      @apply file:text-muted-900 dark:file:text-muted-100;
+    }
+  }
+
+  &.nui-input-file-black {
+    .nui-combo-input {
+      @apply file:bg-black/10 dark:file:bg-white/10;
+      @apply file:hover:bg-black/20 dark:file:hover:bg-white/20;
+      @apply file:text-black dark:file:text-white;
+    }
+  }
+}
+@utility nui-input-file-rounded-sm {
+  &.nui-input-file-drop, &.nui-input-file-button {
+    @apply rounded-md;
+  }
+
+  &.nui-input-file-combo {
+    @apply rounded-md;
+  }
+
+  &.nui-input-file-combo .nui-combo-input {
+    @apply file:rounded-md;
+  }
+}
+@utility nui-input-file-rounded-md {
+  &.nui-input-file-drop, &.nui-input-file-button {
+    @apply rounded-lg;
+  }
+
+  &.nui-input-file-combo {
+    @apply rounded-lg;
+  }
+
+  &.nui-input-file-combo .nui-combo-input {
+    @apply file:rounded-lg;
+  }
+}
+@utility nui-input-file-rounded-lg {
+  &.nui-input-file-drop, &.nui-input-file-button {
+    @apply rounded-xl;
+  }
+
+  &.nui-input-file-combo {
+    @apply rounded-xl;
+  }
+
+  &.nui-input-file-combo .nui-combo-input {
+    @apply file:rounded-xl;
+  }
+}
+@utility nui-input-file-rounded-full {
+  &.nui-input-file-drop, &.nui-input-file-button {
+    @apply rounded-full;
+  }
+
+  &.nui-input-file-combo {
+    @apply rounded-full;
+  }
+
+  &.nui-input-file-combo .nui-combo-input {
+    @apply file:rounded-full;
+  }
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playground</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="grid grid-cols-2 h-screen">
+        <div class="bg-muted-50 dark:bg-muted-950 p-4">
+          <button type="button" class="nui-button nui-button-md nui-button-rounded-sm nui-button-solid nui-button-default">
+            <span>nui-button</span>
+            <span class="nui-button-badge">
+              <span class="nui-button-badge-pulse"></span>
+              <span class="nui-button-badge-inner"></span>
+            </span>
+          </button>
+        </div>
+        <div class="dark bg-muted-50 dark:bg-muted-950 p-4">
+          <button type="button" class="nui-button nui-button-md nui-button-rounded-sm nui-button-solid nui-button-default">
+            <span>nui-button (dark)</span>
+            <span class="nui-button-badge">
+              <span class="nui-button-badge-pulse"></span>
+              <span class="nui-button-badge-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

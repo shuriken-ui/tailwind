@@ -1,0 +1,90 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-progress */
+
+@utility nui-progress {
+  @apply relative w-full overflow-hidden;
+
+  &.nui-progress-rounded-sm, &.nui-progress-rounded-sm .nui-progress-bar {
+    @apply rounded;
+  }
+
+  &.nui-progress-rounded-md, &.nui-progress-rounded-md .nui-progress-bar {
+    @apply rounded-md;
+  }
+
+  &.nui-progress-rounded-lg, &.nui-progress-rounded-lg .nui-progress-bar {
+    @apply rounded-lg;
+  }
+
+  &.nui-progress-rounded-full, &.nui-progress-rounded-full .nui-progress-bar {
+    @apply rounded-full;
+  }
+
+  &.nui-progress-indeterminate .nui-progress-bar {
+    @apply w-full;
+  }
+}
+@utility nui-progress-bar {
+  @apply absolute start-0 top-0 h-full transition-all duration-300;
+}
+@utility nui-progress-default {
+  @apply bg-muted-200 dark:bg-muted-700;
+}
+@utility nui-progress-contrast {
+  @apply bg-muted-200 dark:bg-muted-900;
+}
+@utility nui-progress-xs {
+  @apply h-1;
+}
+@utility nui-progress-sm {
+  @apply h-2;
+}
+@utility nui-progress-md {
+  @apply h-3;
+}
+@utility nui-progress-lg {
+  @apply h-3;
+}
+@utility nui-progress-xl {
+  @apply h-5;
+}
+@utility nui-progress-primary {
+  .nui-progress-bar {
+    @apply bg-primary-500;
+  }
+}
+@utility nui-progress-info {
+  .nui-progress-bar {
+    @apply bg-info-500;
+  }
+}
+@utility nui-progress-success {
+  .nui-progress-bar {
+    @apply bg-success-500;
+  }
+}
+@utility nui-progress-warning {
+  .nui-progress-bar {
+    @apply bg-warning-500;
+  }
+}
+@utility nui-progress-danger {
+  .nui-progress-bar {
+    @apply bg-danger-500;
+  }
+}
+@utility nui-progress-light {
+  .nui-progress-bar {
+    @apply bg-muted-500 dark:bg-muted-400;
+  }
+}
+@utility nui-progress-dark {
+  .nui-progress-bar {
+    @apply bg-muted-900 dark:bg-muted-100;
+  }
+}
+@utility nui-progress-black {
+  .nui-progress-bar {
+    @apply bg-black dark:bg-white;
+  }
+}

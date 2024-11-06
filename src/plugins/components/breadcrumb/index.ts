@@ -14,6 +14,8 @@ export default plugin(({ addComponents, theme }) => {
 
   addComponents({
     '.nui-breadcrumb': {
+      '@apply block': {},
+
       '.nui-breadcrumb-list': {
         [`@apply mb-6 flex items-center font-${config.item.text.font.family} text-${config.item.text.font.size}`]:
           {},

@@ -19,6 +19,7 @@ export default plugin(({ addComponents, theme }) => {
   addComponents({
     //Wrapper
     '.nui-fullscreen-dropfile': {
+      '@apply block': {},
       //Dropfile:outer
       '.nui-fullscreen-dropfile-outer': {
         '@apply bg-muted-100/50 dark:bg-muted-800/20 fixed inset-0 z-40 backdrop-blur-sm transition-all hover:backdrop-blur-none':

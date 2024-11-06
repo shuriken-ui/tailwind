@@ -1,0 +1,6 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-dropdown-divider */
+
+@utility nui-dropdown-divider {
+  @apply my-2 block h-px w-full border-t border-muted-200 dark:border-muted-700;
+}

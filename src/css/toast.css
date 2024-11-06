@@ -1,0 +1,132 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-toast */
+
+@utility nui-toast {
+  @apply relative flex font-sans overflow-hidden;
+}
+@utility nui-toast-inner {
+  @apply flex items-center grow gap-2 px-4 py-3;
+}
+@utility nui-toast-title {
+  @apply nui-heading nui-heading-sm nui-weight-medium;
+  @apply text-muted-800 dark:text-muted-100;
+}
+@utility nui-toast-subtitle {
+  @apply nui-paragraph text-xs;
+  @apply text-muted-400 dark:text-muted-500;
+}
+@utility nui-toast-icon {
+  @apply w-6 h-6;
+}
+@utility nui-toast-icon-block {
+  @apply h-16 w-16 flex items-center justify-center;
+}
+@utility nui-button-close {
+  @apply ms-auto;
+}
+@utility nui-toast-low-contrast {
+  @apply bg-white dark:bg-muted-800;
+  @apply border-2 border-muted-300 dark:border-muted-700;
+}
+@utility nui-toast-high-contrast {
+  @apply bg-white dark:bg-muted-950;
+  @apply border-2 border-muted-300 dark:border-muted-800;
+}
+@utility nui-toast-default {
+  .nui-toast-icon {
+    @apply text-muted-500 dark:text-muted-500;
+  }
+
+  .nui-toast-icon-block {
+    @apply bg-muted-100 dark:bg-muted-700;
+  }
+}
+@utility nui-toast-primary {
+  @apply border-2 border-primary-500 dark:border-primary-500;
+
+  .nui-toast-icon {
+    @apply text-primary-500 dark:text-primary-500;
+  }
+
+  .nui-toast-icon-block {
+    @apply bg-primary-500/10 dark:bg-primary-500/10;
+  }
+}
+@utility nui-toast-info {
+  @apply border-2 border-info-500 dark:border-info-500;
+
+  .nui-toast-icon {
+    @apply text-info-500 dark:text-info-500;
+  }
+
+  .nui-toast-icon-block {
+    @apply bg-info-500/10 dark:bg-info-500/10;
+  }
+}
+@utility nui-toast-success {
+  @apply border-2 border-success-500 dark:border-success-500;
+
+  .nui-toast-icon {
+    @apply text-success-500 dark:text-success-500;
+  }
+
+  .nui-toast-icon-block {
+    @apply bg-success-500/10 dark:bg-success-500/10;
+  }
+}
+@utility nui-toast-warning {
+  @apply border-2 border-warning-500 dark:border-warning-500;
+
+  .nui-toast-icon {
+    @apply text-warning-500 dark:text-warning-500;
+  }
+
+  .nui-toast-icon-block {
+    @apply bg-warning-500/10 dark:bg-warning-500/10;
+  }
+}
+@utility nui-toast-danger {
+  @apply border-2 border-danger-500 dark:border-danger-500;
+
+  .nui-toast-icon {
+    @apply text-danger-500 dark:text-danger-500;
+  }
+
+  .nui-toast-icon-block {
+    @apply bg-danger-500/10 dark:bg-danger-500/10;
+  }
+}
+@utility nui-toast-dark {
+  @apply border-2 border-muted-900 dark:border-muted-100;
+
+  .nui-toast-icon {
+    @apply text-muted-900 dark:text-muted-100;
+  }
+
+  .nui-toast-icon-block {
+    @apply bg-muted-900/10 dark:bg-muted-100/10;
+  }
+}
+@utility nui-toast-black {
+  @apply border-2 border-black dark:border-white;
+
+  .nui-toast-icon {
+    @apply text-black dark:text-white;
+  }
+
+  .nui-toast-icon-block {
+    @apply bg-black/10 dark:bg-white/10;
+  }
+}
+@utility nui-toast-rounded-sm {
+  @apply rounded-md;
+}
+@utility nui-toast-rounded-md {
+  @apply rounded-lg;
+}
+@utility nui-toast-rounded-lg {
+  @apply rounded-xl;
+}
+@utility nui-toast-borderless {
+  @apply !border-0 shadow-muted-300/30 dark:shadow-muted-800/30 shadow-xl;
+}

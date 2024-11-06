@@ -1,0 +1,63 @@
+/* generated using "pnpm jiti scripts/generate-utilities.ts" */
+/* @utility nui-fullscreen-dropfile */
+
+@utility nui-fullscreen-dropfile {
+  @apply block;
+}
+@utility nui-fullscreen-dropfile-outer {
+  @apply bg-muted-100/50 dark:bg-muted-800/20 fixed inset-0 z-40 backdrop-blur-sm transition-all hover:backdrop-blur-none;
+}
+@utility nui-fullscreen-dropfile-inner {
+  @apply fixed inset-0 z-50;
+
+  .nui-fullscreen-dropfile-container {
+    @apply flex h-full flex-1 items-center justify-center;
+
+    .nui-fullscreen-dropfile-content {
+      @apply h-[230px] w-[500px] mx-auto flex flex-col items-center justify-center gap-6 drop-shadow-sm;
+      @apply bg-muted-100 dark:bg-muted-800;
+      @apply rounded-md border-2 border-dashed border-muted-200 dark:border-muted-700;
+
+      .nui-fullscreen-dropfile-icon {
+        @apply h-10 w-10;
+      }
+
+      .nui-fullscreen-dropfile-label {
+        @apply text-base text-muted-500 dark:text-muted-400;
+      }
+    }
+  }
+}
+@utility nui-dropfile-primary {
+  .nui-fullscreen-dropfile-inner {
+    .nui-fullscreen-dropfile-container {
+      .nui-fullscreen-dropfile-content {
+        .nui-fullscreen-dropfile-icon {
+          @apply text-primary-500 dark:text-primary-500;
+        }
+      }
+    }
+  }
+}
+@utility nui-dropfile-dark {
+  .nui-fullscreen-dropfile-inner {
+    .nui-fullscreen-dropfile-container {
+      .nui-fullscreen-dropfile-content {
+        .nui-fullscreen-dropfile-icon {
+          @apply text-muted-900 dark:text-muted-100;
+        }
+      }
+    }
+  }
+}
+@utility nui-dropfile-black {
+  .nui-fullscreen-dropfile-inner {
+    .nui-fullscreen-dropfile-container {
+      .nui-fullscreen-dropfile-content {
+        .nui-fullscreen-dropfile-icon {
+          @apply text-black dark:text-white;
+        }
+      }
+    }
+  }
+}
