@@ -97,3 +97,23 @@
 [data-nui-tooltip][data-nui-tooltip-position^='left']:hover::before,[data-nui-tooltip][data-nui-tooltip-position^='left']:hover::after,[data-nui-tooltip][data-nui-tooltip-position^='right']:hover::before,[data-nui-tooltip][data-nui-tooltip-position^='right']:hover::after,[data-nui-tooltip][data-nui-tooltip-position^='start']:hover::before,[data-nui-tooltip][data-nui-tooltip-position^='start']:hover::after,[data-nui-tooltip][data-nui-tooltip-position^='end']:hover::before,[data-nui-tooltip][data-nui-tooltip-position^='end']:hover::after,[data-nui-tooltip][data-nui-tooltip-position^='left']:focus-visible::before,[data-nui-tooltip][data-nui-tooltip-position^='left']:focus-visible::after,[data-nui-tooltip][data-nui-tooltip-position^='right']:focus-visible::before,[data-nui-tooltip][data-nui-tooltip-position^='right']:focus-visible::after,[data-nui-tooltip][data-nui-tooltip-position^='start']:focus-visible::before,[data-nui-tooltip][data-nui-tooltip-position^='start']:focus-visible::after,[data-nui-tooltip][data-nui-tooltip-position^='end']:focus-visible::before,[data-nui-tooltip][data-nui-tooltip-position^='end']:focus-visible::after {
   @apply animate-nui-tooltip-y;
 }
+
+@utility animate-nui-tooltip-x {
+  animation: nui-tooltip-x 300ms ease-out forwards;
+}
+@utility animate-nui-tooltip-y {
+  animation: nui-tooltip-y 300ms ease-out forwards;
+}
+
+@keyframes nui-tooltip-x {
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes nui-tooltip-y {
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
