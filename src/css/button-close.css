@@ -5,110 +5,110 @@
   @apply nui-focus flex items-center justify-center disabled:opacity-30 cursor-pointer;
   @apply transition-colors duration-300;
 }
-@utility nui-button-xs {
+@utility nui-button-close-xs {
   @apply h-6 w-6;
 
-  .nui-button-icon {
+  .nui-button-close-icon {
     @apply h-3 w-3 fill-current;
   }
 }
-@utility nui-button-sm {
+@utility nui-button-close-sm {
   @apply h-8 w-8;
 
-  .nui-button-icon {
+  .nui-button-close-icon {
     @apply h-4 w-4 fill-current;
   }
 }
-@utility nui-button-md {
+@utility nui-button-close-md {
   @apply h-10 w-10;
 
-  .nui-button-icon {
+  .nui-button-close-icon {
     @apply h-4 w-4 fill-current;
   }
 }
-@utility nui-button-lg {
+@utility nui-button-close-lg {
   @apply h-12 w-12;
 
-  .nui-button-icon {
+  .nui-button-close-icon {
     @apply h-5 w-5 fill-current;
   }
 }
-@utility nui-button-xl {
+@utility nui-button-close-xl {
   @apply h-14 w-14;
 
-  .nui-button-icon {
+  .nui-button-close-icon {
     @apply h-6 w-6 fill-current;
   }
 }
-@utility nui-button-rounded-sm {
+@utility nui-button-close-rounded-sm {
   @apply rounded;
 }
-@utility nui-button-rounded-md {
+@utility nui-button-close-rounded-md {
   @apply rounded-md;
 }
-@utility nui-button-rounded-lg {
+@utility nui-button-close-rounded-lg {
   @apply rounded-lg;
 }
-@utility nui-button-rounded-full {
+@utility nui-button-close-rounded-full {
   @apply rounded-full;
 }
-@utility nui-button-default {
+@utility nui-button-close-default {
   @apply text-muted-700 dark:text-muted-50;
   @apply bg-transparent dark:bg-transparent;
   @apply hover:bg-muted-100 dark:hover:bg-muted-700;
   @apply focus-visible:bg-muted-100 dark:focus-visible:bg-muted-700;
   @apply active:enabled:bg-transparent dark:active:enabled:bg-transparent;
 }
-@utility nui-button-default-contrast {
+@utility nui-button-close-default-contrast {
   @apply text-muted-700 dark:text-muted-50;
   @apply bg-transparent dark:bg-transparent;
   @apply hover:bg-muted-100 dark:hover:bg-muted-900;
   @apply focus-visible:bg-muted-100 dark:focus-visible:bg-muted-900;
   @apply active:enabled:bg-transparent dark:active:enabled:bg-transparent;
 }
-@utility nui-button-muted {
+@utility nui-button-close-muted {
   @apply text-muted-700 dark:text-muted-50;
   @apply bg-muted-100 dark:bg-muted-700;
   @apply hover:bg-muted-50 dark:hover:bg-muted-600;
   @apply focus-visible:bg-muted-50 dark:focus-visible:bg-muted-600;
   @apply active:enabled:bg-muted-100 dark:active:enabled:bg-muted-700;
 }
-@utility nui-button-muted-contrast {
+@utility nui-button-close-muted-contrast {
   @apply text-muted-700 dark:text-muted-50;
   @apply bg-muted-100 dark:bg-muted-950;
   @apply hover:bg-muted-50 dark:hover:bg-muted-900;
   @apply focus-visible:bg-muted-50 dark:focus-visible:bg-muted-900;
   @apply active:enabled:bg-muted-100 dark:active:enabled:bg-muted-950;
 }
-@utility nui-button-primary {
+@utility nui-button-close-primary {
   @apply text-primary-500 dark:text-primary-500;
   @apply bg-primary-500/10 dark:bg-primary-500/10;
   @apply hover:bg-primary-500/20 dark:hover:bg-primary-500/20;
   @apply focus-visible:bg-primary-500/20 dark:focus-visible:bg-primary-500/20;
   @apply active:enabled:bg-primary-500/10 dark:active:enabled:bg-primary-500/10;
 }
-@utility nui-button-info {
+@utility nui-button-close-info {
   @apply text-info-500 dark:text-info-500;
   @apply bg-info-500/10 dark:bg-info-500/10;
   @apply hover:bg-info-500/20 dark:hover:bg-info-500/20;
   @apply focus-visible:bg-info-500/20 dark:focus-visible:bg-info-500/20;
   @apply active:enabled:bg-info-500/10 dark:active:enabled:bg-info-500/10;
 }
-@utility nui-button-success {
+@utility nui-button-close-success {
   @apply text-success-500 dark:text-success-500;
   @apply bg-success-500/10 dark:bg-success-500/10;
   @apply hover:bg-success-500/20 dark:hover:bg-success-500/20;
   @apply focus-visible:bg-success-500/20 dark:focus-visible:bg-success-500/20;
   @apply active:enabled:bg-success-500/10 dark:active:enabled:bg-success-500/10;
 }
-@utility nui-button-warning {
+@utility nui-button-close-warning {
   @apply text-warning-500 dark:text-warning-500;
   @apply bg-warning-500/10 dark:bg-warning-500/10;
   @apply hover:bg-warning-500/20 dark:hover:bg-warning-500/20;
   @apply focus-visible:bg-warning-500/20 dark:focus-visible:bg-warning-500/20;
   @apply active:enabled:bg-warning-500/10 dark:active:enabled:bg-warning-500/10;
 }
-@utility nui-button-danger {
+@utility nui-button-close-danger {
   @apply text-danger-500 dark:text-danger-500;
   @apply bg-danger-500/10 dark:bg-danger-500/10;
   @apply hover:bg-danger-500/20 dark:hover:bg-danger-500/20;
