@@ -1,96 +1,96 @@
 /* generated using "pnpm jiti scripts/generate-utilities.ts" */
 /* @utility nui-button-icon */
 
-@utility nui-button-icon {
+@utility nui-button-icon-icon {
   @apply nui-focus relative inline-flex items-center justify-center space-x-1 leading-5 no-underline disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none;
   @apply font-sans text-sm font-normal;
   @apply transition-all duration-300;
 }
-@utility nui-button-sm {
+@utility nui-button-icon-sm {
   @apply h-8 w-8 p-1;
 }
-@utility nui-button-md {
+@utility nui-button-icon-md {
   @apply h-10 w-10 p-2;
 }
-@utility nui-button-lg {
+@utility nui-button-icon-lg {
   @apply h-12 w-12 p-3;
 }
-@utility nui-button-xl {
+@utility nui-button-icon-xl {
   @apply h-14 w-14 p-4;
 }
-@utility nui-button-rounded-sm {
+@utility nui-button-icon-rounded-sm {
   @apply rounded;
 }
-@utility nui-button-rounded-md {
+@utility nui-button-icon-rounded-md {
   @apply rounded-md;
 }
-@utility nui-button-rounded-lg {
+@utility nui-button-icon-rounded-lg {
   @apply rounded-lg;
 }
-@utility nui-button-rounded-full {
+@utility nui-button-icon-rounded-full {
   @apply rounded-full;
 }
-@utility nui-button-loading {
+@utility nui-button-icon-loading {
   @apply !text-transparent;
 }
-@utility nui-button-default {
+@utility nui-button-icon-default {
   @apply text-muted-700 dark:text-muted-100;
   @apply bg-white dark:bg-muted-700;
   @apply hover:bg-muted-50 dark:hover:bg-muted-600;
   @apply border border-muted-200 dark:border-muted-600;
 }
-@utility nui-button-default-contrast {
+@utility nui-button-icon-default-contrast {
   @apply text-muted-700 dark:text-muted-100;
   @apply bg-white dark:bg-muted-950;
   @apply hover:bg-muted-50 dark:hover:bg-muted-900;
   @apply border border-muted-300 dark:border-muted-800;
 }
-@utility nui-button-muted {
+@utility nui-button-icon-muted {
   @apply text-muted-500 dark:text-muted-100;
   @apply bg-muted-200 dark:bg-muted-700;
   @apply hover:bg-muted-100 dark:hover:bg-muted-600;
 }
-@utility nui-button-muted-contrast {
+@utility nui-button-icon-muted-contrast {
   @apply text-muted-500 dark:text-muted-100;
   @apply bg-muted-200 dark:bg-muted-950;
   @apply hover:bg-muted-100 dark:hover:bg-muted-900;
 }
-@utility nui-button-light {
+@utility nui-button-icon-light {
   @apply text-muted-500 dark:text-muted-100;
   @apply bg-muted-200 dark:bg-muted-700;
   @apply hover:bg-muted-100 dark:hover:bg-muted-600;
 }
-@utility nui-button-dark {
+@utility nui-button-icon-dark {
   @apply text-muted-100 dark:text-muted-900;
   @apply bg-muted-900 dark:bg-muted-100;
   @apply hover:bg-muted-800 dark:hover:bg-muted-50;
 }
-@utility nui-button-black {
+@utility nui-button-icon-black {
   @apply text-white dark:text-black;
   @apply bg-black dark:bg-white;
   @apply hover:bg-black/90 dark:hover:bg-white/90;
 }
-@utility nui-button-primary {
+@utility nui-button-icon-primary {
   @apply text-primary-500 dark:text-primary-500;
   @apply bg-primary-500/20 dark:bg-primary-500/20;
   @apply hover:bg-primary-500/10 dark:hover:bg-primary-500/10;
 }
-@utility nui-button-info {
+@utility nui-button-icon-info {
   @apply text-info-500 dark:text-info-500;
   @apply bg-info-500/20 dark:bg-info-500/20;
   @apply hover:bg-info-500/10 dark:hover:bg-info-500/10;
 }
-@utility nui-button-success {
+@utility nui-button-icon-success {
   @apply text-success-500 dark:text-success-500;
   @apply bg-success-500/20 dark:bg-success-500/20;
   @apply hover:bg-success-500/10 dark:hover:bg-success-500/10;
 }
-@utility nui-button-warning {
+@utility nui-button-icon-warning {
   @apply text-warning-500 dark:text-warning-500;
   @apply bg-warning-500/20 dark:bg-warning-500/20;
   @apply hover:bg-warning-500/10 dark:hover:bg-warning-500/10;
 }
-@utility nui-button-danger {
+@utility nui-button-icon-danger {
   @apply text-danger-500 dark:text-danger-500;
   @apply bg-danger-500/20 dark:bg-danger-500/20;
   @apply hover:bg-danger-500/10 dark:hover:bg-danger-500/10;
