@@ -88,3 +88,19 @@
     @apply bg-black dark:bg-white;
   }
 }
+
+@utility animate-nui-progress-indeterminate {
+  animation: nui-progress-indeterminate 3s linear infinite forwards;
+}
+
+@keyframes nui-progress-indeterminate {
+  0% {
+    margin-left: -100%;
+  }
+  60% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
