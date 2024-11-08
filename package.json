@@ -23,6 +23,7 @@
   "main": "./src/index.css",
   "exports": {
     ".": "./src/index.css",
+    "./theme.css": "./src/theme.css",
     "./*.css": "./src/css/*.css"
   },
   "files": [

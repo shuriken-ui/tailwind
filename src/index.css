@@ -1,5 +1,6 @@
-
 @plugin '@tailwindcss/typography';
+
+@import './theme.css';
 
 @import './css/accordion.css';
 @import './css/autocomplete.css';
