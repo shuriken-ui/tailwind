@@ -1,6 +1,6 @@
 {
   "name": "@shuriken-ui/tailwind",
-  "version": "4.0.0-alpha.1",
+  "version": "4.0.0-alpha.2",
   "packageManager": "pnpm@9.12.3",
   "license": "MIT",
   "author": "Css Ninja <hello@cssninja.io> (https://cssninja.io)",
@@ -28,6 +28,7 @@
   },
   "files": [
     "src/index.css",
+    "src/theme.css",
     "src/css"
   ],
   "scripts": {
