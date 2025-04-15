@@ -11,6 +11,9 @@
   <a href="https://cssninja.io" title="Our official website">by <strong>cssninja.io</strong></a>
 </p>
 
+> [!IMPORTANT]
+> Looking for Shuriken UI v4, with tailwind v4 support? Check https://github.com/shuriken-ui/shuriken-ui
+
 ---
 
 ## Shuriken UI - Tailwind CSS 
